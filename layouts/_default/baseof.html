@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{{ partial "head.html" . }}
+	</head>
+	<body>
+		{{ partial "header" . }}
+
+		<div class="container">
+			<div class="row">
+				<nav class="navmenu two columns">
+					{{ partial "menu" . }}
+				</nav>
+
+				<div class="content ten columns">
+					{{ block "content" . }}
+					{{ end }}
+				</div>
+			</div>
+		</div>
+
+		{{ partial "footer" . }}
+	</body>
+</html>
