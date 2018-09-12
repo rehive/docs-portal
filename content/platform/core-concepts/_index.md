@@ -1,4 +1,4 @@
 ---
 title: Core concepts
-weight: 3
+weight: 2
 ---

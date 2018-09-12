@@ -1,5 +1,5 @@
 ---
-title: Platform
+title: Services
 description: Lorem Ipsum dolor solor sit, amlore galore.
-weight: 1
+weight: 3
 ---

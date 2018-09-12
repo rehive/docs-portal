@@ -12,25 +12,13 @@
 		    </section>
 
 			<div class="content">
-				<div class="row">
-					<div class="doc-section one-half column">
-						<h4>Dashboard</h4>
-						<p>The Rehive dashboard, lorem ipsum dolores galores, samuel L jacksonville.</a>.</p>
-						<a class="button button-primary" href="dashboard/">Dashboard Docs</a>
+				{{ range (sort .Site.Sections ".Weight") }}
+					<div class="card one-third column">
+						<h4>{{ .Title }}</h4>
+						<p>{{ .Description }}</p>
+						<a class="button button-primary" href="{{ .Permalink }}">{{ .Title }} Docs</a>
 					</div>
-					<div class="doc-section one-half column">
-						<h4>Platform</h4>
-						<p>The Rehive platform, lorem ipsum dolores galores, samuel L jacksonville.</a>.</p>
-						<a class="button button-primary" href="platform/">Platform Docs</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="doc-section one-half column">
-						<h4>Services</h4>
-						<p>The Rehive platform, lorem ipsum dolores galores, samuel L jacksonville.</a>.</p>
-						<a class="button button-primary" href="services/">Service Docs</a>
-					</div>
-				</div>
+				{{ end }}
 			</div>
 		</div>
 
