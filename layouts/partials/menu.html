@@ -1,36 +1,16 @@
-<ul>
-	<li>
-		<span><strong>Get started</strong></span>
-		<ul>
-			<li>Introduction</li>
-			<li>Quick guide</li>
-		</ul>
-	</li>
-	<li>
-		<span><strong>Core concepts</strong></span>
-		<ul>
-			<li>Companies</li>
-			<li>Users</li>
-			<li>Currencies</li>
-			<li>Accounts</li>
-			<li>Transactions</li>
-		</ul>
-	</li>
-	<li>
-		<span><strong>Examples</strong></span>
-		<ul>
-			<li>Use case 1</li>
-			<li>Use case 2</li>
-		</ul>
-	</li>
-	<li>
-		<span><strong>Reference</strong></span>
-		<ul>
-			<li>API reference</li>
-			<li>JavaScript SDK</li>
-			<li>Python SDK</li>
-			<li>Changelog</li>
-			<li>Deprecation timeline</li>
-		</ul>
-	</li>
-</ul>
+<aside>
+	<ul>
+		{{ range (sort (.Site.GetPage "section" .Section ).Sections ".Weight") }}
+			<li>
+				<span><strong>{{ .Title }}</strong></span>
+				<ul>
+					{{ range (sort .Pages ".Weight") }}
+						<li>
+							<a href="{{ .Permalink }}">{{ .Title }}</a>
+						</li>
+					{{ end }}
+				</ul>
+			</li>
+		{{ end }}
+	</ul>
+</aside>

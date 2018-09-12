@@ -1,24 +1,17 @@
 <nav class="navbar">
 	<div class="container">
 		<ul class="navbar-list">
-			<li class="navbar-item"><a class="navbar-link" href="">Rehive</a></li>
-			<li class="navbar-item"><a class="navbar-link" href="/">Docs</a></li>
-			<!--<li class="navbar-item">
-				<a class="navbar-link" href="#" data-popover="#codeNavPopover">Docs</a>
-				<div id="codeNavPopover" class="popover">
-					<ul class="popover-list">
-						<li class="popover-item">
-							<a class="popover-link" href="#">Dashboard</a>
-						</li>
-						<li class="popover-item">
-							<a class="popover-link" href="#">Platform</a>
-						</li>
-						<li class="popover-item">
-							<a class="popover-link" href="#">Services</a>
-						</li>
-					</ul>
-				</div>
-			</li>-->
+			<li class="navbar-item">
+				<a class="navbar-link" href="/">Docs</a>
+			</li>
+			{{ range (sort .Site.Sections ".Weight") }}
+				<li class="navbar-item">
+					<a class="navbar-link" href="{{ .Permalink }}">{{ .Title }}</a>
+				</li>
+			{{ end }}
+			<li class="navbar-item navbar-last-item">
+				<a class="navbar-link" href="https://dashboard.rehive.com">Log in</a>
+			</li>
 		</ul>
 	</div>
 </nav>
