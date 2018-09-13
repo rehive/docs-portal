@@ -9,7 +9,7 @@
 		<div class="container">
 			<div class="home content">
 				<section class="titles">
-			      <h2>Rehive Documentation.</h2>
+			      <h2>{{ .Title }}</h2>
 			    </section>
 
 				<section class="cards">
@@ -25,7 +25,10 @@
 				</section>
 
 				<section class="links">
-					<h3>Quick Links</h3>
+					<h4>Quick references</h4>
+					{{ range .Params.references }}
+						<a href="{{ .url }}" target="_blank">{{ .title }}</a>
+					{{ end }}
 				</section>
 			</div>
 		</div>
