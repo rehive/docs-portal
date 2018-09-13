@@ -7,18 +7,26 @@
 		{{ partial "header" . }}
 
 		<div class="container">
-			<section class="header">
-		      <h2 class="title">Rehive Documentation.</h2>
-		    </section>
+			<div class="home content">
+				<section class="titles">
+			      <h2>Rehive Documentation.</h2>
+			    </section>
 
-			<div class="content">
-				{{ range (sort .Site.Sections ".Weight") }}
-					<div class="card one-third column">
-						<h4>{{ .Title }}</h4>
-						<p>{{ .Description }}</p>
-						<a class="button button-primary" href="{{ .Permalink }}">{{ .Title }} Docs</a>
-					</div>
-				{{ end }}
+				<section class="cards">
+					{{ range (sort .Site.Sections ".Weight") }}
+						<div class="one-third column">
+							<div class="card">
+								<h4>{{ .Title }}</h4>
+								<p>{{ .Description }}</p>
+								<a class="button button-primary" href="{{ .Permalink }}">{{ .Title }} Docs</a>
+							</div>
+						</div>
+					{{ end }}
+				</section>
+
+				<section class="links">
+					<h3>Quick Links</h3>
+				</section>
 			</div>
 		</div>
 

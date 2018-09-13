@@ -2,18 +2,26 @@
 	max-width: 1100px;
 }
 
-.header {
-	margin-top: 4rem;
- 	text-align: center;
-}
-
 .content {
  	padding: 4rem 0;
  	margin-bottom: 0;
 }
 
-.card {
- 	padding: 2rem 0;
+.home .titles {
+	margin: 10rem 0;
+	text-align: center;
+}
+.home .cards {
+	overflow: hidden;
+	position:relative;
+}
+.home .cards .card {
+ 	margin: 2rem 2rem;
+ 	text-align: center;
+}
+.home .links {
+	margin: 10rem 0;
+	text-align: center;
 }
 
 .navaside {
@@ -49,9 +57,6 @@ footer .links > a {
 
 /* Larger than phone */
 @media (min-width: 550px) {
-  	.header {
- 		margin-top: 10rem;
-  	}
 	.value-props {
 		margin-top: 9rem;
 		margin-bottom: 7rem;

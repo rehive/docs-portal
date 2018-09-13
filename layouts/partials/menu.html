@@ -12,5 +12,19 @@
 				</ul>
 			</li>
 		{{ end }}
+
+		{{ with .Site.GetPage "section" .Section }}
+			<li>
+				<span><strong>References</strong></span>
+				<ul>
+					{{ range .Params.references }}
+						<li>
+							<a href="{{ .url }}" target="_blank">{{ .title }}</a>
+						</li>
+					{{ end }}
+				</ul>
+			</li>
+		{{ end }}
+
 	</ul>
 </aside>
