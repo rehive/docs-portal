@@ -3,6 +3,11 @@
 		<ul class="navbar-list">
 			{{ $currentSection := .Section }}
 			<li class="navbar-item">
+				<a href="https://rehive.com" class="navbar-logo-link">
+					<img src="/img/logo.svg">
+				</a>
+			</li>
+			<li class="navbar-item">
 				<a href="/" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
 			</li>
 			{{ range (sort .Site.Sections ".Weight") }}

@@ -1,3 +1,20 @@
+
+a {
+	color: #5336FF;
+}
+a:hover {
+	color: #5336FF;
+}
+
+.button.button-primary {
+	background-color: #5336FF;
+	border-color: #5336FF;
+}
+.button.button-primary:hover {
+	background-color: #A4A5F5;
+	border-color: #A4A5F5;
+}
+
 .container {
 	max-width: 1100px;
 }
@@ -7,24 +24,32 @@ main .content {
  	margin-bottom: 0;
 }
 
+.home .hero {
+	height: 40rem;
+	text-align: center;
+	background-image: url("/img/cubes.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
 .home .titles {
-	margin: 10rem 0;
 	text-align: center;
 }
 .home .cards {
+	margin: 10rem 0;
 	overflow: hidden;
 	position:relative;
 }
 .home .cards .card {
-	background-color: #eee;
-	padding: 1rem;
- 	margin: 2rem 2rem;
+ 	/*margin: 2rem 2rem;*/
  	text-align: center;
 	border-radius: 4px;
 }
 .home .links {
 	margin: 10rem 0;
 	text-align: center;
+}
+.home .links a {
+	text-decoration: none;
 }
 
 .navaside {
@@ -38,10 +63,10 @@ main .content {
 	text-decoration: none;
 }
 .navaside li > a:hover {
-	color: #33C3F0;
+	color: #5336FF;
 }
 .navaside li > a.active {
-	color: #33C3F0;
+	color: #5336FF;
 }
 
 .navbar {
@@ -117,6 +142,15 @@ footer .links > a {
 	.navbar-last-item {
 		float: right;
 	}
+	.navbar-logo-link {
+		display: block;
+		margin-right: 20px;
+	}
+	.navbar-logo-link img {
+		display: block;
+		height: 4.8rem;
+		padding: 0.6rem 0;
+	}
 	.navbar-link {
 		font-size: 11px;
 		font-weight: 600;
@@ -127,6 +161,6 @@ footer .links > a {
 		color: #222;
 	}
 	.navbar-link.active {
-		color: #33C3F0;
+		color: #5336FF;
 	}
 }
