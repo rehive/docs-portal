@@ -4,12 +4,11 @@
 		{{ partial "head.html" . }}
 	</head>
 	<body>
-		{{ partial "header" . }}
+		{{ partial "navbar" . }}
 
 		<div class="container">
-			<div class="home content">
-				<div class="hero">
-				</div>
+			<main class="home content">
+				<section class="hero"></section>
 
 				<section class="titles">
 			      <h1>{{ .Title }}</h1>
@@ -28,9 +27,11 @@
 				</section>
 
 				<section class="links">
-					<h4>Quick references</h4>
-					{{ range .Params.references }}
-						<a href="{{ .url }}" target="_blank">{{ .title }}</a>
+					{{ if isset .Params "references" }}
+						<h4>Quick references</h4>
+						{{ range .Params.references }}
+							<a href="{{ .url }}" target="_blank">{{ .title }}</a>
+						{{ end }}
 					{{ end }}
 				</section>
 			</div>

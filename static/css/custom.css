@@ -27,7 +27,7 @@ main .content {
 .home .hero {
 	height: 40rem;
 	text-align: center;
-	background-image: url("/img/cubes.svg");
+	background-image: url("/images/cubes.svg");
 	background-repeat: no-repeat;
 	background-position: center;
 }
