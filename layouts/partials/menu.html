@@ -1,12 +1,13 @@
 <aside class="navaside two columns">
 	<ul>
+		{{ $currentPage := .Page }}
 		{{ range (sort (.Site.GetPage "section" .Section ).Sections ".Weight") }}
 			<li>
 				<span><strong>{{ .Title }}</strong></span>
 				<ul>
 					{{ range (sort .Pages ".Weight") }}
 						<li>
-							<a href="{{ .Permalink }}">{{ .Title }}</a>
+							<a href="{{ .Permalink }}" class="{{ if in .UniqueID $currentPage.UniqueID }}active{{ end }}">{{ .Title }}</a>
 						</li>
 					{{ end }}
 				</ul>
@@ -25,6 +26,5 @@
 				</ul>
 			</li>
 		{{ end }}
-
 	</ul>
 </aside>

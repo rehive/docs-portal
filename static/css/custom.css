@@ -2,7 +2,7 @@
 	max-width: 1100px;
 }
 
-.content {
+main .content {
  	padding: 4rem 0;
  	margin-bottom: 0;
 }
@@ -38,6 +38,9 @@
 	text-decoration: none;
 }
 .navaside li > a:hover {
+	color: #33C3F0;
+}
+.navaside li > a.active {
 	color: #33C3F0;
 }
 

@@ -1,16 +1,17 @@
 <nav class="navbar">
 	<div class="container">
 		<ul class="navbar-list">
+			{{ $currentSection := .Section }}
 			<li class="navbar-item">
-				<a class="navbar-link" href="/">Docs</a>
+				<a href="/" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
 			</li>
 			{{ range (sort .Site.Sections ".Weight") }}
 				<li class="navbar-item">
-					<a class="navbar-link" href="{{ .Permalink }}">{{ .Title }}</a>
+					<a href="{{ .Permalink }}" class="navbar-link {{ if ne $currentSection  "" }}{{ if in .Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }}</a>
 				</li>
 			{{ end }}
 			<li class="navbar-item navbar-last-item">
-				<a class="navbar-link" href="https://dashboard.rehive.com">Log in</a>
+				<a href="https://dashboard.rehive.com" class="navbar-link">Log in</a>
 			</li>
 		</ul>
 	</div>

@@ -1,0 +1,57 @@
+---
+title: Deprecation timeline
+weight: 1
+---
+
+This timeline indicates dates at which certain functionality will be permanently removed from the Rehive platform. Anything listed here should be regarded as deprecated and will only be supported up to the date indicated in the timeline.
+
+---
+
+#### 20-11-2018
+
+1. Remove the identifier field from the company object.
+	- Use the id field instead of the identifier field. This will make the company object consistent with all the other Rehive resources.
+2. Remove the mobile_number field from user objects.
+	- Use the mobile field instead of mobile_number field.
+
+---
+
+#### 13-09-2018
+
+1. Remove the `identifier` field from the user object and user lists. The `identifier` filter fields will be removed at the same time.
+	- Use the `id` field instead of the `identifier` field. This will make the user object consistent with all the other Rehive resources.
+2. Remove the `enabled` and `active` fields from the user object and user lists.
+	- Use the `archived` field instead.
+1. Remove the old “single address” endpoint found at `/3/user/address/`.
+	- This has been replaced by a multi address endpoint: `/3/user/addresses/`.
+
+---
+
+#### 12-06-2018
+
+1. Remove the `date_joined` field from the user object and user lists. The date_joined filter fields will be removed at the same time.
+	- Use the `created` field instead of the `date_joined` field.
+
+---
+
+#### 15-05-2018
+
+1. Remove the `/3/company/bank-account/` endpoint.
+	- This has been replaced by a list endpoint: `/3/company/bank-accounts/`.
+	- Use the new endpoint in combination with currency filters in order to get the correct bank account for a currency.
+
+---
+
+#### 15-03-2018
+
+1. Remove the `https://rehive.com/api/3/` base API URL. The new URL should be used exclusively after this date.
+	- The above URL should be replaced with `https://api.rehive.com/3/` in all codebases. Rehive maintained code will roll out this change in the months leading up to the deprecation.
+2. Remove `active` currency support on transaction creation.
+	- This means that a `currency` field must be included on every transaction create endpoint.
+	- This will primarily impact users of the Ionic project, which was built on an older API.
+
+---
+
+#### 08-02-2018
+
+1. Remove `confirm_on_create` from the all transaction create endpoints. Replace `confirm_on_create` with a status of `complete` like: ‘{“status”: “complete”}’
