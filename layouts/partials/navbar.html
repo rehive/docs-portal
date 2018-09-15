@@ -8,7 +8,7 @@
 				</a>
 			</li>
 			<li class="navbar-item">
-				<a href="/" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
+				<a href="{{ .Site.Home.Permalink }}" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
 			</li>
 			{{ range (sort .Site.Sections ".Weight") }}
 				<li class="navbar-item">
