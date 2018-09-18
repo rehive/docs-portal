@@ -1,7 +1,9 @@
 ---
+date: 2018-09-17T15:21:22+02:00
 title: Platform
-description: Lorem Ipsum dolor solor sit, amlore galore.
+description: Platform documentation.
 weight: 1
+linkTo: /platform/get-started/introduction
 references:
   - title: API Reference
     url: https://api.rehive.com
