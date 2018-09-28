@@ -5,16 +5,16 @@ description: A quick guide to the platform.
 weight: 2
 ---
 
-To get started with the API you have several options:
+To get started with the API you have a couple options:
 
 1. You can choose to use one of the Rehive supported SDKs or
 2. Integrate the API manually in your choice of language.
 
-To use one of the SDKs check for you language in the "references list" in the sidebar. If you instead want to use a language that does not include a Rehive supported SDK, an implementation in your language of choice should be trivial as the platform uses standard HTTP which is widely extensively.
+To use one of the SDKs check for you language in the "references list" in the sidebar. If you instead want to use a language that does not have a Rehive supported SDK, a custom implementation should be trivial as the platform uses standard HTTP which is supported extensively.
 
 ### Using the API
 
-The easiest way to get started with the API is to use cURL and make a login request:
+The easiest way to get started with the API is to use cURL to make a login request:
 
 ```
 curl https://api.rehive.com/3/auth/login/
