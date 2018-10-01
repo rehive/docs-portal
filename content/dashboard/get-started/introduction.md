@@ -6,3 +6,5 @@ weight: 1
 ---
 
 An introduction to the dashboard.
+
+#### Coming soon!

@@ -5,7 +5,7 @@ description: Introduction to the platform.
 weight: 1
 ---
 
-The Rehive platform is the core of the Rehive ecosystem. It acts as the backbone for company, user, account and transaction management in Rehive. In addition it offers a wide set of endpoints to make it easier for developers to implement transactional applications and systems.
+The platform is the core of the Rehive ecosystem. It acts as the backbone for company, user, account and transaction management in Rehive. In addition it offers a wide set of endpoints to make it easier for developers to implement transactional applications and systems.
 
 ### The API
 

@@ -1,7 +1,7 @@
 ---
 date: 2018-09-17T15:21:22+02:00
 title: Platform
-description: Platform documentation.
+description: The platform is the core of the Rehive ecosystem.
 weight: 1
 linkTo: /platform/get-started/introduction
 references:
