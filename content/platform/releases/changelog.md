@@ -12,7 +12,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 #### 13-09-2018
 
-1. Added views for users to see requirements, fees and limits related to group tiers.
+1. Added views for users to see requirements, fees, and limits related to group tiers.
 2. Added a filter on the user group tier view to the user’s active tier:
     - `active`: True (shows the user’s active tier)
 3. Removed the `identifier`, `enabled` and `active` fields from the user object and user lists.
