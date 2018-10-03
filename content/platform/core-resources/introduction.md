@@ -13,4 +13,4 @@ The Rehive platform provides a wide range of resources to make development of fi
 4. Accounts
 5. Transactions
 
-These five resources will be  addressed in detail within this documentation. However, if you are looking for an in-depth picture of all the resources the platform offers. It is best to review the full API reference (TODO add link).
+These five resources will be  addressed in detail within this documentation. However, if you are looking for an in-depth description of all the resources the platform offers then it is best to review the full API reference (TODO add link).
