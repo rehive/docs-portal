@@ -4,6 +4,8 @@ title: Rehive documentation
 description: Rehive documentation
 weight: 1
 references:
-  - title: API Reference
-    url: https://api.rehive.com
+  - title: Platform API Reference
+    url: https://api.docs.rehive.com
+  - title: Platform Changelog
+    url: /platform/releases/changelog/
 ---

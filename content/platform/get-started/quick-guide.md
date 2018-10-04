@@ -25,7 +25,9 @@ curl https://api.rehive.com/3/auth/login/
        "password": "joe1234"}'
 ```
 
-Before trying the above request, make sure you have your own `user`, `company`, and `password`. This can be done easily by registering a new company via the [dashboard](https://dashboard.rehive.com).
+<aside class="warning">
+    Before trying the above request, make sure you have your own <code>user</code>, <code>company</code>, and <code>password</code>. This can be done easily by registering a new company via the <a href="https://dashboard.rehive.com" target="_blank">dashboard</a>.
+</aside>
 
 Once you have your own user you can replace the placeholder data in the example JSON object and then fire off the above request. If successful, you should get a response like this:
 
@@ -86,7 +88,9 @@ Once you have your own user you can replace the placeholder data in the example 
 
 And there you have it, a successful login. The user was validated and authenticated on the platform and an authentication `token` returned.
 
-Hang on to that authentication `token` though, as you can now use that `token` to make subsequent requests on authorization restricted endpoints.
+<aside class="notice">
+    Hang on to that authentication <code>token</code> though, as you can now use that <code>token</code> to make subsequent requests on authorization restricted endpoints.
+</aside>
 
 For example, you may want to get a list of emails associated to the user:
 

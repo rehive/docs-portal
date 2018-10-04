@@ -15,4 +15,6 @@ Limited | 50/min | 100/min
 Standard | 100/min | 200/min
 Extended | 500/min | 1000/min
 
-If throttling is proving to be a limiting factor in your usage of the platform, please contact support and we can have a discussion regarding raising your company's tier.
+<aside class="notice">
+	If throttling is proving to be a limiting factor in your usage of the platform, please contact support and we can have a discussion regarding raising your company's tier.
+</aside>

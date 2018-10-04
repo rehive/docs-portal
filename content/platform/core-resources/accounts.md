@@ -12,7 +12,11 @@ Generally, every user in the platform will require one or more accounts. Each on
 1. Using configurations to define a list of allowed accounts and automate whether the account is added to a new user on registration.
 2. Manually invoking the admin endpoints to create accounts and currencies as needed.
 
-The former is usually preferred unless you have very specific requirements or intend building a complete abstraction on top of the platform. To learn about configuring accounts take a look at the dashboard (TODO Add link) or the full API reference (TODO Add link).
+The former is usually preferred unless you have very specific requirements or intend building a complete abstraction on top of the platform.
+
+<aside class="notice">
+    To learn about configuring accounts take a look at the <a href="https://dashboard.rehive.com" target="_blank">dashboard</a> or the <a href="/dashboard/get-started/introduction/" target="_blank">dashboard documentation</a>.
+</aside>
 
 ### Object
 

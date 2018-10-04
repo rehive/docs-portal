@@ -25,8 +25,6 @@ Errors will be formatted in one of two ways. A minimal error message:
 
 or a descriptive error message including an additional `data` object with details:
 
-> Multiple errors response:
-
 ```json
  {
     "status": "error",

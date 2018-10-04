@@ -17,5 +17,5 @@ params:
       url: https://dashboard.rehive.com
 
   extraFooterItems:
-    - title: Dashboard
+    - title: Log in
       url: https://dashboard.rehive.com

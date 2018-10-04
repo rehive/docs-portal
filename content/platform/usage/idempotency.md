@@ -20,5 +20,5 @@ curl {url}
 API requests made with a new key will get saved along with their HTTP response. Follow up requests made with the same key will always return the same response (As long as the request has the same HTTP method and URL path). The keys (and their associated saved responses) expire after 24 hours.
 
 <aside class="notice">
-Idempotent requests will not work on endpoints that allow anonymous user access (ie. URL paths beginning with `/auth/`).
+Idempotent requests will not work on endpoints that allow anonymous user access (ie. URL paths beginning with <code>/auth/</code>).
 </aside>

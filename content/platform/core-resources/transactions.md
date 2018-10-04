@@ -23,7 +23,9 @@ This means that if you wish to provide functionality to automatically transition
 1. Set the default status to "pending"
 2. Build a service to receive event webhooks (transaction.create) and follow custom logic to either update the transaction to `complete` or `failed`.
 
-The first option should be avoided in almost all use-cases as it allows end-users to make any transaction they want and it will immediately transition to `complete`. It is safer to transition to `pending` first as the `pending` state holds the funds in reserve until it is properly completed or failed (thus preventing double spend while a 3rd party system approves the transaction).
+<aside class="warning">
+    The first option should be avoided in almost all use-cases as it allows end-users to make any transaction they want and it will immediately transition to <code>complete</code>. It is safer to transition to <code>pending</code> first as the <code>pending</code> state holds the funds in reserve until it is properly completed or failed (thus preventing double spend while a 3rd party system approves the transaction).
+</aside>
 
 ### Object
 
