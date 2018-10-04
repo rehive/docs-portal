@@ -6,7 +6,7 @@ weight: 2
 ---
 
 
-When an error occurs in the platform does two things, it returns a HTTP response containing two things:
+When an error occurs in the platform it returns a HTTP response containing two things:
 
 1. body (formatted in JSON) containing a `message` and `status`
 2. and HTTP response code

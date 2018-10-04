@@ -25,7 +25,7 @@ curl https://api.rehive.com/3/auth/login/
        "password": "joe1234"}'
 ```
 
-Before trying the above request, make sure you have your own `user`, `company`, and `password`. This can be done easily by registering a new company via the Rehive Dashboard (TODO : LINK).
+Before trying the above request, make sure you have your own `user`, `company`, and `password`. This can be done easily by registering a new company via the [dashboard](https://dashboard.rehive.com).
 
 Once you have your own user you can replace the placeholder data in the example JSON object and then fire off the above request. If successful, you should get a response like this:
 

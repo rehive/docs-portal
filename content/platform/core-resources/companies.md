@@ -5,7 +5,7 @@ description: Company resources.
 weight: 2
 ---
 
-The Rehive platform is a multi tenant application seperated by a `company` identifier. This means that the `company` is an important part of how Rehive seperates data and ensures resources do not cross client boundaries. To do anything in Rehive, you should always have a company. To create a company make use of the dashboard (TODO Add link) or take a look at the dashboard documentation (TODO Add link).
+The Rehive platform is a multi tenant application seperated by a `company` identifier. This means that the `company` is an important part of how Rehive seperates data and ensures resources do not cross client boundaries. To do anything in Rehive, you should always have a company. To create a company make use of the [dashboard](https://dashboard.rehive.com) or take a look at the [dashboard documentation](/dashboard/get-started/introduction/).
 
 ### Object
 
@@ -52,50 +52,10 @@ Companies in Rehive have their own details such as `id`, `name`, `description` a
 Like most resources in Rehive, the company data can be access via both the `admin` and `user` section. The admin section endpoint gives admin users read/write access to the data while the user section endpoint provides read only access to end-users. The two endpoints can be compared below:
 
 section | type | URL | methods
----|---|---
+---|---|---|---
 admin | single | `https://api.rehive.com/3/admin/company/` | `GET`, `PATCH`, `PUT`
 user | single | `https://api.rehive.com/3/company/` | `GET`
 
 ### Usage
 
 Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and a `Authorization` header.
-
-#### Admin
-
-The admin endpoints provide the `GET` method as a way to retrieve a company object. In addition a further `PUT` and `PATCH` method are provided as a way to modify either the whole or part of a company object repsectively.
-
-Examples of the retreieving and updating a company can be found below:
-
-**Retrieve company request**
-
-```shell
-curl https://api.rehive.com/3/admin/company/
-  -X GET
-  -H "Authorization: Token {token}"
-  -H "Content-Type: application/json"
-```
-
-**Update company request**
-
-```shell
-curl https://api.rehive.com/3/admin/company/
-  -X PATCH
-  -H "Authorization: Token {token}"
-  -H "Content-Type: application/json"
-  -D '{"description": "A new description."}'
-```
-
-### User
-
-The user endpoint provides the exact same `GET` functionality that the admin one does. However, end-users cannot modify the company therefore no methods for modifying the object are provided.
-
-An example of company retrieval can be found below:
-
-**Retrieve company request**
-
-```shell
-curl https://api.rehive.com/3/company/
-  -X GET
-  -H "Authorization: Token {token}"
-  -H "Content-Type: application/json"
-```
