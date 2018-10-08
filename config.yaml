@@ -13,9 +13,9 @@ params:
   secondaryColor: "#A4A5F5"
 
   extraNavItems:
-    - title: Log in
+    - title: Sign in
       url: https://dashboard.rehive.com
 
   extraFooterItems:
-    - title: Log in
+    - title: Sign in
       url: https://dashboard.rehive.com
