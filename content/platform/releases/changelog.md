@@ -10,6 +10,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+#### 09-10-2018
+
+1. Modified the admin user view endpoint to allow changes to be made on the `email` and `mobile` fields:
+    - Setting a non existent email/mobile will result in that email/mobile getting created, a confirmation sms/email getting sent and the email/mobile getting marked as `"primary": true`
+    - Using an email/mobile that already exists will simply set that email/mobile as primary.
+
+---
+
 #### 13-09-2018
 
 1. Added views for users to see requirements, fees, and limits related to group tiers.
