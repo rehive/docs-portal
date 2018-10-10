@@ -1,0 +1,3 @@
+[submodule "themes/hexon-hugo-theme"]	
+	path = themes/hexon-hugo-theme	
+	url = git@github.com:OdinsPlasmaRifle/hexon-hugo-theme.git
