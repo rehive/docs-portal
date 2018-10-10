@@ -4,7 +4,7 @@
 deployment:
   replicaCount: 1
 image:
-  repository: gcr.io/rehive-services/rehive-docs
+  repository: gcr.io/rehive-services/docs-portal
   tag: latest
   pullPolicy: Always
 service:
@@ -15,14 +15,14 @@ service:
 ingress:
   enabled: true
   hosts:
-    - docs.d.rehive.com
+    - docs.portal.d.rehive.com
   annotations:
     kubernetes.io/ingress.class: "nginx"
     kubernetes.io/tls-acme: "true"
   tls:
     - hosts:
-      - docs.d.rehive.com
-      secretName: rehive-docs-portal-tls
+      - docs.portal.d.rehive.com
+      secretName: rehive-docs-portal-dev-tls
 management:
   enabled: false
 postgres:
