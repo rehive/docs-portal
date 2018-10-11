@@ -11,7 +11,7 @@ Webhooks should always be created with a secure `secret` key. The secret key can
 
 The platform expects a `200 OK` HTTP response when webhooks are called. If a 200 response is not returned, the platform will retry the webhook up to 12 times with a gradually increasing delay between each retry.
 
-Every webhook inlcudes a body containing a JSON object.
+Every webhook includes a body containing a JSON object.
 
 ```json
 {
@@ -31,7 +31,7 @@ Attribute | Description
 id | The unique id of the request. This id is shared between retries of the same request.
 event | The event that triggered the webhook
 company | The company identifier
-data | an object contained differnet data depending on the event
+data | an object contained different data depending on the event
 
 ### Supported events
 

@@ -15,7 +15,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 1. Modified the admin user view endpoint to allow changes to be made on the `email` and `mobile` fields:
     - Setting a non existent email/mobile will result in that email/mobile getting created, a confirmation sms/email getting sent and the email/mobile getting marked as `"primary": true`
     - Using an email/mobile that already exists will simply set that email/mobile as primary.
-2. Improved the way available balances are stored and calculated. This will resul in performance improvements on transactions, accounts and aggregation endpoints like the totals/overview.
+2. Improved the way available balances are stored and calculated. This will result in performance improvements on transactions, accounts and aggregation endpoints like the totals/overview.
 
 ---
 
@@ -51,7 +51,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 #### 21-08-2018
 
 1. Fixed case sensitive bug with the `group__isnull` filter.
-2. Removed the url encoding from the `otpauth_url` on the 2fa endpoint.
+2. Removed the url encoding from the `otpauth_url` on the 2FA endpoint.
 
 ---
 

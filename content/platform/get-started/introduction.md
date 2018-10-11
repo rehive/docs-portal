@@ -29,7 +29,7 @@ Some example endpoints are:
 
 #### User
 
-The user section of the platform API is designed for end-users. This set of endpoints only exposes a data set that is  relevant to the user as an individual within the system. These endpoints can be exposed to end-users and were created to be used without any intermeidary services or layers.
+The user section of the platform API is designed for end-users. This set of endpoints only exposes a data set that is  relevant to the user as an individual within the system. These endpoints can be exposed to end-users and were created to be used without any intermediary services or layers.
 
 The user section covers almost all resource types but some examples endpoints are:
 
@@ -41,7 +41,7 @@ The user section covers almost all resource types but some examples endpoints ar
 
 The admin section of the platform API is designed for administrators, managers and systems that need access to either part or the whole of the platform with a "superuser" scope. Admin access, when provided in full, gives access to the organization's full data-set (including other users and their accounts/currencies/transactions etc.)
 
-Every resource available in the Rehive platform is accessbly via the admin endpoints. Some examples are:
+Every resource available in the Rehive platform is accessible via the admin endpoints. Some examples are:
 
 * `/3/admin/users/`
 * `/3/admin/accounts/`

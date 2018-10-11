@@ -5,7 +5,7 @@ description: Pagination.
 weight: 3
 ---
 
-On listing pages, the patform provides a way to paginate results. The default pagination method offered by the platform is offset pagination, which allows navigation to an arbitrary point in a list of results as well as via `next` and `prev`attributes. The JSON format returned on paginated listing pages looks like this:
+On listing pages, the platform provides a way to paginate results. The default pagination method offered by the platform is offset pagination, which allows navigation to an arbitrary point in a list of results as well as via `next` and `prev`attributes. The JSON format returned on paginated listing pages looks like this:
 
 ```shell
  {

@@ -5,7 +5,7 @@ description: Transaction resources.
 weight: 6
 ---
 
-Transactions are a way to manage value on and between accounts in the Rehive platform. Every transaction can be either a `debit` or a `credit`. In simple terms `debit` reduces an account's balance and a `credit` increases an account's balance. A transfer can be throught of as a 2-step transaction where one user is debited and another is credited the required amount. This structure allows for easy verification of balances and can be used to back track to a specific point in time to discover what the balance was.
+Transactions are a way to manage value on and between accounts in the Rehive platform. Every transaction can be either a `debit` or a `credit`. In simple terms `debit` reduces an account's balance and a `credit` increases an account's balance. A transfer can be thought of as a 2-step transaction where one user is debited and another is credited the required amount. This structure allows for easy verification of balances and can be used to back track to a specific point in time to discover what the balance was.
 
 Every transaction has a status that can be used to gauge the state of the transaction. The statuses are:
 
@@ -75,7 +75,7 @@ A full transaction object looks like:
 }
 ```
 
-A debit transaction will look much the same as the above, except the `amount` will be a neagative value and the `tx_type` will be `Debit`.
+A debit transaction will look much the same as the above, except the `amount` will be a negative value and the `tx_type` will be `Debit`.
 
 On the other hand a transfer will have some additional information in the `source_transaction` or `destination_transaction` attributes. As stated previously, transfers are simply debits/credits themselves. So, if a transfer is made between two accounts 2 transactions will be created:
 

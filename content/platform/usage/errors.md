@@ -11,7 +11,7 @@ When an error occurs in the platform it returns a HTTP response containing two t
 1. body (formatted in JSON) containing a `message` and `status`
 2. and HTTP response code
 
-The JSON error respone always includes a `message` string. If an error occurred as a result of a specific attribute or
+The JSON error response always includes a `message` string. If an error occurred as a result of a specific attribute or
 key the error details will be outputted in the `data` object.
 
 Errors will be formatted in one of two ways. A minimal error message:

@@ -5,7 +5,7 @@ description: Company resources.
 weight: 2
 ---
 
-The Rehive platform is a multi tenant application seperated by a `company` identifier. This means that the `company` is an important part of how Rehive seperates data and ensures resources do not cross client boundaries. To do anything in Rehive, you should always have a company.
+The Rehive platform is a multi tenant application separated by a `company` identifier. This means that the `company` is an important part of how Rehive separates data and ensures resources do not cross client boundaries. To do anything in Rehive, you should always have a company.
 
 <aside class="notice">
     To create a company make use of the <a href="https://dashboard.rehive.com" target="_blank">dashboard</a> or take a look at the <a href="/dashboard/get-started/introduction/" target="_blank">dashboard documentation</a>.
