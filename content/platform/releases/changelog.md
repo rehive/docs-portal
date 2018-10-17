@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+#### 16-10-2018
+
+1. Added new optional pagination type “cursor”.
+    - To use this pagination type specify `?pagination=cursor` on a listing endpoint. For optimal performance only sort by `created` or `id`.
+
+---
+
 #### 09-10-2018
 
 1. Modified the admin user view endpoint to allow changes to be made on the `email` and `mobile` fields:
