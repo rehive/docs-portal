@@ -11,4 +11,6 @@ references:
     url: https://github.com/rehive/rehive-javascript
   - title: Python SDK
     url: https://github.com/rehive/rehive-python
+  - title: Platform Status
+    url: https://status.rehive.com
 ---

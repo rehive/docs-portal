@@ -10,14 +10,23 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 16-10-2018
+{{< link-heading "h4" "18-10-2018" >}}
+
+1. Force non permanent token invalidation on password reset.
+2. Added new public company endpoint:
+    - `https://api.rehive.com/3/public/companies/`
+4. Added new `config` and `public` fields on companies.
+
+---
+
+{{< link-heading "h4" "16-10-2018" >}}
 
 1. Added new optional pagination type “cursor”.
     - To use this pagination type specify `?pagination=cursor` on a listing endpoint. For optimal performance only sort by `created` or `id`.
 
 ---
 
-#### 09-10-2018
+{{< link-heading "h4" "09-10-2018" >}}
 
 1. Modified the admin user view endpoint to allow changes to be made on the `email` and `mobile` fields:
     - Setting a non existent email/mobile will result in that email/mobile getting created, a confirmation sms/email getting sent and the email/mobile getting marked as `"primary": true`
@@ -26,7 +35,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 13-09-2018
+{{< link-heading "h4" "13-09-2018" >}}
 
 1. Added views for users to see requirements, fees, and limits related to group tiers.
 2. Added a filter on the user group tier view to the user’s active tier:
@@ -36,7 +45,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 11-09-2018
+{{< link-heading "h4" "11-09-2018" >}}
 
 1. Fixed admin user endpoint not allowing group updates.
 2. Added new account filters to the user list endpoint.
@@ -46,7 +55,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 28-08-2018
+{{< link-heading "h4" "28-08-2018" >}}
 
 1. Added character limit error messages in several places where they were missing.
 2. Made improvements to how primary accounts are selected and filtered.
@@ -55,14 +64,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 21-08-2018
+{{< link-heading "h4" "21-08-2018" >}}
 
 1. Fixed case sensitive bug with the `group__isnull` filter.
 2. Removed the url encoding from the `otpauth_url` on the 2FA endpoint.
 
 ---
 
-#### 17-08-2018
+{{< link-heading "h4" "17-08-2018" >}}
 
 1. Added new CSV export file format for large result sets.
 2. Updated the file format of JSON exports to be a simple list of objects.
@@ -70,13 +79,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 31-07-2018
+{{< link-heading "h4" "31-07-2018" >}}
 
 1. Fixed a bug where a group tier fee could not be updated without a currency.
 
 ---
 
-#### 26-07-2018
+{{< link-heading "h4" "26-07-2018" >}}
 
 1. Fixed a bug where the `username` could not be added when null.
     - The username is now read-only, but only after it has been set with a non-null value.
@@ -86,13 +95,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 19-07-2018
+{{< link-heading "h4" "19-07-2018" >}}
 
 1. Added a new `name` filter field to the admin group listing endpoint.
 
 ---
 
-#### 7-07-2018
+{{< link-heading "h4" "17-07-2018" >}}
 
 1. Added a custom transaction id field on transaction create endpoints.
     - The id field has also been updated to a uuid format (the same as user IDs).
@@ -102,7 +111,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 10-07-2018
+{{< link-heading "h4" "10-07-2018" >}}
 
 1. Added new `verification` object to user info endpoints.
     - This includes two fields that indicate whether the user’s email or mobile number have been verified by the user.
@@ -117,7 +126,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 28-06-2018
+{{< link-heading "h4" "28-06-2018" >}}
 
 1. Fixed 500 error on group tier objects in certain circumstances.
 2. Fixed bug where admin update on a user address did not save the updated status value.
@@ -126,7 +135,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 08-06-2018
+{{< link-heading "h4" "08-6-2018" >}}
 
 1. Added the `archive` framework.
     - Resources will now have an additional `archived` field that can be used to make a field read_only as well invisible to end users.
@@ -145,7 +154,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 24-05-2018
+{{< link-heading "h4" "24-05-2018" >}}
 
 1. Updated fee calculations to stack if multiple fees for the same transaction type, subtype, and currency are created.
 2. Added description field to fees.
@@ -153,7 +162,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 15-05-2018
+{{< link-heading "h4" "15-05-2018" >}}
 
 1. Changed the default password reset, password set and email verification URLs to direct to the main Rehive website instead of the dashboard.
     - This change will not impact any custom URLs.
@@ -161,7 +170,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 03-05-2018
+{{< link-heading "h4" "03-05-2018" >}}
 
 1. Added new `user` filter on the admin user list.
     - This field can be used to filter by any of the identifier fields (id, email, mobile_number, username).
@@ -172,7 +181,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 26-04-2018
+{{< link-heading "h4" "26-04-2018" >}}
 
 1. Added new `username` field to the user resource. This field is a unique identifier that can be set on user registration or create. It can be used as a recipient identifier for transfers as well (but it must already exist in the database).  It has the following limitations:
     - It may only contain lowercase letters, digits and @/./+/-/_. characters.
@@ -183,14 +192,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 13-04-2018
+{{< link-heading "h4" "13-04-2018" >}}
 
 1. Added new `enabled` field on the user object.
     - This field will replace the `active` field in future. See the deprecation timeline for more on this.
 
 ---
 
-#### 12-04-2018
+{{< link-heading "h4" "12-04-2018" >}}
 
 1. Added new `updated` and `created` fields to the user profile and list endpoints (admin and user sections).
     - The `created` field will replace the `date_joined` field. See the deprecation timeline for more on this.
@@ -198,14 +207,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 27-03-2018
+{{< link-heading "h4" "27-03-2018" >}}
 
 1. Expose permission requirements for admin endpoints in the OPTIONS request for that endpoint.
     - When adding permissions to a group or user, the OPTIONS request on the endpoint will now expose the possible permissions that can be assigned.
 
 ---
 
-#### 15-03-2018
+{{< link-heading "h4" "15-03-2018" >}}
 
 1. Removed the old https://rehive.com/api/3/.
     -Can now only access the API via https://api.rehive.com/3/. (as per the Rehive deprecation timeline).
@@ -217,7 +226,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 01-03-2018
+{{< link-heading "h4" "01-03-2018" >}}
 
 1. Fixed an error that occurred when adding a limit with no value.
 2. Fixed and error that occurred when trying to add a currency that already exists to an account.
@@ -228,7 +237,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### Changelog - 27-02-2018
+{{< link-heading "h4" "27-02-2018" >}}
 
 1. An email address or mobile number is no longer required when creating a user via the admin api endpoint.
 2. Fixed a bug where updating a transaction subtype with the same name fails.
@@ -239,14 +248,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 20-02-2018
+{{< link-heading "h4" "20-02-2018" >}}
 
 1. Added an event for setting user password on email sign up.
 2. Added user group filtering where filtering by user data is available.
 
 ---
 
-#### 08-02-2018
+{{< link-heading "h4" "08-02-2018" >}}
 
 1. Removed `confirm_on_create` from all transaction create endpoints.
 2. Added new API base URL.
@@ -256,7 +265,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 06-02-2018
+{{< link-heading "h4" "06-02-2018" >}}
 
 1. The metadata field has been updated to be more consistent across Rehive. The following rules now apply to the metadata field when it is included in an API request:
     - Must be valid JSON.
@@ -265,7 +274,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 30-01-2018
+{{< link-heading "h4" "30-01-2018" >}}
 
 1. Added batch create functionality for transactions.
     - Multiple transactions can be created in a single POST to the `/api/3/transactions/` endpoint. All transactions are processed as one atomic batch. If one transaction fails, all the transactions will fail.
@@ -278,7 +287,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 18-01-2018
+{{< link-heading "h4" "18-01-2018" >}}
 
 1. Replaced permission groups with general “groups”.
     -All permissions, tiers, limits and requirements now fall under groups.
@@ -297,14 +306,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 05-01-2018
+{{< link-heading "h4" "05-01-2018" >}}
 
 1. Fixed bug where `terms_and_conditions` were required on service deactivation
 2. Added an `account` filter to the admin user list.
 
 ---
 
-#### 28-12-2017
+{{< link-heading "h4" "28-12-2017" >}}
 
 1. Updated all password fields to have a max length of 128.
 2. In preparation for the public service registry/marketplace added new fields to the service object:
@@ -318,7 +327,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-#### 12-12-2017
+{{< link-heading "h4" "12-12-2017" >}}
 
 1. Added an ID to each webhook task.
     - This ID is attached to the webhook data on each webhook request.
