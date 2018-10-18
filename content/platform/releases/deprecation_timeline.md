@@ -9,7 +9,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-#### 20-11-2018
+{{< link-heading "h4" "20-11-2018" >}}
 
 1. Remove the identifier field from the company object.
 	- Use the id field instead of the identifier field. This will make the company object consistent with all the other Rehive resources.
@@ -18,7 +18,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-#### 13-09-2018
+{{< link-heading "h4" "13-09-2018" >}}
 
 1. Remove the `identifier` field from the user object and user lists. The `identifier` filter fields will be removed at the same time.
 	- Use the `id` field instead of the `identifier` field. This will make the user object consistent with all the other Rehive resources.
@@ -29,14 +29,14 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-#### 12-06-2018
+{{< link-heading "h4" "12-06-2018" >}}
 
 1. Remove the `date_joined` field from the user object and user lists. The date_joined filter fields will be removed at the same time.
 	- Use the `created` field instead of the `date_joined` field.
 
 ---
 
-#### 15-05-2018
+{{< link-heading "h4" "15-05-2018" >}}
 
 1. Remove the `/3/company/bank-account/` endpoint.
 	- This has been replaced by a list endpoint: `/3/company/bank-accounts/`.
@@ -44,7 +44,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-#### 15-03-2018
+{{< link-heading "h4" "15-03-2018" >}}
 
 1. Remove the `https://rehive.com/api/3/` base API URL. The new URL should be used exclusively after this date.
 	- The above URL should be replaced with `https://api.rehive.com/3/` in all codebases. Rehive maintained code will roll out this change in the months leading up to the deprecation.
@@ -54,6 +54,6 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-#### 08-02-2018
+{{< link-heading "h4" "08-02-2018" >}}
 
 1. Remove `confirm_on_create` from the all transaction create endpoints. Replace `confirm_on_create` with a status of `complete` like: ‘{“status”: “complete”}’
