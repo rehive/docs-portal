@@ -5,7 +5,7 @@ description: Rehive documentation
 weight: 1
 references:
   - title: System Status
-    url: http://status.rehive.com
+    url: https://status.rehive.com
   - title: Platform API Reference
     url: https://api.docs.rehive.com
   - title: Platform Changelog
