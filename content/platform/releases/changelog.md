@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "25-10-2018" >}}
+
+1. Added new `status` field to the admin transfer create endpoint.
+    - This field will impact transfers between existing users in the system.
+
+---
+
 {{< link-heading "h4" "18-10-2018" >}}
 
 1. Force non permanent token invalidation on password reset.
