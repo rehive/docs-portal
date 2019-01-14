@@ -5,7 +5,7 @@ description: Introduction to platform resources.
 weight: 1
 ---
 
-The Rehive platform provides a wide range of resources to make development of financial technology easier. A total of five core resources are pivotal to using the platform. These resources are:
+The Rehive platform provides a wide range of resources that make it easier to develop financial technology solutions. A total of five core resources are pivotal to using the platform. These resources are:
 
 1. Companies
 2. Users

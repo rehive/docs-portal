@@ -9,7 +9,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "20-11-2018" >}}
+{{< link-heading "h4" "29-01-2019" >}}
 
 1. Remove the identifier field from the company object.
 	- Use the id field instead of the identifier field. This will make the company object consistent with all the other Rehive resources.

@@ -1,8 +1,17 @@
 ---
+date: 2018-09-17T15:21:22+02:00
 title: Introduction
+description: Introduction to the services.
 weight: 1
 ---
 
-An introduction to services.
+In addition to the core platform, Rehive offers several services that can be used to extend platform functionality. These services are designed to work alongside the platform in order to provide additional functionality like cryptocurrency compatibility, notifications, and rewards.
 
-#### Coming soon!
+A full list of services can be found below:
+
+- **Stellar** - Make the platform compatible with the Stellar network.
+- **Bitcoin** - Make the platform compatible with the Bitcoin network.
+- **Notifications** - Provides management tools and event triggers to send email and SMS notifications.
+- **Rewards** - Provides management tools and functionality to trigger and customize rewards on top of the platform.
+
+Rehive is continually adding new services as needed and requested by clients. If you are looking for something specifc that you don't see above, feel free to contact the Rehive support team with your queries.

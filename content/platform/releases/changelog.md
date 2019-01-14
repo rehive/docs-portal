@@ -10,6 +10,58 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "14-12-2018" >}}
+
+1. Added access control for IPs. IP whitelists and blacklists can now be defined for the company, groups or users.
+2. Fixed email and mobile create bug where a verified key had to be set in order to set the primary key.
+3. Fixed errors with user update caused by a non read-only group key.
+
+---
+
+{{< link-heading "h4" "06-12-2018" >}}
+
+1. Added the fields to update a user’s mobile and email from the user endpoint (previously added to the admin user endpoints).
+2. Added a key to the company object that contains what services a company has activated.
+3. Added group information to the user “short” object
+    - This can be found on admin endpoints when showing related user information.
+
+---
+
+{{< link-heading "h4" "06-12-2018" >}}
+
+1. Added a new, more flexible and simplified permission system.
+    - Permissions can now be configured on both admin and user sections.
+    - Permissions can now be added to a group/user in a batch of more than one.
+
+---
+
+{{< link-heading "h4" "20-11-2018" >}}
+
+1. Added new privacy_policy_url and terms_and_conditions_url to the company settings.
+2. Added new “require_privacy_policy” field to company settings.
+3. Added new “privacy_policy” field to user register.
+
+---
+
+{{< link-heading "h4" "08-11-2018" >}}
+
+1. Updated multi-factor authentication
+    - Added a field to specify the `algorithm`  used when creating multi factor tokens (SHA1, SHA256, SHA512).
+    - Allow users to disable multi-factor authentication when logged in
+2. Added admin user multi-factor authentication management via the following endpoints:
+    - GET - /admin/users/{identifier}/mfa/
+    - DELETE -  /admin/users/{identifier}/mfa/sms/
+    - DELETE - /admin/users/{identifier}/mfa/token/
+
+---
+
+{{< link-heading "h4" "30-10-2018" >}}
+
+1. Updated the request logging to include the body data of every request.
+    - Sensitive values such as authorization keys, OTPs, and passwords are masked and stored as the masked value.
+
+---
+
 {{< link-heading "h4" "25-10-2018" >}}
 
 1. Added new `status` field to the admin transfer create endpoint.

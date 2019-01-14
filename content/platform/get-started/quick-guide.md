@@ -10,7 +10,7 @@ To get started with the API you have a couple options:
 1. You can choose to use one of the Rehive supported SDKs or
 2. Integrate the API manually in your choice of language.
 
-To use one of the SDKs check for you language in the "references list" in the sidebar. If you instead want to use a language that does not have a Rehive supported SDK, a custom implementation should be trivial as the platform uses standard HTTP which is supported extensively.
+To use one of the SDKs check for you language in the "references list" in the sidebar. If you instead want to use a language that does not have a Rehive supported SDK, a custom implementation should be trivial as the platform uses standard HTTP which is widely supported.
 
 ### Using the API
 
@@ -65,12 +65,7 @@ Once you have your own user you can replace the placeholder data in the example 
             "groups": [
                 {
                     "name": "test",
-                    "label": "Test",
-                    "settings": {
-                        "allow_transactions": true,
-                        "allow_debit_transactions": true,
-                        "allow_credit_transactions": true
-                    }
+                    "label": "Test"
                 }
             ],
             "permissions": [],
