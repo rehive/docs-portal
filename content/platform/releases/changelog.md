@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "16-01-2019" >}}
+
+1. Fixed admin user filters so that they work on all user emails and mobiles, not just the primary ones.
+2. Added an icon field to the company so that a wallet icon or favicon can be stored in the platform.
+
+---
+
 {{< link-heading "h4" "14-12-2018" >}}
 
 1. Added access control for IPs. IP whitelists and blacklists can now be defined for the company, groups or users.
