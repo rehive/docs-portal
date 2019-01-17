@@ -15,14 +15,14 @@ service:
 ingress:
   enabled: true
   hosts:
-    - docs.portal.rehive.com
+    - docs.rehive.com
   annotations:
     kubernetes.io/ingress.class: "nginx"
     kubernetes.io/tls-acme: "true"
   tls:
     - hosts:
-      - docs.portal.rehive.com
-      secretName: rehive-docs-portal-tls
+      - docs.rehive.com
+      secretName: docs-portal-tls
 management:
   enabled: false
 postgres:
