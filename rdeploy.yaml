@@ -1,29 +1,29 @@
 version: '1'
 configs:
-    dev:
-      project_name: docs-portal
-      docker_image: gcr.io/rehive-services/docs-portal
-      cloud_project: rehive-services
-      cluster: dev
-      namespace: docs-portal-dev
-      helm_chart: rehive/rehive-service
-      helm_chart_version: 0.1.32
-      helm_values_path: ./etc/helm/dev/values.yaml
-    staging:
-      project_name: docs-portal
-      docker_image: gcr.io/rehive-services/docs-portal
-      cloud_project: rehive-services
-      cluster: staging
-      namespace: docs-portal-staging
-      helm_chart: rehive/rehive-service
-      helm_chart_version: 0.1.32
-      helm_values_path: ./etc/helm/staging/values.yaml
-    production:
-      project_name: docs-portal
-      docker_image: gcr.io/rehive-services/docs-portal
-      cloud_project: rehive-services
-      cluster: production
-      namespace: docs-portal
-      helm_chart: rehive/rehive-service
-      helm_chart_version: 0.1.32
-      helm_values_path: ./etc/helm/production/values.yaml
+  dev:
+    project_name: docs-portal
+    docker_image: gcr.io/rehive-services/docs-portal
+    cloud_project: rehive-services
+    cluster: dev
+    namespace: docs-portal-dev
+    helm_chart: rehive/rehive-service
+    helm_chart_version: 0.1.32
+    helm_values_path: ./etc/helm/dev/values.yaml
+  staging:
+    project_name: docs-portal
+    docker_image: gcr.io/rehive-services/docs-portal
+    cloud_project: rehive-services
+    cluster: staging
+    namespace: docs-portal-staging
+    helm_chart: rehive/rehive-service
+    helm_chart_version: 0.1.32
+    helm_values_path: ./etc/helm/staging/values.yaml
+  production:
+    project_name: docs-portal
+    docker_image: gcr.io/rehive-services/docs-portal
+    cloud_project: rehive-services
+    cluster: production
+    namespace: docs-portal
+    helm_chart: rehive/rehive-service
+    helm_chart_version: 0.1.32
+    helm_values_path: ./etc/helm/production/values.yaml
