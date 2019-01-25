@@ -10,6 +10,16 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "25-01-2019" >}}
+
+1. Fixed a bug in the MFA flow that resulted in a user having to "re-login" after creating and confirming an MFA device.
+2. Updated the email and mobile handling:
+    - Users can now delete emails/mobiles as long as they are not their last email/mobile.
+    - Admins can now delete all emails/mobiles (including primary ones) belonging to a user.
+    - When primary emails/mobiles are deleted the next non primary email/mobile is set to primary.
+
+---
+
 {{< link-heading "h4" "16-01-2019" >}}
 
 1. Fixed admin user filters so that they work on all user emails and mobiles, not just the primary ones.
