@@ -10,6 +10,15 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "07-02-2019" >}}
+
+1. Added new address type field to address endpoints:
+    - values include: `permanent`, `contact`, `shipping`, `billing`, `business`.
+2. Changed subtypes to be unique together on subtype and tx_type. So that the same name can be used across different tx_types.
+3. Removed the file size limitation of 1MB. Updated to a 5MB.
+
+---
+
 {{< link-heading "h4" "25-01-2019" >}}
 
 1. Fixed a bug in the MFA flow that resulted in a user having to "re-login" after creating and confirming an MFA device.
