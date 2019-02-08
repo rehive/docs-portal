@@ -10,6 +10,12 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "08-02-2019" >}}
+
+1. Updated the max number of digits to 30 (from 28) for all currency amounts (eg. balances, transaction amounts).
+
+---
+
 {{< link-heading "h4" "07-02-2019" >}}
 
 1. Added new address type field to address endpoints:
