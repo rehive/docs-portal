@@ -13,7 +13,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 {{< link-heading "h4" "20-02-2019" >}}
 
 1. Added new `code__in` filters on `/admin/currencies/` and `/company/currencies/` endpoints.
-    - Can be used like: https://api.rehive.com/3/admin/currencies/?code__in=USD,EUR
+    - Can be used like: `?code__in=USD,EUR`
 
 ---
 
