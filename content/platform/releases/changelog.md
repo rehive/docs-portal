@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "20-02-2019" >}}
+
+1. Added new `code__in` filters on `/admin/currencies/` and `/company/currencies/` endpoints.
+    - Can be used like: https://api.rehive.com/3/admin/currencies/?code__in=USD,EUR
+
+---
+
 {{< link-heading "h4" "08-02-2019" >}}
 
 1. Updated the max number of digits to 30 (from 28) for all currency amounts (eg. balances, transaction amounts).
