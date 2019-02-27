@@ -10,6 +10,12 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "27-02-2019" >}}
+
+1. Added a proper JSON error message for when amounts, fees or limits exceed the max size allowed in the platform. Previously these errors threw 500 errors.
+
+---
+
 {{< link-heading "h4" "20-02-2019" >}}
 
 1. Added new `code__in` filters on `/admin/currencies/` and `/company/currencies/` endpoints.
