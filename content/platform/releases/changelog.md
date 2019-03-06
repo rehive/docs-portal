@@ -10,6 +10,15 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "06-03-2019" >}}
+
+1. Added default descriptions for the `admin` and `service` group.
+2. Added `description` field to group add endpoint.
+3. Added a `stellar` crypto type to the crypto accounts.
+4. Added protections to stop non-admin users from adding `admin` users.
+
+---
+
 {{< link-heading "h4" "27-02-2019" >}}
 
 1. Added a proper JSON error message for when amounts, fees or limits exceed the max size allowed in the platform. Previously these errors threw 500 errors.
