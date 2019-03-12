@@ -10,6 +10,15 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "12-03-2019" >}}
+
+1. Updated the `note` field on transactions to be editable by admin users.
+2. Updated the admin transaction endpoints to support creating transactions without specifying a user if an account is specified instead.
+    - An error will be returned if neither a user or account is returned.
+    - An error will be returned if the account does not belong to the user specified.
+
+---
+
 {{< link-heading "h4" "06-03-2019" >}}
 
 1. Added default descriptions for the `admin` and `service` group.
