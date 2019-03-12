@@ -16,6 +16,8 @@ removals will be indicated ahead of time in the deprecation timeline.
 2. Updated the admin transaction endpoints to support creating transactions without specifying a user if an account is specified instead.
     - An error will be returned if neither a user or account is returned.
     - An error will be returned if the account does not belong to the user specified.
+3. Altered the webhooks so that only a single event can exist for a given URL.
+    - An error will be thrown if multiple webhooks are created with the same URL and event.
 
 ---
 
