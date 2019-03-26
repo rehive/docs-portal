@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "26-03-2019" >}}
+
+1. Added new `total_amount` field to transaction total endpoints.
+    - This contains the sum of all `total_amount`s on transactions
+
+---
+
 {{< link-heading "h4" "12-03-2019" >}}
 
 1. Updated the `note` field on transactions to be editable by admin users.
