@@ -9,6 +9,13 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
+{{< link-heading "h4" "11-04-2019" >}}
+
+1. Removed `/admin/transactions/sets/` endpoints:
+	- Use the new exports endpoint instead: `/admin/transactions/exports/`
+
+---
+
 {{< link-heading "h4" "29-01-2019" >}}
 
 1. Remove the identifier field from the company object.

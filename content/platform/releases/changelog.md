@@ -10,6 +10,15 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "28-03-2019" >}}
+
+1. Renamed "result sets" to "exports".
+    - Added replacement URL : `/admin/transactions/exports/`
+    - The old URL will be deprecated as per the deprecation timeline.
+3. Fixed a minor bug in account creation where deleting and recreating an account configuration (with the same name) could result in 500 errors when trying to create accounts for users automatically.
+
+---
+
 {{< link-heading "h4" "26-03-2019" >}}
 
 1. Added new `total_amount` field to transaction total endpoints.
