@@ -10,6 +10,15 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "09-04-2019" >}}
+
+1. Updated accounts to not require a user to be attached to them.
+    - The account `user` can be `null` when created.
+    - The account` user` can be updated to `null`.
+    - The account `user` attribute can be changed to another user.
+
+---
+
 {{< link-heading "h4" "28-03-2019" >}}
 
 1. Renamed "result sets" to "exports".
