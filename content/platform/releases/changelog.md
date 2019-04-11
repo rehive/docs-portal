@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "11-04-2019" >}}
+
+1. Added new created and updated datetime fields to MFA devices (SMS and TOTP).
+    - This can be used in order to see when a user enabled MFA.
+
+---
+
 {{< link-heading "h4" "09-04-2019" >}}
 
 1. Updated accounts to not require a user to be attached to them.
