@@ -16,6 +16,8 @@ removals will be indicated ahead of time in the deprecation timeline.
     - Users can now export groups of their own transactions.
     - To view a list of exorts or create one: `/transactions/exports/`
     - To view a single export: `/transactions/exports/<id>/`
+2. Removed the old `/admin/transactions/sets/` endpoints.
+    - Use the `/admin/transactions/exports/` endpoints instead.
 
 ---
 
