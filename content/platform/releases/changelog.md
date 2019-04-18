@@ -10,6 +10,15 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "18-04-2019" >}}
+
+1. Added new transaction export endpoint for non admin users.
+    - Users can now export groups of their own transactions.
+    - To view a list of exorts or create one: `/transactions/exports/`
+    - To view a single export: `/transactions/exports/<id>/`
+
+---
+
 {{< link-heading "h4" "11-04-2019" >}}
 
 1. Added new created and updated datetime fields to MFA devices (SMS and TOTP).
