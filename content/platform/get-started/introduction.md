@@ -29,7 +29,7 @@ Some example endpoints are:
 
 #### User
 
-The user section of the platform API is designed for end-users. This set of endpoints only exposes a data set that is  relevant to the user as an individual within the system. These endpoints can be exposed to end-users and were created to be used without any intermediary services or layers.
+The user section of the platform API is designed for end-users. This set of endpoints only exposes a data set that is relevant to the user as an individual within the system. These endpoints can be exposed to end-users and were created to be used without any intermediary services or layers.
 
 The user section covers almost all resource types but some examples endpoints are:
 

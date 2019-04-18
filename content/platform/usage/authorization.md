@@ -17,7 +17,7 @@ The platform tokens allow for a single user to have multiple active tokens on se
 
 ### Authorization Header
 
-When making requests, the API key should be included as a token in the `Authorization` header:
+When making requests, an API key should be included as a token in the `Authorization` header:
 
 ```json
 Authorization: Token {token}

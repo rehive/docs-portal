@@ -1,8 +1,0 @@
----
-date: 2018-09-17T15:21:22+02:00
-title: Quick guide
-description: A quick guide to the notification service.
-weight: 2
----
-
-#### Coming soon!
