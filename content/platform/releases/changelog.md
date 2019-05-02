@@ -10,6 +10,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "02-05-2019" >}}
+
+1. Added new `mfa.sms.verify` event that can be used to hook into the multi factor SMS verification message.
+    - This can be configured via webhooks.
+    - This allows for MFA SMS messages to be customized.
+
+---
+
 {{< link-heading "h4" "18-04-2019" >}}
 
 1. Added new transaction export endpoint for non admin users.
