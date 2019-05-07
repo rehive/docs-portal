@@ -10,6 +10,12 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "07-05-2019" >}}
+
+1. Fixed issues with variable length OTPs on SMS MFA.
+
+---
+
 {{< link-heading "h4" "02-05-2019" >}}
 
 1. Added new `mfa.sms.verify` event that can be used to hook into the multi factor SMS verification message.
