@@ -28,6 +28,9 @@ Users have a multitude of attributes and properties that can be used to store id
         "unit": "rand",
         "divisibility": 2
     },
+    "account": 0000000000,
+    "balance": 0,
+    "available_balance": 0,
     "company": "rehive",
     "language": "en",
     "nationality": "ZA",

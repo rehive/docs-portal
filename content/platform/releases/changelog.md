@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "17-05-2019" >}}
+
+1. Added new `network` and `name` fields to crypto accounts.
+2. Added `available_balance` to the user info object.
+
+---
+
 {{< link-heading "h4" "07-05-2019" >}}
 
 1. Fixed issues with variable length OTPs on SMS MFA.
