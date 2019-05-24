@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "24-05-2019" >}}
+
+1. Added new `email` and `company` parameters to the password set/reset and email verify URL.
+2. Added a new `slug` field to the services object.
+
+---
+
 {{< link-heading "h4" "17-05-2019" >}}
 
 1. Added new `network` and `name` fields to crypto accounts.
