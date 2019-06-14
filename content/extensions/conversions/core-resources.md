@@ -5,19 +5,31 @@ description: Conversion extension core resources.
 weight: 3
 ---
 
-There is only currently one core component within the conversion extension. Additional features will be added as furthe rfunctionality is completed.
+There are two core resource within the conversion extension. Additional features will be added as further functionality is completed.
 
 ### Rates
 
-The primary component of the conversion extension is the rates. The rates contain all currency pairs that you (as an admin) wish to expose to end users. Rates consist of the following data:
+The primary resource of the conversion extension is the rates. The rates contain the calculated rates for both the global (default) rate-pairs as well as any custom rate-pairs that are set for the company.
+
+All rates are set using a base currency. The base currency is USD but further base currencies options will be added in future.
+
+Rates consist of the following data:
 
 Field | Description
 --- | ---
-from_currency |  The currency to convert from.
-to_currency | The currency to convert to.
-dynamic_rate | Will auto populate if a rate can be found for the specific currency pair.
-fixed_rate | An overide rate that nullifies the automated dynamic rate.
+key |  A currency key in the `USD:<to_currency_code>` format
+rate | Recorded rate at the time created
+created | Timestamp date the rate was created
 
-<aside class="warning">
-	Rates do not allow for reverse conversions. A separate rate should always be defined if you want to be able to reverse from one currency to another.
-</aside>
+### Rate pairs
+
+Rate pairs store any custom pairs a company wants to setup. This allows companies to overide the global rate pairs as well as add their own rate pairs related to custom currencies/assets.
+
+Rate pairs consist of:
+
+Field | Description
+--- | ---
+key |  A currency key in the `USD:<to_currency_code>` format
+path | A path to another rate (eg. `USD:EUR`)
+rate | A fixed rate
+

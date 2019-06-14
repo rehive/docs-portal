@@ -7,17 +7,17 @@ weight: 1
 
 The conversion extension is used to manage currency rates, quotes and conversion transactions. It allows for companies to access data regarding current rates (provided by a reliable 3rd party rates source) as well as set their own custom rates for specific currency pairs.
 
-Currently the extension lets you:
+Currently the extension allows you to:
 
-1. Enable automated rates for specific currency pairs.
-2. Enable fixed rates for specific currency pairs.
-3. Expose these rates to end users.
+1. Retrieve rates for common global currency pairs.
+2. Enable and retrieve rates for custom currency pairs.
+3. Set rate paths for currency pairs.
+4. Add custom currencies for rate pairs.
 
 <aside class="warning">
 	The following features have not yet been added:
 </aside>
 
-1. Conversions between currencies based on configurable rates.
-2. A full catalog of default rates that can be used by end users (in 193+ currencies).
-3. Configurable percentage and fixed fees on conversions.
-4. Configurable complex rate expressions for cross currency pairs.
+1. Conversions between currencies based on configurable conversion rates.
+2. Complex expressions for rate pair paths.
+3. Additional base currency support.
