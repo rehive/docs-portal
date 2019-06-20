@@ -10,7 +10,7 @@ RUN tar -xf /tmp/${HUGO_ID}_Linux-64bit.tar.gz -C /tmp \
     && rm -rf /tmp/${HUGO_ID}_Linux-64bit.tar.gz \
     && rm -rf /tmp/LICENSE.md \
     && rm -rf /tmp/README.md
-RUN apk add --update git asciidoctor libc6-compat libstdc++ \
+RUN apk add --update git libc6-compat libstdc++ \
     && apk upgrade \
     && apk add --no-cache ca-certificates
 WORKDIR /app
