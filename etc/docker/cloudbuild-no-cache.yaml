@@ -2,16 +2,16 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [
             'build',
-            '-t', '$_IMAGE-jsbuild:latest',
-            '-t', '$_IMAGE-jsbuild:$TAG_NAME',
-            '-f', 'etc/docker/jsbuild',
+            '-t', '$_IMAGE-build:latest',
+            '-t', '$_IMAGE-build:$TAG_NAME',
+            '-f', 'etc/docker/build.Dockerfile',
             '.'
         ]
 - name: 'gcr.io/cloud-builders/docker'
   args: [
             'run',
             '-v', '/workspace/public:/app/public:rw',
-            '$_IMAGE-jsbuild'
+            '$_IMAGE-build'
         ]
 - name: 'gcr.io/cloud-builders/docker'
   args: [
@@ -21,4 +21,4 @@ steps:
             '-f', 'etc/docker/Dockerfile',
             '.'
         ]
-images: ['$_IMAGE-jsbuild', '$_IMAGE']
+images: ['$_IMAGE-build', '$_IMAGE']
