@@ -7,6 +7,55 @@ weight: 1
 
 Summary of additions and changes to the Rehive Dashboard. 
 
+
+---
+
+{{< link-heading "h4" "11-06-2019" >}}
+
+### Extensions update
+
+In this release there were major updates to 3 Rehive Extensions: Conversion, Product and Rewards.
+
+**Conversion Extension updates:**
+
+- When the Conversion extension is active, for all non-custom currencies, rates will now be automatically calculated. Admins can override this and set a rate pair if they would like a custom rate.
+- Defined rate pairs can now be pegged to another rate pair's value.
+- Admins can now set the default Display currency for their company, to be used in the user wallets. 
+
+**Product Extension updates:**
+
+- Added "Instant buy" flag to products - indicates which products can bypass a cart when buying.
+- Added countries whitelist to display a product only in the specified countries.
+- Added `supplier` field.
+- Added metadata field.
+- Added a short description. Increased the size of longer product description field.
+- Changed product type - type can only be selected from a predefined list now. Either `virtual` or `physical`.
+- Images can now be added to products.
+- Each individual product in an order can have a status set e.g. shipped, fulfilled, etc.
+- Orders now display the date the order was placed, in addition to the date the cart was created.
+- Order status can now be updated to `placed`, `pending`, `failed`, `complete`.
+- Admins can now create payments for an order if the user has funds (in the case where a user has run into some error and cannot pay).
+
+**Rewards Extension updates:**
+
+- Campaigns can be defined as 'claim' type campaigns. This means users have to claim/request a reward.
+- Campaigns can require an event and an expression to be evaluated against before a reward is issued. Campaigns can't be both claim and event based.
+- Admins can set event amounts and event IDs for event campaigns. These fields can be used to reward users a percentage of a transaction or to reward a referee in a referral program.
+- Several fields were renamed for simplicity.
+- Campaigns can now have a default status - this refers to the status a reward will have by default once claimed or earned via an event by a user.
+- Admins can now limit campaigns to specific groups.
+
+**Bug fixes:**
+
+- Fixed an issue on the Stellar Extension where admins could not add an asset.
+
+**Changes:**
+
+- Removed defunct accounts API calls in the Rewards Extension which were slowing down the page.
+- Updated template custom asset description to "DEMO token" from "Demo asset."
+- Renamed template subtype `purchase` type credit to `sale`.
+- Updated currency list.
+
 ---
 
 {{< link-heading "h4" "13-05-2019" >}}
