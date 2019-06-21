@@ -12,7 +12,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 {{< link-heading "h4" "11-06-2019" >}}
 
-### Extensions update
+##### Extensions update
 
 In this release there were major updates to 3 Rehive Extensions: Conversion, Product and Rewards.
 
