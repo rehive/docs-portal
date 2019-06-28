@@ -1,7 +1,7 @@
 ---
 date: 2018-09-17T15:21:22+02:00
 title: Usage
-description: Reward extension usage.
+description: Stellar extension usage.
 weight: 4
 ---
 
@@ -28,9 +28,9 @@ The full <strong>Mainnet API specification</strong> can be found <a href="https:
 The <strong>Mainnet Swagger specification</strong> can be found <a href="https://stellar-testnet.services.rehive.io/swagger">here</a>
 </aside>
 
-The Stellar extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Reward extension. This is  specifically true of authorization, errors, filters, and pagination.
+The Stellar extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Stellar extension. This is  specifically true of authorization, errors, filters, and pagination.
 
-Similar to the platform the Reward extension is divided into two sections:
+Similar to the platform the Stellar extension is divided into two sections:
 
 1. admin : admin endpoints are prefixed with `admin`
 2. user : user endpoints are prefixed with `user`
