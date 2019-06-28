@@ -10,6 +10,16 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "28-06-2019" >}}
+
+1. Updated the URL routes to allow optional closing slashes.
+2. Added a new subtypes endpoint for end users (users can see a list of subtypes)
+    - `/3/subtypes/` and `/3/subtypes/<id>/`
+3. Improved the ranking and partial matching on searches.
+4. Fixed bug in the search where search terms including a `+` symbol would yield no results.
+
+---
+
 {{< link-heading "h4" "24-05-2019" >}}
 
 1. Added new `email` parameter to the password set/reset and email verify URL.
