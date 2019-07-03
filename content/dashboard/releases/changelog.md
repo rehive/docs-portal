@@ -7,6 +7,33 @@ weight: 1
 
 Summary of additions and changes to the Rehive Dashboard. 
 
+---
+
+{{< link-heading "h4" "02-07-2019" >}}
+
+**Bug fixes:**
+
+- Thumbnails of uploaded logos are no longer distorted on the settings page.
+- Updated placeholder help text for "Terms and conditions url" and "Privacy policy url" fields in Company Settings to have more relevant examples.
+
+**Changes:**
+
+- Added sentry error tracking to the Dashboard.
+- When creating or editing a notification, events are now listed in alphabetical order.
+- Doubled the height of the Company config field inside Company info.
+- Added an information tooltip to the "Public" toggle in Company info to explain its use.
+- Added "Stellar" as a Crypto type option when viewing/editing/creating a user's external crypto account. 
+- Added radio buttons to distinguish between testnet and mainnet crypto account addresses for Bitcoin and Stellar addresses.
+
+**New features:**
+
+Added manual withdrawals operational features for the admin. Managing withdrawals in Rehive Dashboard is now more user-friendly and helps admins pick up suspicious activity more easily for manual withdrawals:
+
+- Users' KYC and MFA status on the transaction details page.
+- An easy 'Approve' button has been added to quickly complete the transaction.
+- Users' selected withdrawal bank account details are now displayed on the transaction modal and are all copyable. 
+- Admins can see the KYC status of a user's bank account as well as when it was created and updated.
+- Admins will be alerted if there have been any recent duplicate withdrawals on the account.
 
 ---
 
