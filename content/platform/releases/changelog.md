@@ -10,6 +10,18 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "03-07-2019" >}}
+
+1. Added new `disallow_transaction_subtypes` field to all endpoints that supported `settings`. This field should be used to stop a company/group/user/tier/account from creating transactions with selected subtypes. The endpoints this is available on are:
+    - `/3/admin/company/settings/`
+    - `/3/admin/groups/<id>/settings/`
+    - `/3/admin/groups/<id>/tiers/<id>/settings/`
+    - `/3/admin/accounts/<reference>/currencies/<code>/settings/`
+    - `/3/admin/users/<id>/settings/`
+2. Fixed a bug where an incorrectly formatted `query` object would throw 500 errors on the transaction export endpoints.
+
+---
+
 {{< link-heading "h4" "28-06-2019" >}}
 
 1. Updated the URL routes to allow optional closing slashes.
