@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "07-07-2019" >}}
+
+
+**Changes:**
+
+- Added character counter to product description.
+
+**New features:**
+
+- Transaction helper. Admins can enable a transaction helper that will make the operational aspects of specific types of transactions easier e.g. credit deposit, transfer deposit. Transaction fields are ordered and arranged in a logical format for the operation being done.
+
+---
+
 {{< link-heading "h4" "02-07-2019" >}}
 
 **Bug fixes:**
