@@ -1,4 +1,4 @@
 ---
-title: Stellar
-weight: 5
+title: Bitcoin
+weight: 6
 ---
