@@ -14,11 +14,13 @@ Using the hooks service is built to be simple. Once registered any Bitcoin addre
 Mainnet endpoint: https://bitcoin-hooks.services.rehive.io/  
 Testnet endpoint: https://bitcoin-hooks-testnet.services.rehive.io/
 
-#### Registering
+#### Registering and Authorization
 
 To get an API key for the service POST `email` and `password` fields to the `/register/` endpoint.
 
-### Webhooks
+The API key should be included in the `Authorization` header example: `Authorization: Token API_KEY`
+
+#### Webhooks
 
 The webhook resource handles the following fields:
 
@@ -33,7 +35,7 @@ get_historic | `True/False` flag which specifies if you want old transactions fo
 
 To setup an address for monitoring POST `url`, `address`, `confirmations` and `secret` fields to the `/webhook/` endpoint.
 
-### Transaction webhook data structure
+#### Transaction webhook data structure
 
 To be added.
 
