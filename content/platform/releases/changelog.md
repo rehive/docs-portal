@@ -10,6 +10,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "05-08-2019" >}}
+
+1. Added new account listing exports (admin and user).
+    - Supports CSV and JSON formats
+2. Added new account listing `reference__contains` filter field.
+
+---
+
 {{< link-heading "h4" "03-07-2019" >}}
 
 1. Added new `disallow_transaction_subtypes` field to all endpoints that supported `settings`. This field should be used to stop a company/group/user/tier/account from creating transactions with selected subtypes. The endpoints this is available on are:
