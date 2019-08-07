@@ -9,6 +9,31 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "07-08-2019" >}}
+
+**Bug fixes:**
+
+- When viewing an account's details on the Accounts page, the user group now correctly shows.
+- Fixed display of Balance and Status fields on the Rewards listing page.
+- Fixed two edge case bugs with the transaction helper where users did not have a primary account or an email address.
+
+
+**Changes:**
+
+- On the account details modal on the Accounts page, a user's email address now links to their user details page.
+- On the account details modal on the Accounts page, there is now a 'manage' link next to each currency so admins can easily manage the settings.
+- Updated template config to more simplified and  clean version.
+- Updated the tokens UI under the developer section.
+- Added more shortcuts to the search results popdown. Admins can now create a credit deposit, process withdrawals, or credit a user via quick links in the search popdown. 
+- Added a new permission, `transactionsubtypes`.
+
+**New features:**
+
+- Admins can now upload and manage voucher codes for virtual-type products in the Product Extension. Codes can be uploaded individually or imported via a CSV file.
+- Admins can globally switch subtypes on or off. This setting can be accessed via going to Transactions -> Settings.
+
+---
+
 {{< link-heading "h4" "07-07-2019" >}}
 
 
