@@ -26,6 +26,7 @@ Summary of additions and changes to the Rehive Dashboard.
 - Updated the tokens UI under the developer section.
 - Added more shortcuts to the search results popdown. Admins can now create a credit deposit, process withdrawals, or credit a user via quick links in the search popdown. 
 - Added a new permission, `transactionsubtypes`.
+- Improved the search to search by Account.
 
 **New features:**
 
