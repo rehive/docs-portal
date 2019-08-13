@@ -12,7 +12,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 {{< link-heading "h4" "13-08-2019" >}}
 
-1. Fixed a bug where come "nested" resources were throwing 500 errors instead of 404 errors  when the root resources did not exist.
+1. Fixed a bug where some "nested" resources were throwing 500 errors instead of 404 errors  when the root resources did not exist.
 2. Fixed a bug with datetime filters not filtering on the correct precision (milliseconds)
     - This resulted in odd behaviour when a object was inserted within microseconds of a filter's cut off value.
 3. Improved the performance of account asset listings and exports.
