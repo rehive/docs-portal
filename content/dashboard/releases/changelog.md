@@ -8,6 +8,25 @@ weight: 1
 Summary of additions and changes to the Rehive Dashboard. 
 
 ---
+{{< link-heading "h4" "14-08-2019" >}}
+
+**Changes:**
+
+- Added the ability to filter by balance on the accounts page.
+
+---
+
+{{< link-heading "h4" "10-08-2019" >}}
+
+**New features:**
+
+- Added the ability to export data from the accounts page based on an admin's filter selection.
+
+**Changes:**
+
+- Added the ability to add conversion pairs to allow for currency exchange via the Conversion extension.
+
+---
 
 {{< link-heading "h4" "07-08-2019" >}}
 
