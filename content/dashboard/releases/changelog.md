@@ -8,6 +8,42 @@ weight: 1
 Summary of additions and changes to the Rehive Dashboard. 
 
 ---
+
+{{< link-heading "h4" "27-08-2019" >}}
+
+**Bug fixes:**
+
+- Fixed issues with crypto info filtering on users.
+
+**Changes:**
+
+- Admins can now select/view a "type" when adding/viewing an address for a user.
+- Admins can now specify required information on a product. Admins can set shipping address, billing address, mobile number and or email address as required.
+- Any info which is required on a product in an order is now displayed when viewing an order.
+
+---
+
+{{< link-heading "h4" "26-08-2019" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where products could not be edited.
+- Fixed a bug with the transaction helper where admins were unable to change transaction type after turning off the transaction helper.
+- Fixed a bug where percentage was being sent through as incorrect number type and causing a bug in percentage rewards.
+- When editing a reward campaign, expressions now correctly display.
+- Fixed an issue where completing a pending withdraw transaction overrode metadata.
+
+**Changes:**
+
+- Admins can now view reward details on the related transaction on the transactions list. Admins are also now able to accept or reject a request reward from the transaction modal.
+- Added `Active` and `Visible` checkboxes to the Reward campaigns listing page to allow for faster reward campaign management. Moved edit/delete links out of the ... menu and onto the listing page.
+- Removed date limits on reward campaign start/end dates.
+- Added the ability to filter users on the user list by Stellar memo or Bitcoin address.
+- We now display a user's Stellar memo, address and federation address as well as Bitcoin address details on the user details page.
+- Removed defunct username and address fields from the Stellar extension users list.
+
+---
+
 {{< link-heading "h4" "14-08-2019" >}}
 
 **Changes:**
