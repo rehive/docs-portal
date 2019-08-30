@@ -13,11 +13,13 @@ Summary of additions and changes to the Rehive Dashboard.
 
 
 **Bug fixes:**
+
 - Fixed an issue when editing Orders - the save button was not highlighting correctly despite all required fields being entered.
 - Fixed an issue where columns were not being correctly refreshed after being added.
 
 
 **Changes:**
+
 - Admins can now view Stellar extension crypto details in the Rehive transaction modal. Details displayed are transaction hash, memo, sender public address and recipient public address.
 - Admins can now view a user's last logged in date on the transaction modal.
 - Admins can now see when a user's MFA status was updated on the transaction modal.
