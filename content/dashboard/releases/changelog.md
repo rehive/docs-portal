@@ -9,6 +9,26 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "30-08-2019" >}}
+
+
+**Bug fixes:**
+- Fixed an issue when editing Orders - the save button was not highlighting correctly despite all required fields being entered.
+- Fixed an issue where columns were not being correctly refreshed after being added.
+
+
+**Changes:**
+- Admins can now view Stellar extension crypto details in the Rehive transaction modal. Details displayed are transaction hash, memo, sender public address and recipient public address.
+- Admins can now view a user's last logged in date on the transaction modal.
+- Admins can now see when a user's MFA status was updated on the transaction modal.
+- On the Orders page, when viewing an order, admins can hover over a user ID to see the associated user email.
+- Added a downloadable example csv on the add vouchers page showing the correct format the import requires.
+- Moved edit and delete shortcuts on the orders page out of the ... menu and onto the listing page.
+- Added `website` field under user info on the user details page.
+- Updated amount filters to be greater than/less than and equal to instead of only greater than/less than. Amounts returned are also absolute rather than relative - both negative and positive amounts will display. To view only debits or credits filter by transaction type.
+
+---
+
 {{< link-heading "h4" "27-08-2019" >}}
 
 **Bug fixes:**
