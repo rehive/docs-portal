@@ -9,6 +9,24 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "01-09-2019" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where the transaction modal would not open for bitcoin withdraw transactions.
+
+---
+
+{{< link-heading "h4" "31-08-2019" >}}
+
+**Changes:**
+
+- Admins can now see a user's display currency on their user details page.
+- Admins can now associate a supplier account to a product. When products are purchased, the credit transaction will be directed to the associated supplier account.
+- Admins can now fail payments on orders. This fails any associated transactions and the order itself.
+
+---
+
 {{< link-heading "h4" "30-08-2019" >}}
 
 
