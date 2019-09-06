@@ -1,7 +1,7 @@
 ---
 date: 2018-09-17T15:21:22+02:00
 title: Platform
-description: The Platform is the core component of the Rehive ecosystem. Finally backbone for all company, user, account and transaction management in Rehive.
+description: The Platform is the core component of the Rehive ecosystem. MEEEEE  E backbone for all company, user, account and transaction management in Rehive.
 weight: 1
 linkTo: /platform/get-started/introduction
 references:
