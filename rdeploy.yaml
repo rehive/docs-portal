@@ -22,7 +22,7 @@ configs:
     project_name: docs-portal-deploy
     docker_image: gcr.io/rehive-services/docs-portal-deploy
     cloud_project: rehive-services
-    cluster: staging
+    cluster: production
     namespace: docs-portal-deploy
     helm_chart: rehive/rehive-service
     helm_chart_version: 0.1.32
