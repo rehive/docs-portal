@@ -18,3 +18,12 @@ configs:
     helm_chart: rehive/rehive-service
     helm_chart_version: 0.1.32
     helm_values_path: ./etc/helm/production/values.yaml
+  deploy:
+    project_name: docs-portal
+    docker_image: gcr.io/rehive-services/docs-portal-deploy
+    cloud_project: rehive-services
+    cluster: staging
+    namespace: docs-portal-deploy
+    helm_chart: rehive/rehive-service
+    helm_chart_version: 0.1.32
+    helm_values_path: ./etc/helm/deploy/values.yaml
