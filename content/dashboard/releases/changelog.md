@@ -8,6 +8,82 @@ weight: 1
 Summary of additions and changes to the Rehive Dashboard. 
 
 ---
+
+{{< link-heading "h4" "01-09-2019" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where the transaction modal would not open for bitcoin withdraw transactions.
+
+---
+
+{{< link-heading "h4" "31-08-2019" >}}
+
+**Changes:**
+
+- Admins can now see a user's display currency on their user details page.
+- Admins can now associate a supplier account to a product. When products are purchased, the credit transaction will be directed to the associated supplier account.
+- Admins can now fail payments on orders. This fails any associated transactions and the order itself.
+
+---
+
+{{< link-heading "h4" "30-08-2019" >}}
+
+
+**Bug fixes:**
+
+- Fixed an issue when editing Orders - the save button was not highlighting correctly despite all required fields being entered.
+- Fixed an issue where columns were not being correctly refreshed after being added.
+
+
+**Changes:**
+
+- Admins can now view Stellar extension crypto details in the Rehive transaction modal. Details displayed are transaction hash, memo, sender public address and recipient public address.
+- Admins can now view a user's last logged in date on the transaction modal.
+- Admins can now see when a user's MFA status was updated on the transaction modal.
+- On the Orders page, when viewing an order, admins can hover over a user ID to see the associated user email.
+- Added a downloadable example csv on the add vouchers page showing the correct format the import requires.
+- Moved edit and delete shortcuts on the orders page out of the ... menu and onto the listing page.
+- Added `website` field under user info on the user details page.
+- Updated amount filters to be greater than/less than and equal to instead of only greater than/less than. Amounts returned are also absolute rather than relative - both negative and positive amounts will display. To view only debits or credits filter by transaction type.
+
+---
+
+{{< link-heading "h4" "27-08-2019" >}}
+
+**Bug fixes:**
+
+- Fixed issues with crypto info filtering on users.
+
+**Changes:**
+
+- Admins can now select/view a "type" when adding/viewing an address for a user.
+- Admins can now specify required information on a product. Admins can set shipping address, billing address, mobile number and or email address as required.
+- Any info which is required on a product in an order is now displayed when viewing an order.
+
+---
+
+{{< link-heading "h4" "26-08-2019" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where products could not be edited.
+- Fixed a bug with the transaction helper where admins were unable to change transaction type after turning off the transaction helper.
+- Fixed a bug where percentage was being sent through as incorrect number type and causing a bug in percentage rewards.
+- When editing a reward campaign, expressions now correctly display.
+- Fixed an issue where completing a pending withdraw transaction overrode metadata.
+
+**Changes:**
+
+- Admins can now view reward details on the related transaction on the transactions list. Admins are also now able to accept or reject a request reward from the transaction modal.
+- Added `Active` and `Visible` checkboxes to the Reward campaigns listing page to allow for faster reward campaign management. Moved edit/delete links out of the ... menu and onto the listing page.
+- Removed date limits on reward campaign start/end dates.
+- Added the ability to filter users on the user list by Stellar memo or Bitcoin address.
+- We now display a user's Stellar memo, address and federation address as well as Bitcoin address details on the user details page.
+- Removed defunct username and address fields from the Stellar extension users list.
+
+---
+
 {{< link-heading "h4" "14-08-2019" >}}
 
 **Changes:**
