@@ -9,6 +9,30 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "04-09-2019" >}}
+
+**Bug fixes:**
+
+- Fixed an error where the save button read "Create" instead of "Save" when editing a conversion pair. 
+- Fixed an issue where filtering by Bitcoin address on the users list was not working.
+- Fixed small visual bugs and improved styling of crypto details on transaction modal.
+
+
+**Changes:**
+
+- Added order id and products list to the transaction modal of `purchase` subtype transactions. The order id also links to the order.
+- Admins can now create credits or deposits and process withdrawals via dropdowns in the search popdown when searching by account reference.
+- On the Users page, filter options are now listed alphabetically.
+- Improved performance when fetching Stellar or Bitcoin information on a user's Details page.
+- In filters on the transaction list page, subtype filter options are now in alphabetical order.
+
+
+**New features:**
+
+- Admins can now create and manage categories for products.
+
+---
+
 {{< link-heading "h4" "01-09-2019" >}}
 
 **Bug fixes:**
