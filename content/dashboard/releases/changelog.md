@@ -9,6 +9,33 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "13-09-2019" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins were not being correctly redirected to the notifications list after creating a notification.
+- When viewing an account modal, the "view transactions" link was not working. It now links an admin to the transactions page filtered by the account reference.
+
+**Changes:**
+
+- Made Text field mandatory when creating a notification, as notifications will not send if this field is blank.
+- Admins can now set a custom quote time for a conversion pair.
+- When clicking the "Clear" button on filters, the filters popdown now automatically closes.
+
+**New features:**
+
+- Admins can now view and export historical balances for a specific currency and or account in a new "Account currencies" section in accounts.
+
+---
+
+{{< link-heading "h4" "12-09-2019" >}}
+
+**Changes:**
+
+- Improved display of required information on orders.
+
+---
+
 {{< link-heading "h4" "04-09-2019" >}}
 
 **Bug fixes:**
