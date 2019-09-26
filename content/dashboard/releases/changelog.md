@@ -9,6 +9,23 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "24-09-2019" >}}
+
+**Bug fixes:**
+
+- Fixed issue where token was not displaying after creation.
+- Fixed bug where limit type was not being displayed correctly in Tier limits.
+- Fixed a styling issue on the add access control modal.
+- Removed duplicate search icon on tablet responsive view.
+
+**Changes:**
+
+- Added hover links on user's accounts page. 
+- Added link to download Rehive's mobile wallet on Android or iOS.
+- Added delete icon to user page.
+
+---
+
 {{< link-heading "h4" "13-09-2019" >}}
 
 **Bug fixes:**
