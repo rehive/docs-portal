@@ -13,10 +13,10 @@ removals will be indicated ahead of time in the deprecation timeline.
 {{< link-heading "h4" "16-10-2019" >}}
 
 1. Added new webhook events:
-    - `email.create` triggers after an email is created.
-    - `email.update` triggers after an email is updated. Includes original email details.
-    - `mobile.create` triggers after a mobile is created.
-    - `mobile.update` triggers after a mobile is updated. Includes original mobile details.
+    - `email.create` triggers after an email address is created.
+    - `email.update` triggers after an email address is updated. Includes original email details.
+    - `mobile.create` triggers after a mobile number is created.
+    - `mobile.update` triggers after a mobile number is updated. Includes original mobile details.
     
 ---
 
