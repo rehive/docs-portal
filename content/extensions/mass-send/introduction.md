@@ -5,7 +5,7 @@ description: Introduction to the Mass Send extension.
 weight: 1
 ---
 
-The notification extension allows you to upload batches of transfer transactions via CSV files.
+The Mass Send extension allows you to upload batches of transfer transactions via CSV files.
 
 The extension allows you to:
 
