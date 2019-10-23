@@ -10,12 +10,36 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "16-10-2019" >}}
+
+1. Added new webhook events:
+    - `email.create` triggers after an email address is created.
+    - `email.update` triggers after an email address is updated. Includes original email details.
+    - `mobile.create` triggers after a mobile number is created.
+    - `mobile.update` triggers after a mobile number is updated. Includes original mobile details.
+    
+---
+
+{{< link-heading "h4" "13-09-2019" >}}
+
+1. Added new account-currencies endpoint (beta).
+    - `/3/account-currencies/`
+    - `/3/admin/account-currencies/`
+2. Added new account-currencies export endpoint (beta).
+    - `/3/account-currencies/exports/`
+    - `/3/admin/account-currencies/exports/`
+3. Added new historic balance filter for account-currencies (beta).
+    - On the account-currencies endpoint use `?historic={timestamp}`
+    - This will yield results where the `balance` contains an historic value.
+
+---
+
 {{< link-heading "h4" "13-08-2019" >}}
 
 1. Fixed a bug where some "nested" resources were throwing 500 errors instead of 404 errors  when the root resources did not exist.
 2. Fixed a bug with datetime filters not filtering on the correct precision (milliseconds)
     - This resulted in odd behaviour when a object was inserted within microseconds of a filter's cut off value.
-3. Improved the performance of account asset listings and exports.
+3. Improved the performance of account listings and exports.
 
 ---
 

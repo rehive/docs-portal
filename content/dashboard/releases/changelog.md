@@ -9,6 +9,74 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "24-09-2019" >}}
+
+**Bug fixes:**
+
+- Fixed issue where token was not displaying after creation.
+- Fixed bug where limit type was not being displayed correctly in Tier limits.
+- Fixed a styling issue on the add access control modal.
+- Removed duplicate search icon on tablet responsive view.
+
+**Changes:**
+
+- Added hover links on user's accounts page. 
+- Added link to download Rehive's mobile wallet on Android or iOS.
+- Added delete icon to user page.
+
+---
+
+{{< link-heading "h4" "13-09-2019" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins were not being correctly redirected to the notifications list after creating a notification.
+- When viewing an account modal, the "view transactions" link was not working. It now links an admin to the transactions page filtered by the account reference.
+
+**Changes:**
+
+- Made Text field mandatory when creating a notification, as notifications will not send if this field is blank.
+- Admins can now set a custom quote time for a conversion pair.
+- When clicking the "Clear" button on filters, the filters popdown now automatically closes.
+
+**New features:**
+
+- Admins can now view and export historical balances for a specific currency and or account in a new "Account currencies" section in accounts.
+
+---
+
+{{< link-heading "h4" "12-09-2019" >}}
+
+**Changes:**
+
+- Improved display of required information on orders.
+
+---
+
+{{< link-heading "h4" "04-09-2019" >}}
+
+**Bug fixes:**
+
+- Fixed an error where the save button read "Create" instead of "Save" when editing a conversion pair. 
+- Fixed an issue where filtering by Bitcoin address on the users list was not working.
+- Fixed small visual bugs and improved styling of crypto details on transaction modal.
+
+
+**Changes:**
+
+- Added order id and products list to the transaction modal of `purchase` subtype transactions. The order id also links to the order.
+- Admins can now create credits or deposits and process withdrawals via dropdowns in the search popdown when searching by account reference.
+- On the Users page, filter options are now listed alphabetically.
+- Improved performance when fetching Stellar or Bitcoin information on a user's Details page.
+- In filters on the transaction list page, subtype filter options are now in alphabetical order.
+
+
+**New features:**
+
+- Admins can now create and manage categories for products.
+
+---
+
 {{< link-heading "h4" "01-09-2019" >}}
 
 **Bug fixes:**

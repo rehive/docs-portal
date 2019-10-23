@@ -9,6 +9,33 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "30-08-2019" >}}
+
+**Bug fixes:**
+
+- Fixed a bug on the exchange confirm screen by removing a superfluous "to" in the confirmation text.
+- Fixed issue where send copy was not displaying correctly for mass_send type transactions.
+
+
+**Changes:**
+
+- Admins can specify a default country for users upon registration.
+- Users can now add a currency when adding a withdrawal account. Withdrawal account options will be filtered by currency when withdrawing.
+- When adding a bank account from the withdraw screen, withdraw accounts will automatically have the withdraw account's currency added.
+- Admins can specify whether users are allowed to send/deposit/withdraw/receive for specific currencies. This is set in the company config in the Dashboard.
+- Admins can specify a custom message on the withdrawal success screen. This is set in the company config in the Dashboard.
+- When sending, the wallet now displays when the rate was last fetched.
+- On the deposits page, company bank account options now filter by currency. Only bank accounts with a currency that matches the account currency a user wants to deposit will display.
+- Any limits set on withdrawals are now displayed on the withdraw screen. If a user tries to withdraw and encounters a limit, a validation message will display.
+- Users can no longer change product qty in their cart to be less than 1.
+- Added date for when a product item status was updated on an order.
+- Failed transactions are now in grey text.
+- When adding a new address users can choose an address type, either "billing" or "shipping".
+- Admins can now set whether user information is required when purchasing a specific product. This is set in the Dashboard. Admins can set mobile number, email address, shipping address and or billing address as required information. If users are missing any of these they are prompted on checkout to add it.
+- Fees set in the Dashboard are now displayed on transaction confirmation screens and expanded transaction info in transaction history. In addition, fees are validated against - if a user does not have enough balance to cover e.g. the send amount and the fee, a user will not be able to make the transaction.
+
+---
+
 {{< link-heading "h4" "05-08-2019" >}}
 
 **Bug fixes:**
