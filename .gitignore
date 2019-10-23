@@ -4,3 +4,4 @@ resources/_gen/
 
 # deployment directories
 var
+*.DS_Store
