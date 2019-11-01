@@ -7,11 +7,23 @@ weight: 1
 
 This timeline indicates dates at which certain functionality will be permanently removed from the Rehive platform. Anything listed here should be regarded as deprecated and will only be supported up to the date indicated in the timeline.
 
+
+---
+
+{{< link-heading "h4" "04-02-2020" >}}
+
+1. Remove non-inferred transaction fees. 
+	- Transaction fee will all have to be inferred to work after this date.
+2. Remove the transaction fee property on the transactions list/view resource.
+	- Fees should now be handled by seperate transactions that can be found through the transaction-collection,
+3. Remove the source/destination property. 
+	- These properties are now available as a single `partner` property.
+
 ---
 
 {{< link-heading "h4" "16-04-2019" >}}
 
-1. Removed `/admin/transactions/sets/` endpoints:
+1. Remove `/admin/transactions/sets/` endpoints:
 	- Use the new exports endpoint instead: `/admin/transactions/exports/`
 
 ---
