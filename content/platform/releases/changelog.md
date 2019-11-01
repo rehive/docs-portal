@@ -10,6 +10,20 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "31-09-2019" >}}
+
+1. Added a transaction-collection resource and corresponding API endpoints for listing/adding/viewing/updating/deleting transaction-collections.
+2. Added new transaction properties: parent, inferred, partner, collection.
+3. Added new inferred transaction fees that are extrapolated into transactions.
+4. Updated the transaction/transfer creation validation and processing logic.
+5. Improved the performance of multi transaction creation validation and processing.
+6. Added new "burst" and "sustained" throttling with differing rules which allow for increased temporary bursts of requests but still enforce the same average max requests per second. 
+7. Added new temporary user handling. When transfers are sent to non existent users they will be credited to temporary users.
+8. Added new transfer handling to allow for transfers to be claimed from temporary users transactions when the real user registers (or is created).
+9. Added new `slug` information to the user available service information.
+
+---
+
 {{< link-heading "h4" "16-10-2019" >}}
 
 1. Added new webhook events:
