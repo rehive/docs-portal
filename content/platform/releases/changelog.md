@@ -10,7 +10,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-{{< link-heading "h4" "31-09-2019" >}}
+{{< link-heading "h4" "31-10-2019" >}}
 
 1. Added a transaction-collection resource and corresponding API endpoints for listing/adding/viewing/updating/deleting transaction-collections.
 2. Added new transaction properties: parent, inferred, partner, collection.
