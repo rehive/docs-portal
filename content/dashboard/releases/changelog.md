@@ -9,6 +9,34 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "31-10-2019" >}}
+
+**Changes:**
+
+- The Rehive account reference and the public address of the hot wallet account are now displayed on the hot wallet.
+- Admins can now toggle allowing crypto sends on or off on the hot wallet.
+- Withdrawals from the hot wallet will no longer be automatically processed, an admin must approve them first. On the hot wallet page a banner will display informing the admin if there are any pending withdrawals. Admins can click on the banner to approve or decline them. They will be taken to a filtered view of the transactions list with all pending crypto withdrawals where they can approve or decline them.
+- Admins can now withdraw funds from the hot wallet to an external wallet.
+- The hot wallet will now display its Rehive balance and its on-chain balance to assist admins with recon.
+- A link to the total fees for XLM/TXLM/XBT/TXBT will now be displayed on the hot wallet. 
+- Admins can view transactions associated with each currency on the hot wallet. The "View transactions" links will take an admin to a list of transactions filtered by the hot wallet account and the currency.
+- Admins can now see the last 10 hot wallet transactions.
+
+---
+
+{{< link-heading "h4" "16-10-2019" >}}
+
+**Bug fixes:**
+
+- Fixed issue where sometimes "claim" was deselected when editing a reward campaign.
+
+**Changes:**
+
+- Improved design of checkbox selections and category selection on creating/editing products.
+- Adjusted row highlight colour on user accounts page.
+
+---
+
 {{< link-heading "h4" "24-09-2019" >}}
 
 **Bug fixes:**

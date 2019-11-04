@@ -9,6 +9,50 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
+{{< link-heading "h4" "31-10-2019" >}}
+
+**Bug fixes:**
+
+- Removed a random 0 from the Withdraw page.
+- Fixed a bug where values on the success screen would switch to 0.
+
+**Changes:**
+
+- Admins can now configure wallets for sending to only mobile numbers or only email addresses.
+- Admins can now configure registration via mobile number instead of email address.
+- Admins can now configure mobile number required upon registering.
+- Added file size limit information to file uploads.
+- Admins can now display a custom message on any confirm screen.
+
+---
+
+{{< link-heading "h4" "30-10-2019" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where the Notifications page did not load correctly.
+- Fixed issue where Bitcoin addresses for testnet were not being pulled through correctly.
+- Fixed a bug where product total amount was not updating after removing a product.
+- Fixed an issue where limit validation would trigger incorrectly.
+- Fixed issue where note was not being sent in bitcoin transactions.
+- Fixed bug with display of conversions.
+- Pull refresh now works again on the account view page.
+
+**Changes:**
+
+- Admins can now create a 'scan to pay' flow where users scan QR codes of merchants to purchase goods.
+- The app now displays what tier a user is on and what requirements need to be met in order for users to advance to the next tier.
+- The app now displays what a user's limits are (such as maximum withdrawals, minimum payments etc) according to their tier.
+- Users can now exchange to or from any account which has an exchangeable currency - they are no longer limited to only their primary account.
+- Improved filtering on the products listing page.
+- Admins can now set custom session durations.
+- Removed auto-filtering by country on products.
+- Users can set country, birthdate and timezone (mobile).
+- Transaction Id is now displayed in the extended transaction information.
+- Added timezone field.
+
+---
+
 {{< link-heading "h4" "30-08-2019" >}}
 
 **Bug fixes:**
