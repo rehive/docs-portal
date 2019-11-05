@@ -7,6 +7,20 @@ weight: 3
 
 When a company is registered it not only creates a company but also a user. This user is a special "owner" user that cannot be deleted and is also automatically designated as part of the `admin` permission group.
 
+Outside of the "owner" users, Rehive supports the creation/registration of users under specific groups (roles) and permissions. Users have several optional unique identifiers:
+
+- id
+- username
+- email
+- mobile
+
+These identifier may not be shared by any other users&ast;.
+
+<aside class="notice">
+    &ast;It is possible for the identifier to be shared if one of the users is flagged as temporary. Temporary users are used to hold transfers to unverified user identifiers. Once a real user verifies their data the tempoary user will be merged into them.
+</aside>
+
+
 ### Object
 
 Users have a multitude of attributes and properties that can be used to store identity information as well as settings and state. The full user object looks like this:
@@ -57,7 +71,8 @@ Users have a multitude of attributes and properties that can be used to store id
         "allow_credit_transactions": true
     },
     "last_login": null,
-    "archived": false
+    "archived": false,
+    "temporary": false
 }
 ```
 

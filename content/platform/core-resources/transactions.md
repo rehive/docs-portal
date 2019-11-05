@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Transactions
 description: Transaction resources.
-weight: 6
+weight: 7
 ---
 
 Transactions are a way to manage value on and between accounts in the Rehive platform. Every transaction can be either a `debit` or a `credit`. In simple terms `debit` reduces an account's balance and a `credit` increases an account's balance. A transfer can be thought of as a 2-step transaction where one user is debited and another is credited the required amount. This structure allows for easy verification of balances and can be used to back track to a specific point in time to discover what the balance was.
@@ -36,6 +36,11 @@ A full transaction object looks like:
 ```json
 {
     "id": "00000000-0000-0000-0000-000000000000",
+    "collection": "00000000-0000-0000-0000-000000000000",
+    "parent": null,
+    "partner": null,
+    "inferred": false,
+    "index": 1,
     "tx_type": "credit",
     "subtype": null,
     "note": "",
@@ -43,7 +48,6 @@ A full transaction object looks like:
     "status": "Complete",
     "reference": "",
     "amount": 500,
-    "fee": 0,
     "total_amount": 500,
     "balance": 0,
     "account": "0000000000",
@@ -65,8 +69,6 @@ A full transaction object looks like:
         "mobile": "+27840000000",
         "profile": null
     },
-    "source_transaction": null,
-    "destination_transaction": null,
     "messages": [],
     "fees": [],
     "archived": false,
