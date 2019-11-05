@@ -119,9 +119,9 @@ There are four transaction collection endpoints in the platform. Two for each of
 section | type| URL | methods
 ---|---|---|---
 admin | multiple |  `https://api.rehive.com/3/admin/transaction-collections/` | `GET`, `POST`
-admin | single |  `https://api.rehive.com/3/admin/transactions/<id>/` | `GET`, `PATCH`, `PUT`, `DELETE`
-user | multiple |  `https://api.rehive.com/3/transactions-collections/` | `GET`, `POST`
-user | single |  `https://api.rehive.com/3/transactions-collections/<id>/` | `GET`
+admin | single |  `https://api.rehive.com/3/admin/transaction-collections/<id>/` | `GET`, `PATCH`, `PUT`, `DELETE`
+user | multiple |  `https://api.rehive.com/3/transaction-collections/` | `GET`, `POST`
+user | single |  `https://api.rehive.com/3/transaction-collections/<id>/` | `GET`
 
 
 ### Usage
