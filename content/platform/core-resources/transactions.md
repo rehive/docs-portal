@@ -40,7 +40,6 @@ A full transaction object looks like:
     "parent": null,
     "partner": null,
     "inferred": false,
-    "index": 1,
     "tx_type": "credit",
     "subtype": null,
     "note": "",
