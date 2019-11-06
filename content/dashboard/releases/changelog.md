@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "05-11-2019" >}}
+
+**Changes:**
+
+- Added the ability to set the subtypes for Stellar and Bitcoin extensions for `credit` (deposit), `debit` (send), `fund`, `issue`, `fee`, and `withdraw` transactions. Admins can have Rehive create and set recommended subtypes for each type of transaction.
+- Admin can set which groups are considered 'default' by the Stellar and Bitcoin extensions and will have the TXLM/TXBT/XLM/XBT currencies added to their group account configuration.
+- In the Stellar extensions, admins can now add a domain where the company's `stellar.toml` file with Federation address information can be found. This will activate the ability for users to set and use Federation addresses when making Stellar transactions on the company.
+- When viewing crypto transactions in the Rehive transaction modal, sender and recipient addresses are now linked to blockexplorers to view the transactions.
+- Admins can now approve or decline crypto withdrawals from the Rehive transaction modal. Withdrawals will change status until an admin takes action. Once an admin approves a withdrawal it is sent to the blockchain.
+- When admins add a known Stellar asset, if that asset's issuer address has a `stellar.toml` file associated with it, the extension will find it and display any associated information for the asset e.g. description, name, unit, logo etc.
+
+---
+
 {{< link-heading "h4" "31-10-2019" >}}
 
 **Changes:**
