@@ -9,6 +9,23 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "21-11-2019" >}}
+
+**Bug fixes:**
+
+- Fixed issue with the currency filter where it displayed all currency options instead of ones activated on the company.
+- Mobile recipient snow correctly display on the transactions page and on the transaction modal.
+- Fixed display issue on the tier limits page.
+- Fixed issue where product supplier accounts were not showing up and would be overwritten as empty when editing the product.
+
+**Changes:**
+
+- Groups are now automatically given user permissions for subtypes when they are created.
+- Temporary users are now listed in a grey color in the users list. On the user page of a temporary user a banner now displays informing admins that the user is a temporary one.
+- Updated the Stellar and Bitcoin warm wallet pages. Admins can now add multiple xpub addresses to the warm storage and set which one is primary and each can have a note set and will display how many addresses were generated from the key. Warm storage accounts can be disabled. Admins can now see the on-chain balance of the warm storage account. 
+
+---
+
 {{< link-heading "h4" "05-11-2019" >}}
 
 **Changes:**
