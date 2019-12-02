@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "27-11-2019" >}}
+
+**Changes:**
+
+- Admins are now able to make transfers to users who don't exist in the Rehive system yet.
+- Added a basic Mass Send extension page where admins are now able to disable the extension.
+- Removed recent transactions from crypto extensions UIs.
+- Updated Dashboard for transaction collections. Admins can view the collection Id of transactions, related transactions in the collection, and can filter by collection Id.
+- Updated fees to work with new transaction collections. Admins can now add a fee description and set which subtypes the debit and credit portions of the fee are set to. Admins can set a destination account for the credit potion of the fee transaction.
+- Added new webhook event `mfa.sms.verify`.
+
+---
+
 {{< link-heading "h4" "21-11-2019" >}}
 
 **Bug fixes:**
