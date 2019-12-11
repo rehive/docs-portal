@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "10-12-2019" >}}
+
+**Changes:**
+
+- Added ability for admins to create daily, weekly or monthly reward campaigns.
+- Admins can now set the limit a user can be rewarded per timeframe, i.e. twice per day in a daily campaign.
+
+---
+
 {{< link-heading "h4" "27-11-2019" >}}
 
 **Changes:**
