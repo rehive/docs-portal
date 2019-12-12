@@ -10,6 +10,15 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "12-12-2019" >}}
+
+1. Added new MFA recovery codes. These codes can be used as an alternative to an MFA device.
+    - `/auth/mfa/recovery-codes/` for creating, viewing and deleting MFA recover codes
+    - `/auth/mfa/recover/` for using a code instead of verifying using an MFA device.
+2. Added a new `mfa` boolean on on the login response.
+
+---
+
 {{< link-heading "h4" "31-10-2019" >}}
 
 1. Added a transaction-collection resource and corresponding API endpoints for listing/adding/viewing/updating/deleting transaction-collections.
@@ -17,7 +26,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 3. Added new inferred transaction fees that are extrapolated into transactions.
 4. Updated the transaction/transfer creation validation and processing logic.
 5. Improved the performance of multi transaction creation validation and processing.
-6. Added new "burst" and "sustained" throttling with differing rules which allow for increased temporary bursts of requests but still enforce the same average max requests per second. 
+6. Added new "burst" and "sustained" throttling with differing rules which allow for increased temporary bursts of requests but still enforce the same average max requests per second.
 7. Added new temporary user handling. When transfers are sent to non existent users they will be credited to temporary users.
 8. Added new transfer handling to allow for transfers to be claimed from temporary users transactions when the real user registers (or is created).
 9. Added new `slug` information to the user available service information.
@@ -31,7 +40,7 @@ removals will be indicated ahead of time in the deprecation timeline.
     - `email.update` triggers after an email address is updated. Includes original email details.
     - `mobile.create` triggers after a mobile number is created.
     - `mobile.update` triggers after a mobile number is updated. Includes original mobile details.
-    
+
 ---
 
 {{< link-heading "h4" "13-09-2019" >}}
