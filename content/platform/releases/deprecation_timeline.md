@@ -10,13 +10,13 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "04-02-2020" >}}
+{{< link-heading "h4" "03-04-2020" >}}
 
-1. Remove non-inferred transaction fees. 
+1. Remove non-inferred transaction fees.
 	- Transaction fee will all have to be inferred to work after this date.
 2. Remove the transaction fee property on the transactions list/view resource.
 	- Fees should now be handled by seperate transactions that can be found through the transaction-collection,
-3. Remove the source/destination property. 
+3. Remove the source/destination property.
 	- These properties are now available as a single `partner` property.
 
 ---
