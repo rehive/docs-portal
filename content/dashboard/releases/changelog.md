@@ -9,6 +9,45 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+
+{{< link-heading "h4" "10-01-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where Dashboard would load endlessly if localstorage parameter was not set correctly.
+- Fixed issue where transaction popup was not working due to failing check for rewards and product extensions.
+
+**Changes:**
+
+- Changed how product categories are stored, fetched and managed in localstorage. 
+
+---
+
+{{< link-heading "h4" "02-01-2020" >}}
+
+**Changes:**
+
+- Updated how coldstorage keys are added to mainnet Stellar.
+- Added unfunded Bitcoin transaction management for admins. Admins can now approve or decline unfunded Bitcoin transactions.
+- Added TOML file management to settings page in Stellar extensions.
+- Added auto generation and download of TOML file to Stellar extensions.
+
+---
+
+{{< link-heading "h4" "23-12-2019" >}}
+
+**Bug fixes:**
+
+- Fixed caching issues that occured when localstorage was deleted. 
+
+**Changes:**
+
+- Added billing to the Rehive Dashboard. Admins can now activate and manage their Rehive subscription from the Dashboard.
+- Implemented new template and template builder functionality onboarding.
+- In the Bitcoin extension we now display the onchain balance for xpubs when an admin selects an xpub from the dropdown to view.
+
+---
+
 {{< link-heading "h4" "10-12-2019" >}}
 
 **Changes:**
