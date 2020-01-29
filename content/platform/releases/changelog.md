@@ -13,7 +13,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 {{< link-heading "h4" "29-01-2020" >}}
 
 
-1. Added a new `require_transaction_subtype` field to the company object. If this is set to true then subtypes are required in order to create transactions (no transactions can be created with null subtypes).
+1. Added a new `require_transaction_subtype` field to the company object. If this is set to true then subtypes are required in order to create transactions.
 2. Added a new `usage_type` field on the subtype resource. This can be used to define three general forms of subtype usage: `single`, `partner`, `null`.
 
 
