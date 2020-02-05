@@ -10,12 +10,25 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-{{< link-heading "h4" "29-01-2020" >}}
+{{< link-heading "h4" "07-02-2020" >}}
 
+1. Added a new type of tier requirement named `user_metadata`.
+    - Can be used to define custom "key -> value" requirements based on user metadata.
+2. Updated user object metadata to only be writable via the admin API endpoints.
+    - Previously this field could be modified by the user as well.
+3. Added a `mode` field to companies.
+    - This field is a immutable field.
+    - It has two values: `production` and `test`. It defaults to `test`.
+4. Updated choice field to use values instead of labels/
+    - This was updated on the following resources: documents, requirements and limits.
+5. Changed `email_confirmation_url` to `email_verification_url`.
+
+---
+
+{{< link-heading "h4" "29-01-2020" >}}
 
 1. Added a new `require_transaction_subtype` field to the company object. If this is set to true then subtypes are required in order to create transactions.
 2. Added a new `usage_type` field on the subtype resource. This can be used to define three general forms of subtype usage: `single`, `partner`, `null`.
-
 
 ---
 
