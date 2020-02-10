@@ -10,7 +10,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-{{< link-heading "h4" "07-02-2020" >}}
+{{< link-heading "h4" "11-02-2020" >}}
 
 1. Added a new type of tier requirement named `user_metadata`.
     - Can be used to define custom "key -> value" requirements based on user metadata.
@@ -22,7 +22,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 4. Updated choice field to use values instead of labels/
     - This was updated on the following resources: documents, requirements and limits.
 5. Changed `email_confirmation_url` to `email_verification_url`.
-
+6. Changed `email` on the company object to `system_email`. Also added new email fields:
+    - `support_email`
+    - `contact_email`
+7. Added filter fields for the temporary boolean on the `transaction` and `user` objects:
+    - `user__temporary` on the `transaction` resource.
+    - `temporary` on the `user` resource.
+8. Added an `expires` field to the `document` resource.
+    
 ---
 
 {{< link-heading "h4" "29-01-2020" >}}
