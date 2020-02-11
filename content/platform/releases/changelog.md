@@ -10,7 +10,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-{{< link-heading "h4" "11-02-2020" >}}
+{{< link-heading "h4" "12-02-2020" >}}
 
 1. Added a new type of tier requirement named `user_metadata`.
     - Can be used to define custom "key -> value" requirements based on user metadata.
