@@ -9,6 +9,40 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "10-01-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the withdraw button on Stellar management page caused an error.
+- Fixed link to voucher code example csv.
+
+
+**Changes:**
+
+- If an admin has not verified their email address a reminder to do so will be displayed in the trial banner. A link to resend the verification is also included on the banner.
+- When viewing a product, currently selected categories are now displayed without having to open the edit categories modal.
+- Values for enums and choice fields have been changed.
+- Renamed "Company email" to "System email". This field is now a required field. This field will be automatically populated with the company owner's email address - it can be updated at any time. Any system or notification extension emails will send "from" this system email.
+- Updated the Sandbox template to include more reward campaigns, physical products and USD currency.
+- Removed 'bank account' from tier requirements.  Moved 'address' out of Basic information in tier requirements and placed it in its own section called 'Address'.
+- Added a new information page to the Mass Send Extension. This page explains how to use the Mass Send Extension.
+- Tweaked the design of the exports dropdown.
+- Changed default transactions columns to exclude id and include note.
+- Notifications are now ordered alphabetically.
+- Updated add/edit conversion pair modal. Quote duration is no longer a required field. Updated the placeholder text for Path value when 'Path' is selected. Updated quote duration info text.
+- Admins can now click "Use default" buttons next to password set url, password reset url and email verification url in Settings -> Company info if they want to use the Rehive App's default urls.
+
+
+**New features:**
+
+- When editing products or notifications admins now have access to additional save options. Admins can now save and keep editing, save and add another product or notification, or save and go back to the list of products/notifications. 
+- Admins can now add a contact email and a support email to their company information.
+- Subtypes can now have extra limitations placed on how they are used. They can be set such that they can only be used in once-off transactions or only in transfers, or without any extra limitations.
+- Admins can now set that subtypes are required for all transactions.
+- Admins now have a UI for the app config. This can be found in Settings -> App config.
+- Admins can now view a list of pending user documents as part of our expanded KYC functionality. From this list of pending documents, admins can verify documents individually. 
+
+---
 
 {{< link-heading "h4" "10-01-2020" >}}
 
