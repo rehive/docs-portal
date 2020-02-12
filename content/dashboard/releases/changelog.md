@@ -9,7 +9,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "10-01-2020" >}}
+{{< link-heading "h4" "12-02-2020" >}}
 
 **Bug fixes:**
 
