@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "17-02-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where MFA SMS notification was not showing up in the list of added notifications in companies created by the builder.
+
+---
+
 {{< link-heading "h4" "12-02-2020" >}}
 
 **Bug fixes:**
