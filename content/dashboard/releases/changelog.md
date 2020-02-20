@@ -9,6 +9,22 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "20-02-2020" >}}
+
+
+**Bug fixes:**
+
+- Fixed issue where basic user info would bug out on user details page if conversion extension was not active.
+
+**Changes:**
+
+- Added link to basic custom config on company info page.
+- On Dashboard password reset page made it more clear that company id is required, not the company name.
+- Added a new filter to the transactions and user lists. Admins can now filter transactions and users by temporary users.
+- Updated the Sandbox template to include conversion pairs.
+
+---
+
 {{< link-heading "h4" "17-02-2020" >}}
 
 **Bug fixes:**
