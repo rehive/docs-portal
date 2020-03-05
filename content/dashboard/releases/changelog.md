@@ -9,6 +9,28 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "05-03-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where when viewing a user-uploaded document, the status dropdown was empty.
+- Fixed display issue with trial banner where certain objects on Dashboard would appear above it.
+
+**Changes:**
+
+- Admins can now see when a company is a test company.
+- Added shortcuts to credit, debit and transfer to the user details page.
+- On register, admin can now select whether a company is a test or production company.
+- Updated the design of the account modal on the Accounts listing page.
+- All companies created by the builder are now public by default.
+- Updated wording on billing page.
+
+**New features:**
+
+- Admins can now add a BIMI selector heading setting to notifications in the Notifications Extension.
+
+---
+
 {{< link-heading "h4" "20-02-2020" >}}
 
 
