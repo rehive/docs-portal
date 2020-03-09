@@ -9,6 +9,28 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "09-03-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where `enable` button was not showing up when a warmstorage address was disabled in the Stellar Extension.
+- Fixed issue where note on warmstorage address was not showing up in the Stellar Extension.
+- Editing and deleting subtypes in the Stellar Extension no longer visually bugs out.
+
+**Changes:**
+
+- Removed x icon from warmstorage selection dropdown in the Stellar Extension. Replaced it with an arrow to indicate it is a close not a remove button.
+- Added toast message to notify admins that a note has been successfully added to the warmstorage in the Stellar Extension.
+- Updated link to documentation int he Stellar Extension.
+- Changed how API tokens are added. Made it more clear on whether an admin is adding a permanent or custom token.
+- Admins can now view unassigned user deposits for the Stellar Extension and assign those to Rehive users.
+- Removed product id and instant buy columns from the Product listing page in order not to hide the edit button due to a scroll bar on small screens.
+- Admins can now choose an account for rewards, products and conversions by searching for either a user or an account reference. 
+- When adding a new account, admin can select whether to associate the account to a user or make it a standalone account.
+- Admins can now filter accounts by whether they are standalone accounts or not.
+
+---
+
 {{< link-heading "h4" "05-03-2020" >}}
 
 **Bug fixes:**
