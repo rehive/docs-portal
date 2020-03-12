@@ -10,6 +10,20 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "12-3-2020" >}}
+
+1. Added a new device endpoints for users and admins
+    - These can be accessed via `/user/devices/` and `/admin/users/devices/`
+    - Devices can be edited via `/user/devices/<id>/` and `/admin/users/devices/<id>/`
+2. Added a sub endpoint for apps on specific devices.
+    - These can be accessed via `/user/devices/<id>/apps/` and `/admin/users/devices/<id>/apps/`
+    - Apps can be edited via `/user/devices/<id>/apps/<id>/` and `/admin/users/devices/<id>/apps/<id>/`
+3. Added new resource tracking on request logs. A `resource` and `resource_id` will now contain specifc information regarding what resource was modified by an action.
+4. Added new `tier` property to the user group view/list. This property contains the active tier under which a user falls within that group.
+5. Fixed custom session durations to support setting by admin users (formerly it only allowed owner users to set this value).
+    
+---
+
 {{< link-heading "h4" "12-02-2020" >}}
 
 1. Added a new type of tier requirement named `user_metadata`.
