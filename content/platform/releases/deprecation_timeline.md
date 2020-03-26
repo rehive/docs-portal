@@ -7,10 +7,9 @@ weight: 1
 
 This timeline indicates dates at which certain functionality will be permanently removed from the Rehive platform. Anything listed here should be regarded as deprecated and will only be supported up to the date indicated in the timeline.
 
-
 ---
 
-{{< link-heading "h4" "03-04-2020" >}}
+{{< link-heading "h4" "17-04-2020" >}}
 
 1. Remove non-inferred transaction fees.
 	- Transaction fee will all have to be inferred to work after this date.
