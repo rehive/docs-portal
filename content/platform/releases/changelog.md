@@ -10,6 +10,21 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "26-3-2020" >}}
+
+1. Updated message handling on transactions. Added new endpoints:
+    - /admin/transactions/<id>/messages/
+    - /admin/transactions/<id>/messages/<id>/
+    - /transactions/<id>/messages/
+    - /transactions/<id>/messages/<id>/
+2. Added messages to users.
+    - /admin/users/<id>/messages/
+    - /admin/users/<id>/messages/<id>/
+    - /user/messages/
+    - /user/messages/<id>/
+
+---
+
 {{< link-heading "h4" "12-3-2020" >}}
 
 1. Added a new device endpoints for users and admins
