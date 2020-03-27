@@ -9,7 +9,7 @@ Throttling is applied based on the company's tier. There are 4 tiers that have d
 
 New companies, and those within the trial period have a throttling type of `limited`. 
 
-**Sustained usage**
+### Sustained usage
 
 Name| user | admin | Condition
 ---|---|---|---
@@ -18,7 +18,7 @@ limited | 3000/hour | 6000/hour | -
 standard | 6000/hour | 12000/hour | -
 extended | 30000/hour | 60000/hour | -
 
-**Burst usage**
+### Burst usage
 
 In addition to sustained (hourly throttles), The platform API also throttles on requests per minute. These throttles exist to protect against high burst while also allowing some flexibility during abnormally high but short request loads.
 
