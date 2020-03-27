@@ -13,9 +13,9 @@ field | description
 ---|---
 partner | transactions that are transfers between two accounts.
 parent | transactions that need to be defined as a child of another transaction.
-inferred | transactions created internally due to companyd defined settings.
+inferred | transactions created internally due to company defined settings.
 
-Additionally the transactions in a collection are ordered by "creation" index and can have their statuses modified via an update on the collection. This update is also atomic and will either succeed for all transactions or fail for all transactions.
+Additionally the transactions in a collection are ordered by "creation" time and can have their statuses modified via an update on the collection. This update is also atomic and will either succeed for all transactions or fail for all transactions.
 
 Transaction collections can be created by both admin users and end-users. However, transaction collections created by end-users are subject to the same rules as normal transactions.
 
@@ -110,11 +110,11 @@ A full transaction collection object looks like:
 }
 ```
 
-The content within the `transaction` object will depend on the endpoint. If the data is accessed by an admin endpoint it will continue all the transactions related to the collection. However, if the data is accessed via an user endpoint it will only contain transactions associated with the given user's accounts.
+The content within the `transaction` object will depend on the endpoint. If the data is accessed by an admin endpoint it will contain all the transactions related to the collection. However, if the data is accessed via an user endpoint, it will only contain transactions associated with the given user's accounts.
 
 ### Endpoints
 
-There are four transaction collection endpoints in the platform. Two for each of the two sections: `user` and `admin`
+There are four transaction collection endpoints in the platform. Two for each of the two sections: `user` and `admin`:
 
 section | type| URL | methods
 ---|---|---|---
