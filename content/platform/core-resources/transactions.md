@@ -20,7 +20,7 @@ Transactions can be made by both admin users and end-users. However, end-users a
 
 This means that if you wish to provide functionality to automatically transition a transactions when created by an end-user then you have two options:
 
-1. Set the default status to "pending"
+1. Set the default status to "Complete"
 2. Build a service to receive event webhooks (transaction.create) and follow custom logic to either update the transaction to `complete` or `failed`.
 
 <aside class="warning">
@@ -29,7 +29,7 @@ This means that if you wish to provide functionality to automatically transition
 
 ### Object
 
-Transactions are essentially logs of actions on an account balance. With this in mind, transactions contain information that can be used to identify who made the transaction, what the transaction was made on, and how the transaction impacted the account.
+Transactions are basically a series of logs recording actions on an account balance. With this in mind, transactions contain information that can be used to identify who made the transaction, what the transaction was made on, and how the transaction impacted the account.
 
 A full transaction object looks like:
 
@@ -78,10 +78,10 @@ A full transaction object looks like:
 
 A debit transaction will look much the same as the above, except the `amount` will be a negative value and the `tx_type` will be `Debit`.
 
-On the other hand a transfer will have some additional information in the `source_transaction` or `destination_transaction` attributes. As stated previously, transfers are simply debits/credits themselves. So, if a transfer is made between two accounts 2 transactions will be created:
+On the other hand a transfer will have some additional information in the `partner` attribute. As stated previously, transfers are simply debits/credits themselves. So, if a transfer is made between two accounts 2 transactions will be created:
 
-1. A debit transaction reducing the balance of the sender. In addition the `destination_transaction` attribute will be populated with a pointer to the receiver transaction.
-2. A credit transaction increasing the balance of the receiver. In addition the `source_transaction` attribute will be populated with a pointer to the sender transaction.
+1. A debit transaction reducing the balance of the sender. In addition the `partner` attribute will be populated with a pointer to the receiver transaction.
+2. A credit transaction increasing the balance of the receiver. In addition the `partner` attribute will be populated with a pointer to the sender transaction.
 
 ### Endpoints
 
