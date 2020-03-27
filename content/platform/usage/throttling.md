@@ -5,16 +5,30 @@ description: Throttling.
 weight: 7
 ---
 
-In order to ensure that the platform provides a high quality and stable environment to all clients all requests are subject to throttling. This protects the platform against unplanned high load, random bursts and intentional request based attacks.
+Throttling is applied based on the company's tier. There are 4 tiers that have different throttling rules depending on whether the request is on a `user` endpoint or an `admin` endpoint. The `restricted` tier will automatically be applied to a company if their associated account is unpaid. In these situations only the "owner" or original creator of the company will still be able to access the API.
 
-Throttling is applied based on the company's tier. There are 3 tiers that have different throttling rules depending on whether the request is on a `user` endpoint or an `admin` endpoint. These rules apply to "sustained" requests/min of a single user (additional rules exist to allow some flexibility in terms of "burst" usage).
+New companies, and those within the trial period have a throttling type of `limited`. 
 
-Name| user | admin
----|---|---
-Limited | 50/min | 100/min
-Standard | 100/min | 200/min
-Extended | 500/min | 1000/min
+**Sustained usage**
+
+Name| user | admin | Condition
+---|---|---|---
+restricted | 0/hour | 0/hour | Only the company owner can access the API.
+limited | 3000/hour | 6000/hour | -
+standard | 6000/hour | 12000/hour | -
+extended | 30000/hour | 60000/hour | -
+
+**Burst usage**
+
+In addition to sustained (hourly throttles), The platform API also throttles on requests per minute. These throttles exist to protect against high burst while also allowing some flexibility during abnormally high but short request loads.
+
+Name| user | admin | Condition
+---|---|---|---
+restricted | 0/min | 0/min | Only the company owner can access the API.
+limited | 100/min | 200/min | -
+standard | 150/min | 250/min | -
+extended | 500/min | 1000/min | -
 
 <aside class="notice">
-	If throttling is proving to be a limiting factor in your usage of the platform, please contact support and we can have a discussion regarding raising your company's tier.
+	If throttling is making it hard to implement your use-case, please contact support and we can have a discussion regarding raising your company's tier.
 </aside>
