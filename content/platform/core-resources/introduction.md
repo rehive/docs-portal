@@ -9,7 +9,7 @@ The Rehive platform provides a wide range of resources that make it easier to de
 
 1. Companies
 2. Users
-3. Assets
+3. Currencies
 4. Accounts
 5. Transaction collections
 6. Transactions
