@@ -10,7 +10,23 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-{{< link-heading "h4" "26-3-2020" >}}
+{{< link-heading "h4" "02-04-2020" >}}
+
+1. Added new list public groups endpoint for public companies:
+    - `/public/companies/<id>/groups/`
+2. Added new retrieve public group for public companies:
+    - `/public/companies/<id>/groups/<group_name>/`
+3. Fixed a bug where existing unconfirmed token devices in MFA would cause errors when trying to verify SMS devices.
+4. Fixed a bug where the `token` field was not getting included in the MFA verify swagger schema.
+5. Added new global export endpoint that correctly handles retrieval of multiple resource type exports.
+   - `/exports/`
+   - `/exports/<id>/`
+   - `/admin/exports/`
+   - `/admin/exports/<id>/`
+
+---
+
+{{< link-heading "h4" "26-03-2020" >}}
 
 1. Updated message handling on transactions. Added new endpoints:
     - `/admin/transactions/<id>/messages/`
@@ -25,7 +41,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-{{< link-heading "h4" "12-3-2020" >}}
+{{< link-heading "h4" "12-03-2020" >}}
 
 1. Added a new device endpoints for users and admins
     - These can be accessed via `/user/devices/` and `/admin/users/devices/`
