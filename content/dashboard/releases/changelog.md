@@ -9,6 +9,35 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "08-04-2020" >}}
+
+**Bug fixes:**
+
+- Fixed copy typo on the manual onboarding page.
+
+**Changes:**
+
+- Amended copy on the template selection page for Sandbox template.
+
+---
+
+{{< link-heading "h4" "07-04-2020" >}}
+
+**Bug fixes:**
+
+- Fixed an edge case bug where sometimes admins could not create a transfer between a user's accounts if they selected a currency and amount before selecting a user.
+
+**Changes:**
+
+- Updated the Sandbox template configuration.
+- Added warning for manual configurations as well as links to the Standardisation document on the Get Started page.
+
+**New features:**
+
+- Rehive has introduced 2 new templates: Points and Rewards templates.
+
+---
+
 {{< link-heading "h4" "09-03-2020" >}}
 
 **Bug fixes:**
