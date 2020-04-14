@@ -10,6 +10,16 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "14-04-2020" >}}
+
+1. Added new data based throttling for anonymous auth endpoints.
+    - Autehntication attempts with identical data will now be throttled regardless of user/IP.
+    - This also applies to register, password resent and email/mobile resend.
+2. Added new group icon/image.
+3. Added new `archived` filter on the admin currency list.
+
+---
+
 {{< link-heading "h4" "02-04-2020" >}}
 
 1. Added new list public groups endpoint for public companies:
