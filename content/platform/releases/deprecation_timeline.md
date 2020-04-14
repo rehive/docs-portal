@@ -9,7 +9,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "17-04-2020" >}}
+{{< link-heading "h4" "20-04-2020" >}}
 
 1. Remove non-inferred transaction fees.
 	- Transaction fee will all have to be inferred to work after this date.
