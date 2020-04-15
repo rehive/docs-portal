@@ -9,6 +9,21 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "15-04-2020" >}}
+
+
+**Changes:**
+
+- Configuration tweaks to the Sandbox, Points an Rewards templates.
+
+**New features:**
+
+- Admins can now see activity logs for a specific user, accessible from the user's details page.
+- Admins can now archive or delete currencies.
+
+
+---
+
 {{< link-heading "h4" "08-04-2020" >}}
 
 **Bug fixes:**
