@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "17-04-2020" >}}
+
+
+**New features:**
+
+- Admins can now upload icons to groups.
+
+---
+
 {{< link-heading "h4" "15-04-2020" >}}
 
 
