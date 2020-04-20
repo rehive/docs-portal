@@ -10,6 +10,14 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "20-04-2020" >}}
+
+1. Added new utility methods for deleting authentication tokens
+    - `DELETE` on `/3/auth/tokens/` will now delete all tokens belonging to the authenticated user.
+    - `DELETE` on `/3/admin/users/tokens/` will now delete all tokens in a company. This endpoint works with the filters available on `GET` ie. `/3/admin/users/tokens/?user=example@rehive.com`.
+
+---
+
 {{< link-heading "h4" "14-04-2020" >}}
 
 1. Added new data based throttling for anonymous auth endpoints.
