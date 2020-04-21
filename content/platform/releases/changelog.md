@@ -15,6 +15,9 @@ removals will be indicated ahead of time in the deprecation timeline.
 1. Added new utility methods for deleting authentication tokens
     - `DELETE` on `/3/auth/tokens/` will now delete all tokens belonging to the authenticated user.
     - `DELETE` on `/3/admin/users/tokens/` will now delete all tokens in a company. This endpoint works with the filters available on `GET` ie. `/3/admin/users/tokens/?user=example@rehive.com`.
+2. Added new functionality to ensure old idempotent keys are cycled out of the system after 1 week.
+3. Added new `/auth/` endpoint for checking whether a user is authenticated via a GET request.
+    - The `/auth/user/verify/` endpoint will be phased out in favor of the new `/auth/` endpoint.
 
 ---
 
