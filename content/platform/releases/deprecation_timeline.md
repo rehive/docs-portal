@@ -11,7 +11,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 {{< link-heading "h4" "14-07-2020" >}}
 
-1. Remove the POST `/auth/user/verify/` endpoint.
+1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
 
 ---
