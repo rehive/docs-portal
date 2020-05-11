@@ -10,6 +10,12 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "11-05-2020" >}}
+
+1. Updated all `disallowed_transaction_subtypes` fields in relevant settings to support an additional list of currencies on which that specific subtype is disabled.
+
+---
+
 {{< link-heading "h4" "20-04-2020" >}}
 
 1. Added new utility methods for deleting authentication tokens
