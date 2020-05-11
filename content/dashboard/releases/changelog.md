@@ -9,6 +9,21 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "11-05-2020" >}}
+
+**Bug fixes:**
+
+Fixed bug when editing a product category.
+
+**Changes:**
+
+- Added new field to virtual products: virtual redemption.
+- Added allow/disallow and disallow currency-specific subtype switches to transaction settings in groups.
+- Added allow/disallow subtype switches to main transaction settings page.
+- Added allow/disallow subtype switches on currency settings in user accounts.
+
+---
+
 {{< link-heading "h4" "17-04-2020" >}}
 
 
