@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "18-05-2020" >}}
+
+**Changes:**
+
+Added "Default subtypes" button to the subtypes page. Admins can now see a list of Rehive's default subtypes and their descriptions and select which ones they would like to add.
+
+---
+
 {{< link-heading "h4" "11-05-2020" >}}
 
 **Bug fixes:**
