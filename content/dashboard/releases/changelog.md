@@ -21,7 +21,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 **Bug fixes:**
 
-Fixed bug when editing a product category.
+- Fixed bug when editing a product category.
 
 **Changes:**
 
@@ -34,7 +34,6 @@ Fixed bug when editing a product category.
 
 {{< link-heading "h4" "17-04-2020" >}}
 
-
 **New features:**
 
 - Admins can now upload icons to groups.
@@ -42,7 +41,6 @@ Fixed bug when editing a product category.
 ---
 
 {{< link-heading "h4" "15-04-2020" >}}
-
 
 **Changes:**
 
