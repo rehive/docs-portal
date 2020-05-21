@@ -9,6 +9,21 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "21-05-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where order id and products were not showing up on the transaction modal for purchases.
+
+**Changes:**
+
+- Updated placeholder URLs in company info for password set, password reset and email verify.
+- Updated the "Allow session durations" label in Company settings to "Allow custom session durations".
+- Added updated date to transaction modal.
+- Added address type to document review modal.
+
+---
+
 {{< link-heading "h4" "18-05-2020" >}}
 
 **Changes:**
