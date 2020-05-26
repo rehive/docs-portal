@@ -16,5 +16,5 @@ configs:
     cluster: production
     namespace: docs-portal
     helm_chart: rehive/rehive-service
-    helm_chart_version: 0.1.32
+    helm_chart_version: 0.2.2
     helm_values_path: ./etc/helm/production/values.yaml

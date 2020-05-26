@@ -3,6 +3,8 @@
 # Declare variables to be passed into your templates.
 deployment:
   replicaCount: 1
+  command: null
+  args: null
 image:
   repository: gcr.io/rehive-services/docs-portal
   tag: latest
@@ -31,4 +33,5 @@ redis:
   enabled: false
 rabbitmq:
   enabled: false
-workersEnabled: false
+workers:
+  enabled: false
