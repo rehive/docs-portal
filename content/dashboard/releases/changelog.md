@@ -9,11 +9,24 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "27-05-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where last login on the user details page displayed as `.` instead of `--`.
+
+**New features:**
+
+- Added the interface for the Stripe Extension.
+
+---
+
 {{< link-heading "h4" "21-05-2020" >}}
 
 **Bug fixes:**
 
 - Fixed issue where order id and products were not showing up on the transaction modal for purchases.
+- Fixed issue where app config was not loading correctly.
 
 **Changes:**
 
