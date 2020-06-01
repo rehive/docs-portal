@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "01-06-2020" >}}
+
+**Changes:**
+
+- Switched from a modal to a page when adding new default subtypes.
+- Added 'Add default subtypes' text link to manual onboarding in the subtypes section.
+
+---
+
 {{< link-heading "h4" "27-05-2020" >}}
 
 **Bug fixes:**
