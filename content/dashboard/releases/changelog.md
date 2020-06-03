@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "03-06-2020" >}}
+
+**Bug fixes:**
+
+- Fixed the missing reference for assigning Stellar transactions.
+
+---
+
 {{< link-heading "h4" "01-06-2020" >}}
 
 **Changes:**
