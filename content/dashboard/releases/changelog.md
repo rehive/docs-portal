@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "18-06-2020" >}}
+
+**New features:**
+
+- Added the Chipless Card Service UI to the Dashboard.
+
+---
+
 {{< link-heading "h4" "03-06-2020" >}}
 
 **Bug fixes:**
