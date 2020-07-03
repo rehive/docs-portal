@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "03-07-2020" >}}
+
+**Changes:**
+
+- Added fee name field to transaction settings in groups. This will allow lower level fees with the same name to override the higher level fee. Fee name functionality still needs to be added to the user account currency fees.
+- Added the ability for admins to choose between a standalone account and a user account for the fee credit account.
+
+---
+
 {{< link-heading "h4" "18-06-2020" >}}
 
 **New features:**
