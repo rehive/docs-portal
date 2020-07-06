@@ -9,6 +9,20 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "06-07-2020" >}}
+
+**Bug fixes:**
+
+- Fixed spinner bug where a large spinner was displaying in the task viewer when generating an account or account currencies export.
+- Fixed misaligned radio buttons when adding a user to a group via the group user page.
+- Fixed issue where a validation popup was incorrectly showing up when clicking the colour edit button when adding a group.
+
+**Changes:**
+
+- CSV will now be selected by default when exporting accounts or account currencies.
+
+---
+
 {{< link-heading "h4" "03-07-2020" >}}
 
 **Changes:**
