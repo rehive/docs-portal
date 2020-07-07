@@ -18,6 +18,7 @@ Summary of additions and changes to the Rehive Dashboard.
 **Changes:**
 
 - Added `account name` filter to the Transactions and Transactions stats pages.
+- The Chipless  Card Service has been updated to allow admins to set a pin on a card when creating or editing a card. An admin can also set a new pin on an existing card.
 
 ---
 
