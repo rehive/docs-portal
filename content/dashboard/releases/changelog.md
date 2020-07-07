@@ -9,6 +9,18 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "07-07-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where uploaded company logos and uploaded company icons were not displaying on the company settings page
+
+**Changes:**
+
+- Added `account name` filter to the Transactions and Transactions stats pages.
+
+---
+
 {{< link-heading "h4" "06-07-2020" >}}
 
 **Bug fixes:**
