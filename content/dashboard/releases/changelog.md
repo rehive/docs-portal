@@ -9,6 +9,21 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "08-07-2020" >}}
+
+**Changes:**
+
+- Added a new permission in groups and users for both admin and user permissions - `device`. This permission gives permission to access to a list of a user's mobile devices.
+- Any newly created group will auto-generate with the user permissions for devices.
+
+**New features:**
+
+- Added Push notifications UI to the Notifications extension. Admins are now able to add push notifications to their company.
+- Admins can view in Notification Extension -> Settings -> Push notifications whether push notifications are enabled for their company. 
+- Push notifications need to be enabled for a company by Rehive. Currently, if you are a Premium or Enterprise client you can request push notifications be enabled from the Notification Extension -> Settings -> Push notifications page.
+
+---
+
 {{< link-heading "h4" "07-07-2020" >}}
 
 **Bug fixes:**
