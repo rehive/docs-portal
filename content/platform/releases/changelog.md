@@ -10,7 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-{{< link-heading "h4" "06-01-2020" >}}
+{{< link-heading "h4" "09-07-2020" >}}
+
+1. Fixed an issue where trying to delete an email belonging to an archived user resulted in a "Cannot modify archived object" error.
+
+---
+
+{{< link-heading "h4" "01-06-2020" >}}
 
 1. Added a new `name` field to fees. this name may only be lowercase, underscores and numbers and only one fee can exist on a given level per name (ie. there can be one group_tier fee with the name main_fee and one account asset fee with the name main_fee).
 2. Updated fee calculation (on transactions) to only retrieve one fee per `name`. This means that if a Group Tier fee is defined AND a Account Asset fee with the same name, then only the Account Asset fee will be applied).
