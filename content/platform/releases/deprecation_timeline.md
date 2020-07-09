@@ -9,14 +9,14 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "14-07-2020" >}}
+{{< link-heading "h4" "22-10-2020" >}}
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
 
 ---
 
-{{< link-heading "h4" "19-05-2020" >}}
+{{< link-heading "h4" "20-08-2020" >}}
 
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
