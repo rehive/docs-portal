@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "09-07-2020" >}}
+
+**Changes:**
+
+- Removed defunct 'Scan' option from App config.
+- Updated fee name tooltip when adding or editing a fee on a group tier.
+
+---
+
 {{< link-heading "h4" "08-07-2020" >}}
 
 **Changes:**
