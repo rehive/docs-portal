@@ -10,6 +10,12 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "14-07-2020" >}}
+
+1. Updated the `account` field on transaction create (debit, credit, multi and transaction collections) to support either a `name` or a `reference` as a value. If a name is used, then ensure a `user` is included along with it.
+
+---
+
 {{< link-heading "h4" "09-07-2020" >}}
 
 1. Fixed an issue where trying to delete an email belonging to an archived user resulted in a "Cannot modify archived object" error.
