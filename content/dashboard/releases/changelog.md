@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "15-07-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where it was possible to create a Reward campaign without adding a debit account which funds reward transactions.
+
+**Changes:**
+
+- Added helper text for image size when uploading a product image in the Product Extension.
+- Updated builder templates.
+
+---
+
 {{< link-heading "h4" "09-07-2020" >}}
 
 **Changes:**
