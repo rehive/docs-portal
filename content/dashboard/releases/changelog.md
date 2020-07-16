@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "16-07-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where group name was not being sent in the request when editing a group tier.
+- Fixed issue where the display of the uploaded company icon was being stretches out of proportion on the company info page.
+
+**Changes:**
+
+- Amended product image help text to include image size limitation.
+
+---
+
 {{< link-heading "h4" "15-07-2020" >}}
 
 **Bug fixes:**
