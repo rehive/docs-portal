@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "17-07-2020" >}}
+
+**Changes:**
+
+- Added Tier name field back to group tiers section.
+- Added recipient account setting to reward campaigns.
+
+---
+
 {{< link-heading "h4" "16-07-2020" >}}
 
 **Bug fixes:**
