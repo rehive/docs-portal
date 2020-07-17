@@ -8,6 +8,22 @@ weight: 1
 Summary of additions and changes to the Rehive platform. Breaking changes or
 removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h4" "17-07-2020" >}}
+
+1. Added a new set of endpoints for end users to get permissions associated to a group.
+    - Groups list: `/3/groups/{group_name}/permissions/`
+    - Group view: `/3/groups/{group_name}/permissions/{permission_id}/`
+2. Added missing `name` and `description` field to the fees on deep nested endpoints.
+3. Fixed 404 errors on listing pages. They now correctly throw a 404 instead of returning an empty list.
+4. Added orderby to the admin documents list:
+    - Supported fields are: `created`, `-created`, `updated`, `-updated`, `expires`, `-expires`)
+5. Updated `metadata` fields to use JSON-Merge-Patch on updates:
+    - This means that the full `metadata` does not have to be sent on PATCH/PUT as the new data will be merged into the existing data.
+    - The full spec can be seen here: https://tools.ietf.org/html/rfc7386
+
 ---
 
 {{< link-heading "h4" "14-07-2020" >}}
