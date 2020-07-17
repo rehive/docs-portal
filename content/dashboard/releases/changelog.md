@@ -23,7 +23,7 @@ Summary of additions and changes to the Rehive Dashboard.
 **Bug fixes:**
 
 - Fixed issue where group name was not being sent in the request when editing a group tier.
-- Fixed issue where the display of the uploaded company icon was being stretches out of proportion on the company info page.
+- Fixed issue where the display of the uploaded company icon was being stretched out of proportion on the company info page.
 
 **Changes:**
 
