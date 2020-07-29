@@ -9,6 +9,47 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "29-07-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where notification name would not allow capital letters when editing.
+- Fixed bug where timeframe and max per user per timeframe fields would be overwritten when editing a Rewards campaign.
+
+**Changes:**
+
+- Added the ability to MFA an API token created by an admin user if they currently have MFA enabled on their account.
+- Added the ability to set a credit account by account reference on a reward campaign.
+- Removed defunct `request_payment` action control from the app config.
+
+---
+
+{{< link-heading "h4" "23-07-2020" >}}
+
+**Changes:**
+
+- Subtype controls on the main Transaction settings page are now sorted by debits and credits.
+- Fixed the sorting by label of subtypes in all subtype controls. 
+- Added subtype controls to user accounts. 
+- Subtype descriptions can now be viewed on subtype controls by hovering over the subtype label.
+
+---
+
+{{< link-heading "h4" "21-07-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue with subtype controls where it appeared as if they were not saving properly. 
+- Fixed issue with tier subtype controls where subtypes turned off for one tier appeared to also be turned off for another when going to that tier.
+
+**Changes:**
+
+- Added alternating colour backgrounds to subtype controls to make it easier to see which one you're working on.
+- Increased the panel space for subtype switches and moved Type to the left of Subtype label.
+- Split Group subtype controls and Tier subtype controls into separate menu items in the Transaction settings section of Groups.
+
+---
+
 {{< link-heading "h4" "17-07-2020" >}}
 
 **Changes:**
