@@ -8,6 +8,12 @@ weight: 1
 Summary of additions and changes to the Rehive platform. Breaking changes or
 removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h4" "17-07-2020" >}}
+
+1. Updated the `POST` on the `/auth/tokens/` endpoint to require an extra MFA step if the user has MFA enabled.
+    - Previously we accepted the current user's MFA status as adequate authentication to perform this action.
 
 ---
 
