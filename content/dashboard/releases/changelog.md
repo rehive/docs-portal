@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "03-08-2020" >}}
+
+**Bug fixes:**
+
+- Fixes issue where reward credit account was not being set when creating a new campaign.
+
+**Changes:**
+
+- Added currency object information to the currency overview page.
+- Adds Flash extension UI
+
+---
+
 {{< link-heading "h4" "29-07-2020" >}}
 
 **Bug fixes:**
