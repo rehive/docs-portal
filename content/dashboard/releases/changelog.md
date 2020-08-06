@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "06-08-2020" >}}
+
+**Changes:**
+
+- Admins can now set an id and a number when adding a card in the Chipless Card Terminal Extension.
+- Admins can how set updated fees on individual user account currencies.
+
+---
+
 {{< link-heading "h4" "03-08-2020" >}}
 
 **Bug fixes:**
