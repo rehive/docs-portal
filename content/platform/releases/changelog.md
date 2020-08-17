@@ -10,6 +10,13 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "17-08-2020" >}}
+
+1. Added a new `routing_number` to all address objects.
+2. Added a new `branch_address` to all bank account objects.
+
+---
+
 {{< link-heading "h4" "17-07-2020" >}}
 
 1. Updated the `POST` on the `/auth/tokens/` endpoint to require an extra MFA step if the user has MFA enabled.
