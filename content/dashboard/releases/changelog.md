@@ -9,6 +9,27 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "21-08-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the user documents listing page was not ordering correctly.
+
+**Changes:**
+
+Improved functionality when viewing a user's uploaded KYC document:
+- Admins can now more clearly see  document's expiry date. Dashboard will display a warning if it is past its expiry date.
+- Admins will see a warning when a user is under 18 years of age on proof of identity documents.
+- Added a link to the user's detail page when viewing their document from the user documents listing page.
+- Added additional KYC checkboxes for an admin to mark off whether the document is the full document (not missing any pages), of sufficient image quality and is a color document. These checks are stored as metadata on the document.
+- Admins can now see the date a document was uploaded on when viewing the document.
+
+Other:
+- Added branch address to both company and user bank accounts.
+- Admins must now add an account to a product before they are able to save it.
+
+---
+
 {{< link-heading "h4" "06-08-2020" >}}
 
 **Changes:**
