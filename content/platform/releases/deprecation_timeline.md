@@ -16,14 +16,13 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "20-08-2020" >}}
+{{< link-heading "h4" "22-10-2020" >}}
 
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
-1. Remove non-inferred transaction fees.
+1. Remove non-inferred transaction fees on automatic fee creation rules.
 	- Transaction fee will all have to be inferred to work after this date.
-2. Remove the transaction fee property on the transactions list/view resource.
-	- Fees should now be handled by seperate transactions that can be found through the transaction-collection,
+	- The `fees` and `fee` fields on individual transactions will continue to be supported for backwards compatibility reasons.
 3. Remove the source/destination property.
 	- These properties are now available as a single `partner` property.
 
