@@ -10,6 +10,19 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "26-08-2020" >}}
+
+
+1. Added metric tracking for `transaction` and `user` resources. Metrics can be configured to count/sum a specific data set at midnight every day. The data set can be customized using filters and the time at which the metric updates can be configured by setting an appropriate timezone.
+    - `/admin/metrics/`
+    - `/admin/metrics/<id>/`
+    - `/admin/metrics/<id>/points/`
+    - `/metrics/`
+    - `/metrics/<id>/`
+    - `/metrics/<id>/points/`
+
+---
+
 {{< link-heading "h4" "17-08-2020" >}}
 
 1. Added a new `routing_number` to all address objects.
