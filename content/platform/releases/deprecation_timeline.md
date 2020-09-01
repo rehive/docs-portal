@@ -9,16 +9,6 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "29-10-2020" >}}
-
-1. Remove resource specific export endpoints. The primary export endpoints should be used instead. Simply pass a `resource` file to indicate what resource the export should operate on:
-	- /exports/
- 	- /exports/<id>/
-	- /admin/exports/ 
-	- /admin/exports/<id>/
-
----
-
 {{< link-heading "h4" "22-10-2020" >}}
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
@@ -36,6 +26,16 @@ This timeline indicates dates at which certain functionality will be permanently
 3. Remove the source/destination property.
 	- These properties are now available as a single `partner` property.
 
+---
+
+{{< link-heading "h4" "29-09-2020" >}}
+
+1. Remove resource specific export endpoints. The primary export endpoints should be used instead. Simply pass a `resource` file to indicate what resource the export should operate on:
+	- `/exports/`
+ 	- `/exports/<id>/`
+	- `/admin/exports/`
+	- `/admin/exports/<id>/`
+	
 ---
 
 {{< link-heading "h4" "16-04-2019" >}}
