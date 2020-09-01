@@ -9,6 +9,16 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
+{{< link-heading "h4" "29-10-2020" >}}
+
+1. Remove resource specific export endpoints. The primary export endpoints should be used instead. Simply pass a `resource` file to indicate what resource the export should operate on:
+	- /exports/
+ 	- /exports/<id>/
+	- /admin/exports/ 
+	- /admin/exports/<id>/
+
+---
+
 {{< link-heading "h4" "22-10-2020" >}}
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
@@ -21,7 +31,7 @@ This timeline indicates dates at which certain functionality will be permanently
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
 1. Remove non-inferred transaction fees on automatic fee creation rules.
-	- Transaction fee will all have to be inferred to work after this date.
+	- Transaction fees will all have to be inferred to work after this date.
 	- The `fees` and `fee` fields on individual transactions will continue to be supported for backwards compatibility reasons.
 3. Remove the source/destination property.
 	- These properties are now available as a single `partner` property.
