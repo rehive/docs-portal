@@ -10,6 +10,12 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "08-09-2020" >}}
+
+1. Fixed a performance issue that occurred when creating transactions without specifiying a `user` in the request. Requests that include only an `account` should now perform equally to those that include a `user` in the request data.
+
+---
+
 {{< link-heading "h4" "26-08-2020" >}}
 
 
