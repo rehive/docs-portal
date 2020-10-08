@@ -9,6 +9,94 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "07-10-2020" >}}
+
+**Changes**
+
+- On the MFA page the token input field is now autofocussed on page load.
+- On the MFA page you can now submit your token by pressing enter.
+
+---
+
+{{< link-heading "h4" "01-10-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where General settings switches for Hide bank accounts, hide primary currency, hide notifications and hide SMS MFA were not saving.
+- Fixed issue where totals on currencies page were all showing as 0.
+
+**Changes:**
+
+- Increased page size of get extensions functions in order to ensure all extensions display on the extensions listing page.
+
+---
+
+{{< link-heading "h4" "24-09-2020" >}}
+
+**Bug fixes:**
+
+- Fixed the app config UI to no longer overwrite the JSON config.
+
+**Changes:**
+
+Major update to the App config UI:
+
+- Adds Sessions, MFA and Tier requirements in the company Auth section.
+- Adds a new Settings section.
+- Adds Sales settings. Moves Product, Sales and Profile settings under the Settings nav item.
+- Adds new fields for Product Settings.
+- Renamed Accounts section to Actions. Adds Donate config and conditions, and new modals for add/edit/delete donation recipients. Adds Pay config section. Adds Prepaid config and add/edit/delete modals for Prepaid configurations
+- Adds Tertiary, Focus, Tertiary contrast, Focus contrast, Warning, Error, Success, Positive and Negative color controls to the Colors config section
+
+---
+
+{{< link-heading "h4" "23-09-2020" >}}
+
+**Bug fixes:**
+
+- Fixed alignment issue of checkboxes on view document modal.
+- Fixed issue where transaction limits were not loading.
+
+---
+
+{{< link-heading "h4" "21-09-2020" >}}
+
+**Bug fixes:**
+
+- Fixed broken navigation CSS in the onboarding flow.
+
+**New features:**
+
+- Added the UI for the Business Extension.
+- Added the UI for the Kraken Extension.
+- Added the UI for the VoucherMoney Extension.
+
+---
+
+{{< link-heading "h4" "10-09-2020" >}}
+
+**Bug fixes:**
+
+- Fixed pagination and ordering issue on Conversion pairs page in the Conversion Extension.
+
+---
+
+{{< link-heading "h4" "31-08-2020" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where adblockers were causing a critical failure when blocking sentry.
+
+---
+
+{{< link-heading "h4" "24-08-2020" >}}
+
+**Bug fixes:**
+
+- Fixed email console error bug on transactions.
+
+---
+
 {{< link-heading "h4" "21-08-2020" >}}
 
 **Bug fixes:**
