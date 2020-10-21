@@ -13,11 +13,12 @@ This timeline indicates dates at which certain functionality will be permanently
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
-2. Remove resource specific export endpoints. The primary export endpoints should be used instead. Simply pass a `resource` file to indicate what resource the export should operate on:
+2. Remove resource specific export endpoints. The following endpoints should be used instead:
 	- `/exports/`
  	- `/exports/<id>/`
 	- `/admin/exports/`
 	- `/admin/exports/<id>/`
+
 ---
 
 {{< link-heading "h4" "07-12-2020" >}}
@@ -25,8 +26,8 @@ This timeline indicates dates at which certain functionality will be permanently
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
 1. Remove non-inferred transaction fees on automatic fee creation rules.
-	- Transaction fees will all have to be inferred to work after this date.
-	- The `fees` and `fee` fields on individual transactions will continue to be supported for backwards compatibility reasons.
+	- All automatic ransaction fees will have to be inferred to work after this date.
+	- The `fees` and `fee` fields on individual transactions will continue to be exposed for backwards compatibility reasons.
 3. Remove the source/destination property.
 	- These properties are now available as a single `partner` property.
 
@@ -35,8 +36,6 @@ This timeline indicates dates at which certain functionality will be permanently
 {{< link-heading "h4" "23-11-2020" >}}
 
 1. Replace account-configuration and all related endpoints with account-definition endpoints.
-	- All instances of `account-configurations` will be replaced by the word `account-definitions`
-        - All account configuration will be updated to the new format of multiple groups attached account-definitions instead of account-configurations attached to groups.
 	- Existing account configurations will be automatically migrated to the new format.
 2. Replace old disallowed subtype rules with the new format (that includes account definitions as a factor).
 	- Existing disallowed subtypes will be automatically migrated to the new format.
