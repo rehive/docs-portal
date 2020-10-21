@@ -10,6 +10,18 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "13-10-2020" >}}
+
+1. Fixed a bug on account and transaction filters that resulted in `0` value `balance` filters getting ignored instead of properly filtered against in the results.
+
+---
+
+{{< link-heading "h4" "25-09-2020" >}}
+
+1. Added filters on auth tokens so that keys can be excluded/included on DELETE as well as GET.
+
+---
+
 {{< link-heading "h4" "08-09-2020" >}}
 
 1. Fixed a performance issue that occurred when creating transactions without specifiying a `user` in the request. Requests that include only an `account` should now perform equally to those that include a `user` in the request data.
