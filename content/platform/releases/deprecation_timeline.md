@@ -9,14 +9,18 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "22-10-2020" >}}
+{{< link-heading "h4" "07-12-2020" >}}
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
-
+2. Remove resource specific export endpoints. The primary export endpoints should be used instead. Simply pass a `resource` file to indicate what resource the export should operate on:
+	- `/exports/`
+ 	- `/exports/<id>/`
+	- `/admin/exports/`
+	- `/admin/exports/<id>/`
 ---
 
-{{< link-heading "h4" "22-10-2020" >}}
+{{< link-heading "h4" "07-12-2020" >}}
 
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
@@ -28,13 +32,14 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "29-09-2020" >}}
+{{< link-heading "h4" "23-11-2020" >}}
 
-1. Remove resource specific export endpoints. The primary export endpoints should be used instead. Simply pass a `resource` file to indicate what resource the export should operate on:
-	- `/exports/`
- 	- `/exports/<id>/`
-	- `/admin/exports/`
-	- `/admin/exports/<id>/`
+1. Replace account-configuration and all related endpoints with account-definition endpoints.
+	- All instances of `account-configurations` will be replaced by the word `account-definitions`
+        - All account configuration will be updated to the new format of multiple groups attached account-definitions instead of account-configurations attached to groups.
+	- Existing account configurations will be automatically migrated to the new format.
+2. Replace old disallowed subtype rules with the new format (that includes account definitions as a factor).
+	- Existing disallowed subtypes will be automatically migrated to the new format.
 	
 ---
 
