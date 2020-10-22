@@ -26,7 +26,7 @@ This timeline indicates dates at which certain functionality will be permanently
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
 1. Remove non-inferred transaction fees on automatic fee creation rules.
-	- All automatic ransaction fees will have to be inferred to work after this date.
+	- All automatic transaction fees will have to be inferred to work after this date.
 	- The `fees` and `fee` fields on individual transactions will continue to be exposed for backwards compatibility reasons.
 3. Remove the source/destination property.
 	- These properties are now available as a single `partner` property.
