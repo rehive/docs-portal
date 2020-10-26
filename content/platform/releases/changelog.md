@@ -10,6 +10,15 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "26-10-2020" >}}
+
+1. Added a new optional `checks` property to transaction create and update on the admin API. 
+    - This field can be used by admins to customize what checks are done when validating a transaction. 
+    - The following options are available: `balance`, `verification`, `limits` and `type`.
+2. The `checks` property has also been added to the multi transaction and transaction collection endpoints.
+
+---
+
 {{< link-heading "h4" "13-10-2020" >}}
 
 1. Fixed a bug on account and transaction filters that resulted in `0` value `balance` filters getting ignored instead of properly filtered against in the results.
