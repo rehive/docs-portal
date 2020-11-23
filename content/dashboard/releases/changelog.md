@@ -9,9 +9,111 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "20-11-2020" >}}
+
+**Changes:**
+
+- Updated all instances of Project name and ID to App name and ID instead.
+- Added a character limit and counter for company description on the branding page of onboarding.
+- Added the company's App ID to the Company info page.
+
+---
+
+{{< link-heading "h4" "13-11-2020" >}}
+
+**Bug fixes:**
+
+- Fixed issue where business logo was using the incorrect url to display a business logo.
+
+---
+
+{{< link-heading "h4" "12-11-2020" >}}
+
+**Changes:**
+
+- Added the payout_day and payout_hour fields to the Business Extension settings. This allows admins to set the time and day on which payouts to businesses will occur.
+- Added the session_duration field to the app config. This allows admins to set session durations for their users in the app, as long as custom session durations are allowed on a company level.
+
+---
+
+{{< link-heading "h4" "11-11-2020" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where the datetime was using the incorrect format on start/end dates in rewards.
+
+---
+
+{{< link-heading "h4" "06-11-2020" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where admins were unable to deselect "billing" address type in the Profile Settings section of the App Config.
+
+---
+
+{{< link-heading "h4" "05-11-2020" >}}
+
+**Changes:**
+
+- Added the ability to see and edit the status field in the Business Extension.
+- Reworked the Bitcoin and Bitcoin testnet Extensions' settings pages to combine settings. Also added the new allow_multiple_addresses_per_user field to both extensions.
+- Added the "owner" field to the Business Extension. Admins can now view the owner of a business on the business listing page, the view business modal, and the edit business modal.
+
+---
+
+{{< link-heading "h4" "29-10-2020" >}}
+
+**Bug fixes:**
+
+- Fixed pagination issue on Products page where pagination would not work.
+
+---
+
+{{< link-heading "h4" "21-10-2020" >}}
+
+**Changes:**
+
+- Added a "Refresh" button to the conversions page.
+
+---
+
+{{< link-heading "h4" "20-10-2020" >}}
+
+**Bug fixes:**
+
+- Updated subtypes when looking for crypto withdrawals on the crypto extensions.
+
+**Changes:**
+
+- Added two new actions to the App Config section: Deposit voucher and Withdraw voucher.
+- Added account name to the transaction modal.
+
+---
+
+{{< link-heading "h4" "19-10-2020" >}}
+
+**Bug fixes:**
+
+- Fixed bug on global transaction controls page where updating the credit or debit section would undo settings in the other section (i.e. making a change to a credit subtype would undo debit settings).
+
+**Changes:**
+
+- Removed "default transaction status" setting from company settings.
+
+---
+
+{{< link-heading "h4" "16-10-2020" >}}
+
+**Changes:**
+
+- Changed currencies list in the app config to only contain currencies currently added to the company. This change allows for custom currencies to be selectable options.
+
+---
+
 {{< link-heading "h4" "07-10-2020" >}}
 
-**Changes**
+**Changes:**
 
 - On the MFA page the token input field is now autofocussed on page load.
 - On the MFA page you can now submit your token by pressing enter.
