@@ -15,9 +15,8 @@ Currently the extension allows you to:
 4. Add custom currencies for rate pairs.
 
 <aside class="warning">
-	The following features have not yet been added:
+	The following features are not supported yet:
 </aside>
 
-1. Conversions between currencies based on configurable conversion rates.
-2. Complex expressions for rate pair paths.
-3. Additional base currency support.
+1. Complex expressions for rate pair paths. 
+2. Customizable or extended base currency support. Only USD is supported as a base currency currently.
