@@ -1,5 +1,5 @@
 FROM alpine:3.8@sha256:ea47a59a33f41270c02c8c7764e581787cf5b734ab10d27e876e62369a864459
-ENV HUGO_VERSION=0.55.6
+ENV HUGO_VERSION=0.78.1
 ENV HUGO_TYPE=_extended
 ENV HUGO_ID=hugo${HUGO_TYPE}_${HUGO_VERSION}
 ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_ID}_Linux-64bit.tar.gz /tmp
