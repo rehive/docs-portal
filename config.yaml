@@ -3,6 +3,10 @@ languageCode: "en-us"
 title: "Rehive documentation"
 theme: hexon-hugo-theme
 
+markup:
+  highlight:
+    style: "dracula"
+
 params:
   logoUrl: https://rehive.com
   logoImage: /images/logo.svg
