@@ -5,6 +5,24 @@ description: Introduction to the dashboard.
 weight: 1
 ---
 
-An introduction to the dashboard.
+The Dashboard is an admin’s control centre where they can easily view and edit their app’s settings and business logic.
 
-#### Coming soon!
+All functionality offered by Rehive’s core platform can be controlled via the Dashboard through an optimized UI. Our Dashboard strives to make all of the tasks you want to accomplish as easy as possible and ensure that you have the tools to manage your business effectively.
+
+**Some of the things you can manage via our Dashboard:**
+
+- Currencies
+- Groups
+- Account definitions and accounts
+- Users
+- Transactions
+- Subtypes
+- Access control
+- Webhooks
+- API tokens
+- Request log
+- Extensions
+- Business logic such as subtype controls, limits, and fees.
+- App config 
+
+**And more**
