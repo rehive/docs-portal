@@ -5,7 +5,7 @@ description: Summary of the hosted payments option
 weight: 1
 ---
 
-The hosted option allows for minimal integration to get started with receiving payments from customers. All user interaction for selecting and viewing invoice information will be handled on the hosted invoice page.
+The hosted option allows for minimal integration to get started with receiving payments from customers. All user interaction for selecting and viewing invoice information will be handled on the hosted invoice page: https://app.rehive.com/checkout/
 
 ### The basic flow
 

@@ -12,9 +12,9 @@ Before being able to process webhooks you will need to create a webhook via the 
 After being set up a Webhook will be sent each time the Invoice has a Status change.
 
 ### Example Webhook:
-```
+```json
 {
- “data”: { 
+ "data": { 
   "id": "e7d7a5a2-9a97-4930-a992-589a6133488f",
   "user": "{}", # User object
   "account": "string",

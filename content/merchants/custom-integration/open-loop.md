@@ -5,27 +5,31 @@ description: Handling Open-loop payment processors
 weight: 4
 ---
 
-Open loop payments are any non-wallet balance payments made. These are usually deposits from an external value such as a crypto currency, credit card or bank payment. 
+Open loop payments are any non-wallet balance payments made. These are usually deposits from an external value such as a cryptocurrency, credit card or bank payment. 
 
 ### Displaying payment information
 The display of the payment information can depend on how the payment processor handles payments. Each payment processor quote will contain a different set of payment details. The relevant quote to display to the user will be the one with the matching payment processor to the `primary_payment_processor` field.
 
 Within the quote objects on the Invoice there will be a few fields(NOTE: this reference is different to the Invoice reference): 
 
-```
+```json
   "reference": "459b3407-3009-4f77-bbbf-5d6e12788958",
-  "deposit_details": {},
+  "deposit_details": {
+    "reference": "459b3407-3009-4f77-bbbf-5d6e12788958"
+  },
 ```
 
 The reference in the open-loop context is the identifying feature for the user to make the payment with this could be: A bank deposit reference they should use, a crypto address they should make a payment too etc.
 
-The deposit details are any extra information such as: Another unique crypto identifier, bank branch details etc.
+The deposit details will contain both the value of the reference and any other fields required to make a payment. All information within the deposit details should be shown appropriatly to the user for them to be able to make the payment.
 
-For each open-loop processor you support these two fields should be displayed appropriately to the user paying. Using Bitcoin as an example your Quote fields might look like this:
+Using Bitcoin as an example your Quote fields might look like this:
 
-```
+```json
   "reference": "12CsH7h4ro5R8p3FwEAhKZHUEddz1ZfseV",
-  "deposit_details": {},
+  "deposit_details": {
+    "public_address": "12CsH7h4ro5R8p3FwEAhKZHUEddz1ZfseV"
+  },
 ```
 
 The reference is the Bitcoin address generated for this deposit which the user paying will need to make a transaction too.
@@ -56,7 +60,7 @@ While an Invoice is in the “Processing” state and a relevant crypto payment 
 
 An example of a request with transactions:
 
-```
+```json
 {
   "status": "success",
   "data": [
@@ -100,7 +104,7 @@ An example of a request with transactions:
 }
 ```
 
-Within the `metadata` field of the transaction object the relevant payment processor, in this case Bitcoin, will include a section such as `service_bitcoin` that contains both the confirmations and the Bitcoin transaction hash(tx_hash field). When a `Pending` transaction exists in this array both the hash and the confirmations with a message such as “You payment has been detected <tx_hash> with <confirmations> confirmations is currently waiting to be confirmed.”
+Within the `metadata` field of the transaction object the relevant payment processor, in this case Bitcoin, will include a section such as `service_bitcoin` that contains both the confirmations and the Bitcoin transaction hash(tx_hash field). When a `Pending` transaction exists in this array both the hash and the confirmations with a message such as “You payment has been detected <tx_hash> with <confirmations> confirmations is currently waiting to be confirmed.” should be displayed to the user to let them know the payment is being processed.
 
 
 

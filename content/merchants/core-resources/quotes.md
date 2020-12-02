@@ -9,7 +9,7 @@ The Quote object contains the amount and currency the Payment Processor expects 
 
 ### Object
 
-```
+```json
 {
     "id": "27fd41af-279e-44e7-b384-d6a6fe54f160",
     "request": 16,

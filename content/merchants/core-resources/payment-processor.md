@@ -13,7 +13,7 @@ Each payment processor has a unique subtype and identifier field
 
 ### Object
 
-```
+```json
 {
     "id": "b5950a31-f954-44ff-8860-3a18d7349cf5",
     "unique_string_name": "native",

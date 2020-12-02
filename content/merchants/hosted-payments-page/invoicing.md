@@ -23,7 +23,7 @@ URL | methods
 `​/manager​/businesses​/{business_id}​/invoices​/` | `POST`
 
 ### Example data:
-```
+```json
 {
   "request_reference": "MY_ECOMMERCE_REFERENCE",
   "request_amount": 10000, # Value of invoice in cents
@@ -35,7 +35,7 @@ URL | methods
 ```
 
 ### Example success response:
-```
+```json
 {
   "id": "e7d7a5a2-9a97-4930-a992-589a6133488f",
   "user": "{}", # User object

@@ -25,7 +25,7 @@ cancelled | The invoice has been set to cancelled by a manager.
 
 ### Object
 
-```
+```json
 {
     "id": "deb62287-dbc6-4f11-8f83-d753f6cf1284",
     "user": {
