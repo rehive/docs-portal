@@ -9,6 +9,23 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "03-12-2020" >}}
+
+**Changes:**
+
+- Added a text field allowing admins to add or edit an image for a slider in the app config.
+
+---
+
+{{< link-heading "h4" "02-12-2020" >}}
+
+**Changes:**
+
+- Changed company logo and icon upload to allow only jpg and png uploads.
+- Added deactivation interface for the Payment Requests Extension.
+
+---
+
 {{< link-heading "h4" "20-11-2020" >}}
 
 **Changes:**
