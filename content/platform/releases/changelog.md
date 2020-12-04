@@ -10,6 +10,20 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
+{{< link-heading "h4" "04-12-2020" >}}
+
+1. Replaced account-configurations with account-definitions. The new account definitions are sharable between groups and will also apply effects retroactively.
+    - Account definitions will linked to multiple groups instead of belonging to a single group.
+    - When applying changes to account definitions, these changes will be automatically applied to all related accounts/users and groups as well.
+2. Added new account definition selection on all disallowed transaction subtype rules, fees and limits. Setting this field will allow subtypes, limits and fees to be controlled/set on an account definition basis: eg. disallow a subtype for all accounts named `default`.
+    - All subtype rules have been modified to support a different CRUD interface (Via the API). Old format subtype rules will be automatically migrated to the new format.
+    - All fee and limit changes will remain unchanged except that they now support an additional option.
+3. Fixed some issues with the generation of swagger documention. The resulting swagger schema will now pass validation and have no duplciate operation IDs.
+4. Updated the cache handling of multiple resources to be performed more efficiently in the background.
+5. The `/subtypes/` list will now automatically be filtered by the subtypes available to the user, while also offering additional filters in order to narrow down the list further by `currency` and `acocunt`.
+    
+---
+
 {{< link-heading "h4" "26-10-2020" >}}
 
 1. Added a new optional `checks` property to transaction create and update on the admin API. 
