@@ -9,7 +9,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "07-12-2020" >}}
+{{< link-heading "h4" "06-01-2021" >}}
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
@@ -21,7 +21,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "07-12-2020" >}}
+{{< link-heading "h4" "06-01-2021" >}}
 
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
@@ -33,7 +33,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "23-11-2020" >}}
+{{< link-heading "h4" "10-12-2020" >}}
 
 1. Replace account-configuration and all related endpoints with account-definition endpoints.
 	- Existing account configurations will be automatically migrated to the new format.
