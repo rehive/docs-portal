@@ -10,7 +10,7 @@ removals will be indicated ahead of time in the deprecation timeline.
 
 ---
 
-{{< link-heading "h4" "04-12-2020" >}}
+{{< link-heading "h4" "10-12-2020" >}}
 
 1. Replaced account-configurations with account-definitions. The new account definitions are sharable between groups and will also apply effects retroactively.
     - Account definitions will linked to multiple groups instead of belonging to a single group.
