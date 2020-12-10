@@ -21,6 +21,8 @@ removals will be indicated ahead of time in the deprecation timeline.
 3. Fixed some issues with the generation of swagger documention. The resulting swagger schema will now pass validation and have no duplicate operation IDs.
 4. Updated the cache handling of multiple resources to be performed more efficiently in the background.
 5. The `/subtypes/` list will now automatically be filtered by the subtypes available to the user and their group, while also offering additional filters in order to narrow down the list further by `currency` and `acocunt`.
+6. Added `default_session_duration` as a configurable company setting. Supports values in seconds between 1 and 2678400 (up to 31 days).
+7. Added a new service key rotation mechanism that will be rolled out to our services in the coming year.
     
 ---
 
