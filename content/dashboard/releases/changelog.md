@@ -9,6 +9,41 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "10-12-2020" >}}
+
+**Changes:**
+
+- Added "verified user status" to tier requirements.
+
+**New features:**
+
+Account definitions:
+
+- Account configurations in groups have been replaced with Account definitions, which can be found under the Accounts section in the Dashboard.
+- Admins can now create an account definition and select which groups it applies to.
+- When adding a group to an account definition, admins can select which currencies this group's accounts should have.
+- Any change made to an account definition will be rolled out to any accounts of users in the groups that an account definition is applied to. 
+- If a currency or group is archived from an account definition, or the account definition itself is archived, any account that has that currency, or is under that group or account definition will also be archived, along with any related transactions.
+- Archived currencies, groups and account definitions can be restored, along with all of their related transactions.
+- If a currency or group is deleted from an account definition, or the account definition itself is deleted, any account that has that currency, or is under that group or account definition will also be deleted, along with any related transactions. **Deleting is permanent and cannot be undone.**
+
+Subtype controls:
+
+- Admins now have more granular subtype controls.
+- Admins can disallow a subtype globally, per group or per tier for specific currencies. E.g. Disallow send_email for USD for the individual group.
+- Admins can disallow a subtype per group or per tier for specific account names. E.g. Disallow withdraw_manual for savings accounts in the individual group.
+- Admins can disallow a subtype per group or per tier for a specific combination of currency and account name. E.g. Disallow withdraw_manual but only for EUR in general accounts in the business group.
+
+Fees:
+
+- Admins can now optionally add an account definition to a fee, where a fee will only be charged if an account under that account definition is involved in the transaction. E.g. Only charge a fee for withdraw_manual for USD if the withdrawal is made from the savings account.
+
+Limits:
+
+- Admins can now optionally add an account definition to a limit, where a limit will only be applied if an account under that account definition is involved in the transaction. E.g. Only enforce a limit for transfers made from savings accounts.
+
+---
+
 {{< link-heading "h4" "03-12-2020" >}}
 
 **Changes:**
