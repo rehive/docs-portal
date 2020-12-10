@@ -14,6 +14,7 @@ Summary of additions and changes to the Rehive Dashboard.
 **Changes:**
 
 - Added "verified user status" to tier requirements.
+- Added the transaction collection ID to the view conversion modal.
 
 **New features:**
 
