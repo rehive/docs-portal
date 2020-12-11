@@ -8,6 +8,16 @@ weight: 1
 Summary of additions and changes to the Rehive platform. Breaking changes or
 removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h4" "11-12-2020" >}}
+
+1. Added a new `Idempotent-Replayed: true` header on replayed idempotent responses.
+2. Updated transaction collections to support a custom id on creation.
+    - The custom `id` must be a valid v4 UUID.
+3. Fixed a bug on archiving account definitions that resulted in a failure on syncing children accounts to the new parent state.
+
 ---
 
 {{< link-heading "h4" "10-12-2020" >}}
