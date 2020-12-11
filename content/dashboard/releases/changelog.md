@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "11-12-2020" >}}
+
+**Changes:**
+
+- Moved "Add currencies" link when managing an account definition to align with the archive links.
+- Moved "Add groups" link on the account definitions listing page to align with the archive links.
+- Added the ability to edit the name and label of an account definition on the account definition listing page.
+- Dashboard now blocks editing of any any account that is under an account definition. An icon with a tooltip message is displayed to let an admin know when an account is under an account definition.
+
+---
+
 {{< link-heading "h4" "10-12-2020" >}}
 
 **Changes:**
