@@ -9,6 +9,21 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2020-01-06 - 1.32.7" >}}
+
+**Features:**
+- Reworked scan to pay to work with checkout requests and cross-payment PoS payments
+
+**Design improvements and bug fixes:**
+- Sliders design update
+- Spacing on home screen
+- Home balance card design update
+- Currency card design update
+- Fixed bug on android with textfields
+- Various small tweaks and design updates
+
+---
+
 {{< link-heading "h4" "31-10-2019" >}}
 
 **Bug fixes:**
