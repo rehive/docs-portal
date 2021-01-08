@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "08-01-2021" >}}
+
+**Changes:**
+
+- Admins can now see a user's tier on the user details page in the Groups block.
+- Updated the display of unassigned deposits on the Stellar Warm Storage page. Admins can now see more information about an unassigned deposit and also assign them to a user.
+- Added Intercom identify verification to Dashboard users.
+- Updated the exports to a new API endpoint.
+
+---
+
 {{< link-heading "h4" "11-12-2020" >}}
 
 **Changes:**
