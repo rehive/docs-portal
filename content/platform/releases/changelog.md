@@ -5,9 +5,15 @@ description: Platform changelog.
 weight: 1
 ---
 
-Summary of additions and changes to the Rehive platform. Breaking changes or
-removals will be indicated ahead of time in the deprecation timeline.
+Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h4" "11-01-2021" >}}
+
+1. Added new `/admin/subtype-partners/` endpoint
+    - This endpoint can be used to define subtypes that can be used together as partners.
+    - These rules are enforced when creating transactions and an error will be thrown if they are violated.
 
 ---
 
