@@ -9,6 +9,20 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "12-01-2021" >}}
+
+**Bug fixes:**
+
+- Fixed issue where using the transaction helper to have a credit deposit or a transfer deposit did not pick up the correct account from the entered account reference.
+
+**Changes:**
+
+- Changed deactivating an extension to no longer require entering your password.
+- Implemented the Mass Send Extension UI.
+- Improved the process of reviewing user documents by refreshing the list after vetting a document and displaying the related user's email.
+
+---
+
 {{< link-heading "h4" "08-01-2021" >}}
 
 **Changes:**
