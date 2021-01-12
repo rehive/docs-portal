@@ -1,10 +1,13 @@
-version: '1'
+version: '2'
 configs:
   staging:
     project_name: docs-portal
     docker_image: gcr.io/rehive-services/docs-portal
-    cloud_project: rehive-services
-    cluster: staging
+    cloud_provider:
+      name: gcp
+      project: rehive-services
+      kube_cluster: staging
+      zone: europe-west1-c
     namespace: docs-portal-staging
     helm_chart: rehive/rehive-service
     helm_chart_version: 0.2.2
@@ -14,8 +17,11 @@ configs:
   production:
     project_name: docs-portal
     docker_image: gcr.io/rehive-services/docs-portal
-    cloud_project: rehive-services
-    cluster: production
+    cloud_provider:
+      name: gcp
+      project: rehive-services
+      kube_cluster: production
+      zone: europe-west1-c
     namespace: docs-portal
     helm_chart: rehive/rehive-service
     helm_chart_version: 0.2.2
