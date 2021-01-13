@@ -9,6 +9,20 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "13-01-2021" >}}
+
+**Changes:**
+
+- Added a logout button on the expired trial modal.
+- Added the ability to set session durations in Company settings.
+- Updated subtypes in the transaction helper and transaction modal for the January 2021 Subtype update.
+
+Rehive also rolled out a routine configuration update, the details of which can be viewed here:
+
+https://docs.google.com/document/d/1sFYqvjr9HkLuWo4c2m-zmvWnMvXwn-NeDt_Ta1PMVxA/edit?usp=sharing
+
+---
+
 {{< link-heading "h4" "12-01-2021" >}}
 
 **Bug fixes:**
