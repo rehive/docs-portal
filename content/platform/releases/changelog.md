@@ -15,10 +15,10 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
     - This endpoint supports getting a list of transactions belonging to a transaction-collection
     - It also support appending (creating) new transactions to a transaction collection.
 2. Removed the old export endpoints. The following endpoints should now be used for all exports:
-    - /exports/
-    - /exports/<id>/
-    - /admin/exports/
-    - /admin/exports/<id>/
+    - `/exports/`
+    - `/exports/<id>/`
+    - `/admin/exports/`
+    - `/admin/exports/<id>/`
 
 ---
 
