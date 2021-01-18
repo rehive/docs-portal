@@ -9,19 +9,14 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "06-01-2021" >}}
+{{< link-heading "h4" "16-02-2021" >}}
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
-2. Remove resource specific export endpoints. The following endpoints should be used instead:
-	- `/exports/`
- 	- `/exports/<id>/`
-	- `/admin/exports/`
-	- `/admin/exports/<id>/`
 
 ---
 
-{{< link-heading "h4" "06-01-2021" >}}
+{{< link-heading "h4" "16-02-2021" >}}
 
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
@@ -30,6 +25,16 @@ This timeline indicates dates at which certain functionality will be permanently
 	- The `fees` and `fee` fields on individual transactions will continue to be exposed for backwards compatibility reasons.
 3. Remove the source/destination property.
 	- These properties are now available as a single `partner` property.
+	
+---
+
+{{< link-heading "h4" "18-01-2021" >}}
+
+1. Remove resource specific export endpoints. The following endpoints should be used instead:
+	- `/exports/`
+ 	- `/exports/<id>/`
+	- `/admin/exports/`
+	- `/admin/exports/<id>/`
 
 ---
 
