@@ -1,6 +1,8 @@
-# Docs Portal
-
-Rehive documentation portal.
+<p align="center">
+  <img width="64" src="https://avatars2.githubusercontent.com/u/22204821?s=200&v=4" alt="Rehive Logo">
+  <h1 align="center">Docs Portal</h1>
+  <p align="center">General documentation for the Rehive ecosystem</p>
+</p>
 
 ## Usage
 
