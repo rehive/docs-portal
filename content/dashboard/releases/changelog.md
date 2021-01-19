@@ -9,6 +9,20 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "19-01-2021" >}}
+
+**Bug fixes:**
+
+- Fixed issue where "user for x days" information was incorrect for users who had been in the system for more than 1 year.
+
+**Changes:**
+
+- Added 2FA warning banner for admins on production companies. 
+- Added a 2FA shortcut in the user profile dropdown.
+- Amended the user profile dropdown to be more obviously a dropdown.
+
+---
+
 {{< link-heading "h4" "13-01-2021" >}}
 
 **Changes:**
