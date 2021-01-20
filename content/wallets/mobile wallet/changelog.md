@@ -9,6 +9,17 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2020-01-20 - 1.33.0" >}}
+
+**Features:**
+- Add FAQ section to settings that can be utilised using `config/faqs`
+- Updated recipient input on send flow to handle phone contacts better
+
+**Design improvements and bug fixes:**
+- Various small tweaks and design updates
+
+---
+
 {{< link-heading "h4" "2020-01-06 - 1.32.7" >}}
 
 **Features:**
@@ -24,7 +35,7 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
-{{< link-heading "h4" "31-10-2019" >}}
+{{< link-heading "h4" "2019-10-31" >}}
 
 **Bug fixes:**
 
@@ -40,7 +51,7 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
-{{< link-heading "h4" "08-10-2019" >}}
+{{< link-heading "h4" "2019-10-08" >}}
 
 **Bug fixes:**
 
@@ -68,7 +79,7 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
-{{< link-heading "h4" "30-08-2019" >}}
+{{< link-heading "h4" "2019-08-30" >}}
 
 **Bug fixes:**
 
@@ -95,7 +106,7 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
-{{< link-heading "h4" "05-08-2019" >}}
+{{< link-heading "h4" "2019-08-05" >}}
 
 **Bug fixes:**
 
