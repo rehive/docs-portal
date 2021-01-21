@@ -9,18 +9,13 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "16-02-2021" >}}
-
-1. Remove the POST `/auth/tokens/verify/` endpoint.
-	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
-
----
-
-{{< link-heading "h4" "16-02-2021" >}}
+{{< link-heading "h4" "2021-02-16" >}}
 
 *The date for this deprecation was pushed back from its previous date of the 20-04-2019*
 
-1. Remove non-inferred transaction fees on automatic fee creation rules.
+1. Remove the POST `/auth/tokens/verify/` endpoint.
+	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
+2. Remove non-inferred transaction fees on automatic fee creation rules.
 	- All automatic transaction fees will have to be inferred to work after this date.
 	- The `fees` and `fee` fields on individual transactions will continue to be exposed for backwards compatibility reasons.
 3. Remove the source/destination property.
@@ -28,7 +23,7 @@ This timeline indicates dates at which certain functionality will be permanently
 	
 ---
 
-{{< link-heading "h4" "18-01-2021" >}}
+{{< link-heading "h4" "2021-01-18" >}}
 
 1. Remove resource specific export endpoints. The following endpoints should be used instead:
 	- `/exports/`
@@ -38,7 +33,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "10-12-2020" >}}
+{{< link-heading "h4" "2020-12-10" >}}
 
 1. Replace account-configuration and all related endpoints with account-definition endpoints.
 	- Existing account configurations will be automatically migrated to the new format.
@@ -47,14 +42,14 @@ This timeline indicates dates at which certain functionality will be permanently
 	
 ---
 
-{{< link-heading "h4" "16-04-2019" >}}
+{{< link-heading "h4" "2019-04-16" >}}
 
 1. Remove `/admin/transactions/sets/` endpoints:
 	- Use the new exports endpoint instead: `/admin/transactions/exports/`
 
 ---
 
-{{< link-heading "h4" "29-01-2019" >}}
+{{< link-heading "h4" "2019-01-29" >}}
 
 1. Remove the identifier field from the company object.
 	- Use the id field instead of the identifier field. This will make the company object consistent with all the other Rehive resources.
@@ -63,7 +58,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "13-09-2018" >}}
+{{< link-heading "h4" "2018-09-13" >}}
 
 1. Remove the `identifier` field from the user object and user lists. The `identifier` filter fields will be removed at the same time.
 	- Use the `id` field instead of the `identifier` field. This will make the user object consistent with all the other Rehive resources.
@@ -74,14 +69,14 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "12-06-2018" >}}
+{{< link-heading "h4" "2018-06-12" >}}
 
 1. Remove the `date_joined` field from the user object and user lists. The date_joined filter fields will be removed at the same time.
 	- Use the `created` field instead of the `date_joined` field.
 
 ---
 
-{{< link-heading "h4" "15-05-2018" >}}
+{{< link-heading "h4" "2018-05-15" >}}
 
 1. Remove the `/3/company/bank-account/` endpoint.
 	- This has been replaced by a list endpoint: `/3/company/bank-accounts/`.
@@ -89,7 +84,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "15-03-2018" >}}
+{{< link-heading "h4" "2018-03-15" >}}
 
 1. Remove the `https://rehive.com/api/3/` base API URL. The new URL should be used exclusively after this date.
 	- The above URL should be replaced with `https://api.rehive.com/3/` in all codebases. Rehive maintained code will roll out this change in the months leading up to the deprecation.
@@ -99,6 +94,6 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "08-02-2018" >}}
+{{< link-heading "h4" "2018-02-08" >}}
 
 1. Remove `confirm_on_create` from the all transaction create endpoints. Replace `confirm_on_create` with a status of `complete` like: ‘{“status”: “complete”}’
