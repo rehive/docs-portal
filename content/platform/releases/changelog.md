@@ -7,9 +7,16 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
 ---
 
-{{< link-heading "h4" "18-01-2021" >}}
+{{< link-heading "h4" "2021-01-19" >}}
+
+1. Fix for a bug where currency was throwing required errors on company level subtype controls.
+    
+---
+
+{{< link-heading "h4" "2021-01-18" >}}
 
 1. Added new `/admin/transaction-collections/<id>/transactions/` endpoint with `GET` and `POST` methods.
     - This endpoint supports getting a list of transactions belonging to a transaction-collection
@@ -22,7 +29,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "11-01-2021" >}}
+{{< link-heading "h4" "2021-01-11" >}}
 
 1. Added new `/admin/subtype-partners/` endpoint
     - This endpoint can be used to define subtypes that can be used together as partners.
@@ -30,7 +37,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "11-12-2020" >}}
+{{< link-heading "h4" "2020-12-11" >}}
 
 1. Added a new `Idempotent-Replayed: true` header on replayed idempotent responses.
 2. Updated transaction collections to support a custom id on creation.
@@ -39,7 +46,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "10-12-2020" >}}
+{{< link-heading "h4" "2020-12-10" >}}
 
 1. Replaced account-configurations with account-definitions. The new account definitions are sharable between groups and will also apply effects retroactively.
     - Account definitions will be linked to multiple groups instead of belonging to a single group.
@@ -55,7 +62,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
     
 ---
 
-{{< link-heading "h4" "26-10-2020" >}}
+{{< link-heading "h4" "2020-10-26" >}}
 
 1. Added a new optional `checks` property to transaction create and update on the admin API. 
     - This field can be used by admins to customize what checks are done when validating a transaction. 
@@ -64,25 +71,25 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "13-10-2020" >}}
+{{< link-heading "h4" "2020-10-13" >}}
 
 1. Fixed a bug on account and transaction filters that resulted in `0` value `balance` filters getting ignored instead of properly filtered against in the results.
 
 ---
 
-{{< link-heading "h4" "25-09-2020" >}}
+{{< link-heading "h4" "2020-09-25" >}}
 
 1. Added filters on auth tokens so that keys can be excluded/included on DELETE as well as GET.
 
 ---
 
-{{< link-heading "h4" "08-09-2020" >}}
+{{< link-heading "h4" "2020-09-08" >}}
 
 1. Fixed a performance issue that occurred when creating transactions without specifiying a `user` in the request. Requests that include only an `account` should now perform equally to those that include a `user` in the request data.
 
 ---
 
-{{< link-heading "h4" "26-08-2020" >}}
+{{< link-heading "h4" "2020-08-26" >}}
 
 
 1. Added metric tracking for `transaction` and `user` resources. Metrics can be configured to count/sum a specific data set at midnight every day. The data set can be customized using filters and the time at which the metric updates can be configured by setting an appropriate timezone.
@@ -95,21 +102,21 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "17-08-2020" >}}
+{{< link-heading "h4" "2020-08-17" >}}
 
 1. Added a new `routing_number` to all address objects.
 2. Added a new `branch_address` to all bank account objects.
 
 ---
 
-{{< link-heading "h4" "17-07-2020" >}}
+{{< link-heading "h4" "2020-07-17" >}}
 
 1. Updated the `POST` on the `/auth/tokens/` endpoint to require an extra MFA step if the user has MFA enabled.
     - Previously we accepted the current user's MFA status as adequate authentication to perform this action.
 
 ---
 
-{{< link-heading "h4" "17-07-2020" >}}
+{{< link-heading "h4" "2020-07-17" >}}
 
 1. Added a new set of endpoints for end users to get permissions associated to a group.
     - Groups list: `/3/groups/{group_name}/permissions/`
@@ -124,32 +131,32 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "14-07-2020" >}}
+{{< link-heading "h4" "2020-07-14" >}}
 
 1. Updated the `account` field on transaction create (debit, credit, multi and transaction collections) to support either a `name` or a `reference` as a value. If a name is used, then ensure a `user` is included along with it.
 
 ---
 
-{{< link-heading "h4" "09-07-2020" >}}
+{{< link-heading "h4" "2020-07-09" >}}
 
 1. Fixed an issue where trying to delete an email belonging to an archived user resulted in a "Cannot modify archived object" error.
 
 ---
 
-{{< link-heading "h4" "01-06-2020" >}}
+{{< link-heading "h4" "2020-06-01" >}}
 
 1. Added a new `name` field to fees. this name may only be lowercase, underscores and numbers and only one fee can exist on a given level per name (ie. there can be one group_tier fee with the name main_fee and one account asset fee with the name main_fee).
 2. Updated fee calculation (on transactions) to only retrieve one fee per `name`. This means that if a Group Tier fee is defined AND a Account Asset fee with the same name, then only the Account Asset fee will be applied).
 
 ---
 
-{{< link-heading "h4" "11-05-2020" >}}
+{{< link-heading "h4" "2020-05-11" >}}
 
 1. Updated all `disallowed_transaction_subtypes` fields in relevant settings to support an additional list of currencies on which that specific subtype is disabled.
 
 ---
 
-{{< link-heading "h4" "20-04-2020" >}}
+{{< link-heading "h4" "2020-04-20" >}}
 
 1. Added new utility methods for deleting authentication tokens
     - `DELETE` on `/auth/tokens/` will now delete all tokens belonging to the authenticated user.
@@ -160,7 +167,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "14-04-2020" >}}
+{{< link-heading "h4" "2020-04-14" >}}
 
 1. Added new data based throttling for anonymous auth endpoints.
     - Authentication attempts with identical data will now be throttled regardless of user/IP.
@@ -170,7 +177,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "02-04-2020" >}}
+{{< link-heading "h4" "2020-04-02" >}}
 
 1. Added new list public groups endpoint for public companies:
     - `/public/companies/<id>/groups/`
@@ -186,7 +193,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "26-03-2020" >}}
+{{< link-heading "h4" "2020-03-26" >}}
 
 1. Updated message handling on transactions. Added new endpoints:
     - `/admin/transactions/<id>/messages/`
@@ -201,7 +208,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "12-03-2020" >}}
+{{< link-heading "h4" "2020-03-12" >}}
 
 1. Added a new device endpoints for users and admins
     - These can be accessed via `/user/devices/` and `/admin/users/devices/`
@@ -215,7 +222,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
     
 ---
 
-{{< link-heading "h4" "12-02-2020" >}}
+{{< link-heading "h4" "2020-02-12" >}}
 
 1. Added a new type of tier requirement named `user_metadata`.
     - Can be used to define custom "key -> value" requirements based on user metadata.
@@ -237,14 +244,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
     
 ---
 
-{{< link-heading "h4" "29-01-2020" >}}
+{{< link-heading "h4" "2020-01-29" >}}
 
 1. Added a new `require_transaction_subtype` field to the company object. If this is set to true then subtypes are required in order to create transactions.
 2. Added a new `usage_type` field on the subtype resource. This can be used to define three general forms of subtype usage: `single`, `partner`, `null`.
 
 ---
 
-{{< link-heading "h4" "12-12-2019" >}}
+{{< link-heading "h4" "2019-12-12" >}}
 
 1. Added new MFA recovery codes. These codes can be used as an alternative to an MFA device.
     - `/auth/mfa/recovery-codes/` for creating, viewing and deleting MFA recover codes
@@ -253,7 +260,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "31-10-2019" >}}
+{{< link-heading "h4" "2019-10-31" >}}
 
 1. Added a transaction-collection resource and corresponding API endpoints for listing/adding/viewing/updating/deleting transaction-collections.
 2. Added new transaction properties: parent, inferred, partner, collection.
@@ -267,7 +274,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "16-10-2019" >}}
+{{< link-heading "h4" "2019-10-16" >}}
 
 1. Added new webhook events:
     - `email.create` triggers after an email address is created.
@@ -277,7 +284,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "13-09-2019" >}}
+{{< link-heading "h4" "2019-09-13" >}}
 
 1. Added new account-currencies endpoint (beta).
     - `/3/account-currencies/`
@@ -291,7 +298,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "13-08-2019" >}}
+{{< link-heading "h4" "2019-08-13" >}}
 
 1. Fixed a bug where some "nested" resources were throwing 500 errors instead of 404 errors  when the root resources did not exist.
 2. Fixed a bug with datetime filters not filtering on the correct precision (milliseconds)
@@ -300,7 +307,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "05-08-2019" >}}
+{{< link-heading "h4" "2019-08-05" >}}
 
 1. Added new account listing exports (admin and user).
     - Supports CSV and JSON formats
@@ -308,7 +315,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "03-07-2019" >}}
+{{< link-heading "h4" "2019-07-03" >}}
 
 1. Added new `disallow_transaction_subtypes` field to all endpoints that supported `settings`. This field should be used to stop a company/group/user/tier/account from creating transactions with selected subtypes. The endpoints this is available on are:
     - `/3/admin/company/settings/`
@@ -320,7 +327,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "28-06-2019" >}}
+{{< link-heading "h4" "2019-06-28" >}}
 
 1. Updated the URL routes to allow optional closing slashes.
 2. Added a new subtypes endpoint for end users (users can see a list of subtypes)
@@ -330,27 +337,27 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "24-05-2019" >}}
+{{< link-heading "h4" "2019-05-24" >}}
 
 1. Added new `email` parameter to the password set/reset and email verify URL.
 2. Added a new `slug` field to the services object.
 
 ---
 
-{{< link-heading "h4" "17-05-2019" >}}
+{{< link-heading "h4" "2019-05-17" >}}
 
 1. Added new `network` and `name` fields to crypto accounts.
 2. Added `available_balance` to the user info object.
 
 ---
 
-{{< link-heading "h4" "07-05-2019" >}}
+{{< link-heading "h4" "2019-05-07" >}}
 
 1. Fixed issues with variable length OTPs on SMS MFA.
 
 ---
 
-{{< link-heading "h4" "02-05-2019" >}}
+{{< link-heading "h4" "2019-05-02" >}}
 
 1. Added new `mfa.sms.verify` event that can be used to hook into the multi factor SMS verification message.
     - This can be configured via webhooks.
@@ -358,7 +365,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "18-04-2019" >}}
+{{< link-heading "h4" "2019-04-18" >}}
 
 1. Added new transaction export endpoint for non admin users.
     - Users can now export groups of their own transactions.
@@ -369,14 +376,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "11-04-2019" >}}
+{{< link-heading "h4" "2019-04-11" >}}
 
 1. Added new created and updated datetime fields to MFA devices (SMS and TOTP).
     - This can be used in order to see when a user enabled MFA.
 
 ---
 
-{{< link-heading "h4" "09-04-2019" >}}
+{{< link-heading "h4" "2019-04-09" >}}
 
 1. Updated accounts to not require a user to be attached to them.
     - The account `user` can be `null` when created.
@@ -385,7 +392,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "28-03-2019" >}}
+{{< link-heading "h4" "2019-03-28" >}}
 
 1. Renamed "result sets" to "exports".
     - Added replacement URL : `/admin/transactions/exports/`
@@ -394,14 +401,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "26-03-2019" >}}
+{{< link-heading "h4" "2019-03-26" >}}
 
 1. Added new `total_amount` field to transaction total endpoints.
     - This contains the sum of all `total_amount`s on transactions
 
 ---
 
-{{< link-heading "h4" "12-03-2019" >}}
+{{< link-heading "h4" "2019-03-12" >}}
 
 1. Updated the `note` field on transactions to be editable by admin users.
 2. Updated the admin transaction endpoints to support creating transactions without specifying a user if an account is specified instead.
@@ -412,7 +419,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "06-03-2019" >}}
+{{< link-heading "h4" "2019-03-06" >}}
 
 1. Added default descriptions for the `admin` and `service` group.
 2. Added `description` field to group add endpoint.
@@ -421,26 +428,26 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "27-02-2019" >}}
+{{< link-heading "h4" "2019-02-27" >}}
 
 1. Added a proper JSON error message for when amounts, fees or limits exceed the max size allowed in the platform. Previously these errors threw 500 errors.
 
 ---
 
-{{< link-heading "h4" "20-02-2019" >}}
+{{< link-heading "h4" "2019-02-20" >}}
 
 1. Added new `code__in` filters on `/admin/currencies/` and `/company/currencies/` endpoints.
     - Can be used like: `?code__in=USD,EUR`
 
 ---
 
-{{< link-heading "h4" "08-02-2019" >}}
+{{< link-heading "h4" "2019-02-08" >}}
 
 1. Updated the max number of digits to 30 (from 28) for all currency amounts (eg. balances, transaction amounts).
 
 ---
 
-{{< link-heading "h4" "07-02-2019" >}}
+{{< link-heading "h4" "2019-02-07" >}}
 
 1. Added new address type field to address endpoints:
     - values include: `permanent`, `contact`, `shipping`, `billing`, `business`.
@@ -449,7 +456,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "25-01-2019" >}}
+{{< link-heading "h4" "2019-01-25" >}}
 
 1. Fixed a bug in the MFA flow that resulted in a user having to "re-login" after creating and confirming an MFA device.
 2. Updated the email and mobile handling:
@@ -459,14 +466,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "16-01-2019" >}}
+{{< link-heading "h4" "2019-01-16" >}}
 
 1. Fixed admin user filters so that they work on all user emails and mobiles, not just the primary ones.
 2. Added an icon field to the company so that a wallet icon or favicon can be stored in the platform.
 
 ---
 
-{{< link-heading "h4" "14-12-2018" >}}
+{{< link-heading "h4" "2018-12-14" >}}
 
 1. Added access control for IPs. IP whitelists and blacklists can now be defined for the company, groups or users.
 2. Fixed email and mobile create bug where a verified key had to be set in order to set the primary key.
@@ -474,7 +481,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "06-12-2018" >}}
+{{< link-heading "h4" "2018-12-06" >}}
 
 1. Added the fields to update a user’s mobile and email from the user endpoint (previously added to the admin user endpoints).
 2. Added a key to the company object that contains what services a company has activated.
@@ -483,7 +490,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "06-12-2018" >}}
+{{< link-heading "h4" "2018-12-06" >}}
 
 1. Added a new, more flexible and simplified permission system.
     - Permissions can now be configured on both admin and user sections.
@@ -491,7 +498,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "20-11-2018" >}}
+{{< link-heading "h4" "2018-11-20" >}}
 
 1. Added new privacy_policy_url and terms_and_conditions_url to the company settings.
 2. Added new “require_privacy_policy” field to company settings.
@@ -499,7 +506,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "08-11-2018" >}}
+{{< link-heading "h4" "2018-11-08" >}}
 
 1. Updated multi-factor authentication
     - Added a field to specify the `algorithm`  used when creating multi factor tokens (SHA1, SHA256, SHA512).
@@ -511,21 +518,21 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "30-10-2018" >}}
+{{< link-heading "h4" "2018-10-30" >}}
 
 1. Updated the request logging to include the body data of every request.
     - Sensitive values such as authorization keys, OTPs, and passwords are masked and stored as the masked value.
 
 ---
 
-{{< link-heading "h4" "25-10-2018" >}}
+{{< link-heading "h4" "2018-10-25" >}}
 
 1. Added new `status` field to the admin transfer create endpoint.
     - This field will impact transfers between existing users in the system.
 
 ---
 
-{{< link-heading "h4" "18-10-2018" >}}
+{{< link-heading "h4" "2018-10-18" >}}
 
 1. Force non permanent token invalidation on password reset.
 2. Added new public company endpoint:
@@ -534,14 +541,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "16-10-2018" >}}
+{{< link-heading "h4" "2018-10-16" >}}
 
 1. Added new optional pagination type “cursor”.
     - To use this pagination type specify `?pagination=cursor` on a listing endpoint. For optimal performance only sort by `created` or `id`.
 
 ---
 
-{{< link-heading "h4" "09-10-2018" >}}
+{{< link-heading "h4" "2018-10-09" >}}
 
 1. Modified the admin user view endpoint to allow changes to be made on the `email` and `mobile` fields:
     - Setting a non existent email/mobile will result in that email/mobile getting created, a confirmation sms/email getting sent and the email/mobile getting marked as `"primary": true`
@@ -550,7 +557,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "13-09-2018" >}}
+{{< link-heading "h4" "2018-09-13" >}}
 
 1. Added views for users to see requirements, fees, and limits related to group tiers.
 2. Added a filter on the user group tier view to the user’s active tier:
@@ -560,7 +567,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "11-09-2018" >}}
+{{< link-heading "h4" "2018-09-11" >}}
 
 1. Fixed admin user endpoint not allowing group updates.
 2. Added new account filters to the user list endpoint.
@@ -570,7 +577,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "28-08-2018" >}}
+{{< link-heading "h4" "2018-08-28" >}}
 
 1. Added character limit error messages in several places where they were missing.
 2. Made improvements to how primary accounts are selected and filtered.
@@ -579,14 +586,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "21-08-2018" >}}
+{{< link-heading "h4" "2018-08-21" >}}
 
 1. Fixed case sensitive bug with the `group__isnull` filter.
 2. Removed the url encoding from the `otpauth_url` on the 2FA endpoint.
 
 ---
 
-{{< link-heading "h4" "17-08-2018" >}}
+{{< link-heading "h4" "2018-08-17" >}}
 
 1. Added new CSV export file format for large result sets.
 2. Updated the file format of JSON exports to be a simple list of objects.
@@ -594,13 +601,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "31-07-2018" >}}
+{{< link-heading "h4" "2018-07-31" >}}
 
 1. Fixed a bug where a group tier fee could not be updated without a currency.
 
 ---
 
-{{< link-heading "h4" "26-07-2018" >}}
+{{< link-heading "h4" "2018-07-26" >}}
 
 1. Fixed a bug where the `username` could not be added when null.
     - The username is now read-only, but only after it has been set with a non-null value.
@@ -610,13 +617,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "19-07-2018" >}}
+{{< link-heading "h4" "2018-07-19" >}}
 
 1. Added a new `name` filter field to the admin group listing endpoint.
 
 ---
 
-{{< link-heading "h4" "17-07-2018" >}}
+{{< link-heading "h4" "2018-07-17" >}}
 
 1. Added a custom transaction id field on transaction create endpoints.
     - The id field has also been updated to a uuid format (the same as user IDs).
@@ -626,7 +633,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "10-07-2018" >}}
+{{< link-heading "h4" "2018-07-10" >}}
 
 1. Added new `verification` object to user info endpoints.
     - This includes two fields that indicate whether the user’s email or mobile number have been verified by the user.
@@ -641,7 +648,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "28-06-2018" >}}
+{{< link-heading "h4" "2018-06-28" >}}
 
 1. Fixed 500 error on group tier objects in certain circumstances.
 2. Fixed bug where admin update on a user address did not save the updated status value.
@@ -650,7 +657,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "08-6-2018" >}}
+{{< link-heading "h4" "2018-06-08" >}}
 
 1. Added the `archive` framework.
     - Resources will now have an additional `archived` field that can be used to make a field read_only as well invisible to end users.
@@ -669,7 +676,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "24-05-2018" >}}
+{{< link-heading "h4" "2018-05-24" >}}
 
 1. Updated fee calculations to stack if multiple fees for the same transaction type, subtype, and currency are created.
 2. Added description field to fees.
@@ -677,7 +684,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "15-05-2018" >}}
+{{< link-heading "h4" "2018-05-15" >}}
 
 1. Changed the default password reset, password set and email verification URLs to direct to the main Rehive website instead of the dashboard.
     - This change will not impact any custom URLs.
@@ -685,7 +692,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "03-05-2018" >}}
+{{< link-heading "h4" "2018-05-03" >}}
 
 1. Added new `user` filter on the admin user list.
     - This field can be used to filter by any of the identifier fields (id, email, mobile_number, username).
@@ -696,7 +703,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "26-04-2018" >}}
+{{< link-heading "h4" "2018-04-26" >}}
 
 1. Added new `username` field to the user resource. This field is a unique identifier that can be set on user registration or create. It can be used as a recipient identifier for transfers as well (but it must already exist in the database).  It has the following limitations:
     - It may only contain lowercase letters, digits and @/./+/-/_. characters.
@@ -707,14 +714,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "13-04-2018" >}}
+{{< link-heading "h4" "2018-04-13" >}}
 
 1. Added new `enabled` field on the user object.
     - This field will replace the `active` field in future. See the deprecation timeline for more on this.
 
 ---
 
-{{< link-heading "h4" "12-04-2018" >}}
+{{< link-heading "h4" "2018-04-12" >}}
 
 1. Added new `updated` and `created` fields to the user profile and list endpoints (admin and user sections).
     - The `created` field will replace the `date_joined` field. See the deprecation timeline for more on this.
@@ -722,14 +729,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "27-03-2018" >}}
+{{< link-heading "h4" "2018-03-27" >}}
 
 1. Expose permission requirements for admin endpoints in the OPTIONS request for that endpoint.
     - When adding permissions to a group or user, the OPTIONS request on the endpoint will now expose the possible permissions that can be assigned.
 
 ---
 
-{{< link-heading "h4" "15-03-2018" >}}
+{{< link-heading "h4" "2018-03-15" >}}
 
 1. Removed the old https://rehive.com/api/3/.
     -Can now only access the API via https://api.rehive.com/3/. (as per the Rehive deprecation timeline).
@@ -741,7 +748,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "01-03-2018" >}}
+{{< link-heading "h4" "2018-03-01" >}}
 
 1. Fixed an error that occurred when adding a limit with no value.
 2. Fixed and error that occurred when trying to add a currency that already exists to an account.
@@ -752,7 +759,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "27-02-2018" >}}
+{{< link-heading "h4" "2018-02-27" >}}
 
 1. An email address or mobile number is no longer required when creating a user via the admin api endpoint.
 2. Fixed a bug where updating a transaction subtype with the same name fails.
@@ -763,14 +770,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "20-02-2018" >}}
+{{< link-heading "h4" "2018-02-20" >}}
 
 1. Added an event for setting user password on email sign up.
 2. Added user group filtering where filtering by user data is available.
 
 ---
 
-{{< link-heading "h4" "08-02-2018" >}}
+{{< link-heading "h4" "2018-02-08" >}}
 
 1. Removed `confirm_on_create` from all transaction create endpoints.
 2. Added new API base URL.
@@ -780,7 +787,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "06-02-2018" >}}
+{{< link-heading "h4" "2018-02-06" >}}
 
 1. The metadata field has been updated to be more consistent across Rehive. The following rules now apply to the metadata field when it is included in an API request:
     - Must be valid JSON.
@@ -789,7 +796,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "30-01-2018" >}}
+{{< link-heading "h4" "2018-01-30" >}}
 
 1. Added batch create functionality for transactions.
     - Multiple transactions can be created in a single POST to the `/api/3/transactions/` endpoint. All transactions are processed as one atomic batch. If one transaction fails, all the transactions will fail.
@@ -802,7 +809,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "18-01-2018" >}}
+{{< link-heading "h4" "2018-01-18" >}}
 
 1. Replaced permission groups with general “groups”.
     -All permissions, tiers, limits and requirements now fall under groups.
@@ -821,14 +828,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "05-01-2018" >}}
+{{< link-heading "h4" "2018-01-05" >}}
 
 1. Fixed bug where `terms_and_conditions` were required on service deactivation
 2. Added an `account` filter to the admin user list.
 
 ---
 
-{{< link-heading "h4" "28-12-2017" >}}
+{{< link-heading "h4" "2017-12-28" >}}
 
 1. Updated all password fields to have a max length of 128.
 2. In preparation for the public service registry/marketplace added new fields to the service object:
@@ -842,7 +849,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "12-12-2017" >}}
+{{< link-heading "h4" "2017-12-12" >}}
 
 1. Added an ID to each webhook task.
     - This ID is attached to the webhook data on each webhook request.
