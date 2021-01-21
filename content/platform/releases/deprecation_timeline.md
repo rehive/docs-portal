@@ -11,7 +11,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 {{< link-heading "h4" "2021-02-16" >}}
 
-*The date for this deprecation was pushed back from its previous date of the 20-04-2019*
+*The date for this deprecation was pushed back from its previous date of the 2019-04-20*
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
