@@ -9,6 +9,28 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-01-27" >}}
+
+**Changes:**
+
+- Updated Terms & Conditions link on register.
+
+---
+
+{{< link-heading "h4" "2021-01-26" >}}
+
+**Bug fixes:**
+
+- Fixed issue where rates in the Conversion Extension were displaying as 0 when rates were e.g. 0.001
+
+**Changes:**
+
+- Amended background colour of profile picture section on the top right.
+- Added the `resource` section to the request log modal.
+- Added a configuration check to ignore Intercom validation on staging.
+
+---
+
 {{< link-heading "h4" "2021-01-19" >}}
 
 **Bug fixes:**
