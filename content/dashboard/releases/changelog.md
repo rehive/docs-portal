@@ -9,7 +9,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "19-01-2021" >}}
+{{< link-heading "h4" "2021-01-19" >}}
 
 **Bug fixes:**
 
@@ -23,7 +23,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "13-01-2021" >}}
+{{< link-heading "h4" "2021-01-13" >}}
 
 **Changes:**
 
@@ -35,7 +35,7 @@ Rehive also rolled out a routine configuration update, the details of which can 
 
 ---
 
-{{< link-heading "h4" "12-01-2021" >}}
+{{< link-heading "h4" "2021-01-12" >}}
 
 **Bug fixes:**
 
@@ -49,7 +49,7 @@ Rehive also rolled out a routine configuration update, the details of which can 
 
 ---
 
-{{< link-heading "h4" "08-01-2021" >}}
+{{< link-heading "h4" "2021-01-08" >}}
 
 **Changes:**
 
@@ -60,7 +60,7 @@ Rehive also rolled out a routine configuration update, the details of which can 
 
 ---
 
-{{< link-heading "h4" "11-12-2020" >}}
+{{< link-heading "h4" "2020-12-11" >}}
 
 **Changes:**
 
@@ -71,7 +71,7 @@ Rehive also rolled out a routine configuration update, the details of which can 
 
 ---
 
-{{< link-heading "h4" "10-12-2020" >}}
+{{< link-heading "h4" "2020-12-10" >}}
 
 **Changes:**
 
@@ -107,7 +107,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "03-12-2020" >}}
+{{< link-heading "h4" "2020-12-03" >}}
 
 **Changes:**
 
@@ -115,7 +115,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "02-12-2020" >}}
+{{< link-heading "h4" "2020-12-02" >}}
 
 **Changes:**
 
@@ -124,7 +124,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "20-11-2020" >}}
+{{< link-heading "h4" "2020-11-20" >}}
 
 **Changes:**
 
@@ -134,7 +134,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "13-11-2020" >}}
+{{< link-heading "h4" "2020-11-13" >}}
 
 **Bug fixes:**
 
@@ -142,7 +142,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "12-11-2020" >}}
+{{< link-heading "h4" "2020-11-12" >}}
 
 **Changes:**
 
@@ -151,7 +151,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "11-11-2020" >}}
+{{< link-heading "h4" "2020-11-11" >}}
 
 **Bug fixes:**
 
@@ -159,7 +159,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "06-11-2020" >}}
+{{< link-heading "h4" "2020-11-06" >}}
 
 **Bug fixes:**
 
@@ -167,7 +167,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "05-11-2020" >}}
+{{< link-heading "h4" "2020-11-05" >}}
 
 **Changes:**
 
@@ -177,7 +177,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "29-10-2020" >}}
+{{< link-heading "h4" "2020-10-29" >}}
 
 **Bug fixes:**
 
@@ -185,7 +185,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "21-10-2020" >}}
+{{< link-heading "h4" "2020-10-21" >}}
 
 **Changes:**
 
@@ -193,7 +193,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "20-10-2020" >}}
+{{< link-heading "h4" "2020-10-20" >}}
 
 **Bug fixes:**
 
@@ -206,7 +206,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "19-10-2020" >}}
+{{< link-heading "h4" "2020-10-19" >}}
 
 **Bug fixes:**
 
@@ -218,7 +218,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "16-10-2020" >}}
+{{< link-heading "h4" "2020-10-16" >}}
 
 **Changes:**
 
@@ -226,7 +226,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "07-10-2020" >}}
+{{< link-heading "h4" "2020-10-07" >}}
 
 **Changes:**
 
@@ -235,7 +235,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "01-10-2020" >}}
+{{< link-heading "h4" "2020-10-01" >}}
 
 **Bug fixes:**
 
@@ -248,7 +248,7 @@ Limits:
 
 ---
 
-{{< link-heading "h4" "24-09-2020" >}}
+{{< link-heading "h4" "2020-09-24" >}}
 
 **Bug fixes:**
 
@@ -267,7 +267,7 @@ Major update to the App config UI:
 
 ---
 
-{{< link-heading "h4" "23-09-2020" >}}
+{{< link-heading "h4" "2020-09-23" >}}
 
 **Bug fixes:**
 
@@ -276,7 +276,7 @@ Major update to the App config UI:
 
 ---
 
-{{< link-heading "h4" "21-09-2020" >}}
+{{< link-heading "h4" "2020-09-21" >}}
 
 **Bug fixes:**
 
@@ -290,7 +290,7 @@ Major update to the App config UI:
 
 ---
 
-{{< link-heading "h4" "10-09-2020" >}}
+{{< link-heading "h4" "2020-09-10" >}}
 
 **Bug fixes:**
 
@@ -298,7 +298,7 @@ Major update to the App config UI:
 
 ---
 
-{{< link-heading "h4" "31-08-2020" >}}
+{{< link-heading "h4" "2020-08-31" >}}
 
 **Bug fixes:**
 
@@ -306,7 +306,7 @@ Major update to the App config UI:
 
 ---
 
-{{< link-heading "h4" "24-08-2020" >}}
+{{< link-heading "h4" "2020-08-24" >}}
 
 **Bug fixes:**
 
@@ -314,7 +314,7 @@ Major update to the App config UI:
 
 ---
 
-{{< link-heading "h4" "21-08-2020" >}}
+{{< link-heading "h4" "2020-08-21" >}}
 
 **Bug fixes:**
 
@@ -335,7 +335,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "06-08-2020" >}}
+{{< link-heading "h4" "2020-08-06" >}}
 
 **Changes:**
 
@@ -344,7 +344,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "03-08-2020" >}}
+{{< link-heading "h4" "2020-08-03" >}}
 
 **Bug fixes:**
 
@@ -357,7 +357,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "29-07-2020" >}}
+{{< link-heading "h4" "2020-07-29" >}}
 
 **Bug fixes:**
 
@@ -372,7 +372,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "23-07-2020" >}}
+{{< link-heading "h4" "2020-07-23" >}}
 
 **Changes:**
 
@@ -383,7 +383,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "21-07-2020" >}}
+{{< link-heading "h4" "2020-07-21" >}}
 
 **Bug fixes:**
 
@@ -398,7 +398,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "17-07-2020" >}}
+{{< link-heading "h4" "2020-07-17" >}}
 
 **Changes:**
 
@@ -407,7 +407,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "16-07-2020" >}}
+{{< link-heading "h4" "2020-07-16" >}}
 
 **Bug fixes:**
 
@@ -420,7 +420,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "15-07-2020" >}}
+{{< link-heading "h4" "2020-07-15" >}}
 
 **Bug fixes:**
 
@@ -433,7 +433,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "09-07-2020" >}}
+{{< link-heading "h4" "2020-07-09" >}}
 
 **Changes:**
 
@@ -442,7 +442,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "08-07-2020" >}}
+{{< link-heading "h4" "2020-07-08" >}}
 
 **Changes:**
 
@@ -457,7 +457,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "07-07-2020" >}}
+{{< link-heading "h4" "2020-07-07" >}}
 
 **Bug fixes:**
 
@@ -470,7 +470,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "06-07-2020" >}}
+{{< link-heading "h4" "2020-07-06" >}}
 
 **Bug fixes:**
 
@@ -484,7 +484,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "03-07-2020" >}}
+{{< link-heading "h4" "2020-07-03" >}}
 
 **Changes:**
 
@@ -493,7 +493,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "18-06-2020" >}}
+{{< link-heading "h4" "2020-06-18" >}}
 
 **New features:**
 
@@ -501,7 +501,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "03-06-2020" >}}
+{{< link-heading "h4" "2020-06-03" >}}
 
 **Bug fixes:**
 
@@ -509,7 +509,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "01-06-2020" >}}
+{{< link-heading "h4" "2020-06-01" >}}
 
 **Changes:**
 
@@ -518,7 +518,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "27-05-2020" >}}
+{{< link-heading "h4" "2020-05-27" >}}
 
 **Bug fixes:**
 
@@ -530,7 +530,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "21-05-2020" >}}
+{{< link-heading "h4" "2020-05-21" >}}
 
 **Bug fixes:**
 
@@ -546,7 +546,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "18-05-2020" >}}
+{{< link-heading "h4" "2020-05-18" >}}
 
 **Changes:**
 
@@ -554,7 +554,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "11-05-2020" >}}
+{{< link-heading "h4" "2020-05-11" >}}
 
 **Bug fixes:**
 
@@ -569,7 +569,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "17-04-2020" >}}
+{{< link-heading "h4" "2020-04-17" >}}
 
 **New features:**
 
@@ -577,7 +577,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "15-04-2020" >}}
+{{< link-heading "h4" "2020-04-15" >}}
 
 **Changes:**
 
@@ -591,7 +591,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "08-04-2020" >}}
+{{< link-heading "h4" "2020-04-08" >}}
 
 **Bug fixes:**
 
@@ -603,7 +603,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "07-04-2020" >}}
+{{< link-heading "h4" "2020-04-07" >}}
 
 **Bug fixes:**
 
@@ -620,7 +620,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "09-03-2020" >}}
+{{< link-heading "h4" "2020-03-09" >}}
 
 **Bug fixes:**
 
@@ -642,7 +642,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "05-03-2020" >}}
+{{< link-heading "h4" "2020-03-05" >}}
 
 **Bug fixes:**
 
@@ -664,7 +664,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "20-02-2020" >}}
+{{< link-heading "h4" "2020-02-20" >}}
 
 
 **Bug fixes:**
@@ -680,7 +680,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "17-02-2020" >}}
+{{< link-heading "h4" "2020-02-17" >}}
 
 **Bug fixes:**
 
@@ -688,7 +688,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "12-02-2020" >}}
+{{< link-heading "h4" "2020-02-12" >}}
 
 **Bug fixes:**
 
@@ -723,7 +723,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "10-01-2020" >}}
+{{< link-heading "h4" "2020-01-10" >}}
 
 **Bug fixes:**
 
@@ -736,7 +736,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "02-01-2020" >}}
+{{< link-heading "h4" "2020-01-02" >}}
 
 **Changes:**
 
@@ -747,7 +747,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "23-12-2019" >}}
+{{< link-heading "h4" "2019-12-23" >}}
 
 **Bug fixes:**
 
@@ -761,7 +761,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "10-12-2019" >}}
+{{< link-heading "h4" "2019-12-10" >}}
 
 **Changes:**
 
@@ -770,7 +770,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "27-11-2019" >}}
+{{< link-heading "h4" "2019-11-27" >}}
 
 **Changes:**
 
@@ -783,7 +783,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "21-11-2019" >}}
+{{< link-heading "h4" "2019-11-21" >}}
 
 **Bug fixes:**
 
@@ -800,7 +800,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "05-11-2019" >}}
+{{< link-heading "h4" "2019-11-05" >}}
 
 **Changes:**
 
@@ -813,7 +813,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "31-10-2019" >}}
+{{< link-heading "h4" "2019-10-31" >}}
 
 **Changes:**
 
@@ -828,7 +828,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "16-10-2019" >}}
+{{< link-heading "h4" "2019-10-16" >}}
 
 **Bug fixes:**
 
@@ -841,7 +841,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "24-09-2019" >}}
+{{< link-heading "h4" "2019-09-24" >}}
 
 **Bug fixes:**
 
@@ -858,7 +858,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "13-09-2019" >}}
+{{< link-heading "h4" "2019-09-13" >}}
 
 **Bug fixes:**
 
@@ -877,7 +877,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "12-09-2019" >}}
+{{< link-heading "h4" "2019-09-12" >}}
 
 **Changes:**
 
@@ -885,7 +885,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "04-09-2019" >}}
+{{< link-heading "h4" "2019-09-04" >}}
 
 **Bug fixes:**
 
@@ -909,7 +909,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "01-09-2019" >}}
+{{< link-heading "h4" "2019-09-01" >}}
 
 **Bug fixes:**
 
@@ -917,7 +917,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "31-08-2019" >}}
+{{< link-heading "h4" "2019-08-31" >}}
 
 **Changes:**
 
@@ -927,7 +927,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "30-08-2019" >}}
+{{< link-heading "h4" "2019-08-30" >}}
 
 
 **Bug fixes:**
@@ -949,7 +949,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "27-08-2019" >}}
+{{< link-heading "h4" "2019-08-27" >}}
 
 **Bug fixes:**
 
@@ -963,7 +963,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "26-08-2019" >}}
+{{< link-heading "h4" "2019-08-26" >}}
 
 **Bug fixes:**
 
@@ -984,7 +984,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "14-08-2019" >}}
+{{< link-heading "h4" "2019-08-14" >}}
 
 **Changes:**
 
@@ -992,7 +992,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "10-08-2019" >}}
+{{< link-heading "h4" "2019-08-10" >}}
 
 **New features:**
 
@@ -1004,7 +1004,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "07-08-2019" >}}
+{{< link-heading "h4" "2019-08-07" >}}
 
 **Bug fixes:**
 
@@ -1030,7 +1030,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "07-07-2019" >}}
+{{< link-heading "h4" "2019-07-07" >}}
 
 
 **Changes:**
@@ -1043,7 +1043,7 @@ Other:
 
 ---
 
-{{< link-heading "h4" "02-07-2019" >}}
+{{< link-heading "h4" "2019-07-02" >}}
 
 **Bug fixes:**
 
@@ -1071,7 +1071,7 @@ Added manual withdrawals operational features for the admin. Managing withdrawal
 
 ---
 
-{{< link-heading "h4" "11-06-2019" >}}
+{{< link-heading "h4" "2019-06-11" >}}
 
 ##### Extensions update
 
@@ -1119,7 +1119,7 @@ In this release there were major updates to 3 Rehive Extensions: Conversion, Pro
 
 ---
 
-{{< link-heading "h4" "13-05-2019" >}}
+{{< link-heading "h4" "2019-05-13" >}}
 
 **Bug fixes:**
 
@@ -1128,7 +1128,7 @@ In this release there were major updates to 3 Rehive Extensions: Conversion, Pro
 
 ---
 
-{{< link-heading "h4" "11-05-2019" >}}
+{{< link-heading "h4" "2019-05-11" >}}
 
 **Changes:**
 
@@ -1140,7 +1140,7 @@ In this release there were major updates to 3 Rehive Extensions: Conversion, Pro
 
 ---
 
-{{< link-heading "h4" "30-04-2019" >}}
+{{< link-heading "h4" "2019-04-30" >}}
 
 **Changes:**
 
@@ -1160,7 +1160,7 @@ In this release there were major updates to 3 Rehive Extensions: Conversion, Pro
 
 ---
 
-{{< link-heading "h4" "25-04-2019" >}}
+{{< link-heading "h4" "2019-04-25" >}}
 
 **New features:**
 
@@ -1188,7 +1188,7 @@ In this release there were major updates to 3 Rehive Extensions: Conversion, Pro
 
 ---
 
-{{< link-heading "h4" "29-03-2019" >}}
+{{< link-heading "h4" "2019-03-29" >}}
 
 
 **New features:**
