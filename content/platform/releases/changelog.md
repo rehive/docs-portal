@@ -10,6 +10,16 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-01-29" >}}
+
+1. Added a new `deactivated` boolean to user resources. Users that are deactivated cannot login, authenticate or access any authenticated endpoints.
+    - A user can request deactivation via a `POST` to `/auth/deactivate/`.
+    - A user will receive an email with an included "deactivation link". The deactivation key can be submitted via a `POST` to `/auth/deactivate/verify/`.
+    - Once deactivation is verified, the user will be locked out of their account and their auth tokens will be deleted. The user can still request a password reset.
+    - An admin can deactivate (or reactivate) a user by changing the `deactivated` boolean to `true` or `false`.
+
+---
+
 {{< link-heading "h4" "2021-01-19" >}}
 
 1. Fix for a bug where currency was throwing required errors on company level subtype controls.
