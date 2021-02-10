@@ -7,6 +7,14 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h4" "2021-02-10" >}}
+
+1. Added a new `require_registration` boolean option to the company settings. Defaults to `false`.
+    - When set to `true` transactions to/on a user will fail if the user is not registered in the system. This will prevent temporary users from getting created automatically on transfers to unregistered users.
+    - This can be used in combination with `require_verficiation` in order to gain more ocntrol over how transactions are processed. 
+    - We recommend always keeping `require_verficiation` turned on, even when `require_registration` is turned on. This is because the `require_verification` handling prevents users from sending to unverified emails/mobiles belonging to another user.
 
 ---
 
