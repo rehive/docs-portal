@@ -9,6 +9,91 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-02-11 - 2.0.84" >}}
+
+**Features:**
+- Referral rewards in profile and on register
+
+**Design improvements and bug fixes:**
+- Fixed `labelID` config option
+- Various small tweaks and design updates
+
+---
+
+{{< link-heading "h4" "2021-02-09 - 2.0.79" >}}
+
+**Features:**
+- Add mainnet payment request processors
+
+**Design improvements and bug fixes:**
+- Various small tweaks and design updates
+
+---
+
+{{< link-heading "h4" "2021-02-09 - 2.0.78" >}}
+
+**Features:**
+- Added support around stellar features to ensure correct memo usage for deposits / receives
+- Add trustline validation to withdraw
+
+**Design improvements and bug fixes:**
+- Various small tweaks and design updates
+
+---
+
+{{< link-heading "h4" "2021-01-26 - 2.0.69" >}}
+
+**Features:**
+- Test company banner and disclaimer to auth screen
+- Added Help section with About page, FAQs and contact support
+
+**Design improvements and bug fixes:**
+- Various small tweaks and design updates
+
+---
+
+{{< link-heading "h4" "2021-01-25 - 2.0.66" >}}
+
+**Features:**
+- Add receive config to show recipient buttons on QR
+
+---
+
+{{< link-heading "h4" "2021-01-24 - 2.0.65" >}}
+
+**Design improvements and bug fixes:**
+- Fixed account filters
+
+---
+
+{{< link-heading "h4" "2021-01-21 - 2.0.61" >}}
+
+**Features:**
+- Add payment requests page
+
+**Design improvements and bug fixes:**
+- Various small tweaks and design updates
+
+---
+
+{{< link-heading "h4" "2021-01-13 - 2.0.57" >}}
+
+**Features:**
+- Updated subtypes
+
+**Design improvements and bug fixes:**
+- Various small tweaks and design updates
+
+---
+
+{{< link-heading "h4" "2021-01-13 - 2.0.55" >}}
+
+**Design improvements and bug fixes:**
+- PoS layout improvements
+- Bugs on invoice create
+
+---
+
 {{< link-heading "h4" "31-10-2019" >}}
 
 **Bug fixes:**
