@@ -9,7 +9,61 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
-{{< link-heading "h4" "2020-01-20 - 1.33.0" >}}
+{{< link-heading "h4" "2021-02-11 - 1.37.0" >}}
+
+**Features:**
+- User onboarding
+- Referral rewards in profile and on register
+- Improved OTA (over the air) update handling forcing users to download the latest app version
+
+**Design improvements and bug fixes:**
+- Register button on landing to text button
+- Various small tweaks and design updates
+- Fixed `labelID` config option
+- Switching cart currency when on product detail crash
+
+---
+
+{{< link-heading "h4" "2021-02-02 - 1.36.0" >}}
+
+**Features:**
+- Improvements to Stellar flows with help banners and prompts to include memo when necessary
+- Stellar trustline validation for adding account and withdraw
+- Improvements to Payment requests
+
+**Design improvements and bug fixes:**
+- Local authentication icon changes depending on biometrics API level
+- Added fee to withdraw amount input
+- Fix help section styling
+- Disclaimer styling
+
+
+---
+
+{{< link-heading "h4" "2021-01-26 - 1.35.0" >}}
+
+**Features:**
+- Test company banner and disclaimer to auth screen
+- Added Help section with About page, FAQs and contact support
+
+**Design improvements and bug fixes:**
+- Various small tweaks and design updates
+
+---
+
+{{< link-heading "h4" "2021-01-22 - 1.34.0" >}}
+
+**Features:**
+- Updated recipient input on Send
+- Reworked receive screen
+
+**Design improvements and bug fixes:**
+- Added support for currency display_code
+- Various small tweaks and design updates
+
+---
+
+{{< link-heading "h4" "2021-01-20 - 1.33.0" >}}
 
 **Features:**
 - Add FAQ section to settings that can be utilised using `config/faqs`
@@ -20,7 +74,7 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
-{{< link-heading "h4" "2020-01-06 - 1.32.7" >}}
+{{< link-heading "h4" "2021-01-06 - 1.32.7" >}}
 
 **Features:**
 - Reworked scan to pay to work with checkout requests and cross-payment PoS payments
