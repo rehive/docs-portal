@@ -7,13 +7,23 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h4" "2021-02-11" >}}
+
+1. Updated the metric points on metric resources to contain an additional "unresolved point" that contains rolling data for the current day (interval).
+    - The unresolved point is prepended to the results and contains the current `date` and a `value`. The `id` will be `null` as this point is dynamically calculated and is not stored in the database.
+    - The unresolved point will replace the latest point if the `interval` is set to `week`, `month`, `year` and it is not the first day of the interval.
+    - The unresolved point will not be included if the `date` filters applied to the endpoint eliminates the current day. Or if the page number/position is not the first page.
+
 ---
 
 {{< link-heading "h4" "2021-02-10" >}}
 
 1. Added a new `require_registration` boolean option to the company settings. Defaults to `false`.
     - When set to `true` transactions to/on a user will fail if the user is not registered in the system. This will prevent temporary users from getting created automatically on transfers to unregistered users.
-    - This can be used in combination with `require_verficiation` in order to gain more ocntrol over how transactions are processed. 
+    - This can be used in combination with `require_verficiation` in order to gain more control over how transactions are processed. 
     - We recommend always keeping `require_verficiation` turned on, even when `require_registration` is turned on. This is because the `require_verification` handling prevents users from sending to unverified emails/mobiles belonging to another user.
 
 ---
