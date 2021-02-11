@@ -28,7 +28,6 @@ Summary of additions and changes to the Mobile Wallet.
 
 **Features:**
 - Improvements to Stellar flows with help banners and prompts to include memo when necessary
-- Stellar trustline validation for adding account and withdraw
 - Improvements to Payment requests
 
 **Design improvements and bug fixes:**
