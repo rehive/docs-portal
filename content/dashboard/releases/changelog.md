@@ -9,6 +9,34 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-02-16" >}}
+
+**Changes:**
+
+- Swapped the position of the Stripe API key fields in onboarding and the Stripe Extension.
+- Swapped the position of usage type and description around on the Subtypes page.
+- Removed old defunct fee fields from view conversion modal in the Conversion Extension.
+- Added new `require_registration` field to the Company Settings. Enabling this will require users to be registered before any transactions can be made to them. This will prevent temporary users from being created via transfers to unregistered users.
+
+---
+
+{{< link-heading "h4" "2021-02-02" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins could not edit or delete a conversion pair if the associated operational account had been deleted.
+- Fixed a bug where admins could not deactivate the Payment Requests Extension.
+
+**Changes:**
+
+- Updated the crypto extensions to add and associate the updated subtypes.
+- Amended the subtypes listing page to display subtype name first and sort by subtype name.
+- Removed superfluous "some text" text on the Stellar extensions.
+- Amended Dashboard to use display code everywhere outside of extensions.
+- Added tier to the user header on the user details page.
+
+---
+
 {{< link-heading "h4" "2021-01-27" >}}
 
 **Changes:**
