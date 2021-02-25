@@ -7,6 +7,12 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h4" "2021-02-25" >}}
+
+1. Added new immutable transaction functionality that can be turned on with the `immutable_transactions` field on the company object. This boolean is temporary and will be phased out in favor of force immutability on all companies.
+2. Improved transfer claims on newly registered users to better handle events and retransition the transactions correctly.
 
 ---
 
