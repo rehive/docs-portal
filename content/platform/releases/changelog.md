@@ -13,6 +13,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 1. Added new immutable transaction functionality that can be turned on with the `immutable_transactions` field on the company object. This boolean is temporary and will be phased out in favor of force immutability on all companies.
 2. Improved transfer claims on newly registered users to better handle events and retransition the transactions correctly.
+3. Added a new `executed` date on transaction resources. This contains the date a transaction transitioned from `pending` to `complete` or `failed`.
 
 ---
 
