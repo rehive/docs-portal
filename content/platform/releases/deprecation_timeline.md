@@ -9,9 +9,19 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
+{{< link-heading "h4" "2021-04-19" >}}
+
+*Added on 2021-02-16*
+
+1. Remove the ability to change the status of transactions that have executed. Executed transactions are those with a status of `Complete` or `Failed`.
+	- This can be tested before the final date by changing the `immutable_transactions` boolean to `true`.
+2. Remove the `immutable_transactions` boolean on the company object. Going forward this behaviour will be required.
+
+---
+
 {{< link-heading "h4" "2021-02-16" >}}
 
-*The date for this deprecation was pushed back from its previous date of the 2019-04-20*
+*Added on 2020-04-20*
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
