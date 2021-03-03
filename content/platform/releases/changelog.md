@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-03-03" >}}
+
+1. Updated the account sync functionality on account definitions to eliminate bugs and improve its scope.
+2. Removed DELETE on many resources that are now considered "audited" resources
+    - These resources include: Users, Groups, Accounts, Account, Currencies, Transactions, Account Definitions (and Account Definition Groups and Currencies).
+    - Archiving of these resources is now the only option.
+    - This change was made in order to comply with new audit requirements and also deal with the current technical space and scale we operate within.
+3. Updated to a new metrics format where a `type` is specified rather than a resource, expression and function.
+
+---
+
 {{< link-heading "h4" "2021-02-25" >}}
 
 1. Added new immutable transaction functionality that can be turned on with the `immutable_transactions` field on the company object. This boolean is temporary and will be phased out in favor of force immutability on all companies.
