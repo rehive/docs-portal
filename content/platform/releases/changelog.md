@@ -9,10 +9,16 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-03-11" >}}
+
+- Added new generic document types for each document category.
+
+---
+
 {{< link-heading "h4" "2021-03-03" >}}
 
-1. Updated the account sync functionality on account definitions to eliminate bugs and improve its scope.
-2. Removed DELETE on many resources that are now considered "audited" resources
+1. Updated the account synchronization functionality on account definition changes to eliminate some edge cases in processing.
+2. Removed DELETE on many resources. These resources are no considered "audited" resources and therefor do not support deletion.
     - These resources include: Users, Groups, Accounts, Account, Currencies, Transactions, Account Definitions (and Account Definition Groups and Currencies).
     - Archiving of these resources is now the only option.
     - This change was made in order to comply with new audit requirements and also deal with the current technical space and scale we operate within.
