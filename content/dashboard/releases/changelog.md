@@ -9,6 +9,67 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-03-11" >}}
+
+**Bug fixes:**
+
+- Fixed issue where Dashboard did not handle missing expected metadata properly on transactions and would not open the transaction modal.
+
+**Changes:**
+
+- Archived user accounts are now greyed out and marked as "archived" on a user's accounts page.
+- On the default subtypes listing page and on all subtype switches pages changed from displaying the subtype label tot he subtype name.
+
+---
+
+{{< link-heading "h4" "2021-03-04" >}}
+
+**Bug fixes:**
+
+- Fixed issue where a Stellar error message would show up when switching between xpub keys in the warm storage in the Bitcoin Extensions.
+
+**Changes:**
+
+- Rearranged the add user modal fields to have select group first and email second.
+- Added a note to company description letting admins know that it is a field shown to end-users.
+- Renamed the note field on the view document modal to let admins know that notes are shown to end-users.
+- Added support website field to the company info page.
+- Added the country of operations field to company info.
+
+---
+
+{{< link-heading "h4" "2021-02-25" >}}
+
+**Bug fixes:**
+
+- Removed Stellar trustline message displayed when switching between xpubs in Bitcoin Extensions' Warmstorages.
+- Fixed various issues where null values would trigger errors.
+
+---
+
+{{< link-heading "h4" "2021-02-24" >}}
+
+**Changes:**
+
+- Redesigned the add and edit product pages.
+- Added product integrations section to the Product Extension settings.
+
+
+**New features:**
+
+- Admins can now add product variants to products on the Dashboard. Create options and build variants e.g. size and color combinations.
+
+---
+
+{{< link-heading "h4" "2021-02-22" >}}
+
+**Changes:**
+
+- Admins can now add, edit and remove currencies from users' listed bank accounts.
+- Admins can now add credit and debit notes to transfers.
+
+---
+
 {{< link-heading "h4" "2021-02-16" >}}
 
 **Changes:**
