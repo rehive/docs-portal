@@ -9,9 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-03-15" >}}
+
+1. Fixed a bug when changing a users group that resulted in non default accounts getting added to the user.
+
+---
+
 {{< link-heading "h4" "2021-03-11" >}}
 
-- Added new generic document types for each document category.
+1. Added new generic document types for each document category.
 
 ---
 
