@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-03-17" >}}
+
+**Changes:**
+
+- Added links to associated transactions and the user on the conversions modal in the Conversions Extension.
+- The Dashboard now deals with uploaded PDFs better for KYC documents. Instead of showing a broken image a button letting the admin know they need to click to view the file in a new tab displays.
+
+**New features:**
+
+- Admins can now enable and disable payment processors in the Payment Requests Extension, as well as amend the base redirect url the extension usersl.
+
+---
+
 {{< link-heading "h4" "2021-03-11" >}}
 
 **Bug fixes:**
