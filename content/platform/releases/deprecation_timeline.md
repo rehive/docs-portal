@@ -9,6 +9,16 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
+{{< link-heading "h4" "2021-05-11" >}}
+
+*Added on 2021-03-11*
+
+1. Remove the `email` and `mobile` fields from the `partner` object on user section transaction endpoints.
+	- The `email` and `mobile` have been replaced by a generic `identifier` field that contains who the user sent/recived funds from.
+	- Clients should prefer the following prioritization when showing partner transaction user info: `first_name` or `last_name`, `username`, `identifier`, `id`.
+
+---
+
 {{< link-heading "h4" "2021-04-19" >}}
 
 *Added on 2021-02-16*
@@ -19,7 +29,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "2021-02-16" >}}
+{{< link-heading "h4" "2021-03-23" >}}
 
 *Added on 2020-04-20*
 
