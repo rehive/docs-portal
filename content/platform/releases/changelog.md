@@ -313,15 +313,6 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h4" "2019-12-12" >}}
-
-1. Added new MFA recovery codes. These codes can be used as an alternative to an MFA device.
-    - `/auth/mfa/recovery-codes/` for creating, viewing and deleting MFA recover codes
-    - `/auth/mfa/recover/` for using a code instead of verifying using an MFA device.
-2. Added a new `mfa` boolean on on the login response.
-
----
-
 {{< link-heading "h4" "2019-10-31" >}}
 
 1. Added a transaction-collection resource and corresponding API endpoints for listing/adding/viewing/updating/deleting transaction-collections.
