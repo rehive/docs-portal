@@ -18,6 +18,10 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 {{< link-heading "h4" "2021-03-11" >}}
 
 1. Added new generic document types for each document category.
+2. Added new `identifier` field on partner objects. 
+    - This field will contain the "identifier" used by a user when creating a transaction.
+    - For instance, if a user transfers to `test@rehive.com`, then the `identifier` field will contain `test@rehive.com`.
+    - This field will replace the existing `email` and `mobile` fields as these fields currently expose excess user data. Check the deprecation timeline for details.
 
 ---
 
