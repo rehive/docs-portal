@@ -19,7 +19,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "2021-04-19" >}}
+{{< link-heading "h4" "2021-05-18" >}}
 
 *Added on 2021-02-16*
 
@@ -29,16 +29,13 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "2021-03-23" >}}
+{{< link-heading "h4" "2021-04-06" >}}
 
 *Added on 2020-04-20*
 
 1. Remove the POST `/auth/tokens/verify/` endpoint.
 	- This has been replaced by a `GET` on the `/auth/` endpoint. The token is included as a header instead of in the post data.
-2. Remove non-inferred transaction fees on automatic fee creation rules.
-	- All automatic transaction fees will have to be inferred to work after this date.
-	- The `fees` and `fee` fields on individual transactions will continue to be exposed for backwards compatibility reasons.
-3. Remove the source/destination property.
+2. Remove the source/destination property.
 	- These properties are now available as a single `partner` property.
 	
 ---
