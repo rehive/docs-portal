@@ -9,6 +9,36 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-03-29" >}}
+
+**Bug fixes:**
+
+- Fixed broken Contact Sales links on the Select Plan and Get Started pages.
+
+**Changes:**
+
+- Added Sellers information to the Product Extension. Admins can now see when a product has been uploaded by a seller, view a list of sellers, approve a seller, and set which groups can become sellers.
+- Removed the need to type "deactivate" when deactivating an extension.
+- Added new app config field to the Settings section of the app config: loop currencies.
+
+---
+
+{{< link-heading "h4" "2021-03-24" >}}
+
+**Changes:**
+
+- Adds small text in Group Add/Edit under description.
+- Fixed issues with currency dropdown when adding Tier limit.
+- Changed modal text and fixed currency mapping issue in Delete confirmation prompt when deleting a currency from an account definition.
+- Fixed styling issue on account definitions listing page.
+- Updated text of popup modal when reassigning user group.
+- Fixed account definition routing issue when clicked on navigation item.
+- Updated create order to work with product variants. When adding an order admins can now select a variant, see how much quantity of a product is left, enter a variable amount price where applicable and calculate the total of the order.
+- Admins can now see when a product item on an order is using a custom variable price.
+- Added 3 new generic document types for user documents.
+
+---
+
 {{< link-heading "h4" "2021-03-17" >}}
 
 **Changes:**
