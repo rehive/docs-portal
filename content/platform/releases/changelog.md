@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-03-30" >}}
+
+1. Added new "legal terms" to the platform. Legal terms are used to store platform dictated and company terms and conditions and other legal documents users should accept. These ar available on the following endpoints:
+    - /public/legal-terms/ - Public endpointfor getting terms that apply globally (platform dictated).
+    - /public/companies/<id>/legal-terms/ - Public endpoint for getting the terms that apply to a specific public company.
+    - /admin/legal-terms/ - Admin endpoint for adding and viewing all terms on the company (including platform dicated ones).
+    - /admin/users/<id>/legal-terms/ - Admin view of what terms a user has accepted (and not accepted).
+2. Added new `legal_term_versions` field on register. This can be used to specify a specific legal terms version as "accepted" on register.
+
+---
+
 {{< link-heading "h4" "2021-03-15" >}}
 
 1. Fixed a bug when changing a users group that resulted in non default accounts getting added to the user.
