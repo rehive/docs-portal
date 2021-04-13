@@ -13,7 +13,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 1. Removed the POST `/auth/tokens/verify/` endpoint as per the deprecation timeline.
 2. Removed the source/destination property on transactions as per the deprecation timeline.
-3. Improve the eprformance of export generation.
+3. Improved the performance of export generation.
 4. Fixed a bug in metrics where results were not generated correctly for pending transaction resources.
 
 ---
