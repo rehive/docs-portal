@@ -9,6 +9,15 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
+{{< link-heading "h4" "2021-07-13" >}}
+
+*Added on 2021-04-13*
+
+1. Remove the `kyc` field from the user resource.
+	- Use `metadata` , `status` and tier requirements instead.
+
+---
+
 {{< link-heading "h4" "2021-05-18" >}}
 
 *Added on 2021-02-16*
