@@ -9,6 +9,26 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-04-13" >}}
+
+**Bug fixes:**
+
+- Fixed issue where wrong field was being updated in Account Definitions when updating the primary marker on a definition. 
+- Fixed issue where, when editing a product with variants, the "Simple" radio button in the pricing section was selected instead of the "Variants" button, making it look like there were no variants on the product.
+- Changed the "Session duration" field in Company Settings to always show and not incorrectly require that "Allow custom session duration" setting be true before a session duration can be set.
+
+**Changes:**
+
+- The transaction create modal no longer disables the next button when attempting to transfer from a standalone account with no funds. It now lets admins attempt the transaction but will throw an insufficient funds error when they try to confirm the transaction.
+- Clicking outside of the transaction create modal no longer closes the modal - it can only be closed by  pressing on the x in the top right corner.
+- In line with the Platform deprecation timeline, Dashboard has deprecated the `source` and `destination` transaction fields. All filters and columns now use `partner` functionality instead. Transactions now have a "is partner" filter which will display all transactions that are or have a partner transaction. Admins can also now choose to display a "Partner txn id" column, which will show a transfer transaction's partner's ID.
+- Admins can no longer delete account definitions, groups from account definitions, or currencies from account definitions they will only be able to archive them.
+- Admins can no longer delete users. Users can now be archived or deactivated. Archiving is used as a soft delete of the user - the user cannot login and no transactions or actions can happen on that user. Deactivating a user prevents  them from logging in and can be done in order to protect their account if it has been breached, or to investigate a suspicious user.
+- Admins will now see an error or message if their company is suspended or restricted.
+- Onboarding has been updated to an interim solution.  There is now only Sandbox to choose from. Admins can now select what currencies they want during the onboarding process.
+
+---
+
 {{< link-heading "h4" "2021-03-29" >}}
 
 **Bug fixes:**
