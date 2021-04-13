@@ -7,9 +7,9 @@ weight: 6
 
 The platform has a collection of internal events that can be configured to trigger webhooks.
 
-Webhooks should always be created with a secure `secret` key. The secret key can be used to identify valid requests to your server. The secret is sent in the Authorization header of the webhook request.
+Webhooks should always be created with a secure `secret` key. The secret is sent in the Authorization header of the webhook request. When receiving webhooks the `secret` should always be validated to ensure the webhook originated from the platform.
 
-The platform expects a `200 OK` HTTP response when webhooks are called. If a 200 response is not returned, the platform will retry the webhook up to 12 times with a gradually increasing delay between each retry.
+The platform expects a `200 OK` HTTP response when webhooks are called. If a 200 response is not returned, the platform will retry the webhook up to 7 times with a gradually increasing delay between each retry.
 
 Every webhook includes a body containing a JSON object.
 
