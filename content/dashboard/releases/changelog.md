@@ -9,6 +9,18 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-04-14" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where multiple export files would overlap their display in the export download list.
+
+**Changes:**
+
+- Adjusted the design of the Company Settings table.
+
+---
+
 {{< link-heading "h4" "2021-04-13" >}}
 
 **Bug fixes:**
