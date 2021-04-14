@@ -39,6 +39,8 @@ The platform currently support the following webhook events:
 
 Event | Description
 --- | ---
+`currency.create`  | currency created event
+`currency.update` | currency updated event
 `user.create`  | user created event
 `user.update` | user updated event
 `user.password.reset` | user password reset request event
