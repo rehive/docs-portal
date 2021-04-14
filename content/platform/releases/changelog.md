@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-04-14" >}}
+
+1. Added two new webhook events for currency resources:
+    - `currency.create`
+    - `currency.update`
+
+---
+
 {{< link-heading "h4" "2021-04-13" >}}
 
 1. Removed the POST `/auth/tokens/verify/` endpoint as per the deprecation timeline.
