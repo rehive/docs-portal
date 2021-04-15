@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-04-15" >}}
+
+**Bug fixes:**
+
+- Fixed issue where users without permission to delete MFA from users did not see an error message letting them know that they did not have permission to perform that action when attempting to remove MFA from a user. Dashboard would also incorrectly show that it had been deactivated.
+- Fixed the "Is transfer" filter to use the correct value.
+
+**Changes:**
+
+- Updated the default page size for exports of transactions, accounts and account currencies from 10k to 50k.
+
+---
+
 {{< link-heading "h4" "2021-04-14" >}}
 
 **Bug fixes:**
