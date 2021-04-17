@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-04-16" >}}
+
+**Changes:**
+
+- Admins can now upload and view currency icons.
+
+---
+
 {{< link-heading "h4" "2021-04-15" >}}
 
 **Bug fixes:**
