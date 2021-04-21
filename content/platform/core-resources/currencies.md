@@ -33,9 +33,9 @@ Currency data appears in some fashion throughout the platform. However there are
 section | type| URL | methods
 ---|---|---|---
 admin | multiple |  `https://api.rehive.com/3/admin/currencies/` | `GET`, `POST`
-admin | single |  `https://api.rehive.com/3/admin/currencies/<id>/` | `GET`, `PATCH`, `PUT`, `DELETE`
+admin | single |  `https://api.rehive.com/3/admin/currencies/<code>/` | `GET`, `PATCH`, `PUT`, `DELETE`
 user | multiple | `https://api.rehive.com/3/company/currencies/` | `GET`
-user | single | `https://api.rehive.com/3/company/currencies/<id>/` | `GET`
+user | single | `https://api.rehive.com/3/company/currencies/<code>/` | `GET`
 
 ### Usage
 
