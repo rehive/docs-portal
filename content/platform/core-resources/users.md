@@ -35,6 +35,7 @@ Users have a multitude of attributes and properties that can be used to store id
     "id_number": "",
     "birth_date": "2000-01-01",
     "profile": null,
+    "company": "rehive",
     "currency": {
         "description": "Rand",
         "code": "ZAR",
