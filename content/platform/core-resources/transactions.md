@@ -5,7 +5,7 @@ description: Transaction resources.
 weight: 7
 ---
 
-Transactions are a way to manage balance changes on accounts in the Rehive platform. Every transaction can be either a `debit` or a `credit`. In simple terms `debit` transactions reduce an account's balance and `credit` transactions increases an account's balance. A transfer can be thought of as a 2-step transaction where one user is debited and another is credited the same amount. This structure allows for easy verification of balances and can be used to back track to a specific point in time to discover what the balance was.
+Transactions are a way to manage balance changes on accounts in the Rehive platform. Every transaction can be either a `debit` or a `credit`. In simple terms `debit` transactions reduce an account's balance and `credit` transactions increases an account's balance. A transfer can be thought of as a 2-step transaction where one user is debited and another is credited the same amount simultaneously.
 
 Every transaction has a status that can be used to gauge the state of the transaction. The statuses are:
 
