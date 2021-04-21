@@ -42,12 +42,12 @@ Users have a multitude of attributes and properties that can be used to store id
         "unit": "rand",
         "divisibility": 2
     },
-    "account": 0000000000,
+    "account": "0000000000",
     "balance": 0,
     "available_balance": 0,
-    "company": "rehive",
     "language": "en",
     "nationality": "ZA",
+    "website": null,
     "metadata": null,
     "mobile": "+27840000000",
     "timezone": "Asia/Dhaka",
@@ -56,21 +56,23 @@ Users have a multitude of attributes and properties that can be used to store id
         "email": true,
         "mobile": true
     },
-    "kyc": {
-        "updated": 1509539801040,
-        "status": "pending"
-    },
     "status": "pending",
-    "groups": [],
-    "permissions": [],
+    "groups": [
+        {
+            "name": "user",
+            "label": "User"
+        }
+    ],
     "created": 1464912953000,
     "updated": 1464912953000,
     "settings": {
         "allow_transactions": true,
         "allow_debit_transactions": true,
-        "allow_credit_transactions": true
+        "allow_credit_transactions": true,
+        "disallowed_transaction_subtypes": []
     },
-    "last_login": null,
+    "deactivated": false,
+    "last_login": 1464912953000,
     "archived": false,
     "temporary": false
 }
