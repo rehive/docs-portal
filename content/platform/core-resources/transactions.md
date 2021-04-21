@@ -5,31 +5,24 @@ description: Transaction resources.
 weight: 7
 ---
 
-Transactions are a way to manage value on and between accounts in the Rehive platform. Every transaction can be either a `debit` or a `credit`. In simple terms `debit` reduces an account's balance and a `credit` increases an account's balance. A transfer can be thought of as a 2-step transaction where one user is debited and another is credited the required amount. This structure allows for easy verification of balances and can be used to back track to a specific point in time to discover what the balance was.
+Transactions are a way to manage balance changes on accounts in the Rehive platform. Every transaction can be either a `debit` or a `credit`. In simple terms `debit` transactions reduce an account's balance and `credit` transactions increases an account's balance. A transfer can be thought of as a 2-step transaction where one user is debited and another is credited the same amount. This structure allows for easy verification of balances and can be used to back track to a specific point in time to discover what the balance was.
 
 Every transaction has a status that can be used to gauge the state of the transaction. The statuses are:
 
 status | description
 ---|---
-Initiating | processing the transaction insert
-Pending | the transaction has passed all validation
-Complete | the transaction has been applied to the account currency's balance.
-Failed | the transaction and the balance have been reverted
+Initiating | the transaction is processing immediately after insert.
+Pending | the transaction has passed all validation amd applied to the account's available balance if a debit transaction.
+Complete | the transaction has been executed applied to the account's balance.
+Failed | the transaction has been executed but did not succeed and had no impact on the account's balance.
 
-Transactions can be made by both admin users and end-users. However, end-users are not permitted to alter the default status (Pending) of a transaction or modify the status after the transaction is created. Only admins have permission to make changes to an already saved object.
+Transactions are **immutable once executed** in Rehive. This means that once a transaction has reached an executed status of `Complete` or `Failed` they cannot be further modified in the system. To reverse a transaction's balance changes once it has executed you should create another transaction instead.
 
-This means that if you wish to provide functionality to automatically transition a transactions when created by an end-user then you have two options:
-
-1. Set the default status to "Complete"
-2. Build a service to receive event webhooks (transaction.create) and follow custom logic to either update the transaction to `complete` or `failed`.
-
-<aside class="warning">
-    The first option should be avoided in almost all use-cases as it allows end-users to make any transaction they want and it will immediately transition to <code>complete</code>. It is safer to transition to <code>pending</code> first as the <code>pending</code> state holds the funds in reserve until it is properly completed or failed (thus preventing double spend while a 3rd party system approves the transaction).
-</aside>
+Transactions can be made by both admin users and end-users. However, end-users are not permitted to alter the status of a transaction. Only admins have permission to make changes to transactions.
 
 ### Object
 
-Transactions are basically a series of logs recording actions on an account balance. With this in mind, transactions contain information that can be used to identify who made the transaction, what the transaction was made on, and how the transaction impacted the account.
+Transactions are basically a series of logs recording actions on an account balance. With this in mind, transactions contain information that can be used to identify who made the transaction, what account and user the transaction was made on, and how the transaction impacted the balance of an account.
 
 A full transaction object looks like:
 
@@ -51,7 +44,6 @@ A full transaction object looks like:
     "balance": 0,
     "account": "0000000000",
     "label": "Credit",
-    "company": "rehive",
     "currency": {
     	"code": "USD",
 	    "description": "United States dollar",
@@ -69,16 +61,15 @@ A full transaction object looks like:
         "profile": null
     },
     "messages": [],
-    "fees": [],
     "archived": false,
     "created": 1476691969394,
     "updated": 1496135465287
 }
 ```
 
-A debit transaction will look much the same as the above, except the `amount` will be a negative value and the `tx_type` will be `Debit`.
+A debit transaction will look much the same as the above, except the `amount` will be a negative value and the `tx_type` will be `debit`.
 
-On the other hand a transfer will have some additional information in the `partner` attribute. As stated previously, transfers are simply debits/credits themselves. So, if a transfer is made between two accounts 2 transactions will be created:
+On the other hand, a transfer will have some additional information in the `partner` attribute. As stated previously, transfers are simply debits/credits themselves. So, if a transfer is made between two accounts then two transactions will be created:
 
 1. A debit transaction reducing the balance of the sender. In addition the `partner` attribute will be populated with a pointer to the receiver transaction.
 2. A credit transaction increasing the balance of the receiver. In addition the `partner` attribute will be populated with a pointer to the sender transaction.
