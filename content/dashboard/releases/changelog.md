@@ -9,6 +9,34 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-05-12" >}}
+
+**Changes:**
+
+- Standalone accounts and user accounts are now separated into their own pages in the accounts section. Admins can now manage limits, fees and subtype controls on standalone accounts.
+- Added new Get Started page with videos and links to the help center.
+
+---
+
+{{< link-heading "h4" "2021-05-11" >}}
+
+**Changes:**
+
+- Admins are no longer forced to choose at least one fiat currency - they may now select to only have a crypto currency during onboarding.
+- Admins can now add percentage padding to their conversion rates when creating a conversion pair in order to hedge against currency volatility.
+- Admins can now select a reward template, which will populate their new reward campaign with preset values to help them get started faster.
+
+---
+
+{{< link-heading "h4" "2021-04-30" >}}
+
+**Changes:**
+
+- Updated onboarding currency selector to allow admins to choose whether to add the crypto extensions.
+- Removed trailing 0s from the conversion extension.
+
+---
+
 {{< link-heading "h4" "2021-04-16" >}}
 
 **Changes:**
