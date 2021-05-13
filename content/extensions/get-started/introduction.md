@@ -23,5 +23,5 @@ A full list of extensions can be found below:
 - **Chipless Card** - Provides an interface for card terminals to interact with the platform for transactions and balances.
 
 <aside class="notice">
-	Rehive adds extensions on a regaular basis. If you are looking for something specifc that you don't see above, feel free to contact the Rehive support team with your queries.
+	Rehive adds extensions on a regular basis. If you are looking for something specific that you don't see above, feel free to contact the Rehive support team with your queries.
 </aside>
