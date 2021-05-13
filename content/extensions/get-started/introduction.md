@@ -5,7 +5,7 @@ description: Introduction to the extensions.
 weight: 1
 ---
 
-In addition to the core platform, Rehive offers several extensions that can be used to extend platform functionality. They are designed to work alongside the platform in order to provide additional functionality like cryptocurrency compatibility, notifications, and rewards.
+In addition to the core platform, Rehive offers several officially supported and maintained extensions that can be used to extend platform functionality. These extensions are designed to work alongside the platform to provide additional functionality like cryptocurrency compatibility, notifications, and rewards.
 
 A full list of extensions can be found below:
 
@@ -22,4 +22,6 @@ A full list of extensions can be found below:
 - **Business** - Provides tools for business onboarding, management, invoicing and payouts.
 - **Chipless Card** - Provides an interface for card terminals to interact with the platform for transactions and balances.
 
-Rehive adds extensions on a regaular basis. If you are looking for something specifc that you don't see above, feel free to contact the Rehive support team with your queries.
+<aside class="notice">
+	Rehive adds extensions on a regaular basis. If you are looking for something specifc that you don't see above, feel free to contact the Rehive support team with your queries.
+</aside>

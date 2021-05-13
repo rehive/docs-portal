@@ -1,0 +1,60 @@
+---
+date: 2018-09-17T15:21:22+02:00
+title: Recommendations
+description: Recommendations for building extensions.
+weight: 4
+---
+
+Rehive has several recommendations for building extensions that we encourage developers to follow, especially if they are seeking approval for the addition of a publically available extension.
+
+#### Authenticate all incoming requests
+
+Ensure that all incoming requests (even those that appear to be from Rehive) are authenticated. There are tow primary ways you can do this:
+
+- For user authenticated request: expect a Rehive auth token to be included in an `Authorization` header and then call the platform to see if it is a real user.
+- For webhook requests: check the `secret` in the `Authorization` header. This can also be used to identify webhooks for specific companies.
+
+#### Build with multi-company in mind
+
+Extensions should built to support a multi company use case, rather than only support a single company on Rehive. This will allow your extension to be used on test companies (should it be a private extension) or at a laters stage be used as a public company.
+
+To ensure an extension is not locked to a single company ensure that:
+
+- On activation store a company relationship to the extension user (and token)
+- On activation set a `secret` on the company in the extension that can be used for webhooks.
+- Make all requests on the extension API only operate on the company of the user accessing the API (see above for authentication).
+- Make all webhook handlers operate on the correct company data only (and verify against the `secret`).
+- Never hardcore any company specific logic.
+
+#### Use the minium permissions required
+
+Do not set service users to have all admin permissions unless for some reason you are actually going to use all those permissions in your service. It is best to reduce your required permissions to the minium required to operate the extension and no more or less.
+
+#### Use asynchnous processing for slow requests
+
+If a request is likely to take a long time to process then prefer asyncnous processing over holding the request open indefinitely. For instance, if you need to generate an export on a very large data set, then do this as a background task instead of in the HTTP request/response cycle.
+
+This is particularly true of the following:
+
+- activate : The platform will timeout after 10 seconds.
+- deactivate : The platform will timeout after 10 seconds.
+- webhooks : The platform will timeout after 5 seconds.
+
+When processing webhooks it is almost always better practice to receive the webhook from the platform, log it to a queue (or database) and then issue a task to handle that webhook in a separate process. This way connection errors and timeouts cannot cause as many issues and you will also have a log of the webhooks which will help with troubleshooting.
+
+#### Use platform idempotency
+
+If you are concered about mistakenly replaying an action on the platform due to a bug or a race condition, then use [platform level idempotency](http://localhost:1313/platform/usage/idempotency/) on POST, PATCH and PUT requests.
+
+#### Account for pagination
+
+If tring to get all the results from a platform listing ensure that you take into account that most listing pages are paginated. This means that you will need to iterate through each page of results if you are trying to fetch **everything**.
+
+#### Account for throttling
+
+Platform endpoints are throttled if too many requests are executed at the same time. You should build in a manner that is resilent to throttling. The [platform documentation](http://localhost:1313/platform/usage/throttling/) has a section on throttling.
+
+#### Monitor the changelog and deprecation timeline.
+
+The changelog and to a lesser extent the deprecation timline are updated regularly. It is a good idea to stay ahead of the curve and immediately make use of new feature or prepare for features that are getting removed soon.
+
