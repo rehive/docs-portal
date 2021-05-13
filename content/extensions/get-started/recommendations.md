@@ -5,7 +5,7 @@ description: Recommendations for building extensions.
 weight: 4
 ---
 
-Rehive has several recommendations for building extensions that we encourage developers to follow, especially if they are seeking approval for the addition of a publically available extension.
+Rehive has several recommendations for building extensions that we encourage developers to follow, especially if they are seeking approval for the addition of a publicly available extension.
 
 #### Authenticate all incoming requests
 
@@ -16,7 +16,7 @@ Ensure that all incoming requests (even those that appear to be from Rehive) are
 
 #### Build with multi-company in mind
 
-Extensions should built to support a multi company use case, rather than only support a single company on Rehive. This will allow your extension to be used on test companies (should it be a private extension) or at a laters stage be used as a public company.
+Extensions should built to support a multi company use case, rather than only support a single company on Rehive. This will allow your extension to be used on test companies (should it be a private extension) or at a later stage be used as a public company.
 
 To ensure an extension is not locked to a single company ensure that:
 
@@ -26,13 +26,13 @@ To ensure an extension is not locked to a single company ensure that:
 - Make all webhook handlers operate on the correct company data only (and verify against the `secret`).
 - Never hardcore any company specific logic.
 
-#### Use the minium permissions required
+#### Use the minimum permissions required
 
-Do not set service users to have all admin permissions unless for some reason you are actually going to use all those permissions in your service. It is best to reduce your required permissions to the minium required to operate the extension and no more or less.
+Do not set service users to have all admin permissions unless for some reason you are actually going to use all those permissions in your service. It is best to reduce your required permissions to the minimum required to operate the extension and no more or less.
 
-#### Use asynchnous processing for slow requests
+#### Use asynchronous processing for slow requests
 
-If a request is likely to take a long time to process then prefer asyncnous processing over holding the request open indefinitely. For instance, if you need to generate an export on a very large data set, then do this as a background task instead of in the HTTP request/response cycle.
+If a request is likely to take a long time to process then prefer asynchronous processing over holding the request open indefinitely. For instance, if you need to generate an export on a very large data set, then do this as a background task instead of in the HTTP request/response cycle.
 
 This is particularly true of the following:
 
@@ -44,7 +44,7 @@ When processing webhooks it is almost always better practice to receive the webh
 
 #### Use platform idempotency
 
-If you are concered about mistakenly replaying an action on the platform due to a bug or a race condition, then use [platform level idempotency](http://localhost:1313/platform/usage/idempotency/) on POST, PATCH and PUT requests.
+If you are concerned about mistakenly replaying an action on the platform due to a bug or a race condition, then use [platform level idempotency](http://localhost:1313/platform/usage/idempotency/) on POST, PATCH and PUT requests.
 
 #### Account for pagination
 
@@ -52,9 +52,8 @@ If tring to get all the results from a platform listing ensure that you take int
 
 #### Account for throttling
 
-Platform endpoints are throttled if too many requests are executed at the same time. You should build in a manner that is resilent to throttling. The [platform documentation](http://localhost:1313/platform/usage/throttling/) has a section on throttling.
+Platform endpoints are throttled if too many requests are executed at the same time. You should build in a manner that is resilient to throttling. The [platform documentation](http://localhost:1313/platform/usage/throttling/) has a section on throttling.
 
 #### Monitor the changelog and deprecation timeline.
 
-The changelog and to a lesser extent the deprecation timline are updated regularly. It is a good idea to stay ahead of the curve and immediately make use of new feature or prepare for features that are getting removed soon.
-
+The changelog and to a lesser extent the deprecation timeline are updated regularly. It is a good idea to stay ahead of the curve and immediately make use of new feature or prepare for features that are getting removed soon.
