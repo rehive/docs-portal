@@ -13,7 +13,7 @@ For individual company extensions, the extension must:
 - Not break or contravene any of the rules laid out in the Rehive Terms of Service and software licenses.
 - Provide a list of permissions the extension requires.
 
-For publically available extensions, the extension must (in addition to the above):
+For publicly available extensions, the extension must (in addition to the above):
 
 - Have been reviewed and approved by the Rehive extensions team.
 - Have multi-company support.
@@ -35,11 +35,11 @@ The activate message will include the following data:
 
 When an activate message is received the extension can perform any activation steps it needs in order to operate properly. The `token` can be used to perform these steps if it needs to gather any information from the platform.
 
-At the minium `/activate/` should validate that the token is a real by sending the token in a `GET` request to `https://api.rehive.com/3/auth/`. If this returns an authentication error the extension should ignore the activation as it is not a valid user. Otherwise the extension should store an entry in its data store with the company, the token and a flag indicating the service has been activated.
+At the minimum, `/activate/` should validate that the token is a real by sending the token in a `GET` request to `https://api.rehive.com/3/auth/`. If this returns an authentication error the extension should ignore the activation as it is not a valid user. Otherwise the extension should store an entry in its data store with the company, the token and a flag indicating the service has been activated.
 
-Possible extra `/activate/` steps might be to add new transaction subtypes or create new webhooks on the platform. These webhooks can then be used to atomatically send events from the plaform to the extension.
+Possible extra `/activate/` steps might be to add new transaction subtypes or create new webhooks on the platform. These webhooks can then be used to automatically send events from the plaform to the extension.
 
-Should an `/activate/` throw any non 200 responses, the Rehive platforn will treat the activation as failed and disable the service user and token it created for that activation.
+Should an `/activate/` throw any non 200 responses, the Rehive platform will treat the activation as failed and disable the service user and token it created for that activation.
 
 #### /deactivate/
 
@@ -56,7 +56,7 @@ The deactivate message will include the following data:
 When an deactivate message is received the extension can perform any deactivation steps it needs in order to disable the extension. Normally this deactivation is a "soft disable" so that the extension can be reactivated at a later date without any issues.
 
 <aside class="notice">
-	There is a pending proposal to support an additional `purge` flag in the deactivate call that will instruct a extension to pruge its data.
+	There is a pending proposal to support an additional `purge` flag in the deactivate call that will instruct a extension to purge its data.
 </aside>
 
 ## Optional endpoints
