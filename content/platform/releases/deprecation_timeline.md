@@ -18,6 +18,16 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
+{{< link-heading "h4" "2021-06-08" >}}
+
+*Added on 2021-03-11*
+
+1. Remove the `email` and `mobile` fields from the `partner` object on user section transaction endpoints.
+	- The `email` and `mobile` have been replaced by a generic `identifier` field that contains who the user sent/recived funds from.
+	- Clients should prefer the following prioritization when showing partner transaction user info: `first_name` or `last_name`, `username`, `identifier`, `id`.
+
+---
+
 {{< link-heading "h4" "2021-05-18" >}}
 
 *Added on 2021-02-16*
@@ -25,16 +35,6 @@ This timeline indicates dates at which certain functionality will be permanently
 1. Remove the ability to change the status of transactions that have executed. Executed transactions are those with a status of `Complete` or `Failed`.
 	- This can be tested before the final date by changing the `immutable_transactions` boolean to `true`.
 2. Remove the `immutable_transactions` boolean on the company object. Going forward this behaviour will be required.
-
----
-
-{{< link-heading "h4" "2021-05-18" >}}
-
-*Added on 2021-03-11*
-
-1. Remove the `email` and `mobile` fields from the `partner` object on user section transaction endpoints.
-	- The `email` and `mobile` have been replaced by a generic `identifier` field that contains who the user sent/recived funds from.
-	- Clients should prefer the following prioritization when showing partner transaction user info: `first_name` or `last_name`, `username`, `identifier`, `id`.
 
 ---
 
