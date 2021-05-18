@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-05-18" >}}
+
+1. Removed the `immutable_transactions` field in company settings as per the deprecation timeline.
+2. Removed support for mutable failed/complete transactions as per the deprecation timeline.
+3. 
+---
+
 {{< link-heading "h4" "2021-04-14" >}}
 
 1. Added two new webhook events for currency resources:
