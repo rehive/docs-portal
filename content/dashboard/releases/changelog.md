@@ -9,6 +9,26 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-05-21" >}}
+
+**Changes:**
+
+- Removed defunct "Allow multiple addresses per user" setting in Bitcoin extensions. That setting is now default behavior in the extensions.
+
+---
+
+{{< link-heading "h4" "2021-05-14" >}}
+
+**Changes:**
+
+- Added a link to the help center in the Conversion Extension.
+- Added a link to a help center article in the Mass Send Extension.
+- Added a new video on the Get Started page giving an overview of Rehive's product.
+- Added an app id label to the Dashboard header.
+- Updated the Weekly Demo icon on the Get Started page.
+
+---
+
 {{< link-heading "h4" "2021-05-12" >}}
 
 **Changes:**
