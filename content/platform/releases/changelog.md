@@ -9,11 +9,20 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-05-24" >}}
+
+1. Added new `recon` boolean field on account and account definitions.
+    - This field can be used to identify accounts that have record external account information and should not be used for internal totals.
+2. Added new filters on transactions and accounts for the `recon` field.
+3. Updated currency overviews to only give an overview on accounts with a `recon` value of `false`.
+
+---
+
 {{< link-heading "h4" "2021-05-18" >}}
 
 1. Removed the `immutable_transactions` field in company settings as per the deprecation timeline.
 2. Removed support for mutable failed/complete transactions as per the deprecation timeline.
-3. 
+
 ---
 
 {{< link-heading "h4" "2021-04-14" >}}
