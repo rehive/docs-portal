@@ -9,6 +9,20 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-05-26 - 2.0.0" >}}
+
+This was a major update that included the following:
+- Products/Cart: updated listing layout, improved detail view, new cart header layout with cart switching and seller filter chip, filter by seller, smarter logic around deleting last item from cart
+- Checkout: new multistep checkout flow, checkout cart with slide to delete, add seller info to products,
+- Orders: New orders layout, new order details view, multi-product order view
+- Profile: reworked profile overview page, updated design on all pages, improvements to documents upload flow specifically for multi-image uploads, slide to delete on lists, helper modal with icon descriptions
+- Settings: updated design on all pages, improved devices permission request
+- Rewards: updated listing layout
+- Requests: request activity now lists all currencies, support for blank requests with any amount, multi-currency request paying
+- General: updated Toast component across the app
+
+---
+
 {{< link-heading "h4" "2021-02-11 - 1.37.0" >}}
 
 **Features:**
