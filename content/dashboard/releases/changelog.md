@@ -9,6 +9,27 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-06-01" >}}
+
+**Changes:**
+
+- Updated the billing page. Removed hosting options and update pricing.
+
+---
+
+{{< link-heading "h4" "2021-05-31" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where the expression field appeared to be blank until clicked on after an admin added a reward template.
+
+**Changes:**
+
+- An admin's app id is now displayed on the 2FA page as well as a log out button.
+- Admins can now set a default operational account for the Conversion Extension and the Rewards Extension, with the option of selecting a different operational account per conversion pair or reward campaign.
+
+---
+
 {{< link-heading "h4" "2021-05-21" >}}
 
 **Changes:**
