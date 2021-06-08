@@ -9,6 +9,21 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-06-08" >}}
+
+
+**Changes:**
+
+- App config has moved from the company settings into the App Extension.
+- Added messages and links letting admins know that the app/JSON config has moved and where they can find its new location.
+- By default, transactions in recon accounts will not display on the transactions listing page or on the transaction stats page. Admins can set filters to either include recon account transactions or show only recon account transactions.
+
+**New features:**
+
+- The ability to tag an account as a "recon" account has been added to the Dashboard. These accounts are a representation of an external account in Rehive. An individual user account, standalone account, or entire account definition can be set as recon.
+
+---
+
 {{< link-heading "h4" "2021-06-01" >}}
 
 **Changes:**
