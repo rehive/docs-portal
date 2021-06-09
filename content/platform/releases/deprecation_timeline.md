@@ -18,7 +18,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
-{{< link-heading "h4" "2021-06-08" >}}
+{{< link-heading "h4" "2021-06-15" >}}
 
 *Added on 2021-03-11*
 
