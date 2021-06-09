@@ -11,7 +11,7 @@ This timeline indicates dates at which certain functionality will be permanently
 
 {{< link-heading "h4" "2021-12-09" >}}
 
-*Added on 2021-04-13*
+*Added on 2021-06-09*
 
 1. Remove the old MFA endpoints and functionality.
 	- This has been replaced by the new `authenticator-rule`, `authenticator` and `authenticator-challenge` resources and functionality.
