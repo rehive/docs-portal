@@ -9,6 +9,31 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-06-10" >}}
+
+1. Added a new API interface for handling multi-factor authentication via a new `authenticators` resource.
+    - Authenticators are now added/listed on the `/3/auth/mfa/authenticators/` endpoint.
+    - Authenticators are verified using the same `/3/auth/mfa/verify/` endpoint but an additional `authenticator` field must be specified to verify a specific authenticator.
+    - Authenticator `token`s can be delivered (if supported by the authenticator) via the `/3/auth/mfa/deliver/` endpoint. An `authenticator` must be specified.
+    - There are three types of authenticators: `static`, `totp`, and `sms`.
+    - The new `static` type can be used as MFA recovery codes. It generates a list of "single user" tokens that can be used instead of another authenticator.
+3. Updated existing MFA devices to function within the new `authenticator` resource.
+    - This change is backwards compatible although the old endpoints and MFA functionality will be deprecated and removed according to the deprecation timeline.
+5. Added a new `authenticator-rule` resource that can be used to define how MFA works on a company.
+    - Rules can be defined to trigger on `authentication` or `authorization`.
+    - Rules can be configured to trigger `permanent`, `durable` or `ephemeral` challenges.
+    - Rules can be configured on specific `group`s.
+    - Rules can be configured to only trigger on a specific `session_age`.
+7. Added a new `authenticator-challenge` resource that represents individual MFA challenges to a user session.
+    - Challenges are thrown as errors on requests and included in the `data` of the response under a `challenge` property.
+    - Challenges are returned on login (authentication) endpoints under a `challenge` property.
+    - Challenges can be durable or ephemeral. Ephemeral challenges are single use challenges that can only be used once for access to a specific permission level resource.
+    - Challenges are verfiied via `/3/auth/mfa/verify/` but an additional `challenge` field must be specified to verify a specific challenge.
+    - Challenge `token`s can be delivered (if supported by the challenge) via the `/3/auth/mfa/deliver/` endpoint. An `challenge` must be specified."
+    - Ephemeral challenges, once verified, must be included in the `Verified-Challenge` header of the follow up request to access the endpoint that originally triggered the challenge.
+
+---
+
 {{< link-heading "h4" "2021-05-24" >}}
 
 1. Added new `recon` boolean field on account and account definitions.
