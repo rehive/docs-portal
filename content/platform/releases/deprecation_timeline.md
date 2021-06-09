@@ -9,6 +9,18 @@ This timeline indicates dates at which certain functionality will be permanently
 
 ---
 
+{{< link-heading "h4" "2021-12-09" >}}
+
+*Added on 2021-04-13*
+
+1. Remove the old MFA endpoints and functionality.
+	- This has been replaced by the new `authenticator-rule`, `authenticator` and `authenticator-challenge` resources and functionality.
+	- Remove auth endpoints: `/3/auth/mfa/`, `/3/auth/mfa/token/`, `/3/auth/mfa/sms/`, `/3/auth/mfa/sms/send/`.
+        - Remove admin endpoints:  `/3/admin/users/<id>/mfa/`, `/3/admin/users/<id>/mfa/sms/`, `/3/admin/users/<id>/token/`.
+	- Remove `mfa` from the post login (authentication) responses.
+ 	
+---
+
 {{< link-heading "h4" "2021-07-13" >}}
 
 *Added on 2021-04-13*
