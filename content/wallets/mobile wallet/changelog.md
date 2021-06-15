@@ -9,8 +9,44 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-06-15 - 2.2.2" >}}
+
+**Features:**
+- Withdraw `infoMessage`
+
+---
+
+{{< link-heading "h4" "2021-06-15 - 2.2.1" >}}
+
+**Features:**
+- Currency icons pull from platform if available else fallback to hardcode
+
+---
+
+{{< link-heading "h4" "2021-06-08 - 2.2.0" >}}
+
+**Features:**
+- Updated app config to pull from app service instead of off company object
+
+---
+
+{{< link-heading "h4" "2021-06-04 - 2.1.0" >}}
+
+**Features:**
+- Added basic wyre widget
+
+---
+
+{{< link-heading "h4" "2021-05-30 - 2.0.1-7" >}}
+
+**Fixes and UI improvements:**
+- Various bug fixes and improvements including: primary help text change, onboarding skip bug, tiers not showing in profile, pay screen back button padding
+
+---
+
 {{< link-heading "h4" "2021-05-26 - 2.0.0" >}}
 
+**Features:**
 This was a major update that included the following:
 - Products/Cart: updated listing layout, improved detail view, new cart header layout with cart switching and seller filter chip, filter by seller, smarter logic around deleting last item from cart
 - Checkout: new multistep checkout flow, checkout cart with slide to delete, add seller info to products,
