@@ -9,6 +9,54 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-06-08 - 2.3.2" >}}
+
+**Features:**
+- Currency icons pull from platform if available else fallback to hardcode
+
+**Fixes:**
+- Withdraw config `infoMessage` config location
+
+---
+
+{{< link-heading "h4" "2021-06-08 - 2.3.1" >}}
+
+**Features:**
+- Added max button to amount inputs
+
+---
+
+{{< link-heading "h4" "2021-06-08 - 2.3.0" >}}
+
+**Features:**
+- Updated profile section with new design/layout and improved features
+
+---
+
+{{< link-heading "h4" "2021-06-08 - 2.2.0" >}}
+
+**Features:**
+- Updated app config to pull from app service instead of off company object
+
+---
+
+{{< link-heading "h4" "2021-05-12 - 2.1.1-6" >}}
+
+**Design improvements and bug fixes:**
+- Various fixes and design updates
+
+---
+
+{{< link-heading "h4" "2021-04-06 - 2.1.0" >}}
+
+**Features:**
+- Product management screen with a bunch of new components
+
+**Design improvements and bug fixes:**
+- Various fixes and design updates
+
+---
+
 {{< link-heading "h4" "2021-02-11 - 2.0.84" >}}
 
 **Features:**
