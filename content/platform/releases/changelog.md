@@ -7,6 +7,15 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h4" "2021-06-22" >}}
+
+1. Performance improvements on the transaction listing endpoints and cursor pagination.
+2. Performance improvements on the request listing endpoints and cursor pagination.
+3. Fixes for the request logging to prevent 500 error on some types of malformed JSON.
+
 ---
 
 {{< link-heading "h4" "2021-06-10" >}}
