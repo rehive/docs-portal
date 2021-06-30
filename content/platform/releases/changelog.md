@@ -7,6 +7,12 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h4" "2021-06-30" >}}
+
+1. Fixed a bug which resulted in some limits sometimes not getting correctly included in transaction checks (when multiple limits were configured for the same type, account and currency).
+2. Fixed a bug where a 500 error could be returned instead of a 403 error when a user was logged out mid-session (and the user has multi-factor authentication enabled). 
 
 ---
 
