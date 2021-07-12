@@ -9,6 +9,75 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-07-12" >}}
+
+**Changes:**
+
+- Added links to the documentation to the main extensions in the Dashboard.
+
+---
+
+{{< link-heading "h4" "2021-07-08" >}}
+
+**Changes:**
+
+- Adjusted the spacing of the previous and next buttons at the bottom of the transactions listing page.
+
+---
+
+{{< link-heading "h4" "2021-07-07" >}}
+
+**Changes:**
+
+- Implemented cursor pagination on the transactions listing page and request logs.
+- Added commas to long numbers throughout the Dashboard to make them easier to read.
+
+**New features:**
+
+- In the Stellar extensions, we have added prelisted assets so that admins can easily add a known Stellar asset to their extension. USDC will be the first asset available to add.
+
+---
+
+{{< link-heading "h4" "2021-07-01" >}}
+
+**Bug fixes:**
+
+- Updated text in Stellar Testnet Hot Wallet onboarding from XLM to TXLM.
+- Changes references to "Lumens" to "lumens" in the Stellar testnet and livenet onboardings.
+- Fixed various copy errors in Stellar Extensions.
+
+**New features:**
+
+- Added an onboarding feature to the Stellar Extensions (testnet and livenet) so that users have a guided way to set up their hot wallet and warm storage accounts.
+
+---
+
+{{< link-heading "h4" "2021-06-24" >}}
+
+**Changes:**
+
+- Updated the link to the Rehive privacy policy on the register page.
+
+---
+
+{{< link-heading "h4" "2021-06-23" >}}
+
+**Changes:**
+
+- Updated various archive warning messages to be more explicit.
+- Added Hot Wallet Onboarding to the Bitcoin Extensions.
+
+---
+
+{{< link-heading "h4" "2021-06-17" >}}
+
+**Changes:**
+
+- Removed auto-funding transactions from the Sandbox template.
+- On login, the Dashboard no longer calls endpoints which require MFA before MFA is verified.
+
+---
+
 {{< link-heading "h4" "2021-06-08" >}}
 
 
