@@ -12,10 +12,4 @@ The extension allows you to:
 1. Configure notifications
 2. Send email notifications
 3. Send SMS notifications
-4. Control whether users can disable notifications.
-
-<aside class="warning">
-	The following features have not yet been added:
-</aside>
-
-1. Push notifications
+4. Send Push notifications in android/iOS wallets (chat to support about getting this enabled)
