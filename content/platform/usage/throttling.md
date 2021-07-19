@@ -25,8 +25,8 @@ In addition to sustained (hourly throttles), The platform API also throttles on 
 Name| user | admin | Condition
 ---|---|---|---
 restricted | 0/min | 0/min | Only the company owner can access the API.
-limited | 100/min | 200/min | -
-standard | 150/min | 250/min | -
+limited | 150/min | 200/min | -
+standard | 200/min | 250/min | -
 extended | 500/min | 1000/min | -
 
 <aside class="notice">
