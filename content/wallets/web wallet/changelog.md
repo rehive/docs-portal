@@ -9,6 +9,62 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-07-29 - 2.5.2" >}}
+
+**Fixes:**
+- Decoupled checkout flow from app's auth system and other checkout related fixes
+
+---
+
+{{< link-heading "h4" "2021-07-28 - 2.5.1" >}}
+
+**Fixes:**
+- Withdraw add bank acc bug
+
+---
+
+{{< link-heading "h4" "2021-07-27 - 2.5.0" >}}
+
+**Features:**
+- Switched to single app hosting with client switching based on app domain
+
+---
+
+{{< link-heading "h4" "2021-07-06>24 - 2.4.1-6" >}}
+
+**Fixes:**
+- styling on currency selector
+- amount input bug
+- autoselect to autocomplete
+- payments Invoice label
+- refund on success
+- Made avatar user group icon color white and fixed styling
+- add: checkout/defaultPaymentMethod config
+
+---
+
+{{< link-heading "h4" "2021-07-05 - 2.4.0" >}}
+
+**Features:**
+- Reworked Settings screen / updated design
+
+---
+
+{{< link-heading "h4" "2021-06-08 - 2.3.2-8" >}}
+
+**Features:**
+- Add: bank branch address to deposit details
+- New Toast layout
+
+**Fixes:**
+- recipient buttons not showing for email/mobile
+- onboarding skips after mobile
+- public pages loading
+- empty toast messages in profile
+- withdraw infoMessage bug
+
+---
+
 {{< link-heading "h4" "2021-06-08 - 2.3.2" >}}
 
 **Features:**
