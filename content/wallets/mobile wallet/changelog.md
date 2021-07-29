@@ -9,6 +9,23 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-07-29 - 2.4.0" >}}
+
+**Features:**
+- Withdraw: updated design incl. new account selectors, native numpad, new confirm/result layout, improved limit and fee handling
+- Deposit: updated design
+- Buy/Sell: add new flows to crypto wallets to perform/buy sell
+
+---
+
+{{< link-heading "h4" "2021-07-07 - 2.3.0" >}}
+
+**Features:**
+- Send: updated design incl. native numpad, new confirm/result layout, improved limit and fee handling
+- Request: updated design incl. new activity list, native numpad, new confirm/result layout
+
+---
+
 {{< link-heading "h4" "2021-06-15 - 2.2.2" >}}
 
 **Features:**
