@@ -9,6 +9,51 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-08-05" >}}
+
+**Bug fixes:**
+
+- Fixed styling issue on the Account Definitions listing page where Restore links incorrectly had a background color.
+
+**Changes:**
+
+- Recon accounts have been moved out of the User accounts and Standalone accounts listing pages, and instead into their own Recon listing page. This page also contains a link to the Rehive Help Center with articles about how Recon accounts work.
+- Conversion pairs are no longer automatically created from selected currencies during onboarding. All conversion pairs will have to be added manually in the Conversion Extension.
+- Admins can now choose which Account Definitions to add a currency to when adding a new currency to their company.
+
+**New features:**
+
+- Added the Wyre and Wyre Testnet Extension UIs.
+- New fields (title, marital status, father's name, mother's name, and central bank number) have been added to the Basic Info section on the user details page, and these same fields can be used as tier requirements. 
+- A new category of document has been added - Proof of Income. Under this category are 3 different document types which are classified as Proof of Income: payslip, employment letter, and financial statement. This document category has also been added as an option on tier requirements so that admins can require verified proof of income.
+
+---
+
+{{< link-heading "h4" "2021-07-28" >}}
+
+**Bug fixes:**
+
+- Fixed issue where incorrect error was display when app name was too short.
+
+**Changes:**
+
+- Rehive's onboarding has been streamlined. The Sandbox landing page has been removed, app name was moved from the branding page to the registration page, and app ids generated from app name now.
+- Several small styling adjustments have been made to the Stellar and Bitcoin onboardings.
+
+**New features:**
+
+- Warm Storage onboarding for the Bitcoin and Bitcoin testnet extensions is now live.
+
+---
+
+{{< link-heading "h4" "2021-07-20" >}}
+
+**Bug fixes:**
+
+- Fixed an issue when editing a product, where trying to edit the quantity of a variant it would not correctly send through the entered quantity.
+
+---
+
 {{< link-heading "h4" "2021-07-12" >}}
 
 **Changes:**
