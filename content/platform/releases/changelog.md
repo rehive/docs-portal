@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-08-03" >}}
+
+1. Added new document categories: `proof_of_identity`, `proof_of_income`.
+2. Added new document types:  `payslip`, `employment letter` and `financial_statement`.
+3. Added new gender, title, `marital status`, `central_bank_number`, `fathers_name`, `mothers_name` to the user resources.
+4. Updated tier requirement to handle new document types, categories and user resource fields.
+
+---
+
 {{< link-heading "h4" "2021-06-30" >}}
 
 1. Fixed a bug that resulted in some limits sometimes not getting correctly included in transaction checks (when multiple limits were configured for the same type, account and currency).
