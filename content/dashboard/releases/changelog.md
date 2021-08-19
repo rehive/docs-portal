@@ -9,6 +9,37 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-08-19" >}}
+
+**Bug fixes:**
+
+- Dashboard now displays the correct error when an admin attempts to add a user with an email address that already exists in the system.
+
+---
+
+{{< link-heading "h4" "2021-08-13" >}}
+
+**Bug fixes:**
+
+- Fixed redirection issue where admins would be redirected back to the currencies page after first login.
+
+**Changes:**
+
+- Added Swagger UI doc links to actively supported extensions.
+
+---
+
+{{< link-heading "h4" "2021-08-13" >}}
+
+**Changes:**
+
+- Added a new app config section in the Business Extension which allows admins to select which business onboarding sections should display in the app. Admins can also set section title and section text for all business onboarding sections.
+- Added gender to the user details page under the basic info section. Gender has also been added as a tier requirement option.
+- Admins can now easily view the issuance date of a proof of identity document when viewing a user's proof of identity document.
+- The Business Extension UI has been revamped. Businesses are now displayed and edited on their own page. Admins can also manage documents uploaded to the business.
+
+---
+
 {{< link-heading "h4" "2021-08-05" >}}
 
 **Bug fixes:**
