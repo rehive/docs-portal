@@ -9,6 +9,18 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-09-14" >}}
+
+1. Added new user metrics: `user_count` and `user_active_count`.
+2. Added new metric filters: `slug` and `slug__in`.
+3. Added new handling of `section` logic for metrics that should only work on certain sections.
+4. Added new managed currencies:
+    - Currencies can now include an optional `manager` field that can be populated with a user.
+    - Currencies that have an attached manager can only be executed (to `complete` of `failed`) by the manager.
+    - These currencies can be used when a 3rd party integration/service should be repsosible for a currencies execution.
+
+---
+
 {{< link-heading "h4" "2021-08-03" >}}
 
 1. Added new document categories: `proof_of_identity`, `proof_of_income`.
