@@ -9,6 +9,48 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-09-015" >}}
+
+**Bug fixes:**
+
+- The Dashboard now shows when a currency is archived in a user account.
+
+**Changes:**
+
+- Admins can now archive user accounts which are not controlled by an account definition.
+- Added a link to a user's business (if they have one) on the user details page.
+- Added a currency limit to onboarding. During onboarding only 5 fiat currencies may be selected.
+- After creating a token, admins will explicitly have to close the modal displaying their token. This was changed to prevent accidental modal closures by clicking anywhere outside of the modal.
+- The login screen has been updated. Admins will now see the last 3 apps they have logged into and can click on these to automatically populate their app id, making it easier to login.
+
+---
+
+{{< link-heading "h4" "2021-09-06" >}}
+
+**Changes:**
+
+- Updated transactions listing and transaction history modal to improved how we show when a user is temporary and when a transaction went to or came from a standalone account.
+- Updated the subtype controls pages to sort the controls by subtype name instead of subtype label.
+
+---
+
+{{< link-heading "h4" "2021-09-01" >}}
+
+- Added metadata and note fields to the business document modal in the Business Extension.
+- Fixed the display of the document type on the business view page and the business document modal.
+
+---
+
+{{< link-heading "h4" "2021-08-26" >}}
+
+**Changes:**
+
+- Admins can now credit searched-for accounts directly from the search result popdown.
+- Added new fields to the user basic info and tier requirements: grandfather's name and grandmother's name.
+- Renamed the settings page in Transactions to Global subtype controls.
+
+---
+
 {{< link-heading "h4" "2021-08-19" >}}
 
 **Bug fixes:**
