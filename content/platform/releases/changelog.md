@@ -9,6 +9,12 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-09-22" >}}
+
+1. Migrated all platform file storage to a Google Storage bucket (files will no longer be sources from an Amazon S3 bucket).
+
+---
+
 {{< link-heading "h4" "2021-09-14" >}}
 
 1. Added new user metrics: `user_count` and `user_active_count`.
