@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-09-27" >}}
+
+1. Added new endpoints and fee functionality for attaching fees to groups (in addition to the existing account currency and group tier fees)
+2. Added fee caching and building that uses a "named" fee hierarchy that applies to group fees as well as the original 2 types of fees.
+
+---
+
 {{< link-heading "h4" "2021-09-22" >}}
 
 1. Migrated all platform file storage to a Google Storage bucket (files will no longer be sources from an Amazon S3 bucket).
