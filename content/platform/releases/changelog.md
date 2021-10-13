@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-10-13" >}}
+
+1. Added a new wallet-accounts resource and added endpoints for accessing and managing them.
+2. Fixed a bug in schema generation that resulted in duplicate operation IDs in the swagger schema.
+
+---
+
 {{< link-heading "h4" "2021-09-27" >}}
 
 1. Added new endpoints and fee functionality for attaching fees to groups (in addition to the existing account currency and group tier fees)
