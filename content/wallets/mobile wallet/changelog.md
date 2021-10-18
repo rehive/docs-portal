@@ -9,6 +9,27 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-10-13 - 2.7.0" >}}
+
+**Features:**
+- Mobile Point of Sale: create sales (quick invoices) for verified business users
+
+---
+
+{{< link-heading "h4" "2021-09-29 - 2.6.0" >}}
+
+**Features:**
+- Account filters and export: added various transaction list filters and the ability to create exports
+
+---
+
+{{< link-heading "h4" "2021-08-10 - 2.5.0" >}}
+
+**Features:**
+- User onboarding: users will be presented with an onboarding flow prompting them to enter certain information based on tier requirements 
+
+---
+
 {{< link-heading "h4" "2021-07-29 - 2.4.0" >}}
 
 **Features:**
