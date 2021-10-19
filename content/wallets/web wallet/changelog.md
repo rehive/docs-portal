@@ -9,6 +9,199 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-10-18 - 2.10.4" >}}
+
+**Fixes**
+- Missing/incorrect text field labels
+
+---
+
+{{< link-heading "h4" "2021-10-14 - 2.10.3" >}}
+
+**Fixes**
+- Withdrawal new bank account labels
+- Removed reason label from refund invoice modal
+
+---
+
+{{< link-heading "h4" "2021-10-14 - 2.10.2" >}}
+
+**Fixes**
+- Featured products display issue
+- Support for account reference on currency cards
+
+---
+
+{{< link-heading "h4" "2021-10-12 - 2.10.1" >}}
+
+**Fixes**
+- Cater for no buy/sell options
+- Updated mass send condition logic to use business service settings groups
+
+---
+
+{{< link-heading "h4" "2021-10-11 - 2.10.0" >}}
+
+**Features:**
+- Complete buy flow
+- Sell flow
+- User orders design rework
+
+**Fixes**
+- Homepage improvements
+
+---
+
+{{< link-heading "h4" "2021-09-24 - 2.9.5" >}}
+
+**Features:**
+- Replaced the send input with the smart recipient input
+
+---
+
+{{< link-heading "h4" "2021-09-24 - 2.9.4" >}}
+
+**Fixes:**
+- Updated Point of Sale to use the Payment Request Service
+
+---
+
+{{< link-heading "h4" "2021-09-22 - 2.9.2" >}}
+
+**Features:**
+- Wyre buy functionality
+
+---
+
+{{< link-heading "h4" "2021-09-22 - 2.9.0" >}}
+
+**Features:**
+- Products design rework
+- Products checkout rework
+
+---
+
+{{< link-heading "h4" "2021-09-15>21 - 2.8.4-7" >}}
+
+**Fixes:**
+- Online checkout fixes
+- Removed manifest.json info
+- Change manifest colors
+
+---
+
+{{< link-heading "h4" "2021-09-10 - 2.8.3" >}}
+
+**Fixes:**
+- Removed QR encoding
+
+---
+
+{{< link-heading "h4" "2021-09-08 - 2.8.2" >}}
+
+**Fixes:**
+- Stellar underpaid handling
+
+---
+
+{{< link-heading "h4" "2021-09-08 - 2.8.1" >}}
+
+**Fixes:**
+- Online checkout improvements
+
+**Features:**
+- Invoice refunds
+
+---
+
+{{< link-heading "h4" "2021-09-02 - 2.7.3" >}}
+
+**Fixes:**
+- MFA OTP QR url encoding
+- Loading issue on invoice create if business does not exist
+- Empty invoice currency dropdown options
+- Divisibility rounding issue
+
+---
+
+{{< link-heading "h4" "2021-08-31 - 2.7.1-2" >}}
+
+**Fixes:**
+- Moved finances to its own section
+- Incorporated fees into max amount calculation
+
+---
+
+{{< link-heading "h4" "2021-08-30 - 2.7.0" >}}
+
+**Features:**
+- Profile tier linking
+- Profile field updates
+- Business settings updates
+- Shareholders section
+- Various minor bug fixes
+
+---
+
+{{< link-heading "h4" "2021-08-26>30 - 2.6.7-11" >}}
+
+**Fixes:**
+- Reset password submission issue
+
+---
+
+{{< link-heading "h4" "2021-08-26 - 2.6.6" >}}
+
+**Fixes:**
+- Grandmother and grandfather fields (onboarding only)
+- Linked lang file usage in onboarding
+
+---
+
+{{< link-heading "h4" "2021-08-26 - 2.6.5" >}}
+
+**Fixes:**
+- Added missing onboarding local strings
+
+---
+
+{{< link-heading "h4" "2021-08-11>26 - 2.6.2-4" >}}
+
+**Fixes:**
+- Issues around adding a mobile number
+- Switched to saving business docs via business service
+- Switched to using a new QR code library
+- Moved locale logic to a context model
+- Support to disable tracking/analytics
+
+---
+
+{{< link-heading "h4" "2021-08-11 - 2.6.1" >}}
+
+**Fixes:**
+- Responsive fixes
+- Favicon switching when changing companies
+
+---
+
+{{< link-heading "h4" "2021-08-10 - 2.6.0" >}}
+
+**Features:**
+- Merged user and business onboarding 
+- Added new fields and sections to onboarding
+
+---
+
+{{< link-heading "h4" "2021-07-30 - 2021-08-04 - 2.5.3-7" >}}
+
+**Fixes:**
+- Incorrect underpaid bitcoin checkout handling
+- Company page header icon to color
+- Fetch grey-label config from wallet service
+- Changes to hide action logic
+
+---
+
 {{< link-heading "h4" "2021-07-29 - 2.5.2" >}}
 
 **Fixes:**
