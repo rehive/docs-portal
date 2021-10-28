@@ -9,7 +9,75 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "2021-09-015" >}}
+{{< link-heading "h4" "2021-10-28" >}}
+
+**Changes:**
+
+- Added bank id to the bank account detail view on the user details page.
+
+---
+
+{{< link-heading "h4" "2021-10-25" >}}
+
+**Bug fixes:**
+
+- Fixed issue where USDC could be added twice during onboarding. (Hotfix)
+- Moved Ethereum currency from fiat currencies to cryptocurrencies during onboarding.
+
+**Changes:**
+
+- Updated Mass Send Extension to use the admin endpoint. Admins can now also see a history of Mass Sends they have done.
+
+---
+
+{{< link-heading "h4" "2021-10-14" >}}
+
+**Bug fixes:**
+
+- Fixed issue where product settings manager groups was calling the incorrect API endpoint.
+
+---
+
+{{< link-heading "h4" "2021-10-12" >}}
+
+**Changes:**
+
+- Removed functionality where a change of status of a Proof of Identity document also changed the user's user status.
+
+---
+
+{{< link-heading "h4" "2021-10-04" >}}
+
+**Changes:**
+
+- Added logs to individual user document view modal.
+- Removed the menu hover effect on user accounts.
+- Updated onboarding to allow the selection of more cryptocurrencies and a stablecoin. Admins can now also change their generated app id.
+- Moved app config product settings from App Extension app config general settings to the Product Extension settings.
+
+---
+
+{{< link-heading "h4" "2021-09-27" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the message displaying that there were no currencies in an account was aligned incorrectly.
+
+---
+
+{{< link-heading "h4" "2021-09-22" >}}
+
+**Bug fixes:**
+
+- Fixed issue on the login page where long company descriptions would display out of bounds.
+
+**Changes:**
+
+- When creating a new credit transaction, an admin must now first select account instead of currency. The account selected will determine which currencies are available to use.
+
+---
+
+{{< link-heading "h4" "2021-09-15" >}}
 
 **Bug fixes:**
 
@@ -35,6 +103,8 @@ Summary of additions and changes to the Rehive Dashboard.
 ---
 
 {{< link-heading "h4" "2021-09-01" >}}
+
+**Changes:**
 
 - Added metadata and note fields to the business document modal in the Business Extension.
 - Fixed the display of the document type on the business view page and the business document modal.
