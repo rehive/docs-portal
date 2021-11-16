@@ -9,6 +9,29 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-11-16" >}}
+
+1. Fixed a bug where archived accounts could result in odd "duplicate error" validation errors when creating transactions.
+2. Improved resourc elisting and filtering eprformance on some resources: challenges, authentication rules.
+
+---
+
+{{< link-heading "h4" "2021-11-05" >}}
+
+1. Final removal of the `kyc` field on the user resource (as per the deprecation timeline).
+2. Final removal of the `email` and `mobile` fields on the partner resource within a transaction (as per the deprecation timeline).
+3. Added a new `archived` filter on the admin account list endpoint.
+
+---
+
+{{< link-heading "h4" "2021-10-27" >}}
+
+1. Increased the size of the webhook condition.
+2. Fixed a bug in TOTP MFA when generating OTP URLs using a user that has no email address.
+3. Added a `metadata` field to all bank account resources.
+
+---
+
 {{< link-heading "h4" "2021-10-13" >}}
 
 1. Added a new wallet-accounts resource and added endpoints for accessing and managing them.
