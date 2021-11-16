@@ -11,8 +11,8 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 {{< link-heading "h4" "2021-11-16" >}}
 
-1. Fixed a bug where archived accounts could result in odd "duplicate error" validation errors when creating transactions.
-2. Improved resourc elisting and filtering eprformance on some resources: challenges, authentication rules.
+1. Fixed a bug where archived accounts could result in an odd "duplicate" validation error when creating transactions.
+2. Improved resource listing and filtering performance on some resources: challenges, authentication rules.
 
 ---
 
