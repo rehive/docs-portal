@@ -9,6 +9,12 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-11-26" >}}
+
+1. Fixed a bug in idempotency handling where requests were not getting treated as unique through a combination of the `key`, `method` and URL and instead were unique  based on only the `key`.
+
+---
+
 {{< link-heading "h4" "2021-11-16" >}}
 
 1. Fixed a bug where archived accounts could result in an odd "duplicate" validation error when creating transactions.
