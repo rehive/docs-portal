@@ -84,7 +84,7 @@ Once you have your own user you can replace the placeholder data in the example 
 And there you have it, a successful login! The user was validated and authenticated on the platform and an authentication `token` returned.
 
 <aside class="warning">
-    The platform login endpoint is intended for anonymous unauthenticated users and is therefore subject to strict throttling, rate limiting and bot protection rules. If you want to login a user in a "machine user" or service context you should instead use the admin authenticated login endpoint `/3/admin/auth/login/`, which requires an admin user's token to be included in the `Authorization` header.
+    The platform login endpoint is intended for anonymous unauthenticated users and is therefore subject to strict throttling, rate limiting and bot protection rules. If you want to login a user from a "machine user" or service context you should instead use the admin authenticated login endpoint <code>/3/admin/auth/login/</code>, which requires an admin user's token to be included in the <code>Authorization</code> header.
 </aside>
 
 Usin the token returned in the login response you can perform actions, as that user, on endpoints that require authentication. For example, you may want to get a list of emails associated to a user:
