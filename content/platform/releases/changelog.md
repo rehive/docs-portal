@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h4" "2021-11-30" >}}
+
+1. Added admin authenticated login and register endpoints. These endpoints should be used by machine users and services that require access to login and register but should not be impacted by user throttles, rate limiting, bot protection, and other rules that apply to unauthenticated (anonymous) users.
+    - `/3/admin/auth/login/` - An admin token must be included in the `Authorization` header.
+    - `/3/admin/auth/register/` - An admin token must be included in the `Authorization` header.
+
+---
+
 {{< link-heading "h4" "2021-11-26" >}}
 
 1. Fixed a bug in idempotency handling where requests were not getting treated as unique through a combination of the `key`, `method` and URL and instead were unique  based on only the `key`.
