@@ -81,13 +81,13 @@ Once you have your own user you can replace the placeholder data in the example 
 }
 ```
 
-And there you have it, a successful login. The user was validated and authenticated on the platform and an authentication `token` returned.
+And there you have it, a successful login! The user was validated and authenticated on the platform and an authentication `token` returned.
 
-<aside class="notice">
-    Hang on to that authentication <code>token</code> though, as you can now use that <code>token</code> to make subsequent requests on authorization restricted endpoints.
+<aside class="warning">
+    The platform login endpoint is intended for anonymous unauthenticated users and is therefore subject to strict throttling, rate limiting and bot protection rules. If you want to login a user in a "machine user" or service context you should instead use the admin authenticated login endpoint `/3/admin/auth/login/`, which requires an admin user's token to be included in the `Authorization` header.
 </aside>
 
-For example, you may want to get a list of emails associated to the user:
+Usin the token returned in the login response you can perform actions, as that user, on endpoints that require authentication. For example, you may want to get a list of emails associated to a user:
 
 ``` sh
 curl https://api.rehive.com/3/user/emails/
