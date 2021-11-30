@@ -5,11 +5,11 @@ description: Platform deprecation timeline.
 weight: 1
 ---
 
-This timeline indicates dates at which certain functionality will be permanently removed from the Rehive platform. Anything listed here should be regarded as deprecated and will only be supported up to the date indicated in the timeline.
+This timeline indicates dates at which certain functionality will be permanently removed from the Rehive platform. Anything listed here is deprecated and will be supported up to the date indicated in the timeline.
 
----
+### Deprecated
 
-{{< link-heading "h4" "2021-12-09" >}}
+{{< link-heading "h4" "2022-02-01" >}}
 
 *Added on 2021-06-09*
 
@@ -18,8 +18,9 @@ This timeline indicates dates at which certain functionality will be permanently
 	- Remove auth endpoints: `/3/auth/mfa/`, `/3/auth/mfa/token/`, `/3/auth/mfa/sms/`, `/3/auth/mfa/sms/send/`.
 	- Remove admin endpoints:  `/3/admin/users/<id>/mfa/`, `/3/admin/users/<id>/mfa/sms/`, `/3/admin/users/<id>/token/`.
 	- Remove `mfa` from the post login (authentication) responses.
- 	
----
+
+
+### Removed
 
 {{< link-heading "h4" "2021-07-13" >}}
 
