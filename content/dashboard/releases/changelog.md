@@ -9,6 +9,55 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2021-11-29" >}}
+
+**Bug fixes:**
+
+- Fixed issue where attempting to edit notifications with PRS events did not work. (Hotfix)
+
+**Changes:**
+
+- Added help text to the App Extension settings page for app domains. Renamed the App domains listing section. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2021-11-26" >}}
+
+**Changes:**
+
+- Added editable metadata to user documents.
+- Added new Payment Request Extension notification events. Admins can now create notifications which are triggered by Payment Request Extension events.
+- Added a seller section to the view business page. Admins can now approve a seller associated with a business on the same page that they verify the business.
+
+---
+
+{{< link-heading "h4" "2021-11-19" >}}
+
+**Bug fixes:**
+
+- Fixed an issue on the create new transaction modal where archived accounts would show up as an option.
+
+**Changes:**
+
+- Updated Bitcoin livenet onboarding to include OpenNode API key requirement.
+- Added the ability for admins to add and activate their own app domains in the Settings section of the App Extension.
+- Added editable metadata UI to user bank accounts.
+
+---
+
+{{< link-heading "h4" "2021-11-08" >}}
+
+**Bug fixes:**
+
+- Fixed user listing error due to deprecated KYC field. (Hotfix)
+- Fixed issue where, when viewing transactions with temporary users with only mobile number, (new) displayed instead of the mobile number.
+
+**Changes:**
+
+- Added help text to the permissions page in groups.
+
+---
+
 {{< link-heading "h4" "2021-10-28" >}}
 
 **Changes:**
