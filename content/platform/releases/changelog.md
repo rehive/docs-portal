@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-01-11" >}}
+
+1. Fixed a bug on metrics listings where on new metrics that were still getting processed a 500 error could occur.
+2. Fixed a bug with the `slug__in` filter not working and triggering a 500 error on metric listings.
+
+---
+
 {{< link-heading "h5" "2021-11-30" >}}
 
 1. Added admin authenticated login and register endpoints. These endpoints should be used by machine users and services that require access to login and register but should not be impacted by user throttles, rate limiting, bot protection, and other rules that apply to unauthenticated (anonymous) users.
