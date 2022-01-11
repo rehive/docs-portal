@@ -59,6 +59,8 @@ Event | Description
 `bank_account.update` | bank account updated event
 `crypto_account.create` | crypto account created event
 `crypto_account.update` | crypto account updated event
+`account.create` | account created event
+`account.update` | account updated event
 `transaction.create` | transaction created event
 `transaction.update` | transaction updated event
 `transaction.initiate` | transaction initiated (pending) event
