@@ -13,7 +13,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 1. Fixed a bug on metrics listings where on new metrics that were still getting processed a 500 error could occur.
 2. Fixed a bug with the `slug__in` filter not working and triggering a 500 error on metric listings.
-
+3. Added new `account.create` and `account.update` webhook events to facilitate with managed currency flows.
 ---
 
 {{< link-heading "h5" "2021-11-30" >}}
