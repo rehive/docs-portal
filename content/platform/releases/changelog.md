@@ -9,11 +9,19 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-01-14" >}}
+
+1. Added a new `metadata` field on accounts.
+2. Changed account handling to prevent the editing of the `user` field on existing accounts. This `user` field can only be set on create.
+
+---
+
 {{< link-heading "h5" "2022-01-11" >}}
 
 1. Fixed a bug on metrics listings where on new metrics that were still getting processed a 500 error could occur.
 2. Fixed a bug with the `slug__in` filter not working and triggering a 500 error on metric listings.
 3. Added new `account.create` and `account.update` webhook events to facilitate with managed currency flows.
+
 ---
 
 {{< link-heading "h5" "2021-11-30" >}}
