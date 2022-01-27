@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-01-28" >}}
+
+1. Added new `enabled` boolean to allow webhooks to be turned on and off.
+2. Added new company linking functionality that will be used for linking test companies to production companies.
+
+---
+
 {{< link-heading "h5" "2022-01-14" >}}
 
 1. Added a new `metadata` field on accounts.
