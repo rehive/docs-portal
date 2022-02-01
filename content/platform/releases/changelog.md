@@ -7,6 +7,14 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h5" "2022-01-28" >}}
+
+1. Added new swagger help text in the swagger UI description.
+2. Added a new `subtypes` field to the currencies resource on endpoints that retrieve a single account. This field returns a list of subtypes that the currency may use (subtypes are excluded from this list bu company, group, tier, account asset and user subtype settings).
+
 ---
 
 {{< link-heading "h5" "2022-01-28" >}}
@@ -302,7 +310,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
     - All fee and limit changes will remain unchanged except that they now support an additional option.
 3. Fixed some issues with the generation of swagger documention. The resulting swagger schema will now pass validation and have no duplicate operation IDs.
 4. Updated the cache handling of multiple resources to be performed more efficiently in the background.
-5. The `/subtypes/` list will now automatically be filtered by the subtypes available to the user and their group, while also offering additional filters in order to narrow down the list further by `currency` and `acocunt`.
+5. The `/subtypes/` list will now automatically be filtered by the subtypes available to the user and their group.
 6. Added `default_session_duration` as a configurable company setting. Supports values in seconds between 1 and 2678400 (up to 31 days).
 7. Added a new service key rotation mechanism that will be rolled out to our services in the coming year.
     
