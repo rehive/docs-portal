@@ -9,6 +9,66 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2022-02-01 >}}
+
+**Changes:**
+
+- Updated analytics events for onboarding and subscription tracking.
+
+---
+
+{{< link-heading "h4" "2022-01-29 >}}
+
+**Changes:**
+
+- Changed label of manager groups on Product Extension Settings. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-01-24 >}}
+
+**Bug fixes:**
+
+- Fixed issue where Rewards deactivation would not appear, spinner would show endlessly.
+
+**Changes:**
+
+- Removed Bitcoin extension activation from onboarding.
+- Added view payouts section to the Business Extension.
+- Removed old GTM tracking events.
+
+---
+
+{{< link-heading "h4" "2022-01-13 >}}
+
+**Changes:**
+
+- Removed requirement for title when adding or editing a slider in the App Extension.
+
+---
+
+{{< link-heading "h4" "2021-12-24 >}}
+
+**Changes:**
+
+- Adds new method for tracking and firing GA pageLoad events for every route state change
+- Adds logic to fetch user if logged in and pass user info to GA events
+- Adds new method to track and fire GA event fires on every step completion
+- Adds new method to track and fire subscription events for user plan selection and completion
+
+---
+
+{{< link-heading "h4" "2021-12-22" >}}
+
+**Changes:**
+
+- Added new "section" column and filter to Mass Send listing page
+- Added new "status" filter to Business listing page
+- Inside the App Extension, split Sliders and Cards into individual pages instead of Content
+- Reworked layout of the App Config Cards section, added new modals for Alerts, Prompts and Posts. Split layout between Main and Feed sections.
+
+---
+
 {{< link-heading "h4" "2021-11-29" >}}
 
 **Bug fixes:**
