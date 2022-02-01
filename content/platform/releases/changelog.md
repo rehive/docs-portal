@@ -10,7 +10,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h5" "2022-01-28" >}}
+{{< link-heading "h5" "2022-02-02" >}}
 
 1. Added new swagger help text in the swagger UI description.
 2. Added a new `subtypes` field to the currencies resource on endpoints that retrieve a single account. This field returns a list of subtypes that the currency may use (subtypes are excluded from this list bu company, group, tier, account asset and user subtype settings).
