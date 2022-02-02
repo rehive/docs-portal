@@ -9,7 +9,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "2022-02-01 >}}
+{{< link-heading "h4" "2022-02-01" >}}
 
 **Changes:**
 
@@ -17,7 +17,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "2022-01-29 >}}
+{{< link-heading "h4" "2022-01-29" >}}
 
 **Changes:**
 
@@ -25,7 +25,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "2022-01-24 >}}
+{{< link-heading "h4" "2022-01-24" >}}
 
 **Bug fixes:**
 
@@ -39,7 +39,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "2022-01-13 >}}
+{{< link-heading "h4" "2022-01-13" >}}
 
 **Changes:**
 
@@ -47,7 +47,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "2021-12-24 >}}
+{{< link-heading "h4" "2021-12-24" >}}
 
 **Changes:**
 
