@@ -15,9 +15,9 @@ We advise using this as a starting point if you are happy working with Python an
 
 There is also a **simplified demo** written in Flask to show how webhooks can be used to power an extension:
 
-https://github.com/rehive/python-service-demo/blob/master/app.py
+https://github.com/rehive/python-service-demo
 
 Finally, our **python** and **javascript** SDKs can be used to make Rehive API usage simpler:
 
-https://github.com/rehive/rehive-python
-https://github.com/rehive/rehive-javascript
+- https://github.com/rehive/rehive-python
+- https://github.com/rehive/rehive-javascript
