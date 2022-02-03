@@ -12,7 +12,7 @@ For extension specific development you can read the recommendations [here](/exte
 
 #### Perform actions as an authenticated user.
 
-**If building a frontend or client-side integration never hardcode a token** into a frontend or client-side application (such as a website or mobile application). Any tokens hardcoded into an application will be accessible to all users of that application. This is particularly true of tokens that provide escalated privileges like admin tokens created in the admin dashboard.
+**If you are building a frontend or client-side integration never hardcode an authentication token into the application** (such as a website or mobile application). Any tokens hardcoded into an application will be accessible to all users of that application. This is particularly true of tokens that provide escalated privileges like admin tokens created in the admin dashboard.
 
 Instead of hardcoding tokens, you should ensure that a user accessing the application is authenticated via the login endpoint on the API (which returns a token specifically for that user). The user should be re-authenticated via the application whenever their token expires and the application should only ever use tokens belonging to that specific user when accessing the API.
 
@@ -21,7 +21,7 @@ Alternatively if you need users to perform an action that requires escalated pri
 
 #### Authenticate all incoming requests
 
-**If building a backend integration ensure that all incoming requests (even those that appear to be from Rehive) are authenticated**. There are two primary ways you can do this:
+**If you are building a backend integration ensure that all incoming requests (even those that appear to be from Rehive) are authenticated**. There are two primary ways you can do this:
 
 - For user authenticated requests: expect a Rehive auth token to be included in an `Authorization` header and then call the platform to see if it is a real user.
 - For webhook requests: check the `secret` in the `Authorization` header. This can also be used to identify webhooks for specific companies.
