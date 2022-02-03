@@ -20,6 +20,7 @@ This allows for complex additional logic to be built on top of the existing plat
 	If you have a third-party extension you would like to get approved and reviewed by Rehive please contact Rehive support.
 </aside>
 
+
 ## How extensions work
 
 Extensions are web services that have been designed to operate using the Rehive platform as primary source of information (whether this be for authentication, validation, data or events).
@@ -38,6 +39,7 @@ Secondly, when a webhook is received by the extension on its webhook endpoint, i
 
 Thirdly, when an end user accesses the API endpoints on the notification extension
 it does the same authorization check as the admin user one except now it does not ensure the user is in the `admin` or `service` group. Once authorized the extension can return a list of notification settings it has stored for that user.
+
 
 ## Extension users
 
