@@ -10,7 +10,7 @@ The recommendations detailed here will help you eliminate potential bugs, vulner
 For extension specific development you can read the recommendations [here](/extensions/get-started/recommendations/).
 
 
-### Perform actions as an authenticated user.
+#### Perform actions as an authenticated user.
 
 **If building a frontend or client-side integration never hardcode a token** into a frontend or client-side application (such as a website or mobile application). Any tokens hardcoded into an application will be accessible to all users of that application. This is particularly true of tokens that provide escalated privileges like admin tokens created in the admin dashboard.
 
@@ -39,12 +39,12 @@ Ensure that you take into account that most listing pages are paginated. This me
 
 #### Consider throttling
 
-Platform endpoints are throttled if too many requests are executed at the same time. You should build in a manner that is resilient to throttling. The [platform documentation](/platform/usage/throttling/) has a section on throttling.
+Platform endpoints are throttled if too many requests are executed at the same time. You should build in a manner that is resilient to throttling. The [documentation](/platform/usage/throttling/) has a section on throttling.
 
 When building a client-side interface this should rarely be an issue as the throttling is quite forgiving, but it can occur more in backend systems where a single admin/service token is used for all the API requests.
 
 
-### Use Rehive supported SDKs
+#### Use Rehive supported SDKs
 
 If you are working in Python or Javascript you should use one of the Rehive supported SDKs as these will make your life easier:
 
