@@ -7,6 +7,11 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h5" "2022-02-03" >}}
+
+1. Added new webhook events for `company.link.create` and `company.link.update`.
 
 ---
 
