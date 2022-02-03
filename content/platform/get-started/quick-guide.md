@@ -13,7 +13,7 @@ To get started with the API you have a couple options:
 To use one of the SDKs check for you language in the "references list" in the sidebar. If you instead want to use a language that does not have a Rehive supported SDK, a custom implementation should be trivial as the platform uses standard HTTP which is widely supported.
 
 <aside class="warning">
-<b>Important:</b> This is a quick guide only. Please ensure that you understand the building guide and recommendations before architecting your own solutions on the Rehive platform.
+<b>Important:</b> This is a quick guide only. Please ensure that you understand the building guide and recommendations before designing your own solutions on the Rehive platform.
 </aside>
 
 
