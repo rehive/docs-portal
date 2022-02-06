@@ -22,6 +22,8 @@ Integrations with Rehive generally exist in two major forms:
 
 The white-label wallets provided by Rehive are an example of this sort of integration. Additionally, the admin dashboard also falls into this category.
 
+<img src="/images/mobile.svg" alt="Mobile wallet image">
+
 The architecture in this case is quite simple.
 
 1. A frontend application provides a UI through which a user can login (using the login endpoint).
