@@ -22,7 +22,7 @@ Integrations with Rehive generally exist in two major forms:
 
 The white-label wallets provided by Rehive are an example of this sort of integration. Additionally, the admin dashboard also falls into this category.
 
-<img src="/images/mobile.svg" alt="Mobile wallet image" width="100%">
+<img src="/images/webapp.svg" alt="Mobile wallet image" width="100%">
 
 The architecture in this case is quite simple.
 
