@@ -1,0 +1,36 @@
+# Default values for rehive-service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+deployment:
+  replicaCount: 1
+  command: null
+  args: null
+image:
+  repository: gcr.io/rehive-services/docs-portal
+  tag: latest
+  pullPolicy: Always
+service:
+  name: nginx
+  type: NodePort
+  externalPort: 80
+  internalPort: 80
+ingress:
+  enabled: true
+  hosts:
+    - docs.s.rehive.com
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    kubernetes.io/tls-acme: "true"
+  tls:
+    - hosts:
+      - docs.s.rehive.com
+      secretName: docs-staging-tls
+envFromSecret:
+  enabled: false
+postgres:
+  enabled: false
+redis:
+  enabled: false
+rabbitmq:
+  enabled: false
+workersEnabled: false

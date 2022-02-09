@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 configs:
   staging:
     project_name: docs-portal
@@ -27,4 +27,34 @@ configs:
     helm_chart_version: 0.2.2
     helm_values_path: ./etc/helm/production/values.yaml
     helm_version: 2.14.3
+    use_system_helm: false
+  production3:
+    project_name: docs-portal
+    docker_image: gcr.io/rehive-services/docs-portal
+    kube_context: gke_rehive-services_europe-west4_production3
+    cloud_provider:
+      name: gcp
+      project: rehive-services
+      kube_cluster: production3
+      region: europe-west4
+    namespace: docs-portal
+    helm_values_path: ./etc/helm/production3/values.yaml
+    helm_chart: rehive/rehive-service
+    helm_chart_version: 1.0.0
+    helm_version: 3.6.3
+    use_system_helm: false
+  staging3:
+    project_name: docs-portal
+    docker_image: gcr.io/rehive-services/docs-portal
+    kube_context: gke_rehive-services_europe-west4_staging3
+    cloud_provider:
+      name: gcp
+      project: rehive-services
+      kube_cluster: staging
+      region: europe-west4
+    namespace: docs-portal-staging
+    helm_values_path: ./etc/helm/staging3/values.yaml
+    helm_chart: rehive/rehive-service
+    helm_chart_version: 1.0.0
+    helm_version: 3.6.3
     use_system_helm: false
