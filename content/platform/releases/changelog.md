@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-02-09" >}}
+
+1. Updated the registration endpoints (company and user registration) to support the following fields: `language`, `timezone`, `gender`, `title`, `marital_status`, and `id_number`.
+2. Fixed a bug in file uploads where incorrecatly formatted form data resulted in 500 errors. These errors will now correctly throw a 400 error.
+
+---
+
 {{< link-heading "h5" "2022-02-03" >}}
 
 1. Added new webhook events for `company.link.create` and `company.link.update`.
