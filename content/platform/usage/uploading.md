@@ -15,20 +15,24 @@ The following sections describe some common methods that can be used to upload f
 
 When testing, you can use [cURL](https://curl.se/):
 
-```
-curl https://api.rehive.com/3/user/documents/ -X POST -H "Authorization: Token {token}" -H "Content-Type: multipart/form-data" -F file=@localfilename.ext -F document_type=other
+```shell
+curl https://api.rehive.com/3/user/documents/ \
+  -X POST -H "Authorization: Token {token}" \
+  -H "Content-Type: multipart/form-data" \
+  -F file=@localfilename.ext \
+  -F document_type=other
 ```
 
 ## JavaScript
 
-Within a web browser context, you can upload file uploads using the [JavaScript SDK](https://www.npmjs.com/package/rehive):
+Within a web browser context, you can upload files using the [JavaScript SDK](https://www.npmjs.com/package/rehive):
 
 ```javascript
 const rehive = new Rehive({
-		apiVersion: 3, 
-		storageMethod: "local",
+    apiVersion: 3, 
+    storageMethod: "local",
     # Add your API token here.
-		apiToken: "{token}"
+    apiToken: "{token}"
 });
 
 var fileSelected = document.getElementById("fileInput").files[0],
@@ -83,7 +87,7 @@ fs.readFile(filePath, (err, imageData) => {
 
 ## Python
 
-You can use the Python SDK to upload files:
+You can use the [Python SDK](https://pypi.org/project/rehive/) to upload files:
 
 ```python
 from rehive import Rehive
