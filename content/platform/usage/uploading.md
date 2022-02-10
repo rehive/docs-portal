@@ -25,12 +25,11 @@ curl https://api.rehive.com/3/user/documents/ \
 
 ## JavaScript
 
-Within a web browser context, you can upload files using the [JavaScript SDK](https://www.npmjs.com/package/rehive):
+Within a web browser context, you can upload files using the [Rehive JavaScript SDK](https://www.npmjs.com/package/rehive):
 
 ```javascript
 const rehive = new Rehive({
     apiVersion: 3, 
-    storageMethod: "local",
     # Add your API token here.
     apiToken: "{token}"
 });
@@ -49,12 +48,18 @@ rehive.user.documents.create(formData).then(function (res) {
 });
 ```
 
-Or alternatively, when in NodeJS you can use the [Axios](https://www.npmjs.com/package/axios) and [Form-Data](https://www.npmjs.com/package/form-data) libraries:
+Or alternatively, when in NodeJS, you can combine the [Rehive JavaScript SDK](https://www.npmjs.com/package/rehive) and [Form-Data](https://www.npmjs.com/package/form-data) libraries:
 
 ```javascript
-const axios = require('axios');
 const FormData = require('form-data');
 const fs = require('fs');
+const Rehive = require('rehive');
+
+const rehive = new Rehive({
+    apiVersion: 3, 
+    # Add your API token here.
+    apiToken: "{token"}"
+});
 
 const filePath = 'test.png';
 fs.readFile(filePath, (err, imageData) => {
@@ -71,15 +76,9 @@ fs.readFile(filePath, (err, imageData) => {
   });
   form.append('document_type', 'other');
 
-  headers=form.getHeaders();
-  // Add your API token here.
-  headers['Authorization'] = "Token {token}"
-  
-  axios.post('https://api.rehive.com/3/user/documents/', form, {
-    headers: headers,
-  }).then(response => {
-    console.log('success! ', response.status, response.statusText, response.headers);
-  }).catch(err => {
+  rehive.user.documents.create(form).then(function (res) {
+    console.log(res);
+  }, function (err) {
     console.log(err);
   });
 });
@@ -87,7 +86,7 @@ fs.readFile(filePath, (err, imageData) => {
 
 ## Python
 
-You can use the [Python SDK](https://pypi.org/project/rehive/) to upload files:
+You can use the [Rehive Python SDK](https://pypi.org/project/rehive/) to upload files:
 
 ```python
 from rehive import Rehive
