@@ -3,12 +3,19 @@
 # Declare variables to be passed into your templates.
 deployment:
   replicaCount: 1
-  command: null
-  args: null
+  command:
+  args:
+  resources:
+    requests:
+      memory: 50Mi
+      cpu: 50m
+    limits:
+      cpu: 250m
+      memory: 250Mi
 image:
   repository: gcr.io/rehive-services/docs-portal
   tag: latest
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
 service:
   name: nginx
   type: NodePort
@@ -17,15 +24,15 @@ service:
 ingress:
   enabled: true
   hosts:
-    - docs.s.rehive.com
+  - docs.rehive.com
   annotations:
-    kubernetes.io/ingress.class: "nginx"
-    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: 'true'
   tls:
-    - hosts:
-      - docs.s.rehive.com
-      secretName: docs-staging-tls
-envFromSecret:
+  - hosts:
+    - docs.rehive.com
+    secretName: docs-portal-tls
+management:
   enabled: false
 postgres:
   enabled: false
@@ -33,4 +40,5 @@ redis:
   enabled: false
 rabbitmq:
   enabled: false
-workersEnabled: false
+workers:
+  enabled: false
