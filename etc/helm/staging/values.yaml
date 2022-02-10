@@ -25,7 +25,7 @@ ingress:
     - hosts:
       - docs.s.rehive.com
       secretName: docs-staging-tls
-management:
+envFromSecret:
   enabled: false
 postgres:
   enabled: false

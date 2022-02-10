@@ -2,13 +2,13 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 deployment:
-  replicaCount: 3
+  replicaCount: 1
   command:
   args:
   resources:
     requests:
-      memory: 25Mi
-      cpu: 10m
+      memory: 50Mi
+      cpu: 50m
     limits:
       cpu: 250m
       memory: 250Mi
@@ -32,7 +32,7 @@ ingress:
   - hosts:
     - docs.rehive.com
     secretName: docs-portal-tls
-envFromSecret:
+management:
   enabled: false
 postgres:
   enabled: false
