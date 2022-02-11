@@ -9,6 +9,49 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2022-02-11" >}}
+
+**Bug fixes:**
+
+- Fixed issue where "dismissable" toggles did not work on the Cards section in the App Extension App Config for Popup and Announcements.
+
+**Changes:**
+
+- Removed the Bitcoin testnet address info block from the user details page.
+- Added better help information to the add and edit fee modals. The add and edit fee modals also no longer close when clicking outside of the modal, they only close on clicking on the X or the close button.
+- Added a title field to prompts in the Cards section in the App Extension App Config.
+- Added bank account back to tier requirements.
+- The add and edit webhook modals no longer close when clicking outside of the modal - they now only close when clicking on the X or the close button.
+- Invited admins are now added via the builder.
+
+---
+
+{{< link-heading "h4" "2022-02-07" >}}
+
+**Changes:**
+
+- Added an enable referrals toggle to the App Extension -> App Config -> General settings -> Profile section.
+
+---
+
+{{< link-heading "h4" "2022-02-04" >}}
+
+**Changes:**
+
+- Added resource id filter to request logs.
+- Added the ability to edit and delete alerts, prompts and posts in the App Extension 'Home cards' section.
+- All created project app IDs on Rehive will now end in _test
+
+---
+
+{{< link-heading "h4" "2022-02-02" >}}
+
+**New features:**
+
+- Added Metrics to Transactions and Users. Admins can now view transaction metrics for volume of transactions as well as number of transactions, broken up by debits and credits. Admins can view number of active users as well as new registrations in user metrics.
+
+---
+
 {{< link-heading "h4" "2022-02-01" >}}
 
 **Changes:**
