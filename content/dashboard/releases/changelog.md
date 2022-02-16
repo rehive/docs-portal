@@ -9,6 +9,42 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2022-02-16" >}}
+
+**Bug fixes:**
+
+- Fixed issue when editing a product in the Product Extension where integrations on the product would not display.
+- Fixed issue where integrations added to the Product Extension did not show up when editing a product without an integration.
+- Fixed issue where changing a product integration did not save when editing a product.
+
+**Changes:**
+
+- Changed text in header for test projects to read "Test project" instead of "Test company".
+
+---
+
+{{< link-heading "h4" "2022-02-15" >}}
+
+**Changes:**
+
+- Updated the label for the operational account in the Product Extension when creating or editing a product to make it more clear that it is the product sale credit account.
+- Updated the error displayed when an operational account is missing when adding or editing a product. It now refers to the correct field instead of "supplier account".
+- Added basic explanations for what the App config and JSON config are in the App Extension.
+- Hid the "New" button on the Orders page.
+- Added help text to the Standalone accounts and Account Definitions pages. Added links to the help center.
+- Renamed Edit field on Account Definitions to Rename and swapped positions with Archive account definition. 
+- Renamed Rate Pairs page in the Conversion Extension Custom Rate pairs. Added help text. 
+
+---
+
+{{< link-heading "h4" "2022-02-14" >}}
+
+**Changes:**
+
+- Added a date picker to the transaction and user metrics, allowing admins to refine their metrics results.
+
+---
+
 {{< link-heading "h4" "2022-02-11" >}}
 
 **Bug fixes:**
