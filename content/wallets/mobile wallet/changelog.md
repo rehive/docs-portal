@@ -9,6 +9,17 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2021-02016 - 3.0.0" >}}
+
+- Localisation: added multi-language support throughout the app. This includes in-app strings, rehive platform content and config content. More information on multi-language implementation and usage can be found [here](https://github.com/rehive/rehive-javascript/tree/locales/locales).
+- Expo: Updated to the latest [Expo SDK 44](https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/#sdk-44)
+- Navigation: updated to the latest `react-navigation` library and overhauled navigation structure to work with new navigation API
+- Codebase: clean up codebase by removing unused folders/files, consolidating all screen folders into `src/screens/` and various other clean up tasks
+- Packages: updated a bunch of smaller packages to their latest (or near latest) available versions
+- Various other bug fixes and performance improvements
+
+---
+
 {{< link-heading "h4" "2021-10-13 - 2.7.0" >}}
 
 **Features:**
