@@ -9,6 +9,12 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-02-17" >}}
+
+1. Updated all upload fields to strip out all EXIF data from image uploads. This will helpe ensure users do not mistakenly expose sensitive information about themselves via image uploads eg. profile pictures, company logos and icons, and documents.
+
+---
+
 {{< link-heading "h5" "2022-02-09" >}}
 
 1. Updated the registration endpoints (company and user registration) to support the following fields: `language`, `timezone`, `gender`, `title`, `marital_status`, and `id_number`.
