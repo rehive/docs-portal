@@ -9,7 +9,7 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
-{{< link-heading "h4" "2021-02-16 - 3.0.0" >}}
+{{< link-heading "h4" "2022-02-16 - 3.0.0" >}}
 
 - Localisation: added multi-language support throughout the app. This includes in-app strings, rehive platform content and config content. More information on multi-language implementation and usage can be found [here](https://github.com/rehive/rehive-javascript/tree/locales/locales).
 - Expo: Updated to the latest [Expo SDK 44](https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/#sdk-44)
