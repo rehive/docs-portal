@@ -9,6 +9,12 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-01-01" >}}
+
+1. Fixed a bug where image sizes were handled incorrectly when stripping EXIF data, which resulted in 500 errors on some file uploads.
+
+---
+
 {{< link-heading "h5" "2022-02-18" >}}
 
 1. Fixed a bug in request body parsing in request logging that resulted in a 500 errors if the body contained invalid JSON on requests where the body is normally not parsed (GET methods, not found errors, authentication errors etc.).
