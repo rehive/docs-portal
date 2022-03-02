@@ -30,7 +30,7 @@ Within a web browser context, you can upload files using the [Rehive JavaScript 
 ```javascript
 const rehive = new Rehive({
     apiVersion: 3, 
-    # Add your API token here.
+    // Add your API token here.
     apiToken: "{token}"
 });
 
@@ -57,8 +57,8 @@ const Rehive = require('rehive');
 
 const rehive = new Rehive({
     apiVersion: 3, 
-    # Add your API token here.
-    apiToken: "{token"}"
+    // Add your API token here.
+    apiToken: "{token}"
 });
 
 const filePath = 'test.png';

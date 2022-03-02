@@ -76,21 +76,12 @@ On the other hand, a transfer will have some additional information in the `part
 
 ### Endpoints
 
-There are ten transaction endpoints in the platform. Five for each of the two sections: `user` and `admin`
+Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of transaction endpoints.
 
-section | type| URL | methods
----|---|---|---
-admin | multiple |  `https://api.rehive.com/3/admin/transactions/` | `GET`, `POST`
-admin | single |  `https://api.rehive.com/3/admin/transactions/<id>/` | `GET`, `PATCH`, `PUT`, `DELETE`
-admin | single |  `https://api.rehive.com/3/admin/transactions/debit/` | `POST`
-admin | single |  `https://api.rehive.com/3/admin/transactions/credit/` | `POST`
-admin | single |  `https://api.rehive.com/3/admin/transactions/transfer/` | `POST`
-user | multiple |  `https://api.rehive.com/3/transactions/` | `GET`, `POST`
-user | single |  `https://api.rehive.com/3/transactions/<id>/` | `GET`
-user | single |  `https://api.rehive.com/3/transactions/debit/` | `POST`
-user | single |  `https://api.rehive.com/3/transactions/credit/` | `POST`
-user | single |  `https://api.rehive.com/3/transactions/transfer/` | `POST`
+All endpoints that contain `/transactions/` in their URL path are used for handling transactions.
 
 ### Usage
 
-Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and a `Authorization` header.
+Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and an `Authorization` header.
+
+When creating transactions and supplying a custom `id`, that `id` must be a [version 4 UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) and there must be no other transactions in the system with the same `id`.

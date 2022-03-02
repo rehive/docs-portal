@@ -5,7 +5,7 @@ description: Account resources.
 weight: 5
 ---
 
-The second requirement for creating transactions (after the currency) is an account. Accounts are containers that store user balances in relation to specific currencies. In addition accounts may have other settings or permissions attached to them depending on the company's use-case.
+The second requirement for creating transactions (after the currency) is an account. Accounts are containers that store user balances in relation to specific currencies. In addition, accounts may have other settings or permissions attached to them depending on the company's use-case.
 
 Generally, every user in the platform will require one or more accounts. Each one of these accounts may have several currencies within them. How you create these accounts and sub currencies is up to the individual developers implementing the platform. There are two primary ways this can be done:
 
@@ -72,17 +72,10 @@ A full account object with a single currency looks like:
 
 To view or modify an account or its currencies you can use the following endpoints. Keep in mind, when accounts are used in other places within the API, they are always identified by their `reference`.
 
-section | type| URL | methods
----|---|---|---
-admin | multiple |  `https://api.rehive.com/3/admin/accounts/` | `GET`, `POST`
-admin | single |  `https://api.rehive.com/3/admin/accounts/<reference>/` | `GET`, `PATCH`, `PUT`, `DELETE`
-admin | multiple |  `https://api.rehive.com/3/admin/accounts/<reference>/currencies/` | `GET`, `POST`
-admin | single |  `https://api.rehive.com/3/admin/accounts/<reference>/currencies/<code>/` | `GET`, `PATCH`, `PUT`, `DELETE`
-user | multiple | `https://api.rehive.com/3/accounts/` | `GET`
-user | single | `https://api.rehive.com/3/accounts/<reference>/` | `GET`
-user | multiple | `https://api.rehive.com/3/accounts/<reference>/currencies/` | `GET`
-user | single | `https://api.rehive.com/3/accounts/<reference>/currencies/</code>/` | `GET`
+Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of account endpoints.
+
+All endpoints that contain `/accounts/` in their URL path are used for handling accounts.
 
 ### Usage
 
-Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and a `Authorization` header.
+Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and an `Authorization` header.

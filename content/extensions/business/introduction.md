@@ -1,0 +1,8 @@
+---
+date: 2018-09-17T15:21:22+02:00
+title: Introduction
+description: Introduction to the Business extension.
+weight: 1
+---
+
+The Business extension allows users to create businesses and manage their payouts, accounts, customers and business documents. Admins can use the extension to setup business settings, automated payout rules and verify and manage payouts for businesses.

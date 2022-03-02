@@ -20,15 +20,18 @@ Multiple active tokens (sessions) can exist for a single user. This means that a
 <p>Instead of hardcoding tokens, you should ensure that a user accessing the application is authenticated via the login endpoint on the API (which returns a token specifically for that user). Alternatively if you need users to perform an action that requires escalated privileges, you should move this action into a custom  backend integration that can safely store the admin token in a secure manner (not exposed to end users).</p>
 </aside>
 
-
-### Authorization Header
+### Authorization header
 
 When making requests, an API key should be included as a token in the `Authorization` header:
 
-```json
+```
 Authorization: Token {token}
 ```
 
 <aside class="notice">
 	You must replace <code>{token}</code> with your API token.
+</aside>
+
+<aside class="warning">
+    Ensure that you understand how <a href="/platform/usage/multi-factor/" target="_blank">multi-factor authentication and authorization</a> impact platform usage.
 </aside>

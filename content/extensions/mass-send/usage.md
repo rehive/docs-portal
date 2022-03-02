@@ -10,7 +10,7 @@ The full <strong>API specification</strong> can be found <a href="https://mass-s
 </aside>
 
 <aside class="notice">
-The <strong>Swagger specification</strong> can be found <a href="https://mass-send.services.rehive.io/swagger">here</a>
+The <strong>Swagger specification</strong> can be found <a href="https://mass-send.services.rehive.io/swagger/">here</a>
 </aside>
 
 The Mass Send extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Mass Send extension. This is  specifically true of authorization, errors, filters, and pagination.

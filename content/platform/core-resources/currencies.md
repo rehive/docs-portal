@@ -30,13 +30,10 @@ The full currency object looks like:
 
 Currency data appears in some fashion throughout the platform. However there are only several places where the currency can be directly accessed or modified. Keep in mind, when currencies are used in other places within the API, they are always identified by their `code`.
 
-section | type| URL | methods
----|---|---|---
-admin | multiple |  `https://api.rehive.com/3/admin/currencies/` | `GET`, `POST`
-admin | single |  `https://api.rehive.com/3/admin/currencies/<code>/` | `GET`, `PATCH`, `PUT`, `DELETE`
-user | multiple | `https://api.rehive.com/3/company/currencies/` | `GET`
-user | single | `https://api.rehive.com/3/company/currencies/<code>/` | `GET`
+Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of currency endpoints.
+
+All endpoints that contain `/currencies/` in their URL path are used for handling transaction-collections.
 
 ### Usage
 
-Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and a `Authorization` header.
+Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and an `Authorization` header.

@@ -21,12 +21,12 @@ To use one of the SDKs check for you language in the "references list" in the si
 
 The easiest way to get started with the API is to use cURL to make a login request:
 
-``` sh
-curl https://api.rehive.com/3/auth/login/
-  -X POST
-  -H "Content-Type: application/json"
+```shell
+curl https://api.rehive.com/3/auth/login/ \
+  -X POST \
+  -H "Content-Type: application/json" \
   -d '{"user": "joe@rehive.com",
-       "company": "rehive"
+       "company": "rehive",
        "password": "joe1234"}'
 ```
 
@@ -81,7 +81,8 @@ Once you have your own user you can replace the placeholder data in the example 
             },
             "created": 1464912953000,
             "updated": 1464912953000,
-        }
+        },
+        "challenges": []
     }
 }
 ```
@@ -94,17 +95,17 @@ And there you have it, a successful login! The user was validated and authentica
 
 Usin the token returned in the login response you can perform actions, as that user, on endpoints that require authentication. For example, you may want to get a list of emails associated to a user:
 
-``` sh
-curl https://api.rehive.com/3/user/emails/
-  -X GET
-  -H "Authorization: Token {token}"
+```shell
+curl https://api.rehive.com/3/user/emails/ \
+  -X GET \
+  -H "Authorization: Token {token}" \
   -H "Content-Type: application/json"
 ```
 
 If you used the `token` you previously retrieved you should get a successful response containing a list of user emails:
 
 
-``` json
+```json
 {
     "status": "success",
     "data": [

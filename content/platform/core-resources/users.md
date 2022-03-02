@@ -14,7 +14,7 @@ Outside of the "owner" users, Rehive supports the creation/registration of users
 - email
 - mobile
 
-These identifier may not be shared by any other users&ast;.
+These identifier may not be shared by any other users in the company&ast;.
 
 <aside class="notice">
     &ast;It is possible for the identifier to be shared if one of the users is flagged as temporary. Temporary users are used to hold transfers to unverified user identifiers. Once a real user verifies their data the tempoary user will be merged into them.
@@ -83,15 +83,10 @@ Users have a multitude of attributes and properties that can be used to store id
 
 User data can be accessed via several endpoints within the `auth`, `admin` and `user` sections.
 
-section | type| URL | methods
----|---|---|---
-auth | single | `https://api.rehive.com/3/auth/register/` | `POST`
-auth | single | `https://api.rehive.com/3/auth/login/` | `POST`
-admin | multiple |  `https://api.rehive.com/3/admin/users/` | `GET`, `POST`
-admin | single | `https://api.rehive.com/3/admin/users/<id>/` | `GET`, `PATCH`, `PUT`, `DELETE`
-user | single | `https://api.rehive.com/3/user/` | `GET`, `PATCH`, `PUT`
+Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of user endpoints.
 
+All endpoints that contain `/user/` or `/users/` in their URL path are used for handling users and resources belonging to them.
 
 ### Usage
 
-Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and a `Authorization` header if required.
+Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and an `Authorization` header.

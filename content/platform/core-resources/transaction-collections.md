@@ -114,16 +114,12 @@ The content within the `transaction` object will depend on the endpoint. If the 
 
 ### Endpoints
 
-There are four transaction collection endpoints in the platform. Two for each of the two sections: `user` and `admin`:
+Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of transaction-collection endpoints.
 
-section | type| URL | methods
----|---|---|---
-admin | multiple |  `https://api.rehive.com/3/admin/transaction-collections/` | `GET`, `POST`
-admin | single |  `https://api.rehive.com/3/admin/transaction-collections/<id>/` | `GET`, `PATCH`, `PUT`, `DELETE`
-user | multiple |  `https://api.rehive.com/3/transaction-collections/` | `GET`, `POST`
-user | single |  `https://api.rehive.com/3/transaction-collections/<id>/` | `GET`
-
+All endpoints that contain `/transaction-collections/` in their URL path are used for handling transaction-collections.
 
 ### Usage
 
 Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and a `Authorization` header.
+
+When creating transactions and supplying a custom `id`, that `id` must be a [version 4 UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) and there must be no other transaction-collections in the system with the same `id`.

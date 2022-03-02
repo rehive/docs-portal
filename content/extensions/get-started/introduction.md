@@ -7,20 +7,16 @@ weight: 1
 
 In addition to the core platform, Rehive offers several officially supported and maintained extensions that can be used to extend platform functionality. These extensions are designed to work alongside the platform to provide additional functionality like cryptocurrency compatibility, notifications, and rewards.
 
-A full list of extensions can be found below:
+A list of Rehive managed extensions can be found below:
 
-- **Stellar** - Make the platform compatible with the Stellar network.
-- **Bitcoin** - Make the platform compatible with the Bitcoin network.
+- **Conversions** - Provides a management tools and access to currency pairs, rates and conversions.
 - **Notifications** - Provides management tools and event triggers to send email and SMS notifications.
-- **Conversions** - Provides a management tool for currency pairs and rates.
-- **Rewards** - Provides management tools and functionality to trigger and customize rewards on top of the platform.
+- **Rewards** - Provides management tools and functionality to trigger and implement reward campaigns.
 - **Products** - Provides product and order management features that can be purchased using the platform.
 - **Mass send** - Allows users to create transactions en-masse using a CSV import.
-- **Payment Request** - Provides an interface and management tools for requesting payments from users.
-- **Stripe** - Allows for cash-in (on the platform) via Stripe payments.
-- **Flash** - Allows for flash voucher purchases in combination with the product extension.
+- **Stellar** - Provides management tools and a stellar implementation built on the platform.
 - **Business** - Provides tools for business onboarding, management, invoicing and payouts.
-- **Chipless Card** - Provides an interface for card terminals to interact with the platform for transactions and balances.
+- **Payment Request** - Provides an interface and management tools for requesting payments from users.
 
 <aside class="notice">
 	Rehive adds extensions on a regular basis. If you are looking for something specific that you don't see above, feel free to contact the Rehive support team with your queries.

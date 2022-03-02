@@ -52,6 +52,11 @@ If you are working in Python or Javascript you should use one of the Rehive supp
 - [Python SDK](https://github.com/rehive/rehive-javascript)
 
 
+#### Handle multi-factor authentication and authorization
+
+If you want to use multi-factor authentication and/or authorization you should ensure your implementation is compatible with the [multi-factor functionality](/platform/usage/multi-factor/) in the platform.
+
+
 #### Monitor the changelog and deprecation timeline.
 
 The changelog and to a lesser extent the deprecation timeline are updated regularly. It is a good idea to stay ahead of the curve and immediately make use of new feature or prepare for features that are getting removed soon.

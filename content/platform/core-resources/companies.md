@@ -53,13 +53,12 @@ Companies in Rehive have their own details such as `id`, `name`, `description` a
 
 ### Endpoints
 
-Like most resources in Rehive, the company data can be access via both the `admin` and `user` section. The admin section endpoint gives admin users read/write access to the data while the user section endpoint provides read only access to end-users. The two endpoints can be compared below:
+Like most resources in Rehive, the company data can be accessed via both the `admin` and `user` sections. The admin section endpoint gives admin users read/write access to the data while the user section endpoint provides read only access to end-users.
 
-section | type | URL | methods
----|---|---|---
-admin | single | `https://api.rehive.com/3/admin/company/` | `GET`, `PATCH`, `PUT`
-user | single | `https://api.rehive.com/3/company/` | `GET`
+Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of currency endpoints.
+
+All endpoints that contain `/company/` in their URL path are used for handling companies.
 
 ### Usage
 
-Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and a `Authorization` header.
+Usage remains the same for all endpoints in Rehive. Simply invoke one of the allowed HTTP methods with the correct `Content-Type` and an `Authorization` header.
