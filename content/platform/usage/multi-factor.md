@@ -20,7 +20,7 @@ This resource is used to configure rules that should trigger when certain condit
 There are two types of authenticator rules:
 
 - **authentication**: These rules are evaluated when authenticating a user (such as on login). Every company automatically includes a single `authentication` type rule. This rule is used to perform the most basic multi-factor authentication, eg. when a user login occurs, issue a challenge must be completed to access the API.
-- **Authorization**: These rules are evaluated when checking a user's permission to access a resource. No `authorization` rules are configured by default.
+- **authorization**: These rules are evaluated when checking a user's permission to access a resource. No `authorization` rules are configured by default.
 
 In addition to the authenticator `type`s above, multi-factor rules can be configured to have different durabilities:
 
