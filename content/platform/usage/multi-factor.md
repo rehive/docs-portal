@@ -115,5 +115,5 @@ curl https://api.rehive.com/3/auth/mfa/verify/ \
 The `token` must originate from one of the `authenticator_types` listed in the challenge response. And the `challenge` should be the ID returned on the challenge.
 
 <aside class="notice">
-When dealing with <code>ephemeral<code> challenges you will need to store the challenge ID after it is verified and then on the next request (to access the resource that triggered the challenge) include it in an HTTP header <code>Verified-Challenge: {challenge_id}</code>. This will allow the user to access the resource once. All subsequent requests to the same resource will need to be multi-factored separately.
+When dealing with <code>ephemeral</code> challenges you will need to store the challenge ID after it is verified and then on the next request (to access the resource that triggered the challenge) include it in an HTTP header <code>Verified-Challenge: {challenge_id}</code>. This will allow the user to access the resource once. All subsequent requests to the same resource will need to be multi-factored separately.
 </aside>
