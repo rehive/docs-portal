@@ -69,6 +69,6 @@ async function handleAddDevice() {
 
 ## Further reading / links
 
-General notes on sending notifications with expo: https://docs.expo.dev/push-notifications/sending-notifications/
-Expo push notification tool (for testing): https://expo.dev/notifications
-`expo-notifications` package full documentation: https://docs.expo.dev/versions/latest/sdk/notifications/
+- General notes on sending notifications with expo: https://docs.expo.dev/push-notifications/sending-notifications/
+- Expo push notification tool (for testing): https://expo.dev/notifications
+- `expo-notifications` package full documentation: https://docs.expo.dev/versions/latest/sdk/notifications/
