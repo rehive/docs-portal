@@ -65,7 +65,7 @@ async function handleAddDevice() {
 }
 ```
 
-## How this works?
+## How does this work?
 
 - The notification service receives the event and if a push notification is configured for it, it tries to process it.
 - If the user has /user/devices/ on the platform, then service will fetch all expo tokens from each device's list of apps.
