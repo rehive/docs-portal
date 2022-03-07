@@ -5,8 +5,6 @@ description: Mobile wallet push notifications.
 weight: 2
 ---
 
-# Push notifications
-
 Push notifications in the Rehive apps are facilitated by the Expo framework on which the mobile react native app is built and therefore only available in apps also built on Expo. This guide summarizes how to get push notifications working in your app.
 
 ## Setup
