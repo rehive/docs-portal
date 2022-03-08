@@ -5,29 +5,6 @@ description: Stellar extension usage.
 weight: 4
 ---
 
-The testnet and mainnet APIs are seperated as shown below:
-<aside class="notice">
-    Both the Testnet and Mainnet APIs have the same specification.
-</aside>
-
-<strong>Testnet</strong>
-<aside class="notice">
-The full <strong>Testnet API specification</strong> can be found <a href="https://stellar-testnet.services.rehive.io/redoc/">here</a>
-</aside>
-
-<aside class="notice">
-The <strong>Testnet Swagger specification</strong> can be found <a href="https://stellar-testnet.services.rehive.io/swagger/">here</a>
-</aside>
-
-<strong>Mainnet</strong>
-<aside class="notice">
-The full <strong>Mainnet API specification</strong> can be found <a href="https://stellar.services.rehive.io/redoc/">here</a>
-</aside>
-
-<aside class="notice">
-The <strong>Mainnet Swagger specification</strong> can be found <a href="https://stellar.services.rehive.io/swagger/">here</a>
-</aside>
-
 The Stellar extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Stellar extension. This is  specifically true of authorization, errors, filters, and pagination.
 
 Similar to the platform the Stellar extension is divided into two sections:

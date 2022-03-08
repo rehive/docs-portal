@@ -5,14 +5,6 @@ description: Notification extension usage.
 weight: 4
 ---
 
-<aside class="notice">
-The full <strong>API specification</strong> can be found <a href="https://notification.services.rehive.io">here</a>
-</aside>
-
-<aside class="notice">
-The <strong>Swagger specification</strong> can be found <a href="https://notification.services.rehive.io/swagger/">here</a>
-</aside>
-
 The Notification extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Notification extension. This is  specifically true of authorization, errors, filters, and pagination.
 
 Similar to the platform the Notification extension is divided into two sections:

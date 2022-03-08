@@ -5,14 +5,6 @@ description: Product extension usage.
 weight: 4
 ---
 
-<aside class="notice">
-The full <strong>API specification</strong> can be found <a href="https://product.services.rehive.io">here</a>
-</aside>
-
-<aside class="notice">
-The <strong>Swagger specification</strong> can be found <a href="https://product.services.rehive.io/swagger/">here</a>
-</aside>
-
 The Product extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Product extension. This is  specifically true of authorization, errors, filters, and pagination.
 
 Similar to the platform the Product extension is divided into two sections:

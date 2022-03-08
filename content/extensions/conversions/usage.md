@@ -5,14 +5,6 @@ description: Conversion extension usage.
 weight: 4
 ---
 
-<aside class="notice">
-The full <strong>API specification</strong> can be found <a href="https://conversion.services.rehive.io">here</a>
-</aside>
-
-<aside class="notice">
-The <strong>Swagger specification</strong> can be found <a href="https://conversion.services.rehive.io/swagger/">here</a>
-</aside>
-
 The conversion extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the conversion extension. This is  specifically true of authorization, errors, filters, and pagination.
 
 Similar to the platform the conversion extension is divided into two sections:

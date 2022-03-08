@@ -7,6 +7,26 @@ weight: 1
 
 The Stellar extension is used as an interface between the Stellar and Rehive ledgers. It provides an API for a company to create and manage a Stellar wallet. There is both a mainnet Stellar Service as well as a Stellar Testnet Service.
 
+<strong>Testnet</strong>
+
+<aside class="notice">
+The full <strong>Testnet API specification</strong> can be found <a href="https://stellar-testnet.services.rehive.io/redoc/">here</a>
+</aside>
+
+<aside class="notice">
+The <strong>Testnet Swagger specification</strong> can be found <a href="https://stellar-testnet.services.rehive.io/swagger/">here</a>
+</aside>
+
+<strong>Mainnet</strong>
+
+<aside class="notice">
+The full <strong>Mainnet API specification</strong> can be found <a href="https://stellar.services.rehive.io/redoc/">here</a>
+</aside>
+
+<aside class="notice">
+The <strong>Mainnet Swagger specification</strong> can be found <a href="https://stellar.services.rehive.io/swagger/">here</a>
+</aside>
+
 The extension allows you to:
 
 1. Accept any Stellar asset as a deposit from users
