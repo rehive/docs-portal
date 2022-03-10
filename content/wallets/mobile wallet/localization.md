@@ -19,6 +19,8 @@ The rehive app uses i18n standard json language files along with i18next to mana
 - Rewards
 - Settings
 
+The full list of `json` files can be found [here](https://github.com/rehive/rehive-javascript/tree/locales/locales).
+
 ### Usage
 
 The base translations are hardcoded on the app. However each one of these can be overwritten ~~using the locales section of the app service in the dashboard (forthcoming) or~~ using the [App service directly](#app-service) as covered below.
