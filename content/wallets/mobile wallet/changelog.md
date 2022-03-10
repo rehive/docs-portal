@@ -9,6 +9,12 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2022-02-16 - 3.1.0" >}}
+
+- Point of Sale: added static QR code tab to PoS/merchant screen
+
+---
+
 {{< link-heading "h4" "2022-02-16 - 3.0.0" >}}
 
 - Localisation: added multi-language support throughout the app. This includes in-app strings, rehive platform content and config content. More information on multi-language implementation and usage can be found [here](https://github.com/rehive/rehive-javascript/tree/locales/locales).
