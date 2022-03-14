@@ -22,7 +22,7 @@ The platform consists of an API organized around RESTful principles. The API use
 * `OPTIONS` - To retrieve the methods supported on a specific endpoint.
 * `GET` - To retrieve one or more resources.
 * `POST` - To create one or more resources.
-* `PATCH` or `PATCH` - To update one or more resources.
+* `PATCH` or `PUT` - To update one or more resources.
 * `DELETE` - To delete one or more resources.
 
 The API accepts and returns JSON encoded request bodies and responses. Multipart form data can be used when uploading files via the API. The content type should be included in every API request using a `Content-Type` header containing either `application/json` or `multipart/form-data`.
