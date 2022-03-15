@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Throttling
 description: Throttling.
-weight: 7
+weight: 8
 ---
 
 Throttling is applied based on the company's tier. There are 4 tiers that have different throttling rules depending on whether the request is on a `user` endpoint or an `admin` endpoint. The `restricted` tier will automatically be applied to a company if their associated billing account is unpaid. In these situations only the "owner" or original creator of the company will still be able to access the API.

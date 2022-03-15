@@ -20,6 +20,10 @@ Transactions are **immutable once executed** in Rehive. This means that once a t
 
 Transactions can be made by both admin users and end-users. However, end-users are not permitted to alter the status of a transaction. Only admins have permission to make changes to transactions.
 
+<aside class="notice">
+    Currency amounts/values are always handled as integers in Rehive (eg. $ 1.00 represented as 100 in the API). Take a look <a href="/platform/usage/currencies-and-amounts/" target="_blank">here</a> for more details.
+</aside>
+
 ### Object
 
 Transactions are basically a series of logs recording actions on an account balance. With this in mind, transactions contain information that can be used to identify who made the transaction, what account and user the transaction was made on, and how the transaction impacted the balance of an account.

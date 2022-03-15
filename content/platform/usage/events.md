@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Events
 description: Events.
-weight: 6
+weight: 7
 ---
 
 The platform has a collection of internal events that can be configured to trigger webhooks.

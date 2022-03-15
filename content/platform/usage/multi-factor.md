@@ -2,7 +2,7 @@
 date: 2022-02-09T15:21:22+02:00
 title: Multi-factor
 description: Multi-factor authentication and authorization.
-weight: 9
+weight: 10
 ---
 
 The platform supports multi-factor for ensuring users are authenticated and/or authorized to access their account and associated resources.
