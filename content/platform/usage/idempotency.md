@@ -9,7 +9,7 @@ The platform supports idempotency for protecting against accidentally repeating 
 
 The platform saves the response of every request that includes an idempotency key. Subsequent requests with the same key, URL, and method will return the same response as the original request. All responses will be saved except for throttling errors that return a `429 Too Many Requests`. Requests that yield a a `429` will be treated as if they never occurred and can be retried without fear of performing the same operation more than once.
 
-To perform an idempotent request attach an additional header: `Idempotency-Key: {key}`. Idmepotency keys are only supported on `POST`, `PUT` and `PATCH` requests. The `{key}` can be any string value but must be under 100 characters long.
+To perform an idempotent request attach an additional header: `Idempotency-Key: {key}`. Idempotency keys are only supported on `POST`, `PUT` and `PATCH` requests. The `{key}` can be any string value but must be under 100 characters long.
 
 ```shell
 curl https://api.rehive.com/3/user/ \
