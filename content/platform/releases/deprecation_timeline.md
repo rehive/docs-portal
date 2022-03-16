@@ -5,7 +5,7 @@ description: Platform deprecation timeline.
 weight: 1
 ---
 
-This timeline indicates dates at which certain functionality will be permanently removed from the Rehive platform. Anything listed here is deprecated and will be supported up to the date indicated in the timeline.
+This timeline indicates when certain functionality will be permanently removed from the Rehive platform. Anything listed here is deprecated and will be supported up to the date indicated in the timeline.
 
 ### Deprecated
 
