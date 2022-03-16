@@ -15,18 +15,18 @@ There are three resources you should be aware of when interacting with multi-fac
 
 #### Authenticator rules
 
-Authenticator rules are used to configure rules that should trigger when certain conditions are matched on a user accessing the API.
+Authenticator rules are used to configure rules that should trigger when certain conditions are matched on a user accessing the platform.
 
 There are two types of authenticator rules:
 
-- **authentication**: These rules are evaluated when authenticating a user (such as on login). Every company automatically includes a single `authentication` type rule. This rule is used to perform the most basic multi-factor authentication, eg. when a user login occurs, issue a challenge must be completed to access the API.
-- **authorization**: These rules are evaluated when checking a user's permission to access a resource. No `authorization` rules are configured by default.
+- **Authentication**: These rules are evaluated when authenticating a user (such as on login). Every company automatically includes a single `authentication` type rule. This rule is used to perform the most basic multi-factor authentication, eg. when a user login occurs, a challenge is issues and must be completed to access the API.
+- **Authorization**: These rules are evaluated when checking a user's permission to access a resource. No `authorization` rules are configured by default.
 
 In addition to the authenticator `type`s above, multi-factor rules can be configured to have different durabilities:
 
-- **permanent**: A challenge issued by a permanent rule must only be completed once per login/session.
-- **durable**: A challenge issued by a durable rule will last a set amount of time (configured in the `duration` field on a authenticator rule).
-- **ephemeral**: A challenge issued by an ephemeral rule must be completed each time a user accesses resources with the configured permissions. The completed challenge must be submitted in the HTTP headers on the next request. This results in the challenge getting consumed.
+- **Permanent**: A challenge issued by a `permanent` rule must only be completed once per login/session.
+- **Durable**: A challenge issued by a `durable` rule will last a set amount of time (configured in the `duration` field on a authenticator rule).
+- **Ephemeral**: A challenge issued by an `ephemeral` rule must be completed each time a resources is accessed that matches the configured permissions. The completed challenge must be submitted (and subsequently consumed) in the HTTP headers on the next request to that resource.
 
 All rules can be configured to only trigger once the user's session reaches a certain age.
 
@@ -38,11 +38,11 @@ The authenticator resource is used by users to add and manage the authenticators
 
 There are currently three MFA authenticar types supported:
 
-- **totp**: Token one time passwords can be used with a compatible authenticator apps like Authy, Google Authenticator or 1Password.
-- **sms**: SMS one time password can be used with a valid mobile number. We encourage clients to use `totp` instead as SMS if possible.
-- **static**: Generates a list of one time passwords that can be used as secondary codes for recovery should a user lose access to their primary authenticator.
+- **TOTP**: Can be used with a compatible authenticator apps like Authy, Google Authenticator or 1Password.
+- **SMS**: Can be used with a valid mobile number. We encourage clients to use `totp` instead of `sms` if possible.
+- **Static**: Generates a list of one time passwords that can be used as secondary codes for recovery should a user lose access to their primary authenticator.
 
-After creating an authenticator, it must be verifie dvia the **MFA verify** endpoint. This is simply done by submitting an `authenticator` and the verification `token` for the specific authenticator. Only verified authenticators will be used for multi factor authenticator rules.
+After creating an authenticator, it must be verified via the **MFA verify** endpoint. This is simply done by submitting an `authenticator` and the verification `token` for the specific authenticator. Only verified authenticators will be used for multi factor authenticator rules.
 
 #### Authenticator challenges
 
