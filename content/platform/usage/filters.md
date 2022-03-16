@@ -18,7 +18,6 @@ curl https://api.rehive.com/3/admin/transactions/?status=complete&tx_type=debit&
 
 To sort results, an endpoint will often also include an optional `orderby` query parameter.
 
-
 <aside class="notice">
 The best place to see a full list of supported filters is in the <a href="https://api.rehive.com/redoc/" target="_blank">API Reference</a>.
 </aside>
@@ -29,8 +28,9 @@ There are several filter field types in the API that offer more complex interact
 
 #### Date Fields
 
-Date fields can be further narrowed down by filtering on ranges using the greater
-than (`__gt`) and less than (`__lt`) suffixes (eg. `created__gt`).
+Date fields can be further narrowed down by filtering on ranges using the greater than (`__gt`) and less than (`__lt`) suffixes (eg. `created__gt`).
+
+Dates in the platform are always represented as millisecond UNIX timestamps. When querying by dates or date ranges you will need to always do so using a millisecond UNIX timestamp as well (eg. `1647447399000`).
 
 #### Metadata Fields
 
