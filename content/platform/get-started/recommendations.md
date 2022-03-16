@@ -29,7 +29,7 @@ Alternatively if you need users to perform an action that requires escalated pri
 
 #### Use platform idempotency
 
-If you are concerned about mistakenly replaying an action on the platform due to a bug or a race condition, then use [platform level idempotency](/platform/usage/idempotency/) on POST, PATCH and PUT requests.
+If you are concerned about mistakenly replaying an action on the platform due to a bug or a race condition, then use [platform level idempotency](/platform/usage/idempotency/) on `POST`, `PATCH`, and `PUT` requests.
 
 
 #### Consider pagination
