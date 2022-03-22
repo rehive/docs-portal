@@ -7,7 +7,7 @@ weight: 7
 
 The platform has a collection of internal events that can be configured to trigger webhooks.
 
-Webhooks should always be created with a secure `secret` key. The secret is sent in the Authorization header of the webhook request. When receiving webhooks the `secret` should always be validated to ensure the webhook originated from the platform.
+Webhooks should always be created with a secure `secret` key. The secret is sent in the Authorization header of the webhook request. When receiving webhooks the `secret` should always be validated to ensure the webhook originated from the platform. Additionally, platform webhooks will always originate from the following IP: **34.91.230.165**. This IP can be used to further validate that a webhook event originated from Rehive.
 
 The platform expects a `200 OK` HTTP response when webhooks are called. If a 200 response is not returned, the platform will retry the webhook up to 7 times with a gradually increasing delay between each retry.
 
