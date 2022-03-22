@@ -9,6 +9,12 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-03-22" >}}
+
+1. Fixed a bug in admin account updates that resulted in the user performing the update getting incorrectly attached to the account.
+
+---
+
 {{< link-heading "h5" "2022-03-11" >}}
 
 1. Fixed a bug in account definition synchronization: When creating a new account definition the system would previously attempt to assign all accounts with the same name to that account definition but it should have instead been ignoring all accounts that are not attached to a user (ie. standalone account should not be linked to accountd definitions).
