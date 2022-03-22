@@ -29,9 +29,17 @@ The attributes in the above object are described below:
 Attribute | Description
 --- | ---
 id | The unique id of the request. This id is shared between retries of the same request.
-event | The event that triggered the webhook
-company | The company identifier
-data | an object contained different data depending on the event
+event | The event that triggered the webhook.
+company | The company identifier.
+data | The event data.
+
+The following headers will be included on all events:
+
+Header | Value
+--- | ---
+Authorization | `Secret {secret}`
+User-Agent | `rehive-platform/{version}`
+Content-Type | `application/json`
 
 ### Supported events
 
