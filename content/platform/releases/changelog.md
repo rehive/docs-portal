@@ -13,6 +13,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 1. Fixed a bug in admin account updates that resulted in the user performing the update getting incorrectly attached to the account.
 2. Updated all platform webhook events to originate from a single IP: 34.91.230.165.
+3. Updated the admin auth register endpoint to support the same additional fields as the anonymous auth register endpoint: `language`, `timezone`, `gender`, `title`, `marital_status`, and `id_number`.
 
 ---
 
