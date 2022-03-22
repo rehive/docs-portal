@@ -12,6 +12,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 {{< link-heading "h5" "2022-03-22" >}}
 
 1. Fixed a bug in admin account updates that resulted in the user performing the update getting incorrectly attached to the account.
+2. Updated all platform webhook events to originate from a single IP: 34.91.230.165.
 
 ---
 
