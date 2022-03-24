@@ -5,19 +5,19 @@ description: Help and support.
 weight: 5
 ---
 
-## Troubleshooting
+### Troubleshooting
 
-**Q:** The anonymous user login endpoint is returning a 1020 error page.
+**Question:** Why is the anonymous user login endpoint returning a `1020` error page?
 
-**A:** The login endpoint has strict anti-bot rules to prevent attacks on the platform. Accessing the login endpoint in a bot-like manner (cURL, Postman, outside a web browser) may trigger errors.
+**Answer:** The login endpoint has strict anti-bot rules to prevent attacks on the platform. Accessing the login endpoint in a bot-like manner (cURL, Postman, outside a web browser) may trigger errors.
 
 If this is happening in a server-side context, you should switch to the "admin authenticated" login endpoint. If this error occurs in client-side code (ie. in a web browser) then please contact [support](https://rehive.com/support) as we may need to adjust our rules accordingly.
 
 ---
 
-**Q:** Uploading images or files is resulting in a 400 or 500 error.
+**Question:** Why do image or file uploads result in a `400` or `500` error?
 
-**A:** The format for uploading images for files is quite strict. when uploading files the following things are required:
+**Answer:** The format for uploading images for files is quite strict. when uploading files the following things are required:
 
 - The `ContentType` must be `multipart/form-data`.
 - The file must be uploaded as form data and have its own `filename` and `Content-Type`.
@@ -27,12 +27,12 @@ We provide [documentation](/platform/usage/uploading/) on some common ways to up
 
 ---
 
-**Q:** Some of my requests are returning a `429` status and an error message saying `Request was throttled. Expected available in X seconds.`.
+**Question:** Why do some of my requests return a `429` status code and an error message saying `Request was throttled. Expected available in X seconds.`?
 
-**A:** The platform API applies throttling to all endpoints if they are accessed too rapidly. The level of throttling varies on the endpoint and the payment plan of the company accessing it. Throttling is discussed further [here](/platform/usage/throttling/).
+**Answer:** The platform API applies throttling to all endpoints if they are accessed too rapidly. The level of throttling varies on the endpoint and the payment plan of the company accessing it. Throttling is discussed further [here](/platform/usage/throttling/).
 
 
-## Other resources
+### Other resources
 
 - [Help Center](https://rehive.intercom.help/en/)
 - [Support](https://rehive.com/support)
