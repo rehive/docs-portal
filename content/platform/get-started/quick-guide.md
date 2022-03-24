@@ -5,7 +5,7 @@ description: A quick guide to the platform.
 weight: 2
 ---
 
-To get started with the API you have a couple options:
+There are a couple ways to get started with the Rehive platform API:
 
 1. You can choose to use one of the Rehive supported SDKs or
 2. Integrate the API manually in your choice of language.
@@ -16,84 +16,69 @@ To use one of the SDKs check for you language in the "references list" in the si
 <b>Important:</b> This is a quick guide only. Please ensure that you understand the building guide and recommendations before designing your own solutions on the Rehive platform.
 </aside>
 
-
 ### Using the API
 
-The easiest way to get started with the API is to use cURL to make a login request:
-
-```shell
-curl https://api.rehive.com/3/auth/login/ \
-  -X POST \
-  -H "Content-Type: application/json" \
-  -d '{"user": "joe@rehive.com",
-       "company": "rehive",
-       "password": "joe1234"}'
-```
+The easiest way to get started with the API is to login to the dashboard and grab an API token for your user. You can create a new API token in the `Developers` -> `API tokens` section in the dashboard.
 
 <aside class="warning">
-    Before trying the above request, make sure you have your own <code>user</code>, <code>company</code>, and <code>password</code>. This can be done easily by registering a new company via the <a href="https://dashboard.rehive.com" target="_blank">dashboard</a>.
+    If you have not created a company yet, you should do so first via the <a href="https://dashboard.rehive.com" target="_blank">dashboard</a>.
 </aside>
 
-Once you have your own user you can replace the placeholder data in the example JSON object and then fire off the above request. If successful, you should get a response like this:
+You can use the new API token to authenticate your requests to the API. For example, if you want to get user information (for the user who owns the API token) you can call the API like this (using cURL):
+
+```shell
+curl https://api.rehive.com/3/user/ \
+  -X GET \
+  -H "Authorization: Token {token}" \
+  -H "Content-Type: application/json"
+```
+
+If successful, you should get a response like this:
 
 ``` json
 {
     "status": "success",
     "data": {
-        "token": "{token}",
-        "user": {
-            "id": "00000000-0000-0000-0000-000000000000",
-            "first_name": "Joe",
-            "last_name": "Soap",
-            "email": "joe@rehive.com",
-            "username": "",
-            "id_number": null,
-            "birth_date": null,
-            "profile": null,
-            "currency": null,
-            "company": "rehive",
-            "language": "en",
-            "nationality": "ZA",
-            "metadata": {},
-            "mobile": "+00000000000",
-            "timezone": null,
-            "verified": false,
-            "status": "pending",
-            "kyc": {
-                "updated": 1509539801040,
-                "status": "pending"
-            },
-            "verification": {
-                "email": true,
-                "mobile": true
-            },
-            "groups": [
-                {
-                    "name": "test",
-                    "label": "Test"
-                }
-            ],
-            "permissions": [],
-            "settings": {
-                "allow_transactions": true,
-                "allow_debit_transactions": true,
-                "allow_credit_transactions": true
-            },
-            "created": 1464912953000,
-            "updated": 1464912953000,
+        "id": "00000000-0000-0000-0000-000000000000",
+        "first_name": "Joe",
+        "last_name": "Soap",
+        "email": "joe@rehive.com",
+        "username": "",
+        "id_number": null,
+        "birth_date": null,
+        "profile": null,
+        "currency": null,
+        "company": "rehive",
+        "language": "en",
+        "nationality": "ZA",
+        "metadata": {},
+        "mobile": "+00000000000",
+        "timezone": null,
+        "verified": false,
+        "status": "pending",
+        "verification": {
+            "email": true,
+            "mobile": true
         },
-        "challenges": []
+        "groups": [
+            {
+                "name": "admin",
+                "label": "Admin"
+            }
+        ],
+        "permissions": [],
+        "settings": {
+            "allow_transactions": true,
+            "allow_debit_transactions": true,
+            "allow_credit_transactions": true
+        },
+        "created": 1464912953000,
+        "updated": 1464912953000
     }
 }
 ```
 
-And there you have it, a successful login! The user was validated and authenticated on the platform and an authentication `token` returned.
-
-<aside class="warning">
-    The platform login endpoint is intended for anonymous unauthenticated users and is therefore subject to strict throttling, rate limiting and bot protection rules. If you want to login a user from a "machine user" or service context you should instead use the admin authenticated login endpoint <code>/3/admin/auth/login/</code>, which requires an admin user's token to be included in the <code>Authorization</code> header.
-</aside>
-
-Usin the token returned in the login response you can perform actions, as that user, on endpoints that require authentication. For example, you may want to get a list of emails associated to a user:
+You can access any endpoint and method your API token has permission to access. For example, you may want to get a list of emails associated to your user:
 
 ```shell
 curl https://api.rehive.com/3/user/emails/ \
@@ -102,8 +87,7 @@ curl https://api.rehive.com/3/user/emails/ \
   -H "Content-Type: application/json"
 ```
 
-If you used the `token` you previously retrieved you should get a successful response containing a list of user emails:
-
+You will get a response like this:
 
 ```json
 {
@@ -118,3 +102,15 @@ If you used the `token` you previously retrieved you should get a successful res
     ]
 }
 ```
+
+Or as a final example, you may want to update your user details. When updating, the platform requires the `PATCH` method to be used instead of the `GET` method. You will also need to send a JSON formatted http body in your request:
+
+```shell
+curl https://api.rehive.com/3/user/ \
+  -X PATCH \
+  -H "Authorization: Token {token}" \
+  -H "Content-Type: application/json" \
+  -d '{"first_name": "Joseph"}'
+```
+
+To learn more about what you can do in the platform, take a look at the [API Reference](https://api.rehive.com/redoc/), which contains the full API specification.
