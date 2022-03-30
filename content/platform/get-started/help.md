@@ -35,7 +35,7 @@ We provide [documentation](/platform/usage/uploading/) on some common ways to up
 
 **Why is X endpoint not returning the data I expect or returning an unexpected error?**
 
-First ensure that you are reading the error response as non Rehive errors will always include information about the error. In addition, if you are working on your own custom service or client, try and make sure that the issue is caused by the API and not an error in the way you are using the API: The best way to do this is to recreate your request in cURL, postman or some other simple HTTP request took. 
+First ensure that you are reading the error response as non `500` errors will always include information about the error. In addition, if you are working on your own custom service or client, try and make sure that the issue is caused by the API and not an error in the way you are using the API: The best way to do this is to recreate your request in cURL, postman or some other simple HTTP request took. 
 
 If you are still uncertain about why an endpoint is returning an unexpected response, please collect the following information before submitting it to Rehive [support](https://rehive.com/support):
 
