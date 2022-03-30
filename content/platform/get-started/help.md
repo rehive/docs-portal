@@ -29,7 +29,7 @@ We provide [documentation](/platform/usage/uploading/) on some common ways to up
 
 **Why do some of my requests return a `429` status code and an error message saying `Request was throttled. Expected available in X seconds.`?**
 
-**Answer:** The platform API applies throttling to all endpoints if they are accessed too rapidly. The level of throttling varies on the endpoint and the payment plan of the company accessing it. Throttling is discussed further [here](/platform/usage/throttling/).
+The platform API applies throttling to all endpoints if they are accessed too rapidly. The level of throttling varies on the endpoint and the payment plan of the company accessing it. Throttling is discussed further [here](/platform/usage/throttling/).
 
 ---
 
