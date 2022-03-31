@@ -11,7 +11,9 @@ weight: 5
 
 The login endpoint has strict anti-bot rules to prevent attacks on the platform. Accessing the login endpoint in a bot-like manner (cURL, Postman, outside a web browser) may trigger errors.
 
-If this is happening in a server-side context, you should switch to the "admin authenticated" login endpoint. If this error occurs in client-side code (ie. in a web browser) then please contact [support](https://rehive.com/support) as we may need to adjust our rules accordingly.
+If this error is happening in a server-side context, you should switch to the "admin authenticated" login endpoint. See the [authorization documentation](/platform/usage/authorization/) for more information regarding the admin authenticated login endpoint.
+
+If this error occurs in client-side code (ie. in a web browser) then please contact [support](https://rehive.com/support) as we may need to adjust our rules accordingly.
 
 ---
 
