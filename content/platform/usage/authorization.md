@@ -37,7 +37,7 @@ When invoking the "admin authenticated" login endpoint, an `Authorization` heade
 <aside class="notice">
 If you experience any issues on the <em>anonymous user login</em> in a client-side context where you expect it to not block your request, please contact Rehive <a href="https://rehive.com/support" target="_blank">support</a> for assistance.
 
-Keep in mind that commonnly used testing tools like cURL and Postman will be blocked on the anonymous user login endpoint as Rehive cannot distinguish between these tools and malicious actors.
+Keep in mind that commonly used testing tools like cURL and Postman will be blocked on the anonymous user login endpoint as Rehive cannot distinguish between these tools and malicious actors.
 </aside>
 
 ### Authorization header
