@@ -26,16 +26,18 @@ The platform provides an **anonymous user login** endpoint that can be used to a
 
 - `/3/auth/login/`
 
-This endpoint is only intended for use in client-side code and is best used in a browser-like context due to the additional protections applied to it. These protections include severe anti-bot rules that may make it difficult to use the endpoint in a server-side context where it can be hard to distinguish between automated access and malicious bots.
+This endpoint is only intended for use in client-side code and is best used in a browser-like context due to the additional protections applied to it. These protections include severe anti-bot rules that may make it difficult to use the endpoint in a server-side context where it can be hard to distinguish between automated access and malicious actors.
 
-In addition, in order to get around the above-mentiond difficulties, Rehive includes an **authenticated user login** endpoint. The authenticated user endpoint is intended for use in a machine-user context such as on a backend server where you can safely store an API token with admin section access.
+In addition, in order to get around the above-mentiond difficulties, Rehive includes an **admin authenticated login** endpoint. The admin authenticated endpoint is intended for use in a machine-user context such as on a backend server where you can safely store an API token with admin section access.
 
 - `/3/admin/auth/login/`
 
-When invoking the "authenticated user" login endpoint, an Authorization header (discussed below) must be included in the request. This allows the API request to bypass the anonymous user protections.
+When invoking the "admin authenticated" login endpoint, an `Authorization` header (discussed below) containing an API token must be included in the request. The API token should belong to an admin user or a user with at least the "Admin User Add" permision. By including an API token belonging to a user with admin access the request can bypass the anonymous user protections that would normally trigger firewall rules.
 
 <aside class="notice">
 If you experience any issues on the <em>anonymous user login</em> in a client-side context where you expect it to not block your request, please contact Rehive <a href="https://rehive.com/support" target="_blank">support</a> for assistance.
+
+Keep in mind that commonnly used testing tools like cURL and Postman will be blocked on the anonymous user login endpoint as Rehive cannot distinguish between these tools and malicious actors.
 </aside>
 
 ### Authorization header
