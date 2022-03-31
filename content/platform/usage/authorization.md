@@ -28,7 +28,7 @@ The platform provides an **anonymous user login** endpoint that can be used to a
 
 This endpoint is only intended for use in client-side code and is best used in a browser-like context due to the additional protections applied to it. These protections include severe anti-bot rules that may make it difficult to use the endpoint in a server-side context where it can be hard to distinguish between automated access and malicious actors.
 
-In addition, in order to get around the above-mentiond difficulties, Rehive includes an **admin authenticated login** endpoint. The admin authenticated endpoint is intended for use in a machine-user context such as on a backend server where you can safely store an API token with admin section access.
+In addition, in order to get around the above-mentioned difficulties, Rehive includes an **admin authenticated login** endpoint. The admin authenticated endpoint is intended for use in a machine-user context such as on a backend server where you can safely store an API token with admin section access.
 
 - `/3/admin/auth/login/`
 
