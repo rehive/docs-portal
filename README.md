@@ -14,6 +14,12 @@ The docs portal uses a submodule for its theme. Therefore when cloning the repos
 git clone --recurse-submodules git@github.com:rehive/docs-portal.git
 ```
 
+When pulling new changes from `master` make sure you also run the following to get the latest submodule updates.
+
+```sh
+git submodule update
+```
+
 ### Development
 
 ```sh
