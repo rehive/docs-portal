@@ -20,6 +20,14 @@ When pulling new changes from `master` make sure you also run the following afte
 git submodule update
 ```
 
+If a submodule has been updated at its origin, then you will need to merge these updates into the repository using:
+
+```sh
+git submodule update --remote --merge
+```
+
+And then commit/push the new submodule.
+
 ### Development
 
 ```sh
