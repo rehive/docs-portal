@@ -35,9 +35,9 @@ In addition, in order to get around the above-mentioned difficulties, Rehive inc
 When invoking the "admin authenticated" login endpoint, an `Authorization` header (discussed below) containing an API token must be included in the request. The API token should belong to an admin user or a user with at least the "Admin User Add" permision. By including an API token belonging to a user with admin access the request can bypass the anonymous user protections that would normally trigger firewall rules.
 
 <aside class="notice">
-If you experience any issues on the <em>anonymous user login</em> in a client-side context where you expect it to not block your request, please contact Rehive <a href="https://rehive.com/support" target="_blank">support</a> for assistance.
+If you experience any issues on the <b>anonymous user login</b> in a client-side context where you expect it to not block your request, please contact Rehive <a href="https://rehive.com/support" target="_blank">support</a> for assistance.<br/>
 
-Keep in mind that commonly used testing tools like cURL and Postman will be blocked on the anonymous user login endpoint as Rehive cannot distinguish between these tools and malicious actors.
+Keep in mind that commonly used testing tools like cURL and Postman may be blocked on the anonymous user login endpoint as Rehive cannot always distinguish between these tools and malicious actors.
 </aside>
 
 ### Authorization header
