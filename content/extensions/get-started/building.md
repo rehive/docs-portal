@@ -59,7 +59,7 @@ The client should save the token to session or local storage so that all future 
 
 ### B. Call an endpoint on the custom extension
 
-eg. `https://custom.extension.domain/transactions/`
+eg. `https://custom.extension.domain/custom/transactions/`
 
 **From the client-side call a custom endpoint on the custom extension or integration.**
 
