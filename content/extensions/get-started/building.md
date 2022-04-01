@@ -47,7 +47,7 @@ There are many ways to integrate extensions into the Rehive ecosystem. The follo
 
 The flow above is stateless (REST), which is recomended when building web APIs. A detailed breakdown can be found below:
 
-#### A. Call the login endpoint
+##### A. Call the login endpoint
 
 eg. `https://api.rehive.com/3/auth/login/`
 
@@ -57,7 +57,7 @@ If the login attempt is successful it will return a token that can be used for s
 
 The client should save the token to session or local storage so that all future requests can use it for authorization.
 
-#### B. Call an endpoint on the custom extension
+##### B. Call an endpoint on the custom extension
 
 eg. `https://custom.extension.domain/custom/transactions/`
 
@@ -65,7 +65,7 @@ eg. `https://custom.extension.domain/custom/transactions/`
 
 Include an `Authorization` token in the headers so that the extension can use it to authorize the user.
 
-#### C. Call the authorization endpoint
+##### C. Call the authorization endpoint
 
 eg. `https://api.rehive.com/3/auth/`
 
@@ -77,7 +77,7 @@ If Rehive cannot find a user for that token it will instead return an error and 
 
 The custom extension may also want to perform additional authorization (like ensuring the user is in a certain group or matching it against some other custom rules).
 
-#### D. Call an admin endpoint
+##### D. Call an admin endpoint
 
 eg. `https://api.rehive.com/3/admin/transactions/`
 
