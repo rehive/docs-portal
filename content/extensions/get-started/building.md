@@ -39,11 +39,11 @@ Secondly, when a webhook is received by the extension on its webhook endpoint, i
 Thirdly, when an end user accesses the API endpoints on the notification extension
 it does the same authorization check as the admin user one except now it does not ensure the user is in the `admin` or `service` group. Once authorized the extension can return a list of notification settings it has stored for that user.
 
-## Extension intergration
+## Extension integration
 
 There are many ways to integrate extensions into the Rehive ecosystem. The following diagram shows how to do so using Rehive for authentication in addition to supporting a custom endpoint that provides access to resources normally only accesible to admin users:
 
-<img src="/images/intergrations.svg" alt="Dashboard image" width="100%">
+<img src="/images/integrations.svg" alt="Dashboard image" width="100%">
 
 The flow above is stateless (REST), which is recomended when building web APIs. A detailed breakdown can be found below:
 
