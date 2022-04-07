@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-04-07" >}}
+
+1. Added a new `pending` option to the company `status` field. The `status` field will nopw automatically be set to `pending` on production mode companies. A Rehive admin will change it to `active` once a company has been reviewed and approved for production.
+2. Fixed a bug that resulted in company links not getting carried over to the billing service when included on a company create request.
+
+---
+
 {{< link-heading "h5" "2022-03-22" >}}
 
 1. Fixed a bug in admin account updates that resulted in the user performing the update getting incorrectly attached to the account.
