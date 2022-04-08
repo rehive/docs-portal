@@ -7,6 +7,8 @@ weight: 1
 
 Controls the appearance / features in accounts section
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
 ---
 
 - `layout`: (s: 'accounts'/'') groups currencies by accounts with totals, defaults to listing all currencies.

@@ -9,6 +9,10 @@ Config key: `faqs`
 
 This section configures the list of frequently asked questions in the apps help section
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
 - `description`: (s: '') helper text displayed below FAQ header
 - `questions`: ([{}]: []) array of question objects with the following fields
   - `question`: (s: '') title/question string

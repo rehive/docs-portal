@@ -7,6 +7,10 @@ weight: 11
 
 Config key: `onboarding`
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
 - `hideSections`: ([s]: []) array of section names to hide in onboarding flow
 - `hideRegister`: ([s]: []) array of group names to skip onboarding flow from register
 - `hideApp`: ([s]: []) array of group names to skip onboarding flow from register and login

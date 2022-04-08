@@ -9,6 +9,10 @@ Config key: `product`
 
 Controls the appearance / features in product section
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
 - `currencies`: (a - []) hardcode override to only show products for these currencies (array of codes)
 - `defaultCurrency`: (s - '') overrides using the user's primary currency as default cart currency
 

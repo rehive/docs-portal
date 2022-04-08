@@ -5,7 +5,13 @@ description: Sliders config
 weight: 14
 ---
 
-This section contains multiple arrays of slide objects that are displayed at different locations in the app. Currently available in the following locations:
+This section contains multiple arrays of slide objects that are displayed at different locations in the app. 
+
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
+Currently available in the following locations:
 
 - preAuth - in grey label it's after choosing the app ID, in white label it's after first start up
 - auth - carousel on the landing page

@@ -7,6 +7,10 @@ weight: 8
 
 key: `settings`
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
 - `hideCryptoAccounts`: (b: false) hides crypto accounts section in external accounts
 - `hideBankAccounts`: (b: false) hides bank accounts section in external accounts
 - `hidePrimaryCurrency`: (b: false) hides primary currency section in preferences

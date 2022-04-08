@@ -9,6 +9,10 @@ Config key: `auth`
 
 This section configures the auth screen flows
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
 - `identifier`: (s: '**email**'/'mobile') tells the app which field the users are required to log in with. Note: the two options below are only applicable for whichever value this identifier is set to
 - `email`: (s: 'required'/'optional'/'') prompts the user to verify their email:
   - `required`: app is blocked by this screen until user has verified email

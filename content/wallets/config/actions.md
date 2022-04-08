@@ -9,6 +9,10 @@ Config key: `actions`
 
 Each action in accounts can be customized here. All actions have a `condition` and a `config` described below. This section will be updated/overhauled soon (end Q2 2022).
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
 ## Actions
 
 - `send`

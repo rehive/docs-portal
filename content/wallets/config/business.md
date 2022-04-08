@@ -7,6 +7,10 @@ weight: 4
 
 Config key: `business`
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
 - `hideCurrency`: ([s]: []) array of currencies to hide from available business currencies
 - `documents`:
   - `hide`: (b: false) controls whether to hide the documents section of business onboarding/settings

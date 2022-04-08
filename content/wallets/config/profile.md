@@ -7,6 +7,10 @@ weight: 13
 
 Config key: `profile`
 
+Types: (s) - string, (b) - boolean, (i) - integer
+
+---
+
 - `hideID` - hides the id field from the personal details page
 - `labelID` - custom label override for id field
 - `addressTypes` - available address types in app. This is used for listing the addresses on the profile, adding new addresses and checkout flows. Options are from the platform (`permanent`, `shipping`, `billing`)
