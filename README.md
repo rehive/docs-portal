@@ -30,6 +30,8 @@ And then commit/push the new submodule.
 
 ### Development
 
+Ensure you have Hugo version `0.78.1 (extended)` installed and then run:
+
 ```sh
 hugo serve
 ```
