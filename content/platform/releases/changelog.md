@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-04-13" >}}
+
+1. Improved the error messages for throttling to include a custom reason based on the specific throttle that failed.
+    - Throttling error with an explicit reason be formatted as `Request was throttled: {reason}. Expected available in {time}.`.
+    - For generic throttling error will still be outputted as `Request was throttled. Expected available in {time}.`.
+
+---
+
 {{< link-heading "h5" "2022-04-07" >}}
 
 1. Added a new `pending` option to the company `status` field. The `status` field will nopw automatically be set to `pending` on production mode companies. A Rehive admin will change it to `active` once a company has been reviewed and approved for production.
