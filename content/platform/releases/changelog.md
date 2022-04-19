@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-04-20" >}}
+
+1. Added new system metrics. All new companies will now have three default metrics that cannot be removed or modified: `user_count, `user_active_count`, and `transaction_count`.
+2. Added new admin endpoints for password reset and user deactivate.
+
+---
+
 {{< link-heading "h5" "2022-04-13" >}}
 
 1. Improved the error messages for throttling to include a custom reason based on the specific throttle that failed.
