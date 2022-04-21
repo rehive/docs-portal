@@ -9,6 +9,156 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2022-04-20" >}}
+
+**Changes:**
+
+- Admins can now edit more currency fields - symbol, unit and description.
+- Admins can now only archive currencies, not delete them, to match what the API allows.
+
+---
+
+{{< link-heading "h4" "2022-04-19" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the Get Started page would get stuck loading.
+- Fixed issue where correct Get Started block would not show for correct project type (Wyre vs Manual)
+
+**Changes:**
+
+- Removed outdated mobile number validation from add user and add mobile number. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-04-13" >}}
+
+**Changes:**
+
+- Added new user and admin permissions.
+- Added links to the create Google and Apple dev links on the Get Started page.
+- Fixed typo in the Android & iOS block on the Get Started page.
+- Added link to the Verify email address link on the Get Started page.
+- Added tour triggers to the Get Started page.
+
+**New features:**
+
+- Admins can now register a project to be managed with Wyre. Onboarding has been updated to be more streamlined.
+- New Get Started page.
+
+---
+
+{{< link-heading "h4" "2022-04-11" >}}
+
+**Changes:**
+
+- Added a link to the Expressions Guide on reward campaigns, notifications and webhooks.
+- Removed Demo and Setup Bitcoin Testnet blocks from the Get Started page.
+- Removed the Product Type from the Product Extension Products listing page.
+- Dashboard now displays the product ID on the Products listing page and when editing a product.
+- Dashboard now displays an order item ID when viewing an order in the Product Extension.
+- Added pagination to the Wyre Extension's accounts, transfers, and users listing pages.
+
+---
+
+{{< link-heading "h4" "2022-04-06" >}}
+
+**Changes:**
+
+- Adds the display of a Wyre wallet id on user accounts and standalone accounts if Wyre Extension metadata is present.
+- Adds message about API keys and account IDs being truncated to the Wyre Extension settings page.
+
+---
+
+{{< link-heading "h4" "2022-04-01" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins could not unset a product as a voucher in the Product Extension.
+- Fixed issue where setting a product as a voucher when editing it did not correctly set the type and creation type in the voucher schema.
+
+**Changes:**
+
+- Changes "Credit deposit" in the transaction helper to "Manual deposit". (Hotfix)
+- Adds id to the create manual deposit shortcut in the accounts results dropdown in search. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-03-30" >}}
+
+**Bug fixes:**
+
+- Fixed issue where setting an already existing product as a voucher did not correctly set the type and creation type for the voucher schema. (Hotfix)
+
+**Changes:**
+
+- Updates how vouchers work on the Product Extension.
+
+---
+
+{{< link-heading "h4" "2022-03-24" >}}
+
+**Changes:**
+
+- Adds full Wyre Extension UI with accounts, transfers, and users.
+- Adds the ability for admins to add Plaid credentials in the Wyre Extension.
+
+---
+
+{{< link-heading "h4" "2022-03-14" >}}
+
+**Changes:**
+
+- Added `language` field in the auth section of the App Config.
+- Added new help text in the App Extension in the settings section for App Domain and Web app hosting domain URLs.
+
+---
+
+{{< link-heading "h4" "2022-03-07" >}}
+
+**Bug fixes:**
+
+- Fixed issue where "Create credit deposit" link in the search results sat on a spinning loader forever.
+- Fixed issue where "Process withdrawals" link in the search results did not look for the correct withdrawal subtype.
+- Removed the "Approve" button from failed withdraw_manual transactions.
+- Fixes issue with Credit account search link introduced with the fix of Create manual deposit. (Hotfix)
+
+**Changes:**
+
+- Added a "Decline" button for pending withdraw_manual transactions.
+- Renamed "Create credit deposit" link in the search results to "Create manual deposit".
+
+---
+
+{{< link-heading "h4" "2022-03-01" >}}
+
+**Bug fixes:**
+
+- Fixed issue where view document modal was missing from the Business Extension.
+- Fixed issue where entering incorrect format of website on the company info page resulted in a partially broken page.
+
+**Changes:**
+
+- Refactor of registration code.
+
+---
+
+{{< link-heading "h4" "2022-02-24" >}}
+
+**Changes:**
+
+- Admins can now manually change the permissions of individual `service` group users.
+
+---
+
+{{< link-heading "h4" "2022-02-18" >}}
+
+**Bug fixes:**
+
+- Fixed date display for suspension date for past due invoices. (Hotfix)
+
+---
+
 {{< link-heading "h4" "2022-02-16" >}}
 
 **Bug fixes:**
