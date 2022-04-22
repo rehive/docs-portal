@@ -9,6 +9,11 @@ Custom extensions can be created and used by any client without a review process
 
 Getting an extension added to the **public extensions list** (available to all companies and other Rehive clients) requires that the code goes through a review process and that it matches the previously mentioned requirements. At the review team's discretion, Rehive may deny approval of a public extension for any reason.
 
+<aside class="warning">
+The dashboard and Rehive ecosystem do not currently support custom UI's for extensions created by non-Rehive developers. This means that the only features available in the dashboard for custom extensions added to the extensions list will be "activation" and "deactivation".
+</aside>
+
+
 For **private extensions**, the extension must:
 
 - Expose a public `/activate/` and `/deactivate/` endpoint.
