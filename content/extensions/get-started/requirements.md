@@ -5,15 +5,17 @@ description: Requirements for building extensions.
 weight: 3
 ---
 
-In order for an extension to be approved and allowed by Rehive in the extensions list (for an individual company or publically available to all companies) the extension must adhere to certain requirements.
+Custom extensions can be created and used by any client without a review process as an extension is simply another word for a backend system integration. However, in order to have a better experience using custom extension, clients may wish to add their extenion to their company as a **private" extension** (it will only be available in each company that it is explicitly added to). The advantages of adding an extension to a company is that it will be structurally similar to Rehive, support the `activate`, `deactiavte` and optionally `rotate` endpoints and allow custom extension to automaticaly include service user permission changes based on extension permission updates (and any other future functionality that ties extensions to service users).
 
-For individual company extensions, the extension must:
+Getting an extension added to the **public extensions list** (available to all companies and other Rehive clients) requires that the code goes through a review process and that it matches the previously mentioned requirements. At the review team's discretion, Rehive may deny approval of a public extension for any reason.
+
+For **private extensions**, the extension must:
 
 - Expose a public `/activate/` and `/deactivate/` endpoint.
 - Not break or contravene any of the rules laid out in the Rehive Terms of Service and software licenses.
 - Provide a list of permissions the extension requires.
 
-For publicly available extensions, the extension must (in addition to the above):
+For **public extensions**, the extension must (in addition to the above):
 
 - Have been reviewed and approved by the Rehive extensions team.
 - Have multi-company support.
