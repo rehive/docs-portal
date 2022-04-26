@@ -5,14 +5,18 @@ description: Requirements for building extensions.
 weight: 3
 ---
 
-Custom extensions can be created and used by any client without a review process as an extension is simply another word for a backend system integration. However, in order to have a better experience using custom extensions, clients may wish to add their extenion to a company as a **private" extension** (it will only be available in each company that it is explicitly added to). The advantages of adding an extension to a company is that it will be structurally similar to Rehive, support the `activate`, `deactivate` and optionally `rotate` endpoints and allow custom extensions to automaticaly include service user permission changes based on extension permission updates (and any other future functionality that ties extensions to service users).
+Custom extensions can be created and used by any client without a review process as an extension is simply another word for a backend system integration. However, in order to have a better experience with custom extensions, clients may wish to add their extenion to a company as a **private extension** (it will only be available in each company that it is explicitly added to). The advantages of adding an extension to a company are:
 
-Getting an extension added to the **public extensions list** (available to all companies and other Rehive clients) requires that the code goes through a review process and that it matches the previously mentioned requirements. At the review team's discretion, Rehive may deny approval of a public extension for any reason.
+- Activation/deactivation will be handled like built-in extensions.
+- A user in the `service` group will be automatically created and its permissions will be managed by the platform.
+- The extension will be accesible in the `/3/services` list, via the platform API, so extension discovery can be automated in your applications.
+- Future "built-in" functionality will become available immediately to your extensions once added: key rotation, service managed webhooks, service managed extension permissions etc.
+
+On the other hand, getting an extension added to the **public extensions list** (where they will be available to all companies and other Rehive clients) requires that the extensions and its codebase go through a review process conducted by Rehive. This review process will ensure that the extension matches Rehive extension requirements as well as code and quality of service requirements. Please contact Rehive if you are interested in building an extension that will be available to all Rehive clients.
 
 <aside class="warning">
 The dashboard and Rehive ecosystem do not currently support custom UI's for extensions created by non-Rehive developers. This means that the only features available in the dashboard for custom extensions added to the extensions list will be "activation" and "deactivation".
 </aside>
-
 
 For **private extensions**, the extension must:
 
