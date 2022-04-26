@@ -11,7 +11,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 {{< link-heading "h5" "2022-04-26" >}}
 
-1. Added support for companies to add their own `private` type extensions via the `/admin/services/` endpoint. These services are only accessible by the company that created them. The benefits of using the `services` resources for extension managment are:
+1. Added support for companies to add their own `private` type extensions via the `/3/admin/services/` endpoint. These services are only accessible by the company that created them. The benefits of using the `services` resources for extension managment are:
     - Activation/deactivation will be handled like `public` Rehive services and each service activation will automatically create a `service` user thus reducing the manual effort required to do this yourself.
     - The `service` users will be automatically managed so that `permissions` set on the service will be applied to the user.
     - The `service` will be accesible in the `services` list so service discovery can be automated in your applications.
