@@ -9,7 +9,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h5" "2022-04-26" >}}
+{{< link-heading "h5" "2022-05-14" >}}
 
 1. Fixed a bug in `metadata` on resource creation where proper JSON size and merge validation was not performed.
 2. Added new security definition description to the Open API schema.
