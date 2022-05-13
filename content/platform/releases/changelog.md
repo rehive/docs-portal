@@ -11,6 +11,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 {{< link-heading "h5" "2022-04-26" >}}
 
+1. Fixed a bug in `metadata` on resource creation where proper JSON size and merge validation was not performed.
+2. Added new security definition description to the Open API schema.
+3. Added new emprty `security` rules to to the Opern API schema on endpoints that do not require authentication.
+4. Added caching to the Open API schema to speed up load times.
+
+---
+
+{{< link-heading "h5" "2022-04-26" >}}
+
 1. Added support for companies to add their own `private` type extensions via the `/3/admin/services/` endpoint. These services are only accessible by the company that created them. The benefits of using the `services` resources for extension managment are:
     - Activation/deactivation will be handled like `public` Rehive services and each service activation will automatically create a `service` user thus reducing the manual effort required to do this yourself.
     - The `service` users will be automatically managed so that `permissions` set on the service will be applied to the user.
