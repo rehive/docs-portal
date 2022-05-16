@@ -14,7 +14,8 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 1. Updated most choice based fields to correctly output the list of choices in the Open API schema.
 2. Switched all extensions to the following 3 types: `public`, `private` and `system` (removed `extension`).
 3. Updated file handling on document and export files:
-    - Goping forward, the URLs for these files will now expire after 1 hour and a new URL will have to be retreived to continue to access the files.
+    - Going forward, the URLs for these files will now expire after 1 hour and a new URL will have to be retreived to continue to access the files.
+4. Fixed a bug in the "account currency" export where it was using `account_asset` instead of `account_currency` for the `resource` value.
 
 ---
 
