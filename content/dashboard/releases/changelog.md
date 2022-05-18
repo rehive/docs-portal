@@ -9,6 +9,73 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2022-05-18" >}}
+
+**Bug fixes:**
+
+- Fixed issue where Wyre id was not showing up on Standalone accounts even though wyre_service was present in the account's metadata. (Hotfix)
+- Fixed how Extensions were called, changing from PUT to PATCH. (Hotfix)
+
+**Changes:**
+
+- Added `from_email` field to email notifications, an optional field admins can set for specific email notifications inside the Notification Extension.
+- When creating or editing Push notifications, the Title field is no longer required. Event is now a required field.
+- Redesigned the Stellar Warm Storage page to make switching between Warmstorage accounts more clear.
+- An informative banner now displays on the Stellar livenet Extension if MSS has not been setup.
+- Updated how steps are tracked in GA during onboarding.
+- Updated GA tracking events during onboarding.
+- The Invite Admins page during onboarding now validates if an admin tries to invite their email address again.
+- The Stellar Testnet Extension is now hidden if the Wyre Extension is activated.
+- The Wyre Extension can no longer be deactivated.
+- Made it more clear what password to enter when creating a custom token, as well as that Allow Custom Token Duration needs to be enabled. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-05-16" >}}
+
+**Changes:**
+
+- Updated account currency exports to look for resource account_asset instead of account_currency.
+- Changed the filter on the Extensions page to the updated private vs public extension filter.
+- Updates how Dashboard handles vars passed to the email verify and password reset page.
+
+---
+
+{{< link-heading "h4" "2022-05-12" >}}
+
+**Changes:**
+
+- The builder now looks at status instead of steps completed in order to decide when to redirect to Dashboard.
+- Added link to customize notification templates to the Branding block on the Get Started page. (Hotfix)
+- Changes "Customize notification templates" to "Customize notifications" in the Branding block on the Get Started page. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-05-04" >}}
+
+**Bug fixes:**
+
+- Fixed display of account info modal on smaller screens.
+
+**Changes:**
+
+- Added two new webhook events to the webhooks section in Developers - currency.create and currency.update.
+- Adjusted placeholder text for company description on the company info page.
+- Amended help text on the public setting on the company info page.
+- Updated "App extension" to read "App Extension" everywhere.
+- Added the ability for admins to set up and enable Multisig Signer in the Stellar Extension.
+
+---
+
+{{< link-heading "h4" "2022-04-29" >}}
+
+**Changes:**
+
+- Added the ability to add multiple levels of categories to the Business Extension.
+- Added the requests listing and view section to the Payment Request Extension.
+
+---
+
 {{< link-heading "h4" "2022-04-20" >}}
 
 **Changes:**
