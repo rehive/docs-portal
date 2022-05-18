@@ -8,7 +8,7 @@ weight: 1
 The platform is the core component of the Rehive ecosystem. It acts as the backbone for all company, user, account and transaction management in Rehive. In addition it offers a wide set of endpoints to make it easier for developers to build transactional applications and systems.
 
 <aside class="notice">
-	The full <strong>API specification</strong> can be found <a href="https://api.rehive.com/redoc/" target="_blank">here</a>.
+	The full <strong>API specification</strong> can be found <a href="https://docs.platform.rehive.com" target="_blank">here</a>.
 </aside>
 
 <aside class="notice">
