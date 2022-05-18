@@ -72,7 +72,7 @@ A full account object with a single currency looks like:
 
 To view or modify an account or its currencies you can use the following endpoints. Keep in mind, when accounts are used in other places within the API, they are always identified by their `reference`.
 
-Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of account endpoints.
+Take a look at the [API Reference](https://docs.platform.rehive.com) for the list of account endpoints.
 
 All endpoints that contain `/accounts/` in their URL path are used for handling accounts.
 
