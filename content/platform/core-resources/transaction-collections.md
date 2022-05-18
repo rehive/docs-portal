@@ -114,7 +114,7 @@ The content within the `transaction` object will depend on the endpoint. If the 
 
 ### Endpoints
 
-Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of transaction-collection endpoints.
+Take a look at the [API Reference](https://docs.platform.rehive.com) for the list of transaction-collection endpoints.
 
 All endpoints that contain `/transaction-collections/` in their URL path are used for handling transaction-collections.
 
