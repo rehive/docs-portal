@@ -113,4 +113,4 @@ curl https://api.rehive.com/3/user/ \
   -d '{"first_name": "Joseph"}'
 ```
 
-To learn more about what you can do in the platform, take a look at the [API Reference](https://api.rehive.com/redoc/), which contains the full API specification.
+To learn more about what you can do in the platform, take a look at the [API Reference](https://docs.platform.rehive.com), which contains the full API specification.
