@@ -52,7 +52,7 @@ Each challenge is associated with a single session and a single rule. A challeng
 
 ### Usage
 
-Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of multi-factor endpoints.
+Take a look at the [API Reference](https://docs.platform.rehive.com) for the list of multi-factor endpoints.
 
 All endpoints that contain `/mfa/` in their URL path are used to handle multi-factor functionality.
 
