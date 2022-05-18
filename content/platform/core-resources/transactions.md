@@ -80,7 +80,7 @@ On the other hand, a transfer will have some additional information in the `part
 
 ### Endpoints
 
-Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of transaction endpoints.
+Take a look at the [API Reference](https://docs.platform.rehive.com) for the list of transaction endpoints.
 
 All endpoints that contain `/transactions/` in their URL path are used for handling transactions.
 
