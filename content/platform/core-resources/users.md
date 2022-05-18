@@ -83,7 +83,7 @@ Users have a multitude of attributes and properties that can be used to store id
 
 User data can be accessed via several endpoints within the `auth`, `admin` and `user` sections.
 
-Take a look at the [API Reference](https://api.rehive.com/redoc/) for the list of user endpoints.
+Take a look at the [API Reference](https://docs.platform.rehive.com) for the list of user endpoints.
 
 All endpoints that contain `/user/` or `/users/` in their URL path are used for handling users and resources belonging to them.
 
