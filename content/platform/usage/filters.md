@@ -19,7 +19,7 @@ curl https://api.rehive.com/3/admin/transactions/?status=complete&tx_type=debit&
 To sort results, an endpoint will often also include an optional `orderby` query parameter.
 
 <aside class="notice">
-The best place to see a full list of supported filters is in the <a href="https://api.rehive.com/redoc/" target="_blank">API Reference</a>.
+The best place to see a full list of supported filters is in the <a href="https://docs.platform.rehive.com" target="_blank">API Reference</a>.
 </aside>
 
 ### Complex Filter Fields
