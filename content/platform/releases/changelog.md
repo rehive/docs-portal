@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-05-31" >}}
+
+1. Improved the consistency of how metadata is populated on new objects. The `metadata` field will now always default to `null`.
+2. Adjusted the transaction-collection update endpoint to support updating the `status` if there is no clash on member transaction statuses. 
+    - ie, disallow updates to `failed` when there are already `complete` transactions, but allow updates to `failed` if there are no `complete` member transactions.
+3. Updated the account merge functionality (when temporary user transfers are merged into new users) to only try and complete transfers if they are on non-managed assets.
+
+---
+
 {{< link-heading "h5" "2022-05-16" >}}
 
 1. Updated most choice based fields to correctly output the list of choices in the Open API schema.
