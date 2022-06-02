@@ -7,6 +7,16 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h5" "2022-06-02" >}}
+
+1. Subtypes can now be filtered based on whether they have a `partner` via the `partner__isnull` filter field.
+2. Adding a `partner` to a subtype with the incorrect `tx_type` will now be prevented. Additionally all errors related to subtype partners have been updated to provide more clarity.
+3. The subtype partner system has been updated to be use the subtype as the primary resource rather than a separate `subtype-partner` resource, which has been removed.
+    - The partner can be modified/added using the field `partner`, which accepts an integer value.
+
 ---
 
 {{< link-heading "h5" "2022-05-31" >}}
