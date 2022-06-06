@@ -9,6 +9,110 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2022-06-06" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the create business category modal was not loading until clicked.
+- Fixed link to a business on the user details page. (Hotfix)
+
+**Changes:**
+
+- Added breadcrumbs to all extensions.
+- Added help text to Business payouts to indicate the timezone in which payout times are set. (Hotfix)
+- Added link to Friendbot on the Get Started page. (Hotfix)
+- Added a link to the Friendbot funding article to the Friendbot page. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-06-03" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins were unable to view a crypto transaction if the crypto extensions were not activated. (Hotfix)
+- Fixed styling issues with the text at the top of the Accounts pages.
+- Fixed issue where Test Mode was not always being saved correctly.
+- Fixed issue where setting quantity null was not being sent through correctly when editing a product in the Product Extension. (Hotfix)
+
+**Changes:**
+
+- Friendbot will only display on Test projects in the Wyre Extension.
+- Removed unused colors in the App Extension App Config.
+- Removed link to product categories page from create product page when there are no categories in the Product Extension. (Hotfix)
+- Added back the Dashboard based password set, reset and email verify pages. Restructured these to accept path params instead of get params.
+- Added `path__contains` and `method__in` filters to request logs.
+
+**New features:**
+
+- Admins can now create, edit and delete locales inside the App Extension in order to localize their apps. Admins can also download a template of the English translation to work from.
+
+---
+
+{{< link-heading "h4" "2022-06-01" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the Business Categories listing page did not load correctly.
+
+**Changes:**
+
+- Admins can now edit which categories a business belongs to in the Business Extension.
+- Removed Description and Category columns from the Businesses listing page in the Business Extension.
+- Reworked how the Business and Product categories pages are fetched.
+- The Rewards Extension has been reworked to break campaigns up into sections.
+
+---
+
+{{< link-heading "h4" "2022-05-30" >}}
+
+**Bug fixes:**
+
+- Fixed issue where entire file path would display in exports. (Hotfix)
+
+**Changes:**
+
+- Amended validation when making a transfer to ensure Sender and Receiver accounts are filled out. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-05-28" >}}
+
+**Bug fixes:**
+
+- Fixed a typo on the Get Started page. (Hotfix)
+- Fixed issue where Intercom users were still being created for @rehive.com email addresses during onboarding.
+- Fixed a display issue on the transaction metrics page. (Hotfix)
+
+**Changes:**
+
+- The company info page has been updated to be more clear and broken up into sections.
+- Updated the link in the Go to Production block on the Get Started page to go to a Production Request Typeform. (Hotfix)
+- Removes test mode project condition on Friendbot nav item in Wyre Extension. (Hotfix)
+- Updates the copy and link on the Get Started page for Test mode Wyre projects. (Hotfix)
+
+**New features:**
+
+- Admins can now fund their users on Test Projects using the Friendbot in the Wyre Extension.
+
+---
+
+{{< link-heading "h4" "2022-05-24" >}}
+
+**Changes:**
+
+- Deploy of password set/reset and email verify pages for testing.
+
+---
+
+{{< link-heading "h4" "2022-05-20" >}}
+
+**Changes:**
+
+- Updated the to email and from email placeholder text when creating or editing an email notification in the Notifications Extension. (Hotfix)
+- Made the link under From email help text in email notifications in the Notification Extension open in a new tab. (Hotfix)
+
+---
+
 {{< link-heading "h4" "2022-05-18" >}}
 
 **Bug fixes:**
