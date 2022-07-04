@@ -9,6 +9,81 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
+{{< link-heading "h4" "2022-05-20 - 2.19.0" >}}
+
+**Features**
+- Updated id number input to use an SSN mask if user's nationality is US
+
+**Fixes**
+- Requests list order issue
+- Home page layout improvements and card fixes
+- UI fixes
+- Voucher toggle on product admin bug
+- Various wyre related fixes and improvements
+- Onboarding improvements
+- Transfer conversion bug
+
+
+---
+
+{{< link-heading "h4" "2022-05-11 - 2.18.0" >}}
+
+**Features**
+- Allow users to manage multiple businesses and added a selector for switching between them
+- Added "Team" screen with functionality to add new team members
+
+---
+
+{{< link-heading "h4" "2022-04-29 - 2.17.0" >}}
+
+**Fixes**
+- Bug on business categories not saving
+- Scrolling in onboarding
+
+---
+
+{{< link-heading "h4" "2022-04-29 - 2.16.0" >}}
+
+**Features**
+- Send metadata step
+
+---
+
+{{< link-heading "h4" "2022-04-13 - 2.15.0" >}}
+
+**Features**
+- Added Wyre phase 1 (onboarding, deposit, withdraw, ACH, help center)
+
+---
+
+{{< link-heading "h4" "2022-03-30 - 2.14.0" >}}
+
+**Features**
+- Updated product checkout to handle async flow
+- Async voucher service changes
+
+---
+
+{{< link-heading "h4" "2021-12-07 - 2.13.0" >}}
+
+**Features**
+- Merchant app component design updates
+- Transfer and exchange redesign
+- Mass send improvements
+
+**Fixes**
+- Various ui improvements and bug fixes
+
+---
+
+{{< link-heading "h4" "2021-12-02 - 2.12.0" >}}
+
+**Features**
+- Order management
+- Redesign confirm/success components
+
+---
+
 {{< link-heading "h4" "2021-10-18 - 2.10.4" >}}
 
 **Fixes**
