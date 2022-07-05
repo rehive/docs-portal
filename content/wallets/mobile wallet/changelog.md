@@ -9,6 +9,32 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2022-06-04 - 3.5.0" >}}
+
+- Updated id number input to use an SSN mask if user's nationality is US
+- Various bug fixes and improvements
+
+---
+
+{{< link-heading "h4" "2022-05-11 - 3.4.0" >}}
+
+- Point of Sale: reworked navigation, added teller/top up section, moved redeem voucher from actions to PoS screen, business switching
+
+---
+
+{{< link-heading "h4" "2022-04-13 - 3.3.0" >}}
+
+- Added Wyre phase 1 (onboarding, deposit, withdraw, ACH, help center)
+
+---
+
+{{< link-heading "h4" "2022-03-30 - 3.2.0" >}}
+
+- Updated product checkout to handle async flow
+- Async voucher service changes
+
+---
+
 {{< link-heading "h4" "2022-02-16 - 3.1.0" >}}
 
 - Point of Sale: added static QR code tab to PoS/merchant screen
