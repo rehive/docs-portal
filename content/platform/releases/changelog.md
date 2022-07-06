@@ -10,6 +10,16 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-07-06" >}}
+
+- Added inclusive fees on `debit` transactions and updated the transaction builder to correctly adjust amounts and subsequent transactions when `inclusive` is specified on a transaction.
+- Added an `index` field to the transaction resource, this contains the transactions position in it's transaction collection.
+- Added a new `webhook__url` filter on the webhook tasks endpoint.
+- Fixed a bug in decimal validation handling that caused a 500 error on certain integer inputs.
+- Addressed an issue with related transaction discovery on transaction updates that resulted in fee transactions not transitioning at the same time as their parent.
+
+---
+
 {{< link-heading "h5" "2022-06-02" >}}
 
 1. Subtypes can now be filtered based on whether they have a `partner` via the `partner__isnull` filter field.
