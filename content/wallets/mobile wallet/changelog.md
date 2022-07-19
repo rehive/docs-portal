@@ -9,6 +9,18 @@ Summary of additions and changes to the Mobile Wallet.
 
 ---
 
+{{< link-heading "h4" "2022-07-19 - 3.7.0" >}}
+
+- Added category filter to products
+
+---
+
+{{< link-heading "h4" "2022-06-29 - 3.6.0" >}}
+
+- Various UI improvements including updating all success/fail screens to use Lottie animations
+
+---
+
 {{< link-heading "h4" "2022-06-04 - 3.5.0" >}}
 
 - Updated id number input to use an SSN mask if user's nationality is US
