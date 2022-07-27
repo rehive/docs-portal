@@ -9,6 +9,141 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2022-07-26" >}}
+
+**Bug fixes:**
+
+- Fixed issue where basic user info could not be saved when status was updated. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-07-25" >}}
+
+**Bug fixes:**
+
+- Removed a defunct "manage vouchers" link on the edit product page. (Hotfix)
+
+**Changes:**
+
+- Updated the copy on the White-label web wallet domain settings page in the App Extension.
+
+---
+
+{{< link-heading "h4" "2022-07-20" >}}
+
+**Bug fixes:**
+
+- Fixed issue where an endpoint was called before MFA verify instead of after.
+- Fixed an issue where admins could not log into other projects if an outstanding MFA challenge existed.
+- Fixed issue where admins were unable to update basic user info details if ID field was blank. (Hotfix)
+- Fixed issue where show/hide eye was showing for non-SSN numbers in the User Basic Info block and Edit User Basic Info modal. (Hotfix)
+
+**Changes:**
+
+- Hid "Enable 2FA" message in the top right dropdown if MFA is enabled.
+- When a user has the USA as their nationality, their SSN number will be hidden by default. Admins can click to reveal the value.
+- Admins can now view the partner of a partner subtype and set a partner.
+- The groups listing page has been reworked. Groups are now separated into user and admin sections, and group shortcuts are more easily available.
+- Admins can now set password set, reset and email verify urls per group.
+- Admins can now create static item or balance-based vouchers in the Product Extension.
+
+---
+
+{{< link-heading "h4" "2022-07-14" >}}
+
+**Changes:**
+
+- Removed defunct App domain field from the App Extension Settings page. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-07-08" >}}
+
+**Bug fixes:**
+
+- Fixed issue where "Managed by" was not being displayed correctly on the currencies listing page. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-07-07" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where admins could not deactivate domains in the App Extension. (Hotfix)
+
+**Changes:**
+
+- The currencies listing and view pages have been revamped. The currency totals have been moved to the currency view page.
+- Updated the instructions when activating a domain in the App Extension. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-06-29" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where admins could not view certain documents to verify them due to a metadata parsing error.
+
+**Changes:**
+
+- Minimum withdraw_ach and withdraw_manual limits for USD are now added newly created to Wyre test projects.
+- The Get Started page now functions better in terms of its responsiveness.
+
+**New features:**
+
+- Admins can now easily switch projects from anywhere on the Dashboard via the top right dropdown.
+
+---
+
+{{< link-heading "h4" "2022-06-21" >}}
+
+**Bug fixes:**
+
+- Fixed typo in Go to Production block on the Get Started page. (Hotfix)
+
+**New features:**
+
+- Admins can now access Rehive's Software Terms in order to accept them.
+- Admins can now view and accept the latest Privacy Policy and Terms changes on the Get Started page.
+
+---
+
+{{< link-heading "h4" "2022-06-20" >}}
+
+**Bug fixes:**
+
+- Fixed incorrect function call name for Stellar Extension on the User details page. (Hotfix)
+
+**Changes:**
+
+- Added a "Process withdrawals" button to the transactions listing page.
+- The link to download a Locales English template now displays even when no Locales have been added. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-06-08" >}}
+
+**New features:**
+
+- On the Business Extension, admins can now more easily verify a Business and a Seller at the click of 1 button.
+- Admins can now upload an image to a reward campaign.
+
+---
+
+{{< link-heading "h4" "2022-06-07" >}}
+
+**Bug fixes:**
+
+- Removed print of account options on Rewards settings page. (Hotfix)
+- Fixed issue where nationality would always display as US and ID number vs SSN number label would not correctly display based on nationality. (Hotfix)
+
+**Changes:**
+
+- Dashboard now shows SSN as ID label on the user details page if user nationality is US, otherwise the label will read ID number. (Hotfix)
+- Displays label and placeholder as SSN in the edit basic info modal if the user's nationality is US. (Hotfix)
+
+---
+
 {{< link-heading "h4" "2022-06-06" >}}
 
 **Bug fixes:**
