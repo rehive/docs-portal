@@ -7,6 +7,16 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h5" "2022-08-03" >}}
+
+- Fixed an issue on company link endpoints and their permission checks that resulted in 500 errors.
+- Fixed a bug on subtype partner validation that resulted in the incorrect error text.
+- Fixed a bug in subtype partner validation where it was trying to do validation on `null` inputs.
+- Fixed filters on the admin webhook list endpoint: there was a regression that caused these filters to no longer work.
+- Added a new `owner` field to the `user` resource to indicate whether they are the owner of a company.
+- Added a new `owner` field to the `company` resource to indicate which user is the owner of that company.
 
 ---
 
