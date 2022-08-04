@@ -9,7 +9,7 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ### Deprecated
 
-{{< link-heading "h5" "2022-04-19" >}}
+{{< link-heading "h5" "2022-09-28" >}}
 
 *Added on 2021-06-09*
 
@@ -18,7 +18,6 @@ This timeline indicates when certain functionality will be permanently removed f
 	- Remove auth endpoints: `/3/auth/mfa/`, `/3/auth/mfa/token/`, `/3/auth/mfa/sms/`, `/3/auth/mfa/sms/send/`.
 	- Remove admin endpoints:  `/3/admin/users/<id>/mfa/`, `/3/admin/users/<id>/mfa/sms/`, `/3/admin/users/<id>/token/`.
 	- Remove `mfa` from the post login (authentication) responses.
-
 
 ### Removed
 
