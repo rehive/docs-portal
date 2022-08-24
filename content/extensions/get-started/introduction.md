@@ -7,6 +7,8 @@ weight: 1
 
 In addition to the core platform, Rehive offers several officially supported and maintained extensions that can be used to extend platform functionality. These extensions are designed to work alongside the platform to provide additional functionality like cryptocurrency compatibility, notifications, and rewards.
 
+## Rehive extensions
+
 A list of Rehive managed extensions can be found below:
 
 - **Conversions** - Provides a management tools and access to currency pairs, rates and conversions.
@@ -21,3 +23,10 @@ A list of Rehive managed extensions can be found below:
 <aside class="notice">
 	Rehive adds extensions on a regular basis. If you are looking for something specific that you don't see above, feel free to contact the Rehive support team with your queries.
 </aside>
+
+## Custom extensions
+
+Additionally, Rehive allows companies to add their own custom extension on a per-company basis.To learn how to do this check out the following guides:
+
+- [Building](/extensions/get-started/building/) - Guide to building extensions and interacting with the platform via an extension.
+- [Requirements](/extensions/get-started/requirements/) - Detailed list of requirements for custom extensions. 
