@@ -5,24 +5,18 @@ description: Building extensions.
 weight: 2
 ---
 
-In addition to the officially supported Rehive extensions, it is possible to build custom extensions as a third party.
+In addition to the official Rehive extensions it is possible to build custom extensions. Before trying to implement an extension or any backend integration on Rehive you should spend some time reading through this page and the related [extension requirements](/extensions/get-started/requirements/) page.
 
-For a third party integration to count as a Rehive extension it needs to adhere to a list of requirements set out by the Rehive team. These are detailed in the **Requirements** section.
+## How extensions work
 
+Extensions are web services that have been designed to operate using the Rehive platform as primary source of information (whether this be for authentication, validation, data or events).
+	
 Extensions and the platform communicate to each other via two primary methods:
 
 - API calls from the extension to the platform.
 - Webhook events (selected from a list of presets) originating from the platform.
 
 This allows for complex additional logic to be built on top of the existing platform. In its simplest form, building an extension on Rehive is a process of working out how you want to use the above two methods to add extra functionality to Rehive.
-
-<aside class="notice">
-	If you have a third-party extension you would like to get approved and reviewed by Rehive please contact Rehive support.
-</aside>
-
-## How extensions work
-
-Extensions are web services that have been designed to operate using the Rehive platform as primary source of information (whether this be for authentication, validation, data or events).
 
 We will use the Notification Extension (an officially supported extension in Rehive) as an example as it contains all the main elements of an extension that interacts with the Rehive ecosystem. The Notification extension has 3 elements:
 
@@ -95,7 +89,37 @@ If an extension requires access to the platform API, then the extension will nee
 
 Machine users should be created as part of the `service` group in the platform (called the `extension` group in the dashboard). The user can then be used internally with only the minimum permissions required to operate the extension. There should be one user per extension (per company), and they should never be shared across multiple extensions.
 
-Rehive provides a built in mechanism for machine users once an extension has been
-listed within the platform's services list (privately or publicly). For custom extensions, that a developer does not intend to incorporate into the Rehive extensions ecosystem, permissions will have to be manually added to the extension user through the API or the dashboard. These users and integrations are outside of the domain of Rehive and will be developers responsibility.
+Rehive provides a built in mechanism for machine users once an extension has been added to the services list (see the **Adding an extension** section below). For custom extensions, that a developer does not intend to incorporate into the Rehive extensions ecosystem, permissions will have to be manually added to the extension user through the API or the dashboard. These users and integrations are outside of the domain of Rehive and are a developer's responsibility.
 
-Within the Rehive extensions ecosystem, once an extension has been approved and included in the public extensions list then the population of permissions on an extension users is automated (based on the extension configuration).
+## Adding an extension
+
+By definition, extensions in Rehive, are backend integrations that meet the Rehive specified requirements that can be found [here](/extensions/get-started/requirements/). It is possible to build backend integrations "outside" of the extension ecosystem but you will lose out on some of the features implicitly available to compliant extensions:
+
+- Activation/deactivation are handled in the same way as Rehive extensions.
+- A user in the `service` group is automatically created on activation and its permissions will be managed by the platform.
+- The extension is be accesible in the `/3/services/` list, via the platform API, so extension discovery can be automated in your applications.
+- A `management_url` can be configured that allows admin users to "go to" the extension from within the dashboard.
+- Future "built-in" functionality will become available immediately to your extensions once added: key rotation, service managed webhooks, service managed extension permissions etc.
+
+If you have built a Rehive compliant extension then the next step will be to add your "extension" via the [/admin/services/](https://docs.platform.rehive.com/tag/Admin/#operation/admin_services_create) endpoint in the Rehive platform:
+
+```bash
+curl -X 'POST' \
+  'https://api.rehive.com/3/admin/services/' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Token {token}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "Example extension",
+  "description": "Example description",
+  "tags": ["example"],
+  "url": "https://example.com",
+  "management_url": "https://example.com/management/"
+  }'
+```
+
+The `url` should be the base URL for your extension (ie. the base URL that your `/activate/` and `/deactivate/` endpoints are available at). The `management_url` is an optional URL that can be included to specify an extenal location that can be used to manage your extension.
+
+The next step is to add `permissions` to the extension. This can be done via [/admin/services/<id>/permissions/](https://docs.platform.rehive.com/tag/Admin#operation/admin_services_permissions_create). When an extension is activated it creates a new `service` user in the Rehive Platform and passes that user to the `/activate/` endpoint on the extension. This `service` user can then be used to make API calls to the Platform from the extension. As such, you will need to specify the individual permissions the extension requires so that the Platform can assign them to the `service` user.
+
+Once you have completed the extension, added it to the Platform, and configured its permissions you can proceed to "activating" the extension. At this point the extension should be visible in the "Not activated" section of the extensions page on the Rehive dashboard. You can simply select the "Activate" button and if your extension was built corrctly it should create a `service` user, assign the correct permissions and invoke the `/activate/` endpoint on your extension. If no errors occur, Rehive will mark the extension as active for the company where the activation occurred.
