@@ -9,6 +9,61 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
+{{< link-heading "h4" "2025-09-03 - 2.19.19" >}}
+
+**Fixes**
+- Update heading on invoice creation
+- Fixing buy and sell form wording
+- Fixes to POS new sale currency conversion issue
+
+---
+
+{{< link-heading "h4" "2025-09-03 - 2.19.17" >}}
+
+**Fixes**
+- Change default country code for mobile identifier
+
+---
+
+{{< link-heading "h4" "2023-09-03 - 2.19.16" >}}
+
+**Fixes**
+- Fix trustline validation on withdraw screen
+
+---
+
+{{< link-heading "h4" "2022-09-03 - 2.19.15" >}}
+
+**Features**
+- Wyre User API features
+
+**Fixes**
+- Voucher format field update 
+- Preview document improvements
+- MFA verify message update
+- Help center page padding fix
+- Fix onboarding side navbar responsive design
+- Fix multiselect - close dropdown on select 
+- Fix seller not saving on registration
+
+---
+
+{{< link-heading "h4" "2022-09-03 - 2.19.15" >}}
+
+**Features**
+- Wyre User API features
+
+**Fixes**
+- Voucher format field update 
+- Preview document improvements
+- MFA verify message update
+- Help center page padding fix
+- Fix onboarding side navbar responsive design
+- Fix multiselect - close dropdown on select 
+- Fix seller not saving on registration
+
+---
+
 {{< link-heading "h4" "2022-05-20 - 2.19.0" >}}
 
 **Features**
@@ -22,7 +77,6 @@ Summary of additions and changes to the Web Wallet.
 - Various wyre related fixes and improvements
 - Onboarding improvements
 - Transfer conversion bug
-
 
 ---
 
