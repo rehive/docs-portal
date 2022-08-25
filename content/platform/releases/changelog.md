@@ -7,6 +7,19 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h5" "2022-08-25" >}}
+
+- Added validation to to prevent users from creating an unlimited number of certain resources. This applies to emails, mobiles, addresses, wallet accounts, crypto accounts, bank accounts and devices.
+- Optimized the handling of timezones when calculating which metrics needs to run at a given time.
+- Added the `management_url` to the editable fields on the Service resource.
+- Fixed a bug with webhook expression evaluation that made it impssoible to evaluate an expression that included a condition on a list.
+- Added new throttling on MFA device creation. Requests to the MFA device create endpoint(s) are now restricted to no more than 10 requests an hour (per user).
+- Added new throttling on MFA SMS delivery. Requests to the MFA SMS delivery endpoint(s) are now restricted to no more than 10 requests an hour (per user).
+- Updated the SMS messages for SMS OTPs to include the company information and user name if available.
+
 ---
 
 {{< link-heading "h5" "2022-08-03" >}}
