@@ -19,7 +19,7 @@ env:
   IMAGE: gcr.io/rehive-services/docs-portal
   HELM_VERSION: 3.6.3
   HELM_VALUES_PATH: ./etc/helm/staging/values.yaml
-  HELM_CHART: rehive/rehive-service
+  HELM_CHART: rehive-service
   HELM_CHART_VERSION: 1.0.0
   HELM_REPO_URL: https://rehive.github.io/charts
   HELM_REPO_NAME: rehive
@@ -75,13 +75,17 @@ jobs:
       run: |-
         curl -sfL https://get.helm.sh/helm-v${{ env.HELM_VERSION }}-linux-amd64.tar.gz | tar -xz
         chmod u+x ./linux-amd64/helm
-        ./linux-amd64/helm repo add ${{ env.HELM_REPO_NAME }} ${{ env.HELM_REPO_URL }}
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
-      run: |-
-        HTTPS_PROXY=http://127.0.0.1:8123 ./linux-amd64/helm upgrade ${{ env.RELEASE_NAME }} \
-        --values ${{ env.HELM_VALUES_PATH }} \
-        --set image.tag=${{ github.ref_name }} \
-        --version ${{ env.HELM_CHART_VERSION }} ${{ env.HELM_CHART }} \
-        --namespace ${{ env.GKE_NAMESPACE }}
+      uses: nick-fields/retry@v2
+      with:
+        timeout_minutes: 3
+        max_attempts: 3
+        command: |-
+          HTTPS_PROXY=http://127.0.0.1:8123 ./linux-amd64/helm upgrade ${{ env.RELEASE_NAME }} \
+          --values ${{ env.HELM_VALUES_PATH }} \
+          --set image.tag=${{ github.ref_name }} \
+          --repo ${{ env.HELM_REPO_URL }} \
+          --version ${{ env.HELM_CHART_VERSION }} ${{ env.HELM_CHART }} \
+          --namespace ${{ env.GKE_NAMESPACE }}
