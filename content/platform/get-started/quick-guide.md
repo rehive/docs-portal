@@ -18,10 +18,14 @@ To use one of the SDKs check for you language in the "references list" in the si
 
 ### Using the API
 
-The easiest way to get started with the API is to login to the dashboard and grab an API token for your user. You can create a new API token in the `Developers` -> `API tokens` section in the dashboard.
+The easiest way to get started with the API is to login to the dashboard and create a new API token for your user. You can create a new API token in the `Developers` -> `API tokens` section in the dashboard. Once an API token is created, it will be displayed only once. So make sure you copy it before closing the modal. For security reasons API tokens are hashed and as such the platform cannot retrieve (or display) the token value except immediately after creation.
 
 <aside class="warning">
     If you have not created a company yet, you should do so first via the <a href="https://dashboard.rehive.com" target="_blank">dashboard</a>.
+</aside>
+
+<aside class="notice">
+    The API token is a 64 character string. It should not be confused with the `token_key`, which consists of the first 8 characters of the API token and is used as an identifier.
 </aside>
 
 You can use the new API token to authenticate your requests to the API. For example, if you want to get user information (for the user who owns the API token) you can call the API like this (using cURL):
@@ -33,7 +37,7 @@ curl https://api.rehive.com/3/user/ \
   -H "Content-Type: application/json"
 ```
 
-If successful, you should get a response like this:
+Make sure that you replace the `{token}` (including the curly brackets) with the API token. If above request is successful, you should get a response like this:
 
 ``` json
 {
