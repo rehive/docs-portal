@@ -25,7 +25,7 @@ The easiest way to get started with the API is to login to the dashboard and cre
 </aside>
 
 <aside class="notice">
-    The API token is a 64 character string. It should not be confused with the `token_key`, which consists of the first 8 characters of the API token and is used as an identifier.
+    The API token is a 64 character string. It should not be confused with the <code>token_key</code>, which consists of the first 8 characters of the API token and is used as an identifier.
 </aside>
 
 You can use the new API token to authenticate your requests to the API. For example, if you want to get user information (for the user who owns the API token) you can call the API like this (using cURL):
