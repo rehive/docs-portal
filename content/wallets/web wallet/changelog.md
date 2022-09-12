@@ -9,7 +9,78 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
-{{< link-heading "h4" "2025-09-03 - 2.19.19" >}}
+{{< link-heading "h4" "2022-09-12 - 2.20.2" >}}
+
+**Fixes**
+- Validation on buy form not working consistently
+- Fix popup text on non-Stellar cryptocurrencies
+
+---
+
+{{< link-heading "h4" "2022-09-09 - 2.20.2" >}}
+
+**Fixes**
+- Fix onboarding for companies with a manual bank account configuration
+
+---
+
+{{< link-heading "h4" "2022-09-09 - 2.20.1" >}}
+
+**Fixes**
+- Language update fixes
+
+---
+
+{{< link-heading "h4" "2022-09-08 - 2.20.0" >}}
+
+**Features**
+- Add support for locales and multi-language.
+
+---
+
+{{< link-heading "h4" "2022-09-08 - 2.19.25" >}}
+
+**Fixes**
+- Fix incorrect message for pending bank accounts in wyre deposit flow
+
+---
+
+{{< link-heading "h4" "2022-09-01 - 2.19.24" >}}
+
+**Fixes**
+- Show campaign image on rewards
+
+---
+
+{{< link-heading "h4" "2022-08-31 - 2.19.23" >}}
+
+**Fixes**
+- Enable get-started card hide/show via app config
+
+---
+
+{{< link-heading "h4" "2022-08-30 - 2.19.22" >}}
+
+**Fixes**
+- Enable get-started card hide/show via app config
+
+---
+
+{{< link-heading "h4" "2022-08-26 - 2.19.21" >}}
+
+**Fixes**
+- Fixing routing issue showing two screens when user does not match tier requirement
+
+---
+
+{{< link-heading "h4" "2022-08-26 - 2.19.20" >}}
+
+**Fixes**
+- Fix country validation issue
+
+---
+
+{{< link-heading "h4" "2022-08-25 - 2.19.19" >}}
 
 **Fixes**
 - Update heading on invoice creation
@@ -18,37 +89,21 @@ Summary of additions and changes to the Web Wallet.
 
 ---
 
-{{< link-heading "h4" "2025-09-03 - 2.19.17" >}}
+{{< link-heading "h4" "2022-08-25 - 2.19.17" >}}
 
 **Fixes**
 - Change default country code for mobile identifier
 
 ---
 
-{{< link-heading "h4" "2023-09-03 - 2.19.16" >}}
+{{< link-heading "h4" "2022-08-04 - 2.19.16" >}}
 
 **Fixes**
 - Fix trustline validation on withdraw screen
 
 ---
 
-{{< link-heading "h4" "2022-09-03 - 2.19.15" >}}
-
-**Features**
-- Wyre User API features
-
-**Fixes**
-- Voucher format field update 
-- Preview document improvements
-- MFA verify message update
-- Help center page padding fix
-- Fix onboarding side navbar responsive design
-- Fix multiselect - close dropdown on select 
-- Fix seller not saving on registration
-
----
-
-{{< link-heading "h4" "2022-09-03 - 2.19.15" >}}
+{{< link-heading "h4" "2022-08-03 - 2.19.15" >}}
 
 **Features**
 - Wyre User API features
