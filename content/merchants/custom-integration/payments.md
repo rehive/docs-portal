@@ -17,7 +17,7 @@ Each invoice requires a user to select a valid payment method. A list of support
     "unique_string_name": "native_otp",
     "logo": "",
     "name": "Native OTP",
-    "description": "Pay using a wallet balance via an OTP.",
+    "description": "Pay using a application balance via an OTP.",
     "currencies": [],
     "longest_expiration_time": 0,
   }

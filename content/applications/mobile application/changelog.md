@@ -1,11 +1,11 @@
 ---
 date: 2018-09-17T15:21:22+02:00
 title: Changelog
-description: Mobile wallet changelog.
+description: Mobile application changelog.
 weight: 1
 ---
 
-Summary of additions and changes to the Mobile Wallet.
+Summary of additions and changes to the mobile application.
 
 ---
 
@@ -90,7 +90,7 @@ Summary of additions and changes to the Mobile Wallet.
 **Features:**
 - Withdraw: updated design incl. new account selectors, native numpad, new confirm/result layout, improved limit and fee handling
 - Deposit: updated design
-- Buy/Sell: add new flows to crypto wallets to perform/buy sell
+- Buy/Sell: add new flows to crypto applications to perform/buy sell
 
 ---
 
@@ -240,7 +240,7 @@ This was a major update that included the following:
 
 **Changes:**
 
-- Admins can now configure wallets for sending to only mobile numbers or only email addresses.
+- Admins can now configure applications for sending to only mobile numbers or only email addresses.
 - Added file size limit information to file uploads.
 - Changed text highlight colour to neutral grey instead of primary company color.
 - Admins can now display a custom message on any confirm screen.
@@ -290,7 +290,7 @@ This was a major update that included the following:
 - When adding a bank account from the withdraw screen, withdraw accounts will automatically have the withdraw account's currency added.
 - Admins can specify whether users are allowed to send/deposit/withdraw/receive for specific currencies. This is set in the company config in the Dashboard.
 - Admins can specify a custom message on the withdrawal success screen. This is set in the company config in the Dashboard.
-- When sending, the wallet now displays when the rate was last fetched.
+- When sending, the application now displays when the rate was last fetched.
 - On the deposits page, company bank account options now filter by currency. Only bank accounts with a currency that matches the account currency a user wants to deposit will display.
 - Any limits set on withdrawals are now displayed on the withdraw screen. If a user tries to withdraw and encounters a limit, a validation message will display.
 - Users can no longer change product qty in their cart to be less than 1.

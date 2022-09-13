@@ -33,7 +33,7 @@ An OTP payment is one that is authorized by a single use OTP code that is sent t
 
 The required information from the user is:
 1. An email address
-2. A mobile number that is validated on their wallet
+2. A mobile number that is validated on their application
 
 Once the user has provided this information you will need to PATCH the Invoice as follows:
 ```bash

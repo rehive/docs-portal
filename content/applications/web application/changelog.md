@@ -1,11 +1,11 @@
 ---
 date: 2018-09-17T15:21:22+02:00
 title: Changelog
-description: Web wallet changelog.
+description: Web application changelog.
 weight: 1
 ---
 
-Summary of additions and changes to the Web Wallet. 
+Summary of additions and changes to the web application.
 
 ---
 
@@ -381,7 +381,7 @@ Summary of additions and changes to the Web Wallet.
 **Fixes:**
 - Incorrect underpaid bitcoin checkout handling
 - Company page header icon to color
-- Fetch grey-label config from wallet service
+- Fetch grey-label config from application service
 - Changes to hide action logic
 
 ---
@@ -584,7 +584,7 @@ Summary of additions and changes to the Web Wallet.
 
 **Changes:**
 
-- Admins can now configure wallets for sending to only mobile numbers or only email addresses.
+- Admins can now configure applications for sending to only mobile numbers or only email addresses.
 - Admins can now configure registration via mobile number instead of email address.
 - Admins can now configure mobile number required upon registering.
 - Added file size limit information to file uploads.
@@ -643,7 +643,7 @@ Summary of additions and changes to the Web Wallet.
 - Admins can specify a default country for users upon registration.
 - Admins can specify whether users are allowed to send/deposit/withdraw/receive for specific currencies. This is set in the company config in the Dashboard.
 - Admins can specify a custom message on the withdrawal success screen. This is set in the company config in the Dashboard.
-- When sending, the wallet now displays when the rate was last fetched.
+- When sending, the application now displays when the rate was last fetched.
 - On the deposits page, company bank account options now filter by currency. Only bank accounts with a currency that matches the account currency a user wants to deposit will display.
 - Any limits set on withdrawals are now displayed on the withdraw screen. If a user tries to withdraw and encounters a limit, a validation message will display.
 - When adding a new address users can choose an address type, either "billing" or "shipping".
@@ -665,7 +665,7 @@ Summary of additions and changes to the Web Wallet.
 - Users can now seethe on-chain transaction hash link for crypto transactions in their transaction history.
 - Updated "contact number" field name to "mobile number."
 - Added a refresh button to the transaction history page.
-- Updated how sessions and caching of wallet ID is handled.
+- Updated how sessions and caching of application ID is handled.
 
 
 **New features:**

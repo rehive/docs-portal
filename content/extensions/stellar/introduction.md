@@ -5,7 +5,7 @@ description: Introduction to the Stellar extension.
 weight: 1
 ---
 
-The Stellar extension is used as an interface between the Stellar and Rehive ledgers. It provides an API for a company to create and manage a Stellar wallet. There is both a mainnet Stellar Service as well as a Stellar Testnet Service.
+The Stellar extension is used as an interface between the Stellar and Rehive ledgers. It provides an API for a company to create and manage a Stellar application. There is both a mainnet Stellar Service as well as a Stellar Testnet Service.
 
 <strong>Testnet</strong>
 

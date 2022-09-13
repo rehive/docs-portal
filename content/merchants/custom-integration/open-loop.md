@@ -5,7 +5,7 @@ description: Handling Open-loop payment processors
 weight: 4
 ---
 
-Open loop payments are any non-wallet balance payments made. These are usually deposits from an external value such as a cryptocurrency, credit card or bank payment. 
+Open loop payments are any non-application balance payments made. These are usually deposits from an external value such as a cryptocurrency, credit card or bank payment.
 
 ### Displaying payment information
 The display of the payment information can depend on how the payment processor handles payments. Each payment processor quote will contain a different set of payment details. The relevant quote to display to the user will be the one with the matching payment processor to the `primary_payment_processor` field.
