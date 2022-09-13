@@ -13,9 +13,9 @@ Types: (s) - string, (b) - boolean, (i) - integer
 
 - `layout`: (s: 'accounts'/'') groups currencies by accounts with totals, defaults to listing all currencies.
 - `actionVariant`: (s: 'text'/'') controls whether to use icons (default) or text action buttons.
-- `identifier`: (s 'name'/'') controls whether to use the account reference or account name in the web wallet url.
-- `amountDisplayCurrency`: (b 'true') controls whether to use display currency value or actual account value as main amount used/displayed throughout the wallet. This affects both account listings, wallet selector cards as well as the amount inputs.
-- `displayAccountReference`: (b 'false') controls whether the account reference is shown on individual wallet cards on accounts listing
+- `identifier`: (s 'name'/'') controls whether to use the account reference or account name in the web application url.
+- `amountDisplayCurrency`: (b 'true') controls whether to use display currency value or actual account value as main amount used/displayed throughout the application. This affects both account listings, application selector cards as well as the amount inputs.
+- `displayAccountReference`: (b 'false') controls whether the account reference is shown on individual application cards on accounts listing
 
 ```json
 "accounts" : {

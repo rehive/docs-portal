@@ -7,7 +7,7 @@ weight: 3
 
 While the user is on the hosted payments page the only way to get updates on payments is to process invoice webhooks. This will need to be done by a service you create and host that can receive and process the webhooks as well as make relevant changes to third party platforms that require status changes when a payment succeeds or fails.
 
-Before being able to process webhooks you will need to create a webhook via the Merchant management section of the wallet. Here you can specify the URL the webhook will be sent to as well as an optional secret for added security. This will be added to the Authorization header like so: “Authorization: Secret YOUR_SECRET”.
+Before being able to process webhooks you will need to create a webhook via the Merchant management section of the application. Here you can specify the URL the webhook will be sent to as well as an optional secret for added security. This will be added to the Authorization header like so: “Authorization: Secret YOUR_SECRET”.
 
 After being set up a Webhook will be sent each time the Invoice has a Status change.
 
@@ -44,7 +44,7 @@ After being set up a Webhook will be sent each time the Invoice has a Status cha
             "unique_string_name": "native_otp",
             "logo": "",
             "name": "Native OTP",
-            "description": "Pay using a wallet balance via an OTP.",
+            "description": "Pay using a application balance via an OTP.",
             "currencies": [],
             "longest_expiration_time": 0,
         },

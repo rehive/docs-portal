@@ -19,7 +19,7 @@ Each payment processor has a unique subtype and identifier field
     "unique_string_name": "native",
     "logo": "",
     "name": "Native",
-    "description": "Pay using a wallet balance.",
+    "description": "Pay using a application balance.",
     "currencies": [],
     "longest_expiration_time": 0,
     "rehive_transaction_identifier": null,

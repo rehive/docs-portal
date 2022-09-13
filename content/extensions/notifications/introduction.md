@@ -20,4 +20,4 @@ The extension allows you to:
 1. Configure notifications
 2. Send email notifications
 3. Send SMS notifications
-4. Send Push notifications in android/iOS wallets (chat to support about getting this enabled)
+4. Send Push notifications in android/iOS applications (chat to support about getting this enabled)

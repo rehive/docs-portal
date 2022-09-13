@@ -25,7 +25,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 **Changes:**
 
-- Updated the copy on the White-label web wallet domain settings page in the App Extension.
+- Updated the copy on the White-label web application domain settings page in the App Extension.
 
 ---
 
@@ -2045,7 +2045,7 @@ Other:
 **Changes:**
 
 - Added hover links on user's accounts page. 
-- Added link to download Rehive's mobile wallet on Android or iOS.
+- Added link to download Rehive's mobile application on Android or iOS.
 - Added delete icon to user page.
 
 ---
@@ -2273,7 +2273,7 @@ In this release there were major updates to 3 Rehive Extensions: Conversion, Pro
 
 - When the Conversion extension is active, for all non-custom currencies, rates will now be automatically calculated. Admins can override this and set a rate pair if they would like a custom rate.
 - Defined rate pairs can now be pegged to another rate pair's value.
-- Admins can now set the default Display currency for their company, to be used in the user wallets. 
+- Admins can now set the default Display currency for their company, to be used in the user applications.
 
 **Product Extension updates:**
 
@@ -2385,13 +2385,13 @@ In this release there were major updates to 3 Rehive Extensions: Conversion, Pro
 
 **New features:**
 
-- We are proud to introduce Rehive's first fintech template - a rewards and loyalty wallet on Stellar. The template will automatically configure a multi-currency app with powerful extensions including mass payments, rewards, the product marketplace and notifications with a custom token on Stellar's test network.
+- We are proud to introduce Rehive's first fintech template - a rewards and loyalty application on Stellar. The template will automatically configure a multi-currency app with powerful extensions including mass payments, rewards, the product marketplace and notifications with a custom token on Stellar's test network.
 
 **Enhancements:**
 
 - Improved the top search. Admins can now search for users, transactions or accounts by an account reference. 
 - Admins can now upload a profile picture to their profile which will appear on the top right of the header.
-- Adjusted visual aspects of the Get Started and Try the Wallet pages. Added more convenient back button to Try the Wallet page.
+- Adjusted visual aspects of the Get Started and Try the Application pages. Added more convenient back button to Try the Application page.
 - Changed the colour of "off" toggles to grey so that it's more obvious when a setting is off. The previous "off" colour was too close to the "on" colour.
 
 **Changes:**

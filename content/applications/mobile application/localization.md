@@ -1,7 +1,7 @@
 ---
 date: 2022-03-09T15:21:22+02:00
 title: Localization
-description: Mobile wallet localization.
+description: Mobile application localization.
 weight: 3
 ---
 
@@ -73,7 +73,7 @@ export default { en, af };
 
 #### App service
 
-Currently translations have to be added through the wallet service API/swagger (while the dashboard UI for managing locales is being completed). This can be accessed at https://wallet.services.rehive.io/swagger/ (base URL: wallet.services.rehive.io/api). Note: remember to authorize by adding `Token <admin_token>` by clicking the green Authorize button top right of the screen.
+Currently translations have to be added through the application service API/swagger (while the dashboard UI for managing locales is being completed). This can be accessed at https://app.services.rehive.io/swagger/ (base URL: app.services.rehive.io/api). Note: remember to authorize by adding `Token <admin_token>` by clicking the green Authorize button top right of the screen.
 
 ##### Adding a new language/overriding translations
 

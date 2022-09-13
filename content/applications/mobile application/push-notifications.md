@@ -1,7 +1,7 @@
 ---
 date: 2022-03-04T15:21:22+02:00
 title: Push notifications
-description: Mobile wallet push notifications.
+description: Mobile application push notifications.
 weight: 2
 ---
 
@@ -36,7 +36,7 @@ async function handleAddDevice() {
 
     if (respDevice.status === 'success') {
       const dataApp = {
-        name: 'Wallet',
+        name: 'Application',
         type: 'expo',
         token,
       };

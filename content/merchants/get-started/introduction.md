@@ -5,7 +5,7 @@ description: Introduction to the platform.
 weight: 1
 ---
 
-The Merchant Documentation helps you to integrate Rehive payment processing closed-loop or open-loop wallets for online checkout.
+The Merchant Documentation helps you to integrate Rehive payment processing closed-loop or open-loop applications for online checkout.
 
 ### Online checkouts
 
