@@ -4,7 +4,7 @@ title: Introduction
 description: Introduction to building third-party integrations for common fintech flows.
 weight: 1
 ---
-Rehive consists of three parts: Platform, Extensions, and Applications. We offer some extensions out of the box, but it is also possible to build your own custom extensions.  This overview assumes that you are familiar with these.
+Rehive consists of three parts: Platform, Extensions, and Applications. This overview assumes that you are familiar with these. We offer some extensions out of the box, but it is also possible to build your own custom extensions.  
 
 We’ll look at the typical integration structure for integrating with a banking partner. For each flow, we will highlight which Rehive endpoints to use.
 
