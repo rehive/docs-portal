@@ -7,6 +7,14 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h5" "2022-09-22" >}}
+
+1. Added new `action` field to the wallet, crypto and bank account resources. This field can contain the values `withdraw` or `deposit`.
+    - Only admin users can set the value on these resource as `deposit`.
+2. Added new `action` filter to the wallet, crypto and bank account listing pages.
+3. Updated the transfer endpoints to support `null` values on the `recipient` field.
 
 ---
 
