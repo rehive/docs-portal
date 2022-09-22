@@ -8,7 +8,7 @@ Rehive consists of three parts: Platform, Extensions, and Applications. This ove
 
 We’ll look at the typical structure for integrating with a banking partner. For each flow, we will highlight which Rehive endpoints to use.
 
-The first place to start is by familiarizing yourself with the [Get Started section](https://docs.rehive.com/building/get-started/introduction/). This gives a basic overview of how to start building an extension as well as the ground-level endpoints you’ll need to use. It should be noted that for end-users, the authentication endpoint will return personal information as well as the User ID, so in most cases, additional API calls are not necessary. You should also familiarize yourself with [Rehive’s Standard Configurations](https://docs.google.com/document/d/1LdWBY2Oim2EPWv2-ZNKIPXDbnULbSf-DiUfuCw7_zQg/edit#) to ensure that the correct subtypes are used for specific transactions.
+The first place to start is by familiarizing yourself with the [Get Started section](/building/get-started/introduction/). This gives a basic overview of how to start building an extension as well as the ground-level endpoints you’ll need to use. It should be noted that for end-users, the authentication endpoint will return personal information as well as the User ID, so in most cases, additional API calls are not necessary. You should also familiarize yourself with [Rehive’s Standard Configurations](https://docs.google.com/document/d/1LdWBY2Oim2EPWv2-ZNKIPXDbnULbSf-DiUfuCw7_zQg/edit#) to ensure that the correct subtypes are used for specific transactions.
 
 
 ### Support and enablement

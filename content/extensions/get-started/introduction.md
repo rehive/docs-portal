@@ -26,4 +26,4 @@ A list of Rehive managed extensions can be found below:
 
 ## Custom extensions
 
-Additionally, Rehive allows companies to add their own custom extension on a per-company basis.To learn how to do this check out the [Building docs.]((https://docs.rehive.com/building/))
+Additionally, Rehive allows companies to add their own custom extension on a per-company basis.To learn how to do this check out the [Building docs.](/building/get-started/introduction/)
