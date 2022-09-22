@@ -6,14 +6,14 @@ weight: 1
 ---
 Rehive consists of three parts: Platform, Extensions, and Applications. This overview assumes that you are familiar with these. We offer some extensions out of the box, but it is also possible to build your own custom extensions.  
 
-We’ll look at the typical integration structure for integrating with a banking partner. For each flow, we will highlight which Rehive endpoints to use.
+We’ll look at the typical structure for integrating with a banking partner. For each flow, we will highlight which Rehive endpoints to use.
 
-The first place to start is by familiarizing yourself with the Get Started section. This gives a basic overview of how to start building an extension as well as the ground-level endpoints you’ll need to use. It should be noted that for individual users, the authentication endpoint will return personal information as well as the User ID, so in most cases, additional API calls are not necessary. You should also familiarize yourself with [Rehive’s Standard Configurations](https://docs.google.com/document/d/1LdWBY2Oim2EPWv2-ZNKIPXDbnULbSf-DiUfuCw7_zQg/edit#) to ensure that the correct subtypes are used for specific transactions.
+The first place to start is by familiarizing yourself with the [Get Started section](https://docs.rehive.com/building/get-started/introduction/). This gives a basic overview of how to start building an extension as well as the ground-level endpoints you’ll need to use. It should be noted that for end-users, the authentication endpoint will return personal information as well as the User ID, so in most cases, additional API calls are not necessary. You should also familiarize yourself with [Rehive’s Standard Configurations](https://docs.google.com/document/d/1LdWBY2Oim2EPWv2-ZNKIPXDbnULbSf-DiUfuCw7_zQg/edit#) to ensure that the correct subtypes are used for specific transactions.
 
 
 ### Support and enablement
 
-When building the custom extension, it is important to note where Rehive is able to provide support. There are articles relevant to [Account Manager expectations](https://rehive.intercom.help/en/collections/2091533-unpacking-rehive-services) in the Rehive Help Center. 
+The [Account Manager expectations](https://rehive.intercom.help/en/collections/2091533-unpacking-rehive-services) article outlines what support is available from Rehive when building a custom extension. Whether or not you are on a subscription plan that includes an account manager:
 
 * You must verify that your chosen 3rd party provider has support for the common endpoints for the integration requirements.
 * You must consider and design the way that data is stored in the extension and linked to users.
