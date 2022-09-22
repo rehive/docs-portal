@@ -1,11 +1,11 @@
 ---
 date: 2018-09-17T15:21:22+02:00
-title: Building
+title: Introduction
 description: Building extensions.
-weight: 2
+weight: 1
 ---
 
-In addition to the official Rehive extensions it is possible to build custom extensions. Before trying to implement an extension or any backend integration on Rehive you should spend some time reading through this page and the related [extension requirements](/extensions/get-started/requirements/) page.
+In addition to the official Rehive extensions it is possible to build custom extensions. Before trying to implement an extension or any backend integration on Rehive you should spend some time reading through this page and the related [extension requirements](/building/get-started/requirements/) page.
 
 ## How extensions work
 
