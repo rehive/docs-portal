@@ -7,39 +7,47 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h5" "2022-09-22" >}}
+
+1. Added new `action` field to the wallet, crypto and bank account resources. This field can contain the values `withdraw` or `deposit`.
+    - Only admin users can set the value on these resource as `deposit`.
+2. Added new `action` filter to the wallet, crypto and bank account listing pages.
+3. Updated the transfer endpoints to support `null` values on the `recipient` field.
 
 ---
 
 {{< link-heading "h5" "2022-08-25" >}}
 
-- Added validation to to prevent users from creating an unlimited number of certain resources. This applies to emails, mobiles, addresses, wallet accounts, crypto accounts, bank accounts and devices.
-- Optimized the handling of timezones when calculating which metrics needs to run at a given time.
-- Added the `management_url` to the editable fields on the Service resource.
-- Fixed a bug with webhook expression evaluation that made it impssoible to evaluate an expression that included a condition on a list.
-- Added new throttling on MFA device creation. Requests to the MFA device create endpoint(s) are now restricted to no more than 10 requests an hour (per user).
-- Added new throttling on MFA SMS delivery. Requests to the MFA SMS delivery endpoint(s) are now restricted to no more than 10 requests an hour (per user).
-- Updated the SMS messages for SMS OTPs to include the company information and user name if available.
+1. Added validation to to prevent users from creating an unlimited number of certain resources. This applies to emails, mobiles, addresses, wallet accounts, crypto accounts, bank accounts and devices.
+2. Optimized the handling of timezones when calculating which metrics needs to run at a given time.
+3. Added the `management_url` to the editable fields on the Service resource.
+4. Fixed a bug with webhook expression evaluation that made it impssoible to evaluate an expression that included a condition on a list.
+5. Added new throttling on MFA device creation. Requests to the MFA device create endpoint(s) are now restricted to no more than 10 requests an hour (per user).
+6. Added new throttling on MFA SMS delivery. Requests to the MFA SMS delivery endpoint(s) are now restricted to no more than 10 requests an hour (per user).
+7. Updated the SMS messages for SMS OTPs to include the company information and user name if available.
 
 ---
 
 {{< link-heading "h5" "2022-08-03" >}}
 
-- Fixed an issue on company link endpoints and their permission checks that resulted in 500 errors.
-- Fixed a bug on subtype partner validation that resulted in the incorrect error text.
-- Fixed a bug in subtype partner validation where it was trying to do validation on `null` inputs.
-- Fixed filters on the admin webhook list endpoint: there was a regression that caused these filters to no longer work.
-- Added a new `owner` field to the `user` resource to indicate whether they are the owner of a company.
-- Added a new `owner` field to the `company` resource to indicate which user is the owner of that company.
+1. Fixed an issue on company link endpoints and their permission checks that resulted in 500 errors.
+2. Fixed a bug on subtype partner validation that resulted in the incorrect error text.
+3. Fixed a bug in subtype partner validation where it was trying to do validation on `null` inputs.
+4. Fixed filters on the admin webhook list endpoint: there was a regression that caused these filters to no longer work.
+5. Added a new `owner` field to the `user` resource to indicate whether they are the owner of a company.
+6. Added a new `owner` field to the `company` resource to indicate which user is the owner of that company.
 
 ---
 
 {{< link-heading "h5" "2022-07-06" >}}
 
-- Added inclusive fees on `debit` transactions and updated the transaction builder to correctly adjust amounts and subsequent transactions when `inclusive` is specified on a transaction.
-- Added an `index` field to the transaction resource, this contains the transactions position in it's transaction collection.
-- Added a new `webhook__url` filter on the webhook tasks endpoint.
-- Fixed a bug in decimal validation handling that caused a 500 error on certain integer inputs.
-- Addressed an issue with related transaction discovery on transaction updates that resulted in fee transactions not transitioning at the same time as their parent.
+1. Added inclusive fees on `debit` transactions and updated the transaction builder to correctly adjust amounts and subsequent transactions when `inclusive` is specified on a transaction.
+2. Added an `index` field to the transaction resource, this contains the transactions position in it's transaction collection.
+3. Added a new `webhook__url` filter on the webhook tasks endpoint.
+4. Fixed a bug in decimal validation handling that caused a 500 error on certain integer inputs.
+5. Addressed an issue with related transaction discovery on transaction updates that resulted in fee transactions not transitioning at the same time as their parent.
 
 ---
 
