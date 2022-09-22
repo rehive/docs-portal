@@ -6,7 +6,7 @@ weight: 3
 ---
 ### Withdraw to bank account
 
-For fiat cash-out, users are able to initiate withdrawals to a bank account of their choice. The existing withdrawal flow creates a pending withdrawal transaction, which an Admin Dashboard user can mark as complete after they have actioned the banking transaction through the company’s operational transaction process. This flow automates this process with your custom-built extension triggering the bank transaction using the information provided by Rehive.
+For fiat cash-out, users are able to initiate withdrawals to a bank account of their choice. The existing manual withdrawal flow creates a pending withdrawal transaction, which an Admin Dashboard user can mark as complete after they have actioned the banking transaction through the company’s operational transaction process. You can automate this process with your custom-built extension triggering the bank transaction using the information provided by Rehive.
 
 <img src="/images/web-app-withdraw-screen.png" alt="Web app withdraw image" width="80%"> 
 
@@ -27,12 +27,13 @@ End-users are able to add bank accounts to their profiles using the wallet appli
 #### Steps
 
 1. The end-user requests a withdrawal to a bank account they have added using the Rehive Wallet. 
-2. When this is done, a  debit transaction is created on the Rehive ledger with a status of “Pending” and the bank account details are included in the metadata field of the transaction in JSON format. 
+2. When this is done, a debit transaction is created on the Rehive ledger with a status of “Pending” and the bank account details are included in the metadata field of the transaction in JSON format. 
 3. According to the Webhook settings, a webhook is sent to the integration including the transaction details.
-4. Your custom integration then initiates the bank transfer with the payment processor using the bank account details included in the transaction Metadata and awaits confirmation that the transfer has been completed.
-5. Payment processor confirms success or failure of the transfer. The status of the user’s transaction is then updated from pending to complete (or failed) using the <code>[/admin/transactions/{tx_code}/](https://docs.platform.rehive.com/tag/Admin#operation/admin_transaction-collections_partial_update)</code> endpoint. 
+4. Your extension then initiates the bank transfer with the payment processor using the bank account details included in the transaction Metadata and awaits confirmation that the transfer has been completed.
+5. Payment processor confirms success or failure of the transfer. 
+6. Your extension updates the status of the user’s transaction from pending to complete (or failed) using the <code>[/admin/transactions/{tx_code}/](https://docs.platform.rehive.com/tag/Admin#operation/admin_transaction-collections_partial_update)</code> endpoint. 
 
 <img src="/images/bank-transfer-withdraw.png" alt="Withdraw to bank account" width="80%"> 
 
 #### Recommended additional configurations:
-* Create and customize notifications using the [Notifications Extension](https://dashboard.rehive.com/#/extensions/notifications/list) to ping users when a new deposit transaction is created.
+* Create and customize notifications using the [Notifications Extension](https://dashboard.rehive.com/#/extensions/notifications/list) to ping users when a new withdraw transaction is processed. The [Rehive Expressions Guide](https://docs.google.com/document/d/1v44nM51-VaevcMYVkGEL2scI-PpZsUIESxAxLdawxbs/edit?usp=sharing) is useful for creating notifications with specific trigger variables.
