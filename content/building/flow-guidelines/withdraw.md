@@ -36,4 +36,5 @@ End-users are able to add bank accounts to their profiles using the wallet appli
 <img src="/images/bank-transfer-withdraw.png" alt="Withdraw to bank account" width="80%"> 
 
 #### Recommended additional configurations:
-* Create and customize notifications using the [Notifications Extension](https://dashboard.rehive.com/#/extensions/notifications/list) to ping users when a new withdraw transaction is processed. The [Rehive Expressions Guide](https://docs.google.com/document/d/1v44nM51-VaevcMYVkGEL2scI-PpZsUIESxAxLdawxbs/edit?usp=sharing) is useful for creating notifications with specific trigger variables.
+* Create and customize notifications using the [Notifications Extension](https://dashboard.rehive.com/#/extensions/notifications/list) to ping users when a new withdraw transaction is processed. 
+* The [Rehive Expressions Guide](https://docs.google.com/document/d/1v44nM51-VaevcMYVkGEL2scI-PpZsUIESxAxLdawxbs/edit?usp=sharing) is useful for creating notifications with specific trigger variables.
