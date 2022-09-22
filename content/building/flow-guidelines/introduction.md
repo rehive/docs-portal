@@ -22,8 +22,5 @@ The [Account Manager expectations](https://rehive.intercom.help/en/collections/2
 * Rehive does not provide codebase-level reviews for custom extensions.
 * Support will be provided on Rehive endpoints not working - Please take note of the [guidelines](https://rehive.intercom.help/en/articles/6229420-reporting-a-technical-support-issue) for reporting technical issues.
 
-### Guidelines for flows
-
-This section includes guidelines for creating back-end functionality for flows that the Rehive wallets can accommodate without front-end customization.
 
 
