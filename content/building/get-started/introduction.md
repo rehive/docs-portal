@@ -7,6 +7,17 @@ weight: 1
 
 In addition to the official Rehive extensions it is possible to build custom extensions. Before trying to implement an extension or any backend integration on Rehive you should spend some time reading through this page and the related [extension requirements](/building/get-started/requirements/) page.
 
+### Support and enablement
+
+The [Account Manager expectations](https://rehive.intercom.help/en/collections/2091533-unpacking-rehive-services) article outlines what support is available from Rehive when building a custom extension. Whether or not you are on a subscription plan that includes an account manager:
+
+* You must verify that your chosen 3rd party provider has support for the common endpoints for the integration requirements.
+* You must consider how data is stored and linked to users in your extension.
+* You should familiarize yourself with the [Rehive Help Center](https://rehive.intercom.help/en/). 
+* Rehive may offer a call to go over the flows if documentation is not sufficient or to identify variances. The banking partner should be included as a specialist.
+* Rehive does not provide codebase-level reviews for custom extensions.
+* Support will be provided if any Rehive endpoints are not working - please take note of the [guidelines](https://rehive.intercom.help/en/articles/6229420-reporting-a-technical-support-issue) for reporting technical issues.
+
 ## How extensions work
 
 Extensions are web services that have been designed to operate using the Rehive platform as primary source of information (whether this be for authentication, validation, data or events).
