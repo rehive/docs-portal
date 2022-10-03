@@ -4,8 +4,6 @@ title: Deposits to omnibus bank account
 description: Basic overview of an example flow to facilitate end-user deposits via bank transfer.
 weight: 2
 ---
-### Deposits to omnibus bank account
-
 This use case involves end-users depositing funds to a single company bank account (omnibus bank account), using a user's unique Rehive account reference to identify the transaction as belonging to the user. Feel free to [test this flow](https://rehive.intercom.help/en/articles/6483505-how-to-create-a-manual-deposit-as-an-admin) on your test project in the Rehive Wallet apps.
 
 #### Requirements
