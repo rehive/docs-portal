@@ -9,6 +9,16 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-10-03" >}}
+
+1. Fixed a bug where the `withdraw` action could not be set on new company bank or wallet accounts.
+2. Updated the `action` field to allow admins to set it as `null` on wallet, crypto and bank accounts.
+3. Updated the `username` field on the user resource to allow admins to modify its value.
+4. Updated the `manager` field on the currency resource to contain a `service` object if the manager is a service user. 
+    - The `service` object contains the following service fields:  `id`, `slug`, `name`, `url`, `type`.
+
+---
+
 {{< link-heading "h5" "2022-09-22" >}}
 
 1. Added new `action` field to the wallet, crypto and bank account resources. This field can contain the values `withdraw` or `deposit`.
