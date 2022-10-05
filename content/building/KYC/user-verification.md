@@ -19,9 +19,9 @@ weight: 2
 
 
 
-1. The end-user submits information via the app. Using the existing wallet front ends, the users are able to submit their KYC information as well as upload supporting documentation. 
-2. The Rehive system triggers webhook to your custom extension.
-3. Your custom extension formats information and submits it to the third-party system.
+1. The end-user submits information via the app. Using the existing wallet frontends, users are able to submit their KYC information as well as upload supporting documentation. 
+2. The Rehive system triggers a webhook to your custom extension.
+3. Your custom extension formats the information and submits it to the third-party system.
 4. Your KYC provider’s system applies KYC checks and returns a status (either per requirement, or an overall user verification status).
 5. Your custom extension updates the relevant status on Rehive Platform.
 6. The Rehive Notification Extension notifies the user of a status update per your configured notification settings.
