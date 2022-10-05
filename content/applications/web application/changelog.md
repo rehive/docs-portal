@@ -8,8 +8,62 @@ weight: 1
 Summary of additions and changes to the web application.
 
 ---
+{{< link-heading "h4" "2022-10-05 - 2.20.11" >}}
 
-{{< link-heading "h4" "2022-09-12 - 2.20.2" >}}
+**Fixes**
+- Update to determine language direction using i18n library
+- Update to support Platform authentication updates
+
+---
+{{< link-heading "h4" "2022-10-03 - 2.20.10" >}}
+
+**Fixes**
+- Hotfix: Currency conversion functionality not loading
+
+---
+{{< link-heading "h4" "2022-09-29 - 2.20.9" >}}
+
+**Fixes**
+- Fixes withdraw add account and send flow recipient issues on Wyre currencies
+
+---
+{{< link-heading "h4" "2022-09-28 - 2.20.8" >}}
+
+**Fixes**
+- Fix incorrect withdraw options for USD on Wyre companies
+
+---
+{{< link-heading "h4" "2022-09-23 - 2.20.7" >}}
+
+**Fixes**
+- Improvements to reduce API calls
+
+---
+{{< link-heading "h4" "2022-09-20 - 2.20.6" >}}
+
+**Fixes**
+- Fix missing error handling on invoice payment failure
+- Updates to not call Wyre endpoints if the Wyre Extension is not enabled
+
+---
+{{< link-heading "h4" "2022-09-16 - 2.20.5" >}}
+
+**Fixes**
+- Fix for "Create new sale" not sending amount
+- Wallet business extension customer page update
+- Fix for mobile verification step issue when mobile verification is optional or off
+
+---
+
+{{< link-heading "h4" "2022-09-14 - 2.20.4" >}}
+
+**Fixes**
+- Fix incorrect labels on conversion success screen
+- Update Wyre currency API page_size default value
+
+---
+
+{{< link-heading "h4" "2022-09-12 - 2.20.3" >}}
 
 **Fixes**
 - Validation on buy form not working consistently
