@@ -35,7 +35,7 @@ Public custom extensions must meet the following requirements:
 
 ## Required endpoints
 
-The following endpoints are required in every Rehive complieant extension.
+The following endpoints are required in every Rehive compliant extension.
 
 #### /activate/
 

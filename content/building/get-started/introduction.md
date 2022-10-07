@@ -31,13 +31,13 @@ This allows for complex additional logic to be built on top of the existing plat
 
 We will use the Notification Extension (an officially supported extension in Rehive) as an example as it contains all the main elements of an extension that interacts with the Rehive ecosystem. The Notification extension has 3 elements:
 
-1. Admin API endpoints, which admins (authenticated against the platform) can use to add and manage notifications that should be triggered by certain events in the platform.
+1. Admin API endpoints, which admins (authenticated against the platform) can use to add and manage notifications that should be triggered by certain events in the platform. These are endpoints starting with `/admin/` and are listed under the "Admin" sections in the specification documentation, for example the [Notification Extension admin endpoints](https://notification.services.rehive.io/#tag/admin)
 2. An endpoint for receiving webhook events from the platform and processing them in accordance with the settings configured in the previous point.
-3. End user API endpoints, which users can use to manage what notifications they want to receive.
+3. End user API endpoints, which users can use to manage what notifications they want to receive. 
 
 The Notification Extension combines the two elements of platform communication: webhooks and API calls. This can be seen in the following summaries:
 
-Firstly, when an admin user accesses the API endpoints on the notification extension, the extensions sends the users token to the platform in an API call to authorize that the user exists on the platform (and is an `admin` or `service` user). Once this is done (and the user is authorized) the extension can find the information it needs for the admin (and its company) and return a list of relevant notifications.
+Firstly, when an admin user accesses the API endpoints on the notification extension, the extension sends the user's token to the platform in an API call to authorize that the user exists on the platform (and is an `admin` or `service` user). Once this is done (and the user is authorized) the extension can find the information it needs for the admin (and its company) and return a list of relevant notifications. For more information on service users (also referred to as extension users), see the [Extension Users](#extension-users) section.
 
 Secondly, when a webhook is received by the extension on its webhook endpoint, it validates the secret sent with the webhook and matches it to a company. Once this is done the extension can find relevant notifications within the extension's database and send out email, SMS and push notifications accordingly.
 
