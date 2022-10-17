@@ -4,7 +4,7 @@ title: Deposits to omnibus bank account
 description: Basic overview of an example flow to facilitate end-user deposits via bank transfer.
 weight: 2
 ---
-This use case involves end-users depositing funds to a single company bank account (omnibus bank account), using a user's unique Rehive account reference to identify the transaction as belonging to the user. Feel free to [test this flow](https://rehive.intercom.help/en/articles/6483505-how-to-create-a-manual-deposit-as-an-admin) on your test project in the Rehive Wallet apps.
+This use case involves end-users depositing funds to a single company bank account (omnibus bank account), using a user's unique Rehive account reference to identify the transaction as belonging to the user. This approach is also referred to as an FBO or "for benefit of" structure. Feel free to [test this flow](https://rehive.intercom.help/en/articles/6483505-how-to-create-a-manual-deposit-as-an-admin) on your test project in the Rehive Wallet apps.
 
 #### Requirements
 * The details of the bank account you wish to receive deposit funds into must be added in the [Rehive Admin Dashboard>Settings>Bank accounts](https://dashboard.rehive.com/#/settings/bank-accounts). The currencies you list for each bank account will determine which bank account information is displayed when a user selects “Deposit” for each currency in the Wallet apps.
