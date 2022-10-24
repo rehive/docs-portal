@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-10-24" >}}
+
+1. Fixed a bug where the user bank account create endpoint was throwing an error when the branch address field is an empty object.
+
+
+---
+
 {{< link-heading "h5" "2022-10-03" >}}
 
 1. Fixed a bug where the `withdraw` action could not be set on new company bank or wallet accounts.
