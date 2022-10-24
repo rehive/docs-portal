@@ -9,6 +9,68 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2022-10-21 - 4.0.2" >}}
+
+- Fixed undefined confirmations display issue for off-chain Wyre transactions
+- Fixed Wyre currency retrieval from paginated endpoint
+- Add support for Platform authentication updates
+
+---
+
+{{< link-heading "h4" "2022-10-19 - 4.0.1" >}}
+
+- Fixed withdraw add account and send flow recipient issues
+- Fixed inaccurate pop up text on receive for non-Stellar currencies
+- Fixed on-chain transaction issue for non-Wyre companies
+
+---
+
+{{< link-heading "h4" "2022-10-06 - 4.0.0" >}}
+
+- Upgrade Expo SDK from version 44 to 45
+
+---
+
+{{< link-heading "h4" "2022-09-01 - 3.9.2" >}}
+
+- Added FAQ section
+- Added Payment requests
+- New Send flow
+- New Onboarding flow
+- Added referrals feature
+- Added Home cards
+- Updates to Withdraw, Deposit, Buy and Sell
+- Added profile tiers functionality
+- POS updates to use Payment Requests Extension
+- Added transaction filters
+- Send metadata improvements
+- Welcome screen udpates
+- Sidebar improvements
+- Wyre User API integration
+- Rewards campaign image functionality
+
+---
+
+{{< link-heading "h4" "2022-07-19 - 3.9.2" >}}
+
+- Added FAQ section
+- Added Payment requests
+- New Send flow
+- New Onboarding flow
+- Added referrals feature
+- Added Home cards
+- Updates to Withdraw, Deposit, Buy and Sell
+- Added profile tiers functionality
+- POS updates to use Payment Requests Extension
+- Added transaction filters
+- Send metadata improvements
+- Welcome screen udpates
+- Sidebar improvements
+- Wyre User API integration
+- Rewards campaign image functionality
+
+---
+
 {{< link-heading "h4" "2022-07-19 - 3.7.0" >}}
 
 - Added category filter to products
