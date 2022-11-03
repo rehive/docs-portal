@@ -7,12 +7,19 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h5" "2022-11-03" >}}
+
+1. Improved the Swagger documentation of enum fields to correctly only include the values allowed on PATCH, PUT and POST.
+2. Improved the Swagger documentation to include summaries, descriptions and x-code-samples (when available) on all admin endpoints.
+
 ---
 
 {{< link-heading "h5" "2022-10-24" >}}
 
 1. Fixed a bug where the user bank account create endpoint was throwing an error when the branch address field is an empty object.
-
 
 ---
 
