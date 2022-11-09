@@ -7,6 +7,14 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h5" "2022-11-09" >}}
+
+1. Added new optional fields to the user bank accounts resource:
+    - `owner` object that contains: `first_name`, `last_name`, `address`, `phone_number`, `email_address`, `ein_tin`, `cpf_cpnj`, and `company_name`
+    - `beneficiary_type` with options `individual` and `business`
+    - `payment_method_type`
 
 ---
 
