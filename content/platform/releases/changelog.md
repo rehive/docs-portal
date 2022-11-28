@@ -9,6 +9,16 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-11-28" >}}
+
+1. Added new Python SDK code samples to the Swagger documentation.
+2. Removed the `permissions list` from the list groups and view groups serializers. 
+3. Updated Swagger documentation to exclude deprecated endpoints.
+4. Fixed `services` list representation in the Swagger documentation on the company object. The field now correctly shows a sub service resource instead of `string`.
+5. Updated service view endpoint to not return a list of permissions. The permissions should be retrieved using `/services/<id>/permissions/` instead.
+
+---
+
 {{< link-heading "h5" "2022-11-09" >}}
 
 1. Added new optional fields to the user bank accounts resource:
