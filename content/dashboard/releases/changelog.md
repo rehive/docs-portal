@@ -9,6 +9,324 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2022-11-29" >}}
+
+**Changes:**
+
+- Updated the billing page to link to the Stripe customer portal, where admins can manage their billing plan.
+- Added an enumerated list of events to webhook logs filters.
+
+---
+
+{{< link-heading "h4" "2022-11-28" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins could not upload logos or icons due to auth token not being included in the PATCH. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-11-24" >}}
+
+**New features:**
+
+- The old transaction modal has been replaced by the new transaction page! Admins can see more information about each transaction, categorized into sections. Admins can also see special information for specific types of transactions that make it easier to process them from an operations point of view.
+
+---
+
+{{< link-heading "h4" "2022-11-23" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the Stellar Extension was not showing amounts formatted correctly, and also not showing the correct on-chain balance (and in the correct format) in the hot wallet.
+- Fixed issue where Warm Storage accounts were being duplicated in the Stellar Extension.
+
+**New features:**
+
+- Admins can now add custom extensions to their project from the Extensions listing page. From here they can activate, deactivate, manage permissions, and set a management URL.
+
+---
+
+{{< link-heading "h4" "2022-11-17" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins could not edit currency on the currencies listing page.
+
+**Changes:**
+
+- Changes to how the company registration works.
+
+**New features:**
+
+- Admins can now filter the Account Definitions page by group to see which definitions apply to which groups. They will also see warnings if a group does not have a default or primary account in their applied account definitions.
+
+---
+
+{{< link-heading "h4" "2022-11-16" >}}
+
+**Bug fixes:**
+
+- Fixed various sentry errors, specifically when adding a new user.
+- Fixed an issue where admins could not remove/deselect an integration from a product.
+- Fixed an issue where admins could not create a manual deposit if a user did not have an email address.
+
+**Changes:**
+
+- Added new filters to webhook logs - event and url.
+- Change the back button on the currency view page.
+
+---
+
+{{< link-heading "h4" "2022-11-01" >}}
+
+**Changes:**
+
+- Fixed locales download link.
+
+---
+
+{{< link-heading "h4" "2022-09-30" >}}
+
+**Changes:**
+
+- Admins can now edit usernames after they have been set.
+
+---
+
+{{< link-heading "h4" "2022-09-28" >}}
+
+**Bug fixes:**
+
+- Fixes issue where currency icon was being sent to the prod template when creating a Production Project.
+
+**Changes:**
+
+- Updates all template names in test and prod project registration.
+
+---
+
+{{< link-heading "h4" "2022-09-27" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins could not complete the go to production flow if their company description had multiple lines.
+
+**Changes:**
+
+- In tier requirements, changed text to Profile verification instead of Account verification. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-09-22" >}}
+
+**Changes:**
+
+- Admins now have to complete testing criteria before they can create a Production Project.
+- We now display a banner indicating that the Locales feature is in beta mode in the App Extension.
+
+---
+
+{{< link-heading "h4" "2022-09-20" >}}
+
+**Changes:**
+
+- Added Ethereum as a Wyre currency option during onboarding.
+
+---
+
+{{< link-heading "h4" "2022-09-16" >}}
+
+**Changes**:
+
+- Changed how the en template downloads in the App Extension. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-09-15" >}}
+
+**Bug fixes:**
+
+- Fixed issue where prices were not displaying for item vouchers, and blank metadata was displaying as [object Object].
+- Fixed issue where missing a missing unit on a currency would cause the currencies listing page not to load.
+
+**Changes**:
+
+- Updated location of Locales JSON template. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-09-09" >}}
+
+**Changes:**
+
+- Admins now have the ability to create their own Production Projects via the Go to Production flow, which begins on the Get Started page.
+- Removes the Wyre Accounts listing section from the Wyre Extension.
+- Displays Wyre users API info on the Wyre users listing page in the Wyre Extension.
+- Adds back the Stellar transactions listing pages to the testnet and livenet Stellar Extensions.
+
+---
+
+{{< link-heading "h4" "2022-09-05" >}}
+
+**Bug fixes:**
+
+- Fixed issues in the Product Extension where amount was being sent through in decimal instead of integer format.
+- Fixed issue where when editing the amount of a balance voucher, no value was being sent.
+- Fixed issue where all required field when creating or editing notifications were not set to required.
+- Currency display code now correctly shows on the orders listing page instead of the currency code.
+
+**Changes:**
+
+- Admins can no longer upload voucher codes manually for balance vouchers.
+- Admins will no longer be able to change a voucher type (between Item and balance) once it has been set.
+- Added better help messages to notifications edit and create for certain fields.
+
+---
+
+{{< link-heading "h4" "2022-08-29" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins were unable to add Plaid details in the Wyre Extension. (Hotfix)
+- Fixed issue where the state management loader was not displaying correctly when adding Wyre API credentials in the Wyre Extension. (Hotfix)
+
+**Changes:**
+
+- Added Swagger link in Wyre Extension. (Hotfix)
+
+**New features:**
+
+- Admins can now add FAQ questions, which will display in the Web and Mobile Apps, via the App Extension app config in the new FAQs section.
+
+---
+
+{{< link-heading "h4" "2022-08-25" >}}
+
+**Changes:**
+
+- Added serial number and expires fields to the vouchers listing page in the Product Extension. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-08-24" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the document PDF button was not showing for uploaded PDF documents.
+- Fixed swapped around Google and Apple icons on the Get Started page. (Hotfix)
+
+**Changes:**
+
+- The currency listing and view pages have been refactored to be more efficient.
+
+---
+
+{{< link-heading "h4" "2022-08-17" >}}
+
+**Bug fixes:**
+
+- Fixed issue where added prices were not displaying when editing some products.
+- Metadata now displays correctly on products when editing.
+
+**Changes:**
+
+- Admins can now see available currencies in the Product sales credit account listing options.
+- Credit fee account is now required when creating or editing a fee.
+- Updated the styling on the tier and group fees listing pages.
+- When creating Wyre projects, admins can now add two additional currencies: XLM and XBT.
+- Admins can now add Wyre credentials only once. After that they cannot be edited, only viewed.
+
+---
+
+{{< link-heading "h4" "2022-08-13" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins could not update basic user info status from the document view/edit modal on the user details page. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-08-12" >}}
+
+**Bug fixes:**
+
+- Fixed hover bug on currencies listing page.
+- Fixed issue where admins could not set an empty partner on when creating a partner-type subtype.
+- Fixed issue where admins could not use the top pagination on the vouchers listing page. (Hotfix)
+- Fixed issue where admins could not update the User basic info status from the view/edit Document modal. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-08-10" >}}
+
+**Bug fixes:**
+
+- Fixed issue where Go Live block was not showing on pending Production mode projects. (Hotfix)
+
+**Changes:**
+
+- Added the variant name to view order modal.
+
+---
+
+{{< link-heading "h4" "2022-08-05" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins could not edit external accounts added to users if they contained no metadata.
+
+**New features:**
+
+- Admins can now upload images to business categories in the Business Extension.
+
+---
+
+{{< link-heading "h4" "2022-08-04" >}}
+
+**Changes:**
+
+- Support for International Wyre clients is now available.
+- Styling on currencies listing page has been adjusted.
+
+---
+
+{{< link-heading "h4" "2022-08-02" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins could not add variants to non-balance voucher type products.
+
+---
+
+{{< link-heading "h4" "2022-08-01" >}}
+
+**Changes:**
+
+- The Get Started steps for Manual projects has been updated to include adding a test user via the wallet and verifying the user's KYC documents as an admin.
+
+**New features**:
+
+- Admins can now create fees on a group basis in addition to on a tier basis.
+
+---
+
+{{< link-heading "h4" "2022-07-28" >}}
+
+**Changes:**
+
+- Max length on ID number field is now 24 characters, in line with Platform. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-07-27" >}}
+
+**Changes:**
+
+- Admins can set usernames for a user if it has not already been set. (Hotfix)
+
+---
+
 {{< link-heading "h4" "2022-07-26" >}}
 
 **Bug fixes:**
