@@ -49,13 +49,13 @@ The activate message will include the following data:
 }
 ```
 
-When an activate message is received the extension can perform any activation steps it needs in order to operate properly. The `token` can be used to perform these steps if it needs to gather any information from the platform.
+When an activate message is received the extension should perform any activation steps it needs in order to operate properly. The `token` can be used to perform these steps if it needs to gather any information from the platform.
 
-At the minimum, `/activate/` should validate that the token is a real by sending the token in a `GET` request to [`https://api.rehive.com/3/auth/`](https://docs.platform.rehive.com/tag/Auth). If this returns an authentication error the extension should ignore the activation as it is not a valid user. Otherwise the extension should store an entry in its data store with the company, the token and a flag indicating the service has been activated.
+At the minimum, `/activate/` should validate that the token is a real by sending the token in a `GET` request to [`https://api.rehive.com/3/auth/`](https://docs.platform.rehive.com/tag/Auth). If this returns an authentication error the extension should ignore the activation as it is not a valid user. Otherwise the extension should store an entry in its data store with the `company`, the `token` and a flag indicating the service has been activated.
 
 Possible extra `/activate/` steps might be to add new transaction subtypes or create new webhooks on the platform. These webhooks can then be used to automatically send events from the plaform to the extension.
 
-Should an `/activate/` throw any non 200 responses, the Rehive platform will treat the activation as failed and disable the service user and token it created for that activation.
+Should an `/activate/` throw a non 200 response, the Rehive platform will treat the activation as failed and disable the service user and token it created for that activation.
 
 #### /deactivate/
 
@@ -65,15 +65,12 @@ The deactivate message will include the following data:
 
 ```json
 {
-	"token": "<service user token>"
+	"token": "<service user token>",
+        "purge": false
 }
 ```
 
-When an deactivate message is received the extension can perform any deactivation steps it needs in order to disable the extension. Normally this deactivation is a "soft disable" so that the extension can be reactivated at a later date without any issues.
-
-<aside class="notice">
-	There is a pending proposal to support an additional `purge` flag in the deactivate call that will instruct a extension to purge its data.
-</aside>
+When a deactivate message is received the extension should perform any deactivation steps it needs in order to disable the extension. Normally this deactivation is a "soft disable" so that the extension can be reactivated at a later date without any issues. The `purge` field is used to indicate the level of deletion expected. If `purge` is `true` the extension should completely remove data related to the company instead of simply disabling it. A `purge` flag will only be set to `true` when a company is getting removed and purged from Rehive entirely.
 
 ## Optional endpoints
 
@@ -87,7 +84,7 @@ Please review the [platform documentation](https://docs.rehive.com/platform/usag
 
 #### /rotate/
 
-This endpoint will be used by the platform to send a rotate messages to the extension. Rotate messages are used to refresh a token of an extension that supports rotating (expiring) tokens. This is a security mechanism to allow tokens to be set with shorter 8 day durations and then get refreshed every 7 days.
+This endpoint will be used by the platform to send a "rotate token" messages to the extension. Rotate messages are used to refresh a token of an extension that supports rotating (expiring) tokens. This is a security mechanism to allow tokens to be set with shorter 8 day durations and then get refreshed every 7 days.
 
 The rotate message will include the following data:
 
