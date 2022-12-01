@@ -96,7 +96,7 @@ The admin token can be stored on the custom extension server (as an env variable
 
 ## Extension users
 
-If an extension requires access to the platform API, then the extension will need to store an authentication token for a "machine user" that will make request to the platform.
+If an extension requires access to the platform API, then the extension will need to store an authentication token for a "machine user" that will make requests to the platform.
 
 Machine users should be created as part of the `service` group in the platform (called the `extension` group in the dashboard). The user can then be used internally with only the minimum permissions required to operate the extension. There should be one user per extension (per company), and they should never be shared across multiple extensions.
 
@@ -104,7 +104,7 @@ Rehive provides a built in mechanism for machine users once an extension has bee
 
 ## Adding an extension
 
-By definition, extensions in Rehive, are backend integrations that meet the Rehive specified requirements that can be found [here](/extensions/get-started/requirements/). It is possible to build backend integrations "outside" of the extension ecosystem but you will lose out on some of the features implicitly available to compliant extensions:
+By definition, extensions in Rehive, are backend integrations that meet the Rehive requirements that can be found [here](/extensions/get-started/requirements/). It is possible to build backend integrations "outside" of the extension ecosystem but you will lose out on some of the features implicitly available to compliant extensions:
 
 - Activation/deactivation are handled in the same way as Rehive extensions.
 - A user in the `service` group is automatically created on activation and its permissions will be managed by the platform.
@@ -112,25 +112,10 @@ By definition, extensions in Rehive, are backend integrations that meet the Rehi
 - A `management_url` can be configured that allows admin users to "go to" the extension from within the dashboard.
 - Future "built-in" functionality will become available immediately to your extensions once added: key rotation, service managed webhooks, service managed extension permissions etc.
 
-If you have built a Rehive compliant extension then the next step will be to add your "extension" via the [/admin/services/](https://docs.platform.rehive.com/tag/Admin/#operation/admin_services_create) endpoint in the Rehive platform:
+If you have built a Rehive compliant extension then you can add to to Rehive via the [dashboard](https://dashboard.rehive.com). The dashboard provides an interface for adding custom extenions under Extensions -> Add custom extension. The following additional notes may assist you through this process:
 
-```bash
-curl -X 'POST' \
-  'https://api.rehive.com/3/admin/services/' \
-  -H 'accept: application/json' \
-  -H 'Authorization: Token {token}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "name": "Example extension",
-  "description": "Example description",
-  "tags": ["example"],
-  "url": "https://example.com",
-  "management_url": "https://example.com/management/"
-  }'
-```
+- The `url` should be the base URL where your extension is hosted (ie. the base URL that your `/activate/` and `/deactivate/` endpoints are available at). So, if your API is located at `https://example.com` then ensure you add a `url` with a closing slash like `https://example.com/`.
+- The `management_url` is an optional URL that can be included to specify an extenal location that can be used to manage your extension. Currently in-dashboard management is not supported so an external dashbaord will have to be built to support this.
+- Ensure you add the necessary permissions for your extension. When an extension is activated it creates a new `service` user in the Rehive Platform and passes that user to the `/activate/` endpoint on the extension. This `service` user can then be used to make API calls to the Platform from the extension. As such, you will need to specify the individual permissions the extension requires so that the Platform can assign them to the `service` user.
 
-The `url` should be the base URL for your extension (ie. the base URL that your `/activate/` and `/deactivate/` endpoints are available at). The `management_url` is an optional URL that can be included to specify an extenal location that can be used to manage your extension.
-
-The next step is to add `permissions` to the extension. This can be done via [/admin/services/{id}/permissions/](https://docs.platform.rehive.com/tag/Admin#operation/admin_services_permissions_create). When an extension is activated it creates a new `service` user in the Rehive Platform and passes that user to the `/activate/` endpoint on the extension. This `service` user can then be used to make API calls to the Platform from the extension. As such, you will need to specify the individual permissions the extension requires so that the Platform can assign them to the `service` user.
-
-Once you have completed the extension, added it to the Platform, and configured its permissions you can proceed to "activating" the extension. At this point the extension should be visible in the "Not activated" section of the extensions page on the Rehive dashboard. You can simply select the "Activate" button and if your extension was built corrctly it should create a `service` user, assign the correct permissions and invoke the `/activate/` endpoint on your extension. If no errors occur, Rehive will mark the extension as active for the company where the activation occurred.
+Once you have implemented an extension, added it to the Platform, and configured its permissions you can "activate" it. At this point the extension should be visible in the "Not activated" section of the extensions page on the Rehive dashboard. You can simply select the "Activate" button and if your extension was built corrctly it should create a `service` user, assign the correct permissions and invoke the `/activate/` endpoint on your extension. If no errors occur, Rehive will mark the extension as active for the company where the activation occurred.
