@@ -66,7 +66,7 @@ The deactivate message will include the following data:
 ```json
 {
 	"token": "<service user token>",
-        "purge": false
+	"purge": false
 }
 ```
 
