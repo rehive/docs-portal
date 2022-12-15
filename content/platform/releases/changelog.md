@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2022-12-14" >}}
+
+1. Updated all endpoints that return the token resource (including login and register) to include the `expires` and `created` fields.
+2. Updated the admin token create endpoint to include the `user` field on the response as well.
+3. Improved Swagger documentation so that boolean fields use the correct default values.
+4. Added new `transactions__created` and `exclude__transactions__created` filters on account assets.
+
+---
+
 {{< link-heading "h5" "2022-11-28" >}}
 
 1. Added new Python SDK code samples to the Swagger documentation.
