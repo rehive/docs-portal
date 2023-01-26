@@ -18,7 +18,7 @@ When handling Rehive transaction webhooks, it is expected that the extension alw
 
 #### Third party transaction handling
 
-The extension can use its discretion on how it wants to handle third party initiated transactions. In general it is not required to replicate every third party transaction on the Rehive ledger unless it is specifically designed as a 1-to-1 mapped extension. See 1-to-1(TODO LINK TO 1-to-1) mapping for more information.
+The extension can use its discretion on how it wants to handle third party initiated transactions. In general it is not required to replicate every third party transaction on the Rehive ledger unless it is specifically designed as a 1-to-1 mapped extension. See [1-to-1 mapping](/building/currency-manager-extension/1-to-1-mapping/) for more information.
 
 When handling Rehive transaction webhooks, it is expected that the extension always eventually moves the transaction into either a Complete or a Failed state. If any flow is not supported, the manager should immediately fail the transaction.
 ##### Transaction flow
@@ -41,7 +41,7 @@ When the currency manager receives a debit transaction webhook for a currency it
 
 1. A pending debit transaction is created on Rehive that includes metadata related to how it can be processed on the third party ledger.
 2. The currency manager extension receives the Rehive webhook.
-3. The currency manager checks the metadata for withdrawal details. These details could include direct withdrawal instructions or an ID that links to a known external ledger account. See standard withdrawal/send metadata structure (LINK TO STANDARD WITHDRAWAL/SEND METADATA DOC). If the metadata cannot be used, the transaction should be updated to Failed on Rehive by the manager.
+3. The currency manager parses the metadata field. The metadata could include direct withdrawal instructions or an ID that links to a known external ledger account. If the metadata cannot be used, the transaction should be updated to Failed on Rehive by the manager.
 4. The currency manager extension then creates the withdrawal transaction on the third party using the transaction details.
 5. Once the third party ledger confirms the transaction the Rehive transaction should then be marked as Complete.
 
@@ -49,7 +49,7 @@ When the currency manager receives a debit transaction webhook for a currency it
 For a more detailed example see the Cash-in/Cash-out [withdrawals](/building/cash-in-cash-out/withdraw/) section.
 
 #### Transfers
-By default, a currency manager extension is not required to do anything special for internal transfers within the Rehive ecosystem. In this case it should just Complete the Rehive transaction if it’s a transfer. See the [1 to1 mapping transfers](TODO LINK) section for a more advanced handling of transfers.
+By default, a currency manager extension is not required to do anything special for internal transfers within the Rehive ecosystem. In this case it should just Complete the Rehive transaction if it’s a transfer. See the [1 to1 mapping transfers](/building/currency-manager-extension/1-to-1-mapping/) section for a more advanced handling of transfers.
 
 A transfer can be detected by checking that the `partner_id` on the transaction webhook data is not null.
 

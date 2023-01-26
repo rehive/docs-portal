@@ -15,7 +15,7 @@ The first place to start is by familiarizing yourself with the [Get Started sect
 
 Currency management allows each Rehive currency to be controlled by a service user. This user is known as the currency manager and is the sole entity that can shift transactions of that currency to a Complete or Failed state.
 
-The manager is assigned to the currency by updating the “manager” field using the service user's ID as the input. (Link to the Platform currency object docs).
+The manager is assigned to the currency by updating the `manager` field using the service user's ID as the input. See the [Core API doc section](https://docs.platform.rehive.com/tag/Admin#operation/admin_currencies_update) for more information.
 
 ## What is a currency manager extension?
 

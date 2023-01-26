@@ -10,7 +10,14 @@ weight: 3
 On withdrawals, a fee might need to be applied when processing the transaction on the third party ledger. If this is the case, a fee transaction can be appended to the collection that is being processed. This is done by:
 
 1. Get the fee value that will be charged by the third party ledger.
-2. Creating a Rehive transaction object (TODO include object here in doc), which includes the fee value, currency, and the relevant fee subtype.
+2. Creating a Rehive transaction object, which includes the fee value, currency, and the relevant fee subtype. Example
+```json
+    {
+        "amount": 100,
+        "currency": USD,
+        "subtype": "fee"
+    }
+```
 3. Append the transaction to the current collection being handled by updating the transaction object to `admin/transaction-collections/ + {collection_id} + /transactions/`
 
 #### Inclusive vs Exclusive fees
