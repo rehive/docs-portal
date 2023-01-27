@@ -33,6 +33,8 @@ When a credit transaction is detected on the third party ledger the currency man
 2. Create a Rehive credit transaction that replicates the third party transaction. If no processing is needed, this can be created as Complete, otherwise this should be created as a Pending transaction.
 3. If further processing is required - for example with cryptocurrency transactions waiting for confirmations - then the currency manager extension should wait for final confirmation from the third party and Complete the Rehive transaction once confirmed.
 
+<img src="/images/deposit_via_currency_manager.png" alt="Currency manager deposit image" width="90%"> 
+
 For a more detailed example see the Cash-in/Cash-out [deposits](/building/cash-in-cash-out/deposits-to-segregted-bank-accounts/) section.
 
 
@@ -45,6 +47,7 @@ When the currency manager receives a debit transaction webhook for a currency it
 4. The currency manager extension then creates the withdrawal transaction on the third party using the transaction details.
 5. Once the third party ledger confirms the transaction the Rehive transaction should then be marked as Complete.
 
+<img src="/images/withdraw_via_currency_manager.png" alt="Currency manager withdrawal image" width="90%"> 
 
 For a more detailed example see the Cash-in/Cash-out [withdrawals](/building/cash-in-cash-out/withdraw/) section.
 
