@@ -11,7 +11,7 @@ This is an especially useful method for keeping strict controls that ensure that
 
 To achieve a 1-to-1 mapped setup, both user changes and transaction changes need to be synced between Rehive and the external Ledger. For example, if a transaction occurs on the external ledger that moves funds between two user accounts the currency manager extension should find the equivalent Rehive user accounts and replicate that transfer between them.
 
-#### Can my third party ledger be mapped 1-to-1?
+### Can my third party ledger be mapped 1-to-1?
 If the third party ledger can answer yes to the following questions, then it is possible to fit it into a 1-to-1 mapped structure.
 
 1. It can generate a separate custodial account objects (bank account, custodial crypto account etc) for each Rehive user’s account.
@@ -21,7 +21,7 @@ If the third party ledger can answer yes to the following questions, then it is 
 Optionally for transfers the third party needs to answer yes to:
 1. It can create transfers between the generated account entities.
 
-#### Handling user accounts
+### Handling user accounts
 In a 1-to-1 mapped system, it is required that a Rehive account object for a user is linked directly to an account object in the third party ledger.
 
 ##### General account mapping
@@ -71,7 +71,7 @@ Third party systems might often require a user entity in a 1-to-1 mapped system 
 
 For more information integrating an external KYC system see our general KYC integration guide.
 
-#### Transaction flows
+### Transaction flows
 ##### Handling withdrawals
 See the general withdrawals section.
 

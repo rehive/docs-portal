@@ -17,7 +17,7 @@ Currency management allows each Rehive currency to be controlled by a service us
 
 The manager is assigned to the currency by updating the `manager` field using the service user's ID as the input. See the [Core API doc section](https://docs.platform.rehive.com/tag/Admin#operation/admin_currencies_update) for more information.
 
-## What is a currency manager extension?
+### What is a currency manager extension?
 
 A currency manager extension is the status controller for a specific currency’s transactions on Rehive. It is also the link between the Rehive ledger and a third party ledger/store of value.
 

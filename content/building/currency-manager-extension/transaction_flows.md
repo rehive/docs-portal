@@ -6,7 +6,7 @@ weight: 2
 ---
 
 
-#### Rehive transaction handling
+### Rehive transaction handling
 
 When handling Rehive transaction webhooks, it is expected that the extension always eventually moves the transaction into either a Complete or a Failed state. If any flow is not supported, the manager should immediately fail the transaction.
 ##### Transaction flow
@@ -16,7 +16,7 @@ When handling Rehive transaction webhooks, it is expected that the extension alw
 - Once processing is considered complete by the manager, the transaction should be set to Complete or Failed.
 
 
-#### Third party transaction handling
+### Third party transaction handling
 
 The extension can use its discretion on how it wants to handle third party initiated transactions. In general it is not required to replicate every third party transaction on the Rehive ledger unless it is specifically designed as a 1-to-1 mapped extension. See [1-to-1 mapping](/building/currency-manager-extension/1-to-1-mapping/) for more information.
 

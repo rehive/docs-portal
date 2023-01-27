@@ -7,13 +7,13 @@ weight: 5
 
 This section outlines any additional integrations that can be done to extend the Currency Manager Extension functionality to different parts of the Rehive's ecosystem.
 
-#### Integrating with the Conversion Extension flows
+### Integrating with the Conversion Extension flows
 A currency manager that links to a third party system that provides endpoints for handling conversions and quotes can integrate directly with Rehive’s Conversion Extension to use the third party as the underlying quote and conversion mechanism. This can be done by implementing the Conversion Quote Integration within the currency manager extension. Guide coming soon!
 
-#### Integrating with the Payment Requests Extension (PRS)
+### Integrating with the Payment Requests Extension (PRS)
 In order for a payment manager to integrate with the PRS payment processing it needs to provide an endpoint which returns a standard set of payment information as well as stores the PRS quote id to be used by the payment manager when creating the transaction.
 
-###### Flow
+##### Flow
 1. The PRS sends quote information to the payment processor (in this case the currency manager extension).
 2. The payment processor stores the quote id as well as generates any required deposit/payment information a user might need to fulfill the payment. This is returned to the PRS>
 3. The wallet displays this payment information to the end user. The end user then makes a payment.

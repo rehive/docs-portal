@@ -9,7 +9,7 @@ This section serves as a guide on how to fulfill the API structure and functiona
 
 When starting we recommend using our example/template Django project which can be found here: https://github.com/rehive/service-framework/tree/currency-manager-example. This will include a fully working version of the technical implementation defined in this documentation. Further reading is only required if you are doing a completely custom setup.
 
-#### Structural Overview
+### Structural Overview
 
 ##### Required endpoints
 - `/admin/currencies/` - [GET]
