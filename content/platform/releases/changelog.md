@@ -7,6 +7,25 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h5" "2023-01-31" >}}
+
+1. Major update to the way transactions and transaction collections are transitioned.
+    - Transactions can now be created as `initiating`. No effects or transitions will be run on these except for general validation.
+    - Transitions (between different transaction statuses) are now recorded in a transaction transition resource.
+    - Added managed currency transaction transition approvals flow.
+    - Added account balance pooling within collections when doing balance checks.
+    - Updated collections to always transition as a whole (ie. individual transactions cannot have different statuses to other transactions in the same collection).
+2. Added automated pruning of initiating transactions older than 15 minutes.
+3. Added new endpoints for retrieving, listing and updating transaction transition resources.
+4. Added new `transaction.transition.create` and `transaction.transition.update` webhook events.
+5. Fixed a minor bug when updating a collection status that would result in the new status not showing in the response.
+6. Updated `action` handling on bank, crypto and wallet accounts.
+    - User endpoints can now only create, delete and modify accounts with an action of `deposit`.
+    - Admin endpoints can create, delete and modify all action types.
+
 ---
 
 {{< link-heading "h5" "2022-12-14" >}}
