@@ -8,6 +8,59 @@ weight: 1
 Summary of additions and changes to the web application.
 
 ---
+{{< link-heading "h4" "2023-01-26 - 2.20.18" >}}
+
+**Features**
+ - Add automatic codebase packaging - dashboard downloads for Standard plan and higher
+ - Update amount input currency to default to actual amount rather than display currency amount
+
+**Fixes**
+ - Fix product cart page item image responsiveness issue
+ - Fix minor account name display issue
+ - Add conversion details to exchange confirm and success screens
+ - Fix Cancel button missing for invoice payment requests
+ - Update ETH default logo
+ - Fix minor product items API call issue
+
+---
+{{< link-heading "h4" "2022-11-10 - 2.20.17" >}}
+
+**Fixes**
+ - Hotfix: Fix display formatting for very small values
+
+---
+{{< link-heading "h4" "2022-11-09 - 2.20.16" >}}
+
+**Fixes**
+ - Hotfix: fix exchange validation issue
+
+---
+{{< link-heading "h4" "2022-11-09 - 2.20.15" >}}
+
+**Fixes**
+ - Fix issue with Buy max amount
+ - Update display decimal places for cryptocurrencies
+
+---
+{{< link-heading "h4" "2022-11-01 - 2.20.14" >}}
+
+**Fixes**
+ - Fix withdraw fee calculation bug
+
+---
+{{< link-heading "h4" "2022-10-31 - 2.20.13" >}}
+
+**Fixes**
+ - Fix issue where withdraw hide action config disables crypto sends
+
+---
+{{< link-heading "h4" "2022-10-28 - 2.20.12" >}}
+
+**Fixes**
+ - Add additional cryptocurrencies to Settings > External accounts
+ - Add option to add bank withdrawals for stellar crypto currencies
+
+---
 {{< link-heading "h4" "2022-10-05 - 2.20.11" >}}
 
 **Fixes**
