@@ -11,15 +11,7 @@ When starting we recommend using our example/template Django project which can b
 
 ### Structural Overview
 
-##### Required endpoints
-- `/admin/currencies/` - [GET]
-- `/activate/`
-- `/deactivate/`
-- `/admin/currencies/<code>/` - [GET, PATCH]
-- `/user/currencies/` - [GET]
-- `/user/currencies/<code>/` - [GET]
-- `/webook/` - [POST]
-- `/currencies/` [GET]
+For a complete list of required endpoints and stored objects see the example implementation at: https://github.com/rehive/service-framework/tree/currency-manager-example
 
 ##### Metadata structure
 Generally, we recommend including extra information about a transaction within the extension specific metadata. To include extra fields that might be useful for an admin or user to see a metadata object can be included as `extension_your_currency_manager` and any number of key/value pairs included.
@@ -33,21 +25,6 @@ The User level error will be displayed to the end user within the Rehive applica
 
 ##### Subtypes
 When the currency manager creates transactions it should always use a subtype. See Rehive subtype guide and standard subtype list for more information. Where required the extension can also use its own custom subtypes.
-
-##### Stored objects
-This list excludes the general extension list of stored objects like User, Company etc.
-
-###### Currency
-```
-company = ForeignKey -> Company
-code = Charfield(30)
-display_code = Charfield(12)
-description = Charfield(255)
-symbol = CharField(30)
-unit = CharField(30)
-divisibility = IntegerField
-manager_code = Charfield(30)
-```
 
 ##### Rehive Webhook Handling
 

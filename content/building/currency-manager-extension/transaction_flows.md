@@ -5,6 +5,11 @@ description: High level transaction flows performed by a Currency Manager Extens
 weight: 2
 ---
 
+### Rehive’s transaction transition flow
+During Rehive’s transaction processing lifecycle each status change triggers the creation of a new transition event. These transition events control if the transaction moves to the next status by either being declined or approved. In the normal “unmanaged” flow these transition events are generally approved automatically.
+
+This is different for a currency managed transaction. A currency manager completes or fails a transaction by listening for Rehive transaction transition events and approving or declining them based on how it can process that transaction.
+
 
 ### Rehive transaction handling
 
@@ -55,6 +60,29 @@ For a more detailed example see the Cash-in/Cash-out [withdrawals](/building/cas
 By default, a currency manager extension is not required to do anything special for internal transfers within the Rehive ecosystem. In this case it should just Complete the Rehive transaction if it’s a transfer. See the [1 to1 mapping transfers](/building/currency-manager-extension/1-to-1-mapping/) section for a more advanced handling of transfers.
 
 A transfer can be detected by checking that the `partner_id` on the transaction webhook data is not null.
+
+### Advanced transition handling
+
+#### Initiated to Pending transition
+A pending transaction means the third party is either waiting for confirmation to process the transaction or is in the process of processing the transaction. 
+
+If the third party system supports pending transactions the currency manager extension can use the Initiated to Pending transition as a trigger for creating Pending third party transactions. In this case the manager would:
+
+1. Receive an Initiated to Pending transition event.
+2. Create a pending transaction on the third party.
+3. Store a link to both the pending Rehive transaction and the pending third party transaction.
+4. If successful, approve the transition event.
+
+#### Pending to Complete transition
+A complete transaction denotes that all balance changes are final and the transaction has been successful on the third party.
+
+The flow for handling completing a transaction is as follows:
+
+1. Receive a Pending to Complete transition event.
+2. Check if an existing pending transaction exists. If it does try and Complete it on the third party system. If not, create it in a Complete form on the third party.
+3. Update the internal status of the transaction.
+4. Once complete on the third party approve the transition event.
+
 
 
 

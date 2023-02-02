@@ -11,6 +11,9 @@ In this guide we will look at dive into what a Currency Manager is, how to build
 
 The first place to start is by familiarizing yourself with the [Get Started section](/building/get-started/introduction/). This gives a basic overview of how to start building an extension as well as the ground-level endpoints you’ll need to use. You should also familiarize yourself with [Rehive’s Standard Configurations](https://docs.google.com/document/d/1LdWBY2Oim2EPWv2-ZNKIPXDbnULbSf-DiUfuCw7_zQg/edit#) to ensure that the correct subtypes are used for specific transactions.
 
+Lastly a good handle on Rehive [transaction](https://docs.rehive.com/platform/core-resources/transactions/) and [transaction collection](https://docs.rehive.com/platform/core-resources/transaction-collections/) logic is also required to start building a currency manager extension.
+
+
 ### What is currency management?
 
 Currency management allows each Rehive currency to be controlled by a service user. This user is known as the currency manager and is the sole entity that can shift transactions of that currency to a Complete or Failed state.
@@ -22,3 +25,5 @@ The manager is assigned to the currency by updating the `manager` field using th
 A currency manager extension is the status controller for a specific currency’s transactions on Rehive. It is also the link between the Rehive ledger and a third party ledger/store of value.
 
 Its primary functions are to transition Rehive transactions from a Pending state to either a Complete or Failed state, as well as trigger any third party side effects required on the external third party ledger.
+
+Transitioning transactions on Rehive as a currency manager is done by approving or declining [transition events](https://docs.platform.rehive.com/tag/Admin#operation/admin_transaction-transitions_update) triggered by Rehive while it processes a transaction.
