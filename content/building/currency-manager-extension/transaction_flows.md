@@ -28,10 +28,10 @@ When handling Rehive transaction webhooks, it is expected that the extension alw
 The extension can use its discretion on how it wants to handle third party initiated transactions. In general it is not required to replicate every third party transaction on the Rehive ledger unless it is specifically designed as a 1-to-1 mapped extension. See [1-to-1 mapping](/building/currency-manager-extension/1-to-1-mapping/) for more information.
 
 When handling Rehive transaction webhooks, it is expected that the extension always eventually moves the transaction into either a Complete or a Failed state. If any flow is not supported, the manager should immediately fail the transaction.
-##### Transaction flow
-- The currency manager receives a notification that a transaction occurred on the third party ledger.
-- The currency manager decides if it should replicate this on Rehive or not.
-- If it does, it should create a relevant Rehive transaction that represents the third party transaction, including using an appropriate subtype.
+#### Flow
+1. The currency manager receives a notification that a transaction occurred on the third party ledger.
+2. The currency manager decides if it should replicate this on Rehive or not.
+3. If it does, it should create a relevant Rehive transaction that represents the third party transaction, including using an appropriate subtype.
 
 
 #### Deposits
