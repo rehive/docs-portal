@@ -14,11 +14,13 @@ This is different for a currency managed transaction. A currency manager complet
 ### Rehive transaction handling
 
 When handling Rehive transaction webhooks, it is expected that the extension always eventually moves the transaction into either a Complete or a Failed state. If any flow is not supported, the manager should immediately fail the transaction.
-##### Transaction flow
-- The currency manager receives a webhook of a Rehive transaction
-- The currency is checked to see if it’s a currency managed by the extension. The manager should ignore it if it’s not a relevant currency.
-- The currency manager stores the transaction and processes it on a third party service (if applicable)
-- Once processing is considered complete by the manager, the transaction should be set to Complete or Failed.
+#### Flow
+1. The currency manager receives a transaction transition event webhook from Rehive.
+2. The currency is checked to see if it’s a currency managed by the extension. The manager should ignore it if it’s not a relevant currency.
+3. The currency manager does a lookup of the transaction and transaction collection that triggered the event. It should store both.
+4. The currency manager extension should trigger any third party side effects.
+5. Once third party processing is considered complete the transaction transition should be approved.
+
 
 
 ### Third party transaction handling
@@ -47,10 +49,11 @@ For a more detailed example see the Cash-in/Cash-out [deposits](/building/cash-i
 When the currency manager receives a debit transaction webhook for a currency it manages, it should try to process the transaction as a withdrawal. The flow is as follows:
 
 1. A pending debit transaction is created on Rehive that includes metadata related to how it can be processed on the third party ledger.
-2. The currency manager extension receives the Rehive webhook.
-3. The currency manager parses the metadata field. The metadata could include direct withdrawal instructions or an ID that links to a known external ledger account. If the metadata cannot be used, the transaction should be updated to Failed on Rehive by the manager.
+2. The currency manager extension receives the Rehive transaction transition webhook.
+3. The currency manager looks up the transaction on Rehive and parses the metadata field. The metadata could include direct withdrawal instructions or an ID that links to a known external ledger account. If the metadata cannot be used, the transaction should be updated to Failed on Rehive by the manager.
 4. The currency manager extension then creates the withdrawal transaction on the third party using the transaction details.
-5. Once the third party ledger confirms the transaction the Rehive transaction should then be marked as Complete.
+5. Once the third party ledger confirms the transaction the Rehive transaction transition should then be approved.
+
 
 <img src="/images/withdraw_via_currency_manager.png" alt="Currency manager withdrawal image" width="90%"> 
 
