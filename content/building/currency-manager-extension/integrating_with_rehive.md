@@ -15,13 +15,13 @@ In order for a payment manager to integrate with the PRS payment processing it n
 
 ##### Flow
 1. The PRS sends quote information to the payment processor (in this case the currency manager extension).
-2. The payment processor stores the quote id as well as generates any required deposit/payment information a user might need to fulfill the payment. This is returned to the PRS>
+2. The payment processor stores the quote id as well as generates any required deposit/payment information a user might need to fulfill the payment. This is returned to the PRS.
 3. The wallet displays this payment information to the end user. The end user then makes a payment.
 4. The payment processor processes this payment as usual. Making sure to include the Quote ID stored in step three within the transaction metadata.
 
 With the above flow in mind this is what the Currency Manager Extension needs to implement to support this flow:
 
-1. Add a `/payment` endpoint which handles the following fields being POSTed:
+1. Add a `/payment` endpoint which handles the following fields being sent:
 ```json
 {
     "id": "string",

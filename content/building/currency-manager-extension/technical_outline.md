@@ -52,7 +52,7 @@ When linking two transaction systems one important factor is handling the divisi
 
 Other third parties might have different divisibilities for currencies or handle them differently so it becomes important to translate the amounts correctly. This can be done by keeping these key points in mind:
 - Store a copy of a companies Rehive currency objects within the currency manager extension
-- Store a copy of the third party ledgers currency object (SEE CURRENCY OBJECT DETAILS SECTION)
+- Store a copy of the third party ledgers currency object
 - When a currency is managed by the extension the extension should validate that the Rehive currency and third party currency being linked match in divisibility.
 - If the currency manager handles transaction amounts in a non-cents structure make sure to convert to the base divisibility and store when detecting third party transactions as well as converting back when mapping Rehive transactions to the third party.
 
