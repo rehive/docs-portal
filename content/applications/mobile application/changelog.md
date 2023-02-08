@@ -9,6 +9,22 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2022-02-07 - 5.0.4" >}}
+
+- Fixed issue with plaid pops ups in company onboarding onboarding
+- Updated default ethereum logo and icon
+- Updated default amount input currency to actual amount rather than display amount
+- Fix silent errors in splash screen and contact email link
+
+---
+
+{{< link-heading "h4" "2023-01-25 - 5.0.3" >}}
+
+- Updated to React Native 0.68 and related library updates
+- Updated bundling process resulting in smaller app size
+
+---
+
 {{< link-heading "h4" "2022-10-21 - 4.0.2" >}}
 
 - Fixed undefined confirmations display issue for off-chain Wyre transactions
