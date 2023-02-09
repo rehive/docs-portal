@@ -15,9 +15,9 @@ This section will provide guidelines fetching and providing quotation informatio
 
 
 #### Steps:
-1. The user selects “Deposit” and is shown details of the bank account you wish to receive deposit funds into and a unique reference.
-2. The user makes a bank transfer to the company bank account provided and includes the unique reference in the reference field
-3. Your custom extension polls the transaction history of the company bank account. 
+1. The user initiates a conversion transaction using the app
+2. The Rehive Conversion extension triggers a web call to the custom extension with a specific [event-type](https://docs.rehive.com/platform/usage/events/) `conversion.quote` including the aforementioned secret.
+3. The custom extension verifies the secret and requests the quote from the third party if applicable. At this point, the extension must store the `collection_id`  included in the web call. This is later used in the [Trigger a conversion](/building/conversions/trigger-a-conversion/) flow. 
 4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive API endpoint <code> [admin/transactions/credit/](https://docs.platform.rehive.com/tag/Admin#operation/admin_transactions_credit_create)</code> with 
 ```json
 {

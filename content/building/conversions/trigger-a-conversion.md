@@ -1,6 +1,6 @@
 ---
 date: 2018-09-17T15:21:22+02:00
-title: Deposits to segregated bank accounts
+title: Trigger a conversion
 description: Basic overview of an example flow to facilitate end-user deposits via bank transfer.
 weight: 3
 ---
