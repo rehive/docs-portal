@@ -23,23 +23,10 @@ As of January 2022, Rehive no longer provides managed iOS and Android App Store 
 3. Navigate to the [Google Play Console](https://play.google.com/console/u/0/developers) and create your App.
 4. On the [All Projects](https://expo.dev/accounts/rehive/projects) page in Expo, create a new project. Note down the EAS project ID and the app slug.
 5. Download the Mobile app source code from the [App Extension section in the Rehive Dashboard](https://dashboard.rehive.com/#/extensions/app/codebase)
-6. Create a .env file with your app details. You can use .env.example file as a template. The appUpdatesUrl should include your EAS project ID in the format shown in our example below:
-```
-appName="Demo"
-appDescription="Demo app built on Rehive"
-appSlug="rehive-demo"
-appPrimaryColor="#4d4d4d"
-appBackgroundColor="#FFFFFF"
-appIOSBundleIdentifier="com.rehive.demo"
-appAndroidPackage="com.rehive.demo"
-easProjectId="256a6888-0a4e-45c9-8c46-d86174a656e"
-appUpdatesUrl="https://u.expo.dev/256a6888-0a4e-45c9-8c46-d86174a656e"
-sentryOrg=""
-sentryProject=""
-sentryDSN=""
-```
-7. Replace the `/asset/icons/icon.png` and the `/assets/icons/splash.png` files with your own app icon and splash screen.
-8. If you wish to make use of Push notifications on Android, you will need to set upa 
+6. Create a `.env.production` file with your app details. You can use .env.example in the root project directory as a template. We actually recommend creating two files, `.env.staging` and `.env.production`. For the staging app you can create separate apps for testing which will be useful down the line. Note that this means you'll need to repeat steps 2 to 4 above for your staging app. You can use the example file below as a template. The `appUpdatesUrl` should include your EAS project ID in the format shown in our example below.
+7. Create an eas.json file in the root directory. This is required for EAS builds. You can use the eas.json.example file in the root project directory as a template. Note that many of the values are duplicated accross your `.env` files and the `eas.json` file. Unfortunately due to the way EAS was designed there is currently no way around this.  
+8. Replace the `/asset/icons/icon.png` and the `/assets/icons/splash.png` files with your own app icon and splash screen.
+
 
 ## Android push notification setup (optional)
 1. To create a Firebase project, go to the [Firebase console](https://console.firebase.google.com/) and click on Add project.
@@ -69,12 +56,19 @@ eas secret:create --scope project --name GOOGLE_SERVICES_JSON --type file --valu
 ```bash
 direnv allow .
 ```
-2. Build the app bundles using Expo's EAS build:
+2. Update the version number in version.json. The android build number always needs to be higher than that of previous builds to be accepted by the Play Store.
+3.Build the app bundles using Expo's EAS build:
 ```bash
 eas build -e production -p all
 ```
-3. Download the android and iOS bundles using the links outputted by the previous step or by logging or from the [Expo dashboard](https://expo.dev/).
-4. For submission to the iOS App Store, you will need to download and install the [Transporter App](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) and for the Android submission, you can create a release and upload the bundle directly in the [Google Play Console](https://play.google.com/console/accept-terms).
+4. Download the android and iOS bundles using the links outputted by the previous step or by logging or from the [Expo dashboard](https://expo.dev/).
+5. For submission to the iOS App Store, you will need to download and install the [Transporter App](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) and for the Android submission, you can create a release and upload the bundle directly in the [Google Play Console](https://play.google.com/console/accept-terms).
+
+## Over-the-air updates
+Expo offers OTA updates for applying changes to apps without going through the build process. Read more [here](https://docs.expo.dev/eas-update/introduction/). Follow these steps to publish and apply an OTA update.
+1. Publish the changes to a branch by running: `eas update --branch v4.0.11 --message v4.0.11` (replace v4.0.11 with the correct version tag matching your version.json).
+2. Apply the update to production (or staging) by running `eas channel:edit production --branch v4.0.11`
+
 
 
 
