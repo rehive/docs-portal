@@ -54,7 +54,7 @@ eas secret:create --scope project --name GOOGLE_SERVICES_JSON --type file --valu
 ## Building the app
 1. Load the app config from environmental variables: 
 ```bash
-direnv allow .
+cp .env.production .env && direnv allow .
 ```
 2. Update the version number in version.json. The android build number always needs to be higher than that of previous builds to be accepted by the Play Store.
 3.Build the app bundles using Expo's EAS build:
