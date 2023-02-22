@@ -9,6 +9,142 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-02-22" >}}
+
+**Bug fixes:**
+
+- Fixed an issue where adding admins on register would override the Rehive Review admin user.
+- Fixed an issue where it was not possible to add a non-voucher product.
+
+**Changes:**
+
+- Removed the ability to change the status of complete or failed rewards in the Rewards Extension.
+- Removed the ability to change the status of a any order whose status is not pending. Any failed or complete payment on an order cannot have its status changed.
+- Removed the ability to change the status of complete or failed conversion quotes in the Conversions Extension.
+- Admins can only change the status of quoted conversions to complete, no longer to failed, pending.
+
+**New features:**
+
+- Admins can now view transactions logs to see all actions taken and attempted on any transaction. View transaction logs on any transaction by clicking on the "Logs" menu item from the transaction details page.
+
+---
+
+{{< link-heading "h4" "2023-02-16" >}}
+
+**Changes:**
+
+- Admins can now set a tier requirement for viewing deposit information in the Actions section of the App Config.
+
+---
+
+{{< link-heading "h4" "2023-02-14" >}}
+
+**Changes:**
+
+- Admins can now add admin messages on users, which can be seen by either the admin only, or both the admin and the user.
+
+---
+
+{{< link-heading "h4" "2023-02-06" >}}
+
+**Changes:**
+
+- Admins can now view a history of their Mass sends, as well as individual transaction information, from the Mass Send Extension. The Extension's UI has also been made more clear.
+- Added the ability to edit a currency icon from the edit currency modal on the currency listing page.
+- When adding or editing a product, admins can now set a lifetime on vouchers whose generation type is automatic. The lifetime field states how long a voucher should be valid for after purchase.
+- Admins can also now upload voucher codes for individual variants on a voucher product if the generation type is manual.
+
+---
+
+{{< link-heading "h4" "2023-02-02" >}}
+
+**Bug fixes:**
+
+- Fixed issue where Add app domain link in the Web app block on the Get Started page did not go to the correct page in the App Extension.
+
+**Changes:**
+
+- Updated copy on the Web app block on the Get Started page.
+- Split the web and mobile codebase downloads in the App Extension.
+- Added links to the Changelogs for the web and mobile codebases.
+- Changed the way the Stellar Extension gets transactions on its transactions page. Stellar transactions are now retrieved via their Stellar Extension transaction id rather than the transaction hash.
+
+---
+
+{{< link-heading "h4" "2023-01-30" >}}
+
+**Changes:**
+
+- Admins can now view, add, and edit the beneficiary type and action type of user bank accounts and crypto accounts.
+- Admins can now view, add, and edit the owner information of a user bank account
+- Admins can now re-execute failed or quoted conversion quotes on PRS requests.
+
+---
+
+{{< link-heading "h4" "2023-01-17" >}}
+
+**Changes:**
+
+- Adds condition to Notification Extension settings page to only show quotas if the quota is being applied to a project. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2023-01-16" >}}
+
+**New features:**
+
+- Admins on standard plan or higher can now download the web and mobile wallet codebases via the App Extension.
+
+---
+
+{{< link-heading "h4" "2023-01-11" >}}
+
+**Bug fixes:**
+
+- Fixed issue where balance wasn't shown on currencies with a divisibility of 0.
+
+**Changes:**
+
+- When adding a new currency, admins can now select which standalone account to also add the currency to.
+- Updated the divisibility of the Albanian LEK from 0 to 2.
+
+---
+
+{{< link-heading "h4" "2023-01-05" >}}
+
+**Changes:**
+
+- Removed Wyre custody manager option from onboarding.
+- If a user not from an admin section group tries to log in to the Dashboard, they are blocked and shown a toastr error message stating that they do not have permission to log in.
+- Made slight adjustments to onboarding panel styling during custody selection. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2022-12-22" >}}
+
+**Changes:**
+
+- App Domain has moved into its own section inside the App Extension. White label domains will automatically be used for password set, reset and email verify pages for white label apps when a domain is activated.
+- Admins can now easily see which user-section groups are using their white label domain address for user action page URLs.
+- Admins can now see how many free emails and SMSs they have left in their quota on the Notifications Listing page and on the Notification Settings page. (Hotfix)
+- Admins can now add integrations to the Conversion Extension.
+
+---
+
+{{< link-heading "h4" "2022-12-21" >}}
+
+**Bug fixes:**
+
+- Fixed issue where the add document modal on the user details page opened strangely if the admin's window was not opened at a large size.
+
+**Changes:**
+
+- Admins now need to add Twilio & SendGrid details to Production Projects, and will be prompted to do so on the Get Started page of Production Projects.
+- Improved the Add Twilio & SendGrid details page in the Notifications Extension.
+- Added warnings during the go-to-prod flow that admins will need to get Twilio & SendGrid.
+
+---
+
 {{< link-heading "h4" "2022-11-29" >}}
 
 **Changes:**
