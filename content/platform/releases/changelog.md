@@ -7,6 +7,14 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h5" "2023-02-20" >}}
+
+1. Fixed a bug in the currencies attribute on the admin accounts list endpoint.
+2. Fixed a bug in account synchronization that resulted in archived accounts getting set as primary.
+3. Fixed a bug in the population of the `resource` and `resource_id` fields on the request resource when a request resulted in a 400 error.
+4. Updated the `first_name` and `last_name` fields on the user resource so that they allow `null` and default to `null`.
 
 ---
 

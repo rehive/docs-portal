@@ -48,8 +48,8 @@ When building a client-side interface this should rarely be an issue as the thro
 
 If you are working in Python or Javascript you should use one of the Rehive supported SDKs as these will make your life easier:
 
-- [Javascript SDK](https://github.com/rehive/rehive-python)
-- [Python SDK](https://github.com/rehive/rehive-javascript)
+- [Javascript SDK](https://github.com/rehive/rehive-javascript)
+- [Python SDK](https://github.com/rehive/rehive-python)
 
 
 #### Handle multi-factor authentication and authorization
