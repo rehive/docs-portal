@@ -26,6 +26,7 @@ As of January 2022, Rehive no longer provides managed iOS and Android App Store 
 6. Create a `.env.production` file with your app details. You can use .env.example in the root project directory as a template. We actually recommend creating two files, `.env.staging` and `.env.production`. For the staging app you can create separate apps for testing which will be useful down the line. Note that this means you'll need to repeat steps 2 to 4 above for your staging app. You can use the example file below as a template. The `appUpdatesUrl` should include your EAS project ID in the format shown in our example below.
 7. Create an eas.json file in the root directory. This is required for EAS builds. You can use the eas.json.example file in the root project directory as a template. Note that many of the values are duplicated accross your `.env` files and the `eas.json` file. Unfortunately due to the way EAS was designed there is currently no way around this.  
 8. Replace the `/asset/icons/icon.png` and the `/assets/icons/splash.png` files with your own app icon and splash screen.
+9. Add your Rehive company details to the `/src/config/client.js`.
 
 
 {{< link-heading "h2" "Android push notification setup (optional)" >}}
