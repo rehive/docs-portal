@@ -10,7 +10,7 @@ Rehive has several recommendations for building extensions that we encourage dev
 These recommendations should be followed alongside the [platform recommendations](/platform/get-started/recommendations/)
 
 
-#### Build with multi-company in mind
+#### Build with multi-tenant in mind
 
 Extensions should built to support a multi company use case, rather than only support a single company on Rehive. This will allow your extension to be used on test companies (should it be a private extension) or at a later stage be used as a public company.
 
