@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-03-07" >}}
+
+1. Fixed a bug in legal term handling on registration that resulted in 500 errors if an invalid legal term was used.
+2. Fixed a bug in webhook handling that sometimes resulted in `user.email.verify` and `mfa.sms.verify` events not getting sent. 
+
+---
+
 {{< link-heading "h5" "2023-02-23" >}}
 
 1. Removed the old notification handling from the platform. Going forward all notifications besides initial email/mobile verify (welcome) emails must be sent via the notification extension.
