@@ -8,19 +8,19 @@ weight: 1
 Summary of additions and changes to the web application.
 
 ---
-{{< link-heading "h4" "2023-03-03 - 2.23.2" >}}
+{{< link-heading "h4" "2023-03-14 - 2.23.2" >}}
 
 **Features**
 - In the Tiers section of the user's Profile, tier requirements are now clickable and link to the required field.
 
 ---
-{{< link-heading "h4" "2023-03-03 - 2.23.1" >}}
+{{< link-heading "h4" "2023-03-07 - 2.23.1" >}}
 
 **Fixes**
 - Fixed issue where username was not correctly sending in the payload during registration.
 
 ---
-{{< link-heading "h4" "2023-03-03 - 2.23.0" >}}
+{{< link-heading "h4" "2023-03-06 - 2.23.0" >}}
 
 **Features**
 - Added support for transaction messages.
