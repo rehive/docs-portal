@@ -8,6 +8,50 @@ weight: 1
 Summary of additions and changes to the web application.
 
 ---
+{{< link-heading "h4" "2023-03-03 - 2.23.2" >}}
+
+**Features**
+- In the Tiers section of the user's Profile, tier requirements are now clickable and link to the required field.
+
+---
+{{< link-heading "h4" "2023-03-03 - 2.23.1" >}}
+
+**Fixes**
+- Fixed issue where username was not correctly sending in the payload during registration.
+
+---
+{{< link-heading "h4" "2023-03-03 - 2.23.0" >}}
+
+**Features**
+- Added support for transaction messages.
+- Made documents status more clear.
+- Added arrow next to project name in the session header.
+
+**Fixes**
+- Fixed issue where deposit button would not show when users had a personal deposit action account for a currency if there was no company bank account with that currency as well.
+- Changed default payment due date on invoices to 14 days.
+- Updated company service to service slug and use of display_code in more places.
+
+---
+{{< link-heading "h4" "2023-03-03 - 2.22.1" >}}
+
+**Fixes**
+- Minor UI update: Swapped the News and FAQ Cards on the home page and rename the News card to Posts.
+
+---
+{{< link-heading "h4" "2023-02-28 - 2.22.0" >}}
+
+**Fixes**
+- Fixes payment requests multiplying issue.
+- Fixes session redirect bug where users were not redirected to the login page upon session expire.
+
+---
+{{< link-heading "h4" "2023-02-16 - 2.21.0" >}}
+
+**Features**
+- Added ier support for deposit action - admins can set what tier is required to view deposit details.
+
+---
 {{< link-heading "h4" "2023-01-26 - 2.20.18" >}}
 
 **Features**
