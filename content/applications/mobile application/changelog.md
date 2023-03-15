@@ -9,7 +9,14 @@ Summary of additions and changes to the mobile application.
 
 ---
 
-{{< link-heading "h4" "2022-02-07 - 5.0.4" >}}
+{{< link-heading "h4" "2023-03-15 - 5.0.5" >}}
+
+- Fixed issue with username submission on register.
+- Updated to pull app branding details from Rehive App Extension using app bundle identifier.
+
+---
+
+{{< link-heading "h4" "2023-02-07 - 5.0.4" >}}
 
 - Fixed issue with plaid pops ups in company onboarding onboarding
 - Updated default ethereum logo and icon
