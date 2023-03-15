@@ -15,7 +15,6 @@ It is useful to know the difference between two types of custody approaches. An 
 
 A segregated approach involves end-users depositing funds to unique bank accounts associated to them on the backend, using a user’s unique Rehive account reference to identify the account to assign the deposit to.
 
-The first place to start is by familiarizing yourself with the [Get Started section](/building/get-started/introduction/). This gives a basic overview of how to start building an extension as well as the ground-level endpoints you’ll need to use. You should also familiarize yourself with [Rehive’s Standard Configurations](https://docs.google.com/document/d/1LdWBY2Oim2EPWv2-ZNKIPXDbnULbSf-DiUfuCw7_zQg/edit#) to ensure that the correct subtypes are used for specific transactions.
 <img src="/images/omnibus-vs-segregated.png" alt="omnibus-vs-segregated" width="80%">  
 
 
