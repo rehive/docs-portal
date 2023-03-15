@@ -1,4 +1,4 @@
 ---
-title: Deposits & Withdrawals
+title: Deposits
 weight: 3
 ---

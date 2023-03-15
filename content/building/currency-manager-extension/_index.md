@@ -1,4 +1,4 @@
 ---
 title: Currency Manager
-weight: 5
+weight: 6
 ---
