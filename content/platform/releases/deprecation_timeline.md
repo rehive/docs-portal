@@ -9,7 +9,7 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ### Deprecated
 
-{{< link-heading "h5" "2023-01-24" >}}
+{{< link-heading "h5" "2023-05-23" >}}
 
 *Added on 2021-06-09*
 
@@ -18,6 +18,19 @@ This timeline indicates when certain functionality will be permanently removed f
 	- Remove auth endpoints: `/3/auth/mfa/`, `/3/auth/mfa/token/`, `/3/auth/mfa/sms/`, `/3/auth/mfa/sms/send/`.
 	- Remove admin endpoints:  `/3/admin/users/<id>/mfa/`, `/3/admin/users/<id>/mfa/sms/`, `/3/admin/users/<id>/token/`.
 	- Remove `mfa` from the post login (authentication) responses.
+        - The new MFA documentation can be found [here](https://docs.rehive.com/platform/usage/multi-factor/)
+
+---
+
+{{< link-heading "h5" "2023-04-04" >}}
+
+*Added on 2021-06-09 - extracted from the changes above.*
+
+1. Remove most of the fields from the `user` object on the `/3/auth/login/` and `/3/admin/auth/login/` responses.
+    - Only the user's `id` field within the `user` object will be preserved in the response.
+    - This is to ensure that personal user details cannot be accessed prior to a user completing MFA verification (when enabled).
+    - Going forward, if additional user data is needed, an additional API call will have to be perfomed on `/3/user/`.
+
 
 ### Removed
 
