@@ -5,9 +5,11 @@ description: Multi-factor authentication and authorization.
 weight: 10
 ---
 
-The platform supports multi-factor for ensuring users are authenticated and/or authorized to access their account and associated resources.
+The platform supports multi-factor authentication and authorization for ensuring users are authenticated and/or authorized to access their account and associated resources.
 
-Multi factor can be configured to trigger in a wide variety of situations, which means any integration with Rehive should be designed to expect challenges at any point and deal with them when they occur.
+<aside class="warning">
+<b>Important:</b> Multi factor authentication can be configured to trigger in a wide variety of situations, which means any integration with Rehive should be designed to expect challenges at any point and deal with them when they occur.
+</aside>
 
 ### Resources
 
@@ -15,26 +17,31 @@ There are three resources you should be aware of when interacting with multi-fac
 
 #### Authenticator rules
 
-Authenticator rules are used to configure rules that should trigger when certain conditions are matched on a user accessing the platform.
+Authenticator rules are used by administrators to configure when MFA challenged should be issued to users. All rules can be configured on the global "company" level or alterntaively on specific user groups. A group-specific rule will always take precedence over a non-group rule when evaluating challenges.
 
-There are two types of authenticator rules:
+##### Types
 
-- **Authentication**: These rules are evaluated when authenticating a user (such as on login). Every company automatically includes a single `authentication` type rule. This rule is used to perform the most basic multi-factor authentication, eg. when a user login occurs, a challenge is issues and must be completed to access the API.
-- **Authorization**: These rules are evaluated when checking a user's permission to access a resource. No `authorization` rules are configured by default.
+There are three types of authenticator rules:
 
-In addition to the authenticator `type`s above, multi-factor rules can be configured to have different durabilities:
+- **Authentication**: These rules are evaluated when authenticating a user (such as on login).  When a user login occurs, a challenge will be issued and the user will be required to verify their access to proceed. By default, all companies start with a single `authentication` type rule.
+- **Authorization**: These rules are evaluated when checking a user's permission to access a resource. If a user accesses a resource that requires MFA then they will be challenged to verify their access. No `authorization` rules are configured by default.
+- **Setup**: These rules are evaluated when checking what authenticators a user has enabled. If a user does not have the correct authenticators configured they will be challenged to setup an authenticator to proceed. No `setup` rules are configured by default.
+
+When configuring **authorization** rules, a list of `permissions` must be supplied. If a resource is accessed via the API and it has matching permission requirements to an authenticator rule then it will immediately trigger a challenge that the user will be required to complete before proceeding.
+
+##### Durability
+
+In addition to the authenticator types above, multi-factor rules can be configured to have different durabilities:
 
 - **Permanent**: A challenge issued by a `permanent` rule must only be completed once per login/session.
 - **Durable**: A challenge issued by a `durable` rule will last a set amount of time (configured in the `duration` field on a authenticator rule).
 - **Ephemeral**: A challenge issued by an `ephemeral` rule must be completed each time a resources is accessed that matches the configured permissions. The completed challenge must be submitted (and subsequently consumed) in the HTTP headers on the next request to that resource.
 
-All rules can be configured to only trigger once the user's session reaches a certain age.
-
-When configuring `authorization` rules, a list of `permissions` is supplied. If `authorization` type multi-factor rules are configured and a user accesses a resource that requires one or more permissions configured on those rules a error response will be returned challenging them to complete a multi-factor challenge before proceeding.
+Only **authorization** type rules can be configured to be **ephemeral**. **Setup** rules must always be configured as **permanent**.
 
 #### Authenticators
 
-The authenticator resource is used by users to add and manage the authenticators they can use to complete/verify multi-factor challenges.
+Authenticators are the resource used to verify multi-factor challenges.
 
 There are currently three MFA authenticar types supported:
 
@@ -46,9 +53,9 @@ After creating an authenticator, it must be verified via the **MFA verify** endp
 
 #### Authenticator challenges
 
-Authentication challenges are issued when an authenticator rule is triggered. Multiple challenges can be issued on a single session and all the challenges will have to be completed if the user wants to continue to access the platform.
+Authentication challenges are issued when an authenticator rule is triggered. Multiple challenges can be issued on a single session and all the challenges will have to be completed if the user wants to continue to access the platform. Challenges issued by **authorization** and **authentication** rules will block access to all authenticated endpoints. However, challenges issued by **setup** rules will still allow a user to access the endpoints for creating, listing and viewing authenticators.
 
-Each challenge is associated with a single session and a single rule. A challenge will also include a list of `authenticator_types` that can be used to complete/verify the challenge. This list is generated by getting the list of authenticators a user has configured and removing any that the specific authenticator rule does not support.
+Each challenge is associated with a single session and a single rule. A challenge will also include a list of `authenticator_types` that can be used to verify the challenge. This list is generated by getting the list of authenticators a user has configured and removing any that the specific authenticator rule does not support.
 
 ### Usage
 
@@ -64,7 +71,7 @@ When logging in and a challenge is issued, the login response will include a lis
   "data": {
     "token": "{token}",
     "user": {
-
+        "id": "00000000-0000-0000-0000-000000000000"
     },
     "challenges": [
       {
@@ -81,7 +88,7 @@ When logging in and a challenge is issued, the login response will include a lis
 }
 ```
 
-When accessing an endpoint and a multi-factor challenge is required the response will look like:
+Similarly, when accessing any other user-authenticated endpoint and a multi-factor challenge is issued the response will look like:
 
 ```json
 {
@@ -103,7 +110,7 @@ When accessing an endpoint and a multi-factor challenge is required the response
 }
 ```
 
-If a request returns a list of MFA challenges you should get the user to complete the challenges. This can be done by `POST`ing a `token` and the `challenge` ID to the MFA verify endpoint:
+If a request returns a list of MFA challenges you should get the user to complete the challenges. This can be done by `POST`ing a `token` and the `challenge` ID to the MFA verify endpoint.
 
 ```shell
 curl https://api.rehive.com/3/auth/mfa/verify/ \
@@ -115,5 +122,19 @@ curl https://api.rehive.com/3/auth/mfa/verify/ \
 The `token` must originate from one of the `authenticator_types` listed in the challenge response. And the `challenge` should be the ID returned on the challenge.
 
 <aside class="notice">
-When dealing with <code>ephemeral</code> challenges you will need to store the challenge ID after it is verified and then on the next request (to access the resource that triggered the challenge) include it in an HTTP header <code>Verified-Challenge: {challenge_id}</code>. This will allow the user to access the resource once. All subsequent requests to the same resource will need to be multi-factored separately.
+When dealing with <code>ephemeral</code> challenges you will need to store the challenge ID after it is verified and then on the next request (to the resource that triggered the challenge) include it in an HTTP header <code>Verified-Challenge: {challenge_id}</code>. This will allow the user to access the resource once. All subsequent requests to the same resource will need to be multi-factored separately.
 </aside>
+
+Some authenticator types (for instance, the **sms** type) support token delivery. On login, when possible, the token will be delivered automatically. However, if a user needs to request re-delivery of a token, they can do so via the the **MFA deliver** endpoint:
+
+```shell
+curl https://api.rehive.com/3/auth/mfa/deliver/ \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"challenge": "00000000-0000-0000-0000-000000000000"}'
+```
+
+<aside class="notice">
+When requesting delivery of a token in order to verify an authenticator, ensure that the <code>challenge</code> in the above code-sample is replaced with the <code>authenticator</code> and its corresponding <code>id</code>.
+</aside>
+
