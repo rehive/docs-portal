@@ -115,6 +115,7 @@ If a request returns a list of MFA challenges you should get the user to complet
 ```shell
 curl https://api.rehive.com/3/auth/mfa/verify/ \
   -X POST \
+  -H "Authorization: Token {token}" \
   -H "Content-Type: application/json" \
   -d '{"challenge": "00000000-0000-0000-0000-000000000000", "token": "XXXXXX"}'
 ```
@@ -130,6 +131,7 @@ Some authenticator types (for instance, the **sms** type) support token delivery
 ```shell
 curl https://api.rehive.com/3/auth/mfa/deliver/ \
   -X POST \
+  -H "Authorization: Token {token}" \
   -H "Content-Type: application/json" \
   -d '{"challenge": "00000000-0000-0000-0000-000000000000"}'
 ```
