@@ -8,6 +8,26 @@ weight: 1
 Summary of additions and changes to the web application.
 
 ---
+{{< link-heading "h4" "2023-03-20 - 2.23.5" >}}
+
+**Features**
+- Remove wyre code to clean up codebase
+- Fix incorrect tier check for onboarding redirect
+
+---
+{{< link-heading "h4" "2023-03-17 - 2.23.4" >}}
+
+**Features**
+- Hotfix: Fix redirect urls on email verify and password set forms
+
+---
+{{< link-heading "h4" "2023-03-16 - 2.23.3" >}}
+
+**Features**
+- Add e2e tests
+- Update to Node 16
+
+---
 {{< link-heading "h4" "2023-03-14 - 2.23.2" >}}
 
 **Features**
