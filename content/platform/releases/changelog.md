@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-03-20" >}}
+
+1. Added a new authenticator-rule type of `setup`. This rule can be used to force users to setup MFA on their account.
+    - A list of types can be configured to indicate which authenticators are allowed in order for a user to be considered compliant.
+    - Like other authenticator rules, the group can be customized so that these rules only apply to users in a specific group.
+2. Updated MFA authenticator list and view endpoints to mask some attribute values. The POST response will not be affected by this change.
+3. Fixed a bug in media type handling on request logs that previously resulted in an internal error when trying to save request body data.
+4. Added new `section` and `archived` filters to the groups list endpoints.
+
+---
+
 {{< link-heading "h5" "2023-03-07" >}}
 
 1. Fixed a bug in legal term handling on registration that resulted in 500 errors if an invalid legal term was used.
