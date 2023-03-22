@@ -9,6 +9,14 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2023-03-15 - 5.1.0" >}}
+
+- Added support for user accounts in deposit flow in addition to company bank accounts.
+- Added support for transaction messages.
+- Updated app to use service slugs and to show currency display codes.
+
+---
+
 {{< link-heading "h4" "2023-03-15 - 5.0.5" >}}
 
 - Fixed issue with username submission on register.
