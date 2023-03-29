@@ -13,7 +13,7 @@ Custom extensions can be created and used by any client without a review process
 
 Private custom extensions must meet the following requirements:
 
-- Expose a public `/activate/` and `/deactivate/` endpoint.
+- Expose public `/activate/` and `/deactivate/` endpoints that support the `POST` HTTP method.
 - Not break or contravene any of the rules laid out in the Rehive Terms of Service and software licenses.
 - Provide a list of permissions the extension requires.
 
@@ -39,9 +39,9 @@ The following endpoints are required in every Rehive compliant extension.
 
 #### /activate/
 
-This endpoint will be used by the platform to send an activate message to your extension.
+This endpoint will be used by the platform to send an activate message to your extension. The endpoint must accept the `POST` HTTP method and return either a `200` or `201` HTTP status code. Any other status codes will cause activation to fail.
 
-The activate message will include the following data:
+The platform will send the following data, formatted as JSON, in the HTTP body: 
 
 ```json
 {
@@ -49,7 +49,7 @@ The activate message will include the following data:
 }
 ```
 
-When an activate message is received the extension should perform any activation steps it needs in order to operate properly. The `token` can be used to perform these steps if it needs to gather any information from the platform.
+When the activate endpoint is called by the platform the extension should perform any activation steps it needs in order to operate properly. The `token` can be used to perform these steps if it needs to gather any information from the platform.
 
 At the minimum, `/activate/` should validate that the token is a real by sending the token in a `GET` request to [`https://api.rehive.com/3/auth/`](https://docs.platform.rehive.com/tag/Auth). If this returns an authentication error the extension should ignore the activation as it is not a valid user. Otherwise the extension should store an entry in its data store with the `company`, the `token` and a flag indicating the service has been activated.
 
@@ -59,9 +59,9 @@ Should an `/activate/` throw a non 200 response, the Rehive platform will treat 
 
 #### /deactivate/
 
-This endpoint will be used by the platform to send a deactivate message to your extension.
+This endpoint will be used by the platform to send a deactivate message to your extension. The endpoint must accept the `POST` HTTP method and return either a `200` or `201` HTTP status code. Any other status codes will cause deactivation to fail.
 
-The deactivate message will include the following data:
+The platform will send the following data, formatted as JSON, in the HTTP body: 
 
 ```json
 {
@@ -70,7 +70,9 @@ The deactivate message will include the following data:
 }
 ```
 
-When a deactivate message is received the extension should perform any deactivation steps it needs in order to disable the extension. Normally this deactivation is a "soft disable" so that the extension can be reactivated at a later date without any issues. The `purge` field is used to indicate the level of deletion expected. If `purge` is `true` the extension should completely remove data related to the company instead of simply disabling it. A `purge` flag will only be set to `true` when a company is getting removed and purged from Rehive entirely.
+When the deactivate endpoint is called by the platform the extension should perform any deactivation steps it needs in order to disable the extension. 
+
+Normally this deactivation is a "soft disable" so that the extension can be reactivated at a later stage without any issues. The optional `purge` field is used to indicate the level of deletion expected. If `purge` is `true` the extension should completely remove data related to the company instead of simply disabling it. A `purge` flag will only be set to `true` when a company is getting removed and purged from Rehive entirely.
 
 ## Optional endpoints
 
@@ -84,9 +86,11 @@ Please review the [platform documentation](https://docs.rehive.com/platform/usag
 
 #### /rotate/
 
-This endpoint will be used by the platform to send a "rotate token" messages to the extension. Rotate messages are used to refresh a token of an extension that supports rotating (expiring) tokens. This is a security mechanism to allow tokens to be set with shorter 8 day durations and then get refreshed every 7 days.
+This endpoint will be used by the platform to send a "rotation" messages to the extension (indicating that the service token is getting rotated). The endpoint must accept the `POST` HTTP method and return either a `200` or `201` HTTP status code. Any other status codes will cause rotation to fail.
 
-The rotate message will include the following data:
+Rotation messages are used to refresh the token belonging to an activated extension. Extensions configured to rotate tokens will have their tokens refreshed every eight days. 
+
+The platform will send the following data, formatted as JSON, in the HTTP body: 
 
 ```json
 {
@@ -94,4 +98,4 @@ The rotate message will include the following data:
 }
 ```
 
-The extension should check this token is a legitmate token on the platform via `https://api.rehive.com/3/auth/` and then update its token record (with the new token) for the company the token belongs to.
+The extension should check this token is a legitmate token on the platform via `https://api.rehive.com/3/auth/` and then update its token record (with the new token) for the company the token is related to.
