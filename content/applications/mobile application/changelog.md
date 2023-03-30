@@ -7,13 +7,13 @@ weight: 1
 
 Summary of additions and changes to the mobile application.
 
-{{< link-heading "h4" "2023-03-22 - 6.0.0" >}}
+{{< link-heading "h4" "2023-03-30 - 6.0.0" >}}
 
 - Upgraded to Expo SDK 46 which includes React Native 0.69.5.
 
 ---
 
-{{< link-heading "h4" "2023-03-15 - 5.1.0" >}}
+{{< link-heading "h4" "2023-03-22 - 5.1.0" >}}
 
 - Added support for user accounts in deposit flow in addition to company bank accounts.
 - Added support for transaction messages.
