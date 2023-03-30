@@ -7,6 +7,10 @@ weight: 1
 
 Summary of additions and changes to the mobile application.
 
+{{< link-heading "h4" "2023-03-22 - 6.0.0" >}}
+
+- Upgraded to Expo SDK 46 which includes React Native 0.69.5.
+
 ---
 
 {{< link-heading "h4" "2023-03-15 - 5.1.0" >}}
@@ -26,39 +30,39 @@ Summary of additions and changes to the mobile application.
 
 {{< link-heading "h4" "2023-02-07 - 5.0.4" >}}
 
-- Fixed issue with plaid pops ups in company onboarding onboarding
-- Updated default ethereum logo and icon
-- Updated default amount input currency to actual amount rather than display amount
-- Fix silent errors in splash screen and contact email link
+- Fixed issue with plaid pops ups in company onboarding onboarding.
+- Updated default ethereum logo and icon.
+- Updated default amount input currency to actual amount rather than display amount.
+- Fix silent errors in splash screen and contact email link.
 
 ---
 
 {{< link-heading "h4" "2023-01-25 - 5.0.3" >}}
 
-- Updated to React Native 0.68 and related library updates
-- Updated bundling process resulting in smaller app size
+- Updated to React Native 0.68 and related library updates.
+- Updated bundling process resulting in smaller app size.
 
 ---
 
 {{< link-heading "h4" "2022-10-21 - 4.0.2" >}}
 
-- Fixed undefined confirmations display issue for off-chain Wyre transactions
-- Fixed Wyre currency retrieval from paginated endpoint
-- Add support for Platform authentication updates
+- Fixed undefined confirmations display issue for off-chain Wyre transactions.
+- Fixed Wyre currency retrieval from paginated endpoint.
+- Add support for Platform authentication updates.
 
 ---
 
 {{< link-heading "h4" "2022-10-19 - 4.0.1" >}}
 
-- Fixed withdraw add account and send flow recipient issues
-- Fixed inaccurate pop up text on receive for non-Stellar currencies
-- Fixed on-chain transaction issue for non-Wyre companies
+- Fixed withdraw add account and send flow recipient issues.
+- Fixed inaccurate pop up text on receive for non-Stellar currencies.
+- Fixed on-chain transaction issue for non-Wyre companies.
 
 ---
 
 {{< link-heading "h4" "2022-10-06 - 4.0.0" >}}
 
-- Upgrade Expo SDK from version 44 to 45
+- Upgrade Expo SDK from version 44 to 45.
 
 ---
 
