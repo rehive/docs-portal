@@ -5,11 +5,11 @@ description: Building extensions.
 weight: 1
 ---
 
-In addition to the official Rehive extensions it is possible to build custom extensions. Before trying to implement an extension or any backend integration on Rehive you should spend some time reading through this page and the related [extension requirements](/building/get-started/requirements/) page.
+In addition to the official Rehive Extensions, it is possible to build custom extensions. Before trying to implement an extension or any backend integration on Rehive you should spend some time reading through this page and the related [Extension requirements](/building/get-started/requirements/) page.
 
 ### Support and enablement
 
-The [Account Manager expectations](https://rehive.intercom.help/en/collections/2091533-unpacking-rehive-services) article outlines what support is available from Rehive when building a custom extension. Whether or not you are on a subscription plan that includes an account manager:
+The [Account Manager expectations](https://rehive.intercom.help/en/collections/2091533-unpacking-rehive-services) articles outline which support is available from Rehive when building a custom extension. Whether or not you are on a subscription plan that includes an account manager:
 
 * You must verify that your chosen 3rd party provider has support for the common endpoints for the integration requirements.
 * You must consider how data is stored and linked to users in your extension.

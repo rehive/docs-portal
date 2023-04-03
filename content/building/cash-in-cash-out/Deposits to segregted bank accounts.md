@@ -4,7 +4,7 @@ title: Deposits to segregated bank accounts
 description: Basic overview of an example flow to facilitate end-user deposits via bank transfer.
 weight: 3
 ---
-This use case involves end-users depositing funds to a unique bank accounts associated to them on the backend, using a user’s unique Rehive account reference to identify the account to assign the deposit to. 
+This use case involves end-users depositing funds to unique bank accounts associated to them on the backend, using a user’s unique Rehive account reference to identify the account to assign the deposit to. 
 
 This deposit method will have the same end-user experience as the existing “Deposit to omnibus bank account” flow. Feel free to[ test this flow](https://rehive.intercom.help/en/articles/6483505-how-to-create-a-manual-deposit-as-an-admin) on your test project in the Rehive Wallet apps.
 
