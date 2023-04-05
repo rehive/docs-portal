@@ -1,4 +1,4 @@
 ---
 title: Expressions Guide
-weight: 10
+weight: 3
 ---
