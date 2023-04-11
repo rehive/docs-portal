@@ -30,7 +30,9 @@ This timeline indicates when certain functionality will be permanently removed f
     - Only the user's `id` field within the `user` object will be preserved in the response.
     - This is to ensure that personal user details cannot be accessed prior to a user completing MFA verification (when enabled).
     - Going forward, if additional user data is needed, an additional API call will have to be perfomed on `/3/user/`.
-
+2. Remove the `config` field from the company resource.
+    - This field has been renamed to be the `metadata` field, which contains the same data as the `config` field.
+    - Simply switch to using the `metadata` field in your services and applications.
 
 ### Removed
 
