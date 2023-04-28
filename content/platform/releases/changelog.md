@@ -14,8 +14,8 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 1. Final removal of deprecated items listed under the date 2023-04-25.
 2. Fixed a 500 error on admin user listings when filtering by `account`, `account__name`, or `account__label`.
-3. Fixed a bug in account deactivation that resulted in no webhook even firing off (and no notification with a deactivation link).
-4. Fixed a bug in account primary field handling that resulted in multiple primary accounts.
+3. Fixed a bug in account deactivation that resulted in no webhook event firing off (and no notification with a deactivation link).
+4. Fixed a bug in account primary field handling that resulted in multiple primary accounts per user in some very specific scenarios.
 
 ---
 
