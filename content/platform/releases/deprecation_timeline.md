@@ -20,11 +20,11 @@ This timeline indicates when certain functionality will be permanently removed f
 	- Remove `mfa` from the post login (authentication) responses.
         - The new MFA documentation can be found [here](https://docs.rehive.com/platform/usage/multi-factor/)
 
----
+### Removed
 
 {{< link-heading "h5" "2023-04-25" >}}
 
-*Added on 2021-06-09 - extracted from the changes above.*
+*Added on 2021-06-09*
 
 1. Remove most of the fields from the `user` object on the `/3/auth/login/` and `/3/admin/auth/login/` responses.
     - Only the user's `id` field within the `user` object will be preserved in the response.
@@ -34,7 +34,7 @@ This timeline indicates when certain functionality will be permanently removed f
     - This field has been renamed to be the `metadata` field, which contains the same data as the `config` field.
     - Simply switch to using the `metadata` field in your services and applications.
 
-### Removed
+---
 
 {{< link-heading "h5" "2021-07-13" >}}
 
