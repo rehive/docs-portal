@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-05-04" >}}
+
+1. Updated service activatation and deactivation errors to include additional error details. Three possible error response can be returned now:
+    - Connection error: `An error occurred in the service: Unable to connect to {url}.`
+    - Explicit service error: `An error occurred in the service: {message}`
+    - Generic service error: `An error occurred in the service: Received a {code} response from {url}.`
+   
+---
+
 
 {{< link-heading "h5" "2023-04-28" >}}
 
