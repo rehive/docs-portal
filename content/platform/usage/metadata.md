@@ -25,10 +25,10 @@ In order to allow simultaneous and partial updates to `metadata` fields, the pla
 
 As a result, the metadata field can be used in the following ways:
 - The metadata field can be partially updated without unsetting existing data.
-- The metadata can be edited simultenauosly without the risk of losing data between multiple edits.
+- The metadata can be edited simultaneously without the risk of losing data between multiple edits.
 - Keys can be explicitly unset by setting their value to `null`.
 
-For exmaple, if we have a resource with the following metadata:
+For example, if we have a resource with the following metadata:
 
 ```json
 {
@@ -55,5 +55,4 @@ The end result of the update will be:
 }
 ```
 
-As you can see, `b` was removed (becuase it was set to `null`), `c` was added, and `a` was kept (even though it was not explcitly included in the update data).
-
+As you can see, `b` was removed (because it was set to `null`), `c` was added, and `a` was kept (even though it was not explicitly included in the update data).
