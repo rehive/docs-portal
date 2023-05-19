@@ -9,7 +9,7 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ### Deprecated
 
-{{< link-heading "h5" "2023-05-23" >}}
+{{< link-heading "h5" "2023-06-20" >}}
 
 *Added on 2021-06-09*
 
