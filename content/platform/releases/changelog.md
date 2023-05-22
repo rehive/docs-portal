@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-05-018" >}}
+
+1. Fixed a bug in the webhook initiation on user deactivation that resulted in no webhook event getting triggered.
+2. Fixed a bug in active user counts that resulted in incorrect system metrics.
+3. Updated metrics to include more types of metrics and support `accumulate` and `set` metrics.
+
+---
+
 {{< link-heading "h5" "2023-05-04" >}}
 
 1. Updated service activatation and deactivation errors to include additional error details. Three possible error response can be returned now:
