@@ -11,9 +11,9 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 {{< link-heading "h5" "2023-05-25" >}}
 
-1. Updated the platform to be seperated into two separate API schemas:
+1. Updated the platform to be seperated into two API schemas:
     - The Platform API - Core user API: https://api.rehive.com/swagger
-    - The PLatform Admin API - Management API: https://api.rehive.com/admin/swagger
+    - The Platform Admin API - Management API: https://api.rehive.com/admin/swagger
 
 ---
 
