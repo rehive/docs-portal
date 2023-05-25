@@ -5,7 +5,7 @@ description: A quick guide to the platform.
 weight: 2
 ---
 
-There are a couple ways to get started with the Rehive platform API:
+There are a couple ways to get started with the Rehive Platform APIs:
 
 1. You can choose to use one of the Rehive supported SDKs or
 2. Integrate the API manually in your choice of language.
@@ -13,12 +13,12 @@ There are a couple ways to get started with the Rehive platform API:
 To use one of the SDKs check for you language in the "references list" in the sidebar. If you instead want to use a language that does not have a Rehive supported SDK, a custom implementation should be trivial as the platform uses standard HTTP which is widely supported.
 
 <aside class="warning">
-<b>Important:</b> This is a quick guide only. Please ensure that you understand the building guide and recommendations before designing your own solutions on the Rehive platform.
+<b>Important:</b> This is a quick guide only! Please ensure that you first understand the <b>building guide</b> and <b>recommendations</b> before designing your own solutions on the Rehive platform.
 </aside>
 
-### Using the API
+### Using the APIs
 
-The easiest way to get started with the API is to login to the dashboard and create a new API token for your user. You can create a new API token in the `Developers` -> `API tokens` section in the dashboard. Once an API token is created, it will be displayed only once. So make sure you copy it before closing the modal. For security reasons API tokens are hashed and as such the platform cannot retrieve (or display) the token value except immediately after creation.
+The easiest way to get started with the Platform APIs is to login to the dashboard and create a new API token for your user. You can create a new API token in the `Developers` -> `API tokens` section in the dashboard. Once an API token is created, it will be displayed only once. So make sure you copy it before closing the modal. For security reasons API tokens are hashed and as such the platform cannot retrieve (or display) the token value except immediately after creation.
 
 <aside class="warning">
     If you have not created a company yet, you should do so first via the <a href="https://dashboard.rehive.com" target="_blank">dashboard</a>.
@@ -28,7 +28,7 @@ The easiest way to get started with the API is to login to the dashboard and cre
     The API token is a 64 character string. It should not be confused with the <code>token_key</code>, which consists of the first 8 characters of the API token and is used as an identifier.
 </aside>
 
-You can use the new API token to authenticate your requests to the API. For example, if you want to get user information (for the user who owns the API token) you can call the API like this (using cURL):
+You can use the new API token to authenticate your requests to the Rehive Platform. For example, if you want to get user information (for the user who owns the API token) you can call the Rehive Platform API like this (using cURL):
 
 ```shell
 curl https://api.rehive.com/3/user/ \
@@ -116,5 +116,3 @@ curl https://api.rehive.com/3/user/ \
   -H "Content-Type: application/json" \
   -d '{"first_name": "Joseph"}'
 ```
-
-To learn more about what you can do in the platform, take a look at the [API Reference](https://docs.platform.rehive.com), which contains the full API specification.

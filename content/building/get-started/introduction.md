@@ -60,7 +60,7 @@ By definition, extensions in Rehive, are backend integrations that meet the Rehi
 - A user in the `service` group will be automatically created on activation and its permissions will be managed by the platform.
 - The extension will be accesible via the Platform API, which allows for easy extension discovery in your applications.
 - A `management_url` can be configured that allows admin users to "go to" the extension from within the dashboard.
-- Future "built-in" functionality will become available immediately to your extensions once added: key rotation, service managed webhooks, service managed extension permissions etc.
+- Future "built-in" functionality will become available immediately to your extensions once added: token rotation, service managed webhooks, service managed extension permissions etc.
 
 If you have implemented a Rehive compliant extension then you can add it to Rehive via the [dashboard](https://dashboard.rehive.com). The dashboard provides an interface for adding custom extenions under Extensions -> Add custom extension.
 

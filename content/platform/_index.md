@@ -5,8 +5,10 @@ description: The Platform is the core component of the Rehive ecosystem. It acts
 weight: 1
 linkTo: /platform/get-started/introduction
 references:
-  - title: API Reference
-    url: https://docs.platform.rehive.com
+  - title: Platform API Reference
+    url: REPLACE
+  - title: Platform Admin API Reference
+    url: REPLACE
   - title: Javascript SDK
     url: https://github.com/rehive/rehive-javascript
   - title: Python SDK
