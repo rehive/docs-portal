@@ -9,7 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h5" "2023-05-018" >}}
+{{< link-heading "h5" "2023-05-25" >}}
+
+1. Updated the platform to be seperated into two separate API schemas:
+    - The Platform API - Core user API: https://api.rehive.com/swagger
+    - The PLatform Admin API - Management API: https://api.rehive.com/admin/swagger
+
+---
+
+{{< link-heading "h5" "2023-05-18" >}}
 
 1. Fixed a bug in the webhook initiation on user deactivation that resulted in no webhook event getting triggered.
 2. Fixed a bug in active user counts that resulted in incorrect system metrics.
