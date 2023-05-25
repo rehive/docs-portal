@@ -28,9 +28,9 @@ The full currency object looks like:
 
 ### Endpoints
 
-Take a look at the [Platform API Reference](REPLACE) for the list of currency endpoints.
+Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly) for the list of currency endpoints.
 
-Take a look at the [Platform Admin API Reference](REPLACE) for the list of currency management endpoints.
+Take a look at the [Platform Admin API Reference](https://rehive-platform-admin.redoc.ly) for the list of currency management endpoints.
 
 ### Usage
 

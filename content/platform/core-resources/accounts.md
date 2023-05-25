@@ -70,9 +70,9 @@ A full account object with a single currency looks like:
 
 ### Endpoints
 
-Take a look at the [Platform API Reference](REPLACE) for the list of accounts endpoints.
+Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly) for the list of accounts endpoints.
 
-Take a look at the [Platform Admin API Reference](REPLACE) for the list of account management endpoints.
+Take a look at the [Platform Admin API Reference](https://rehive-platform-admin.redoc.ly) for the list of account management endpoints.
 
 ### Usage
 

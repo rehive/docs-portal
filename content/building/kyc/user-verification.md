@@ -31,14 +31,14 @@ Rehive supports statuses on key sets of user information fields. For example, ba
 
 1. User -> Adresses
     1. Update after the required document category has been set to verified
-    2. Endpoint: `PATCH` on  <code>[/admin/users/addresses/{id}/](REPLACE/tag/Admin#operation/admin_users_addresses_partial_update)</code> with data `{“status”: “verified”}`
+    2. Endpoint: `PATCH` on  <code>[/admin/users/addresses/{id}/](https://rehive-platform-admin.redoc.ly/tag/Users#operation/users_addresses_partial_update)</code> with data `{“status”: “verified”}`
 2. User -> Bank account
     1. Update after the required bank verification has been completed - could include verification of banking document category
-    2. Endpoint: `PATCH` on  <code>[/admin/users/bank-accounts/{id}/](REPLACE/tag/Admin#operation/admin_users_bank-accounts_partial_update)</code> with data `{“status”: “verified”}`
+    2. Endpoint: `PATCH` on  <code>[/admin/users/bank-accounts/{id}/](https://rehive-platform-admin.redoc.ly/tag/Users#operation/users_bank-accounts_partial_update)</code> with data `{“status”: “verified”}`
 3. User -> Documents
     1. Verify documents based on KYC regulations
     2. Document verification could be triggers for updating other statuses on user data
-    3. Endpoint: `PATCH` on <code>[/admin/users/documents/{id}/](REPLACE/tag/Admin#operation/admin_users_documents_partial_update)</code> with data `{“status”: “verified”}`
+    3. Endpoint: `PATCH` on <code>[/admin/users/documents/{id}/](https://rehive-platform-admin.redoc.ly/tag/Users#operation/users_documents_partial_update)</code> with data `{“status”: “verified”}`
 
 #### Recommended additional configurations:
 
@@ -53,7 +53,7 @@ In certain cases,  for example, where verification documentation is submitted di
 This field should be set to verified once all required fields are verified. Please note that if the user’s primary information changes, Rehive automatically updates this field to “Pending”. This field can be ignored completely if wished.
 
 To update this field:
-`PATCH` on  <code>[/3​/admin​/users​/{identifier}​/](REPLACE/tag/Admin#operation/admin_users_partial_update)</code> with data `{“status”: “verified”}`
+`PATCH` on  <code>[/3​/admin​/users​/{identifier}​/](https://rehive-platform-admin.redoc.ly/tag/Users#operation/users_partial_update)</code> with data `{“status”: “verified”}`
 
 
 

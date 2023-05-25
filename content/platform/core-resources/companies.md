@@ -53,9 +53,9 @@ Companies in Rehive have their own details such as `id`, `name`, `description` a
 
 ### Endpoints
 
-Take a look at the [Platform API Reference](REPLACE) for the list of company endpoints.
+Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly) for the list of company endpoints.
 
-Take a look at the [Platform Admin API Reference](REPLACE) for the list of company management endpoints.
+Take a look at the [Platform Admin API Reference](https://rehive-platform-admin.redoc.ly) for the list of company management endpoints.
 
 ### Usage
 

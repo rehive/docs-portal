@@ -80,9 +80,9 @@ On the other hand, a transfer will have some additional information in the `part
 
 ### Endpoints
 
-Take a look at the [Platform API Reference](REPLACE) for the list of transaction endpoints.
+Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly) for the list of transaction endpoints.
 
-Take a look at the [Platform Admin API Reference](REPLACE) for the list of transaction management endpoints.
+Take a look at the [Platform Admin API Reference](https://rehive-platform-admin.redoc.ly) for the list of transaction management endpoints.
 
 ### Usage
 

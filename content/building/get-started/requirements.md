@@ -51,7 +51,7 @@ The platform will send the following data, formatted as JSON, in the HTTP body:
 
 When the activate endpoint is called by the platform the extension should perform any activation steps it needs in order to operate properly. The `token` can be used to perform these steps if it needs to gather any information from the platform.
 
-At the minimum, `/activate/` should validate that the token is a real by sending the token in a `GET` request to [https://api.rehive.com/3/auth/](REPLACE/tag/Auth). If this returns an authentication error the extension should ignore the activation as it is not a valid user. Otherwise the extension should store an entry in its data store with the `company`, the `token` and a flag indicating the service has been activated.
+At the minimum, `/activate/` should validate that the token is a real by sending the token in a `GET` request to [https://api.rehive.com/3/auth/](https://rehive-platform.redoc.ly/tag/Auth#operation/auth_read). If this returns an authentication error the extension should ignore the activation as it is not a valid user. Otherwise the extension should store an entry in its data store with the `company`, the `token` and a flag indicating the service has been activated.
 
 Possible extra `/activate/` steps might be to add new transaction subtypes or create new webhooks on the platform. These webhooks can then be used to automatically send events from the plaform to the extension.
 

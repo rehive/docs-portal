@@ -81,9 +81,9 @@ Users have a multitude of attributes and properties that can be used to store id
 
 ### Endpoints
 
-Take a look at the [Platform API Reference](REPLACE) for the list of user endpoints.
+Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly) for the list of user endpoints.
 
-Take a look at the [Platform Admin API Reference](REPLACE) for the list of user management endpoints.
+Take a look at the [Platform Admin API Reference](https://rehive-platform-admin.redoc.ly) for the list of user management endpoints.
 
 ### Usage
 

@@ -12,7 +12,7 @@ The platform cosists of two APIs: The **Platform API** and the **Platform Admin 
 ### Platform API
 
 <aside class="notice">
-	The <strong>API specification</strong> can be found <a href="REPLACE" target="_blank">here</a>.
+	The <strong>API specification</strong> can be found <a href="https://rehive-platform.redoc.ly" target="_blank">here</a>.
 </aside>
 
 <aside class="notice">
@@ -28,7 +28,7 @@ Many **auth** endpoints are anonymous endpoints and actions can be performed on 
 ### Platform Admin API
 
 <aside class="notice">
-	The <strong>API specification</strong> can be found <a href="REPLACE" target="_blank">here</a>.
+	The <strong>API specification</strong> can be found <a href="https://rehive-platform-admin.redoc.ly" target="_blank">here</a>.
 </aside>
 
 <aside class="notice">

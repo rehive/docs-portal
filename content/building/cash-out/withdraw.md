@@ -19,7 +19,7 @@ End-users are able to add bank accounts to their profiles using the wallet appli
 * The user must have added a bank account to their profile in order to initiate a withdrawal to the bank account
 * A [webhook](https://dashboard.rehive.com/#/developers/webhooks/list) can be configured to send the transaction detail and metadata to your extension whenever a pending debit transaction is created. We recommend setting up a webhook to be sent for all Debit transactions.
 * The app allows end-users to add account details for multiple accounts.
-* The bank accounts linked to a specific user can be retrieved via the API using the bank accounts endpoint <code>[/admin/users/bank-accounts/?user={user_identifier}](REPLACE/tag/Admin#operation/admin_users_bank-accounts_create)</code>
+* The bank accounts linked to a specific user can be retrieved via the API using the bank accounts endpoint <code>[/admin/users/bank-accounts/?user={user_identifier}](https://rehive-platform-admin.redoc.ly/tag/Users#operation/users_bank-accounts_create)</code>
 
 
 #### Steps
@@ -29,7 +29,7 @@ End-users are able to add bank accounts to their profiles using the wallet appli
 3. According to the Webhook settings, a webhook is sent to the integration including the transaction details.
 4. Your extension then initiates the bank transfer with the payment processor using the bank account details included in the transaction Metadata and awaits confirmation that the transfer has been completed.
 5. Payment processor confirms success or failure of the transfer. 
-6. Your extension updates the status of the user’s transaction from pending to complete (or failed) using the <code>[/admin/transactions/{tx_code}/](REPLACE/tag/Admin#operation/admin_transaction-collections_partial_update)</code> endpoint.
+6. Your extension updates the status of the user’s transaction from pending to complete (or failed) using the <code>[/admin/transactions/{tx_code}/](https://rehive-platform-admin.redoc.ly/tag/Transaction-collections#operation/transaction-collections_partial_update)</code> endpoint.
 
 <img src="/images/bank-transfer-withdraw.png" alt="Withdraw to bank account" width="80%"> 
 
