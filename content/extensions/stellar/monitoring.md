@@ -16,9 +16,9 @@ Testnet endpoint: https://stellar-hooks.s.services.rehive.io/
 
 #### Registering and Authorization
 
-To get an API key for the service POST `email` and `password` fields to the `/register/` endpoint.
+To get an API token for the service POST `email` and `password` fields to the `/register/` endpoint.
 
-The API key should be included in the `Authorization` header example: `Authorization: Token API_KEY`
+The API token should be included in the `Authorization` header example: `Authorization: Token {token}`
 
 #### Webhooks
 

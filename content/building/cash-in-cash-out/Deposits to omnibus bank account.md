@@ -19,7 +19,7 @@ When the user selects “Deposit” from either their web or mobile wallet, they
 1. The user selects “Deposit” and is shown details of the bank account you wish to receive deposit funds into and a unique reference.
 2. The user makes a bank transfer to the company bank account provided and includes the unique reference in the reference field
 3. Your custom extension polls the transaction history of the company bank account. 
-4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive API endpoint <code> [admin/transactions/credit/](https://docs.platform.rehive.com/tag/Admin#operation/admin_transactions_credit_create)</code> with 
+4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive Platform Admin API endpoint <code> [admin/transactions/credit/](https://rehive-platform-admin.redoc.ly/tag/Transactions#operation/transactions_credit_create)</code> with
 ```json
 {
     "status": "complete",

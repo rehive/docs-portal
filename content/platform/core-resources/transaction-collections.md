@@ -114,9 +114,9 @@ The content within the `transaction` object will depend on the endpoint. If the 
 
 ### Endpoints
 
-Take a look at the [API Reference](https://docs.platform.rehive.com) for the list of transaction-collection endpoints.
+Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly) for the list of transaction-collection endpoints.
 
-All endpoints that contain `/transaction-collections/` in their URL path are used for handling transaction-collections.
+Take a look at the [Platform Admin API Reference](https://rehive-platform-admin.redoc.ly) for the list of transaction-collection management endpoints.
 
 ### Usage
 

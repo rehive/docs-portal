@@ -22,7 +22,7 @@ This section will provide guidelines for triggering and executing transactions o
 3. The Rehive platform sends a transactiona webhook with the relevant transaction collection details
 4. Your custom extension matches the transaction `collection_id` to one stored against a quote and triggers the transaction to be executed on the third-party platform
 5. The third-party platform returns the outcome (success/failure)
-6. Your custom extension patches the pending platform transaction with the outcome, `failed` or `complete` using the <code>[/admin/transactions/{tx_code}/](https://docs.platform.rehive.com/tag/Admin#operation/admin_transaction-collections_partial_update)</code> endpoint.
+6. Your custom extension patches the pending platform transaction with the outcome, `failed` or `complete` using the <code>[/admin/transactions/{tx_code}/](https://rehive-platform-admin.redoc.ly/tag/Transaction-collections#operation/transaction-collections_partial_update)</code> endpoint.
 
 <img src="/images/conversion-extension-execute-quote.png" alt="Withdraw to bank account" width="80%"> 
 

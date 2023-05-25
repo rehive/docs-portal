@@ -28,11 +28,9 @@ The full currency object looks like:
 
 ### Endpoints
 
-Currency data appears in some fashion throughout the platform. However there are only several places where the currency can be directly accessed or modified. Keep in mind, when currencies are used in other places within the API, they are always identified by their `code`.
+Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly) for the list of currency endpoints.
 
-Take a look at the [API Reference](https://docs.platform.rehive.com) for the list of currency endpoints.
-
-All endpoints that contain `/currencies/` in their URL path are used for handling transaction-collections.
+Take a look at the [Platform Admin API Reference](https://rehive-platform-admin.redoc.ly) for the list of currency management endpoints.
 
 ### Usage
 
