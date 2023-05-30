@@ -9,6 +9,29 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+1. Added a new `use_new_documents_and_requirement_sets` field to the company. This can be used to switch to the new document and tier requirements functionality.
+    - Turning this on will block the adding of document without using a `type` instead of a `document_type`.
+    - Turning this on will switch requirement evaluation for tiers to use the new `requirement-sets` and requirement `items`.
+2. Added thew new `document-type` resource. This will be replace the static list of document types. 
+    - POST, GET : `/admin/document-types/` 
+    - GET, PATCH, PUT, DELETE: `/admin/document-types/<doc_id>/`
+    - GET : `/document-types/` 
+    - GET : `/document-types/<doc_id>/`
+3. Updated the `document` resource to accept a new field of `type`, which must be an ID of the a object of the `document-type` resource.
+4. Added a new `requirement-set` resource. This resource will be used to store thew new requirements for a tier. The advantage of requirement sets is that they can be defined with a condition of `all` or `any` (with an additional number indication how many) and can be structured in a nested way using the `parent` field (only one level of nested sets is supported).
+    - POST, GET : `/admin/groups/<group_id>/tiers/<tier_id>/requirement-sets/` 
+    - GET, PATCH, PUT, DELETE: `/admin/groups/<group_id>/tiers/<tier_id>/requirement-sets/<req_id>/`
+    - GET : `/groups/<group_id>/tiers/<tier_id>/requirement-sets/` 
+    - GET: `/groups/<group_id>/tiers/<tier_id>/requirement-sets/<req_id>/`
+5. Added a new `item` resource under the `requirement-set` resources. `items` encapsulate requirement rules and can be used in combination with requirement-sets to construct complex requirement hierarchies. Currently the only supported rule type is `resource` which accepts a `condition` and  `resource` value. Conditions are formatted as JSON like `{"first_name__isnull": false}`.
+    - POST, GET : `/admin/groups/<group_id>/tiers/<tier_id>/requirement-sets/<req_id>/items.` 
+    - GET, PATCH, PUT, DELETE: `/admin/groups/<group_id>/tiers/<tier_id>/requirement-sets/<req_id>/items/<item_id>/`
+    - GET : `/groups/<group_id>/tiers/<tier_id>/requirement-sets/<req_id>/items/` 
+    - GET: `/groups/<group_id>/tiers/<tier_id>/requirement-sets/<req_id>/items/<item_id>/`
+6. Updated the deprecation timelines. All functionality related to the old document type handling and requirements handling is now deprecated and subject to removal as per the deprecation timeline.
+
+---
+
 {{< link-heading "h5" "2023-05-25" >}}
 
 1. Updated the platform to be seperated into two API schemas:
