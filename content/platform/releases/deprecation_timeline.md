@@ -9,7 +9,28 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ### Deprecated
 
-{{< link-heading "h5" "2023-06-20" >}}
+{{< link-heading "h5" "2023-08-29" >}}
+
+*Added on 2023-05-30*
+
+1. Remove the temporary `use_new_documents_and_requirement_sets` field on the `company` resource. All companies will be force dto use the new documents and requirement set handling.
+2. Remove the old MFA `document_type` and `document_category` handling on documents.
+    - All documents should have `type` instead. The `document_type` and `documnt_catgeory` will be removed compleletely.
+    - Documents can be updated through the API to have the new `type` field (after adding `document-types`).
+    - Please contact the Rehive team if you want us to migrate your documents to the new format.
+3. Remove the `requirement` resource and all related endpoints. These endpoints have been replaced by the `requirement-sets` and children `items` endpoints.
+    - `/groups/<name>/tiers/<tier_id>/requirements/`
+    - `/groups/<name>/tiers/<tier_id>/requirements/<req_id>/`
+    - `/admin/groups/<name>/tiers/<tier_id>/requirements/`
+    - `/admin/groups/<name>/tiers/<tier_id>/requirements/<req_id>/`
+    - Please contact the Rehive team if you want us to migrate your `requirements` to the new `requirement-sets`.
+4. Remove fields from the following endpoints.
+    - `/groups/` and `/groups/<name>/` : remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
+    - `/groups/<name>/tiers/` and `/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
+    - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
+    - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
+
+{{< link-heading "h5" "2023-06-27" >}}
 
 *Added on 2021-06-09*
 
@@ -19,6 +40,7 @@ This timeline indicates when certain functionality will be permanently removed f
 	- Remove admin endpoints:  `/3/admin/users/<id>/mfa/`, `/3/admin/users/<id>/mfa/sms/`, `/3/admin/users/<id>/token/`.
 	- Remove `mfa` from the post login (authentication) responses.
         - The new MFA documentation can be found [here](https://docs.rehive.com/platform/usage/multi-factor/)
+
 
 ### Removed
 
