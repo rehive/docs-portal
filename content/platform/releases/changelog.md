@@ -14,7 +14,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 1. Added a new `use_new_documents_and_requirement_sets` field to the company. This can be used to switch to the new document and tier requirements functionality.
     - Turning this on will block the adding of document without using a `type` instead of a `document_type`.
     - Turning this on will switch requirement evaluation for tiers to use the new `requirement-sets` and requirement `items`.
-2. Added thew new `document-type` resource. This will be replace the static list of document types. 
+2. Added thew new `document-type` resource. This will replace the static list of document types. 
     - POST, GET : `/admin/document-types/` 
     - GET, PATCH, PUT, DELETE: `/admin/document-types/<doc_id>/`
     - GET : `/document-types/` 
