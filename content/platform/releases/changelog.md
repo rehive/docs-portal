@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-06-05" >}}
+
+1. Fixed a bug in exports that resulted in memory usage issues (and eventual failures) on the `account` resource.
+2. Updated CSV exports to have simpler more CSV-appropriate columns and not create columns for nested list fields.
+3. Updated `metadata` fields in CSV exports to always be a single column with the JSON formatted as a string.
+
+---
+
 {{< link-heading "h5" "2023-05-30" >}}
 
 1. Added a new `use_new_documents_and_requirement_sets` field to the company. This can be used to switch to the new document and tier requirements functionality.
