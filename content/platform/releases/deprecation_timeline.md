@@ -29,6 +29,8 @@ This timeline indicates when certain functionality will be permanently removed f
     - `/groups/<name>/tiers/` and `/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
     - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
     - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
+5. Remove the `allow_overdrafts` field from the company settings. 
+    - Developers and administratrs should instead configure specific overdrafts via tier limits.
 
 {{< link-heading "h5" "2023-06-27" >}}
 
