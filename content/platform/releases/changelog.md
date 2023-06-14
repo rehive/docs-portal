@@ -7,6 +7,16 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+
+---
+
+{{< link-heading "h5" "2023-06-14" >}}
+
+1. Added a new `related_resources` list field to the `document-type`.
+2. Added a new `metadata` field to the `document-type` resource.
+3. Fixed a bug with the `date` filters on the metric points endpoint that resulted in the unresolved metric point getting included in invalid date ranges.
+4. Fixed a bug with transaction count metrics that resulted in 0 results getting aggregated due to a queryset filter error.
+
 ---
 
 {{< link-heading "h5" "2023-06-05" >}}
