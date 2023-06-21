@@ -42,7 +42,8 @@ This timeline indicates when certain functionality will be permanently removed f
 	- Remove admin endpoints:  `/3/admin/users/<id>/mfa/`, `/3/admin/users/<id>/mfa/sms/`, `/3/admin/users/<id>/token/`.
 	- Remove `mfa` from the post login (authentication) responses.
         - The new MFA documentation can be found [here](https://docs.rehive.com/platform/usage/multi-factor/)
-
+2. Remove the old `/3/logout/all/` endpoint.
+	- The `/3/auth/tokens/` or `/3/auth/tokens/<id>/` endpoints can be used to delete tokens instead.
 
 ### Removed
 
