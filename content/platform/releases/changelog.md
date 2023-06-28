@@ -7,6 +7,14 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
 
+---
+
+{{< link-heading "h5" "2023-06-21" >}}
+
+1. Added a new `clear_session_option` field to the password reset confirm endpoint. This field supports three clearing options:
+    - `all` : Clear all sessions and tokens including permanent tokens (that may be used as API tokens).
+    - `temporary` : Clear only temporary sessions and tokens with an expiry (this is the default behaviour).
+    - `none` : Clear no sessions and tokens. 
 
 ---
 
