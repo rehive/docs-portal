@@ -11,6 +11,12 @@ Summary of additions and changes to the Rehive Dashboard.
 
 {{< link-heading "h4" "2023-06-29" >}}
 
+**Changes:**
+
+- Updated MFA endpoints to new ones, as the current ones are being deprecated.
+- Added an indicator on authenticators to show whether an authenticator has been verified or not.
+- MFA enabled indicators throughout the Dashboard will no longer show that MFA is enabled if an authenticator has not been verified.
+
 **New features:**
 
 - Layouts have been added t othe Notifications Extension. Layouts allow admins to add HTML and text style layouts, that include branding, company colors, headers, footers etc. Once a layout has been added, admins can add them to existing email notifications and any new email notifications.
