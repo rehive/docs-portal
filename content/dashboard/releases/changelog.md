@@ -9,6 +9,191 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-06-29" >}}
+
+**New features:**
+
+- Layouts have been added t othe Notifications Extension. Layouts allow admins to add HTML and text style layouts, that include branding, company colors, headers, footers etc. Once a layout has been added, admins can add them to existing email notifications and any new email notifications.
+
+---
+
+{{< link-heading "h4" "2023-06-28" >}}
+
+**Bug fixes:**
+
+- Removed archived currencies as currency options when creating a new credit transaction.
+
+**Changes:**
+
+- The Dashboard now separates subtypes into active and archived ones.
+- Added a link to the help center in tier and group fees.
+
+---
+
+{{< link-heading "h4" "2023-06-09" >}}
+
+**Changes:**
+
+- Added a Mass send's id to the Mass send history listing page.
+- Added the run date to the view Mass send transactions page.
+- Dashboard no longer sends through null for the lifespan field if it is empty when creating or editing a voucher product.
+- Added a heading to the Account exports listing table.
+
+---
+
+{{< link-heading "h4" "2023-05-16" >}}
+
+**Changes:**
+
+- Admins can now view and edit currency metadata.
+- When adding a custom currency, if it's a crypto currency, admins can provide chain, code and issuer address details, which will be saved in the currency's metadata. The wallets will use this metadata to enable crypto flows.
+- On the product listing page, we now show when a product was last updated.
+
+---
+
+{{< link-heading "h4" "2023-05-11" >}}
+
+**Changes:**
+
+- Archived groups are no longer shown as an option when adding a new user through the Dashboard.
+
+---
+
+{{< link-heading "h4" "2023-04-28" >}}
+
+**Changes:**
+
+- Fixed an issue with login related to deprecated fields on the login response.
+
+---
+
+{{< link-heading "h4" "2023-04-20" >}}
+
+**Changes:**
+
+- Added Serbia to the allowed countries and nationalities list. (Hotfix)
+- Put back restriction that only owners can go to production. (Hotfix)
+- Added back condition to hide Create Production button if not owner. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2023-04-14" >}}
+
+**Changes:**
+
+- Admins can now see the status of an export on each respective export page. If an export is not complete, the "Download file" link does not display. (Hotfix)
+- Admins can now also see the status of the latest 3 exports. If the status is not complete, the status will display instead of the download file link. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2023-04-11" >}}
+
+**Bug fixes:**
+
+- Fixed issue where admins were unable to remove the last price from a product.
+
+**Changes:**
+
+- Added metadata to crypto currencies selectable from the Dashboard.
+- Added password length validation to the register page.
+- Moved exports for Transactions and Accounts to their own dedicated Exports pages.
+
+**New features:**
+
+- Added user Exports to the Dashboard.
+
+---
+
+{{< link-heading "h4" "2023-04-04" >}}
+
+**Changes:**
+
+- Removed defunct notification permission from admin notifications in group and user permissions (Hotfix)
+
+---
+
+{{< link-heading "h4" "2023-04-03" >}}
+
+**Bug fixes:**
+
+- Fixed an issue with the pagination on the Requests listing page in the Payment Request Extension.
+
+**Changes:**
+
+- Added email validation on the review company details page.
+- Added an additional reward campaign type "Manual".
+
+---
+
+{{< link-heading "h4" "2023-03-31" >}}
+
+**Changes:**
+
+- Removed "Request access to codebase" link on the Get Started page, as we now have the codebases available for download. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2023-03-20" >}}
+
+**Changes:**
+
+- Changed the link on the email verified page to go to the Get Started page instead of login. (Hotfix)
+
+---
+
+{{< link-heading "h4" "2023-03-16" >}}
+
+**Bug fixes:**
+
+- Fixed issue where invited admins would get first name and last name set as null null upon login in Intercom.
+
+---
+
+{{< link-heading "h4" "2023-03-01" >}}
+
+**Changes:**
+
+- Updated copy on the Notifications Extension -> Settings -> Push notifications page. Linked a guide on how to setup Firebase cloud messaging.
+- Added request to the available actions in the App config in the App Extension.
+
+---
+
+{{< link-heading "h4" "2023-02-27" >}}
+
+**Changes:**
+
+- Admins can select an integration to add to a conversion pair in the Conversion Extension.
+- Admins can select whether a conversion pair should be an operational or non-operational transaction type, i.e. whether the conversion uses an operational account as a float, or does the conversion directly on the account.
+- Improved how admins can select the operational account for a conversion pair.
+
+---
+
+{{< link-heading "h4" "2023-02-24" >}}
+
+**Bug fixes:**
+
+- Fixed delete button misalignment on delete company bank account.
+- Fixed dropdown width issue on the Conversions Extension settings page.
+- Fixed issue where the company bank account listing page would align badly at lower screen widths.
+- Fixed issue where changing the status of a manual withdrawal transaction overrode the metadata.
+
+**Changes:**
+
+- Removed the allow overdraft setting in Company settings.
+- When adding or editing a company bank account, admins can now select the country from a dropdown.
+
+---
+
+{{< link-heading "h4" "2023-02-23" >}}
+
+**Changes:**
+
+- Admins can no longer deactivate the Notifications Extension.
+- The Notifications Extension is now a system extension.
+- Platform notification settings have been removed, and will instead use the Notification Extension.
+
+---
+
 {{< link-heading "h4" "2023-02-22" >}}
 
 **Bug fixes:**
