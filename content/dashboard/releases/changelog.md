@@ -19,7 +19,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 **New features:**
 
-- Layouts have been added t othe Notifications Extension. Layouts allow admins to add HTML and text style layouts, that include branding, company colors, headers, footers etc. Once a layout has been added, admins can add them to existing email notifications and any new email notifications.
+- Layouts have been added to the Notifications Extension. Layouts allow admins to add HTML and text style layouts, that include branding, company colors, headers, footers etc. Once a layout has been added, admins can add them to existing email notifications and any new email notifications.
 
 ---
 
