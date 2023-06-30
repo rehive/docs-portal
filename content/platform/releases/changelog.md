@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-06-30" >}}
+
+1. Updated the timestamp field to be an integer type in documentation.
+2. Significantly improved the generation of the swagger `responses`:
+    - Previously, documented `responses` on some endpoints were different to the actual results when the endpoint was invoked.
+    - Additionally, the documented response statuses on some endpoints were different to the actual results when the endpoint was invoked.
+
+---
+
 {{< link-heading "h5" "2023-06-21" >}}
 
 1. Added a new `clear_session_option` field to the password reset confirm endpoint. This field supports three clearing options:
