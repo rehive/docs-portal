@@ -5,7 +5,17 @@ description: Platform changelog.
 weight: 1
 ---
 
-Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline.
+Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the [deprecation timeline](/platform/releases/deprecation_timeline/).
+
+---
+
+{{< link-heading "h5" "2023-07-07" >}}
+
+1. Updated the Platform API swagger schema to use OpenAPI version 3.0.3. This change includes significnat improvements to the schema generation as well:
+   - Added schema components (previously definitions) for response enevelopes (ie. `{"status": "success", "data": {}}`.
+   - Improved Swagger UI examples for requests and parameters.
+   - Improved schema generation for objects that can `oneOf` several differnet schemas.
+2. Added a `label` field to the tier requirement sets resource.
 
 ---
 
