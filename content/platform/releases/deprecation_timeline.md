@@ -32,7 +32,7 @@ This timeline indicates when certain functionality will be permanently removed f
 5. Remove the `allow_overdrafts` field from the company settings. 
     - Developers and administratrs should instead configure specific overdrafts via tier limits.
 
-{{< link-heading "h5" "2023-07-18" >}}
+{{< link-heading "h5" "2023-07-25" >}}
 
 *Added on 2021-06-09*
 
