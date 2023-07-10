@@ -9,7 +9,7 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ### Deprecated
 
-{{< link-heading "h5" "2023-09-26" >}}
+{{< link-heading "h5" "2023-12-12" >}}
 
 *Added on 2023-05-30*
 
@@ -32,7 +32,7 @@ This timeline indicates when certain functionality will be permanently removed f
 5. Remove the `allow_overdrafts` field from the company settings. 
     - Developers and administratrs should instead configure specific overdrafts via tier limits.
 
-{{< link-heading "h5" "2023-07-12" >}}
+{{< link-heading "h5" "2023-07-18" >}}
 
 *Added on 2021-06-09*
 
