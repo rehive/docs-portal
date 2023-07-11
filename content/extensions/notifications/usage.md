@@ -100,13 +100,13 @@ Some events trigger the computation of additional information that is not normal
 
 In order to correctly show the total fee of a transaction, the notification extension has to calculate the fee by retrieving all children transactions and summing the transaction amounts together. This is done automatically on all transaction webhook events and can be accessed through the `computed.fee` key:
 
-```
+```text
 {{ computed.fee }}
 ```
 
 The same applies to the total amount of a transaction. When fees exist in related (children) transactions the total amount has to be retrieved via the `computed.total_amount` key:
 
-```
+```text
 {{ computed.total_amount }}
 ```
 
