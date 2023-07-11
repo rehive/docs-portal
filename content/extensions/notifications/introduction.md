@@ -5,7 +5,7 @@ description: Introduction to the notifcations extension.
 weight: 1
 ---
 
-The notification extension is used to manage notifications to managers, admins and users. It allows companies to setup custom notifications for specific events in Rehive (eg. Verification emails, password resets, welcome emails etc.)
+The notification extension is used to manage notifications to managers, admins and users. It allows companies to setup custom notifications for specific events in Rehive (eg. Verification emails, password resets, welcome emails etc.).
 
 <aside class="notice">
 The full <strong>API specification</strong> can be found <a href="https://notification.services.rehive.io">here</a>
