@@ -38,7 +38,7 @@ You can do some fairly advanced templating using the built in conditions, functi
 
 In addition to the standard Django builtin template tags, we have defined several extra builtins to make parsing Rehive webhook event data easier.
 
-#### Timestamp
+**Timestamp**
 
 Convert a timestamp to a date object. The Rehive dates are normally returned as a microsecond timestamp. So this builtin is useful when human readable dates are required.
 
@@ -52,7 +52,7 @@ The builtin `date` filter can be applied to the resulting `timestamp` object:
 {{ timestamp_value|timestamp|date:'D d M Y' }}
 ```
 
-#### Money
+**Money**
 
 The `money` function converts integer values into decimal currency values based on the currency's divisibility. Rehive always returns integer values in order to preserve precision across different databases and programming languages. This function can be used to convert the integer value into a human readable money value.
 
@@ -122,9 +122,7 @@ The Rehive dashboard contains notification templates with expression presets tha
 
 A small list of basic examples can be found below:
 
-### transaction.execute
-
-**Credit transaction**:
+**Credit transaction (transaction.execute)**:
 
 Only send the notification if the transaction completed and was a credit type:
 
@@ -132,7 +130,7 @@ Only send the notification if the transaction completed and was a credit type:
 '{{ status }}' == 'Complete' and '{{ tx_type }}' == 'credit'
 ```
 
-**Debit transaction**:
+**Debit transaction (transaction.execute)**:
 
 Only send the notification if the transaction completed and was a debit type:
 
@@ -140,9 +138,7 @@ Only send the notification if the transaction completed and was a debit type:
 '{{ status }}' == 'Complete' and '{{ tx_type }}' == 'debit'
 ```
 
-### document.update
-
-**Update document status**
+**Update document status (document.update)**
 
 Only send the notification is the status of the document changed in the update:
 
