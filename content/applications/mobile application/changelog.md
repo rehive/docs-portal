@@ -9,7 +9,7 @@ Summary of additions and changes to the mobile application.
 
 ---
 
-{{< link-heading "h4" "2023-06-11 - 7.1.0" >}}
+{{< link-heading "h4" "2023-07-11 - 7.1.0" >}}
 
 **Features**
 - Switched to new MFA endpoints and required changes.
