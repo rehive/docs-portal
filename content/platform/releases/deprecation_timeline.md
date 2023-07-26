@@ -31,8 +31,8 @@ This timeline indicates when certain functionality will be permanently removed f
     - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
 5. Remove the `allow_overdrafts` field from the company settings. 
     - Developers and administratrs should instead configure specific overdrafts via tier limits.
-
-### Removed
+  
+---
 
 {{< link-heading "h5" "2023-07-25" >}}
 
@@ -46,6 +46,8 @@ This timeline indicates when certain functionality will be permanently removed f
         - The new MFA documentation can be found [here](https://docs.rehive.com/platform/usage/multi-factor/)
 2. Remove the old `/3/logout/all/` endpoint.
 	- The `/3/auth/tokens/` or `/3/auth/tokens/<id>/` endpoints can be used to delete tokens instead.
+
+### Removed
 
 {{< link-heading "h5" "2023-04-25" >}}
 
