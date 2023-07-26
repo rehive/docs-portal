@@ -8,6 +8,46 @@ weight: 1
 Summary of additions and changes to the web application.
 
 ---
+
+{{< link-heading "h4" "2023-07-20 - 2.24.2" >}}
+
+- Updated left to right handling to fix issues with scrollbars.
+
+---
+
+{{< link-heading "h4" "2023-06-29 - 2.24.0" >}}
+
+- Fixed wallet warnings.
+- Fixed admin type user onboarding issue.
+- Fixed products list page currency option does not showing correctly.
+- Implemented new FAQ configuration and design.
+- Switched to new MFA endpoints and required changes.
+
+---
+
+{{< link-heading "h4" "2023-05-11 - 2.23.9" >}}
+
+- Fixed stellar crypto account creation network type.
+
+---
+
+{{< link-heading "h4" "2023-05-10 - 2.23.8" >}}
+
+- Updated staging environmental variable configuration
+
+---
+
+{{< link-heading "h4" "2023-05-04 - 2.23.7" >}}
+
+- Reverted changes in v2.23.6 which caused issues with custom hostnames.
+
+---
+
+{{< link-heading "h4" "2023-05-02 - 2.23.6" >}}
+
+- Fixed staging env variables.
+
+---
 {{< link-heading "h4" "2023-03-20 - 2.23.5" >}}
 
 **Features**
