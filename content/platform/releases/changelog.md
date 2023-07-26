@@ -9,14 +9,6 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h5" "2023-07-25" >}}
-
-1. Rolled out final removal of the fllowing [deprecated items](/platform/releases/deprecation_timeline/#2023-07-25):
-   - Remove the old MFA endpoints and functionality (replaced by the new endpoints). 
-   - Remove the old `/3/logout/all/` endpoint. 
-
----
-
 {{< link-heading "h5" "2023-07-07" >}}
 
 1. Updated the Platform API swagger schema to use OpenAPI version 3.0.3. This change includes significnat improvements to the schema generation as well:
