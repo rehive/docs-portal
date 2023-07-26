@@ -7,8 +7,36 @@ weight: 1
 
 Summary of additions and changes to the mobile application.
 
+---
+
+{{< link-heading "h4" "2023-06-11 - 7.1.0" >}}
+
+**Features**
+- Switched to new MFA endpoints and required changes.
+
+**Fixes**
+- Fixes sidebar drawer flickering issue.
+
+---
+
+{{< link-heading "h4" "2023-04-26 - 7.0.0" >}}
+
+**Features**
+- Upgrades React-Native version.
+- Upgrades Expo SDK version 48.
+
+---
+
+{{< link-heading "h4" "2023-04-06 - 6.0.1" >}}
+
+**Fixes**
+- Fix splash screen load regression.
+
+---
+
 {{< link-heading "h4" "2023-03-30 - 6.0.0" >}}
 
+**Features**
 - Upgraded to Expo SDK 46 which includes React Native 0.69.5.
 
 ---
