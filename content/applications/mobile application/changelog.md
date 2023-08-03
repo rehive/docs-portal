@@ -9,6 +9,15 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2023-08-03 - 7.2.0" >}}
+
+**Features**
+- Updated PRS functionality to make payments using the correct operational account
+- Updated PRS request handling to use the new API format/requirements
+- Updated PRS transaction history handling to correctly label transactions.
+
+---
+
 {{< link-heading "h4" "2023-07-11 - 7.1.0" >}}
 
 **Features**

@@ -9,6 +9,14 @@ Summary of additions and changes to the web application.
 
 ---
 
+{{< link-heading "h4" "2023-08-03 - 2.24.3" >}}
+
+- Updated PRS functionality to make payments using the correct operational account
+- Updated PRS request handling to use the new API format/requirements
+- Updated PRS transaction history handling to correctly label transactions.
+
+---
+
 {{< link-heading "h4" "2023-07-20 - 2.24.2" >}}
 
 - Updated left to right handling to fix issues with scrollbars.
