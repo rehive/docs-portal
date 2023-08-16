@@ -9,6 +9,13 @@ Summary of additions and changes to the web application.
 
 ---
 
+{{< link-heading "h4" "2023-08-16 - 2.24.4" >}}
+
+- Fixed react-scripts hot refresh issue 
+- Updated date format in buy-sell-exchange flows 
+  
+---
+
 {{< link-heading "h4" "2023-08-03 - 2.24.3" >}}
 
 - Updated PRS functionality to make payments using the correct operational account
