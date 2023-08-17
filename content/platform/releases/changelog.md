@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-08-16" >}}
+
+1. Final removal of the deprecated [MFA functionality](https://docs.rehive.com/platform/releases/deprecation_timeline/#2023-08-16).
+   - The replacement MFA functionality is documented [here](https://docs.rehive.com/platform/usage/multi-factor/).
+
+---
+
 {{< link-heading "h5" "2023-07-07" >}}
 
 1. Updated the Platform API swagger schema to use OpenAPI version 3.0.3. This change includes significnat improvements to the schema generation as well:
