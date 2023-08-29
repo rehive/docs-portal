@@ -13,7 +13,7 @@ Summary of additions and changes to the Rehive Dashboard.
 
 **Bug fixes:**
 
-- Fixed a bug where allowed groups and users in the rewards extension were not getting updated in campaign edit UI.
+- Fixed a bug where allowed groups and users in the rewards extension were not getting updated in the campaign edit UI.
 
 ---
 
