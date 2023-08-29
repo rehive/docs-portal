@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-08-29" >}}
+
+**Bug fixes:**
+
+- Fixed a bug where allowed groups and users in the rewards extension were not getting updated in campaign edit UI.
+
+---
+
 {{< link-heading "h4" "2023-06-29" >}}
 
 **Changes:**
