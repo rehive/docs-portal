@@ -9,6 +9,12 @@ Summary of additions and changes to the web application.
 
 ---
 
+{{< link-heading "h4" "2023-09-07 - 2.24.6" >}}
+
+- Updated transaction success screen continue button label.
+
+---
+
 {{< link-heading "h4" "2023-08-16 - 2.24.4" >}}
 
 - Fixed react-scripts hot refresh issue 
