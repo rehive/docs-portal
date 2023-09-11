@@ -13,7 +13,22 @@ Summary of additions and changes to the Rehive Dashboard.
 
 **Bug fixes:**
 
-- Fixed bugs relating to SMS MFA issues that were occuring during creation and delivery.
+- Fixed bugs relating to SMS MFA issues that were occurring during creation and delivery.
+
+**Changes:**
+
+- Moved the User action page URLs from the Group details page into their own page, the User action page URLs. This setting can be found on the Groups listing page.
+- Some blocks on the Get Started page have been retired - Branding, Web App, and the Android and iOS block. Step 4 Purchase a test product has been removed from the Learn some basics block.
+- Two new blocks have been added to the Get Started page - White label shortcuts and Key Topics.
+- We have added a link to the developer docs in the Developers block on the Get Started page.
+- On Test projects in the Learn some basics block we have added a list of Advanced flows guides which clients can use to learn more about advanced flows in Rehive.
+- A new App set up block has been added to the Get started page to make it easier to set up your app's branding, notifications, hosting and more.
+
+**New features:**
+
+- Added new Hosting and user action page URLs page to help guide clients on setting up Rehive according to their hosting requirements.
+- Added a new option in the App Extension App Domain section to allow clients to select the option to host the app themselves. We have made it easy to generate user action page URLs using your own domain.
+
 ---
 
 {{< link-heading "h4" "2023-08-29" >}}
