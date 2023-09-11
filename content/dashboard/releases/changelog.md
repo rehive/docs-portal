@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-09-11" >}}
+
+**Bug fixes:**
+
+- Fixed bugs relating to SMS MFA issues that were occuring during creation and delivery.
+---
+
 {{< link-heading "h4" "2023-08-29" >}}
 
 **Bug fixes:**
