@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-09-11" >}}
+
+1. Fixed multiple minor bugs in the admin search endpoint. The admin search endpoint had issues searching by some special characters or multi-word inputs.
+2. Fixed a bug where idempotent requests were not getting their request body (POST data) saved correctly in the request logs.
+3. Fixed the error key used in 404 error outputs when an authenticator does not exist.
+4. Fixed a bug when handling a 404 response on authenticator delivery that resulted in a 500 error instead of a 404 error.
+
+---
+
 {{< link-heading "h5" "2023-08-16" >}}
 
 1. Final removal of the deprecated [MFA functionality](https://docs.rehive.com/platform/releases/deprecation_timeline/#2023-08-16).
