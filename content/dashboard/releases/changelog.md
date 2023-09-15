@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-09-15" >}}
+
+**Bug fixes:**
+
+- Updated the CSV and JSON files for User Exports by adding the missing fields.
+- Key Topics was added back to the Get Started page after it was removed after a deployment. The links were also accurately updated.
+- The Trial block and Trial banner was updated on the Get Started page relating to when a user has chosen to begin a new plan after the trail period ends.
+- An update was made to ensure that mobile number prefixes are not removed on input when enabling SMS MFA for the first time.
+
+---
+
 {{< link-heading "h4" "2023-09-11" >}}
 
 **Bug fixes:**
