@@ -11,11 +11,11 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 {{< link-heading "h5" "2023-09-22" >}}
 
-- Updated webhooks to be associated with company services if created by a service user. 
-- Updated webhooks so that they cannot be deleted or modified if they are related to a company service.
-- Updated the request logs response to return the headers field as properly formatted HTTP headers rather than the internal all-caps format.
-- Updated service activation to return more details on the error returned by the service. 
-- Fixed the format of errors on transaction collection creation. It was incorrectly returning a list of errors under `data` rather than a object.
+1. Updated webhooks to be associated with a service if created by a service user. 
+2. Updated webhooks so that they cannot be deleted or modified if they are related to an active service.
+3. Updated the request logs  to return the `headers` field as properly formatted HTTP headers rather than the internal all-caps format.
+4. Updated service activation/deactivation to return more details on the type of error when an error is thrown by the service.
+5. Fixed the format of errors on transaction-collection creation. It was incorrectly returning a list of errors under `data` rather than a object.
 
 ---
 
