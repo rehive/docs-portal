@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-10-02" >}}
+
+**Bug fix:**
+
+- Updated to ensure that the logout is called in the API before removing the token while logging out.
+
+---
+
 {{< link-heading "h4" "2023-09-15" >}}
 
 **Bug fixes:**
