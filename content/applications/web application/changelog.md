@@ -9,6 +9,12 @@ Summary of additions and changes to the web application.
 
 ---
 
+{{< link-heading "h4" "2023-10-02 - 2.24.10" >}}
+
+- Implemented the invoking of the logout API when a user clicks UI logout button.  
+
+---
+
 {{< link-heading "h4" "2023-09-07 - 2.24.6" >}}
 
 - Updated transaction success screen continue button label.
