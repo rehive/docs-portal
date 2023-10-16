@@ -9,6 +9,12 @@ Summary of additions and changes to the web application.
 
 ---
 
+{{< link-heading "h4" "2023-10-16 - 2.24.12" >}}
+
+- Completed a Hotfix for a logic issue that was affecting tier fees. 
+
+---
+
 {{< link-heading "h4" "2023-10-02 - 2.24.10" >}}
 
 - Implemented the invoking of the logout API when a user clicks UI logout button.  
