@@ -9,6 +9,13 @@ Summary of additions and changes to the web application.
 
 ---
 
+{{< link-heading "h4" "2023-10-16 - 2.24.13" >}}
+
+- Fixed a string error for a resend OTP issue on sign-up. 
+- Fixed a web rigid issue relating to responsiveness on the home page. 
+
+---
+
 {{< link-heading "h4" "2023-10-16 - 2.24.12" >}}
 
 - Completed a Hotfix for a logic issue that was affecting tier fees. 
