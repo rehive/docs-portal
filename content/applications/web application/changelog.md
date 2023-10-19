@@ -7,6 +7,12 @@ weight: 1
 
 Summary of additions and changes to the web application.
 
+--- 
+
+{{< link-heading "h4" "2023-10-19 - 2.24.14" >}}
+
+- Fixed a divisibility error relating to the transaction amount in the Withdraw flow. 
+
 ---
 
 {{< link-heading "h4" "2023-10-16 - 2.24.13" >}}
