@@ -9,6 +9,12 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2023-10-20 - 2.24.15" >}}
+
+- Fixed how added limits are displayed in the Withdraw flow. 
+
+---
+
 {{< link-heading "h4" "2023-10-19 - 2.24.14" >}}
 
 - Fixed a divisibility error relating to the transaction amount in the Withdraw flow. 
