@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-10-24" >}}
+
+1. Added a new `weight` field to requirement sets and requirement set item resources.
+2. Updated the requirement set item resource `name`, `description`, and `weight` fields to be editable via `PATCH` and `PUT`. 
+3. Added new `created` and `name` filters to the bank, crypto and wallet account resources.
+
+---
+
 {{< link-heading "h5" "2023-09-22" >}}
 
 1. Updated webhooks to be associated with a service if created by a service user. 
