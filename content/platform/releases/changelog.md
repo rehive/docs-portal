@@ -13,7 +13,8 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 1. Added a new `weight` field to requirement sets and requirement set item resources.
 2. Updated the requirement set item resource `name`, `description`, and `weight` fields to be editable via `PATCH` and `PUT`. 
-3. Added new `created` and `name` filters to the bank, crypto and wallet account resources.
+3. Added new `created` and `name` filters to the bank, crypto and wallet account resource listings.
+4. Added a new `number` filter on the bank account resource listing.
 
 ---
 
