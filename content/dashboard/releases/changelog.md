@@ -7,6 +7,12 @@ weight: 1
 
 Summary of additions and changes to the Rehive Dashboard. 
 
+{{< link-heading "h4" "2023-10-26" >}}
+
+**Bug fix:**
+
+- Fixed issue with critical value not being sent correctly affecting Multi-Factor Authentication. 
+
 ---
 
 {{< link-heading "h4" "2023-10-02" >}}
