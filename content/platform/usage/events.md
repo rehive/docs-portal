@@ -30,7 +30,7 @@ When building a service that receives webhook events, please adhere to the follo
 We recommend the following as well:
 
 - Check the IP of each webhook event your service receives. Platform webhooks will always originate fromt the same IP: **34.91.230.165**.
-- Perform event processing, particularly long running processing, asynchronously (outside of the webhook event's request -> response process). This will allow your service to respond to a webhook event quickly but still perform any other processing that may have taken longer the 5 second timeout.
+- Perform event processing, particularly long running processing, asynchronously (outside of the webhook event's request -> response process). This will allow your service to respond to a webhook event quickly but still perform any other processing without worrying about the 5 second response timeout.
 
 ### Retries
 
