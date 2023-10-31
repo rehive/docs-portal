@@ -5,13 +5,46 @@ description: Events.
 weight: 7
 ---
 
-The platform has a collection of internal events that can be configured to trigger webhooks.
+The Platform has a collection of internal events that can be configured to trigger webhooks. Webhooks can be added using the dashboard or directly via the API. 
 
-When adding webhooks they should always be created with a secure `secret` key that only you and Rehive know about. We recommend a randomly generated string with a minimum of 32 charcters. The secret is sent in the `Authorization` header of the webhook HTTP request. When receiving webhooks, the `secret` should always be validated to ensure the webhook originated from the platform. Additionally, platform webhooks will always originate from the IP **34.91.230.165**. Finally, please ensure that your production webhook endpoints are always HTTPS (secured with SSL).
+Each webhook contains the following properties:
 
-The platform expects a `200`, `201`, `202` HTTP response when a request is made to the webhook `url`. If a 200 response is not returned, the platform will retry the webhook up to 7 times with a gradually increasing delay between each retry.
+- `event` : The event that should trigger the webhook.
+- `url` : The endpoint that webhook events should be sent to. Events are sent in an HTTP request containing the event data formatted as JSON.
+- `secret` : The secret is sent in the `Authorization` header of each event's webhook HTTP request.
+- `expression` : An optional condition that is used to eveluate whether the event should trigger.
 
-Every webhook includes a body containing a JSON object.
+### Requirements
+
+When building a service that receives webhook events, please adhere to the following requirements:
+
+- Always create webhooks with a secure `secret` key that only you and Rehive know. We recommend a randomly generated string with a minimum of 32 characters.
+- Always check the `secret` is correct whenever you receive a webhook event. This ensures the webhook event originated from the platform and thus can be trusted.
+- Always secure your webhook endpoints using SSL. This ensures that only Rehive and your server can see the webhook data.
+- Return a `200`, `201`, or `202` HTTP response whenever your endpoint successfully receives a webhook. If a different status is returned, the Platform will retry the webhook.
+- Return a response within 5 seconds. The platform will terminate any connection that takes longer than 5 seconds. Terminated requests will be retried like a failed request.
+- Treat all webhook events as idempotent. This will protect against unexpected retries due to network or connection errors.
+
+### Recommendations
+
+We recommend the following as well:
+
+- Check the IP of each webhook event your service receives. Platform webhooks will always originate fromt the same IP: **34.91.230.165**.
+- Perform event processing, particularly long running processing, asynchronously (outside of the webhook event's request -> response process). This will allow your service to respond to a webhook event quickly but still perform any other processing that may have taken longer the 5 second timeout.
+
+### Retries
+
+Platform webhooks will automatically retry if a webhook fails. Failure can be caused by:
+
+- Connection errors when calling the webhook `url`. 
+- Timeouts when calling the webhook `url` (there is a strict 5 second timeout).
+- Unexpected HTTP response statuses. Only `200`, `201`, or `202` HTTP responses are treated as successful.
+
+The platform will retry a webhook up to **7** times. Each retry will take longer to trigger than the previous attempt (up to a max of 3600 seconds).
+
+### Webhook events
+
+Every webhook event includes JSON body that can be parsed to get the webhook data:
 
 ```json
 {
@@ -28,12 +61,12 @@ The attributes in the above object are described below:
 
 Attribute | Description
 --- | ---
-id | The unique id of the request. This id is shared between retries of the same request.
+id | The unique id of the request. This id is shared between retries of the same event.
 event | The event that triggered the webhook.
 company | The company identifier.
 data | The event data.
 
-The following headers will be included on all events:
+The webhook event will also include the following HTTP headers:
 
 Header | Value
 --- | ---
@@ -43,7 +76,7 @@ Content-Type | `application/json`
 
 ### Supported events
 
-The platform currently support the following webhook events:
+The platform supports the following webhook events:
 
 Event | Description
 --- | ---
