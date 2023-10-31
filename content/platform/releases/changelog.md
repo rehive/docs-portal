@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-10-31" >}}
+
+1. Updated validation when adding permissions to groups. An error will now be triggered if an admin permission is added to a user section group.
+2. Updated MFA handling to throw an error when a admin user tries to enable SMS MFA.
+3. Updated the validation of company names, and all user name fields to be more strict on what values are accepted.
+
+---
+
 {{< link-heading "h5" "2023-10-24" >}}
 
 1. Added a new `weight` field to requirement sets and requirement set item resources.
