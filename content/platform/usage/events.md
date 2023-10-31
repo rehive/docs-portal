@@ -14,7 +14,7 @@ Each webhook contains the following properties:
 - `secret` : The secret is sent in the `Authorization` header of each event's webhook HTTP request.
 - `expression` : An optional condition that is used to evaluate whether the event should trigger.
 
-### Requirements
+#### Requirements
 
 When building a service that receives webhook events, please adhere to the following requirements:
 
@@ -25,14 +25,14 @@ When building a service that receives webhook events, please adhere to the follo
 - Return a response within 5 seconds. The platform will terminate any connection that takes longer than 5 seconds. Terminated requests will be retried like a failed request.
 - Treat all webhook events as idempotent. This will protect against unexpected retries due to network or connection errors.
 
-### Recommendations
+#### Recommendations
 
 We recommend the following as well:
 
 - Check the IP of each webhook event your service receives. Platform webhooks will always originate fromt the same IP: **34.91.230.165**.
 - Perform event processing, particularly long running processing, asynchronously (outside of the webhook event's request -> response process). This will allow your service to respond to a webhook event quickly but still perform any other processing without worrying about the 5 second response timeout.
 
-### Retries
+#### Retries
 
 Platform webhooks will automatically retry if a webhook fails. Failure can be caused by:
 
@@ -42,7 +42,7 @@ Platform webhooks will automatically retry if a webhook fails. Failure can be ca
 
 The platform will retry a webhook up to **7** times. Each retry will take longer to trigger than the previous attempt (up to a max of 3600 seconds).
 
-### Webhook events
+### Event data
 
 Every webhook event includes JSON body that can be parsed to get the webhook data:
 
