@@ -12,7 +12,7 @@ Each webhook contains the following properties:
 - `event` : The event that should trigger the webhook.
 - `url` : The endpoint that webhook events should be sent to. Events are sent in an HTTP request containing the event data formatted as JSON.
 - `secret` : The secret is sent in the `Authorization` header of each event's webhook HTTP request.
-- `expression` : An optional condition that is used to eveluate whether the event should trigger.
+- `expression` : An optional condition that is used to evaluate whether the event should trigger.
 
 ### Requirements
 
