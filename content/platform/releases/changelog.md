@@ -9,11 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h5" "2023-10-31" >}}
+{{< link-heading "h5" "2023-11-01" >}}
 
 1. Updated validation when adding permissions to groups. An error will now be triggered if an admin permission is added to a user section group.
 2. Updated MFA handling to throw an error when a admin user tries to enable SMS MFA.
 3. Updated the validation of company names, and all user name fields to be more strict on what values are accepted.
+4. Added a new `creator` property to the transaction resource. This property contains the user that created the transaction and it can be accessed via:
+    - All transaction webhook events: `transaction.create`, `transaction.update`, `transaction.initiate`, `transaction.execute`.
+    - The admin transaction retrieve endpoint : `/3/admin/transactions/{id}/`
 
 ---
 
