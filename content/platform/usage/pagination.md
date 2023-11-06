@@ -40,7 +40,7 @@ You can use cursor pagination by including a `pagination=cursor` GET param on an
 
 **Limitations**
 
-Cursor pagination ordering can only performed on incrementing, immutable, and unique (or close to unique) values. For this reason only the following fields can be ordered by when using cursor pagination:
+Cursor pagination ordering can only be performed on incrementing, immutable, and unique (or close to unique) values. For this reason, only the following fields can be used for ordering:
 
 - `created`
 - `-created`
