@@ -19,7 +19,7 @@ On listing pages, the platform provides a way to paginate results. The default p
 }
 ```
 
-The default page size is 15 but can be changed by adding a `page_size` query parameter to the request URL.
+The default page size is 15 but can be changed by adding a `page_size` query parameter to the request URL. The max page size is 250.
 
 ### Cursor pagination
 
@@ -37,3 +37,10 @@ You can use cursor pagination by including a `pagination=cursor` GET param on an
     }
 }
 ```
+
+**Limitations**
+
+Cursor pagination ordering can only performed on incrementing, immutable, and unique (or close to unique) values. For this reason only the following fields can be ordered by when using cursor pagination:
+
+- `created`
+- `-created`
