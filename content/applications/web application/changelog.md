@@ -9,6 +9,13 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2023-11-09 - 2.24.18" >}}
+
+- Implemented an update for multi-fee handling.
+- Added support for the custom payment processor in the PRS checkout flow. 
+
+--- 
+
 {{< link-heading "h4" "2023-10-30 - 2.24.17" >}}
 
 - Fixed issues relating to deposit types and config in the Withdraw flow.
