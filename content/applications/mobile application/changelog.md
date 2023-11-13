@@ -9,6 +9,18 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2023-11-13 - 7.3.0" >}}
+
+**Bug fixes**
+- Implemented the invoking logout API when the user clicks UI logout button.
+
+**Changes**
+- Updated the date format in the buy-sell flows. 
+- Updated how limits are displayed in the withdraw flow. 
+- Implemented multi-fee handling. 
+
+---
+
 {{< link-heading "h4" "2023-08-03 - 7.2.0" >}}
 
 **Features**
