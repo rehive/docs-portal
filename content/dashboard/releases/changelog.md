@@ -7,6 +7,25 @@ weight: 1
 
 Summary of additions and changes to the Rehive Dashboard. 
 
+---
+
+{{< link-heading "h4" "2023-11-14" >}}
+
+**Bug fixes:**
+
+* Fixed product Save and Add another action and ensured that images are saving as expected in the Product Extension.
+* Fixed issue with Custom Extension form submitting all data.
+
+**Changes:**
+
+- Removed an outdated notification permission type from the Custom Extension.
+- Update to handle permissions based on their Group Section.
+- Update to control the available Multi-Factor Authentication options based on the user's MFA status, while ensuring continued support for existing SMS MFA users.
+- Update to improve Notification Extension handling.
+- Update to ensure that when an admin selects an account they are directed to the appropriate view modal.
+
+---
+
 {{< link-heading "h4" "2023-10-26" >}}
 
 **Bug fix:**
