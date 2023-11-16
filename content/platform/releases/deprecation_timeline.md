@@ -37,7 +37,7 @@ This timeline indicates when certain functionality will be permanently removed f
 1. Remove the `password1` and `password2` fields from the register endpoints.
     - Use the `password` field instead. Handle double password value confirmation on the frontend instead.
 2. Remove the `new_password1` and `new_password2` fields from the password reset confirm and passowrd change endpoints:
-    - Use the `password` field instead. Handle double password value confirmation on the frontend instead.
+    - Use the `new_password` field instead. Handle double password value confirmation on the frontend instead.
 3. Remove the `allow_overdrafts` field from the company settings. 
     - Developers and administratrs should instead configure specific overdrafts via tier limits.
 
