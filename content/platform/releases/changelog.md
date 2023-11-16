@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-11-16" >}}
+ 
+1. Added a new `password` field to the register endpoints. This replaces the `password1` and `password2` fields.
+2. Added a new `new_password` field to the password reset confirm and password change endpoints. This replaces the `new_password1` and `new_password2` fields.
+3. Updated the Swagger schema to include information on deprecated fields.
+
+---
+
 {{< link-heading "h5" "2023-11-01" >}}
 
 1. Updated validation when adding permissions to groups. An error will now be triggered if an admin permission is added to a user section group.
