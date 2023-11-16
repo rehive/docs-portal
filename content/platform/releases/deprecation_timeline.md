@@ -9,12 +9,12 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ### Deprecated
 
-{{< link-heading "h5" "2024-01-12" >}}
+{{< link-heading "h5" "2024-01-30" >}}
 
 *Added on 2023-05-30*
 
 1. Remove the temporary `use_new_documents_and_requirement_sets` field on the `company` resource. All companies will be force dto use the new documents and requirement set handling.
-2. Remove the old MFA `document_type` and `document_category` handling on documents.
+2. Remove the old `document_type` and `document_category` handling on documents.
     - All documents should have `type` instead. The `document_type` and `documnt_catgeory` will be removed compleletely.
     - Documents can be updated through the API to have the new `type` field (after adding `document-types`).
     - Please contact the Rehive team if you want us to migrate your documents to the new format.
@@ -29,7 +29,16 @@ This timeline indicates when certain functionality will be permanently removed f
     - `/groups/<name>/tiers/` and `/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
     - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
     - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
-5. Remove the `allow_overdrafts` field from the company settings. 
+
+{{< link-heading "h5" "2024-02-20" >}}
+
+*Added on 2023-11-16*
+
+1. Remove the `password1` and `password2` fields from the register endpoints.
+    - Use the `password` field instead. Handle double password value confirmation on the frontend instead.
+2. Remove the `new_password1` and `new_password2` fields from the password reset confirm and passowrd change endpoints:
+    - Use the `password` field instead. Handle double password value confirmation on the frontend instead.
+3. Remove the `allow_overdrafts` field from the company settings. 
     - Developers and administratrs should instead configure specific overdrafts via tier limits.
 
 ### Removed
