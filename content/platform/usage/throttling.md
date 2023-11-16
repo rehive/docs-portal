@@ -52,7 +52,7 @@ extended | 300/min | 1200/min | -
 The following is a list of endpoints that are throttled in other ways (on top of the general throttling):
 
 Endpoint | method | burst | sustained | Condition
----|---|---|---
+---|---|---|---|---
 `/3/auth/login/` | POST | 6/min | 20/hour | Same user and company field.
 `/3/auth/deactivate/` | POST | 4/min | 10/hour | Same user and company field.
 `/3/auth/password/reset` | POST | 4/min | 10/hour | Same user and company field.
