@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-11-20" >}}
+ 
+1. Added a new `expires` field to the transaction resource. 
+    - This field contains the timestamp when an `initiating` transaction will be removed/invalidated (if it does not changes statues before then).
+2. Added a new `expires` field to the transaction-collection creation endpoint. 
+    - This can be used to add a custom `expires` date to all transactions that don't have their own `expires` field defined.
+3. Added a new `default_transaction_lifespan` to the company settings resource.
+    - This is the lifespan of `initiating` transactions that automatically gets applied to each transaction's `expires` field if a custom one is not specified.
+
+---
+
 {{< link-heading "h5" "2023-11-16" >}}
  
 1. Added a new `password` field to the register endpoints. This replaces the `password1` and `password2` fields.
