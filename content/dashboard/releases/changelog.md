@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-11-23" >}}
+
+**Changes:**
+
+- Implemented the inclusion of a permission type for each row displayed on relevant permission pages, this update includes both administrator and user permission sections.
+- Updated to the latest jQuery version to remain secure and less susceptible to potential security threats.
+- Revised the account management functionalities to include improved visibility and filtering for archived accounts across various sections.
+- Enhanced the Notifications Extension to optimize functionality and better integrate with various layouts.
+
+---
+
 {{< link-heading "h4" "2023-11-14" >}}
 
 **Bug fixes:**
