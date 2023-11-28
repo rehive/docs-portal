@@ -9,6 +9,15 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2023-11-28 - 2.24.19" >}}
+
+- Actioned an update to improve subtype filtering 
+- Updated the display message for when crypto and bank accounts are applied in the configuration 
+- Removed unnecessary white space on the home transaction card 
+- Fixed custom processor currency patch using an incorrect currency code 
+
+--- 
+
 {{< link-heading "h4" "2023-11-09 - 2.24.18" >}}
 
 - Implemented an update for multi-fee handling.
