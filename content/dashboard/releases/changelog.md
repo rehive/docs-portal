@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-12-01" >}}
+
+**Changes:**
+
+- Added an updated integer field on company settings.
+- Included a new default filter on the product extension order page.
+- Updated the Rehive JavaScript library to use a new version.
+- Improved the details view found in document logs.
+  
+---
+
 {{< link-heading "h4" "2023-11-23" >}}
 
 **Changes:**
