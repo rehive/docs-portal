@@ -13,7 +13,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
  
 1. Improved filter performance on the transaction listing endpoints.
 2. Changed the way Rehive evaluates companies as inactive. Extension API calls are now excluded when calculating whether a company has an requests in the last 90 days.
-3. Added more strict validation to specifically prevent the modification of company owner's emails/mobiles by other users with admin permissions.
+3. Added stricter validation to prevent the modification of company owner’s emails/mobiles by other users with admin permissions.
 
 ---
 
