@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2023-12-14" >}}
+
+**Changes:**
+
+- Updated the webhooks manage page to include a warning banner that informs users of the risks associated with removing a webhook.
+- Completed minor updates on the Get Started page to enhance the user experience.
+
+---
+
 {{< link-heading "h4" "2023-12-01" >}}
 
 **Changes:**
