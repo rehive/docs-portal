@@ -9,6 +9,18 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2023-12-19" >}}
+
+1. Updated the account-currency resource to contain an `id` property.
+2. Add new `account_currencies` list property on wallet/crypto/bank accounts:
+    - This stores a list of specific account-currencies a wallet/crypto/bank account is related to.
+3. Added CRUD for adding/removing account-currencies on wallet/crypto/bank accounts.
+4. Added account-currency filters on the wallet/crypto/bank account list endpoints.
+5. Updated crypto accounts to no longer require the address to be unique, multiple crypto account can be uploaded with the same address.
+6. Improved serialization and serilaizer inheritance to work better for wallet/crypto/bank accounts and accounts/account-currencies.
+
+---
+
 {{< link-heading "h5" "2023-12-12" >}}
  
 1. Improved filter performance on the transaction listing endpoints.
