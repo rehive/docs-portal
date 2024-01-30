@@ -9,6 +9,19 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2023-12-14 - 7.4.0" >}}
+
+**Changes**
+- Set android launchMode as singleInstance 
+- Upgraded expo SDK version to 49 
+- Improved subtype filtering 
+- Sets public address not federation address as the default withdraw option 
+- Added a copied to clipboard message on the transaction history 
+- Removed amplitude and it's usage  
+- Removed 'expo-analytics-amplitude' library 
+
+---
+
 {{< link-heading "h4" "2023-11-13 - 7.3.0" >}}
 
 **Bug fixes**
