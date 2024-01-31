@@ -9,8 +9,20 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-01-31 - 2.24.23" >}}
+
+**Fixes**
+- Implemented a text edit in the payment request flow.
+- Revised the conversion settings on the "Create New Sale" QR screen.
+- Ensured user session creation after logging in with MFA in the SEP-24 widget.
+- Enabled the option for users to hide the deposit/withdrawal selection in the SEP-24 production flow.
+- Updated to the latest version of the Rehive JavaScript Library for password updates.
+
+--- 
+
 {{< link-heading "h4" "2023-11-28 - 2.24.19" >}}
 
+**Fixes**
 - Actioned an update to improve subtype filtering 
 - Updated the display message for when crypto and bank accounts are applied in the configuration 
 - Removed unnecessary white space on the home transaction card 
@@ -20,6 +32,7 @@ Summary of additions and changes to the web application.
 
 {{< link-heading "h4" "2023-11-09 - 2.24.18" >}}
 
+**Fixes**
 - Implemented an update for multi-fee handling.
 - Added support for the custom payment processor in the PRS checkout flow. 
 
@@ -45,6 +58,7 @@ Summary of additions and changes to the web application.
 
 {{< link-heading "h4" "2023-10-16 - 2.24.13" >}}
 
+**Fixes**
 - Fixed a string error for a resend OTP issue on sign-up. 
 - Fixed a web rigid issue relating to responsiveness on the home page. 
 
@@ -70,6 +84,7 @@ Summary of additions and changes to the web application.
 
 {{< link-heading "h4" "2023-08-16 - 2.24.4" >}}
 
+**Fixes**
 - Fixed react-scripts hot refresh issue 
 - Updated date format in buy-sell-exchange flows 
   
@@ -77,6 +92,7 @@ Summary of additions and changes to the web application.
 
 {{< link-heading "h4" "2023-08-03 - 2.24.3" >}}
 
+**Fixes**
 - Updated PRS functionality to make payments using the correct operational account
 - Updated PRS request handling to use the new API format/requirements
 - Updated PRS transaction history handling to correctly label transactions.
@@ -85,12 +101,14 @@ Summary of additions and changes to the web application.
 
 {{< link-heading "h4" "2023-07-20 - 2.24.2" >}}
 
+**Fixes**
 - Updated left to right handling to fix issues with scrollbars.
 
 ---
 
 {{< link-heading "h4" "2023-06-29 - 2.24.0" >}}
 
+**Fixes**
 - Fixed wallet warnings.
 - Fixed admin type user onboarding issue.
 - Fixed products list page currency option does not showing correctly.
