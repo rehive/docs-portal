@@ -9,7 +9,7 @@ Summary of additions and changes to the web application.
 
 --- 
 
-{{< link-heading "h4" "2024-02-15 - 2.24.23" >}}
+{{< link-heading "h4" "2024-02-15 - 2.24.24" >}}
 
 **Changes**
 - Implemented updates to how orders are managed.
