@@ -9,6 +9,16 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-02-15 - 2.24.23" >}}
+
+**Changes**
+- Implemented updates to how orders are managed.
+- Actioned improvements to do with error messages in mass sending.
+- Updated an error message in the developer API token creation.
+- Updated the structure of the data returned by the Business Extension.
+
+--- 
+
 {{< link-heading "h4" "2024-01-31 - 2.24.23" >}}
 
 **Fixes**
