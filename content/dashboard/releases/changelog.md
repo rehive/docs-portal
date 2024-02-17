@@ -9,30 +9,40 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
-{{< link-heading "h4" "2023-12-14" >}}
+{{< link-heading "h4" "2024-02-15" >}}
 
 **Changes:**
 
-- Updated the webhooks manage page to include a warning banner that informs users of the risks associated with removing a webhook.
-- Completed minor updates on the Get Started page to enhance the user experience.
+- Updated to appropriately handle errors for transactions.
 
+**Bug fixes:**
+
+- Added a missing event in event dropdown list in the Notification Extension.
+- Updated the event amount field type when creating a reward in the Rewards Extension.
+- Actioned a fix to ensure all notifications are copied from the test company to the production company during creation.
+  
 ---
 
-{{< link-heading "h4" "2023-12-14" >}}
+{{< link-heading "h4" "2024-02-14" >}}
 
 **Changes:**
 
-- Updated the webhooks manage page to include a warning banner that informs users of the risks associated with removing a webhook.
-- Completed minor updates on the Get Started page to enhance the user experience.
+- Updated how orders are viewed in the Product Extension. 
+- Removed deprecations and updated naming conventions in the App config UI.
+- Removed the level section in the user details page if no tier is present.
 
+**Bug fixes:**
+
+- Fixed an unescaped HTML in an extension name field.
+- Fixed a non-responsive button when choosing to upload a file.
+  
 ---
 
-{{< link-heading "h4" "2023-12-14" >}}
+{{< link-heading "h4" "2024-02-12" >}}
 
-**Changes:**
+**Change:**
 
-- Updated the webhooks manage page to include a warning banner that informs users of the risks associated with removing a webhook.
-- Completed minor updates on the Get Started page to enhance the user experience.
+- Updated the business extension info panel on the user details page.
 
 ---
 
