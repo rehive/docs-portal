@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-02-19" >}}
+
+**Bug fix:**
+
+- Resolved a bug on "API Token creation" to ensure that the user verifies the token using MFA before the API Key is shown.
+
+---
+
 {{< link-heading "h4" "2024-02-15" >}}
 
 **Changes:**
