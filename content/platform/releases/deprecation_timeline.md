@@ -9,7 +9,7 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ### Deprecated
 
-{{< link-heading "h5" "2024-01-30" >}}
+{{< link-heading "h5" "2024-06-18" >}}
 
 *Added on 2023-05-30*
 
@@ -30,7 +30,7 @@ This timeline indicates when certain functionality will be permanently removed f
     - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
     - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
 
-{{< link-heading "h5" "2024-02-20" >}}
+{{< link-heading "h5" "2024-06-18" >}}
 
 *Added on 2023-11-16*
 
