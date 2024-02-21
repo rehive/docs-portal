@@ -9,6 +9,18 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-02-21" >}}
+
+1. Added a new system for limiting what fields users/groups can access on specific resources.
+    - A new `properties` field has been added to user and group permissions to contain a list of fields to deny/allow on a specific 
+    - This system currently only support field based permissions on the `transaction` type and `view` level permissions.
+    - Additionally, for now, this system only supports limiting fields within the `metadata` object of a resource.
+2. Updated email/mobile verify resend to only resend for the specified email/mobile and not all unverified emails/mobiles.
+3. Fixed a regression where 0 value limits were not unlimited as per the original design.
+4. Applied optimizations to the permission and permission cache handling used in authentication/authorization.
+
+---
+
 {{< link-heading "h5" "2023-12-19" >}}
 
 1. Updated the account-currency resource to contain an `id` property.
