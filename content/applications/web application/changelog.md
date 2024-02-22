@@ -9,6 +9,14 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-02-22 - 2.24.25" >}}
+
+**Changes**
+- Updated how the wallet gets crypto details for a currency within it's various flows.
+- Implemented the linking of account actions to subtypes.
+
+--- 
+
 {{< link-heading "h4" "2024-02-15 - 2.24.24" >}}
 
 **Changes**
