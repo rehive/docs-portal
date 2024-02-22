@@ -29,7 +29,7 @@ Alternatively if you need users to perform an action that requires escalated pri
 
 #### Use platform idempotency
 
-If you are concerned about mistakenly replaying an action on the platform due to a bug or a race condition, then use [platform level idempotency](/platform/usage/idempotency/) on `POST`, `PATCH`, and `PUT` requests.
+If you are concerned about mistakenly replaying an action on the platform due to a bug or a race condition, then use [platform level idempotency](/platform/advanced-usage/idempotency/) on `POST`, `PATCH`, and `PUT` requests.
 
 
 #### Consider pagination
@@ -39,7 +39,7 @@ Ensure that you take into account that most listing pages are paginated. This me
 
 #### Consider throttling
 
-Platform endpoints are throttled if too many requests are executed at the same time. You should build in a manner that is resilient to throttling. The [documentation](/platform/usage/throttling/) has a section on throttling.
+Platform endpoints are throttled if too many requests are executed at the same time. You should build in a manner that is resilient to throttling. The [documentation](/platform/advanced-usage/throttling/) has a section on throttling.
 
 When building a client-side interface this should rarely be an issue as the throttling is quite forgiving, but it can occur more in backend systems where a single admin/service token is used for all the API requests.
 
@@ -54,7 +54,7 @@ If you are working in Python or Javascript you should use one of the Rehive supp
 
 #### Handle multi-factor authentication and authorization
 
-If you want to use multi-factor authentication and/or authorization you should ensure your implementation is compatible with the [multi-factor functionality](/platform/usage/multi-factor/) in the platform.
+If you want to use multi-factor authentication and/or authorization you should ensure your implementation is compatible with the [multi-factor functionality](/platform/advanced-usage/multi-factor/) in the platform.
 
 
 #### Monitor the changelog and deprecation timeline.

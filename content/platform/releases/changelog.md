@@ -101,8 +101,8 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 {{< link-heading "h5" "2023-08-16" >}}
 
-1. Final removal of the deprecated [MFA functionality](https://docs.rehive.com/platform/releases/deprecation_timeline/#2023-08-16).
-   - The replacement MFA functionality is documented [here](https://docs.rehive.com/platform/usage/multi-factor/).
+1. Final removal of the deprecated [MFA functionality](/platform/releases/deprecation_timeline/#2023-08-16).
+   - The replacement MFA functionality is documented [here](/platform/advanced-usage/multi-factor/).
 
 ---
 

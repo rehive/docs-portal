@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Throttling
 description: Throttling.
-weight: 8
+weight: 2
 ---
 
 The Rehive platform uses throttling to protect against API misuse and ensure all clients experience equal quality-of-service. Throttling errors will always be returned as a `429` response with a throttling specific error message:

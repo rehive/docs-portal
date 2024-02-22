@@ -25,13 +25,13 @@ The format for uploading images for files is quite strict. when uploading files 
 - The file must be uploaded as form data and have its own `filename` and `Content-Type`.
 - The file must be smaller than 5MB (5242880 bytes).
 
-We provide [documentation](/platform/usage/uploading/) on some common ways to upload files using cURL, Javascript, or Python.
+We provide [documentation](/platform/advanced-usage/uploading/) on some common ways to upload files using cURL, Javascript, or Python.
 
 ---
 
 **Why do some of my requests return a `429` status code and an error message saying `Request was throttled. Expected available in X seconds.`?**
 
-The platform API applies throttling to all endpoints if they are accessed too rapidly. The level of throttling varies on the endpoint and the payment plan of the company accessing it. Throttling is discussed further [here](/platform/usage/throttling/).
+The platform API applies throttling to all endpoints if they are accessed too rapidly. The level of throttling varies on the endpoint and the payment plan of the company accessing it. Throttling is discussed further [here](/platform/advanced-usage/throttling/).
 
 ---
 
