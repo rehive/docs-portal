@@ -7,7 +7,7 @@ weight: 4
 
 The recommendations detailed here will help you eliminate potential bugs, vulnerabilities or unexpected interactions with the platform. Developers should make sure they read through these before designing a system or at least before moving to a production setup.
 
-For extension specific development you can read the recommendations [here](/extensions/get-started/recommendations/).
+For extension specific development you can read the recommendations [here](/building/get-started/recommendations/).
 
 
 #### Perform actions as an authenticated user.
@@ -25,6 +25,23 @@ Alternatively if you need users to perform an action that requires escalated pri
 
 - For user authenticated requests: expect a Rehive auth token to be included in an `Authorization` header and then call the platform to see if it is a real user.
 - For webhook requests: check the `secret` in the `Authorization` header. This can also be used to identify webhooks for specific companies.
+
+
+#### Use a service user
+
+**If you are building a backend integration it may be beneficial to use a service user to make requests to the Platform**. The service group is specifically designed to support machine users in the Rehive ecosystem. Using a service user provides the following benefits:
+
+- Identify and seperate machine users from actual users.
+- Control access via machine users on a per service basis.
+- Configure fine-grained permissions on a per service basis.
+- Prevent changes on an admin user from impacting API tokens used by machine users.
+
+You can create and use machine users in the following ways:
+
+- Manually create a user in the `service` group, attach permissions to that user and then generate an API token for it.
+- Use the extensions ecosystem documented [here](/building/get-started/introduction/).
+
+When manually creating machine users we recommend adding a service description to the `first_name` field and omitting the email/mobile/username fields as machine users do not need to login or receive notifications.
 
 
 #### Use platform idempotency
