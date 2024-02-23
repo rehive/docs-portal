@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Idempotency
 description: Idempotency.
-weight: 6
+weight: 1
 ---
 
 The platform supports idempotency for protecting against accidentally repeating a request that should only ever take place once. By attaching an idempotency key to a request you can be sure that the platform will only process the request once and that the response will always be identical on all subsequent requests with the same key.
@@ -17,7 +17,7 @@ curl https://api.rehive.com/3/user/ \
   -H "Authorization: Token {token}" \
   -H "Idempotency-Key: {key}" \
   -H "Content-Type: application/json" \
-  -d '{"first_name": "Joe"}' 
+  -d '{"first_name": "Joe"}'
 ```
 
 Keys will be marked as expired after 24 hours and will be eligible for complete removal from the system. Once removed, a key can be reused on fresh request (that will generate a new saved response).

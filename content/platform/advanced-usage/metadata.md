@@ -2,10 +2,10 @@
 date: 2023-05-09T15:21:22+02:00
 title: Metadata
 description: Metadata storage on resources.
-weight: 11
+weight: 3
 ---
 
-Many resources in the platform have a `metadata` field that can be used to store miscellaneous custom information. This field is used by extensions and applications to store data like: UI/UX preferences, additional references and notes and relationships to extensions etc.  
+Many resources in the platform have a `metadata` field that can be used to store miscellaneous custom information. This field is used by extensions and applications to store data like: UI/UX preferences, additional references and notes and relationships to extensions etc.
 
 The `metadata` field always defaults to `null` and when populated is a JSON object with some additional rules:
 
@@ -16,7 +16,9 @@ The `metadata` field always defaults to `null` and when populated is a JSON obje
 - The max size of the entire `metadata` field (per resource) is capped at 104857 bytes.
 
 <aside class="warning">
-<b>Important:</b> The metadata field is visible to end-users so should not be used to store information that should be hidden from them. Additionally, it may be better to store extra data in an extension rather than the metadata if you intend to use said data to perform filters or data mutations.
+<b>Important:</b> By default, the metadata field is visible to end-users and thus you should be careful when including sensitive information in the metadata. It is often better to store extra data in an extension rather than use the metadata field excessively.
+
+You can deny access to fields within the metadata by making use of <a href="/platform/advanced-usage/permissions/" target="_blank">property level permissions</a>.
 </aside>
 
 ### JSON Merge Patch
@@ -42,7 +44,7 @@ And we update the field with the following:
 ```json
 {
     "b": null,
-    "c": "y"  
+    "c": "y"
 }
 ```
 
@@ -51,7 +53,7 @@ The end result of the update will be:
 ```json
 {
     "a": "x",
-    "c": "y"  
+    "c": "y"
 }
 ```
 

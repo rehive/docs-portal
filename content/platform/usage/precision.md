@@ -1,11 +1,11 @@
 ---
 date: 2022-02-09T15:21:22+02:00
-title: Currencies and amounts
-description: Currencies and amounts.
+title: Precision
+description: Precision in currencies and amounts.
 weight: 5
 ---
 
-In order to prevent precision errors and other unexpected behaviour when working with decimal values, the platform handles all currency amounts/values as integers. This means that when posting an amount it should always be converted to its lowest currency unit (ie. an integer). For most currencies this will be the cents value (eg. $ 1.00 represented as 100 in the API).
+In order to prevent precision errors when working with decimal values, the platform handles all currency amounts/values as integers. This means that when posting an amount it should always be converted to its lowest currency unit (ie. an integer). For most currencies this will be the cents value (eg. $ 1.00 represented as 100 in the API).
 
 When returning an integer value for a currency amount Rehive will always include a currency object and its associated divisibility so that it is easy to convert between decimal and integer values (and vice versa).
 

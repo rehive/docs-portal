@@ -11,7 +11,7 @@ In this guide we will look at dive into what a Currency Manager is, how to build
 
 The first place to start is by familiarizing yourself with the [Get Started section](/building/get-started/introduction/). This gives a basic overview of how to start building an extension as well as the ground-level endpoints you’ll need to use. You should also familiarize yourself with [Rehive’s Standard Configurations](https://docs.google.com/document/d/1LdWBY2Oim2EPWv2-ZNKIPXDbnULbSf-DiUfuCw7_zQg/edit#) to ensure that the correct subtypes are used for specific transactions.
 
-Lastly being comfortable with the [transaction](https://docs.rehive.com/platform/core-resources/transactions/) and [transaction collection](https://docs.rehive.com/platform/core-resources/transaction-collections/) logic is also required to start building a currency manager extension.
+Lastly being comfortable with the [transaction](/platform/core-resources/transactions/) and [transaction collection](/platform/core-resources/transaction-collections/) logic is also required to start building a currency manager extension.
 
 
 ### What is currency management?

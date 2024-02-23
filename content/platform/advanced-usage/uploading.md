@@ -2,10 +2,10 @@
 date: 2022-02-09T15:21:22+02:00
 title: Uploading
 description: Upploading files and images.
-weight: 9
+weight: 4
 ---
 
-Many resources in Rehive have file or image properties (documents, icons, profile images etc.). In order to populate these properties you will have to upload files through the the API. 
+Many resources in Rehive have file or image properties (documents, icons, profile images etc.). In order to populate these properties you will have to upload files through the the API.
 
 Uploads in Rehive should be done using a `POST`, `PUT` or `PATCH` (depending on the endpoint) HTTP method with a `Content-Type` of `multipart/form-data`. Individual files myst be smaller than 5MB (5242880 bytes).
 
@@ -29,7 +29,7 @@ Within a web browser context, you can upload files using the [Rehive JavaScript 
 
 ```javascript
 const rehive = new Rehive({
-    apiVersion: 3, 
+    apiVersion: 3,
     // Add your API token here.
     apiToken: "{token}"
 });
@@ -56,7 +56,7 @@ const fs = require('fs');
 const Rehive = require('rehive');
 
 const rehive = new Rehive({
-    apiVersion: 3, 
+    apiVersion: 3,
     // Add your API token here.
     apiToken: "{token}"
 });

@@ -53,5 +53,5 @@ Authorization: Token {token}
 </aside>
 
 <aside class="warning">
-    Ensure that you understand how <a href="/platform/usage/multi-factor/" target="_blank">multi-factor authentication and authorization</a> impact platform usage.
+    Ensure that you understand how <a href="/platform/advanced-usage/multi-factor/" target="_blank">multi-factor authentication and authorization</a> impact platform usage.
 </aside>

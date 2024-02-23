@@ -82,7 +82,7 @@ In addition to the required endpoints there are some standardized optional endpo
 
 This endpoint will be used by the platform to send webhook events to the extension. There is no requirement that this be a single endpoint, however we recommend that extensions have a single port of entry for platform endpoints in order to make debugging and correct webhook handling easier.
 
-Please review the [platform documentation](https://docs.rehive.com/platform/usage/events/) on webhooks before adding any to your extensions.
+Please review the [platform documentation](/platform/usage/events/) on webhooks before adding any to your extensions.
 
 #### /rotate/
 

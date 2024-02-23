@@ -7,7 +7,7 @@ weight: 1
 
 The platform is the core component of the Rehive ecosystem. It acts as the backbone for all company, user, account and transaction management in Rehive. In addition, it offers a wide set of endpoints to make it easier for developers to build transactional applications and systems.
 
-The platform cosists of two APIs: The **Platform API** and the **Platform Admin API**.
+The platform consists of two APIs: The **Platform API** and the **Platform Admin API**.
 
 ### Platform API
 
