@@ -9,6 +9,12 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-02-29" >}}
+
+1. Update the property level permissions functionalityy to support `change` and `add` permission levels.
+
+---
+
 {{< link-heading "h5" "2024-02-21" >}}
 
 1. Added a new system for limiting what fields users/groups can access on specific resources.
