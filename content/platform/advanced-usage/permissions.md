@@ -15,13 +15,15 @@ It is important to note that while you can configure permissions on both the use
 
 ### Property level permissions (beta)
 
-In addition to offering permissions on resources as a whole, the API provides a way to modify the property level permissions on resources. This can be used to deny access to certain properties returned by the API. For instance, when storing `metadata` on a transaction you might want to hide certain values from your end users while still allowing your admin team to access them.
+In addition to offering permissions on resources as a whole, the API provides a way to modify the property level permissions on resources. This can be used to deny access to certain properties processed by the API. For instance, when storing `metadata` on a transaction you might want to hide certain values from your end users while still allowing your admin team to access them.
 
 <aside class="warning">
 This is a beta feature that is still under active development.
 </aside>
 
-Property level permissions are handled by adding property keys to a `properties` field that can be found on all group and user permissions. The format of the `properties` field is:
+Property level permissions are configured by adding keys to a `properties` field available on all group and user permissions. Each key represents a property on a resource (permission type) that should be denied/allowed when that permissions level (view, add, change) is relevent. For instance if the permission level is `view` then any keys in the property object will be removed when returing the resource in an API response. On the otherhand, property keys related to the permission levels `add` or `change` are removed from the request body during request parsing.
+
+The `properties` field is formatted like this:
 
 ```json
 {
@@ -31,7 +33,7 @@ Property level permissions are handled by adding property keys to a `properties`
 }
 ```
 
-The `key` can be any string value that represents a dotted path to a JSON property. The `action` must be either `deny` or `allow`. The `allow` keyword is only relevent if you want to allow access to a property on a user but the group they are in has a deny action applied to that property.
+The `key` can be any string value that represents a dotted path to a JSON property. The `action` must be either `deny` or `allow`. The `allow` keyword is only relevent if you want to allow access to a property on a user but the group they are in has a deny action applied to that property already.
 
 Correctly configured property level permissions will look like this:
 
@@ -48,8 +50,7 @@ Correctly configured property level permissions will look like this:
 
 The following limitations apply to property level permissions currently:
 
-- Only sub properties of the `metadata` field can be specified.
 - Only `transaction` type permissions can have properties configured on them.
-- Only `view` level permissions can have properties configured on them.
+- Only sub properties of the `metadata` field can be specified.
 
-There is no plan to support property level permissions in the extensions system yet.
+Both of these limitations will be removed as we roll out future iterations on this feature.
