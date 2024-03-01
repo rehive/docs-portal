@@ -9,6 +9,14 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-03-01 - 2.24.26" >}}
+
+**Changes**
+- Allowed for the ability to hide additional fields in the app configuration.
+- Added a pre-loading state to the SEP-24 Transaction Form.
+
+--- 
+
 {{< link-heading "h4" "2024-02-22 - 2.24.25" >}}
 
 **Changes**
