@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-03-01" >}}
+
+**Changes:**
+
+- Updated the Business Extension with a new page called Business users, and two new panels on the view business page.
+- Created an Account Metrics page that shows totals for user accounts and standalone accounts.
+
+---
+
 {{< link-heading "h4" "2024-02-19" >}}
 
 **Bug fix:**
