@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-03-04" >}}
+
+**Hotfix:**
+
+- Resolved an issue related to incorrect filtering for business managers and customers in the Business Extension.
+
+---
+
 {{< link-heading "h4" "2024-03-01" >}}
 
 **Changes:**
