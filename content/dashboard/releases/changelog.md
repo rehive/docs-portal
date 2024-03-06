@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-03-06" >}}
+
+**Changes:**
+
+- Updated the FAQ UI for App config in the App Extension.
+- Removed the option to add admins from the Help block on the Get Started page.
+- Added two help hints under Campaigns in the Rewards Extension.
+- Fixed a transactions retrieval issue on the Metrics page.
+
+---
+
 {{< link-heading "h4" "2024-03-04" >}}
 
 **Hotfix:**
