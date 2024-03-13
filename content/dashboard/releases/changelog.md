@@ -9,6 +9,16 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-03-13" >}}
+
+**Changes:**
+
+- Resolved display issues for large transaction volume values being truncated in Transaction Metrics.
+- Fixed the non-functional toggling options in the General Settings of the App config in the App Extension.
+- Resolved an issue where users were stuck on the loader page due to a build task completion error.
+
+---
+
 {{< link-heading "h4" "2024-03-06" >}}
 
 **Changes:**
