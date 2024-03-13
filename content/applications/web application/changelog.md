@@ -9,6 +9,16 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-03-01 - 2.24.28" >}}
+
+**Changes**
+- Fixed to allow users to select a currency when using the Pay with Stellar option on the PRS checkout flow.
+- Enhanced the user interface for displaying currencies linked to other products.
+- Resolved an issue where previously selected currencies failed to save after navigating between tabs.
+- Implemented a solution to use the account definition instead of the user account reference to fetch currency details.
+
+--- 
+
 {{< link-heading "h4" "2024-03-01 - 2.24.26" >}}
 
 **Changes**
