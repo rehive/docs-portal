@@ -9,7 +9,7 @@ Summary of additions and changes to the web application.
 
 --- 
 
-{{< link-heading "h4" "2024-03-01 - 2.24.28" >}}
+{{< link-heading "h4" "2024-03-12 - 2.24.28" >}}
 
 **Changes**
 - Fixed to allow users to select a currency when using the Pay with Stellar option on the PRS checkout flow.
