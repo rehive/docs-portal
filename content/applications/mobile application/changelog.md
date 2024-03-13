@@ -9,7 +9,7 @@ Summary of additions and changes to the mobile application.
 
 ---
 
-{{< link-heading "h4" "2024-03-13 - 7.6.1" >}}
+{{< link-heading "h4" "2024-03-12 - 7.6.1" >}}
 
 **Changes**
 - Implemented a solution to use the account definition instead of the user account reference to fetch currency details.
