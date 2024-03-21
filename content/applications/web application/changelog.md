@@ -9,6 +9,13 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-03-21 - 2.24.29" >}}
+
+**Bug fix**
+- Fixed for MFA challenges that were not completing after creating API tokens on an MFA enabled business user.
+
+--- 
+
 {{< link-heading "h4" "2024-03-12 - 2.24.28" >}}
 
 **Changes**
