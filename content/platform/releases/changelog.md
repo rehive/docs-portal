@@ -9,9 +9,27 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-03-22" >}}
+
+1. Updated email/mobile `primary` field handling to support modification as well as more strict role based controls:
+    - Users (and admins) can now modify their primary email/mobile as long as they have not verified their existing primary/mobile.
+    - Admins can modify the primary email/mobile of other users who are not admin users.
+    - Company owners can modify the primary email/mobile of any other user.
+2. Updated email/mobile verification (`verified`) handling:
+    - When verifying their own emails/mobiles users must always use the full verification process themslves.
+    - Admins can manually verify the emails/mobiles of any other non-admin users.
+    - Owners can manually verify the emails/mobiles of any other users.
+3. Implemented an account/user deletion and verification process:
+    - Added a new `/auth/request-delete/` endpoint for a user to anonymously request a delete verification email.
+    - Added a new `/auth/request-delete/verify/` endpoint for a user to anonymously confirm a delete verification request.
+    - Added new `retention_state` field on the user resource to store whether a user has requested (and confirmed) account deletion.
+    - Added a new `user.request_delete.verify` webhook event.
+
+---
+
 {{< link-heading "h5" "2024-02-29" >}}
 
-1. Update the property level permissions functionalityy to support `change` and `add` permission levels.
+1. Updated the property level permissions functionalityy to support `change` and `add` permission levels.
 
 ---
 
