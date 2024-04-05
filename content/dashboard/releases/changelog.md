@@ -9,6 +9,20 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-04-05" >}}
+
+**Changes:**
+
+- Updated the create credit transaction modal to ensure that the user email address is pre-filled and the primary account is pre-selected correctly.
+- Fixed a bug to ensure that after a user enables 2FA that the UI does not show the ‘enable 2FA’ option in the profile dropdown or in the Action points box on the Get Started page.
+- Improved the UI for the MFA authenticator deletion process to hide the ‘save’ button for verified authenticators and remove the token field when deleting an object as this is not required.
+- Optimized the API calls for the Account Metrics page to use two API calls instead of one to prevent an API call with too many filters and to populate the results efficiently.
+- Reworked sections in the App Config in the App Extension to ensure that deprecated information is removed and the sections appear cleaner and more user-friendly.
+- Added a new menu section to the App config in the App Extension for the wallet to show or hide menu items.
+- Added an update to include a default name for Extension users if no first name is set in order to ensure that the users listing page doesn’t break if no first name is added.
+
+---
+
 {{< link-heading "h4" "2024-03-12" >}}
 
 **Changes:**
