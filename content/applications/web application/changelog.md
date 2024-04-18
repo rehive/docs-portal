@@ -9,6 +9,18 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-04-18 - 2.24.30" >}}
+
+**Changes**
+- Fixed a bug to ensure that reward campaigns that are restricted by a group, do not show for that group.
+- Added a warning message to let users know when they need to top up their insufficient balance to proceed to checkout.
+- Added confirm and success messages to the transaction flow.
+- Enhanced to include the user's profile picture on the request transaction item in the account requests list.
+- Amended the max button to include fees in the transaction flow.
+- Updated to ensure that web and mobile each generate their own locales json.
+
+--- 
+
 {{< link-heading "h4" "2024-03-21 - 2.24.29" >}}
 
 **Bug fix**
