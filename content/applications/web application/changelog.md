@@ -17,7 +17,6 @@ Summary of additions and changes to the web application.
 - Added confirm and success messages to the transaction flow.
 - Enhanced to include the user's profile picture on the request transaction item in the account requests list.
 - Amended the max button to include fees in the transaction flow.
-- Updated to ensure that web and mobile each generate their own locales json.
 
 --- 
 
