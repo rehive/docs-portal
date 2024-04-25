@@ -9,6 +9,19 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2024-04-25 - 7.7.1" >}}
+
+**Changes**
+- Implemented skeleton loaders for initial page load.
+- Updated the fail screen text to be more user-friendly.
+- Improved the UI by adding the request user's profile picture to requests.
+- Ensured that the MAX button includes fees.
+- Added confirm and success messages to Locales.
+- Enhanced the logout transition to be smoother.
+- Updated the back button to be fixed when scrolling.
+
+---
+
 {{< link-heading "h4" "2024-03-12 - 7.6.1" >}}
 
 **Changes**
