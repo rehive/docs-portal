@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-05-16" >}}
+
+**Changes:**
+
+- Actioned minor UI updates on the Asset page in the Stellar Extension.
+- Updated to include a message about app configuration when creating or editing products in the Product Extension.
+- Included a new conversion integration event in the events drop down under the Integrations section of the Conversion Extension.
+- Added a retention state to the user info page under Basic Info, and incorporated this feature into columns and filters.
+
+---
+
 {{< link-heading "h4" "2024-04-05" >}}
 
 **Changes:**
