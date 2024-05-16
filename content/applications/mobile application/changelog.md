@@ -9,6 +9,13 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2024-05-16 - 7.7.3" >}}
+
+**Change**
+- Updates to the user deletion and deactivation functionality.
+
+---
+
 {{< link-heading "h4" "2024-04-25 - 7.7.1" >}}
 
 **Changes**
