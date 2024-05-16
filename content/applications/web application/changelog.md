@@ -9,6 +9,13 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-05-16 - 2.24.31" >}}
+
+**Change**
+- Addition of request delete and verify delete pages for the account deletion flow.
+
+--- 
+
 {{< link-heading "h4" "2024-04-18 - 2.24.30" >}}
 
 **Changes**
