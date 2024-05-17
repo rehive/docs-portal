@@ -2,7 +2,7 @@
 date: 2022-02-09T15:21:22+02:00
 title: Uploading
 description: Upploading files and images.
-weight: 4
+weight: 6
 ---
 
 Many resources in Rehive have file or image properties (documents, icons, profile images etc.). In order to populate these properties you will have to upload files through the the API.

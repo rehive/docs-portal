@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Idempotency
 description: Idempotency.
-weight: 1
+weight: 7
 ---
 
 The platform supports idempotency for protecting against accidentally repeating a request that should only ever take place once. By attaching an idempotency key to a request you can be sure that the platform will only process the request once and that the response will always be identical on all subsequent requests with the same key.

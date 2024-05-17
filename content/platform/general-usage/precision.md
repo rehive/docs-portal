@@ -2,7 +2,7 @@
 date: 2022-02-09T15:21:22+02:00
 title: Precision
 description: Precision in currencies and amounts.
-weight: 5
+weight: 4
 ---
 
 In order to prevent precision errors when working with decimal values, the platform handles all currency amounts/values as integers. This means that when posting an amount it should always be converted to its lowest currency unit (ie. an integer). For most currencies this will be the cents value (eg. $ 1.00 represented as 100 in the API).

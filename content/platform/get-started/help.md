@@ -5,6 +5,14 @@ description: Help and support.
 weight: 5
 ---
 
+### Support
+
+If you need help using the platform, you can search our help center or contact our support team:
+
+- [Help Center](https://rehive.intercom.help/en/)
+- [Support](https://rehive.com/support)
+
+
 ### Troubleshooting
 
 **Why is the anonymous user login endpoint returning a `1020` error page?**
@@ -50,8 +58,3 @@ If you are still uncertain about why an endpoint is returning an unexpected resp
     * The headers (please only include the first 8 characters of the token in the Authorization header and mask out the rest)
     * The response status and body.
 4. The expected outcome of the API request, should it not be obvious what the error is based on the response status and body.
-
-### Other resources
-
-- [Help Center](https://rehive.intercom.help/en/)
-- [Support](https://rehive.com/support)
