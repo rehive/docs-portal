@@ -1,11 +1,11 @@
 ---
 date: 2018-09-17T15:21:22+02:00
 title: Events
-description: Events.
-weight: 6
+description: Events in the platform.
+weight: 1
 ---
 
-The Platform has a collection of internal events that can be configured to trigger webhooks. Webhooks can be added using the dashboard or directly via the API. 
+The Platform has a collection of internal events that can be configured to trigger webhooks. Webhooks can be added using the dashboard or directly via the API.
 
 Each webhook contains the following properties:
 
@@ -36,7 +36,7 @@ We recommend the following as well:
 
 Platform webhooks will automatically retry if a webhook fails. Failure can be caused by:
 
-- Connection errors when calling the webhook `url`. 
+- Connection errors when calling the webhook `url`.
 - Timeouts when calling the webhook `url` (there is a strict 5 second timeout).
 - Unexpected HTTP response statuses. Only `200`, `201`, or `202` HTTP responses are treated as successful.
 
@@ -106,3 +106,5 @@ Event | Description
 `transaction.update` | transaction updated event
 `transaction.initiate` | transaction initiated (pending) event
 `transaction.execute` | transaction executed (complete/failed) event
+`transaction.transition.create` | transition created event
+`transaction.transition.update` | transition updated event

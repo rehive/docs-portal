@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Filters
 description: Filters.
-weight: 4
+weight: 3
 ---
 
 The platform provides a way to filter and/or sort on listing pages. All filtering and sorting is done via query parameters in the GET request.

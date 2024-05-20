@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Pagination
 description: Pagination.
-weight: 3
+weight: 2
 ---
 
 On listing pages, the platform provides a way to paginate results. The default pagination method offered by the platform is page pagination, which allows navigation to a "paged based" point in a list of results as well as via `next` and `prev`attributes. The JSON format returned on paginated listing pages looks like this:

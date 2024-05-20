@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Throttling
 description: Throttling.
-weight: 2
+weight: 8
 ---
 
 The Rehive platform uses throttling to protect against API misuse and ensure all clients experience equal quality-of-service. Throttling errors will always be returned as a `429` response with a throttling specific error message:
@@ -14,7 +14,7 @@ The Rehive platform uses throttling to protect against API misuse and ensure all
 }
 ```
 
-The primary throttling types are listed below, but the exact details may vary as a result of Rehive adapting to changing requirements and client usage. 
+The primary throttling types are listed below, but the exact details may vary as a result of Rehive adapting to changing requirements and client usage.
 
 - **General throttling** : Applied to endpoints that require authentication to protect against a single user overloading the API.
 - **Other throttling** : Applied to some endpoints (mostly authentication related) to provide additional protections against misuse.
@@ -25,7 +25,7 @@ Across the entire Platform API, there is a global limit of **300 requests per 10
 
 Generally, when dealing with authenticated users, throttling is applied based on the company's tier. There are 4 tiers that have different throttling rules depending on whether the request is on a `user` or `admin` section endpoint. The `restricted` tier will automatically be applied to a company if their associated billing account is unpaid. In these situations only the "owner" or original creator of the company will still be able to access the API.
 
-New companies, and those within the trial period have a throttling type of `limited`. 
+New companies, and those within the trial period have a throttling type of `limited`.
 
 #### Sustained usage
 
@@ -64,5 +64,3 @@ Endpoint | method | burst | sustained | Condition
 `/3/auth/mfa/deliver/` | POST MFA Challenge deliver | 6/min | 10/hour | Same user
 
 All anonymous endpoints have a flat limit of 20 requests/min per IP.
-
-

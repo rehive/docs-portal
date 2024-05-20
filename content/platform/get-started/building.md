@@ -9,14 +9,12 @@ The Rehive ecosystem includes the option to use our white-label web and mobile a
 
 This section of the documentation will describe some general building tips and the key ways to integrate with the Rehive platform. If you are looking for a guide aimed specifically at extension building in Rehive please take a look at the [extensions documentation](/extensions/get-started/introduction/)
 
-
 ### Integrating with Rehive
 
 Integrations with Rehive generally exist in two major forms:
 
 - **A client-side or frontend application** that interacts with the Rehive Platform. This is normally something like a web or mobile application or simply just a website.
 - **A server-side or backend service** that interacts with the Rehive Platform. This can be a middle-man API that forwards requests to Rehive, or it could simply be a service that monitors events from Rehive and performs actions based on it.
-
 
 #### Client-side
 
@@ -33,7 +31,6 @@ The architecture in this case is quite simple.
 5. Subsequent requests always attach the above `token` as an `Authorization` header so that the Rehive Platform knows which user is making the request and can evaluate their authorization level.
 6. The application can then provide access to features that perform actions on the Rehive Platform. eg. transaction creation, profile modifications, and KYC document uploads.
 7. To logout,the logout endpoint can be called and the token can be erased from the local storage.
-
 
 #### Server-side
 

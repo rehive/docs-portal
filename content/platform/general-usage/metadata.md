@@ -2,7 +2,7 @@
 date: 2023-05-09T15:21:22+02:00
 title: Metadata
 description: Metadata storage on resources.
-weight: 3
+weight: 5
 ---
 
 Many resources in the platform have a `metadata` field that can be used to store miscellaneous custom information. This field is used by extensions and applications to store data like: UI/UX preferences, additional references and notes and relationships to extensions etc.

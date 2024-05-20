@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Idempotency
 description: Idempotency.
-weight: 1
+weight: 7
 ---
 
 The platform supports idempotency for protecting against accidentally repeating a request that should only ever take place once. By attaching an idempotency key to a request you can be sure that the platform will only process the request once and that the response will always be identical on all subsequent requests with the same key.
@@ -25,5 +25,5 @@ Keys will be marked as expired after 24 hours and will be eligible for complete 
 Previously executed idempotent requests can be identified via the header `Idempotent-Replayed: true`.
 
 <aside class="notice">
-Idempotent requests do not work on anonymous endpoinst where no authentication token has been provided (eg. many of the URL paths beginning with <code>/auth/</code>).
+  Idempotent requests do not work on anonymous endpoinst where no authentication token has been provided (eg. many of the URL paths beginning with <code>/auth/</code>).
 </aside>
