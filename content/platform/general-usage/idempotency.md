@@ -25,5 +25,5 @@ Keys will be marked as expired after 24 hours and will be eligible for complete 
 Previously executed idempotent requests can be identified via the header `Idempotent-Replayed: true`.
 
 <aside class="notice">
-Idempotent requests do not work on anonymous endpoinst where no authentication token has been provided (eg. many of the URL paths beginning with <code>/auth/</code>).
+  Idempotent requests do not work on anonymous endpoinst where no authentication token has been provided (eg. many of the URL paths beginning with <code>/auth/</code>).
 </aside>

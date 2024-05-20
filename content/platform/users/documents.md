@@ -5,6 +5,10 @@ description: Documents in the platform.
 weight: 6
 ---
 
+<aside class="warning">
+	<strong>Warning</strong>: This page is under construction!
+</aside>
+
 Documents are used by users to upload any documentation that a company may require. Usually documents are used to upload KYC related files such as proof of identity, proof of funds, proof of residence etc.
 
 ### Document types
