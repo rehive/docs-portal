@@ -5,13 +5,10 @@ description: Help and support.
 weight: 5
 ---
 
-### Support
-
 If you need help using the platform, you can search our help center or contact our support team:
 
 - [Help Center](https://rehive.intercom.help/en/)
 - [Support](https://rehive.com/support)
-
 
 ### Troubleshooting
 

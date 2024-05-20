@@ -2,7 +2,7 @@
 date: 2018-09-17T15:21:22+02:00
 title: Events
 description: Events in the platform.
-weight: 2
+weight: 1
 ---
 
 The Platform has a collection of internal events that can be configured to trigger webhooks. Webhooks can be added using the dashboard or directly via the API.
@@ -106,3 +106,5 @@ Event | Description
 `transaction.update` | transaction updated event
 `transaction.initiate` | transaction initiated (pending) event
 `transaction.execute` | transaction executed (complete/failed) event
+`transaction.transition.create` | transition created event
+`transaction.transition.update` | transition updated event

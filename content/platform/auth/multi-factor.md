@@ -17,7 +17,7 @@ There are three resources you should be aware of when interacting with multi-fac
 
 #### Authenticator rules
 
-Authenticator rules are used by administrators to configure when MFA challenged should be issued to users. All rules can be configured on the global "company" level or alterntaively on specific user groups. A group-specific rule will always take precedence over a non-group rule when evaluating challenges.
+Authenticator rules are used by administrators to configure when MFA challenges should be issued to users. All rules can be configured on the global "company" level or alterntaively on specific user groups. A group-specific rule will always take precedence over a non-group rule when evaluating challenges.
 
 ##### Types
 
@@ -59,7 +59,7 @@ Each challenge is associated with a single session and a single rule. A challeng
 
 ### Usage
 
-Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly) for the list of multi-factor endpoints.
+Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly/tag/auth) for the list of multi-factor endpoints.
 
 When logging in and a challenge is issued, the login response will include a list of challenges like:
 
