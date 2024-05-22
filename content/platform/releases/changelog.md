@@ -7,6 +7,26 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the [deprecation timeline](/platform/releases/deprecation_timeline/).
 
+--
+
+{{< link-heading "h5" "2024-05-13" >}}
+
+1. Updated the default request delete verify URL to be `/request-delete/verify` instead of  just `/request-delete`.
+2. Updated all auth email webhooks to include the company identifier and email in the URL query params.
+3. Updated inactivity handling on test companies to allow for a longer inactivity period.
+4. Fixed a bug in account serialization that was resulting in a missing `definition` field in some responses.
+5. Fixed a bug in user filters that was resulting in all users getting returned when a non-existent user was included in a `user` filter.
+
+---
+
+{{< link-heading "h5" "2024-04-29" >}}
+
+1. Updated how metrics are build and stored.
+    - Multiple metrics can now be created with the same query.
+    - Metrics with the same queries all use the same data points.
+    - Added new filter fields on metrics and metric points.
+2. Fixed a bug in the list metric resource that was resulting in a 500 error when filtering.
+
 ---
 
 {{< link-heading "h5" "2024-03-22" >}}
