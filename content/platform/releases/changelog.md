@@ -7,7 +7,7 @@ weight: 1
 
 Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the [deprecation timeline](/platform/releases/deprecation_timeline/).
 
---
+---
 
 {{< link-heading "h5" "2024-05-13" >}}
 
