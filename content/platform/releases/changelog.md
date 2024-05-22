@@ -21,7 +21,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 {{< link-heading "h5" "2024-04-29" >}}
 
-1. Updated how metrics are build and stored.
+1. Updated how metrics are built and stored internally:
     - Multiple metrics can now be created with the same query.
     - Metrics with the same queries all use the same data points.
     - Added new filter fields on metrics and metric points.
