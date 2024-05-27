@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-05-27" >}}
+
+1. Added a new `residencies` field that accepts a list of countries that a company supports for user residence.
+2. Added a new `residency` field to the user resource. This field accepts a country value that must be in the `residencies` list above (if it is populated).
+
+---
+
 {{< link-heading "h5" "2024-05-13" >}}
 
 1. Updated the default request delete verify URL to be `/request-delete/verify` instead of  just `/request-delete`.
