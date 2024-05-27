@@ -13,6 +13,8 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 1. Added a new `residencies` field that accepts a list of countries that a company supports for user residence.
 2. Added a new `residency` field to the user resource. This field accepts a country value that must be in the `residencies` list above (if it is populated).
+3. Fixed a bug in the swagger documentation that resulted in JSON fields or similar property-like fields getting displayed as `string` values instead of objects.
+4. Fixed a bug in the fees cache that resulted in cache not getting cleared correctly when groups fees were added or removed.
 
 ---
 
