@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-05-30" >}}
+
+1. Fixed a bug in the admin API that prevented admins from modifying account-currencies on crypto accounts.
+2. Added support for admins to delete primary emails on non-admin users.
+3. Added support for owners to delete primary emails on admin users.
+
+---
+
 {{< link-heading "h5" "2024-05-27" >}}
 
 1. Added a new `residencies` field that accepts a list of countries that a company supports for user residence.
