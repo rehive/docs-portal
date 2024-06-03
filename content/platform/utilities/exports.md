@@ -16,6 +16,8 @@ The supported export resources are:
 
 Exports are processed asynchronously and may take longer to complete on companies with larger data sets. To ensure exports finish quickly, try to perform exports with the necessary date range specified in the filters.
 
+Exports are automatically cleared from the system once they are 12 weeks old. You should download the files if you wish to store exports for longer.
+
 <aside class="notice">
 	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/exports" target="_blank">API reference</a> for further details on the export endpoints.
 </aside>
