@@ -9,6 +9,16 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-05-28" >}}
+
+**Changes:**
+
+- Updated the retention state banner to see at a glance whether a user wants their account deleted and whether this deletion has been executed by the admin.
+- Implemented a [SEP-24 management section](https://dashboard.rehive.com/#/extensions/stellar-testnet/anchor) to the Stellar Extension, including SEP-10 Accounts, SEP-24 Transactions, additional Anchor Settings, an update to the Assets page, and enhanced transaction details.
+- Updated the JS library to ensure that generating QR codes is working as expected.
+
+---
+
 {{< link-heading "h4" "2024-05-16" >}}
 
 **Changes:**
