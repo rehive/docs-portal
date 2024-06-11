@@ -9,6 +9,27 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-06-11 - 2.24.35" >}}
+
+**Change**
+- Updated to ensure alphabetical ordering for product sub-categories.
+
+--- 
+
+{{< link-heading "h4" "2024-06-03 - 2.24.34" >}}
+
+**Change**
+- Fixed broken two-factor authentication QR code on sign up flow.
+
+--- 
+
+{{< link-heading "h4" "2024-05-22 - 2.24.33" >}}
+
+**Change**
+- Added the deactivation verify page to the account deactivation flow.
+
+--- 
+
 {{< link-heading "h4" "2024-05-16 - 2.24.31" >}}
 
 **Change**
