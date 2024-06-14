@@ -9,7 +9,7 @@ Summary of additions and changes to the web application.
 
 --- 
 
-{{< link-heading "h4" "2024-06-11 - 2.24.36" >}}
+{{< link-heading "h4" "2024-06-14 - 2.24.36" >}}
 
 **Enhancement**
 - Updated the ability for multiples of an item to be added to the cart under Products.
