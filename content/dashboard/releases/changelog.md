@@ -9,6 +9,14 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-06-14" >}}
+
+**Changes:**
+
+- Updated the referral settings config structure in the App Extension to ensure that the refer a friend option in the profile section of the web app is showing up as expected.
+
+---
+
 {{< link-heading "h4" "2024-05-28" >}}
 
 **Changes:**
