@@ -9,6 +9,18 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-06-11 - 2.24.36" >}}
+
+**Enhancement**
+- Updated the ability for multiples of an item to be added to the cart under Products.
+
+**Bug fixes**
+- Fixed a loading issue with the start shopping pop-up modal on the Products landing page.
+- Fixed an issue with options and variants not saving correctly while editing a product in the pricing and quantity tab.
+- Resolved an issue where prices and categories were not saving correctly when editing products.
+
+--- 
+
 {{< link-heading "h4" "2024-06-11 - 2.24.35" >}}
 
 **Change**
