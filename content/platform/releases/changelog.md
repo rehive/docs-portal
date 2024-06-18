@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-06-18" >}}
+
+1. Added a new `listed` field to the `groups` resoource.
+    - If this field is set to `false` on a public group it will not be available on the public listing endpoint.
+2. Increased the max page size allowed on exports to 100000.
+3. Fixed a bug in exports that resulted in exports with 0 results getting stuck in processing.
+
+---
+
 {{< link-heading "h5" "2024-05-30" >}}
 
 1. Fixed a bug in the admin API that prevented admins from modifying account-currencies on crypto accounts.
