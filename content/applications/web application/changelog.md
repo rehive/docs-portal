@@ -9,6 +9,16 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-06-27 - 2.24.37" >}}
+
+**Enhancements**
+- Added an appropriate success message for the add to cart function.
+- Updated the export requests page size and error handling on export creation.
+- Updated to autosave inputs when editing a product.
+- Improved the descriptions for options and variants when editing a product.
+
+--- 
+
 {{< link-heading "h4" "2024-06-14 - 2.24.36" >}}
 
 **Enhancement**
