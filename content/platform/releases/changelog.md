@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-07-03" >}}
+
+- Updated the new tier requirement items to have the following condition ooptions on the `user`resource: 
+    - `fathers_name__isnull`
+    - `mothers_name__isnull`
+    - `grandfathers_name__isnull`
+    - `grandmothers_name__isnull`
+- Fixed a bug in user update functionality that resulted in field changes not triggering a `status` reset correctly.
+
+---
+
 {{< link-heading "h5" "2024-06-18" >}}
 
 1. Added a new `listed` field to the `groups` resource.
