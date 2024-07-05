@@ -11,8 +11,8 @@ The Stellar service uses our monitoring hooks service under the hood to track re
 
 Using the hooks service is built to be simple. Once registered any Stellar address can be added as a webhook to the service with a callback URL. When a transaction is detected on-chain for the address the hooks service will fire of a webhook to the specified URL.
 
-Mainnet endpoint: https://stellar-hooks.services.rehive.io/  
-Testnet endpoint: https://stellar-hooks.s.services.rehive.io/
+Mainnet endpoint: https://stellar-hooks.services.rehive.com/
+Testnet endpoint: https://stellar-hooks.s.services.rehive.com/
 
 #### Registering and Authorization
 

@@ -8,11 +8,11 @@ weight: 1
 The product extension is used to manage orders, products and payments. It allows companies to setup a simple multi currency ecommerce store that rides on the Rehive transaction ledger for payments.
 
 <aside class="notice">
-The full <strong>API specification</strong> can be found <a href="https://product.services.rehive.io">here</a>
+The full <strong>API specification</strong> can be found <a href="https://product.services.rehive.com">here</a>
 </aside>
 
 <aside class="notice">
-The <strong>Swagger specification</strong> can be found <a href="https://product.services.rehive.io/swagger/">here</a>
+The <strong>Swagger specification</strong> can be found <a href="https://product.services.rehive.com/swagger/">here</a>
 </aside>
 
 The extension allows you to:

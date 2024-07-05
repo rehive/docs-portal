@@ -9,6 +9,23 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-07-05" >}}
+
+1. Added a new `.com` domains for all Rehive managed extensions:
+    - [Application extension](https://app.services.rehive.com)
+    - [Onfido extension](https://onfido.services.rehive.com)
+    - [Product extension](https://product.services.rehive.com)
+    - [Billing extension](https://billing.services.rehive.com)
+    - [Mass send extension](https://mass-send.services.rehive.com)
+    - [Conversion extension](https://conversion.services.rehive.com)
+    - [Notification extension](https://notification.services.rehive.com)
+    - [Business extension](https://business.services.rehive.com)
+    - [Payment request extension](https://payment-requests.services.rehive.com)
+    - [Stellar extension](https://stellar.services.rehive.com)
+    - [Stellar testnet extension](https://stellar-testnet.services.rehive.com)
+
+---
+
 {{< link-heading "h5" "2024-07-03" >}}
 
 - Updated the new tier requirement items to have the following condition ooptions on the `user`resource: 

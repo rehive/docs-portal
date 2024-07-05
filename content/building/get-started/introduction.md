@@ -31,7 +31,7 @@ This allows for complex additional logic to be built on top of the existing plat
 
 We will use the Notification Extension (an officially supported extension in Rehive) as an example as it contains all the elements of an extension that interacts with the Rehive ecosystem. The Notification extension has 3 elements:
 
-1. Admin API endpoints, which admins (authenticated against the platform) can use to add and manage notifications that should be triggered by certain events in the platform. These are endpoints starting with `/admin/` and are listed under the "Admin" sections in the specification documentation, for example the [Notification Extension admin endpoints](https://notification.services.rehive.io/#tag/admin)
+1. Admin API endpoints, which admins (authenticated against the platform) can use to add and manage notifications that should be triggered by certain events in the platform. These are endpoints starting with `/admin/` and are listed under the "Admin" sections in the specification documentation, for example the [Notification Extension admin endpoints](https://notification.services.rehive.com/#tag/admin)
 2. An endpoint for receiving webhook events from the platform and processing them in accordance with the settings configured in the previous point.
 3. End-user API endpoints, which users can use to manage what notifications they want to receive.
 

@@ -5,7 +5,7 @@ description: Setting up your custom Conversion Extension Integrations directly o
 weight: 4
 ---
 
-API: <code>[https://conversion.services.rehive.io/swagger/](https://conversion.services.rehive.io/swagger/)</code>
+API: <code>[https://conversion.services.rehive.com/swagger/](https://conversion.services.rehive.com/swagger/)</code>
 
 
 #### Integration Object creation

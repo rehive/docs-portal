@@ -8,11 +8,11 @@ weight: 1
 The Mass Send extension allows you to upload batches of transfer transactions via CSV files.
 
 <aside class="notice">
-The full <strong>API specification</strong> can be found <a href="https://mass-send.services.rehive.io">here</a>
+The full <strong>API specification</strong> can be found <a href="https://mass-send.services.rehive.com">here</a>
 </aside>
 
 <aside class="notice">
-The <strong>Swagger specification</strong> can be found <a href="https://mass-send.services.rehive.io/swagger/">here</a>
+The <strong>Swagger specification</strong> can be found <a href="https://mass-send.services.rehive.com/swagger/">here</a>
 </aside>
 
 The extension allows you to:

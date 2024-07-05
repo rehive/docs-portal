@@ -30,6 +30,8 @@ This timeline indicates when certain functionality will be permanently removed f
     - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
     - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
 
+---
+
 {{< link-heading "h5" "2024-08-13" >}}
 
 *Added on 2023-11-16*
@@ -40,6 +42,25 @@ This timeline indicates when certain functionality will be permanently removed f
     - Use the `new_password` field instead. Handle double password value confirmation on the frontend instead.
 3. Remove the `allow_overdrafts` field from the company settings. 
     - Developers and administratrs should instead configure specific overdrafts via tier limits.
+
+---
+
+{{< link-heading "h5" "2024-09-10" >}}
+
+*Added on 2024-07-05*
+
+1. Remove the old `.io` domains on Rehive extensions. Use the new `.com` domain variants instead:
+    - https://app.services.rehive.com
+    - https://onfido.services.rehive.com
+    - https://product.services.rehive.com
+    - https://billing.services.rehive.com
+    - https://mass-send.services.rehive.com
+    - https://conversion.services.rehive.com
+    - https://notification.services.rehive.com
+    - https://business.services.rehive.com
+    - https://payment-requests.services.rehive.com
+    - https://stellar.services.rehive.com
+    - https://stellar-testnet.services.rehive.com
 
 ### Removed
 
