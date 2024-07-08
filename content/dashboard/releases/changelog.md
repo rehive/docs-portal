@@ -9,6 +9,18 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-07-08" >}}
+
+**Change:**
+
+- Updated the instances of rehive.io to rehive.com.
+
+**Bug fix:**
+
+- Fixed incorrect transaction information displaying for debit and credit transfers that have a partner transaction linked to them.
+
+---
+
 {{< link-heading "h4" "2024-06-14" >}}
 
 **Changes:**
