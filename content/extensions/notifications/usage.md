@@ -31,7 +31,7 @@ The extension uses a mostly complete version of the Django Template Engine which
 You can do some fairly advanced templating using the built in conditions, functions, template tags and filters. For further details on builtin template tags and filters take a look at this [section](https://docs.djangoproject.com/en/1.11/ref/templates/builtins/).
 
 <aside class="notice">
-	A lot of context related template functionality (ie. request scope information) is not available in the notification extension, this is a limitation put in place for security reasons. As a result, the only context that is available when parsing templates is the webhook event data.
+A lot of context related template functionality (ie. request scope information) is not available in the notification extension, this is a limitation put in place for security reasons. As a result, the only context that is available when parsing templates is the webhook event data.
 </aside>
 
 ### Additional Template Tags
@@ -114,11 +114,16 @@ The same applies to the total amount of a transaction. When fees exist in relate
 
 When working with webhook events, it is often necessary to only send notifications when certain conditions are met. The notification extension has an expression system that allows administrators to define a condition on when a notification should be sent. These expressions are evaluated against the webhook event data and must evaluate to either `True` or `False`. A faulty expression always evaluates to `False` but an empty expression always evaluates to `True`.
 
+
 Expressions use a combination of two parsing methods. They occur in the following order:
 1. Django Template Engine is used to replace tags in the expression string with content.
 2. A safe python evaluator is then run on the resulting string.
 
 The Rehive dashboard contains notification templates with expression presets that you can take a look at if you need examples.
+
+<aside class="notice">
+Detailed expression documentation as well as an extensive list of examples can be found <a href="https://docs.google.com/document/d/1v44nM51-VaevcMYVkGEL2scI-PpZsUIESxAxLdawxbs/">here</a>.
+</aside>
 
 A small list of basic examples can be found below:
 
