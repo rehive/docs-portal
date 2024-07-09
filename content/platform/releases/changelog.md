@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-07-09" >}}
+
+1. Added a new `middle_name` field to the user resource.
+2. Added a new `middle_name` field tothe bank owner sub resource (on bank accounts).
+3. Updated the tier requirement set items to support a `middle_name` field on `user` resource conditions.
+4. Made small performance updates to the account listing balance filters.
+
+---
+
 {{< link-heading "h5" "2024-07-05" >}}
 
 1. Added a new `.com` domains for all Rehive managed extensions:
