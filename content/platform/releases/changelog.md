@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-08-01" >}}
+
+1. Migrated all companies to the new document type handling.
+    - All old document types and categorieswill be fully removed as per the deprecation timeline.
+3. Migrated all companies to the new tier requirement handling.
+    - All old tier requirement functionality will be fully removed as per the deprecation timeline.
+
+---
+
 {{< link-heading "h5" "2024-07-09" >}}
 
 1. Added a new `middle_name` field to the user resource.
