@@ -9,6 +9,35 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2024-08-01 - 2.24.41" >}}
+
+**Change**
+- Fixed a regression issue where Terms and the Privacy Policy links were no longer showing up on register.
+
+--- 
+
+{{< link-heading "h4" "2024-08-01 - 2.24.40" >}}
+
+**Change**
+- Fixed an incorrect Locales labelling issue in the App Extension. 
+
+--- 
+
+{{< link-heading "h4" "2024-08-01 - 2.24.22" >}}
+
+**Changes**
+- Improved the KYC process by implementing the new group tier requirements and document types update.
+- Updated the Stellar SEP-24 widget to use the new onboarding flow.
+
+--- 
+
+{{< link-heading "h4" "2024-07-18 - 2.24.38" >}}
+
+**Change**
+- Created a unique sign-up link for pre-selected groups.
+
+--- 
+
 {{< link-heading "h4" "2024-06-27 - 2.24.37" >}}
 
 **Enhancements**
