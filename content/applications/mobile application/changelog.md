@@ -9,6 +9,30 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2024-08-01 - 7.7.6" >}}
+
+**Change**
+- Implemented the new KYC group tier requirements and document-types update. 
+
+---
+
+{{< link-heading "h4" "2024-07-10 - 7.7.5" >}}
+
+**Changes**
+- Upgraded expo SDK to version 51. 
+- Upgraded the nodeJS version to 18 to support the latest expo SDK update.
+- Actioned an Exchange ActiveSync version update patch for the deployment. 
+
+---
+
+{{< link-heading "h4" "2024-06-27 - 7.7.4" >}}
+
+**Changes**
+- Updated the request account deletion confirmation text.
+- Fixed the infinite scroll functionality and updated the loader.
+
+---
+
 {{< link-heading "h4" "2024-05-16 - 7.7.3" >}}
 
 **Change**
