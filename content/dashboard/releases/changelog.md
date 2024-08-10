@@ -9,6 +9,37 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-08-08" >}}
+
+**Changes:**
+
+- Fixed grammatical error in the success message for new company creation.
+- Added a blacklist settings section to the Stellar Extension page.
+- Implemented a search filter on the Rewards Extension.
+- Updated handling of transaction metadata for both new and current formats.
+- Added an "exists" resource field to the mobile and email resource types for tier requirements.
+- Improved the error message when editing a tier requirement set.
+- Indicated to users when a document type no longer exists when editing tier requirements.
+
+---
+
+{{< link-heading "h4" "2024-08-01" >}}
+
+**Changes:**
+
+- Enhanced the KYC onboarding flow with the new group tier requirements and document types update.
+- Fixed a pagination issue when editing/creating tier requirement sets.
+
+---
+
+{{< link-heading "h4" "2024-07-11" >}}
+
+**Change:**
+
+- Fixed to ensure that the latest exports dropdown list is updating correctly when an export is generated.
+
+---
+
 {{< link-heading "h4" "2024-07-08" >}}
 
 **Change:**
