@@ -16,7 +16,7 @@ This timeline indicates when certain functionality will be permanently removed f
 1. Remove redundant fields from the following endpoints.
     - `/groups/` and `/groups/<name>/` : Remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
     - `/groups/<name>/tiers/` and `/groups/<name>/tiers/<id>/` : Remove the `limits` and `fees` fields. Access these fields via the appropriate limits and fees endpoints instead.
-    - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : Remove all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
+    - `/admin/users/<id>/groups/` and `/admin/users/<id>/groups/<name>/` : Remove all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
     - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits` and `fees` fields. Access these fields via the appropriate limits and fees endpoints instead.
 
 {{< link-heading "h5" "2024-09-10" >}}
@@ -69,7 +69,7 @@ This timeline indicates when certain functionality will be permanently removed f
 4. Remove fields from the following endpoints.
     - `/groups/` and `/groups/<name>/` : Remove  the `requirements` field.
     - `/groups/<name>/tiers/` and `/groups/<name>/tiers/<id>/` : Remove the `requirements` field.
-    - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : Remove the `requirements` field in the `tier` object.
+    - `/admin/users/<id>/groups/` and `/admin/users/<id>/groups/<name>/` : Remove the `requirements` field in the `tier` object.
     - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `requirements` field.
 
 {{< link-heading "h5" "2023-08-16" >}}
