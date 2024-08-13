@@ -9,28 +9,15 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ### Deprecated
 
-{{< link-heading "h5" "2024-08-13" >}}
+{{< link-heading "h5" "2024-09-10" >}}
 
 *Added on 2023-05-30*
 
-1. Remove the temporary `use_new_documents_and_requirement_sets` field on the `company` resource. All companies will be force dto use the new documents and requirement set handling.
-2. Remove the old `document_type` and `document_category` handling on documents.
-    - All documents should have `type` instead. The `document_type` and `documnt_catgeory` will be removed compleletely.
-    - Documents can be updated through the API to have the new `type` field (after adding `document-types`).
-    - Please contact the Rehive team if you want us to migrate your documents to the new format.
-3. Remove the `requirement` resource and all related endpoints. These endpoints have been replaced by the `requirement-sets` and children `items` endpoints.
-    - `/groups/<name>/tiers/<tier_id>/requirements/`
-    - `/groups/<name>/tiers/<tier_id>/requirements/<req_id>/`
-    - `/admin/groups/<name>/tiers/<tier_id>/requirements/`
-    - `/admin/groups/<name>/tiers/<tier_id>/requirements/<req_id>/`
-    - Please contact the Rehive team if you want us to migrate your `requirements` to the new `requirement-sets`.
-4. Remove fields from the following endpoints.
-    - `/groups/` and `/groups/<name>/` : remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
-    - `/groups/<name>/tiers/` and `/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
-    - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
-    - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits`, `requirements`, and `fees`.
-
----
+1. Remove redundant fields from the following endpoints.
+    - `/groups/` and `/groups/<name>/` : Remove  all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
+    - `/groups/<name>/tiers/` and `/groups/<name>/tiers/<id>/` : Remove the `limits` and `fees` fields. Access these fields via the appropriate limits and fees endpoints instead.
+    - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : Remove all fields in the `tier` object except for `id`, `level`, `name`, and `description`.
+    - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `limits` and `fees` fields. Access these fields via the appropriate limits and fees endpoints instead.
 
 {{< link-heading "h5" "2024-09-10" >}}
 
@@ -63,6 +50,27 @@ This timeline indicates when certain functionality will be permanently removed f
     - https://stellar-testnet.services.rehive.com
 
 ### Removed
+
+{{< link-heading "h5" "2024-08-13" >}}
+
+*Added on 2023-05-30*
+
+1. Remove the temporary `use_new_documents_and_requirement_sets` field on the `company` resource. All companies will be forced to use the new documents and requirement set handling.
+2. Remove the old `document_type` and `document_category` handling on documents.
+    - All documents should have `type` instead. The `document_type` and `documnt_catgeory` will be removed compleletely.
+    - Documents can be updated through the API to have the new `type` field (after adding `document-types`).
+    - Please contact the Rehive team if you want us to migrate your documents to the new format.
+3. Remove the `requirement` resource and all related endpoints. These endpoints have been replaced by the `requirement-sets` and their children `items` endpoints.
+    - `/groups/<name>/tiers/<tier_id>/requirements/`
+    - `/groups/<name>/tiers/<tier_id>/requirements/<req_id>/`
+    - `/admin/groups/<name>/tiers/<tier_id>/requirements/`
+    - `/admin/groups/<name>/tiers/<tier_id>/requirements/<req_id>/`
+    - Please contact the Rehive team if you want us to migrate your `requirements` to the new `requirement-sets`.
+4. Remove fields from the following endpoints.
+    - `/groups/` and `/groups/<name>/` : Remove  the `requirements` field.
+    - `/groups/<name>/tiers/` and `/groups/<name>/tiers/<id>/` : Remove the `requirements` field.
+    - `/users/<id>/groups/` and `/users/<id>/groups/<name>/` : Remove the `requirements` field in the `tier` object.
+    - `/admin/groups/<name>/tiers/` and `/admin/groups/<name>/tiers/<id>/` : Remove the `requirements` field.
 
 {{< link-heading "h5" "2023-08-16" >}}
 
