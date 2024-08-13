@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-08-13" >}}
+
+1. Removed old document type handling as per the deprecation timeline.
+2. Removed old tier requirement handling as per the deprecation timeline.
+
+---
+
 {{< link-heading "h5" "2024-08-01" >}}
 
 1. Migrated all companies to the new document type handling.
