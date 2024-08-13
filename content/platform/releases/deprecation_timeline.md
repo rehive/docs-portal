@@ -32,7 +32,7 @@ This timeline indicates when certain functionality will be permanently removed f
 
 ---
 
-{{< link-heading "h5" "2024-08-13" >}}
+{{< link-heading "h5" "2024-09-10" >}}
 
 *Added on 2023-11-16*
 
