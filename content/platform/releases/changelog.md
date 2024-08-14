@@ -12,7 +12,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 {{< link-heading "h5" "2024-08-14" >}}
 
 1. Updated the user document endpoint (`/3/user/documents/{id}/`) to support deletion of documents.
-    - Only `pending` documents can be deleted by end users. All other document status will raise an error response.
+    - Only `pending` documents can be deleted by end users. All other document statuses will raise an error response.
 
 ---
 
