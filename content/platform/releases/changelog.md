@@ -9,6 +9,23 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-09-06" >}}
+
+1. Added a new `Quoted` status to Rehive transactions.
+   - The `Quoted` status occurs between `Initiating` and `Pending`
+   - This status is used to differentiate between a fully quoted transaction collection and an `Initiating` collection that can still have transactions appended to it.
+2. Updated the transition flow (for transaction status changes) to handle steps to multiple transitions in a single transition set.
+3. Update the transition flow to support managed currency interruptions on any status change.
+4. Updated the `Currency` resource to support a `manager_conditions` object that can be used to configure when managed currency interruptions should occur during the transition flow.
+
+---
+
+{{< link-heading "h5" "2024-08-15" >}}
+
+1. Fixed a bug with timezone handling and converting between UTC and custom timezones when filtering on metric points.
+
+---
+
 {{< link-heading "h5" "2024-08-14" >}}
 
 1. Updated the user document endpoint (`/3/user/documents/{id}/`) to support deletion of documents.
