@@ -9,6 +9,13 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-09-17" >}}
+
+1. Updated `authentication` type challenges to have a hard expiry of 10 minutes. Exceeding the challenge lifespan period will completely reset the user's session (clear tokens) and require the user to login again.
+2. Updated the error messages on password reset failures to be more clear regarding the cause of the errors.
+
+---
+
 {{< link-heading "h5" "2024-09-06" >}}
 
 1. Added a new `Quoted` status to Rehive transactions.
