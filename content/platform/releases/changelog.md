@@ -9,6 +9,19 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-09-30" >}}
+
+1. Added a new `refresh_token` response property to the login, register and token creation endpoints:
+    - A `refresh_token` can be used to refresh an auth token for the default session duration or for a custom session duration.
+    - A `refresh_token` has a lifespan of 31 days and can only be used to once. 
+    - The `refresh_token` will be `null` if the auth token is permanent (has no expiry date).
+2. Added a new `/3/auth/refresh/` endpoint that can be used to refresh auth tokens.
+    - A `refresh_token` must be included in the `Authorization` header as `Refresh-Token {token}` or an http-only cookie with the key `refresh_token` must be set on the HTTP request.
+    - The above `refresh_token` will be consumed on a successful request and a new one will be returned. The new one should be used for any subsequent refresh attempts. 
+    - A `session_duration` may be optionally set in order to customize the amount the auth token is refreshed by (otherwise the company defaults will be used). 
+
+---
+
 {{< link-heading "h5" "2024-09-17" >}}
 
 1. Updated `authentication` type challenges to have a hard expiry of 10 minutes. Exceeding the challenge lifespan period will completely reset the user's session (clear tokens) and require the user to login again.
