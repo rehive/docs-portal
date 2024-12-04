@@ -78,33 +78,39 @@ Content-Type | `application/json`
 
 The platform supports the following webhook events:
 
-Event | Description
---- | ---
-`currency.create`  | currency created event
-`currency.update` | currency updated event
-`user.create`  | user created event
-`user.update` | user updated event
-`user.password.reset` | user password reset request event
-`user.email.verify` | user email verification event (Email key)
-`user.mobile.verify` | user mobile verification event (OTP key)
-`mfa.sms.verify` | multi-factor SMS otp event
-`email.create` | email created event
-`email.update` | email updated event
-`mobile.create` | mobile created event
-`mobile.update` | mobule updated event
-`address.create` | address created event
-`address.update` | address updated event
-`document.create` | document created event
-`document.update` | document updated event
-`bank_account.create` | bank account created event
-`bank_account.update` | bank account updated event
-`crypto_account.create` | crypto account created event
-`crypto_account.update` | crypto account updated event
-`account.create` | account created event
-`account.update` | account updated event
-`transaction.create` | transaction created event
-`transaction.update` | transaction updated event
-`transaction.initiate` | transaction initiated (pending) event
-`transaction.execute` | transaction executed (complete/failed) event
-`transaction.transition.create` | transition created event
-`transaction.transition.update` | transition updated event
+Event |
+--- |
+`company.link.create` |
+`company.link.update` |
+`company.update` |
+`currency.create` |
+`currency.update` |
+`user.create` |
+`user.update` |
+`user.password.reset` |
+`user.password.set` |
+`user.deactivate.verify` |
+`user.request_delete.verify` |
+`user.email.verify` |
+`user.mobile.verify` |
+`email.create` |
+`email.update` |
+`mobile.create` |
+`mobile.update` |
+`address.create` |
+`address.update` |
+`document.create` |
+`document.update` |
+`bank_account.create` |
+`bank_account.update` |
+`crypto_account.create` |
+`crypto_account.update` |
+`account.create` |
+`account.update` |
+`transaction.create` |
+`transaction.update` |
+`transaction.initiate` |
+`transaction.execute` |
+`transaction.transition.create` |
+`transaction.transition.update` |
+`mfa.sms.verify` |
