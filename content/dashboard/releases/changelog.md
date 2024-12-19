@@ -9,6 +9,27 @@ Summary of additions and changes to the Rehive Dashboard.
 
 ---
 
+{{< link-heading "h4" "2024-12-18" >}}
+
+**Changes:**
+
+- Updated the product extension to support the `seller` field on product add and edit.
+- Removed invalid "placheolder" text on the add custom extension page.
+- Added support for all missing webhook events as well as the new `company.update` webhook. The full list of webhook events is now support on:
+    - The platform webhook creation/update/listing/logs pages.
+    - The notification extension
+    - The rewards extension.
+- Fixed a bug with tier requirement condition handling.
+- Fixed a bug with tier requirement set deletetion handling.
+- Updated all Rehive endpoints to use the `.com` domain rather than the `.io` domain.
+- Added a new `residency` field to users and "allowed residencies" company setting.
+- Updated the `nationality` and "allowed nationalities" to always be referred to as nationality and not country.
+- Added new metrics sidebar with functionality to allow clients to create their own metrics.
+- Fixed a pagination error with company groups in the business extenstion.
+- Fixed a bug in document handling with the new document type field.
+
+---
+
 {{< link-heading "h4" "2024-08-08" >}}
 
 **Changes:**
