@@ -19,7 +19,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 4. Updated the legal-terms resource to support a `url` for content rather than just the text field.
 5. Updated `display_code` to have the same character limit as the `code` on the `currency` resource.
 6. Fixed a bug with account and transactions balance filters that resulted in no filtering getting done if a `0` value was provided.
-7. Fixed a bug where transactions could still be created admins on users in disabled groups.
+7. Fixed a bug where transactions could still be created by admins on users in disabled groups.
 8. Fixed incorrect text on the swagger documentation for some endpoints.
 9. Fixed a transaction ID filter on the transaction collection listing page.
 
