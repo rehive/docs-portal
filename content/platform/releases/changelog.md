@@ -9,6 +9,22 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2024-12-18" >}}
+
+1. Added new `company.update` event to the available webhook events. 
+    - The `company.update` event triggers whenever a company resource is updated.
+2. Updated DRF Rehive Extras to resolve swagger generation issue with examples on responses.
+3. Added a **beta** implementation of Oauth 2.0 that supports google and apple sign in.
+    - The API for the Oauth 2.0 functionality is still unstable and will likely undergo further changes before it is finalized. It should only be used in test projects.
+4. Updated the legal-terms resource to support a `url` for content rather than just the text field.
+5. Updated `display_code` to have the same character limit as the `code` on the `currency` resource.
+6. Fixed a bug with account and transactions balance filters that resulted in no filtering getting done if a `0` value was provided.
+7. Fixed a bug where transactions could still be created admins on users in disabled groups.
+8. Fixed incorrect text on the swagger documentation for some endpoints.
+9. Fixed a transaction ID filter on the transaction collection listing page.
+
+---
+
 {{< link-heading "h5" "2024-09-30" >}}
 
 1. Added a new `refresh_token` response property to the login, register and token creation endpoints:
