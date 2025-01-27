@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2025-01-27" >}}
+
+2. Multiple major upgrades to the platform's software libraries and packages.
+3. Fixed a bug in condition validation on manager conditions.
+4. Improved `first_name` and `last_name` validation to be stricter and ensure certain formats are invalid.
+5. Fixed an issue with throttling not handling case correctly when matching on data throttles.
+
+---
+
 {{< link-heading "h5" "2024-12-18" >}}
 
 1. Added new `company.update` event to the available webhook events. 
