@@ -9,6 +9,15 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2025-02-10" >}}
+
+- Optimized the user filtering on request logs.
+- Added a new `statement` resource that represents a PDF containing an account statement.
+    - Statements can be generated on individual accounts with a custom date range and timezone.
+    - Statements are automatically cleared from the system every 2 weeks.
+
+---
+
 {{< link-heading "h5" "2025-01-27" >}}
 
 2. Multiple major upgrades to the platform's software libraries and packages.
