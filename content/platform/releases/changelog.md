@@ -9,10 +9,29 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2025-03-27" >}}
+
+1. Added missing `account_currency` field on transaction collection transactions.
+2. Added support for failing transactions related to temporary users.
+3. Added a metadata field to the `account_currency` resource.
+4. Fixed the display of company logos on built-in emails.
+5. Fixed a bug in idempotency handling that was resulting old idempotency keys not getting cycled out.
+
+---
+
+{{< link-heading "h5" "2025-02-20" >}}
+
+1. Fixed a regression on the admin multi token delete endpoint.
+2. Added admin multi token protections to ensure:
+    - All tokens cannot be mistakenly deleted from a company.
+    - A non-owner admin cannot delete other admin tokens.
+
+---
+
 {{< link-heading "h5" "2025-02-10" >}}
 
-- Optimized the user filtering on request logs.
-- Added a new `statement` resource that represents a PDF containing an account statement.
+1. Optimized the user filtering on request logs.
+2. Added a new `statement` resource that represents a PDF containing an account statement.
     - Statements can be generated on individual accounts with a custom date range and timezone.
     - Statements are automatically cleared from the system every 2 weeks.
 

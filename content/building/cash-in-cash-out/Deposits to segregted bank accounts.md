@@ -41,7 +41,7 @@ NOTE: Should you wish to add qualifying criteria, you can create a `user.update`
 1. The user selects “Deposit” and is shown details of the the unique bank account created in the previous flow with a unique reference for the Rehive account to which the funds will be allocated.
 2. The user makes a bank transfer to the bank account provided and includes the unique reference in the reference field
 3. Your custom extension polls the transaction history of the company bank account
-4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive Platform Admin API endpoint <code> [admin/transactions/credit/](https://rehive-platform-admin.redoc.ly/tag/Transactions#operation/transactions_credit_create)</code> with
+4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive Platform Admin API endpoint <code> [admin/transactions/credit/](https://rehive-platform-admin.redoc.ly/tag/transactions#operation/transactions_credit_create)</code> with
 ```json
 {
     "status": "complete",
