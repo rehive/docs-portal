@@ -9,7 +9,20 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h5" "2025-03-27" >}}
+{{< link-heading "h5" "2025-05-29" >}}
+
+1. Updated the `account_currency` field on transaction resources/objects to contain an account currency object instead of an account currency ID.
+2. Added a `definition` field to all account resources returned on account currency endpoints and objects.
+    - This is available in the `account.definition` property and references the account-definition an account is related to.
+3. Added a new OIDC JWT generation flow, this includes the following new endpoints:
+   - `/.well-known/openid-configuration` : Retrieve the OIDC config.
+   - `/.well-known/jwks.json` : Retrieve the JWKS associated with the OIDC implementation.
+   - `/3/auth/jwt/` : Generates a new JWT that can be verified against the JWKS above.
+5. Improved the format of the PDFs generated on the create statements endpoint.
+
+---
+
+{{< link-heading "h5" "2025-04-27" >}}
 
 1. Added missing `account_currency` field on transaction collection transactions.
 2. Added support for failing transactions related to temporary users.
