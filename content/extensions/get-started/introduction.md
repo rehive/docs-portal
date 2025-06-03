@@ -19,6 +19,7 @@ A list of Rehive managed extensions can be found below:
 - **Stellar** - Provides management tools and a stellar implementation built on the platform.
 - **Business** - Provides tools for business onboarding, management, invoicing and payouts.
 - **Payment Request** - Provides an interface and management tools for requesting payments from users.
+- **Bridge** - Provides an interface and management tools for integrating with Bridge.
 
 <aside class="notice">
 	Rehive adds extensions on a regular basis. If you are looking for something specific that you don't see above, feel free to contact the Rehive support team with your queries.
