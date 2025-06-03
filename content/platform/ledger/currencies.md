@@ -26,5 +26,5 @@ For example, a representation of the *United States Dollar* could look like this
 ```
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform-admin.redoc.ly/tag/currencies" target="_blank">API reference</a> for further details on the currency endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-admin-api#tag/currencies/GET/3/admin/currencies/" target="_blank">API reference</a> for further details on the currency endpoints.
 </aside>

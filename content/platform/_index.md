@@ -6,9 +6,7 @@ weight: 1
 linkTo: /platform/get-started/introduction
 references:
   - title: Platform API Reference
-    url: https://rehive-platform.redoc.ly
-  - title: Platform Admin API Reference
-    url: https://rehive-platform-admin.redoc.ly
+    url: https://api.rehive.com
   - title: Javascript SDK
     url: https://github.com/rehive/rehive-javascript
   - title: Python SDK

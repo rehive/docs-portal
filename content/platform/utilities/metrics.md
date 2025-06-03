@@ -27,11 +27,11 @@ user_transacted_in_30days_count | `admin` | Count of users who transacted in the
 Metrics are processed asynchronously and may take longer to generate on companies with larger data sets.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/metrics" target="_blank">API reference</a> for further details on the metric endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/metrics/GET/3/metrics/" target="_blank">API reference</a> for further details on the metric endpoints.
 </aside>
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform-admin.redoc.ly/tag/metrics" target="_blank">API reference</a> for further details on the <strong>admin</strong> metric endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-admin-api#tag/metrics/GET/3/admin/metrics/" target="_blank">API reference</a> for further details on the <strong>admin</strong> metric endpoints.
 </aside>
 
 ## Points
@@ -43,11 +43,11 @@ When fetching data points, an `interval` filter can be used to alter the aggrega
 As mentioned previously, a rolling data point is included in each metric's data points. This point is dynamically calculated and contains the current day's data (from the last midnight data point to now).
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/metrics#operation/metrics_points_list" target="_blank">API reference</a> for further details on the metric points endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/metrics/GET/3/metrics/{identifier}/points/" target="_blank">API reference</a> for further details on the metric points endpoints.
 </aside>
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform-admin.redoc.ly/tag/metrics#operation/metrics_points_list" target="_blank">API reference</a> for further details on the <strong>admin</strong> metric pointsendpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-admin-api#tag/metrics/GET/3/admin/metrics/{identifier}/points/" target="_blank">API reference</a> for further details on the <strong>admin</strong> metric pointsendpoints.
 </aside>
 
 ## Limits

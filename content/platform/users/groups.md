@@ -21,11 +21,11 @@ Each user in the Platform can be part of one group. When a user is assigned to a
 	- Multi-factor authentication rules.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/groups" target="_blank">API reference</a> for further details on group endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/groups/GET/3/groups/" target="_blank">API reference</a> for further details on group endpoints.
 </aside>
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform-admin.redoc.ly/tag/groups" target="_blank">API reference</a> for further details on <strong>admin</strong> group endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-admin-api#tag/groups/GET/3/admin/groups/" target="_blank">API reference</a> for further details on <strong>admin</strong> group endpoints.
 </aside>
 
 

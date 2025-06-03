@@ -59,7 +59,7 @@ Each challenge is associated with a single session and a single rule. A challeng
 
 ### Usage
 
-Take a look at the [Platform API Reference](https://rehive-platform.redoc.ly/tag/auth) for the list of multi-factor endpoints.
+Take a look at the [Platform API Reference](https://api.rehive.com/?api=rehive-platform-api#tag/user) for the list of multi-factor endpoints.
 
 When logging in and a challenge is issued, the login response will include a list of challenges like:
 

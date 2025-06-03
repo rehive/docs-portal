@@ -26,8 +26,8 @@ When the user selects “Deposit” from either their web or mobile wallet, they
 1. The end-user creates and their profile.
 2. Your extension receives a webhook from Rehive Platform triggered by the `user.create` event.  
 3. Your extension makes an API call to the payment processor/ banking-as-a-service provider to create a unique deposit account for the user
-4. Your extension creates a bank account for the user on Rehive Platform using the <code> [admin/users/bank-accounts](https://rehive-platform-admin.redoc.ly/tag/users#operation/users_bank-accounts_create)</code> endpoint, method <code> POST</code> with the <code>action</code> field set to <code>"deposit"</code>.
-5. Your extension adds the currency to the bank account on Rehive using the Rehive currency code that corresponds to the currency on the bank account by doing calling the <code>[/admin/users/bank-accounts/{id}/currencies/](https://rehive-platform-admin.redoc.ly/tag/users#operation/users_bank_accounts_currencies_create)</code> endpoint with method <code>POST</code>, and a data payload of <code>{currency: "USD"}</code>
+4. Your extension creates a bank account for the user on Rehive Platform using the <code> [admin/users/bank-accounts](https://api.rehive.com/?api=rehive-platform-admin-api#tag/users/POST/3/admin/users/bank-accounts/)</code> endpoint, method <code> POST</code> with the <code>action</code> field set to <code>"deposit"</code>.
+5. Your extension adds the currency to the bank account on Rehive using the Rehive currency code that corresponds to the currency on the bank account by doing calling the <code>[/admin/users/bank-accounts/{id}/currencies/](https://api.rehive.com/?api=rehive-platform-admin-api#tag/users/POST/3/admin/users/bank-accounts/{id}/account-currencies/)</code> endpoint with method <code>POST</code>, and a data payload of <code>{currency: "USD"}</code>
 
 The deposit bank account details will be visible to the user on the relevant screens in the web and mobile apps as shown in the wallet user flow above.
 
@@ -41,7 +41,7 @@ NOTE: Should you wish to add qualifying criteria, you can create a `user.update`
 1. The user selects “Deposit” and is shown details of the the unique bank account created in the previous flow with a unique reference for the Rehive account to which the funds will be allocated.
 2. The user makes a bank transfer to the bank account provided and includes the unique reference in the reference field
 3. Your custom extension polls the transaction history of the company bank account
-4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive Platform Admin API endpoint <code> [admin/transactions/credit/](https://rehive-platform-admin.redoc.ly/tag/transactions#operation/transactions_credit_create)</code> with
+4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive Platform Admin API endpoint <code> [admin/transactions/credit/](https://api.rehive.com/?api=rehive-platform-admin-api#tag/transactions/POST/3/admin/transactions/credit/)</code> with
 ```json
 {
     "status": "complete",

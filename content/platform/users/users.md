@@ -15,9 +15,9 @@ In order to authenticate using the Auth component of the Platform, a user needs 
 Once a user is created, they can authenticate using the Platform via the login endpoint.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/user" target="_blank">API reference</a> for further details on user endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/user/GET/3/user/" target="_blank">API reference</a> for further details on user endpoints.
 </aside>
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform-admin.redoc.ly/tag/users" target="_blank">API reference</a> for further details on <strong>admin</strong> user endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-admin-api#tag/users/GET/3/admin/users/" target="_blank">API reference</a> for further details on <strong>admin</strong> user endpoints.
 </aside>

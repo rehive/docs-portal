@@ -19,9 +19,9 @@ Exports are processed asynchronously and may take longer to complete on companie
 Exports are automatically cleared from the system once they are 12 weeks old. You should download the files if you wish to store exports for longer.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/exports" target="_blank">API reference</a> for further details on the export endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/exports/GET/3/exports/" target="_blank">API reference</a> for further details on the export endpoints.
 </aside>
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform-admin.redoc.ly/tag/exports" target="_blank">API reference</a> for further details on the <strong>admin</strong> export endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-admin-api#tag/exports/GET/3/admin/exports/" target="_blank">API reference</a> for further details on the <strong>admin</strong> export endpoints.
 </aside>

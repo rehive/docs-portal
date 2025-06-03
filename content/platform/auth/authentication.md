@@ -40,10 +40,10 @@ During registration, a user will have to submit a unique identifier. The unique 
 During registration, all users in a company will be assigned a unique Platform `id`. This `id` is immutable and can be used to uniquely identify a user in the Platform for as long as the company exists. It is safe to use this `id` in your own services or extensions to identify individual users in the platform.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/auth#operation/auth_register" target="_blank">API reference</a> for further details on the registration endpoint and its supported fields.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/auth/POST/3/auth/register/" target="_blank">API reference</a> for further details on the registration endpoint and its supported fields.
 </aside>
 
-The primary register endpoint is only intended for use in client-side code due to the additional protections applied to it. The platform includes an alternative [admin authenticated register](https://rehive-platform-admin.redoc.ly/tag/auth#operation/auth_register_create) endpoint that can be used in machine-user contexts such as on a backend server where you can safely store an authentication token with admin access.
+The primary register endpoint is only intended for use in client-side code due to the additional protections applied to it. The platform includes an alternative [admin authenticated register](https://api.rehive.com/?api=rehive-platform-admin-api#tag/auth/POST/3/admin/auth/register/) endpoint that can be used in machine-user contexts such as on a backend server where you can safely store an authentication token with admin access.
 
 ### Login
 
@@ -56,10 +56,10 @@ A user can verify their identity (and access to) a user via the login flow. The 
 If a successful response is returned on login, it indicates that the correct credentials were supplied and the user will be provided with access to the account (via an authentication token). Depending on whether the user has multi-factor authentication configured, they may be required to perform extra challenge verification before continuing to use the platform.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/auth#operation/auth_login" target="_blank">API reference</a> for further details on the login endpoint and its supported fields.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/auth/POST/3/auth/login/" target="_blank">API reference</a> for further details on the login endpoint and its supported fields.
 </aside>
 
-The primary login endpoint is only intended for use in client-side code due to the additional protections applied to it. The platform includes an alternative [admin authenticated login](https://rehive-platform-admin.redoc.ly/tag/auth#operation/auth_login_create) endpoint that can be used in machine-user contexts such as on a backend server where you can safely store an authentication token with admin access.
+The primary login endpoint is only intended for use in client-side code due to the additional protections applied to it. The platform includes an alternative [admin authenticated login](https://api.rehive.com/?api=rehive-platform-admin-api#tag/auth/POST/3/admin/auth/login/) endpoint that can be used in machine-user contexts such as on a backend server where you can safely store an authentication token with admin access.
 
 ### Authentication tokens
 

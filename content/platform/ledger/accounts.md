@@ -10,7 +10,7 @@ Accounts are containers that store user balances in relation to specific currenc
 Each account may contain any number of currency balances (depending on what currencies are defined in the company). Accounts can belong to a user, in which case its settings may be influenced by the user and their group. Accounts can also be standalone (ie. not belong to a user) and therefore not influenced by any user or group settings.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/accounts" target="_blank">API reference</a> for further details on the account endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/accounts/GET/3/accounts/" target="_blank">API reference</a> for further details on the account endpoints.
 </aside>
 
 ### Defining accounts

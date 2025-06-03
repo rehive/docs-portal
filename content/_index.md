@@ -7,9 +7,7 @@ references:
   - title: System Status
     url: https://status.rehive.com
   - title: Platform API Reference
-    url: https://rehive-platform.redoc.ly
-  - title: Platform Admin API Reference
-    url: https://rehive-platform-admin.redoc.ly
+    url: https://api.rehive.com
   - title: Platform Changelog
     url: /platform/releases/changelog/
 ---

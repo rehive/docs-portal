@@ -27,7 +27,7 @@ Transactions can be made by both admin users and end-users. However, end-users a
 </aside>
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/transactions" target="_blank">API reference</a> for further details on the transaction endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/transactions/GET/3/transactions/" target="_blank">API reference</a> for further details on the transaction endpoints.
 </aside>
 
 ### Transaction collections
@@ -49,13 +49,13 @@ The transactions in a collection are ordered by "creation" time and can have the
 Transaction collections can be created by both admin users and end-users. However, transaction collections created by end-users are subject to the same rules as normal transactions.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform.redoc.ly/tag/transaction-collections" target="_blank">API reference</a> for further details on the transaction collection endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-api#tag/transaction-collections/GET/3/transaction-collections/" target="_blank">API reference</a> for further details on the transaction collection endpoints.
 </aside>
 
 ### Transaction transitions
 
-Sometimes, when building more complex flows using the Platform, it can be useful to access or manage the individual transaction transitions that occured on each transaction. The platform provides access to a transition resource that can be utilized in these scenarios.
+Sometimes, when building more complex flows using the Platform, it can be useful to access or manage the individual transaction transitions that occured on each transaction. The platform provides admin access to a transition resource that can be utilized in these scenarios.
 
 <aside class="notice">
-	Please take a look at the <a href="https://rehive-platform-admin.redoc.ly/tag/transaction-transitions" target="_blank">API reference</a> for further details on the transaction transition endpoints.
+	Please take a look at the <a href="https://api.rehive.com/?api=rehive-platform-admin-api#tag/transaction-transitions/GET/3/admin/transaction-transitions/" target="_blank">API reference</a> for further details on the transaction transition endpoints.
 </aside>

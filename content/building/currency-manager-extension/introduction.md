@@ -18,7 +18,7 @@ Lastly being comfortable with the [transaction](/platform/core-resources/transac
 
 Currency management allows each Rehive currency to be controlled by a service user. This user is known as the currency manager and is the sole entity that can shift transactions of that currency to a Complete or Failed state.
 
-The manager is assigned to the currency by updating the `manager` field using the service user's ID as the input. See the [Core API doc section](https://rehive-platform-admin.redoc.ly/tag/currencies#operation/currencies_update) for more information.
+The manager is assigned to the currency by updating the `manager` field using the service user's ID as the input. See the [Core API doc section](https://api.rehive.com/?api=rehive-platform-admin-api#tag/currencies/PATCH/3/admin/currencies/{code}/) for more information.
 
 ### What is a currency manager extension?
 
@@ -26,4 +26,4 @@ A currency manager extension is the status controller for a specific currency’
 
 Its primary functions are to transition Rehive transactions from a Pending state to either a Complete or Failed state, as well as trigger any third party side effects required on the external third party ledger.
 
-Transitioning transactions on Rehive as a currency manager is done by approving or declining [transition events](https://rehive-platform-admin.redoc.ly/tag/transaction-transitions#operation/transaction-transitions_partial_update) triggered by Rehive while it processes a transaction.
+Transitioning transactions on Rehive as a currency manager is done by approving or declining [transition events](https://api.rehive.com/?api=rehive-platform-admin-api#tag/transaction-transitions/PATCH/3/admin/transaction-transitions/{identifier}/) triggered by Rehive while it processes a transaction.
