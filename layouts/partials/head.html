@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+
+<title>{{ .Page.Title }}{{ if (ne .Page.Title .Site.Title) }} | {{ .Site.Title }}{{ end }}</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Manrope:wght@200..800&family=PT+Serif&display=swap" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+{{ $normalize := resources.Get "css/normalize.css" }}
+{{ $skeleton := resources.Get "css/skeleton.css"  }}
+{{ $syntax := resources.Get "css/syntax.css"  }}
+{{ $main := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS  }}
+{{ $css := slice $normalize $skeleton $syntax $main | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+<link rel="icon" type="{{ .Site.Params.favicon }}" href="{{ .Site.Params.favicon }}">

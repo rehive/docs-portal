@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{{ partial "head.html" . }}
+	</head>
+	<body>
+		{{ partial "navbar" . }}
+
+		<div class="container">
+			<main class="home">
+				<div class="content">
+					<section class="titles">
+					  <h1>{{ .Title }}</h1>
+					  <p>Explore the Rehive ecosystem.</p>
+					</section>
+
+					<section class="cards">
+						{{ range (sort .Site.Sections ".Weight") }}
+							<div class="card">
+								<h3>{{ .Title }}</h3>
+								<p>{{ .Description }}</p>
+								<a class="button button-primary" href="{{ .Params.linkTo | default .Permalink }}">{{ .Title }} Docs</a>
+							</div>
+						{{ end }}
+					</section>
+
+					<section class="links">
+						{{ if isset .Params "references" }}
+							<h4>Quick references</h4>
+							<ul>
+								{{ range .Params.references }}
+									<li><a href="{{ .url }}" target="_blank">{{ .title }}</a></li>
+								{{ end }}
+							</ul>
+						{{ end }}
+					</section>
+				</div>
+			</div>
+		</div>
+
+		{{ partial "footer" . }}
+	</body>
+</html>
