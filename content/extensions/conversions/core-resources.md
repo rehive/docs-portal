@@ -32,4 +32,3 @@ Field | Description
 key |  A currency key in the `USD:<to_currency_code>` format
 path | A path to another rate (eg. `USD:EUR`)
 rate | A fixed rate
-

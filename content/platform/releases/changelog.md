@@ -9,6 +9,17 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2025-06-25" >}}
+
+
+- Switched to Scalar for the platform API reference.
+    - Fixed a bug in the anchor tag linking.
+- Added a `nonce` field to the `/3/auth/jwt/` POST endpoint.
+- Fixed a bug in default throttle rates in the JWT endpoints.
+- Updated access control handling to better support receiving X-Forward-For headers from extensions and match access control rules accordingly.
+
+---
+
 {{< link-heading "h5" "2025-05-29" >}}
 
 1. Updated the `account_currency` field on transaction resources/objects to contain an account currency object instead of an account currency ID.

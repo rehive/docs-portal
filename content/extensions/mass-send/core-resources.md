@@ -32,4 +32,4 @@ For each batch, the CSV file is saved and then processed asyncronously. The stat
 
 ### Transactions
 
-Each batch contains set of transactions.
+Each batch contains a set of related transactions. These correlate to transactions in the Platform, where they are applied to the Platform ledger.
