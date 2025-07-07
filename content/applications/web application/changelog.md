@@ -9,6 +9,290 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2025-01-04 - 3.0.12" >}}
+
+**Bug fixes**
+- Fixed missing translation key for withdraw to account functionality.
+- Fixed issue where the MAX amount button was not working in the buy flow.
+- Resolved payment processor form validation issues.
+
+--- 
+
+{{< link-heading "h4" "2025-01-03 - 3.0.11" >}}
+
+**Bug fixes**
+- Fixed input validation not correctly triggering in forms.
+
+--- 
+
+{{< link-heading "h4" "2025-01-02 - 3.0.10" >}}
+
+**Bug fixes**
+- Fixed issue with Bridge crypto and bank checkout flows.
+
+--- 
+
+{{< link-heading "h4" "2025-01-02 - 3.0.9" >}}
+
+**Bug fixes**
+- Fixed issue with Bridge KYC link endpoint being called on non-Bridge companies.
+- Fixed company name loading on authentication screen.
+
+--- 
+
+{{< link-heading "h4" "2025-01-02 - 3.0.8" >}}
+
+**Enhancements**
+- Improved onboarding flow with better "Go to App" and business buttons.
+
+--- 
+
+{{< link-heading "h4" "2025-01-02 - 3.0.7" >}}
+
+**Changes**
+- Updated Bridge Terms of Service to open in the same tab with proper redirect handling.
+
+--- 
+
+{{< link-heading "h4" "2024-12-30 - 3.0.6" >}}
+
+**Enhancements**
+- Added profile picture display to the receive pages.
+
+--- 
+
+{{< link-heading "h4" "2024-12-30 - 3.0.5" >}}
+
+**Bug fixes**
+- Fixed MFA race condition issue.
+
+--- 
+
+{{< link-heading "h4" "2024-12-30 - 3.0.4" >}}
+
+**Bug fixes**
+- Fixed residency field width issue in forms.
+
+--- 
+
+{{< link-heading "h4" "2024-12-23 - 3.0.3" >}}
+
+**Bug fixes**
+- Fixed checkout page login issue.
+
+--- 
+
+{{< link-heading "h4" "2024-12-23 - 3.0.2" >}}
+
+**Bug fixes**
+- Added timeout to help resolve MFA asynchronous processing issues.
+
+--- 
+
+{{< link-heading "h4" "2024-12-23 - 3.0.1" >}}
+
+**Bug fixes**
+- Fixed memo validation to only check for memo on cryptocurrency recipient sends.
+
+--- 
+
+{{< link-heading "h4" "2024-12-23 - 3.0.0" >}}
+
+**Major Release**
+- Upgraded to the latest Node.js and React versions.
+- Migrated from deprecated Create React App to Vite build system.
+- Removed support for deprecated payment processors (Wyre, Indacoin, Bitrefill, VoucherMoney).
+- Enhanced performance and modernized the application architecture.
+
+--- 
+
+{{< link-heading "h4" "2024-11-20 - 2.24.70" >}}
+
+**Bug fixes**
+- Fixed PoS QR code generation issue.
+
+**Features**
+- Added configuration option to hide cryptocurrency withdraw functionality.
+
+--- 
+
+{{< link-heading "h4" "2024-05-06 - 2.24.68" >}}
+
+**Bug fixes**
+- Fixed MFA phone number validation.
+
+--- 
+
+{{< link-heading "h4" "2024-04-24 - 2.24.67" >}}
+
+**Major Features**
+- Integrated Bridge payment processing system with comprehensive multi-chain support.
+- Added Bridge cryptocurrency deposit functionality to receive pages.
+- Implemented Bridge withdrawal capabilities with backwards compatibility.
+- Added multi-chain send functionality for Bridge integration.
+- Enhanced transaction details with Bridge-specific information.
+- Improved deposit subtype handling and configuration management.
+- Added chain detection logic for blockchain explorer links.
+- Updated payment request receipts to show success status on received transactions.
+
+--- 
+
+{{< link-heading "h4" "2024-03-21 - 2.24.66" >}}
+
+**Features**
+- Added comprehensive statement functionality for transaction history.
+
+--- 
+
+{{< link-heading "h4" "2024-02-11 - 2.24.65" >}}
+
+**Bug fixes**
+- Fixed product page styling issues.
+- Resolved PoS top-up flow problems.
+
+--- 
+
+{{< link-heading "h4" "2024-02-11 - 2.24.64" >}}
+
+**Bug fixes**
+- Fixed fallback icon display for tier levels in user profiles.
+- Resolved end-to-end test issues for send form functionality.
+- Fixed spacing issues on failed transaction screens and improved error messaging.
+
+**Enhancements**
+- Made status field displays consistent across the application.
+- Upgraded to latest Rehive JavaScript SDK version.
+- Added functionality to resend password reset links.
+
+--- 
+
+{{< link-heading "h4" "2024-02-10 - 2.24.63" >}}
+
+**Bug fixes**
+- Fixed SEP-24 amount submission to only submit when amount is specified in the form.
+
+--- 
+
+{{< link-heading "h4" "2024-02-10 - 2.24.62" >}}
+
+**Bug fixes**
+- Fixed responsiveness of verify/verified mobile button display.
+
+--- 
+
+{{< link-heading "h4" "2024-11-05 - 2.24.61" >}}
+
+**Bug fixes**
+- Fixed issue with tier subscription requirement validation.
+
+--- 
+
+{{< link-heading "h4" "2024-10-31 - 2.24.60" >}}
+
+**Bug fixes**
+- Fixed precision calculation issues in financial displays.
+
+--- 
+
+{{< link-heading "h4" "2024-10-07 - 2.24.56" >}}
+
+**Changes**
+- Updated service URLs to use .com domain instead of .io for improved reliability.
+
+--- 
+
+{{< link-heading "h4" "2024-10-03 - 2.24.55" >}}
+
+**Bug fixes**
+- Fixed business onboarding sections configuration issue.
+
+--- 
+
+{{< link-heading "h4" "2024-09-23 - 2.24.54" >}}
+
+**Enhancements**
+- Improved business user features and onboarding experience.
+- Enhanced group tier requirements and document types handling.
+- Removed redundant fields (limits, fees) from tier displays for cleaner interface.
+
+--- 
+
+{{< link-heading "h4" "2024-09-17 - 2.24.53" >}}
+
+**Bug fixes**
+- Fixed white screen issue on accounts page.
+
+--- 
+
+{{< link-heading "h4" "2024-09-16 - 2.24.52" >}}
+
+**Bug fixes**
+- Fixed widget handling of empty string currency fields.
+
+--- 
+
+{{< link-heading "h4" "2024-09-12 - 2.24.50" >}}
+
+**Features**
+- Added support for new residency field in user profiles.
+
+--- 
+
+{{< link-heading "h4" "2024-09-12 - 2.24.49" >}}
+
+**Bug fixes**
+- Fixed end-to-end test issues.
+- Resolved MFA page skip functionality not working properly.
+
+--- 
+
+{{< link-heading "h4" "2024-08-23 - 2.24.47" >}}
+
+**Bug fixes**
+- Fixed login issue for users with MFA disabled.
+
+--- 
+
+{{< link-heading "h4" "2024-08-22 - 2.24.46" >}}
+
+**Features**
+- Added search filter functionality for Rewards.
+- Implemented pagination for document types in tier requirements.
+
+**Enhancements**
+- Released improvements to transaction flows and general application features.
+- Fixed visibility of business onboarding option during user onboarding.
+
+--- 
+
+{{< link-heading "h4" "2024-08-16 - 2.24.45" >}}
+
+**Bug fixes**
+- Fixed webhook creation issue.
+
+--- 
+
+{{< link-heading "h4" "2024-08-08 - 2.24.44" >}}
+
+**Bug fixes**
+- Fixed business settings page functionality issue.
+
+--- 
+
+{{< link-heading "h4" "2024-08-02 - 2.24.43" >}}
+
+**Bug fixes**
+- Fixed document types page retrieval issue.
+
+--- 
+
+{{< link-heading "h4" "2024-08-02 - 2.24.42" >}}
+
+**Bug fixes**
+- Fixed login redirect issue.
+
+--- 
+
 {{< link-heading "h4" "2024-08-01 - 2.24.41" >}}
 
 **Change**

@@ -9,6 +9,173 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2024-12-17 - 7.8.16" >}}
+
+**Bug fixes**
+- Fixed receive/send screen crash issue.
+
+---
+
+{{< link-heading "h4" "2024-11-29 - 7.8.14" >}}
+
+**Changes**
+- Updated image permissions to meet Play Store requirements.
+
+---
+
+{{< link-heading "h4" "2024-11-29 - 7.8.13" >}}
+
+**Bug fixes**
+- Fixed image/file permissions to meet Play Store requirements.
+
+---
+
+{{< link-heading "h4" "2024-11-29 - 7.8.12" >}}
+
+**Features**
+- Added Bridge crypto receive page functionality.
+- Implemented Bridge onboarding flow.
+- Added Bridge crypto send functionality.
+- Implemented Bridge bank deposit and withdrawal support.
+- Added Bridge pending bank account handling.
+- Implemented Bridge features and custom selector components.
+
+**Changes**
+- Enhanced transaction display with additional details.
+- Improved bank account backwards compatibility.
+- Cleaned up async send functionality.
+
+**Bug fixes**
+- Fixed bottom sheet height issue on some Android devices.
+
+---
+
+{{< link-heading "h4" "2024-03-28 - 7.8.9" >}}
+
+**Changes**
+- Updated default Node.js version.
+- Upgraded from Expo 51 to Expo 52.
+- Upgraded to latest Rehive JS SDK version.
+- Removed redundant fields (limit, fees) from tiers API.
+
+**Bug fixes**
+- Fixed open email Sentry issue.
+
+---
+
+{{< link-heading "h4" "2024-01-10 - 7.8.7" >}}
+
+**Changes**
+- General maintenance and improvements.
+
+---
+
+{{< link-heading "h4" "2023-12-13 - 7.8.6" >}}
+
+**Changes**
+- Updated version.json to match git release tags.
+
+---
+
+{{< link-heading "h4" "2023-10-21 - 7.8.5" >}}
+
+**Changes**
+- Switched default referral configuration to false.
+
+---
+
+{{< link-heading "h4" "2023-10-21 - 7.8.4" >}}
+
+**Bug fixes**
+- Fixed home header function issue.
+
+---
+
+{{< link-heading "h4" "2023-10-21 - 7.8.3" >}}
+
+**Changes**
+- Improved home and onboarding experience.
+
+---
+
+{{< link-heading "h4" "2023-10-04 - 7.8.2" >}}
+
+**Changes**
+- General maintenance and improvements.
+
+---
+
+{{< link-heading "h4" "2023-10-04 - 7.8.1" >}}
+
+**Changes**
+- Updated Expo version in GitHub Actions.
+
+---
+
+{{< link-heading "h4" "2023-10-04 - 7.8.0" >}}
+
+**Changes**
+- Upgraded and migrated Sentry to fix app crash errors.
+
+---
+
+{{< link-heading "h4" "2023-09-12 - 7.7.13" >}}
+
+**Features**
+- Added support for new residency field.
+
+---
+
+{{< link-heading "h4" "2023-08-30 - 7.7.12" >}}
+
+**Changes**
+- General maintenance and improvements.
+
+---
+
+{{< link-heading "h4" "2023-08-29 - 7.7.11" >}}
+
+**Bug fixes**
+- Fixed app crash issue.
+
+---
+
+{{< link-heading "h4" "2023-08-14 - 7.7.10" >}}
+
+**Features**
+- Added search filter for Rewards.
+
+**Changes**
+- Updated quantity components for products.
+- Improved export requests and error handling.
+- General feature improvements throughout the app.
+
+**Bug fixes**
+- Fixed back button modal not closing as expected.
+
+---
+
+{{< link-heading "h4" "2023-08-07 - 7.7.9" >}}
+
+**Bug fixes**
+- Fixed app crash issue.
+
+---
+
+{{< link-heading "h4" "2023-08-02 - 7.7.8" >}}
+
+**Bug fixes**
+- Fixed page retrieval for document types issue.
+
+---
+
+{{< link-heading "h4" "2023-08-01 - 7.7.7" >}}
+
+**Changes**
+- Updated app version configuration.
+
+---
+
 {{< link-heading "h4" "2024-08-01 - 7.7.6" >}}
 
 **Change**
