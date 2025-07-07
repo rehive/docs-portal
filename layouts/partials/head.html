@@ -15,7 +15,7 @@
 {{ $normalize := resources.Get "css/normalize.css" }}
 {{ $skeleton := resources.Get "css/skeleton.css"  }}
 {{ $syntax := resources.Get "css/syntax.css"  }}
-{{ $main := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "main.scss" . | resources.ToCSS  }}
+{{ $main := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "main.scss" . | css.Sass  }}
 {{ $css := slice $normalize $skeleton $syntax $main | resources.Concat "css/bundle.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
