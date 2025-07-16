@@ -28,10 +28,21 @@
 		</div>
 	</nav>
 	<div class="mobile-navbar">
-		<div class="burger-container" onclick="openNav()">
-			<div class="burger"></div>
-			<div class="burger"></div>
-			<div class="burger"></div>
+		<div class="mobile-nav-left">
+			<div class="burger-container" onclick="openNav()">
+				<div class="burger"></div>
+				<div class="burger"></div>
+				<div class="burger"></div>
+			</div>
+			<div class="page-title">
+				{{ if .IsHome }}
+					Rehive Docs
+				{{ else }}
+					{{ with .Site.GetPage "section" .Section }}
+						{{ .Title }}
+					{{ end }}
+				{{ end }}
+			</div>
 		</div>
 	</div>
 	<div id="sidenav" class="sidenav">

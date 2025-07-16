@@ -255,6 +255,14 @@ footer {
 		z-index: 99;
 		border-top: 1px solid $lightGray;
 		border-bottom: 1px solid $lightGray;
+		padding: 0 20px;
+	}
+
+	.mobile-nav-left {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		gap: 16px;
 	}
 
 	// Hide side menu on mobile
@@ -264,25 +272,45 @@ footer {
 	}
 
 	.burger-container {
-		margin: 15px;
 		cursor: pointer;
-	}
-
-	.burger {
-		width: 35px;
-		height: 5px;
-		border-radius: 2px;
-		background-color: $black;
-		margin: 6px 0;
+		padding: 8px;
+		border-radius: 8px;
+		transition: all 0.15s ease;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.burger-container:hover {
-		.burger {
-			background-color: $primary;
-		}
+		background-color: rgba($primary, 0.08);
 	}
 
-	// Side nav styles for mobile
+	.burger {
+		width: 20px;
+		height: 2px;
+		border-radius: 1px;
+		background-color: $black;
+		margin: 2px 0;
+		transition: all 0.15s ease;
+	}
+
+	.burger-container:hover .burger {
+		background-color: $primary;
+	}
+
+	.page-title {
+		font-size: 1.5rem;
+		font-weight: 500;
+		color: $black;
+		letter-spacing: -0.02em;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		flex: 1;
+	}
+
+	// Modern, minimalist side nav for mobile
 	.sidenav {
 		height: 100%;
 		width: 0;
@@ -292,10 +320,10 @@ footer {
 		left: 0;
 		overflow-x: hidden;
 		overflow-y: auto;
-		transition: width 0.3s ease-in-out;
-		border-right: 1px solid $lightGray;
+		transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 		background-color: $white;
-		box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+		backdrop-filter: blur(10px);
 	}
 
 	.sidenav-overlay {
@@ -304,162 +332,180 @@ footer {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.3);
 		z-index: 999;
 		display: none;
-		transition: opacity 0.3s ease-in-out;
+		transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.sidenav-header {
 		position: sticky;
 		top: 0;
-		background-color: $white;
-		padding: 15px 20px;
-		border-bottom: 1px solid $lightGray;
+		background-color: rgba(255,255,255,0.95);
+		backdrop-filter: blur(10px);
+		padding: 20px 24px;
+		border-bottom: 1px solid rgba(0,0,0,0.05);
 		z-index: 1001;
 	}
 
 	.sidenav-header h3 {
 		margin: 0;
 		color: $black;
-		font-size: 1.4rem;
-		font-weight: 600;
+		font-size: 1.2rem;
+		font-weight: 500;
+		letter-spacing: -0.02em;
 	}
 
 	.sidenav-content {
-		padding: 0 0 20px 0;
+		padding: 8px 0 24px 0;
 	}
 
 	.nav-section {
-		margin-bottom: 8px;
+		margin-bottom: 2px;
 	}
 
 	.section-header {
-		background-color: $lightGray;
-		border-bottom: 1px solid darken($lightGray, 10%);
+		background-color: transparent;
+		border: none;
 	}
 
 	.section-header.active {
-		background-color: lighten($primary, 45%);
-		border-bottom: 1px solid lighten($primary, 35%);
+		background-color: rgba($primary, 0.04);
 	}
 
 	.section-toggle {
 		width: 100%;
-		padding: 12px 20px;
+		padding: 12px 24px;
 		background: none;
 		border: none;
 		text-align: left;
-		font-size: 1rem;
-		font-weight: 600;
+		font-size: 0.95rem;
+		font-weight: 500;
 		color: $black;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
-		gap: 8px;
-		transition: background-color 0.2s ease;
+		gap: 12px;
+		transition: all 0.15s ease;
+		border-radius: 0;
 	}
 
 	.section-toggle:hover {
-		background-color: darken($lightGray, 5%);
+		background-color: rgba($primary, 0.06);
+		color: $primary;
 	}
 
-	.section-header.active .section-toggle:hover {
-		background-color: lighten($primary, 40%);
+	.section-header.active .section-toggle {
+		color: $primary;
 	}
 
 	.toggle-icon {
-		font-size: 0.8rem;
-		transition: transform 0.2s ease;
-		width: 12px;
+		font-size: 0.7rem;
+		transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		width: 10px;
 		display: inline-block;
+		opacity: 0.6;
 	}
 
 	.section-content {
 		display: none;
-		background-color: $white;
+		background-color: transparent;
 	}
 
 	.nav-link {
 		display: block;
-		padding: 10px 20px;
+		padding: 8px 24px;
 		text-decoration: none;
-		color: $black;
+		color: rgba($black, 0.8);
 		font-size: 0.9rem;
-		border-bottom: 1px solid lighten($lightGray, 5%);
-		transition: all 0.2s ease;
-		line-height: 1.4;
+		border: none;
+		transition: all 0.15s ease;
+		line-height: 1.5;
+		font-weight: 400;
 	}
 
 	.nav-link:hover {
 		color: $primary;
-		background-color: lighten($primary, 48%);
+		background-color: rgba($primary, 0.04);
 	}
 
 	.nav-link.active {
 		color: $primary;
-		background-color: lighten($primary, 45%);
-		border-left: 3px solid $primary;
-		font-weight: 600;
+		background-color: rgba($primary, 0.08);
+		border-left: 2px solid $primary;
+		font-weight: 500;
 	}
 
 	.main-link {
 		font-size: 1rem;
-		font-weight: 600;
-		padding: 15px 20px;
-		background-color: lighten($lightGray, 3%);
+		font-weight: 500;
+		padding: 16px 24px;
+		color: $black;
+		margin-bottom: 8px;
+		border-bottom: 1px solid rgba(0,0,0,0.05);
 	}
 
 	.section-link {
-		font-weight: 600;
-		padding-left: 25px;
-		background-color: lighten($lightGray, 8%);
+		font-weight: 500;
+		padding-left: 32px;
+		color: $black;
 	}
 
 	.subsection-link {
-		font-weight: 500;
-		padding-left: 35px;
-		background-color: lighten($lightGray, 12%);
+		font-weight: 400;
+		padding-left: 40px;
+		color: rgba($black, 0.9);
+		font-size: 0.88rem;
 	}
 
 	.page-link {
-		padding-left: 50px;
+		padding-left: 48px;
 		font-size: 0.85rem;
-		background-color: $white;
+		color: rgba($black, 0.8);
 	}
 
 	.external-link {
-		font-style: italic;
-		color: darken($primary, 10%);
+		color: rgba($primary, 0.8);
+		font-weight: 400;
 	}
 
 	.extra-items {
-		margin-top: 20px;
-		border-top: 2px solid $lightGray;
-		padding-top: 10px;
+		margin-top: 24px;
+		border-top: 1px solid rgba(0,0,0,0.05);
+		padding-top: 16px;
 	}
 
 	.extra-items .section-header {
 		background-color: transparent;
 		border: none;
-		padding: 5px 20px;
-		font-weight: 600;
-		color: darken($lightGray, 30%);
+		padding: 8px 24px;
+		font-weight: 500;
+		color: rgba($black, 0.6);
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
 	}
 
 	.sidenav .closebtn {
 		position: absolute;
-		top: 12px;
-		right: 20px;
-		font-size: 28px;
-		color: $black;
+		top: 18px;
+		right: 24px;
+		font-size: 24px;
+		color: rgba($black, 0.6);
 		cursor: pointer;
-		transition: color 0.2s ease;
+		transition: all 0.15s ease;
 		line-height: 1;
+		width: 24px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
 	}
 
 	.sidenav .closebtn:hover {
 		color: $primary;
+		background-color: rgba($primary, 0.08);
 	}
 
 	@media screen and (max-height: 450px) {
