@@ -28,31 +28,190 @@
 		</div>
 	</nav>
 	<div class="mobile-navbar">
-		<div class="burger-container" onclick="openNav()">
-			<div class="burger"></div>
-			<div class="burger"></div>
-			<div class="burger"></div>
+		<div class="mobile-nav-left">
+			<div class="burger-container" onclick="openNav()">
+				<div class="burger"></div>
+				<div class="burger"></div>
+				<div class="burger"></div>
+			</div>
+			<div class="page-title">
+				{{ if .IsHome }}
+					Rehive Docs
+				{{ else }}
+					{{ with .Site.GetPage "section" .Section }}
+						{{ .Title }}
+					{{ end }}
+				{{ end }}
+			</div>
 		</div>
 	</div>
 	<div id="sidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		{{ $currentSection := .Section }}
-		<a href="{{ .Site.Home.RelPermalink }}" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
-		{{ range (sort .Site.Sections ".Weight") }}
-			<a href="{{ .Params.linkTo | default .RelPermalink }}" class="navbar-link {{ if ne $currentSection  "" }}{{ if in .File.Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }}</a>
-		{{ end }}
+		<div class="sidenav-header">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="{{ .Site.Home.RelPermalink }}" class="sidenav-logo-link">
+				<img src="/images/logo.svg" alt="Rehive" class="sidenav-logo">
+			</a>
+		</div>
+		<div class="sidenav-content">
+			{{ $currentPage := .Page }}
+			{{ $currentSection := .Section }}
+			
 
-		{{ range .Site.Params.extraNavItems }}
-			<a href="{{ .url }}" class="navbar-link">{{ .title }}</a>
-		{{ end }}
-	  </div>
+			{{ if eq $currentSection "" }}
+				<!-- Home page - show all sections collapsed -->
+				{{ range (sort .Site.Sections ".Weight") }}
+					<div class="nav-section">
+						<div class="section-header">
+							<button class="section-toggle" onclick="toggleSection('{{ .Title | urlize }}')">
+								<span class="toggle-icon" id="icon-{{ .Title | urlize }}">▶</span>
+								<span>{{ .Title }}</span>
+							</button>
+						</div>
+						<div class="section-content" id="section-{{ .Title | urlize }}">
+							<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link">{{ .Title }} Overview</a>
+						</div>
+					</div>
+				{{ end }}
+			{{ else }}
+				<!-- Individual page - show current section expanded, others collapsed -->
+				{{ range (sort .Site.Sections ".Weight") }}
+					{{ $section := . }}
+					{{ $isCurrentSection := in .File.Dir $currentSection }}
+					<div class="nav-section">
+						<div class="section-header {{ if $isCurrentSection }}active{{ end }}">
+							<button class="section-toggle" onclick="toggleSection('{{ .Title | urlize }}')">
+								<span class="toggle-icon" id="icon-{{ .Title | urlize }}">{{ if $isCurrentSection }}▼{{ else }}▶{{ end }}</span>
+								<span>{{ .Title }}</span>
+							</button>
+						</div>
+						<div class="section-content" id="section-{{ .Title | urlize }}" {{ if $isCurrentSection }}style="display: block;"{{ end }}>
+							<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link {{ if $isCurrentSection }}active{{ end }}">{{ .Title }} Overview</a>
+							
+							{{ if $isCurrentSection }}
+								{{ range (sort (.Site.GetPage "section" $currentSection ).Sections ".Weight") }}
+									<div class="subsection">
+										<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
+										<div class="page-list">
+											{{ range (sort .Pages ".Weight") }}
+												<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
+											{{ end }}
+										</div>
+									</div>
+								{{ end }}
+							{{ end }}
+						</div>
+					</div>
+				{{ end }}
+			{{ end }}
+
+			{{ if .Site.Params.extraNavItems }}
+				<div class="nav-section signin-section">
+					{{ range .Site.Params.extraNavItems }}
+						<a href="{{ .url }}" class="nav-link signin-button">{{ .title }}</a>
+					{{ end }}
+				</div>
+			{{ end }}
+		</div>
+	</div>
+	<div id="sidenav-overlay" class="sidenav-overlay" onclick="closeNav()"></div>
 	  <script>
 			function openNav() {
-				document.getElementById("sidenav").style.width = "250px";
+				const sidenav = document.getElementById("sidenav");
+				const overlay = document.getElementById("sidenav-overlay");
+				sidenav.style.width = "320px";
+				overlay.style.display = "block";
+				document.body.style.overflow = "hidden";
+				
+				// Auto-expand current section
+				const currentSection = document.querySelector('.section-header.active');
+				if (currentSection) {
+					const sectionId = currentSection.querySelector('.section-toggle').onclick.toString().match(/'([^']+)'/)[1];
+					expandSection(sectionId);
+				}
 			}
 
 			function closeNav() {
-				document.getElementById("sidenav").style.width = "0";
+				const sidenav = document.getElementById("sidenav");
+				const overlay = document.getElementById("sidenav-overlay");
+				sidenav.style.width = "0";
+				overlay.style.display = "none";
+				document.body.style.overflow = "auto";
+			}
+
+			function toggleSection(sectionId) {
+				const section = document.getElementById("section-" + sectionId);
+				const icon = document.getElementById("icon-" + sectionId);
+				
+				if (section.style.display === "none" || section.style.display === "") {
+					expandSection(sectionId);
+				} else {
+					collapseSection(sectionId);
+				}
+			}
+
+			function expandSection(sectionId) {
+				const section = document.getElementById("section-" + sectionId);
+				const icon = document.getElementById("icon-" + sectionId);
+				section.style.display = "block";
+				icon.textContent = "▼";
+				icon.style.transform = "rotate(90deg)";
+			}
+
+			function collapseSection(sectionId) {
+				const section = document.getElementById("section-" + sectionId);
+				const icon = document.getElementById("icon-" + sectionId);
+				section.style.display = "none";
+				icon.textContent = "▶";
+				icon.style.transform = "rotate(0deg)";
+			}
+
+			// Initialize collapsed sections on page load
+			document.addEventListener('DOMContentLoaded', function() {
+				const sections = document.querySelectorAll('.section-content');
+				sections.forEach(function(section) {
+					// Only hide sections that don't already have display: block set
+					if (section.style.display !== "block") {
+						section.style.display = "none";
+					}
+				});
+			});
+
+			// Close menu when clicking outside
+			document.addEventListener('click', function(event) {
+				const sidenav = document.getElementById("sidenav");
+				const burger = document.querySelector('.burger-container');
+				
+				if (!sidenav.contains(event.target) && !burger.contains(event.target) && sidenav.style.width !== "0px") {
+					closeNav();
+				}
+			});
+
+			// Touch/swipe support for mobile
+			let touchStartX = 0;
+			let touchEndX = 0;
+			
+			document.addEventListener('touchstart', function(event) {
+				touchStartX = event.changedTouches[0].screenX;
+			});
+			
+			document.addEventListener('touchend', function(event) {
+				touchEndX = event.changedTouches[0].screenX;
+				handleSwipe();
+			});
+			
+			function handleSwipe() {
+				const swipeThreshold = 50;
+				const sidenav = document.getElementById("sidenav");
+				
+				if (touchEndX < touchStartX - swipeThreshold && sidenav.style.width !== "0px") {
+					// Swipe left to close
+					closeNav();
+				} else if (touchEndX > touchStartX + swipeThreshold && sidenav.style.width === "0px") {
+					// Swipe right to open (only from left edge)
+					if (touchStartX < 50) {
+						openNav();
+					}
+				}
 			}
 	  </script>
 </header>
