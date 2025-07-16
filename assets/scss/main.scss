@@ -60,6 +60,13 @@ pre {
 }
 
 body {
+	// Base body styles without background effects
+}
+
+main.home {
+	position: relative;
+	min-height: 100vh;
+	
 	&::before {
 		content: '';
 		position: fixed;
@@ -91,11 +98,6 @@ body {
 		pointer-events: none;
 		z-index: -1;
 	}
-}
-
-main.home {
-	position: relative;
-	min-height: 100vh;
 	
 	.content {
 		position: relative;
