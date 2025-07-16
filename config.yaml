@@ -11,7 +11,7 @@ markup:
 
 params:
   logoUrl: https://rehive.com
-  logoImage: /images/logo.svg
+  logoImage: /images/icon.svg
   favicon: /images/favicon.png
 
   primaryColor: "#5336FF"
