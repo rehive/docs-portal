@@ -489,6 +489,27 @@ footer {
 		border-top: 1px solid rgba(0,0,0,0.05);
 		padding-top: 16px;
 	}
+	
+	.signin-section {
+		margin-top: 24px;
+		border-top: 1px solid rgba(0,0,0,0.05);
+		padding-top: 16px;
+	}
+	
+	.signin-button {
+		display: block;
+		padding: 12px 24px;
+		color: $black;
+		font-weight: 400;
+		font-size: 0.95rem;
+		text-decoration: none;
+		transition: all 0.15s ease;
+	}
+	
+	.signin-button:hover {
+		background-color: rgba($primary, 0.06);
+		color: $primary;
+	}
 
 	.extra-items .section-header {
 		background-color: transparent;

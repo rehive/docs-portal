@@ -105,12 +105,9 @@
 			{{ end }}
 
 			{{ if .Site.Params.extraNavItems }}
-				<div class="nav-section extra-items">
-					<div class="section-header">
-						<span>External Links</span>
-					</div>
+				<div class="nav-section signin-section">
 					{{ range .Site.Params.extraNavItems }}
-						<a href="{{ .url }}" class="nav-link external-link" target="_blank">{{ .title }} ↗</a>
+						<a href="{{ .url }}" class="nav-link signin-button">{{ .title }}</a>
 					{{ end }}
 				</div>
 			{{ end }}
