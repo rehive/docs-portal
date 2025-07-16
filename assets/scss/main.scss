@@ -113,7 +113,22 @@ main.home {
 	}
 	.titles {
 		text-align: center;
-		margin: 6rem 0 10rem 0;
+		
+		h1 {
+			font-size: 6rem;
+			font-weight: 700;
+			color: #111827;
+			line-height: 1.1;
+			margin-bottom: 1.5rem;
+		}
+		
+		p {
+			font-size: 2rem;
+			color: #4B5563;
+			line-height: 1.6;
+			max-width: 600px;
+			margin: 0 auto;
+		}
 	}
 	.cards {
 		overflow: hidden;
@@ -124,7 +139,7 @@ main.home {
 	.cards .card {
 		text-align: center;
 		border-radius: 4px;
-		margin: 1rem 1rem 2rem 1rem;
+		margin: 0 1rem 2rem 1rem;
 		padding: 1rem;
 		border: 1px solid $lightGray;
 	}
@@ -153,7 +168,7 @@ main.home {
 }
 
 main .content {
- 	padding: 4rem 0;
+ 	padding: 8rem 0 2rem 0;
  	margin-bottom: 0;
 
  	aside {
