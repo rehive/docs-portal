@@ -1,0 +1,34 @@
+<aside class="navaside two columns">
+	<ul>
+		{{ $currentPage := .Page }}
+		{{ range (sort (.Site.GetPage "section" .Section ).Sections ".Weight") }}
+			<li class="section {{ if .IsAncestor $currentPage }}active{{ end }}">
+				<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}'>
+					<strong>{{ .Title }}</strong>
+				</a>
+				<ul class="pages">
+					{{ range (sort .Pages ".Weight") }}
+						<li class="page">
+							<a href="{{ .RelPermalink }}" class="{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}">{{ .Title }}</a>
+						</li>
+					{{ end }}
+				</ul>
+			</li>
+		{{ end }}
+
+		{{ with .Site.GetPage "section" .Section }}
+			{{ if isset .Params "references" }}
+				<li>
+					<span><strong>References</strong></span>
+					<ul>
+						{{ range .Params.references }}
+							<li>
+								<a href="{{ .url }}" target="_blank">{{ .title }}</a>
+							</li>
+						{{ end }}
+					</ul>
+				</li>
+			{{ end }}
+		{{ end }}
+	</ul>
+</aside>
