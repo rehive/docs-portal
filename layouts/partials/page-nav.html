@@ -1,0 +1,53 @@
+{{ if and .Section (not .IsHome) }}
+  {{ $currentPage := . }}
+  {{ $section := .Site.GetPage "section" .Section }}
+  {{ $allPages := slice }}
+  
+  {{ range sort $section.Sections ".Weight" }}
+    {{ range sort .Pages ".Weight" }}
+      {{ $allPages = $allPages | append . }}
+    {{ end }}
+  {{ end }}
+  
+  {{ $prevPage := "" }}
+  {{ $nextPage := "" }}
+  {{ $found := false }}
+  
+  {{ range $index, $page := $allPages }}
+    {{ if and $page.File $currentPage.File }}
+      {{ if eq $page.File.UniqueID $currentPage.File.UniqueID }}
+        {{ $found = true }}
+        {{ if gt $index 0 }}
+          {{ $prevPage = index $allPages (sub $index 1) }}
+        {{ end }}
+        {{ if lt $index (sub (len $allPages) 1) }}
+          {{ $nextPage = index $allPages (add $index 1) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{ if or $prevPage $nextPage }}
+    <nav class="page-navigation">
+      <div class="page-nav-container">
+        {{ if $prevPage }}
+          <a href="{{ $prevPage.RelPermalink }}" class="page-nav-link page-nav-prev">
+            <div class="page-nav-direction">← Previous</div>
+            <div class="page-nav-title">{{ $prevPage.Title }}</div>
+          </a>
+        {{ else }}
+          <div class="page-nav-spacer"></div>
+        {{ end }}
+        
+        {{ if $nextPage }}
+          <a href="{{ $nextPage.RelPermalink }}" class="page-nav-link page-nav-next">
+            <div class="page-nav-direction">Next →</div>
+            <div class="page-nav-title">{{ $nextPage.Title }}</div>
+          </a>
+        {{ else }}
+          <div class="page-nav-spacer"></div>
+        {{ end }}
+      </div>
+    </nav>
+  {{ end }}
+{{ end }}
