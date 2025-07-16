@@ -84,7 +84,7 @@ main.home {
 	}
 }
 
-@media(min-width: 550px) {
+@media(min-width: 800px) {
 	main.home {
 		.hero {
 			display: block;
@@ -165,7 +165,7 @@ footer {
 	}
 }
 
-@media(min-width: 550px) {
+@media(min-width: 800px) {
 	.burger-container {
 		display: none;
 		visibility: hidden;
@@ -187,21 +187,25 @@ footer {
 
 		.container {
 			width: 100%;
+			padding: 0 20px;
 		}
 
 		.navbar-list {
 			list-style: none;
 			margin-bottom: 0;
+			display: flex;
+			align-items: center;
 		}
 
 		.navbar-item {
 			position: relative;
-			float: left;
 			margin-bottom: 0;
+			flex-shrink: 0;
 		}
 
 		.navbar-right-item {
-			float: right;
+			margin-left: auto;
+			flex-shrink: 0;
 		}
 
 		.navbar-logo-link {
@@ -221,6 +225,7 @@ footer {
 			margin-right: 35px;
 			line-height: 6.5rem;
 			color: $black;
+			white-space: nowrap;
 		}
 		.navbar-right-item .navbar-link {
 			margin-right: 0;
@@ -238,8 +243,9 @@ footer {
 	}
 }
 
+
 // Mobile
-@media(max-width: 550px) {
+@media(max-width: 800px) {
 	// Hide main navbar
 	.navbar {
 		display: none;
@@ -616,7 +622,7 @@ footer {
 }
 
 // Mobile-specific page navigation
-@media(max-width: 550px) {
+@media(max-width: 800px) {
 	.page-navigation {
 		margin: 1.5rem 0;
 		padding: 1.5rem 0;
