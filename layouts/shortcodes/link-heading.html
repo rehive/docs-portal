@@ -1,0 +1,6 @@
+{{ $tag := .Get 0 }}
+{{ $heading := .Get 1}}
+{{ $id := .Get 1 | lower | replaceRE "[^0-9a-z]" "-" | replaceRE "-+" "-" -}}
+<a href="#{{ $id }}" class="heading">
+	{{ printf "<%s id='%s'>%s</%s>" $tag $id $heading $tag | safeHTML }}
+</a>

@@ -1,7 +1,6 @@
 baseURL: "https://docs.portal.d.rehive.com/"
 languageCode: "en-us"
 title: "Rehive documentation"
-theme: hexon-hugo-theme
 
 markup:
   highlight:
