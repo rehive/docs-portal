@@ -356,6 +356,21 @@ footer {
 		letter-spacing: -0.02em;
 	}
 
+	.sidenav-logo-link {
+		display: inline-block;
+		margin-left: 8px;
+	}
+
+	.sidenav-logo {
+		height: 32px;
+		width: auto;
+		transition: opacity 0.15s ease;
+	}
+
+	.sidenav-logo:hover {
+		opacity: 0.8;
+	}
+
 	.sidenav-content {
 		padding: 8px 0 24px 0;
 	}
