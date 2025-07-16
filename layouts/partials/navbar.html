@@ -47,30 +47,51 @@
 				<a href="{{ .Site.Home.RelPermalink }}" class="nav-link main-link {{ if eq $currentSection  "" }}active{{ end }}">📚 Docs Home</a>
 			</div>
 
-			{{ range (sort .Site.Sections ".Weight") }}
-				{{ $section := . }}
-				<div class="nav-section">
-					<div class="section-header {{ if ne $currentSection  "" }}{{ if in .File.Dir $currentSection }}active{{ end }}{{ end }}">
-						<button class="section-toggle" onclick="toggleSection('{{ .Title | urlize }}')">
-							<span class="toggle-icon" id="icon-{{ .Title | urlize }}">▶</span>
-							<span>{{ .Title }}</span>
-						</button>
+			{{ if eq $currentSection "" }}
+				<!-- Home page - show all sections collapsed -->
+				{{ range (sort .Site.Sections ".Weight") }}
+					<div class="nav-section">
+						<div class="section-header">
+							<button class="section-toggle" onclick="toggleSection('{{ .Title | urlize }}')">
+								<span class="toggle-icon" id="icon-{{ .Title | urlize }}">▶</span>
+								<span>{{ .Title }}</span>
+							</button>
+						</div>
+						<div class="section-content" id="section-{{ .Title | urlize }}">
+							<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link">{{ .Title }} Overview</a>
+						</div>
 					</div>
-					<div class="section-content" id="section-{{ .Title | urlize }}">
-						<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link {{ if ne $currentSection  "" }}{{ if in .File.Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }} Overview</a>
-						
-						{{ range (sort (.Site.GetPage "section" .Section ).Sections ".Weight") }}
-							<div class="subsection">
-								<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
-								<div class="page-list">
-									{{ range (sort .Pages ".Weight") }}
-										<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
-									{{ end }}
-								</div>
-							</div>
-						{{ end }}
+				{{ end }}
+			{{ else }}
+				<!-- Individual page - show current section expanded, others collapsed -->
+				{{ range (sort .Site.Sections ".Weight") }}
+					{{ $section := . }}
+					{{ $isCurrentSection := in .File.Dir $currentSection }}
+					<div class="nav-section">
+						<div class="section-header {{ if $isCurrentSection }}active{{ end }}">
+							<button class="section-toggle" onclick="toggleSection('{{ .Title | urlize }}')">
+								<span class="toggle-icon" id="icon-{{ .Title | urlize }}">{{ if $isCurrentSection }}▼{{ else }}▶{{ end }}</span>
+								<span>{{ .Title }}</span>
+							</button>
+						</div>
+						<div class="section-content" id="section-{{ .Title | urlize }}" {{ if $isCurrentSection }}style="display: block;"{{ end }}>
+							<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link {{ if $isCurrentSection }}active{{ end }}">{{ .Title }} Overview</a>
+							
+							{{ if $isCurrentSection }}
+								{{ range (sort (.Site.GetPage "section" $currentSection ).Sections ".Weight") }}
+									<div class="subsection">
+										<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
+										<div class="page-list">
+											{{ range (sort .Pages ".Weight") }}
+												<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
+											{{ end }}
+										</div>
+									</div>
+								{{ end }}
+							{{ end }}
+						</div>
 					</div>
-				</div>
+				{{ end }}
 			{{ end }}
 
 			{{ if .Site.Params.extraNavItems }}
@@ -141,7 +162,10 @@
 			document.addEventListener('DOMContentLoaded', function() {
 				const sections = document.querySelectorAll('.section-content');
 				sections.forEach(function(section) {
-					section.style.display = "none";
+					// Only hide sections that don't already have display: block set
+					if (section.style.display !== "block") {
+						section.style.display = "none";
+					}
 				});
 			});
 

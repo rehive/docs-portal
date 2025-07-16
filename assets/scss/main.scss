@@ -257,6 +257,12 @@ footer {
 		border-bottom: 1px solid $lightGray;
 	}
 
+	// Hide side menu on mobile
+	.navaside {
+		display: none;
+		visibility: hidden;
+	}
+
 	.burger-container {
 		margin: 15px;
 		cursor: pointer;
