@@ -231,6 +231,11 @@ footer {
 			color: $primary;
 		}
 	}
+
+	.mobile-navbar {
+		display: none;
+		visibility: hidden;
+	}
 }
 
 // Mobile
@@ -276,35 +281,179 @@ footer {
 		height: 100%;
 		width: 0;
 		position: fixed;
-		z-index: 1;
+		z-index: 1000;
 		top: 0;
 		left: 0;
 		overflow-x: hidden;
-		padding-top: 60px;
-		transition: 0.5s;
+		overflow-y: auto;
+		transition: width 0.3s ease-in-out;
 		border-right: 1px solid $lightGray;
+		background-color: $white;
+		box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+	}
+
+	.sidenav-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.5);
+		z-index: 999;
+		display: none;
+		transition: opacity 0.3s ease-in-out;
+	}
+
+	.sidenav-header {
+		position: sticky;
+		top: 0;
+		background-color: $white;
+		padding: 15px 20px;
+		border-bottom: 1px solid $lightGray;
+		z-index: 1001;
+	}
+
+	.sidenav-header h3 {
+		margin: 0;
+		color: $black;
+		font-size: 1.4rem;
+		font-weight: 600;
+	}
+
+	.sidenav-content {
+		padding: 0 0 20px 0;
+	}
+
+	.nav-section {
+		margin-bottom: 8px;
+	}
+
+	.section-header {
+		background-color: $lightGray;
+		border-bottom: 1px solid darken($lightGray, 10%);
+	}
+
+	.section-header.active {
+		background-color: lighten($primary, 45%);
+		border-bottom: 1px solid lighten($primary, 35%);
+	}
+
+	.section-toggle {
+		width: 100%;
+		padding: 12px 20px;
+		background: none;
+		border: none;
+		text-align: left;
+		font-size: 1rem;
+		font-weight: 600;
+		color: $black;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		transition: background-color 0.2s ease;
+	}
+
+	.section-toggle:hover {
+		background-color: darken($lightGray, 5%);
+	}
+
+	.section-header.active .section-toggle:hover {
+		background-color: lighten($primary, 40%);
+	}
+
+	.toggle-icon {
+		font-size: 0.8rem;
+		transition: transform 0.2s ease;
+		width: 12px;
+		display: inline-block;
+	}
+
+	.section-content {
+		display: none;
 		background-color: $white;
 	}
 
-	.sidenav a {
-		padding: 8px 8px 8px 32px;
-		text-decoration: none;
-		font-size: 25px;
-		color: $black;
+	.nav-link {
 		display: block;
-		transition: 0.3s;
+		padding: 10px 20px;
+		text-decoration: none;
+		color: $black;
+		font-size: 0.9rem;
+		border-bottom: 1px solid lighten($lightGray, 5%);
+		transition: all 0.2s ease;
+		line-height: 1.4;
 	}
 
-	.sidenav a:hover {
+	.nav-link:hover {
 		color: $primary;
+		background-color: lighten($primary, 48%);
+	}
+
+	.nav-link.active {
+		color: $primary;
+		background-color: lighten($primary, 45%);
+		border-left: 3px solid $primary;
+		font-weight: 600;
+	}
+
+	.main-link {
+		font-size: 1rem;
+		font-weight: 600;
+		padding: 15px 20px;
+		background-color: lighten($lightGray, 3%);
+	}
+
+	.section-link {
+		font-weight: 600;
+		padding-left: 25px;
+		background-color: lighten($lightGray, 8%);
+	}
+
+	.subsection-link {
+		font-weight: 500;
+		padding-left: 35px;
+		background-color: lighten($lightGray, 12%);
+	}
+
+	.page-link {
+		padding-left: 50px;
+		font-size: 0.85rem;
+		background-color: $white;
+	}
+
+	.external-link {
+		font-style: italic;
+		color: darken($primary, 10%);
+	}
+
+	.extra-items {
+		margin-top: 20px;
+		border-top: 2px solid $lightGray;
+		padding-top: 10px;
+	}
+
+	.extra-items .section-header {
+		background-color: transparent;
+		border: none;
+		padding: 5px 20px;
+		font-weight: 600;
+		color: darken($lightGray, 30%);
 	}
 
 	.sidenav .closebtn {
 		position: absolute;
-		top: 0;
-		right: 25px;
-		font-size: 36px;
-		margin-left: 50px;
+		top: 12px;
+		right: 20px;
+		font-size: 28px;
+		color: $black;
+		cursor: pointer;
+		transition: color 0.2s ease;
+		line-height: 1;
+	}
+
+	.sidenav .closebtn:hover {
+		color: $primary;
 	}
 
 	@media screen and (max-height: 450px) {

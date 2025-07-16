@@ -35,24 +35,152 @@
 		</div>
 	</div>
 	<div id="sidenav" class="sidenav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		{{ $currentSection := .Section }}
-		<a href="{{ .Site.Home.RelPermalink }}" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
-		{{ range (sort .Site.Sections ".Weight") }}
-			<a href="{{ .Params.linkTo | default .RelPermalink }}" class="navbar-link {{ if ne $currentSection  "" }}{{ if in .File.Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }}</a>
-		{{ end }}
+		<div class="sidenav-header">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<h3>Navigation</h3>
+		</div>
+		<div class="sidenav-content">
+			{{ $currentPage := .Page }}
+			{{ $currentSection := .Section }}
+			
+			<div class="nav-section">
+				<a href="{{ .Site.Home.RelPermalink }}" class="nav-link main-link {{ if eq $currentSection  "" }}active{{ end }}">📚 Docs Home</a>
+			</div>
 
-		{{ range .Site.Params.extraNavItems }}
-			<a href="{{ .url }}" class="navbar-link">{{ .title }}</a>
-		{{ end }}
-	  </div>
+			{{ range (sort .Site.Sections ".Weight") }}
+				{{ $section := . }}
+				<div class="nav-section">
+					<div class="section-header {{ if ne $currentSection  "" }}{{ if in .File.Dir $currentSection }}active{{ end }}{{ end }}">
+						<button class="section-toggle" onclick="toggleSection('{{ .Title | urlize }}')">
+							<span class="toggle-icon" id="icon-{{ .Title | urlize }}">▶</span>
+							<span>{{ .Title }}</span>
+						</button>
+					</div>
+					<div class="section-content" id="section-{{ .Title | urlize }}">
+						<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link {{ if ne $currentSection  "" }}{{ if in .File.Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }} Overview</a>
+						
+						{{ range (sort (.Site.GetPage "section" .Section ).Sections ".Weight") }}
+							<div class="subsection">
+								<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
+								<div class="page-list">
+									{{ range (sort .Pages ".Weight") }}
+										<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
+									{{ end }}
+								</div>
+							</div>
+						{{ end }}
+					</div>
+				</div>
+			{{ end }}
+
+			{{ if .Site.Params.extraNavItems }}
+				<div class="nav-section extra-items">
+					<div class="section-header">
+						<span>External Links</span>
+					</div>
+					{{ range .Site.Params.extraNavItems }}
+						<a href="{{ .url }}" class="nav-link external-link" target="_blank">{{ .title }} ↗</a>
+					{{ end }}
+				</div>
+			{{ end }}
+		</div>
+	</div>
+	<div id="sidenav-overlay" class="sidenav-overlay" onclick="closeNav()"></div>
 	  <script>
 			function openNav() {
-				document.getElementById("sidenav").style.width = "250px";
+				const sidenav = document.getElementById("sidenav");
+				const overlay = document.getElementById("sidenav-overlay");
+				sidenav.style.width = "320px";
+				overlay.style.display = "block";
+				document.body.style.overflow = "hidden";
+				
+				// Auto-expand current section
+				const currentSection = document.querySelector('.section-header.active');
+				if (currentSection) {
+					const sectionId = currentSection.querySelector('.section-toggle').onclick.toString().match(/'([^']+)'/)[1];
+					expandSection(sectionId);
+				}
 			}
 
 			function closeNav() {
-				document.getElementById("sidenav").style.width = "0";
+				const sidenav = document.getElementById("sidenav");
+				const overlay = document.getElementById("sidenav-overlay");
+				sidenav.style.width = "0";
+				overlay.style.display = "none";
+				document.body.style.overflow = "auto";
+			}
+
+			function toggleSection(sectionId) {
+				const section = document.getElementById("section-" + sectionId);
+				const icon = document.getElementById("icon-" + sectionId);
+				
+				if (section.style.display === "none" || section.style.display === "") {
+					expandSection(sectionId);
+				} else {
+					collapseSection(sectionId);
+				}
+			}
+
+			function expandSection(sectionId) {
+				const section = document.getElementById("section-" + sectionId);
+				const icon = document.getElementById("icon-" + sectionId);
+				section.style.display = "block";
+				icon.textContent = "▼";
+				icon.style.transform = "rotate(90deg)";
+			}
+
+			function collapseSection(sectionId) {
+				const section = document.getElementById("section-" + sectionId);
+				const icon = document.getElementById("icon-" + sectionId);
+				section.style.display = "none";
+				icon.textContent = "▶";
+				icon.style.transform = "rotate(0deg)";
+			}
+
+			// Initialize collapsed sections on page load
+			document.addEventListener('DOMContentLoaded', function() {
+				const sections = document.querySelectorAll('.section-content');
+				sections.forEach(function(section) {
+					section.style.display = "none";
+				});
+			});
+
+			// Close menu when clicking outside
+			document.addEventListener('click', function(event) {
+				const sidenav = document.getElementById("sidenav");
+				const burger = document.querySelector('.burger-container');
+				
+				if (!sidenav.contains(event.target) && !burger.contains(event.target) && sidenav.style.width !== "0px") {
+					closeNav();
+				}
+			});
+
+			// Touch/swipe support for mobile
+			let touchStartX = 0;
+			let touchEndX = 0;
+			
+			document.addEventListener('touchstart', function(event) {
+				touchStartX = event.changedTouches[0].screenX;
+			});
+			
+			document.addEventListener('touchend', function(event) {
+				touchEndX = event.changedTouches[0].screenX;
+				handleSwipe();
+			});
+			
+			function handleSwipe() {
+				const swipeThreshold = 50;
+				const sidenav = document.getElementById("sidenav");
+				
+				if (touchEndX < touchStartX - swipeThreshold && sidenav.style.width !== "0px") {
+					// Swipe left to close
+					closeNav();
+				} else if (touchEndX > touchStartX + swipeThreshold && sidenav.style.width === "0px") {
+					// Swipe right to open (only from left edge)
+					if (touchStartX < 50) {
+						openNav();
+					}
+				}
 			}
 	  </script>
 </header>
