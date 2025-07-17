@@ -15,9 +15,6 @@
 					{{ range (sort .Site.Sections ".Weight") }}
 						<a href="{{ .Params.linkTo | default .RelPermalink }}" class="navbar-link {{ if ne $currentSection  "" }}{{ if in .File.Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }}</a>
 					{{ end }}
-				</li>
-
-				<li class="navbar-item navbar-right-item navbar-actions-group">
 					<button id="search-button" class="search-trigger-button" onclick="openSearchModal()">
 						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<circle cx="11" cy="11" r="8"></circle>
@@ -25,6 +22,9 @@
 						</svg>
 						<span class="search-shortcut">⌘K</span>
 					</button>
+				</li>
+
+				<li class="navbar-item navbar-right-item navbar-actions-group">
 					{{ range .Site.Params.extraNavItems }}
 						<a href="{{ .url }}" class="navbar-link">{{ .title }}</a>
 					{{ end }}
