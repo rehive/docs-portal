@@ -3,21 +3,19 @@
 		<div class="container">
 			<ul class="navbar-list">
 				{{ $currentSection := .Section }}
-				<li class="navbar-item">
+				<li class="navbar-item navbar-logo-item">
 					{{ if isset .Site.Params "logourl"}}
 						<a href="{{ .Site.Params.logoUrl }}" class="navbar-logo-link">
 							<img src="{{ .Site.Params.logoImage }}">
 						</a>
 					{{ end }}
+					<a href="{{ .Site.Home.RelPermalink }}" class="navbar-docs-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
 				</li>
-				<li class="navbar-item">
-					<a href="{{ .Site.Home.RelPermalink }}" class="navbar-link {{ if eq $currentSection  "" }}active{{ end }}">Docs</a>
-				</li>
-				{{ range (sort .Site.Sections ".Weight") }}
-					<li class="navbar-item">
+				<li class="navbar-item navbar-center-links">
+					{{ range (sort .Site.Sections ".Weight") }}
 						<a href="{{ .Params.linkTo | default .RelPermalink }}" class="navbar-link {{ if ne $currentSection  "" }}{{ if in .File.Dir $currentSection }}active{{ end }}{{ end }}">{{ .Title }}</a>
-					</li>
-				{{ end }}
+					{{ end }}
+				</li>
 
 				{{ range .Site.Params.extraNavItems }}
 					<li class="navbar-item navbar-right-item">
@@ -28,7 +26,8 @@
 		</div>
 	</nav>
 	<div class="mobile-navbar">
-		<div class="mobile-nav-left">
+		<div class="container">
+			<div class="mobile-nav-left">
 			<div class="burger-container" onclick="openNav()">
 				<div class="burger"></div>
 				<div class="burger"></div>
@@ -43,7 +42,9 @@
 					{{ end }}
 				{{ end }}
 			</div>
+			<div class="mobile-nav-spacer"></div>
 		</div>
+	</div>
 	</div>
 	<div id="sidenav" class="sidenav">
 		<div class="sidenav-header">
@@ -69,6 +70,17 @@
 						</div>
 						<div class="section-content" id="section-{{ .Title | urlize }}">
 							<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link">{{ .Title }} Overview</a>
+							
+							{{ range (sort .Sections ".Weight") }}
+								<div class="subsection">
+									<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
+									<div class="page-list" style="display: block;">
+										{{ range (sort .Pages ".Weight") }}
+											<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
+										{{ end }}
+									</div>
+								</div>
+							{{ end }}
 						</div>
 					</div>
 				{{ end }}
@@ -87,17 +99,15 @@
 						<div class="section-content" id="section-{{ .Title | urlize }}" {{ if $isCurrentSection }}style="display: block;"{{ end }}>
 							<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link {{ if $isCurrentSection }}active{{ end }}">{{ .Title }} Overview</a>
 							
-							{{ if $isCurrentSection }}
-								{{ range (sort (.Site.GetPage "section" $currentSection ).Sections ".Weight") }}
-									<div class="subsection">
-										<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
-										<div class="page-list">
-											{{ range (sort .Pages ".Weight") }}
-												<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
-											{{ end }}
-										</div>
+							{{ range (sort .Sections ".Weight") }}
+								<div class="subsection">
+									<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
+									<div class="page-list" style="display: block;">
+										{{ range (sort .Pages ".Weight") }}
+											<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
+										{{ end }}
 									</div>
-								{{ end }}
+								</div>
 							{{ end }}
 						</div>
 					</div>
