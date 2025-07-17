@@ -93,7 +93,9 @@ class DocsSearch {
         
         const keyboardHint = document.createElement('div');
         keyboardHint.className = 'search-keyboard-hint';
-        keyboardHint.innerHTML = '/';
+        // Show appropriate shortcut based on platform
+        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+        keyboardHint.innerHTML = isMac ? '⌘K' : 'Ctrl+K';
         
         const resultsContainer = document.createElement('div');
         resultsContainer.className = `search-results search-results-${type}`;
@@ -295,20 +297,6 @@ class DocsSearch {
                                   document.querySelector('.search-input-mobile');
                 if (searchInput) {
                     searchInput.focus();
-                }
-            }
-            
-            // '/' key to focus search (like Stripe)
-            if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey) {
-                // Only if not typing in an input field
-                const activeElement = document.activeElement;
-                if (activeElement.tagName !== 'INPUT' && activeElement.tagName !== 'TEXTAREA') {
-                    event.preventDefault();
-                    const searchInput = document.querySelector('.search-input-desktop') || 
-                                      document.querySelector('.search-input-mobile');
-                    if (searchInput) {
-                        searchInput.focus();
-                    }
                 }
             }
         });
