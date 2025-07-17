@@ -76,6 +76,9 @@ def generate_url(file_path, content_dir):
     # Convert spaces to hyphens in directory names (Hugo's URL generation)
     relative_path = relative_path.replace(' ', '-')
     
+    # Convert to lowercase to match Hugo's URL generation
+    relative_path = relative_path.lower()
+    
     # Ensure it starts with /
     if not relative_path.startswith('/'):
         relative_path = '/' + relative_path
