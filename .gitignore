@@ -3,3 +3,6 @@
 resources/_gen/
 *.DS_Store
 /opt
+
+# Python virtual environment
+.venv/
