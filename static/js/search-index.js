@@ -22,6 +22,9 @@ class DocsSearch {
             // Setup search UI
             this.setupSearchUI();
             
+            // Setup modal search
+            this.setupModalSearch();
+            
             // Setup keyboard shortcuts
             this.setupKeyboardShortcuts();
             
@@ -58,78 +61,13 @@ class DocsSearch {
     }
     
     setupSearchUI() {
-        // Create search container for desktop (below navbar)
-        const desktopNavbar = document.querySelector('.navbar');
-        if (desktopNavbar) {
-            const searchContainer = this.createSearchContainer('desktop');
-            desktopNavbar.insertAdjacentElement('afterend', searchContainer);
-        }
-        
-        // Create search container for mobile
-        const mobileNavContent = document.querySelector('.sidenav-content');
-        if (mobileNavContent) {
-            const searchContainer = this.createSearchContainer('mobile');
-            mobileNavContent.insertBefore(searchContainer, mobileNavContent.firstChild);
-        }
+        // The search UI is now handled by the modal
+        // No need to create fixed search containers
     }
     
-    createSearchContainer(type) {
-        const container = document.createElement('div');
-        container.className = `search-container search-container-${type}`;
-        
-        const inputWrapper = document.createElement('div');
-        inputWrapper.className = `search-input-wrapper search-input-wrapper-${type}`;
-        
-        const searchInput = document.createElement('input');
-        searchInput.type = 'text';
-        searchInput.placeholder = type === 'desktop' ? 'Search' : 'Search docs...';
-        searchInput.className = `search-input search-input-${type}`;
-        searchInput.setAttribute('autocomplete', 'off');
-        searchInput.setAttribute('spellcheck', 'false');
-        
-        const searchIcon = document.createElement('div');
-        searchIcon.className = 'search-icon';
-        searchIcon.innerHTML = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>`;
-        
-        const keyboardHint = document.createElement('div');
-        keyboardHint.className = 'search-keyboard-hint';
-        // Show appropriate shortcut based on platform
-        const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
-        keyboardHint.innerHTML = isMac ? '⌘K' : 'Ctrl+K';
-        
-        const resultsContainer = document.createElement('div');
-        resultsContainer.className = `search-results search-results-${type}`;
-        resultsContainer.style.display = 'none';
-        
-        inputWrapper.appendChild(searchIcon);
-        inputWrapper.appendChild(searchInput);
-        if (type === 'desktop') {
-            inputWrapper.appendChild(keyboardHint);
-        }
-        
-        container.appendChild(inputWrapper);
-        container.appendChild(resultsContainer);
-        
-        // Add event listeners
-        searchInput.addEventListener('input', (e) => this.handleSearch(e, type));
-        searchInput.addEventListener('focus', () => this.handleFocus(type));
-        searchInput.addEventListener('blur', () => this.handleBlur(type));
-        searchInput.addEventListener('keydown', (e) => this.handleKeydown(e, type));
-        
-        return container;
-    }
+    // Legacy method - no longer used with modal implementation
     
-    handleSearch(event, type) {
-        const query = event.target.value.trim();
-        
-        if (query.length < 2) {
-            this.hideResults(type);
-            return;
-        }
-        
-        const results = this.search(query);
-        this.displayResults(results, type);
-    }
+    // Legacy method - no longer used with modal implementation
     
     search(query) {
         if (!this.index || this.index.length === 0) {
@@ -178,38 +116,9 @@ class DocsSearch {
         return results.sort((a, b) => b.score - a.score).slice(0, 10);
     }
     
-    displayResults(results, type) {
-        const resultsContainer = document.querySelector(`.search-results-${type}`);
-        
-        if (!resultsContainer) return;
-        
-        if (results.length === 0) {
-            resultsContainer.innerHTML = '<div class="search-no-results">No results found</div>';
-        } else {
-            resultsContainer.innerHTML = results.map(result => `
-                <div class="search-result-item" data-url="${result.url}">
-                    <div class="search-result-title">${this.highlightText(result.title, this.getCurrentQuery(type))}</div>
-                    <div class="search-result-section">${result.section}</div>
-                    <div class="search-result-excerpt">${this.getExcerpt(result.content, this.getCurrentQuery(type))}</div>
-                </div>
-            `).join('');
-            
-            // Add click listeners to results
-            resultsContainer.querySelectorAll('.search-result-item').forEach(item => {
-                item.addEventListener('click', () => {
-                    const url = item.getAttribute('data-url');
-                    window.location.href = url;
-                });
-            });
-        }
-        
-        resultsContainer.style.display = 'block';
-    }
+    // Legacy method - no longer used with modal implementation
     
-    getCurrentQuery(type) {
-        const input = document.querySelector(`.search-input-${type}`);
-        return input ? input.value.trim() : '';
-    }
+    // Legacy method - no longer used with modal implementation
     
     getExcerpt(content, query) {
         const maxLength = 150;
@@ -259,49 +168,133 @@ class DocsSearch {
         return highlighted;
     }
     
-    handleFocus(type) {
-        const query = this.getCurrentQuery(type);
-        if (query.length >= 2) {
-            const results = this.search(query);
-            this.displayResults(results, type);
+    // Legacy method - no longer used with modal implementation
+    
+    // Legacy method - no longer used with modal implementation
+    
+    // Legacy method - no longer used with modal implementation
+    
+    // Legacy method - no longer used with modal implementation
+    
+    setupKeyboardShortcuts() {
+        document.addEventListener('keydown', (event) => {
+            // Ctrl+K or Cmd+K to open search modal
+            if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+                event.preventDefault();
+                this.openSearchModal();
+            }
+            
+            // Escape to close search modal
+            if (event.key === 'Escape') {
+                this.closeSearchModal();
+            }
+        });
+    }
+    
+    openSearchModal() {
+        const modal = document.getElementById('search-modal');
+        const input = document.getElementById('search-input-modal');
+        
+        if (modal && input) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus input after modal animation
+            setTimeout(() => {
+                input.focus();
+            }, 100);
         }
     }
     
-    handleBlur(type) {
-        // Delay hiding results to allow clicking on them
-        setTimeout(() => {
-            this.hideResults(type);
-        }, 200);
-    }
-    
-    handleKeydown(event, type) {
-        if (event.key === 'Escape') {
-            this.hideResults(type);
-            event.target.blur();
+    closeSearchModal() {
+        const modal = document.getElementById('search-modal');
+        const input = document.getElementById('search-input-modal');
+        
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Clear search input and results
+            if (input) {
+                input.value = '';
+                this.hideModalResults();
+            }
         }
     }
     
-    hideResults(type) {
-        const resultsContainer = document.querySelector(`.search-results-${type}`);
+    hideModalResults() {
+        const resultsContainer = document.getElementById('search-results-modal');
         if (resultsContainer) {
+            resultsContainer.innerHTML = '';
             resultsContainer.style.display = 'none';
         }
     }
     
-    setupKeyboardShortcuts() {
-        document.addEventListener('keydown', (event) => {
-            // Ctrl+K or Cmd+K to focus search
-            if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
-                event.preventDefault();
-                const searchInput = document.querySelector('.search-input-desktop') || 
-                                  document.querySelector('.search-input-mobile');
-                if (searchInput) {
-                    searchInput.focus();
-                }
-            }
-        });
+    setupModalSearch() {
+        const input = document.getElementById('search-input-modal');
+        
+        if (input) {
+            input.addEventListener('input', (e) => this.handleModalSearch(e));
+            input.addEventListener('keydown', (e) => this.handleModalKeydown(e));
+        }
+    }
+    
+    handleModalSearch(event) {
+        const query = event.target.value.trim();
+        
+        if (query.length < 2) {
+            this.hideModalResults();
+            return;
+        }
+        
+        const results = this.search(query);
+        this.displayModalResults(results);
+    }
+    
+    handleModalKeydown(event) {
+        if (event.key === 'Escape') {
+            this.closeSearchModal();
+        }
+    }
+    
+    displayModalResults(results) {
+        const resultsContainer = document.getElementById('search-results-modal');
+        
+        if (!resultsContainer) return;
+        
+        if (results.length === 0) {
+            resultsContainer.innerHTML = '<div class="search-no-results">No results found</div>';
+        } else {
+            resultsContainer.innerHTML = results.map(result => `
+                <div class="search-result-item" data-url="${result.url}">
+                    <div class="search-result-title">${this.highlightText(result.title, this.getModalQuery())}</div>
+                    <div class="search-result-section">${result.section}</div>
+                    <div class="search-result-excerpt">${this.getExcerpt(result.content, this.getModalQuery())}</div>
+                </div>
+            `).join('');
+            
+            // Add click listeners to results
+            resultsContainer.querySelectorAll('.search-result-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const url = item.getAttribute('data-url');
+                    this.closeSearchModal();
+                    window.location.href = url;
+                });
+            });
+        }
+        
+        resultsContainer.style.display = 'block';
+    }
+    
+    getModalQuery() {
+        const input = document.getElementById('search-input-modal');
+        return input ? input.value.trim() : '';
     }
 }
 
 // Initialize search when script loads
-new DocsSearch();
+const searchInstance = new DocsSearch();
+
+// Global functions for onclick handlers
+window.openSearchModal = () => searchInstance.openSearchModal();
+window.closeSearchModal = () => searchInstance.closeSearchModal();

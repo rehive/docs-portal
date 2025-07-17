@@ -17,32 +17,47 @@
 					{{ end }}
 				</li>
 
-				{{ range .Site.Params.extraNavItems }}
-					<li class="navbar-item navbar-right-item">
+				<li class="navbar-item navbar-right-item navbar-actions-group">
+					<button id="search-button" class="search-trigger-button" onclick="openSearchModal()">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="11" cy="11" r="8"></circle>
+							<path d="m21 21-4.35-4.35"></path>
+						</svg>
+						<span class="search-shortcut">⌘K</span>
+					</button>
+					{{ range .Site.Params.extraNavItems }}
 						<a href="{{ .url }}" class="navbar-link">{{ .title }}</a>
-					</li>
-				{{ end }}
+					{{ end }}
+				</li>
 			</ul>
 		</div>
 	</nav>
 	<div class="mobile-navbar">
 		<div class="container">
 			<div class="mobile-nav-left">
-			<div class="burger-container" onclick="openNav()">
-				<div class="burger"></div>
-				<div class="burger"></div>
-				<div class="burger"></div>
-			</div>
-			<div class="page-title">
-				{{ if .IsHome }}
-					Rehive Docs
-				{{ else }}
-					{{ with .Site.GetPage "section" .Section }}
-						{{ .Title }}
+				<div class="burger-container" onclick="openNav()">
+					<div class="burger"></div>
+					<div class="burger"></div>
+					<div class="burger"></div>
+				</div>
+				<div class="page-title">
+					{{ if .IsHome }}
+						Rehive Docs
+					{{ else }}
+						{{ with .Site.GetPage "section" .Section }}
+							{{ .Title }}
+						{{ end }}
 					{{ end }}
-				{{ end }}
+				</div>
 			</div>
-			<div class="mobile-nav-spacer"></div>
+			<div class="mobile-nav-right">
+				<button id="mobile-search-button" class="mobile-search-trigger-button" onclick="openSearchModal()">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="11" cy="11" r="8"></circle>
+						<path d="m21 21-4.35-4.35"></path>
+					</svg>
+				</button>
+			</div>
 		</div>
 	</div>
 	</div>
