@@ -202,7 +202,6 @@ main.home {
 		border-radius: 4px;
 		margin: 0 1rem 2rem 1rem;
 		padding: 1rem;
-		border: 1px solid $lightGray;
 	}
 	
 	// Mobile card text sizing
@@ -444,8 +443,6 @@ footer {
 		.navbar-right-item .navbar-link:hover {
 			background: $secondary;
 			color: white;
-			transform: translateY(-1px);
-			box-shadow: 0 4px 12px rgba(51, 195, 240, 0.4);
 		}
 
 		.navbar-link.active {
