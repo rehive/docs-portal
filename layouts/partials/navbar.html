@@ -42,6 +42,7 @@
 					{{ end }}
 				{{ end }}
 			</div>
+			<div class="mobile-nav-spacer"></div>
 		</div>
 	</div>
 	</div>
@@ -69,6 +70,17 @@
 						</div>
 						<div class="section-content" id="section-{{ .Title | urlize }}">
 							<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link">{{ .Title }} Overview</a>
+							
+							{{ range (sort .Sections ".Weight") }}
+								<div class="subsection">
+									<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
+									<div class="page-list" style="display: block;">
+										{{ range (sort .Pages ".Weight") }}
+											<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
+										{{ end }}
+									</div>
+								</div>
+							{{ end }}
 						</div>
 					</div>
 				{{ end }}
@@ -87,17 +99,15 @@
 						<div class="section-content" id="section-{{ .Title | urlize }}" {{ if $isCurrentSection }}style="display: block;"{{ end }}>
 							<a href="{{ .Params.linkTo | default .RelPermalink }}" class="nav-link section-link {{ if $isCurrentSection }}active{{ end }}">{{ .Title }} Overview</a>
 							
-							{{ if $isCurrentSection }}
-								{{ range (sort (.Site.GetPage "section" $currentSection ).Sections ".Weight") }}
-									<div class="subsection">
-										<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
-										<div class="page-list">
-											{{ range (sort .Pages ".Weight") }}
-												<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
-											{{ end }}
-										</div>
+							{{ range (sort .Sections ".Weight") }}
+								<div class="subsection">
+									<a href='{{ range first 1 (sort .Pages ".Weight") }}{{ .RelPermalink }}{{ end }}' class="nav-link subsection-link {{ if .IsAncestor $currentPage }}active{{ end }}">{{ .Title }}</a>
+									<div class="page-list" style="display: block;">
+										{{ range (sort .Pages ".Weight") }}
+											<a href="{{ .RelPermalink }}" class="nav-link page-link {{ if and .File $currentPage.File }}{{ if in .File.UniqueID $currentPage.File.UniqueID }}active{{ end }}{{ end }}">{{ .Title }}</a>
+										{{ end }}
 									</div>
-								{{ end }}
+								</div>
 							{{ end }}
 						</div>
 					</div>
