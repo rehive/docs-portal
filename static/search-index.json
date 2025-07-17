@@ -1,0 +1,937 @@
+{
+  "documents": [
+    {
+      "title": "Intro",
+      "content": "The company config is a json object field on a Rehive company object that is used to customize the Rehive applications to a specific company s requirements. This covers styling, content and on-boarding. Each section of the json object is described below as well as the default values that are used if a value isn t specified (it isn t required to include all options in the config, only the values that need to be overridden) Types (s) - string, (b) - boolean, (i) - integer",
+      "section": "Applications",
+      "url": "/applications/config/intro/",
+      "weight": 0
+    },
+    {
+      "title": "Accounts",
+      "content": "Controls the appearance features in accounts section Types (s) - string, (b) - boolean, (i) - integer --- layout (s accounts ) groups currencies by accounts with totals, defaults to listing all currencies. actionVariant (s text ) controls whether to use icons (default) or text action buttons. identifier (s name ) controls whether to use the account reference or account name in the web application url. amountDisplayCurrency (b true ) controls whether to use display currency value or actual account value as main amount used displayed throughout the application. This affects both account listings, application selector cards as well as the amount inputs. displayAccountReference (b false ) controls whether the account reference is shown on individual application cards on accounts listing",
+      "section": "Applications",
+      "url": "/applications/config/accounts/",
+      "weight": 1
+    },
+    {
+      "title": "Changelog",
+      "content": "Summary of additions and changes to the web application. --- link-heading \"h4\" \"2025-01-04 - 3.0.12\" Bug fixes Fixed missing translation key for withdraw to account functionality. Fixed issue where the MAX amount button was not working in the buy flow. Resolved payment processor form validation issues. --- link-heading \"h4\" \"2025-01-03 - 3.0.11\" Bug fixes Fixed input validation not correctly triggering in forms. --- link-heading \"h4\" \"2025-01-02 - 3.0.10\" Bug fixes Fixed issue with Bridge crypto and bank checkout flows. --- link-heading \"h4\" \"2025-01-02 - 3.0.9\" Bug fixes Fixed issue with Bridge KYC link endpoint being called on non-Bridge companies. Fixed company name loading on authentication screen. --- link-heading \"h4\" \"2025-01-02 - 3.0.8\" Enhancements Improved onboarding flow with better \"Go to App\" and business buttons. --- link-heading \"h4\" \"2025-01-02 - 3.0.7\" Changes Updated Bridge Terms of Service to open in the same tab with proper redirect handling. --- link-heading \"h4\" \"",
+      "section": "Applications",
+      "url": "/applications/web-application/changelog/",
+      "weight": 1
+    },
+    {
+      "title": "Changelog",
+      "content": "Summary of additions and changes to the mobile application. --- link-heading \"h4\" \"2024-12-17 - 7.8.16\" Bug fixes Fixed receive send screen crash issue. --- link-heading \"h4\" \"2024-11-29 - 7.8.14\" Changes Updated image permissions to meet Play Store requirements. --- link-heading \"h4\" \"2024-11-29 - 7.8.13\" Bug fixes Fixed image file permissions to meet Play Store requirements. --- link-heading \"h4\" \"2024-11-29 - 7.8.12\" Features Added Bridge crypto receive page functionality. Implemented Bridge onboarding flow. Added Bridge crypto send functionality. Implemented Bridge bank deposit and withdrawal support. Added Bridge pending bank account handling. Implemented Bridge features and custom selector components. Changes Enhanced transaction display with additional details. Improved bank account backwards compatibility. Cleaned up async send functionality. Bug fixes Fixed bottom sheet height issue on some Android devices. --- link-heading \"h4\" \"2024-03-28 - 7.8.9\" Changes Updated default Nod",
+      "section": "Applications",
+      "url": "/applications/mobile-application/changelog/",
+      "weight": 1
+    },
+    {
+      "title": "Self-hosting",
+      "content": "For the web app, you can make use of Rehive Hosting in the App Extension in the Rehive Dashboard, which means there is no need to manage the codebase yourself, unless you choose to. For the mobile app, you will need to manage the codebase yourself in order to perform app store builds and submissions. Codebase access The codebase for the web and mobile apps can be downloaded from the App Extension section in the Rehive Dashboard. For web app codebase access a Rehive Standard Subscription or higher is required and for mobile app codebase access, a Rehive Premium Subscription or higher is required. Updates together with the a link to the changelog for each version release can be found in the dashboard. We don t currently send out notifications on every release and so you will need to periodically check the dashboard for updates. Recommended workflow for updates In order to easily merge Rehive updates with your own, we recommend downloading the codebase and then following a workflow simila",
+      "section": "Applications",
+      "url": "/applications/get-started/self-hosting/",
+      "weight": 1
+    },
+    {
+      "title": "Actions",
+      "content": "Config key actions Each action in accounts can be customized here. All actions have a condition and a config described below. This section will be updated overhauled soon (end Q2 2022). Types (s) - string, (b) - boolean, (i) - integer --- Actions send receive withdraw request deposit exchange buy sell transfer prepaid redeem_voucher scan (mobile only - redirects to send or pay depending on what is scanned) pay (accessed through scan on mobile) Condition This is applicable to all actions hide - hides this action under any conditions hideCurrency - array of currencies this action is hidden for showCurrency - array of currencies this action is shown for hideGroups - array of groups this action is hidden for showGroups - array of groups this action is shown for hideAccounts - array of accounts this action is hidden for showAccounts - array of accounts this action is shown for Config send confirmMessage custom message displayed on the confirm screen receive initialPage (s qr ) whether to sh",
+      "section": "Applications",
+      "url": "/applications/config/actions/",
+      "weight": 2
+    },
+    {
+      "title": "App Store Builds and Submissions",
+      "content": "As of January 2022, Rehive no longer provides managed iOS and Android App Store submissions, however you can use this guide to get started managing your own builds and submissions for the iOS App Store and the Android Play Store. link-heading \"h2\" \"Requirements\" Enrollment into the Apple Developer Program as an Orginization (not an Individual). Visit this link to view the requirements and start the process A Google Play Developer account registered under your business name (not an individual account). An Expo Account which will be used build the app bundles The Rehive Mobile App source code which can be downloaded from the App Extension section in the Rehive Dashboard. For codebase access a Rehive Premium or Enterprise subscription is required. A Firebase account for setting up push notifications on Android. App icon in PNG format 1024 x 1024px App splash screen in PNG format 1242 x 2436px General branding info required by the app stores like App name and description link-heading \"h2\" ",
+      "section": "Applications",
+      "url": "/applications/mobile-application/app_store_builds/",
+      "weight": 2
+    },
+    {
+      "title": "Hosting",
+      "content": "We recommend using Rehive Hosting. You can use the App Extension in the Rehive Dashboard to customize your app and set your custom domain. However, if you need to customize the app beyond what is supported by the Rehive App Extension, you will need to download the codebase and make changes to the code. Note that when you make changes to the code, it is no longer possible to make use of Rehive hosting and you will need to host the app yoursel. When you opt for self-hosting, you will also be responsible for applying updates. Be sure to follow the recommended workflow for downloading the codebase and applying updates. The Rehive App is a standard React app and so the process for hosting it should not be too complicated and you can use your own server or one of many providers. Here s an example of the process to follow to get your app hosted on Vercel Example Hosting using Vercel Follow the steps in the \"Configuration\" section of our readme in the web app code repository to allow hosting o",
+      "section": "Applications",
+      "url": "/applications/web-application/hosting/",
+      "weight": 2
+    },
+    {
+      "title": "App config",
+      "content": "The company config is a json object field on a Rehive company object that is used to customize the Rehive applications to a specific company s requirements. This covers styling, content and on-boarding. Each section of the json object is described below as well as the default values that are used if a value isn t specified (it isn t required to include all options in the config, only the values that need to be overridden) Types (s) - string, (b) - boolean, (i) - integer",
+      "section": "Applications",
+      "url": "/applications/config/",
+      "weight": 3
+    },
+    {
+      "title": "Auth",
+      "content": "Config key auth This section configures the auth screen flows Types (s) - string, (b) - boolean, (i) - integer --- identifier (s email mobile ) tells the app which field the users are required to log in with. Note the two options below are only applicable for whichever value this identifier is set to email (s required optional ) prompts the user to verify their email required app is blocked by this screen until user has verified email optional it can be skipped, but the user will be prompted again on next login default screen is skipped mobile (s required optional ) prompts the user to verify their mobile same behaviour as email above with required optional . first_name (b) requires user to enter their first name last_name (b) requires user to enter their last name username (b) requires user to enter a username nationality (b) requires user to select a nationality country defaultNationality (s) country code for the default nationality set for new registrations. Note if confirm_password",
+      "section": "Applications",
+      "url": "/applications/config/auth/",
+      "weight": 3
+    },
+    {
+      "title": "Push notifications",
+      "content": "Push notifications in the Rehive apps are facilitated by the Expo framework on which the mobile react native app is built and therefore only available in apps also built on Expo. This guide summarizes how to get push notifications working in your app. Setup Setup FCM for android on your Firebase account follow the steps provided in both the \"Client Setup\" and \"Uploading Server Credentials\" sections of this guide https docs.expo.dev push-notifications using-fcm Request Rehive to enable push notifications for your app id on the service Get the users push notification token by following this guide using this code https docs.expo.dev push-notifications push-notifications-setup Add user device IMEI to platform via the devices and devices id apps endpoints. We usually do this along with step 3 during the registration process and or in settings. How this works The notification service receives the event and if a push notification is configured for it, it tries to process it. If the user has u",
+      "section": "Applications",
+      "url": "/applications/mobile-application/push-notifications/",
+      "weight": 3
+    },
+    {
+      "title": "Business",
+      "content": "Config key business Types (s) - string, (b) - boolean, (i) - integer --- hideCurrency ( s ) array of currencies to hide from available business currencies documents hide (b false) controls whether to hide the documents section of business onboarding settings",
+      "section": "Applications",
+      "url": "/applications/config/business/",
+      "weight": 4
+    },
+    {
+      "title": "Cards",
+      "content": "Config key cards --- This config can be explored in the help center",
+      "section": "Applications",
+      "url": "/applications/config/cards/",
+      "weight": 5
+    },
+    {
+      "title": "Colors",
+      "content": "The theming in the app is based on using two main colors (it used to be four, as shown below with the strikethrough - these may be added again at a later stage), where each of these colors is applied to different parts of the app (headers buttons icons) and each has a \"Contrast\" color for any text item that needs to be legible against the color. Types (s) - string, (b) - boolean, (i) - integer --- primary dark brand color, used for most of the app (headers, drawers, main buttons) secondary light brand color, used anywhere else color is needed and usually provides contrast to the primary color other colors this config also provides setting colors for text, error, warning, success, positive and negative styling when the default colors clash with the brand colors",
+      "section": "Applications",
+      "url": "/applications/config/colors/",
+      "weight": 6
+    },
+    {
+      "title": "FAQs",
+      "content": "Config key faqs This section configures the list of frequently asked questions in the apps help section Types (s) - string, (b) - boolean, (i) - integer --- description (s ) helper text displayed below FAQ header questions ( ) array of question objects with the following fields question (s ) title question string answer (s ) answer to the question",
+      "section": "Applications",
+      "url": "/applications/config/faqs/",
+      "weight": 7
+    },
+    {
+      "title": "General settings",
+      "content": "key settings Types (s) - string, (b) - boolean, (i) - integer --- hideCryptoAccounts (b false) hides crypto accounts section in external accounts hideBankAccounts (b false) hides bank accounts section in external accounts hidePrimaryCurrency (b false) hides primary currency section in preferences hideNotifications (b false) hides notifications section in preferences hideSmsMfa (b false) hides option to use SMS as a form of two factor authentication bank hide (b false) controls whether to hide certain fields on the bank account page legal hide (b false) controls whether to hide certain fields on the legal page",
+      "section": "Applications",
+      "url": "/applications/config/general_settings/",
+      "weight": 8
+    },
+    {
+      "title": "Local authentication",
+      "content": "Config key localAuth This section covers when the user is prompted to confirm their local authentication if it s set (this can be biometrics like face ID fingerprint or a pin) Types (s) - string, (b) - boolean, (i) - integer --- appLoad - when a user reopens the app after already being logged in and the token is stored behind local auth send - when completing the send flow withdraw - when completing a withdraw",
+      "section": "Applications",
+      "url": "/applications/config/localauth/",
+      "weight": 9
+    },
+    {
+      "title": "Menu",
+      "content": "Config key menu Types (s) - string, (b) - boolean, (i) - integer --- items ( s ) array of object for customiing the menu items name (s ) name of menu item hide (b false) controls whether the menu item is hidden or not",
+      "section": "Applications",
+      "url": "/applications/config/menu/",
+      "weight": 10
+    },
+    {
+      "title": "Onboarding",
+      "content": "Config key onboarding Types (s) - string, (b) - boolean, (i) - integer --- hideSections ( s ) array of section names to hide in onboarding flow hideRegister ( s ) array of group names to skip onboarding flow from register hideApp ( s ) array of group names to skip onboarding flow from register and login documents hide (b false) option to hide documents section",
+      "section": "Applications",
+      "url": "/applications/config/onboarding/",
+      "weight": 11
+    },
+    {
+      "title": "Product",
+      "content": "Config key product Controls the appearance features in product section Types (s) - string, (b) - boolean, (i) - integer --- currencies (a - ) hardcode override to only show products for these currencies (array of codes) defaultCurrency (s - ) overrides using the user s primary currency as default cart currency",
+      "section": "Applications",
+      "url": "/applications/config/product/",
+      "weight": 12
+    },
+    {
+      "title": "Profile",
+      "content": "Config key profile Types (s) - string, (b) - boolean, (i) - integer --- hideID - hides the id field from the personal details page labelID - custom label override for id field addressTypes - available address types in app. This is used for listing the addresses on the profile, adding new addresses and checkout flows. Options are from the platform (permanent, shipping, billing) referral enabled (b false) enabled referral rewards banner in profile and code input on registration documents hide (b false) option to hide documents section",
+      "section": "Applications",
+      "url": "/applications/config/profile/",
+      "weight": 13
+    },
+    {
+      "title": "Sliders",
+      "content": "This section contains multiple arrays of slide objects that are displayed at different locations in the app. Types (s) - string, (b) - boolean, (i) - integer --- Currently available in the following locations preAuth - in grey label it s after choosing the app ID, in white label it s after first start up auth - carousel on the landing page postAuth - after successful registration flow Each slide object has the following properties id (i) unique identifier of slide title (s) title to be displayed on slide description (s) description to be displayed on slide image (s) image to be displayed on the slide. Image file must be located in assets icons Note this is not currently working - also needs to be improved to fetch the images from a web server instead of local storage.",
+      "section": "Applications",
+      "url": "/applications/config/sliders/",
+      "weight": 14
+    },
+    {
+      "title": "Introduction",
+      "content": "Rehive consists of three parts Platform, Extensions, and Applications. This overview assumes that you are familiar with these. In this guide we will look at dive into what a Currency Manager is, how to build a Currency Manager Extension as well as some more advanced Currency Manager implementations. The first place to start is by familiarizing yourself with the Get Started section. This gives a basic overview of how to start building an extension as well as the ground-level endpoints you ll need to use. You should also familiarize yourself with Rehive s Standard Configurations to ensure that the correct subtypes are used for specific transactions. Lastly being comfortable with the transaction and transaction collection logic is also required to start building a currency manager extension. What is currency management? Currency management allows each Rehive currency to be controlled by a service user. This user is known as the currency manager and is the sole entity that can shift transa",
+      "section": "Building",
+      "url": "/building/currency-manager-extension/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "This guide will describe the typical integration structure for a KYC partner. Two scenarios will be covered Recommended flow, where each requirement is verified separately by the third party and the verification status updated on Rehive A less common flow, where only one user verification status is returned by the third party and a user verification status is updated on Rehive The guide will highlight which Rehive endpoints to use at each point in the process. The first place to start is by familiarizing yourself with the Get Started section. This gives a basic overview of how to start building an extension as well as the ground-level endpoints you ll need to use. You should also familiarize yourself with Rehive s Standard Configurations to ensure that the correct subtypes are used for specific transactions.",
+      "section": "Building",
+      "url": "/building/kyc/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "Rehive consists of three parts Platform, Extensions, and Applications. This overview assumes that you are familiar with these. Rehive s Conversion Extension has been updated to support custom quotes from third parties. This is done by associating a currency pair with a third-party (or custom) extension. When a quote is created for the currency pair, the custom extension provides information to generate the quote rather than using the internal rates of Rehive s Conversion Extension. This guide will cover the recommended way to build a custom estension which will provide quotes and execute conversion transactions on a relevant third party before updatin the associated Rehive transactions. The first place to start is by familiarizing yourself with the Get Started section. This gives a basic overview of how to start building an extension as well as the ground-level endpoints you ll need to use. You should also familiarize yourself with Rehive s Standard Configurations to ensure that the co",
+      "section": "Building",
+      "url": "/building/conversions/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "Rehive consists of three parts Platform, Extensions, and Applications. This overview assumes that you are familiar with these. We ll look at the typical structure for integrating with a banking partner for withdrawals via bank transfer. For each flow, we will highlight which Rehive endpoints to use. The first place to start is by familiarizing yourself with the Get Started section. This gives a basic overview of how to start building an extension as well as the ground-level endpoints you ll need to use. You should also familiarize yourself with Rehive s Standard Configurations to ensure that the correct subtypes are used for specific transactions.",
+      "section": "Building",
+      "url": "/building/cash-out/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "Rehive consists of three parts Platform, Extensions, and Applications. This overview assumes that you are familiar with these. We ll look at the typical structure for integrating with a banking partner for deposits via bank transfer. For each flow, we will highlight which Rehive endpoints to use. The first place to start is by familiarizing yourself with the Get Started section. This gives a basic overview of how to start building an extension as well as the ground-level endpoints you ll need to use. You should also familiarize yourself with Rehive s Standard Configurations to ensure that the correct subtypes are used for specific transactions. Omnibus vs. segregated custody models It is useful to know the difference between two types of custody approaches. An omnibus approach involves end-users depositing funds to a single company bank account (omnibus bank account), using a user s unique Rehive account reference to identify the transaction as belonging to the user. This approach is a",
+      "section": "Building",
+      "url": "/building/cash-in-cash-out/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "In addition to the official Rehive Extensions, it is possible to build custom extensions. Before trying to implement an extension or any backend integration on Rehive you should spend some time reading through this page and the related Extension requirements page. Support and enablement The Account Manager expectations articles outline which support is available from Rehive when building a custom extension. Whether or not you are on a subscription plan that includes an account manager You must verify that your chosen 3rd party provider has support for the common endpoints for the integration requirements. You must consider how data is stored and linked to users in your extension. You should familiarize yourself with the Rehive Help Center. Rehive may offer a call to go over the flows if documentation is not sufficient or to identify variances. The banking partner should be included as a specialist. Rehive does not provide codebase-level reviews for custom extensions. Support will be pr",
+      "section": "Building",
+      "url": "/building/get-started/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Deposits to omnibus bank account",
+      "content": "This use case involves end-users depositing funds to a single company bank account (omnibus bank account), using a user s unique Rehive account reference to identify the transaction as belonging to the user. This approach is also referred to as an FBO or \"for benefit of\" structure. Feel free to test this flow on your test project in the Rehive Wallet apps. Requirements The details of the bank account you wish to receive deposit funds into must be added in the Rehive Admin Dashboard Settings Bank accounts. The currencies you list for each bank account will determine which bank account information is displayed when a user selects Deposit for each currency in the Wallet apps. Monitoring of incoming deposits to the bank account will need to be implemented per requirements from your banking partner. This can be in the form of polling done by your extension, or webhooks triggered by your banking partner. In this guide we assume that the banking partner notifies your extension of a new transa",
+      "section": "Building",
+      "url": "/building/cash-in-cash-out/deposits-to-omnibus-bank-account/",
+      "weight": 2
+    },
+    {
+      "title": "Generate a quote",
+      "content": "This section will provide guidelines fetching and providing quotation information from a chosen third-party provider. Requirements To integrate with our Conversion Extension, the custom extension requires a quote endpoint. This endpoint is later added as the url for the Conversion Extension to call when getting quotes. The details for this endpoint are laid out in the Quote endpoint guidelines section of this guide. A conversion extension webhook must be configured to notify your custom extension with specific event-type conversion.quote. This can be done by adding your extension to the Rehive Conversion Extension in the Rehive Admin Dashboard or directly on the Rehive Conversion Service using the steps in the Integrating with Rehive Conversion Service section. Once built, the specific conversion pairs must be configured on the Rehive Conversion Extension and associated with the custom extension in the form of a quote endpoint url added to the conversion pair. The custom extension must",
+      "section": "Building",
+      "url": "/building/conversions/generate-a-quote/",
+      "weight": 2
+    },
+    {
+      "title": "Transaction flows",
+      "content": "Rehive s transaction transition flow During Rehive s transaction processing lifecycle each status change triggers the creation of a new transition event. These transition events control if the transaction moves to the next status by either being declined or approved. In the normal unmanaged flow these transition events are generally approved automatically. This is different for a managed currency transaction. A currency manager completes or fails a transaction by listening for Rehive transaction transition events and approving or declining them based on how it can process that transaction. Rehive transaction handling When handling Rehive transaction webhooks, it is expected that the extension always eventually moves the transaction into either a Complete or a Failed state. If any flow is not supported, the manager should immediately fail the transaction. Flow The currency manager receives a transaction transition event webhook from Rehive. The currency is checked to see if it s a curre",
+      "section": "Building",
+      "url": "/building/currency-manager-extension/transaction_flows/",
+      "weight": 2
+    },
+    {
+      "title": "Update user verification statuses",
+      "content": "Requirements and best practices Rehive s standard approach uses Tiers to enforce limits, fees and subtype restrictions for users. Tiers can be configured on a Group level using the Rehive Admin Dashboard based on a variety of fields which can be updated using the dashboard KYC flows or the Rehive Platform. A webhook can be configured to notify your custom extension when specific user events that relate to your specific KYC requirements occur, such as end-users updating KYC fields or submitting relevant supporting documents. The Rehive Platform can be used to fetch the required data and supporting documentation. Should your KYC provider or local regulations require KYC fields that Rehive does not yet support, please contact us so that we may add them. Once verified, the applicable fields can be updated on the Rehive Platform. Depending on the tier requirements for a particular user s group, Rehive Platform will assign them to a Tier, and the appropriate fees, limits, and subtype restric",
+      "section": "Building",
+      "url": "/building/kyc/user-verification/",
+      "weight": 2
+    },
+    {
+      "title": "Deposits to segregated bank accounts",
+      "content": "This use case involves end-users depositing funds to unique bank accounts associated to them on the backend, using a user s unique Rehive account reference to identify the account to assign the deposit to. This deposit method will have the same end-user experience as the existing Deposit to omnibus bank account flow. Feel free to test this flow on your test project in the Rehive Wallet apps. Requirements To support this deposit method, you will need to consider two separate flows - one where a bank account is created for each new user-profile created on your Rehive project and another for the actual deposit flow. The accounts created for the users must support all currencies in which deposits are expected to be received. You will need to configure a webhook to notify your extension when a new user profile is created Monitoring of incoming deposits to the bank account will need to be implemented per requirements from your banking partner. This can be in the form of polling done by your ",
+      "section": "Building",
+      "url": "/building/cash-in-cash-out/deposits-to-segregted-bank-accounts/",
+      "weight": 3
+    },
+    {
+      "title": "Execute a conversion",
+      "content": "This section will provide guidelines for triggering and executing transactions on the third party when quotes are accepted. Requirements The user must be on a Tier that allows transactions. Tiers are configured per Group using the Rehive Admin Dashboard. In order to execute any conversion transaction on a third party, all steps in Request a quote must be successfully completed. The quote information from the Request a quote steps will be used to trigger the associated transactions on the third-party ledger as well as the Rehive Platform. For this, it will need to store Collection ID s from quotes provided to the Rehive Conversion Estension. Your custom extension will need to subscribe to Rehive transaction webhooks (see Rehive docs). Steps The user accepts quote The Rehive Conversion Extension creates a pending transaction collection on the Rehive Platform The Rehive platform sends a transactiona webhook with the relevant transaction collection details Your custom extension matches the",
+      "section": "Building",
+      "url": "/building/conversions/execute-a-conversion/",
+      "weight": 3
+    },
+    {
+      "title": "Fees",
+      "content": "Withdrawal Fees On withdrawals, a fee might need to be applied when processing the transaction on the third party ledger. If this is the case, a fee transaction can be appended to the collection that is being processed. This is done by Getting the fee value that will be charged by the third party ledger. Usually by creating some form of quote object on the third party. Creating a Rehive transaction object, which includes the fee value, currency, and the relevant fee subtype. Example Append the transaction to the current collection being handled by updating the transaction object to admin transaction-collections collection_id transactions Inclusive vs Exclusive fees The third party ledger you integrate with might support creating transactions with a fee that is either inclusive or exclusive. This is supported by the inclusive field on a Rehive transaction that can be set to True False (by default it s False). When the currency manager processes a transaction, it can check the Rehive tra",
+      "section": "Building",
+      "url": "/building/currency-manager-extension/fees/",
+      "weight": 3
+    },
+    {
+      "title": "Requirements",
+      "content": "Custom extensions can be either private or public extensions. The requirements for these two types differ although the base requirements are the same. Private custom extensions Custom extensions can be created and used by any client without a review process. Extensions added as private extensions have to be added on each company individually. All custom extensions created by a company start off as a \"private extension\". Private custom extensions must meet the following requirements Expose public activate and deactivate endpoints that support the POST HTTP method. Not break or contravene any of the rules laid out in the Rehive Terms of Service and software licenses. Provide a list of permissions the extension requires. aside class \"warning\" The Rehive ecosystem does not currently support dashboard UI s for custom extension. The only actions available via the dashboard on custom extensions are \"activation\" and \"deactivation\". Additionally a code management_url code can be specified on ex",
+      "section": "Building",
+      "url": "/building/get-started/requirements/",
+      "weight": 3
+    },
+    {
+      "title": "Integrating with Rehive Conversion Service",
+      "content": "API code https conversion.services.rehive.com swagger code Integration Object creation POST to admin integrations with the following fields All fields are for reference purposes and can be named according to your custom extension Integration Webhook creation POST to admin integrations identifier webhooks with the following fields Adding an integration to a currency pair Each Currency pair now has an integration as well as a transaction_type field. These can be set either when creating the Currency Pair or by updating an exist one. To update the pair PATCH the admin conversion-pairs identifier endpoint with the following fields transaction_type currently has two options operational and non_operational. An operational transaction type denotes that the Currency Pair will use the Conversion Extensions operational account as the middleman account to buy and sell to the final Rehive account being affected by conversion. A non_operational denotes that the Currency Pair will only cause a singl",
+      "section": "Building",
+      "url": "/building/conversions/integrate-with-conversion-ext/",
+      "weight": 4
+    },
+    {
+      "title": "Recommendations",
+      "content": "Rehive has several recommendations for building extensions that we encourage developers to follow, especially if they are seeking approval for the addition of a publicly available extension. These recommendations should be followed alongside the platform recommendations Build with multi-tenant in mind Extensions should built to support a multi company use case, rather than only support a single company on Rehive. This will allow your extension to be used on test companies (should it be a private extension) or at a later stage be used as a public company. To ensure an extension is not locked to a single company ensure that On activation store a company relationship to the extension user (and token) On activation set a secret on the company in the extension that can be used for webhooks. Make all requests on the extension API only operate on the company of the user accessing the API (see above for authentication). Make all webhook handlers operate on the correct company data only (and ve",
+      "section": "Building",
+      "url": "/building/get-started/recommendations/",
+      "weight": 4
+    },
+    {
+      "title": "Technical outline",
+      "content": "This section serves as a guide on how to fulfill the API structure and functional requirements of a Currency Manager Extension. It assumes you have a grasp of the general concepts and flows discussed in the previous sections. When starting we recommend using our example template Django project which can be found here https github.com rehive service-framework tree currency-manager-example. This will include a fully working version of the technical implementation defined in this documentation. Further reading is only required if you are doing a completely custom setup. Structural Overview For a complete list of required endpoints and stored objects see the example implementation at https github.com rehive service-framework tree currency-manager-example Metadata structure Generally, we recommend including extra information about a transaction within the extension specific metadata. To include extra fields that might be useful for an admin or user to see a metadata object can be included a",
+      "section": "Building",
+      "url": "/building/currency-manager-extension/technical_outline/",
+      "weight": 4
+    },
+    {
+      "title": "Withdrawals via bank transfer",
+      "content": "For fiat cash-out, users are able to initiate withdrawals to a bank account of their choice. The existing manual withdrawal flow creates a pending withdrawal transaction, which an Admin Dashboard user can mark as complete after they have actioned the banking transaction through the company s operational transaction process. You can automate this process with your custom-built extension triggering the bank transaction using the information provided by Rehive. img src \" images web-app-withdraw-screen.png\" alt \"Web app withdraw image\" width \"80 \" End-users are able to add bank accounts to their profiles using the wallet applications as can be seen in the image below. When initiating a withdrawal, they may choose which added bank account to send the funds to. img src \" images web-app-add-bank-account-screen.png\" alt \"Web app add bank account image\" width \"80 \" Requirements and considerations The user must be on a Tier that allows withdrawal transactions. Tiers are configured per Group usin",
+      "section": "Building",
+      "url": "/building/cash-out/withdraw/",
+      "weight": 4
+    },
+    {
+      "title": "1-to-1 mapping",
+      "content": "A 1-to-1 mapped extension aims to replicate an external ledger within the Rehive ledger system. With the added requirement of the external ledgers accounts balances being mapped to specific users accounts balances within Rehive. This is an especially useful method for keeping strict controls that ensure that user funds are available at all times. To achieve a 1-to-1 mapped setup, both user changes and transaction changes need to be synced between Rehive and the external Ledger. For example, if a transaction occurs on the external ledger that moves funds between two user accounts the currency manager extension should find the equivalent Rehive user accounts and replicate that transfer between them. Can my third party ledger be mapped 1-to-1? If the third party ledger can answer yes to the following questions, then it is possible to fit it into a 1-to-1 mapped structure. It can generate a separate custodial account objects (bank account, custodial crypto account etc) for each Rehive user",
+      "section": "Building",
+      "url": "/building/currency-manager-extension/1-to-1-mapping/",
+      "weight": 5
+    },
+    {
+      "title": "Examples and resources",
+      "content": "Rehive has several resources and examples you can use when developing extensions. Our base extension framework is publicly available here https github.com rehive service-framework We advise using this as a starting point if you are happy working with Python and Django. If you intend using another language or framework you can still use the above as \"conceptual\" guide. This example includes the minimum requirements to support a Rehive approved multi-company extension. There is also a simplified demo written in Flask to show how webhooks can be used to power an extension https github.com rehive python-service-demo Example integration There are many ways to integrate with the Rehive ecosystem. The following diagram shows how to do so using Rehive for authentication in addition to supporting a custom endpoint that provides access to resources normally only accesible to admin users img src \" images integrations.svg\" alt \"Dashboard image\" width \"100 \" The flow above is stateless (REST), whic",
+      "section": "Building",
+      "url": "/building/get-started/examples/",
+      "weight": 5
+    },
+    {
+      "title": "Extra integrations",
+      "content": "This section outlines any additional integrations that can be done to extend the Currency Manager Extension functionality to different parts of the Rehive s ecosystem. Integrating with the Conversion Extension flows A currency manager that links to a third party system that provides endpoints for handling conversions and quotes can integrate directly with Rehive s Conversion Extension to use the third party as the underlying quote and conversion mechanism. This can be done by implementing the Conversion Quote Integration within the currency manager extension. Guide coming soon! Integrating with the Payment Requests Extension (PRS) In order for a payment manager to integrate with the PRS payment processing it needs to provide an endpoint which returns a standard set of payment information as well as stores the PRS quote id to be used by the payment manager when creating the transaction. Flow The PRS sends quote information to the payment processor (in this case the currency manager exte",
+      "section": "Building",
+      "url": "/building/currency-manager-extension/integrating_with_rehive/",
+      "weight": 5
+    },
+    {
+      "title": "Changelog",
+      "content": "Summary of additions and changes to the Rehive Dashboard. --- link-heading \"h4\" \"2024-12-18\" Changes Updated the product extension to support the seller field on product add and edit. Removed invalid \"placheolder\" text on the add custom extension page. Added support for all missing webhook events as well as the new company.update webhook. The full list of webhook events is now support on The platform webhook creation update listing logs pages. The notification extension The rewards extension. Fixed a bug with tier requirement condition handling. Fixed a bug with tier requirement set deletetion handling. Updated all Rehive endpoints to use the .com domain rather than the .io domain. Added a new residency field to users and \"allowed residencies\" company setting. Updated the nationality and \"allowed nationalities\" to always be referred to as nationality and not country. Added new metrics sidebar with functionality to allow clients to create their own metrics. Fixed a pagination error with",
+      "section": "Dashboard",
+      "url": "/dashboard/releases/changelog/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Dashboard is an admin s control centre where they can easily view and edit their app s settings and business logic. All functionality offered by Rehive s core platform can be controlled via the Dashboard through an optimized UI. Our Dashboard strives to make all of the tasks you want to accomplish as easy as possible and ensure that you have the tools to manage your business effectively. img src \" images dashboard.svg\" alt \"Dashboard image\" width \"100 \" Some of the things you can manage via our Dashboard Currencies Groups Account definitions and accounts Users Transactions Subtypes Access control Webhooks API tokens Request log Extensions Business logic such as subtype controls, limits, and fees. App config And more",
+      "section": "Dashboard",
+      "url": "/dashboard/get-started/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The product extension is used to manage orders, products and payments. It allows companies to setup a simple multi currency ecommerce store that rides on the Rehive transaction ledger for payments. aside class \"notice\" The full strong API specification strong can be found a href \"https product.services.rehive.com\" here a aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https product.services.rehive.com swagger \" here a aside The extension allows you to Create, retrieve and configure products (with extensive customization) Create pending carts that can be converted to orders Handle rehive payments and order placement.",
+      "section": "Extensions",
+      "url": "/extensions/products/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Stellar extension is used as an interface between the Stellar and Rehive ledgers. It provides an API for a company to create and manage a Stellar application. There is both a mainnet Stellar Service as well as a Stellar Testnet Service. strong Testnet strong aside class \"notice\" The full strong Testnet API specification strong can be found a href \"https stellar-testnet.services.rehive.com redoc \" here a aside aside class \"notice\" The strong Testnet Swagger specification strong can be found a href \"https stellar-testnet.services.rehive.com swagger \" here a aside strong Mainnet strong aside class \"notice\" The full strong Mainnet API specification strong can be found a href \"https stellar.services.rehive.com redoc \" here a aside aside class \"notice\" The strong Mainnet Swagger specification strong can be found a href \"https stellar.services.rehive.com swagger \" here a aside The extension allows you to Accept any Stellar asset as a deposit from users Add any Stellar token Allow users to",
+      "section": "Extensions",
+      "url": "/extensions/stellar/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The conversion extension is used to manage currency rates, quotes and conversion transactions. It allows for companies to access data regarding current rates (provided by a reliable 3rd party rates source) as well as set their own custom rates for specific currency pairs. aside class \"notice\" The full strong API specification strong can be found a href \"https conversion.services.rehive.com\" here a aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https conversion.services.rehive.com swagger \" here a aside Currently the extension allows you to Retrieve rates for common global currency pairs. Enable and retrieve rates for custom currency pairs. Set rate paths for currency pairs. Add custom currencies for rate pairs. aside class \"warning\" The following features are not supported yet aside Complex expressions for rate pair paths. Customizable or extended base currency support. Only USD is supported as a base currency currently.",
+      "section": "Extensions",
+      "url": "/extensions/conversions/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Bridge extension is used to integrate directly with Bridge. aside class \"notice\" The full strong API specification strong can be found a href \"https bridge.services.rehive.com\" here a aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https bridge.services.rehive.com swagger \" here a aside The extensions supports the following Bridge functionality Customers - Support mirroring Rehive users as Bridge customers. KYC - Supports performing KYC using the Bridge KYC flow. Wallets - Support mirroring Rehive accounts as Bridge wallets (as a store-of-value). Virtual accounts - Support funding wallets (accounts) via fiat bank deposits. Liquidation addresses - Support funding wallets (accounts) via crypto deposits. External accounts - Support the withdrawal of funds from wallets (accounts) via bank withdrawals. Transfers - Support the mirroring of Rehive transaction behavior as Bridge transfers on wallet. In summary, the Bridge extension manages linked Bri",
+      "section": "Extensions",
+      "url": "/extensions/bridge/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Reward extension is used to manage reward campaigns and individual rewards. It allows companies to setup campaigns in multiple currencies based on events or eplcit API calls. aside class \"notice\" The full strong API specification strong can be found a href \"https reward.services.rehive.com\" here a aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https reward.services.rehive.com swagger \" here a aside",
+      "section": "Extensions",
+      "url": "/extensions/rewards/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Payment Requests extension is used to create payment requests between users. It is also used by the Business extension to create invoices. aside class \"notice\" The full strong API specification strong can be found a href \"https payment-requests.services.rehive.com\" here a aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https payment-requests.services.rehive.com swagger \" here a aside",
+      "section": "Extensions",
+      "url": "/extensions/payment-requests/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Business extension allows users to create businesses and manage their payouts, accounts, customers and business documents. Admins can use the extension to setup business settings, automated payout rules and verify and manage payouts for businesses. aside class \"notice\" The full strong API specification strong can be found a href \"https business.services.rehive.com\" here a aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https business.services.rehive.com swagger \" here a aside",
+      "section": "Extensions",
+      "url": "/extensions/business/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Mass Send extension allows you to upload batches of transfer transactions via CSV files. aside class \"notice\" The full strong API specification strong can be found a href \"https mass-send.services.rehive.com\" here a aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https mass-send.services.rehive.com swagger \" here a aside The extension allows you to Upload a transaction batch in CSV format. Monitor the status of the batch in terms of transactions successfully processed. aside class \"warning\" The following features have not yet been added aside List the transactions in a batch and filter by status.",
+      "section": "Extensions",
+      "url": "/extensions/mass-send/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The notification extension is used to manage notifications to managers, admins and users. It allows companies to setup custom notifications for specific events in Rehive (eg. Verification emails, password resets, welcome emails etc.). aside class \"notice\" The full strong API specification strong can be found a href \"https notification.services.rehive.com\" here a aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https notification.services.rehive.com swagger \" here a aside The extension allows you to Configure notifications Send email notifications Send SMS notifications Send Push notifications in android iOS applications (chat to support about getting this enabled)",
+      "section": "Extensions",
+      "url": "/extensions/notifications/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "In addition to the core platform, Rehive offers several officially supported and maintained extensions that can be used to extend platform functionality. These extensions are designed to work alongside the platform to provide additional functionality like cryptocurrency compatibility, notifications, and rewards. Rehive extensions A list of Rehive managed extensions can be found below Conversions - Provides a management tools and access to currency pairs, rates and conversions. Notifications - Provides management tools and event triggers to send email and SMS notifications. Rewards - Provides management tools and functionality to trigger and implement reward campaigns. Products - Provides product and order management features that can be purchased using the platform. Mass send - Allows users to create transactions en-masse using a CSV import. Stellar - Provides management tools and a stellar implementation built on the platform. Business - Provides tools for business onboarding, managem",
+      "section": "Extensions",
+      "url": "/extensions/get-started/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Product extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. Simply activate the Product extension to add it to the platform. aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside",
+      "section": "Extensions",
+      "url": "/extensions/products/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Stellar extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. It is recommended to start with the testnet service first. Simply activate the Stellar Testnet extension to add it to the platform and follow the setup wizard. Once comfortable with the testnet service the mainnet service can be activated by contacting us. aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside",
+      "section": "Extensions",
+      "url": "/extensions/stellar/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Conversion extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. Simply activate the Conversion extension to add it to the platform. aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside",
+      "section": "Extensions",
+      "url": "/extensions/conversions/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Bridge extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. Simply activate the Bridge extension to add it to the platform. aside class \"warning\" While it is possible to activate the extension on an existing company, we recommend selecting Bridge as the custodial layer when creating your company otherwise you may have to request help configuring your company after activating the extension. aside aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside Configuration Ensure that you have created an account in Bridge and are fully verified approved. Additionally make sure the following services have been enabled on your Bridge account Wallets Virtual accounts You should then configure the following Bridge API Key - A live API Key (prefixed with sk-liv",
+      "section": "Extensions",
+      "url": "/extensions/bridge/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Reward extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. Simply activate the Reward extension to add it to the platform. aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside",
+      "section": "Extensions",
+      "url": "/extensions/rewards/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Payment Requests extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. Simply activate the Payment Requests extension to add it to the platform. Once activated it is important to review all currency pairs on the conversion extension and make sure all rate pairs you expect users to pay recieve requests in have been setup. aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside",
+      "section": "Extensions",
+      "url": "/extensions/payment-requests/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Business extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. Simply activate the Business extension to add it to the platform. Once activated the business extension settings should be updated to have a list of manager groups that are allowed to create and manage businesses on their user accounts. aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside",
+      "section": "Extensions",
+      "url": "/extensions/business/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Mass Send extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. Simply activate the Notification extension to add it to the platform. aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside",
+      "section": "Extensions",
+      "url": "/extensions/mass-send/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "The Notification extension can be enabled via the Rehive dashboard. You can access the list of Rehive extensions in the side bar. Simply activate the Notification extension to add it to the platform. aside class \"notice\" Once the extension is activated you can manage it via the dashboard or alternatively you can make use of the API directly. Do not activate the extension by calling the extension s activate endpoint directly. aside",
+      "section": "Extensions",
+      "url": "/extensions/notifications/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Core resources",
+      "content": "There are three core resource in the product extension that you need to know about in order to place order and complete payments. Product Store product information and everything you need to know about including images, prices and other details. Field Description --- --- id Unique identifier for the product type Type of product (virtual or physical) name Name of the product description Description of the product short_description Short description for the product quantity Quantity of the product available countries List of countries wher ethe product can be purchased code A code that can be used to identify the product in an external system supplier Information about the supplier categories List of categories related to the product prices List of prices in different currencies images List of images metadata Metadata object enabled Whether the product can be placed in an order created Timestamp date the notification was created updated Timestamp date the notification was last updated Or",
+      "section": "Extensions",
+      "url": "/extensions/products/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Core resources",
+      "content": "There are serveral core resources and endpoints in the Stellar extension that you need to know about in order to start sending and recieving. Transactions The transaction object contains Stellar specific data related to transactions as they are detected or sent out by the service. It also stores any relevant Rehive transaction data for transactions associated with it. Field Description --- --- id Unique identifier for the transaction user User that the transaction belongs to rehive_code Rehive transaction code associated with the Stellar transaction external_id Stellar transaction hash currency The Stellar asset being transacted in amount Amount that has been sent or recieved. In the lowest denomination (Stroops for native XLM) rehive_response The last response from Rehive when creating the transactions on the ledger tx_type Type of transaction (credit, debit, fund, transfer, asset_auth) status Status of transaction (Initiated, Quoted, Unfunded, Funded, Waiting, Pending, Confirmed, Com",
+      "section": "Extensions",
+      "url": "/extensions/stellar/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Core resources",
+      "content": "There are two core resource within the conversion extension. Additional features will be added as further functionality is completed. Rates The primary resource of the conversion extension is the rates. The rates contain the calculated rates for both the global (default) rate-pairs as well as any custom rate-pairs that are set for the company. All rates are set using a base currency. The base currency is USD but further base currencies options will be added in future. Rates consist of the following data Field Description --- --- key A currency key in the USD to_currency_code format rate Recorded rate at the time created created Timestamp date the rate was created Rate pairs Rate pairs store any custom pairs a company wants to setup. This allows companies to overide the global rate pairs as well as add their own rate pairs related to custom currencies assets. Rate pairs consist of Field Description --- --- key A currency key in the USD to_currency_code format path A path to another rate",
+      "section": "Extensions",
+      "url": "/extensions/conversions/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Core resources",
+      "content": "There are two core resource in the Bridge extension that you need to know about when interacting with it. Wallets The primary resource used to link Rehive accounts to Bridge wallets. Once a user has completed Bridge KYC (and a Bridge customer ID has been attached to them) wallets will be generated for them. Wallets are generated for each account currency that is related to a currency managed by the Bridge extension. Wallets consist of the following data Field Description --- --- id A unique identifier for the wallet. user The user who owns the wallet. currency The currency (in the platform) that this wallet is related to. account The account (in the platform) that this wallet is related to. bridge_id The wallet ID as stored in Bridge. Any transactions that occur on an account currency in the platform will be regenerated on the associated Bridge wallet (if possible). However, this means that if an associated wallet does not exist or cannot be generated yet (such as if KYC has not been c",
+      "section": "Extensions",
+      "url": "/extensions/bridge/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Core resources",
+      "content": "There are three core resource in the reward extension that you need to know about in order to start creating campaigns. Campaigns The reward campaigns object contains data related to how, when, where and why a reward is triggered or should be triggered. It allows you to setup event based rewards or rewards that have to be explicitly invoked by users. Field Description --- --- id Unique identifier for the product name Name of a campaign description Description of a campaign start_date Campaign start date end_date Campaign end date currency Campaign reward currency account Campaign reward fund total Campaign reward cap fixed_amount Fixed amount per campaign reward percentage A percentage amount per campaign reward balance Amount of funds left in the reward type Type of reward (fixed, fixedpercentage, percentage) default_status Default status of the reward (pending, complete) users List of users who can receive this reward groups List of groups that can receive this reward max_per_user Ma",
+      "section": "Extensions",
+      "url": "/extensions/rewards/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Core resources",
+      "content": "There are two core resources in the Payment Requests extension. Payment processors Payment processors provide a list of payment processors that can be made available to users making payments on requests. There are several built-in payment processors Native - account to account payments in the Platform Native OTP Native stellar Native stellar (testnet) Bridge Crypto - only supported if the Bridge extension is enabled Bridge Bank - only supported if the Bridge extension is enabled The Payment Requests extension also supports the addition of custom payment processors through the API. These can come in the form of customization on existing (built-in) processors as well as complete new processors. You can see a guide detailing some of this functionality here. Requests A request resource represents an individual request for a payment. These can also be described as \"invoices\" and in fact they are used by the business extension to represent business invoices. A payment link can be shared with",
+      "section": "Extensions",
+      "url": "/extensions/payment-requests/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Core resources",
+      "content": "There are several core resource in the Bridge extension that you need to know about when interacting with it. Managers The manager resource encapsulates users who have been designated as business users and the functionality available to them as managers. Users can be designated as managers by configuring the manager_groups field through the API or the dashboard. Once a user s group is one of the manager_groups, then users in that group are able to access business manager endpoints. Managers are able to create businesses, manage customers and other managers in those business and access other business functionality. Customers The customer resource encapsulates users who have been designated as the customers of specific business and the functionality available to them as customers. Customers must be enrolled with a business via the enroll endpoint or alternatively they will be allocated to the business automatically if the business extension sees a transaction from a user to the business ",
+      "section": "Extensions",
+      "url": "/extensions/business/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Core resources",
+      "content": "There are two core resource within the conversion extension. Additional features will be added as further functionality is completed. Batches The primary resource of the conversion extension is the batches. Batches are uploaded as csv files with the following fields Required fields Description --- --- amount Amount to be sent in decimal format (e.g. 2.54) recipient Email, mobile number or user currency Currency code (e.g. USD) Optional fields Description --- --- credit_account Reference code of account to be debited debit_account Reference code of account to be credited debit_note Debit note or message debit_metadata Custom metadata in json format debit_reference Custom text to be used as the debit transaction reference credit_note. Credit note or message credit_metadata Custom metadata in json forma credit_reference Custom text to be used as the credit transaction reference For each batch, the CSV file is saved and then processed asyncronously. The status of the batch and number of pr",
+      "section": "Extensions",
+      "url": "/extensions/mass-send/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Core resources",
+      "content": "There are several core reosurce in the extension. Notifications Notifications are the primary store of value for sending emails and SMSes using the notification extension. They contain details regarding what, who, when, and how a notification should be sent. Notifications can be either SMS, email, or push notifications. Each notification can be configured to be triggered by an event in Rehive or a manual API call. In addition, each notification can be configured to use data sent in Rehive events inside the notification messages, subject and recipient email or mobile number. Layouts The layouts resource can be used to define common layouts for your notifications. This allows you to wrap your notifications with a common header and or footer so that you can customize them in one place rather than in each notification. Logs The logs resource contains information about each notification that gets sent by the notification extension. You can use this resource to track down errors or issues on",
+      "section": "Extensions",
+      "url": "/extensions/notifications/core-resources/",
+      "weight": 3
+    },
+    {
+      "title": "Usage",
+      "content": "The Product extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Product extension. This is specifically true of authorization, errors, filters, and pagination. Similar to the platform the Product extension is divided into two sections admin admin endpoints are prefixed with admin user user endpoints are prefixed with user Admin The admin section of the API provides an interface to adminsitrate (create, read, update and delete) the rates. User The user section of the API provides an interface to view the rates.",
+      "section": "Extensions",
+      "url": "/extensions/products/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Usage",
+      "content": "The Stellar extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Stellar extension. This is specifically true of authorization, errors, filters, and pagination. Similar to the platform the Stellar extension is divided into two sections admin admin endpoints are prefixed with admin user user endpoints are prefixed with user Admin The admin section of the API provides an interface to adminsitrate (create, read, update and delete) the rates. User The user section of the API provides an interface to view the rates.",
+      "section": "Extensions",
+      "url": "/extensions/stellar/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Usage",
+      "content": "The conversion extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the conversion extension. This is specifically true of authorization, errors, filters, and pagination. Similar to the platform the conversion extension is divided into two sections admin admin endpoints are prefixed with admin user user endpoints are prefixed with user Admin The admin section of the API provides an interface to adminsitrate (create, read, update and delete) the rates. User The user section of the API provides an interface to view the rates.",
+      "section": "Extensions",
+      "url": "/extensions/conversions/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Usage",
+      "content": "The Bridge extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Bridge extension. This is specifically true of authorization, errors, filters, and pagination. Managed currency limitations It is important to keep in mind that the Bridge extension is a currency manager. This means that any transaction linked to a currency managed by the Bridge extension will only be completed failed once its transitions are approved declined by the Bridge extension (ie. Bridge itself). As a result, you cannot perform ad hoc transactions on accounts related to Bridge wallets and control their resolution manually as the one-to-one nature of the account- wallet architecture means that all transaction resolution is delegated to Bridge itself.",
+      "section": "Extensions",
+      "url": "/extensions/bridge/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Usage",
+      "content": "The Reward extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Reward extension. This is specifically true of authorization, errors, filters, and pagination. Similar to the platform the Reward extension is divided into two sections admin admin endpoints are prefixed with admin user user endpoints are prefixed with user Admin The admin section of the API provides an interface to adminsitrate (create, read, update and delete) the rates. User The user section of the API provides an interface to view the rates.",
+      "section": "Extensions",
+      "url": "/extensions/rewards/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Usage",
+      "content": "The Payment Requests extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Business extension. This is specifically true of authorization, errors, filters, and pagination.",
+      "section": "Extensions",
+      "url": "/extensions/payment-requests/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Usage",
+      "content": "The Business extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Business extension. This is specifically true of authorization, errors, filters, and pagination.",
+      "section": "Extensions",
+      "url": "/extensions/business/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Usage",
+      "content": "The Mass Send extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the patform are applicable to the Mass Send extension. This is specifically true of authorization, errors, filters, and pagination.",
+      "section": "Extensions",
+      "url": "/extensions/mass-send/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Usage",
+      "content": "API The Notification extension API is organized around the same RESTful principles as the Rehive platform. Many of the rules found in the platform are applicable to the Notification extension. This is specifically true of authorization, errors, filters, and pagination. Similar to the platform the Notification extension is divided into two sections admin admin endpoints are prefixed with admin user user endpoints are prefixed with user Admin The admin section of the API provides an interface to administrate (create, read, update and delete) notifications and other resources available to administrators. User The user section of the API provides an interface to view notifications and alter notification preferences as an end-user. Templating When creating notifications it can be useful to include additional information from webhook event or modify said information into an appropriate format. The notification extension supports some templating tools that may be useful for this. The extensio",
+      "section": "Extensions",
+      "url": "/extensions/notifications/usage/",
+      "weight": 4
+    },
+    {
+      "title": "Multi-Sig Signer",
+      "content": "In order to utilise the Hot Wallet functionality on a production company it needs to be setup and configured in combination with Rehive s multi-sig signer(MSS) tool. The MSS is a service deployed within your own infrastructure and holds the private key for your Hot Wallet. Once setup any outgoing sends initiated by users within your company will trigger the Stellar Extension to call your setup MSS for a transaction signature before broadcasting a Stellar transaction to the network. The Github repo can be found here https github.com rehive multisig-stellar-signer. It includes instructions for setting up a production deploy as well as running it locally.",
+      "section": "Extensions",
+      "url": "/extensions/stellar/signer/",
+      "weight": 5
+    },
+    {
+      "title": "Monitoring service",
+      "content": "The Stellar service uses our monitoring hooks service under the hood to track relevant Stellar transactions. It is not nescessary to integrate or setup the hooks service when using the Stellar service but it can be useful as it s own standalone tool. Usage Using the hooks service is built to be simple. Once registered any Stellar address can be added as a webhook to the service with a callback URL. When a transaction is detected on-chain for the address the hooks service will fire of a webhook to the specified URL. Mainnet endpoint https stellar-hooks.services.rehive.com Testnet endpoint https stellar-hooks.s.services.rehive.com Registering and Authorization To get an API token for the service POST email and password fields to the register endpoint. The API token should be included in the Authorization header example Authorization Token token Webhooks The webhook resource handles the following fields Field Description --- --- webhook_id Internal hooks service id url URL the service wil",
+      "section": "Extensions",
+      "url": "/extensions/stellar/monitoring/",
+      "weight": 6
+    },
+    {
+      "title": "Introduction",
+      "content": "The Merchant Documentation helps you to integrate Rehive payment processing closed-loop or open-loop applications for online checkout. Online checkouts You can either implement a custom payment integration on your existing website or redirect the customer to a hosted payment page. It is required to integrate the payment selection on your website for the customer to specify their preferred payment method for various providers that you might support. Once the customer proceeds to make a payment, your system will need to create an invoice by sending the order information to the API. You will need to rely on your existing order management system to process all invoice webhooks for updating statuses on your system. The response will include a redirect link. In the case of using the hosted payment page, the customer can then select from supported payment methods that you can configure upfront. Once the customer starts the payment process on the hosted payment page the system will create a qu",
+      "section": "Merchants",
+      "url": "/merchants/get-started/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Invoices",
+      "content": "The Invoice the core resource that encapsulates all logic around receiving user payments. All other resources are associated with the Invoice in various ways. Statuses The statuses of an invoice will tell you whether or not the user has paid, underpaid, overpaid etc and is the primary mechanism for triggering third party logic on your end. status description --- --- draft Invoice is created but not finalised for viewing by the end user. processing A primary payment processor has been selected but not Completed payment has been made yet. paid The end user has successfully made the payment for their quoted amount. underpaid The end user has paid less than their quoted amount. overpaid The end user has paid more than the quoted amount expired The Invoice has passed it s expiry date. complete The invoice has been paid and converted into the requested currency. failed An error has occurred to cause the Invoice to permanently fail. late The user has paid the full quoted amount but after the ",
+      "section": "Merchants",
+      "url": "/merchants/core-resources/invoice/",
+      "weight": 1
+    },
+    {
+      "title": "Overview",
+      "content": "The custom integration is an advanced method of integration but allows for complete control of the end user experience when they make payments. All user interaction will need to be done via your own front-end coupled with your own backend service that interfaces with the Businesses and Payment Requests API.",
+      "section": "Merchants",
+      "url": "/merchants/custom-integration/overview/",
+      "weight": 1
+    },
+    {
+      "title": "Overview",
+      "content": "The hosted option allows for minimal integration to get started with receiving payments from customers. All user interaction for selecting and viewing invoice information will be handled on the hosted invoice page https app.rehive.com checkout The basic flow A customer will select Rehive as the payment option An invoice is generated with a link to redirect the user to the hosted payments page The customer is redirected to the hosted page which handles the selection and display of payment options Once the payment has been processed the hosted payments page will redirect the user back if specified A webhook is sent to any relevant services when the Invoice has been completed.",
+      "section": "Merchants",
+      "url": "/merchants/hosted-payments-page/overview/",
+      "weight": 1
+    },
+    {
+      "title": "1. Invoicing",
+      "content": "An invoice encapsulates the entire payments process. Once the customer has selected Rehive as a payment option the next step is for your system to generate a Rehive invoice for their payment. Create the invoice The first step to initiate the payment process is to create an invoice. This would usually be done once the user has selected Rehive as the payment option for the order they wish to pay for. The core pieces of information required to create an invoice are The total amount to be paid in your base currency Return url When the user has completed their off-site payment this is the url they should be redirected back to. An optional reference field which ideally should match an identifier for your order within your e-commerce system Status The status of the invoice which should be set to initiated Endpoints URL methods --- --- manager businesses business_id invoices POST Example data Example success response Redirect customer Once the invoice has been created the user needs to be redi",
+      "section": "Merchants",
+      "url": "/merchants/custom-integration/invoicing/",
+      "weight": 2
+    },
+    {
+      "title": "1. Invoicing",
+      "content": "An invoice encapsulates the entire payments process. Once the customer has selected Rehive as a payment option the next step is for your system to generate a Rehive invoice for their payment. Create the invoice The first step to initiate the payment process is to create an invoice. This would usually be done once the user has selected Rehive as the payment option for the order they wish to pay for. The core pieces of information required to create an invoice are The total amount to be paid in your base currency Return url When the user has completed their off-site payment this is the url they should be redirected back to. An optional reference field which ideally should match an identifier for your order within your e-commerce system Status The status of the invoice which should be set to initiated Endpoints URL methods --- --- manager businesses business_id invoices POST Example data Example success response Redirect customer Once the invoice has been created the user needs to be redi",
+      "section": "Merchants",
+      "url": "/merchants/hosted-payments-page/invoicing/",
+      "weight": 2
+    },
+    {
+      "title": "PaymentProcessor",
+      "content": "Object Payment processors objects contain information for the relevant payment options available for users. They are identified by the unique_string_name field which can be used to PATCH the Invoice s primariy_payment_processor field for selecting changing payment processors. Each payment processor has a unique subtype and identifier field Object",
+      "section": "Merchants",
+      "url": "/merchants/core-resources/payment-processor/",
+      "weight": 2
+    },
+    {
+      "title": "2. Payment Options",
+      "content": "Once an invoice is created the user will need to choose which supported payment option that they would like to use. There are two broad types of options Closed and Open loop payments. Selecting a payment method Each invoice requires a user to select a valid payment method. A list of supported methods for a specific invoice can be found in the available_payment_processors array on the Invoice object. They are uniquely identified by a unique_string_name field. This list is also the one you have defined when setting up the Merchant configuration settings. Payment processor object example The user should be presented with a list of these payment processors via a front-end. It has relevant display fields such as the Logo, Name and Description as well as the currencies it supports. The only piece of information required from the user is a valid email address to attach to the Invoice. Once the user has made their choice and entered an email address your backend or front-end should update the ",
+      "section": "Merchants",
+      "url": "/merchants/custom-integration/payments/",
+      "weight": 3
+    },
+    {
+      "title": "2. Webhooks",
+      "content": "While the user is on the hosted payments page the only way to get updates on payments is to process invoice webhooks. This will need to be done by a service you create and host that can receive and process the webhooks as well as make relevant changes to third party platforms that require status changes when a payment succeeds or fails. Before being able to process webhooks you will need to create a webhook via the Merchant management section of the application. Here you can specify the URL the webhook will be sent to as well as an optional secret for added security. This will be added to the Authorization header like so Authorization Secret YOUR_SECRET . After being set up a Webhook will be sent each time the Invoice has a Status change. Example Webhook The most relevant field is the status field. On successful payment this will be updated to the paid state. Once your service receives a webhook with the paid status any orders made by the user can be completed on your third party e-com",
+      "section": "Merchants",
+      "url": "/merchants/hosted-payments-page/webhooks/",
+      "weight": 3
+    },
+    {
+      "title": "3. Processor Quotes",
+      "content": "Once a payment method has been selected the Invoice will return with a relevant Payment Processor Quote entry in the array field. These objects contain a few things The amount to be paid by the user after converting to the currency of the payment processor from the requested currency. The currency specified by the user that they will be paying in A reference field containing a unique identifier for the payment. Examples would be a Bitcoin address to pay to, a UUID for the internal transaction or a Bank payment reference. Deposit information extra information that might be required by the end user to make the payment. An example would be Bank deposit details. Conversion quote object containing the rate at which the quote amount was calculated at The total_paid by the user. This is the running total for all deposits made using the quotes information. Once it equals the amount field the quote is considered paid. Payment processor object example Each quote information set should be handled",
+      "section": "Merchants",
+      "url": "/merchants/custom-integration/payment-quotes/",
+      "weight": 3
+    },
+    {
+      "title": "Quotes",
+      "content": "The Quote object contains the amount and currency the Payment Processor expects the user to pay to settle the Invoice total. Object",
+      "section": "Merchants",
+      "url": "/merchants/core-resources/quotes/",
+      "weight": 3
+    },
+    {
+      "title": "4. Open-loop",
+      "content": "Open loop payments are any non-application balance payments made. These are usually deposits from an external value such as a cryptocurrency, credit card or bank payment. Displaying payment information The display of the payment information can depend on how the payment processor handles payments. Each payment processor quote will contain a different set of payment details. The relevant quote to display to the user will be the one with the matching payment processor to the primary_payment_processor field. Within the quote objects on the Invoice there will be a few fields(NOTE this reference is different to the Invoice reference) The reference in the open-loop context is the identifying feature for the user to make the payment with this could be A bank deposit reference they should use, a crypto address they should make a payment too etc. The deposit details will contain both the value of the reference and any other fields required to make a payment. All information within the deposit d",
+      "section": "Merchants",
+      "url": "/merchants/custom-integration/open-loop/",
+      "weight": 4
+    },
+    {
+      "title": "Transactions",
+      "content": "A Transaction object returned matches the structure of a Rehive transaction. Below is the example Object",
+      "section": "Merchants",
+      "url": "/merchants/core-resources/transactions/",
+      "weight": 4
+    },
+    {
+      "title": "5. Closed-loop",
+      "content": "Closed-loop payments involve the user paying directly from their wallet balance to your merchant account. There are a few options available to the end user but each work in a very similar way. The options you should present to the user if they chose to pay with their wallet balance are as follows, any can be omitted depending on what you would like to support Scan to Pay To support Scan to Pay a QRCode will need to be generated from the invoice data using the following structure Each variable can be found in the Invoice data set. Before building the QRCode you will need to filter for the PaymentProcessorQuote object that has the unique_string_name native and is in a processing state. This object is used for certain pieces of display information in the QRCode as seen below Variable Data location --- --- USER_ID Invoice.user.id CODE Invoice.request_currency.code AMOUNT PaymentProcessorQuote.amount formatted from the lowest denomination value to the highest using PaymentProcessorQuote.cur",
+      "section": "Merchants",
+      "url": "/merchants/custom-integration/closed-loop/",
+      "weight": 5
+    },
+    {
+      "title": "6. Webhooks",
+      "content": "While the user is on the hosted payments page the only way to get updates on payments is to process invoice webhooks. This will need to be done by a service you create and host that can receive and process the webhooks as well as make relevant changes to third party platforms that require status changes when a payment succeeds or fails. Before being able to process webhooks you will need to create a webhook via the Merchant management section of the application. Here you can specify the URL the webhook will be sent to as well as an optional secret for added security. This will be added to the Authorization header like so Authorization Secret YOUR_SECRET. After being set up a Webhook will be sent each time the Invoice has a Status change. Example Webhook The most relevant field is the status field. On successful payment this will be updated to the paid state. Once your service receives a webhook with the paid status any orders made by the user can be completed on your third party e-comm",
+      "section": "Merchants",
+      "url": "/merchants/custom-integration/webhooks/",
+      "weight": 6
+    },
+    {
+      "title": "Changelog",
+      "content": "Summary of additions and changes to the Rehive platform. Breaking changes or removals will be indicated ahead of time in the deprecation timeline. --- link-heading \"h5\" \"2025-06-25\" Switched to Scalar for the platform API reference. Fixed a bug in the anchor tag linking. Added a nonce field to the 3 auth jwt POST endpoint. Fixed a bug in default throttle rates in the JWT endpoints. Updated access control handling to better support receiving X-Forward-For headers from extensions and match access control rules accordingly. --- link-heading \"h5\" \"2025-05-29\" Updated the account_currency field on transaction resources objects to contain an account currency object instead of an account currency ID. Added a definition field to all account resources returned on account currency endpoints and objects. This is available in the account.definition property and references the account-definition an account is related to. Added a new OIDC JWT generation flow, this includes the following new endpoint",
+      "section": "Platform",
+      "url": "/platform/releases/changelog/",
+      "weight": 1
+    },
+    {
+      "title": "Deprecation timeline",
+      "content": "This timeline indicates when certain functionality will be permanently removed from the Rehive platform. Anything listed here is deprecated and will be supported up to the date indicated in the timeline. Deprecated link-heading \"h5\" \"2025-07-29\" Added on 2023-05-30 Remove redundant fields from the following endpoints. groups and groups name Remove all fields in the tier object except for id, level, name, and description. groups name tiers and groups name tiers id Remove the limits and fees fields. Access these fields via the appropriate limits and fees endpoints instead. admin users id groups and admin users id groups name Remove all fields in the tier object except for id, level, name, and description. admin groups name tiers and admin groups name tiers id Remove the limits and fees fields. Access these fields via the appropriate limits and fees endpoints instead. link-heading \"h5\" \"2025-07-08\" Added on 2023-11-16 Remove the password1 and password2 fields from the register endpoints. ",
+      "section": "Platform",
+      "url": "/platform/releases/deprecation_timeline/",
+      "weight": 1
+    },
+    {
+      "title": "Errors",
+      "content": "When an error occurs in the platform it returns a HTTP response containing two things body (formatted in JSON) containing a message and status and HTTP response code The JSON error response always includes a message string. If an error occurred as a result of a specific attribute or key the error details will be outputted in the data object. Errors will be formatted in one of two ways. A minimal error message or a descriptive error message including an additional data object with details",
+      "section": "Platform",
+      "url": "/platform/general-usage/errors/",
+      "weight": 1
+    },
+    {
+      "title": "Events",
+      "content": "The Platform has a collection of internal events that can be configured to trigger webhooks. Webhooks can be added using the dashboard or directly via the API. Each webhook contains the following properties event The event that should trigger the webhook. url The endpoint that webhook events should be sent to. Events are sent in an HTTP request containing the event data formatted as JSON. secret The secret is sent in the Authorization header of each event s webhook HTTP request. expression An optional condition that is used to evaluate whether the event should trigger. Requirements When building a service that receives webhook events, please adhere to the following requirements Always create webhooks with a secure secret key that only you and Rehive know. We recommend a randomly generated string with a minimum of 32 characters. Always check the secret is correct whenever you receive a webhook event. This ensures the webhook event originated from the platform and thus can be trusted. Al",
+      "section": "Platform",
+      "url": "/platform/utilities/events/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Ledger component comprises of all the transactional functionality in the platform. This includes several resources related to the creation and management of transactions using different currencies and accounts Currencies define fungible value (or assets) in the the platform. Accounts containers that store balances of currencies. Transactions the movement of value within accounts.",
+      "section": "Platform",
+      "url": "/platform/ledger/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The Auth component of the Rehive Platform handles authentication and authorization of users. Additionally, the auth componenent provides multi-factor authentication, password management, user verififcation, and user deactivation deletion as well. All platform access will interact with the Auth component in some way, as most platform usage requires an authenticated user. In summary the Auth component, ensures the Platform is secure and all access is correctly verified Through user registration with a password. Through user login with a password. Through multi-factor challenges. Through email address mobile number verification. Through user deactivation and user deletion requests. aside class \"notice\" A company is required to use the Auth component. To create a company make use of the a href \"https dashboard.rehive.com\" target \"_blank\" dashboard a or take a look at the a href \" dashboard get-started introduction \" target \"_blank\" dashboard documentation a . aside",
+      "section": "Platform",
+      "url": "/platform/auth/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The User component handles the organization and management of users in the Platform. This includes organizational requirements such as KYC AML as well as user categorization and personal data management. The primary features of the user component are Users user information, data and settings rules. Groups catgeorization of users into groups with differet settings rules. Tiers automatic categorization of users based on requirements. Permissions fine-grained permissions on users groups. Documents documents used for KYC AML an and automated tier requirement evaluation. Other features In addition to the primary features documented via the above list, the users portion of th Platform includes the following features as well Addresses Addresses can be attached to users. These addresses can be cross referenced against user-owned documents. Addresses of the following types can be created on users permanent contact shipping billing business A user can have multiple addresses and each address can",
+      "section": "Platform",
+      "url": "/platform/users/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Introduction",
+      "content": "The platform is the core component of the Rehive ecosystem. It acts as the backbone for all company, user, account and transaction management in Rehive. In addition, it offers a wide set of endpoints to make it easier for developers to build transactional applications and systems. The platform consists of two APIs The Platform API and the Platform Admin API. Platform API aside class \"notice\" The strong API specification strong can be found a href \"https api.rehive.com ?api rehive-platform-api\" target \"_blank\" here a . aside aside class \"notice\" The strong Swagger specification strong can be found a href \"https api.rehive.com swagger \" target \"_blank\" here a . aside The Platform API is the core API. It provides authentication for platform users as well as access to user-scoped resources. All user authentication is handled via this API and the resources accessible through it are always limited to the specific user s resources. This API was designed to be used without any intermediary ser",
+      "section": "Platform",
+      "url": "/platform/get-started/introduction/",
+      "weight": 1
+    },
+    {
+      "title": "Accounts",
+      "content": "Accounts are containers that store user balances in relation to specific currencies. Transactions operate on accounts and the account acts as a representation of the hstory of transactions on a given account. Additionally, accounts may have other settings or permissions attached to them depending on the company s use-case. Each account may contain any number of currency balances (depending on what currencies are defined in the company). Accounts can belong to a user, in which case its settings may be influenced by the user and their group. Accounts can also be standalone (ie. not belong to a user) and therefore not influenced by any user or group settings. aside class \"notice\" Please take a look at the a href \"https api.rehive.com ?api rehive-platform-api tag accounts GET 3 accounts \" target \"_blank\" API reference a for further details on the account endpoints. aside Defining accounts Generally, every user in the platform will require one or more accounts depending on business requirem",
+      "section": "Platform",
+      "url": "/platform/ledger/accounts/",
+      "weight": 2
+    },
+    {
+      "title": "Authentication",
+      "content": "Authentication is the method by which the platform assigns an identity to a user as well as ensures that a given party has access to that user. In general, this refers to The enrollment of new users via registration. The verification of access via login. The verification of ongoing access (after login) via authentication tokens. Registration Enrolling new users within a company on the Platform is done using the registration flow. The registration flow requires the submission of four things A unique identifier (such as an email address). A company identifier. A password This is used on subsequent logins to grant access to the user. Acceptance of the terms conditions and privacy policy. Additional data can be submitted to further identify the user (first name, last name, nationality etc.) or specify the group the user should be registered to. Specifying a specific group allows for newly registered users to be immediately assigned to a group that applies the required rules, settings, and ",
+      "section": "Platform",
+      "url": "/platform/auth/authentication/",
+      "weight": 2
+    },
+    {
+      "title": "Currencies",
+      "content": "Currencies are used to define fungible common value (or assets) in the the platform. In almost all cases a currency represents a fiat currency, token or other cryptographic representation. However the currency system can support almost any fungible value you can think of (United states Dollar, Stellar Lumens, or gold). Currencies are simple resources that store details and information regarding the currency. Each currency must have a divisibilty defined. This field defines how many decimal places a currency should have and is required due to the platform handling currency values as integers. You can read more about precision handling in the Platform here. For example, a representation of the United States Dollar could look like this aside class \"notice\" Please take a look at the a href \"https api.rehive.com ?api rehive-platform-admin-api tag currencies GET 3 admin currencies \" target \"_blank\" API reference a for further details on the currency endpoints. aside",
+      "section": "Platform",
+      "url": "/platform/ledger/currencies/",
+      "weight": 2
+    },
+    {
+      "title": "Exports",
+      "content": "Exports can be used to export data from a company or a specific user. Exports support customizable filters and can be either created as CSV or JSON feiles. The max number of results allowed on a single export page is 50000. Larger result sets will be paginated and generate as many files as necessary to complete the result set. The supported export resources are accounts account currencies transactions users (admin-only) Exports are processed asynchronously and may take longer to complete on companies with larger data sets. To ensure exports finish quickly, try to perform exports with the necessary date range specified in the filters. Exports are automatically cleared from the system once they are 12 weeks old. You should download the files if you wish to store exports for longer. aside class \"notice\" Please take a look at the a href \"https api.rehive.com ?api rehive-platform-api tag exports GET 3 exports \" target \"_blank\" API reference a for further details on the export endpoints. asi",
+      "section": "Platform",
+      "url": "/platform/utilities/exports/",
+      "weight": 2
+    },
+    {
+      "title": "Pagination",
+      "content": "On listing pages, the platform provides a way to paginate results. The default pagination method offered by the platform is page pagination, which allows navigation to a \"paged based\" point in a list of results as well as via next and prevattributes. The JSON format returned on paginated listing pages looks like this The default page size is 15 but can be changed by adding a page_size query parameter to the request URL. The max page size is 250. Cursor pagination You should consider using cursor pagination if you want to retrieve results in a faster and more exact manner. Cursor pagination does not count the total results and instead only returns next prev cursor points. This allows for much faster queries and also means that you will never see dplicate results on resources with high creation rates. You can use cursor pagination by including a pagination cursor GET param on any request to a paginated endpoint. The cursor pagination response looks like Limitations Cursor pagination orde",
+      "section": "Platform",
+      "url": "/platform/general-usage/pagination/",
+      "weight": 2
+    },
+    {
+      "title": "Quick guide",
+      "content": "There are a couple ways to get started with the Rehive Platform APIs You can choose to use one of the Rehive supported SDKs or Integrate the API manually in your choice of language. To use one of the SDKs check for you language in the \"references list\" in the sidebar. If you instead want to use a language that does not have a Rehive supported SDK, a custom implementation should be trivial as the platform uses standard HTTP which is widely supported. aside class \"warning\" b Important b This is a quick guide only! Please ensure that you first understand the b building guide b and b recommendations b before designing your own solutions on the Rehive platform. aside Using the APIs The easiest way to get started with the Platform APIs is to login to the dashboard and create a new API token for your user. You can create a new API token in the Developers - API tokens section in the dashboard. Once an API token is created, it will be displayed only once. So make sure you copy it before closing",
+      "section": "Platform",
+      "url": "/platform/get-started/quick-guide/",
+      "weight": 2
+    },
+    {
+      "title": "Transactions",
+      "content": "Transactions are the individual operations that affect account balances. As such, transactions are a representation (or log) of changes to account balances. Every transaction can be either a debit or a credit. In simple terms debit transactions reduce an account s balance and credit transactions increases an account s balance. A transfer is a 2-step transaction where one user is debited and another is credited the same amount simultaneously. Transfers store the movement of funds between explictly defined accounts and are the predoeminate way transactions are handled in the Platform Every transaction has a status that can be used to gauge the state of the transaction. The statuses are status description --- --- Initiating the transaction is processing immediately after insert. Pending the transaction has passed all validation amd applied to the account s available balance if a debit transaction. Complete the transaction has been executed applied to the account s balance. Failed the tran",
+      "section": "Platform",
+      "url": "/platform/ledger/transactions/",
+      "weight": 2
+    },
+    {
+      "title": "Users",
+      "content": "Users are entities that interact with the Platform and have their own subset of data that is linked to them. Users are usually a company s customers but the managers, suppport staff, and superadmins within a company are also users. Usually, users are digital identities for real people but they can also be machine users or entities that are used for operational purposes. The platform groups feature allows for thecategorization of users to better indicate their usage. In order to authenticate using the Auth component of the Platform, a user needs to exist. When a company is registered for the first time, an owner user is automatically created. This user cannot be deleted and fulfills the role of a superadmin in the company. Additional users can be added to the company in two ways User registration An end-user registration flow. User creation An admin only flow to create users. Once a user is created, they can authenticate using the Platform via the login endpoint. aside class \"notice\" Pl",
+      "section": "Platform",
+      "url": "/platform/users/users/",
+      "weight": 2
+    },
+    {
+      "title": "Authorization",
+      "content": "Authorization in the Platform, is the process of verifying whether a user has access to an action or resource in the Platform. Once a user has authenticated and received a authentication token, each subsequent request in the Platform must include that token. The token proves the user is authenticated and allows the platform to figure out whether the user has the necessary permissions to perform actions. The platform uses a token-based HTTP Authentication scheme. This means that the authentication token must be sent in the Authorization header in the following format aside class \"notice\" You must replace code token code with your API token. aside An example of attaching the Authorization in a cURL request can be found below If the credentials provided in the Authorization header are invalid or the header is missing entirely on an endpoint that requires it, the Platform will return a 401 error. Authorization and permissions During authorization of a request, in addition to checking wheth",
+      "section": "Platform",
+      "url": "/platform/auth/authorization/",
+      "weight": 3
+    },
+    {
+      "title": "Building",
+      "content": "The Rehive ecosystem includes the option to use our white-label web and mobile applications (Please contact support if you wish to pursue these options). However, some developers may want to build their own client side experiences or add support for additional functionality. Developing on the platform is quite straight forward but there are some interactions a developer should be aware of before proceeding. This section of the documentation will describe some general building tips and the key ways to integrate with the Rehive platform. If you are looking for a guide aimed specifically at extension building in Rehive please take a look at the extensions documentation Integrating with Rehive Integrations with Rehive generally exist in two major forms A client-side or frontend application that interacts with the Rehive Platform. This is normally something like a web or mobile application or simply just a website. A server-side or backend service that interacts with the Rehive Platform. Th",
+      "section": "Platform",
+      "url": "/platform/get-started/building/",
+      "weight": 3
+    },
+    {
+      "title": "Filters",
+      "content": "The platform provides a way to filter and or sort on listing pages. All filtering and sorting is done via query parameters in the GET request. To filter by a field, include it in the URL as a standard query parameter with a ? delimiting the URL and the start of the query parameters and a between each filtered field. This can be seen below To sort results, an endpoint will often also include an optional orderby query parameter. Complex Filter Fields There are several filter field types in the API that offer more complex interactions Date Fields Date fields can be further narrowed down by filtering on ranges using the greater than (__gt) and less than (__lt) suffixes (eg. created__gt). Dates in the platform are always represented as millisecond UNIX timestamps. When querying by dates or date ranges you will need to always do so using a millisecond UNIX timestamp as well (eg. 1647447399000). Metadata Fields Custom metadata fields can be filtered on their first level children by adding the",
+      "section": "Platform",
+      "url": "/platform/general-usage/filters/",
+      "weight": 3
+    },
+    {
+      "title": "Groups",
+      "content": "Through the application of groups, Platform users can be categorized into roles and or configurations that are applicable to them. In its simplest form, groups can be used to seperate one category of customers from another, while at its most complex groups cab be used to configure entirely different onboarding, KYC processes, and permissions to users that fall into entirely different business cases. Each user in the Platform can be part of one group. When a user is assigned to a group, the following group related settings will apply Group specific permissions Group specific transaction settings Disallowed transaction types Disallowed transaction subtypes Transaction fees Group specific tiers (and their requirements) Group specific account definitions (the accounts that apply to users in the group). Group specific access rules Access control rules. Multi-factor authentication rules. aside class \"notice\" Please take a look at the a href \"https api.rehive.com ?api rehive-platform-api tag ",
+      "section": "Platform",
+      "url": "/platform/users/groups/",
+      "weight": 3
+    },
+    {
+      "title": "Metrics",
+      "content": "Metrics are data collection objects that can be configured by users and companies to generate daily metrics on specific metrics types with customizable filters. The following metric types are supported Name Sections Description --- --- --- transaction_count admin, user Count of transactions. transaction_complete_count admin, user Count of completed transactions. transaction_failed_count admin, user Count of failed transactions. transaction_pending_count admin, user Count of pending transactions. transaction_complete_sum admin, user Sum of the total_amount of complete transactions. transaction_failed_sum admin, user Sum of the total_amount of failed transactions. transaction_pending_sum admin, user Sum of the total_amount of pending transactions. transaction_balance_sum admin, user Sum of the total_amount of all balance transactions transactions. transaction_available_balance_sum admin, user Sum of the total_amount of all available balance affecting transactions. user_count admin Count ",
+      "section": "Platform",
+      "url": "/platform/utilities/metrics/",
+      "weight": 3
+    },
+    {
+      "title": "Access control",
+      "content": "Access control rules are a simple way to deny allow API requests from HTTP clients based on their IP. This can be useful if you need to block access to certain IPs or alternatively ensure access is limited to only certain IPs. For instance If you have machine users (API-only users) that should always originate from a specific IP. If you have an office VPN or network that all request (related to a specific user group) should originate from. The access control rules can be applied globally, to specific user groups, or even individual users. They can be configured via the dashboard or through the API for programmatic configurations. aside class \"notice\" Please take a look at the a href \"https api.rehive.com ?api rehive-platform-admin-api tag access-control-rules\" target \"_blank\" API reference a for further details on the access control endpoints. aside aside class \"notice\" The access control rules are generally not appropriate for addressing bad actors (particularly botnets and other typi",
+      "section": "Platform",
+      "url": "/platform/utilities/access_control/",
+      "weight": 4
+    },
+    {
+      "title": "Multi-factor",
+      "content": "The platform supports multi-factor authentication and authorization for ensuring users are authenticated and or authorized to access their account and associated resources. aside class \"warning\" b Important b Multi factor authentication can be configured to trigger in a wide variety of situations, which means any integration with Rehive should be designed to expect challenges at any point and deal with them when they occur. aside Resources There are three resources you should be aware of when interacting with multi-factor authentication and authorization in the platform. Authenticator rules Authenticator rules are used by administrators to configure when MFA challenges should be issued to users. All rules can be configured on the global \"company\" level or alterntaively on specific user groups. A group-specific rule will always take precedence over a non-group rule when evaluating challenges. Types There are three types of authenticator rules Authentication These rules are evaluated whe",
+      "section": "Platform",
+      "url": "/platform/auth/multi-factor/",
+      "weight": 4
+    },
+    {
+      "title": "Precision",
+      "content": "In order to prevent precision errors when working with decimal values, the platform handles all currency amounts values as integers. This means that when posting an amount it should always be converted to its lowest currency unit (ie. an integer). For most currencies this will be the cents value (eg. 1.00 represented as 100 in the API). When returning an integer value for a currency amount Rehive will always include a currency object and its associated divisibility so that it is easy to convert between decimal and integer values (and vice versa). In this example, the divisibility of USD is 2, which means that an API value of 100 is equivalent to 1.00. This conversion should be handled in your integrations if you want to display human readable values.",
+      "section": "Platform",
+      "url": "/platform/general-usage/precision/",
+      "weight": 4
+    },
+    {
+      "title": "Recommendations",
+      "content": "The recommendations detailed here will help you eliminate potential bugs, vulnerabilities or unexpected interactions with the platform. Developers should make sure they read through these before designing a system or at least before moving to a production setup. For extension specific development you can read the recommendations here. Perform actions as an authenticated user. If you are building a frontend or client-side integration never hardcode an authentication token into the application (such as a website or mobile application). Any tokens hardcoded into an application will be accessible to all users of that application. This is particularly true of tokens that provide escalated privileges like admin tokens created in the admin dashboard. Instead of hardcoding tokens, you should ensure that a user accessing the application is authenticated via the login endpoint on the API (which returns a token specifically for that user). The user should be re-authenticated via the application w",
+      "section": "Platform",
+      "url": "/platform/get-started/recommendations/",
+      "weight": 4
+    },
+    {
+      "title": "Tiers",
+      "content": "Tiers are the primary tool available for configuring variations in available functionality (and the execution of that functionaly). These variations are applied automatically if a user matches the requirements for a given tier. For instance, a company could configure tiers that limit the max amount a user can transfer based on what data the user has submitted. This could be as simple as configuring a USD 0.00 limit if the user has not verified their email address as well as a USD 1000.00 limit if they have instead verified their email address. By default, companies are preloaded with sensible tiers and tier requirements but the Platform makes it easy to adjust or completely overhaul the tiers based on your business requirements. Requirement sets and items In order to configure what users a tier applies to, the Platform supports a highly configurable system for rule customization. Custommization is done via \"requirement sets\" and \"requirement items\" that allow for a wide variety of hier",
+      "section": "Platform",
+      "url": "/platform/users/tiers/",
+      "weight": 4
+    },
+    {
+      "title": "Help",
+      "content": "If you need help using the platform, you can search our help center or contact our support team Help Center Support Troubleshooting Why is the anonymous user login endpoint returning a 1020 error page? The login endpoint has strict anti-bot rules to prevent attacks on the platform. Accessing the login endpoint in a bot-like manner (cURL, Postman, outside a web browser) may trigger errors. If this error is happening in a server-side context, you should switch to the \"admin authenticated\" login endpoint. See the authorization documentation for more information regarding the admin authenticated login endpoint. If this error occurs in client-side code (ie. in a web browser) then please contact support as we may need to adjust our rules accordingly. --- Why do image or file uploads result in a 400 or 500 error? The format for uploading images for files is quite strict. when uploading files the following things are required The ContentType must be multipart form-data. The file must be upload",
+      "section": "Platform",
+      "url": "/platform/get-started/help/",
+      "weight": 5
+    },
+    {
+      "title": "Management",
+      "content": "aside class \"warning\" strong Warning strong This page is under construction! aside The Platform Auth component also includes a number of commonly required account management features. Password change Password reset set Email verification Mobile verification Account deactivation Account deletion",
+      "section": "Platform",
+      "url": "/platform/auth/management/",
+      "weight": 5
+    },
+    {
+      "title": "Metadata",
+      "content": "Many resources in the platform have a metadata field that can be used to store miscellaneous custom information. This field is used by extensions and applications to store data like UI UX preferences, additional references and notes and relationships to extensions etc. The metadata field always defaults to null and when populated is a JSON object with some additional rules Keys must only contain alphanumeric characters, numbers and single underscores. Keys may not contain double underscores like __. Double underscores are reserved for lookups on fields. Keys and values are merged using JSON Merge Patch when adding metadata to a field that already contains metadata. Values may not be null (this is required to support JSON Merge Patch). The max size of the entire metadata field (per resource) is capped at 104857 bytes. aside class \"warning\" b Important b By default, the metadata field is visible to end-users and thus you should be careful when including sensitive information in the metad",
+      "section": "Platform",
+      "url": "/platform/general-usage/metadata/",
+      "weight": 5
+    },
+    {
+      "title": "Permissions",
+      "content": "The Platform supports fine-grained permission control on users and groups. This is done via a preset list of permissions that can be applied on groups and users. Permissions attached to a group are applicable to all users in that group. Permissions attached to a user can add additional permissions on top of those granted by the group. The default company configuration in the platform provides sensible group and user permissions, but depending on the use-case it may be necessary to modify the defaults. The easiest way to manage permissions is via the dashboard but it is possible to manage permissions programmtically through the API as well. aside class \"notice\" It is important to note that while you can configure permissions on both the user and admin section APIs, you cannot override API limitations. For instance, the user API does not offer an endpoint or method for adding permissions (to a user or group). Thus, no amount of permissions will allow a user to add permissions via the use",
+      "section": "Platform",
+      "url": "/platform/users/permissions/",
+      "weight": 5
+    },
+    {
+      "title": "Documents",
+      "content": "Documents are used by users to upload any documentation that a company may require. Usually documents are used to upload KYC related files such as proof of identity, proof of funds, proof of residence etc. Document types The Platform provides a way for admins to specify a list of custom document types supported by their company. By default, companies will come preloaded with a known list of common documents but it is often useful for companies to upload additional document types that they are interested in. Once configured, document types can be used within the tier and tier requirements system to ensure a user uploads certain documents required by the company s business-case. Verification The Platform provides facilities (via the API) to manually review and verify documents but it does not perform any verification validation itself. To verify documents you will need to use one of the followng methods Manual verification by your team. Automatic verification via the Rehive supported Onf",
+      "section": "Platform",
+      "url": "/platform/users/documents/",
+      "weight": 6
+    },
+    {
+      "title": "Uploading",
+      "content": "Many resources in Rehive have file or image properties (documents, icons, profile images etc.). In order to populate these properties you will have to upload files through the the API. Uploads in Rehive should be done using a POST, PUT or PATCH (depending on the endpoint) HTTP method with a Content-Type of multipart form-data. Individual files myst be smaller than 5MB (5242880 bytes). The following sections describe some common methods that can be used to upload files. A user document upload is used as the example in all cases. cURL When testing, you can use cURL JavaScript Within a web browser context, you can upload files using the Rehive JavaScript SDK Or alternatively, when in NodeJS, you can combine the Rehive JavaScript SDK and Form-Data libraries Python You can use the Rehive Python SDK to upload files",
+      "section": "Platform",
+      "url": "/platform/general-usage/uploading/",
+      "weight": 6
+    },
+    {
+      "title": "Idempotency",
+      "content": "The platform supports idempotency for protecting against accidentally repeating a request that should only ever take place once. By attaching an idempotency key to a request you can be sure that the platform will only process the request once and that the response will always be identical on all subsequent requests with the same key. The platform saves the response of every request that includes an idempotency key. Subsequent requests with the same key, URL, and method will return the same response as the original request. All responses will be saved except for throttling errors that return a 429 Too Many Requests. Requests that yield a a 429 will be treated as if they never occurred and can be retried without fear of performing the same operation more than once. To perform an idempotent request attach an additional header Idempotency-Key key . Idempotency keys are only supported on POST, PUT and PATCH requests. The key can be any string value but must be under 100 characters long. Key",
+      "section": "Platform",
+      "url": "/platform/general-usage/idempotency/",
+      "weight": 7
+    },
+    {
+      "title": "Throttling",
+      "content": "The Rehive platform uses throttling to protect against API misuse and ensure all clients experience equal quality-of-service. Throttling errors will always be returned as a 429 response with a throttling specific error message The primary throttling types are listed below, but the exact details may vary as a result of Rehive adapting to changing requirements and client usage. General throttling Applied to endpoints that require authentication to protect against a single user overloading the API. Other throttling Applied to some endpoints (mostly authentication related) to provide additional protections against misuse. Across the entire Platform API, there is a global limit of 300 requests per 10 seconds. This is applied per IP. General throttling Generally, when dealing with authenticated users, throttling is applied based on the company s tier. There are 4 tiers that have different throttling rules depending on whether the request is on a user or admin section endpoint. The restricted",
+      "section": "Platform",
+      "url": "/platform/general-usage/throttling/",
+      "weight": 8
+    }
+  ],
+  "generated_at": "/Users/michailbrynard/dev/docs-portal",
+  "total_documents": 133
+}
