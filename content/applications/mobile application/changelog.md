@@ -9,28 +9,170 @@ Summary of additions and changes to the mobile application.
 
 ---
 
-{{< link-heading "h4" "2024-12-17 - 7.8.16" >}}
+{{< link-heading "h4" "2025-08-27 - 7.8.35" >}}
 
 **Bug fixes**
-- Fixed receive/send screen crash issue.
+- Fixed QR handling for blank address on receive page.
+- Added color validation and fallback to prevent display issues.
 
 ---
 
-{{< link-heading "h4" "2024-11-29 - 7.8.14" >}}
+{{< link-heading "h4" "2025-08-26 - 7.8.34" >}}
+
+**Bug fixes**
+- Fixed display currency on crypto deposit form.
+- Updated expo configuration.
+- Resolved staging GitHub action issues.
+
+---
+
+{{< link-heading "h4" "2025-08-26 - 7.8.33" >}}
+
+**Bug fixes**
+- Fixed issue with device add function for push notifications.
+
+---
+
+{{< link-heading "h4" "2025-08-20 - 7.8.32" >}}
+
+**Features**
+- Added EURC support and multi-country withdrawal configuration.
+
+---
+
+{{< link-heading "h4" "2025-08-19 - 7.8.31" >}}
+
+**Improvements**
+- Added more robust context switching for bridge status state.
+
+---
+
+{{< link-heading "h4" "2025-08-19 - 7.8.30" >}}
+
+**UI improvements**
+- Improved Persona page styling and copy for better consistency.
+
+---
+
+{{< link-heading "h4" "2025-08-13 - 7.8.29" >}}
+
+**Bug fixes**
+- Fixed native mobile input crashing issue.
+
+---
+
+{{< link-heading "h4" "2025-08-06 - 7.8.28" >}}
+
+**Bug fixes**
+- Handled Persona redirect with whitelabel domain support.
+
+---
+
+{{< link-heading "h4" "2025-08-05 - 7.8.27" >}}
+
+**UI improvements**
+- Hide tier requirements if only 1 tier exists with no requirements.
+
+---
+
+{{< link-heading "h4" "2025-08-05 - 7.8.26" >}}
+
+**Features**
+- Added custom redirect to mobile-specific step page on web.
+
+---
+
+{{< link-heading "h4" "2025-08-05 - 7.8.25" >}}
+
+**UI improvements**
+- Added bottom padding to More actions popup.
+
+---
+
+{{< link-heading "h4" "2025-08-05 - 7.8.24" >}}
+
+**UI improvements**
+- Added padding around the email verify error for better readability.
+
+---
+
+{{< link-heading "h4" "2025-08-04 - 7.8.23" >}}
+
+**Bug fixes**
+- Fixed scan to pay chain detection.
+
+---
+
+{{< link-heading "h4" "2025-08-04 - 7.8.22" >}}
+
+**Bug fixes**
+- Fixed bank withdrawal filtering and duplicate button issues.
+
+---
+
+{{< link-heading "h4" "2025-07-31 - 7.8.21" >}}
+
+**Enhancements**
+- Improved bank deposit page functionality.
+- Removed info box from all flows for cleaner interface.
+
+---
+
+{{< link-heading "h4" "2025-07-30 - 7.8.20" >}}
+
+**Changes**
+- Updated Rehive Wallet branding to Rehive Pay.
+- Updated staging multi-company demo.
+
+---
+
+{{< link-heading "h4" "2025-07-27 - 7.8.19" >}}
+
+**Bug fixes**
+- Improved bottom drawer positioning.
+- Fixed Android transaction and home cards swipe issue.
+
+---
+
+{{< link-heading "h4" "2025-07-25 - 7.8.18" >}}
+
+**Bug fixes**
+- Added ITSAppUsesNonExemptEncryption setting to iOS build configuration.
+- Fixed issue with bridge page directing to onboarding when not needed.
+- Treated bridge incomplete status as under review.
+- Fixed bridge onboarding/home redirect logic.
+
+---
+
+{{< link-heading "h4" "2025-07-25 - 7.8.17" >}}
+
+**Bug fixes**
+- Hotfix for home cards display issue.
+
+---
+
+{{< link-heading "h4" "2025-07-02 - 7.8.16" >}}
+
+**Bug fixes**
+- Fixed objectToArray mutating the original object.
+
+---
+
+{{< link-heading "h4" "2025-06-19 - 7.8.14" >}}
 
 **Changes**
 - Updated image permissions to meet Play Store requirements.
 
 ---
 
-{{< link-heading "h4" "2024-11-29 - 7.8.13" >}}
+{{< link-heading "h4" "2025-06-19 - 7.8.13" >}}
 
 **Bug fixes**
 - Fixed image/file permissions to meet Play Store requirements.
 
 ---
 
-{{< link-heading "h4" "2024-11-29 - 7.8.12" >}}
+{{< link-heading "h4" "2025-06-19 - 7.8.12" >}}
 
 **Features**
 - Added Bridge crypto receive page functionality.
@@ -50,7 +192,7 @@ Summary of additions and changes to the mobile application.
 
 ---
 
-{{< link-heading "h4" "2024-03-28 - 7.8.9" >}}
+{{< link-heading "h4" "2025-03-28 - 7.8.9" >}}
 
 **Changes**
 - Updated default Node.js version.
@@ -63,84 +205,84 @@ Summary of additions and changes to the mobile application.
 
 ---
 
-{{< link-heading "h4" "2024-01-10 - 7.8.7" >}}
+{{< link-heading "h4" "2025-01-10 - 7.8.7" >}}
 
 **Changes**
 - General maintenance and improvements.
 
 ---
 
-{{< link-heading "h4" "2023-12-13 - 7.8.6" >}}
+{{< link-heading "h4" "2024-12-13 - 7.8.6" >}}
 
 **Changes**
 - Updated version.json to match git release tags.
 
 ---
 
-{{< link-heading "h4" "2023-10-21 - 7.8.5" >}}
+{{< link-heading "h4" "2024-10-21 - 7.8.5" >}}
 
 **Changes**
 - Switched default referral configuration to false.
 
 ---
 
-{{< link-heading "h4" "2023-10-21 - 7.8.4" >}}
+{{< link-heading "h4" "2024-10-21 - 7.8.4" >}}
 
 **Bug fixes**
 - Fixed home header function issue.
 
 ---
 
-{{< link-heading "h4" "2023-10-21 - 7.8.3" >}}
+{{< link-heading "h4" "2024-10-21 - 7.8.3" >}}
 
 **Changes**
 - Improved home and onboarding experience.
 
 ---
 
-{{< link-heading "h4" "2023-10-04 - 7.8.2" >}}
+{{< link-heading "h4" "2024-10-04 - 7.8.2" >}}
 
 **Changes**
 - General maintenance and improvements.
 
 ---
 
-{{< link-heading "h4" "2023-10-04 - 7.8.1" >}}
+{{< link-heading "h4" "2024-10-04 - 7.8.1" >}}
 
 **Changes**
 - Updated Expo version in GitHub Actions.
 
 ---
 
-{{< link-heading "h4" "2023-10-04 - 7.8.0" >}}
+{{< link-heading "h4" "2024-10-04 - 7.8.0" >}}
 
 **Changes**
 - Upgraded and migrated Sentry to fix app crash errors.
 
 ---
 
-{{< link-heading "h4" "2023-09-12 - 7.7.13" >}}
+{{< link-heading "h4" "2024-09-12 - 7.7.13" >}}
 
 **Features**
 - Added support for new residency field.
 
 ---
 
-{{< link-heading "h4" "2023-08-30 - 7.7.12" >}}
+{{< link-heading "h4" "2024-08-30 - 7.7.12" >}}
 
 **Changes**
 - General maintenance and improvements.
 
 ---
 
-{{< link-heading "h4" "2023-08-29 - 7.7.11" >}}
+{{< link-heading "h4" "2024-08-29 - 7.7.11" >}}
 
 **Bug fixes**
 - Fixed app crash issue.
 
 ---
 
-{{< link-heading "h4" "2023-08-14 - 7.7.10" >}}
+{{< link-heading "h4" "2024-08-14 - 7.7.10" >}}
 
 **Features**
 - Added search filter for Rewards.
@@ -155,21 +297,21 @@ Summary of additions and changes to the mobile application.
 
 ---
 
-{{< link-heading "h4" "2023-08-07 - 7.7.9" >}}
+{{< link-heading "h4" "2024-08-07 - 7.7.9" >}}
 
 **Bug fixes**
 - Fixed app crash issue.
 
 ---
 
-{{< link-heading "h4" "2023-08-02 - 7.7.8" >}}
+{{< link-heading "h4" "2024-08-02 - 7.7.8" >}}
 
 **Bug fixes**
 - Fixed page retrieval for document types issue.
 
 ---
 
-{{< link-heading "h4" "2023-08-01 - 7.7.7" >}}
+{{< link-heading "h4" "2024-08-01 - 7.7.7" >}}
 
 **Changes**
 - Updated app version configuration.
@@ -178,7 +320,8 @@ Summary of additions and changes to the mobile application.
 
 {{< link-heading "h4" "2024-08-01 - 7.7.6" >}}
 
-**Change**
+**Changes**
+- Fixed app version issue on settings page.
 - Implemented the new KYC group tier requirements and document-types update. 
 
 ---
@@ -202,7 +345,7 @@ Summary of additions and changes to the mobile application.
 
 {{< link-heading "h4" "2024-05-16 - 7.7.3" >}}
 
-**Change**
+**Changes**
 - Updates to the user deletion and deactivation functionality.
 
 ---
