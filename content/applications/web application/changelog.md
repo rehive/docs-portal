@@ -9,7 +9,296 @@ Summary of additions and changes to the web application.
 
 --- 
 
-{{< link-heading "h4" "2025-01-04 - 3.0.12" >}}
+{{< link-heading "h4" "2025-08-27 - 3.0.56" >}}
+
+**Changes**
+- Version update.
+
+--- 
+
+{{< link-heading "h4" "2025-08-21 - 3.0.54" >}}
+
+**Bug fixes**
+- Fixed issue with new bank accounts not auto-selecting on withdraw.
+
+--- 
+
+{{< link-heading "h4" "2025-08-20 - 3.0.53" >}}
+
+**Changes**
+- Adjusted bridge persona step complete page to match success page styling.
+
+--- 
+
+{{< link-heading "h4" "2025-08-14 - 3.0.52" >}}
+
+**Enhancements**
+- Added chain logos to transaction listing and details.
+
+--- 
+
+{{< link-heading "h4" "2025-08-13 - 3.0.51" >}}
+
+**Bug fixes**
+- Fixed PRS checkout breaks due to privacy updates.
+
+--- 
+
+{{< link-heading "h4" "2025-08-12 - 3.0.50" >}}
+
+**Bug fixes**
+- Fixed OTP functionality issues.
+
+--- 
+
+{{< link-heading "h4" "2025-08-12 - 3.0.49" >}}
+
+**Enhancements**
+- Improved buy/sell confirm and success page styling.
+- Enhanced voucher UI with improved copy functionality and responsive design.
+
+--- 
+
+{{< link-heading "h4" "2025-08-12 - 3.0.48" >}}
+
+**Enhancements**
+- Hidden empty notifications sections and added empty state placeholders.
+- Updated home card transactions to match main transaction style.
+- Fixed label consistency in mobile/email list.
+
+--- 
+
+{{< link-heading "h4" "2025-08-12 - 3.0.47" >}}
+
+**Enhancements**
+- Improved ordering for bank deposit details.
+
+--- 
+
+{{< link-heading "h4" "2025-08-12 - 3.0.46" >}}
+
+**Bug fixes**
+- Fixed hardcoded USDC on the crypto deposit page warning message.
+
+--- 
+
+{{< link-heading "h4" "2025-08-12 - 3.0.45" >}}
+
+**Bug fixes**
+- Fixed issue on withdraw details page and improved withdraw bank currency icon fallbacks.
+
+--- 
+
+{{< link-heading "h4" "2025-08-12 - 3.0.44" >}}
+
+**Features**
+- Added the ability to hide/show sensitive information.
+
+--- 
+
+{{< link-heading "h4" "2025-08-12 - 3.0.43" >}}
+
+**Features**
+- Added multi-currency bank withdrawal config and EU SEPA bridge support.
+
+--- 
+
+{{< link-heading "h4" "2025-08-05 - 3.0.42" >}}
+
+**Changes**
+- Removed currency widgets and updated the total balance styling.
+
+--- 
+
+{{< link-heading "h4" "2025-08-05 - 3.0.41" >}}
+
+**Changes**
+- Version update.
+
+--- 
+
+{{< link-heading "h4" "2025-08-05 - 3.0.40" >}}
+
+**Features**
+- Added a custom generic mobile bridge redirect page.
+
+--- 
+
+{{< link-heading "h4" "2025-08-05 - 3.0.39" >}}
+
+**Changes**
+- Updated toast to be configurable outside of the current DOM structure.
+
+--- 
+
+{{< link-heading "h4" "2025-08-05 - 3.0.38" >}}
+
+**Enhancements**
+- Improved invoice value display and added print CSS overrides.
+
+--- 
+
+{{< link-heading "h4" "2025-08-05 - 3.0.37" >}}
+
+**Changes**
+- Cleaned up all flows to match new send flow.
+
+--- 
+
+{{< link-heading "h4" "2025-08-04 - 3.0.36" >}}
+
+**Bug fixes**
+- Fixed max button rounding issue preventing full balance withdrawal.
+
+--- 
+
+{{< link-heading "h4" "2025-07-30 - 3.0.35" >}}
+
+**Bug fixes**
+- Removed print button for bridge companies.
+
+--- 
+
+{{< link-heading "h4" "2025-07-29 - 3.0.34" >}}
+
+**Bug fixes**
+- Fixed request profile styling and fixed request page print button.
+
+--- 
+
+{{< link-heading "h4" "2025-07-29 - 3.0.33" >}}
+
+**Bug fixes**
+- Fixed send flow styling and only show "All transactions" button when there is more than one account currency.
+
+--- 
+
+{{< link-heading "h4" "2025-07-26 - 3.0.32" >}}
+
+**Changes**
+- Updated PRS request success screen.
+- Fixed request cancel copy.
+
+--- 
+
+{{< link-heading "h4" "2025-07-26 - 3.0.29" >}}
+
+**Changes**
+- Removed the step confirmation messages.
+- Cleanup of margins and uppercasing on confirmation screens.
+- Fixed business and seller pages from briefly showing.
+
+--- 
+
+{{< link-heading "h4" "2025-07-26 - 3.0.28" >}}
+
+**Bug fixes**
+- Fixed bridge onboarding whitescreen issue.
+
+--- 
+
+{{< link-heading "h4" "2025-07-26 - 3.0.27" >}}
+
+**Bug fixes**
+- Fixed show more transaction button displaying text while loading.
+- Default to first account currency on accounts page.
+
+--- 
+
+{{< link-heading "h4" "2025-07-25 - 3.0.26" >}}
+
+**Changes**
+- Updated bridge terms page to treat incomplete status as under review.
+
+--- 
+
+{{< link-heading "h4" "2025-07-24 - 3.0.25" >}}
+
+**Features**
+- Added configurable get started steps.
+
+--- 
+
+{{< link-heading "h4" "2025-07-23 - 3.0.24" >}}
+
+**Bug fixes**
+- Fixed withdraw ACH fees and other small issues.
+
+--- 
+
+{{< link-heading "h4" "2025-07-22 - 3.0.22" >}}
+
+**Bug fixes**
+- Fixed issue with business onboarding screen for non-business users.
+
+--- 
+
+{{< link-heading "h4" "2025-07-21 - 3.0.21" >}}
+
+**Bug fixes**
+- Fixed business registration screen flash for non-business users.
+- Fixed auth footer logged-in message visibility.
+
+--- 
+
+{{< link-heading "h4" "2025-07-16 - 3.0.20" >}}
+
+**Changes**
+- Updated helm chart and display app version on about page.
+
+--- 
+
+{{< link-heading "h4" "2025-07-15 - 3.0.19" >}}
+
+**Features**
+- Homepage currency balances.
+
+--- 
+
+{{< link-heading "h4" "2025-07-14 - 3.0.18" >}}
+
+**Features**
+- Added configurable withdraw subtypes config.
+- Fixed email verify issues.
+
+--- 
+
+{{< link-heading "h4" "2025-07-14 - 3.0.17" >}}
+
+**Features**
+- Added backend tier sync and polling on onboarding.
+
+--- 
+
+{{< link-heading "h4" "2025-07-11 - 3.0.16" >}}
+
+**Bug fixes**
+- Fixed duplicate MFA verification and login API calls.
+
+--- 
+
+{{< link-heading "h4" "2025-07-09 - 3.0.15" >}}
+
+**Bug fixes**
+- Fixed MFA setup after register issue.
+
+--- 
+
+{{< link-heading "h4" "2025-07-08 - 3.0.14" >}}
+
+**Features**
+- Added duplicate request prevention.
+
+--- 
+
+{{< link-heading "h4" "2025-07-08 - 3.0.13" >}}
+
+**Bug fixes**
+- Fixed OTP validation issue.
+
+--- 
+
+{{< link-heading "h4" "2025-07-04 - 3.0.12" >}}
 
 **Bug fixes**
 - Fixed missing translation key for withdraw to account functionality.
