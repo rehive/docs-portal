@@ -5,65 +5,36 @@ description: Mobile application push notifications.
 weight: 3
 ---
 
-Push notifications in the Rehive apps are facilitated by the Expo framework on which the mobile react native app is built and therefore only available in apps also built on Expo. This guide summarizes how to get push notifications working in your app.
+Push notifications in the Rehive apps are facilitated by the Expo framework on which the mobile react native app is built. The Rehive white-label mobile app already has all the necessary push notification code integrated - you just need to configure the services.
 
 ## Setup
 
-1. Setup FCM for android on your Firebase account: follow the steps provided in both the "Client Setup" and "Uploading Server Credentials" sections of this guide https://docs.expo.dev/push-notifications/using-fcm/
-2. Request Rehive to enable push notifications for your app id on the service
-3. Get the users push notification token by following this guide / using this code: https://docs.expo.dev/push-notifications/push-notifications-setup/
-4. Add user device/IMEI to platform via the `/devices/` and `/devices/{id}/apps/` endpoints. We usually do this along with step 3 during the registration process and/or in settings.
+The white-label app comes with push notification functionality pre-built. To enable push notifications:
 
-```javascript
-async function handleAddDevice() {
-  // Get user push notification token using guide from step 3
-  const token = await registerForPushNotificationsAsync();
-  if (token) {
-    // Add IMEI about the device using 'expo-constants' and the device name from 'expo-device' (this name could also be an input from the user)
-    // (optional) Add some metadata about the device using 'expo-device'
-    const dataDevice = {
-      imei: Constants.deviceId,
-      name: Device.deviceName,
-      metadata: {
-        brand: Device.brand,
-        modelName: Device.modelName,
-        osName: Device.osName,
-        osVersion: Device.osVersion,
-      },
-    };
-    // Add device to rehive using a POST to `/user/devices/`
-    const respDevice = await addDevice(dataDevice);
+**1. Setup Firebase for Android:**
+- Go to the [Firebase console](https://console.firebase.google.com/) and create a new project
+- In the console, click the setting icon next to **Project overview** and open **Project settings**
+- Under **Your apps**, click the Android icon to add Firebase to your Android app
+- Make sure the Android package name matches the value of `android.package` from your app config
+- Download the `google-services.json` file and place it in your project's root directory
+- Follow the "Uploading Server Credentials" section of [Expo's FCM guide](https://docs.expo.dev/push-notifications/using-fcm/)
 
-    if (respDevice.status === 'success') {
-      const dataApp = {
-        name: 'Application',
-        type: 'expo',
-        token,
-      };
-      const deviceId = respDevice?.data?.id;
-      // Add app details with expo token to `/devices/{id}/apps/`
-      const respApp = await addDeviceApp(deviceId, dataApp);
-      if (respApp.status === 'success') {
-        // handle successful device add
-        showToast({
-          text: 'Device ' + Device.deviceName + ' successfully added',
-          variant: 'success',
-        });
-      } else {
-        setError(respApp.message ? respApp.message : 'Unable to add device');
-      }
-    } else {
-      setError(
-        respDevice.message ? respDevice.message : 'Unable to add device',
-      );
-      showToast({
-        text: 'Unable to add device',
-        variant: 'error',
-      });
-    }
-  }
-}
-```
+**2. Request activation from Rehive:**
+- Contact Rehive support to activate push notifications on the Notification extension for your company
+- Provide them with your app ID
+
+**3. Configure notifications in the dashboard:**
+- Once activated, go to the Notification extension in your Rehive Dashboard
+- Configure the notification templates and settings for different events
+- Set up which events should trigger push notifications
+
+**Note:** The white-label app already includes the code to:
+- Request push notification permissions from users
+- Register devices and tokens with Rehive
+- Handle incoming push notifications
+- Display notifications to users
+
+This functionality is automatically triggered during user registration and can be managed in the app's settings.
 
 ## How this works
 
