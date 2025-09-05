@@ -9,6 +9,13 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2025-09-05 - 7.8.40" >}}
+
+**Bug fixes**
+- Fixed fee error when sending the max amount.
+
+---
+
 {{< link-heading "h4" "2025-09-03 - 7.8.39" >}}
 
 **Maintenance**
