@@ -9,6 +9,35 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2025-09-03 - 7.8.39" >}}
+
+**Maintenance**
+- Upgraded Expo version to 53.
+
+---
+
+{{< link-heading "h4" "2025-09-03 - 7.8.38" >}}
+
+**UI improvements**
+- Added chain icons to transaction listing.
+- Transaction details page re-design.
+
+---
+
+{{< link-heading "h4" "2025-08-28 - 7.8.37" >}}
+
+**Bug fixes**
+- Removed exchange icon displaying on receive page when the rate is 1:1.
+
+---
+
+{{< link-heading "h4" "2025-08-28 - 7.8.36" >}}
+
+**Improvements**
+- Restricted EURC chain deposit options to match our third pary provider.
+
+---
+
 {{< link-heading "h4" "2025-08-27 - 7.8.35" >}}
 
 **Bug fixes**

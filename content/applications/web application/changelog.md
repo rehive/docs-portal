@@ -9,6 +9,38 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2025-09-02 - 3.1.0" >}}
+
+**Enhancements**
+- Add on demand virtual accounts and support for cross currency deposits
+
+**Bug fixes**
+- Fix sensitive field eye icon alignment issue
+
+--- 
+
+{{< link-heading "h4" "2025-09-02 - 3.0.59" >}}
+
+**Bug fixes**
+- Added bank icons to withdrawal flow and fixed alignments.
+- Removed redundent deposit form title
+
+--- 
+
+{{< link-heading "h4" "2025-08-28 - 3.0.58" >}}
+
+**Bug fixes**
+- Prevent last edited bank account from being set as selected during the withdrawal flow.
+
+--- 
+
+{{< link-heading "h4" "2025-08-28 - 3.0.57" >}}
+
+**Improvements**
+- Restricted EURC chain deposit options to match our third pary provider.
+
+--- 
+
 {{< link-heading "h4" "2025-08-27 - 3.0.56" >}}
 
 **Maintenance**
