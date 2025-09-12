@@ -9,6 +9,69 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2025-09-12 - 3.1.9" >}}
+
+**Improvements**
+- Improve withdraw bank add form submission and bank display.
+
+--- 
+
+{{< link-heading "h4" "2025-09-11 - 3.1.8" >}}
+
+**Bug fixes**
+- Hotfix: translation keys on transaction details.
+
+--- 
+
+{{< link-heading "h4" "2025-09-11 - 3.1.7" >}}
+
+**Bug fixes**
+- Prevent verify email modal triggering a resend on email add.
+
+--- 
+
+{{< link-heading "h4" "2025-09-11 - 3.1.6" >}}
+
+**Bug fixes**
+- Fix issues with mexican withdrawal accounts.
+
+--- 
+
+{{< link-heading "h4" "2025-09-10 - 3.1.5" >}}
+
+**Enhancements**
+- Cross currency withdraw.
+
+--- 
+
+{{< link-heading "h4" "2025-09-09 - 3.1.4" >}}
+
+**Bug fixes**
+- Fix correction subtype copy.
+
+--- 
+
+{{< link-heading "h4" "2025-09-09 - 3.1.3" >}}
+
+**Improvements**
+- Update subtype copy to support correction subtypes.
+
+--- 
+
+{{< link-heading "h4" "2025-09-08 - 3.1.2" >}}
+
+**Maintenance**
+- Revert "Start adding cross currency withdraw updates".
+
+--- 
+
+{{< link-heading "h4" "2025-09-08 - 3.1.1" >}}
+
+**Bug fixes**
+- Hotfix for crypto receive message.
+
+--- 
+
 {{< link-heading "h4" "2025-09-02 - 3.1.0" >}}
 
 **Enhancements**

@@ -9,6 +9,29 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2025-09-12 - 7.10.0" >}}
+
+**Enhancements**
+- Add support for cross currency bank withdrawals.
+- Scale amount copy on transaction details for larger values.
+- Removed grey bar at the top of ondemand bank page.
+
+---
+
+{{< link-heading "h4" "2025-09-12 - 7.9.0" >}}
+
+**Enhancements**
+- Privacy feature.
+
+---
+
+{{< link-heading "h4" "2025-09-09 - 7.8.41" >}}
+
+**Enhancements**
+- On demand virtual accounts and cross currency bank deposit support.
+
+---
+
 {{< link-heading "h4" "2025-09-05 - 7.8.40" >}}
 
 **Bug fixes**
