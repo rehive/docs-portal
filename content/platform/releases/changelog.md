@@ -9,6 +9,23 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2025-09-16" >}}
+
+- Major performance improvements to all transaction flows:
+    - Faster validation and sanitation of input on transaction creation.
+    - Faster transaction creation and update response times.
+    - Faster transaction transition approval on managed currencies.
+    - Better performance on webhook serialization via deferred webhook batches.
+- Marked the `fees` field on transaction creation endpoints as deprecated.
+    - Please construct fees using children transactions or use inferred fees (via the dashboard) instead.
+- Marked the following endpoints as deprecated:
+    - `POST` on: `/transactions/credit/` or `/admin/transactions/credit/`
+    - `POST` on: `/transactions/debit/` or `/admin/transactions/debit/`
+    - `POST` on: `/transactions/transfer/` or `/admin/transactions/transfer/`
+    - `POST` on: `/transactions/` or `/admin/transactions/`
+    - Please construct transactions via the `transaction-collections` endpoints.
+---
+
 {{< link-heading "h5" "2025-06-25" >}}
 
 
