@@ -34,12 +34,14 @@ The white-label app already has push notification code integrated. To enable pus
 
 **1. Platform-specific setup:**
 - **iOS:** No additional setup required - the EAS CLI will automatically manage push notification configuration during the build process
-- **Android:** Set up Firebase:
-  - Go to the [Firebase console](https://console.firebase.google.com/) and click on Add project
-  - Click the settings icon next to **Project overview** and open **Project settings**
-  - Under **Your apps**, click the Android icon to add Firebase to your Android app
-  - Make sure the Android package name matches the value of `android.package` from your app config
-  - Download the `google-services.json` file and place it in your project's root directory
+- **Android:** Configure Firebase Cloud Messaging (FCM):
+  1. Create or open a Firebase project for your app in the [Firebase console](https://console.firebase.google.com/). Under **Project settings → General**, register your Android package (must match `android.package` in your app config) and download the `google-services.json` file for later.
+  2. Open **Project settings → Service accounts** for the same project.
+  3. Click **Generate new private key**, confirm, and store the downloaded service-account JSON securely.
+  4. Upload the JSON in Expo: sign in at [expo.dev](https://expo.dev/), open your project, go to **Project settings → Credentials**, pick **Android**, select **Manage your Google Service Account Key for Push Notifications (FCM V1)**, and use **Upload a new service account key** to provide the file.
+  5. Add the JSON to your `.gitignore` so it is not committed to source control.
+
+Expo's [FCM credentials guide](https://docs.expo.dev/push-notifications/fcm-credentials/) walks through the same process (including EAS CLI and dashboard paths) with screenshots if you need extra detail.
 
 **2. Request activation from Rehive:**
 - Contact Rehive support to activate push notifications on the Notification extension for your company
@@ -85,8 +87,3 @@ eas build -e production -p all
 Expo offers OTA updates for applying changes to apps without going through the build process. Read more [here](https://docs.expo.dev/eas-update/introduction/). Follow these steps to publish and apply an OTA update.
 1. Publish the changes to a branch by running: `eas update --branch v4.0.11 --message v4.0.11` (replace v4.0.11 with the correct version tag matching your version.json).
 2. Apply the update to production (or staging) by running `eas channel:edit production --branch v4.0.11`
-
-
-
-
-
