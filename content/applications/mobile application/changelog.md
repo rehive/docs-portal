@@ -9,6 +9,28 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2025-09-19 - 7.10.3" >}}
+
+**Improvements**
+- Improved ondemand deposit bank details styling.
+- Removed the default currency selection from ondemand deposits.
+
+---
+
+{{< link-heading "h4" "2025-09-19 - 7.10.2" >}}
+
+**Bug fixes**
+- Fixed Expo-related iOS push notification issues.
+
+---
+
+{{< link-heading "h4" "2025-09-16 - 7.10.1" >}}
+
+**Bug fixes**
+- Corrected ondemand fee display calculations.
+
+---
+
 {{< link-heading "h4" "2025-09-12 - 7.10.0" >}}
 
 **Enhancements**

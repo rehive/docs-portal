@@ -9,6 +9,13 @@ Summary of additions and changes to the web application.
 
 --- 
 
+{{< link-heading "h4" "2025-09-12 - 3.1.10" >}}
+
+**Bug fixes**
+- Fix bank account address submission issue.
+
+--- 
+
 {{< link-heading "h4" "2025-09-12 - 3.1.9" >}}
 
 **Improvements**
