@@ -9,6 +9,13 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2025-10-08 - 7.10.10" >}}
+
+**Features**
+- Added Multi-Factor Authentication (MFA) enforcement when required by authentication configuration settings.
+
+---
+
 {{< link-heading "h4" "2025-10-08 - 7.10.9" >}}
 
 **Improvements**
