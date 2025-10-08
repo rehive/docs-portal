@@ -9,6 +9,34 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2025-10-08 - 7.10.9" >}}
+
+**Improvements**
+- Added network restrictions for EURC cryptocurrency transactions to ensure compatibility with supported networks.
+
+---
+
+{{< link-heading "h4" "2025-10-02 - 7.10.8" >}}
+
+**Bug fixes**
+- Fixed a potential intermittent issue that could cause the login screen to freeze.
+
+---
+
+{{< link-heading "h4" "2025-09-26 - 7.10.6" >}}
+
+**Bug fixes**
+- Fixed exchange rate calculation for bank deposit transactions.
+
+---
+
+{{< link-heading "h4" "2025-09-25 - 7.10.5" >}}
+
+**Bug fixes**
+- Fixed residency and nationality field handling in user profile forms.
+
+---
+
 {{< link-heading "h4" "2025-09-19 - 7.10.3" >}}
 
 **Improvements**

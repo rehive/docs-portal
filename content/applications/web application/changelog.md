@@ -7,7 +7,123 @@ weight: 1
 
 Summary of additions and changes to the web application.
 
---- 
+---
+
+{{< link-heading "h4" "2025-10-07 - 3.3.11" >}}
+
+**Bug fixes**
+- Fixed an issue with fee pagination for cryptocurrency send transactions.
+
+---
+
+{{< link-heading "h4" "2025-10-07 - 3.3.10" >}}
+
+**Improvements**
+- Added network restrictions for EURC cryptocurrency send transactions to ensure compatibility.
+
+---
+
+{{< link-heading "h4" "2025-10-06 - 3.3.9" >}}
+
+**Maintenance**
+- General maintenance and stability improvements.
+
+---
+
+{{< link-heading "h4" "2025-10-06 - 3.3.8" >}}
+
+**Bug fixes**
+- Fixed exchange rate display formatting on deposit pages for company currencies.
+
+---
+
+{{< link-heading "h4" "2025-10-06 - 3.3.7" >}}
+
+**Improvements**
+- Improved fee calculation handling for bank deposits using zone-based subtypes.
+
+---
+
+{{< link-heading "h4" "2025-10-03 - 3.3.6" >}}
+
+**Improvements**
+- Updated the display format for indicative exchange rates on company bank accounts.
+
+---
+
+{{< link-heading "h4" "2025-10-03 - 3.3.5" >}}
+
+**Enhancements**
+- Added support for check digit field in company bank account details.
+- Updated regulatory compliance messaging for bank transactions.
+
+---
+
+{{< link-heading "h4" "2025-10-03 - 3.3.4" >}}
+
+**Improvements**
+- Enhanced currency icon mapping to better match currencies with their respective country flags.
+
+---
+
+{{< link-heading "h4" "2025-10-03 - 3.3.3" >}}
+
+**Bug fixes**
+- Fixed currency conversion issue affecting on-demand deposit transactions.
+
+---
+
+{{< link-heading "h4" "2025-09-30 - 3.3.2" >}}
+
+**Enhancements**
+- Added support for new deposit transaction subtypes including send and receive operations.
+
+---
+
+{{< link-heading "h4" "2025-09-30 - 3.3.1" >}}
+
+**Improvements**
+- Improved verification status polling to reduce server load and enhance performance.
+
+---
+
+{{< link-heading "h4" "2025-09-30 - 3.3.0" >}}
+
+**Features**
+- Added support for Wire transfer withdrawals for international bank payments.
+
+**Improvements**
+- Updated manual deposit transfer instructions for better clarity.
+
+---
+
+{{< link-heading "h4" "2025-09-28 - 3.2.2" >}}
+
+**Enhancements**
+- Added reference field support for on-demand virtual bank accounts.
+
+---
+
+{{< link-heading "h4" "2025-09-26 - 3.2.1" >}}
+
+**Bug fixes**
+- Fixed exchange rate calculation for bank deposit transactions.
+
+---
+
+{{< link-heading "h4" "2025-09-26 - 3.2.0" >}}
+
+**Features**
+- Added support for custom cross-currency deposit accounts, allowing users to deposit in different currencies.
+
+---
+
+{{< link-heading "h4" "2025-09-26 - 3.1.11" >}}
+
+**Improvements**
+- Enhanced IBAN input field validation and formatting for better user experience.
+
+---
 
 {{< link-heading "h4" "2025-09-12 - 3.1.10" >}}
 
