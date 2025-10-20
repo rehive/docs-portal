@@ -4,11 +4,13 @@ title: Deposits to segregated bank accounts
 description: Basic overview of an example flow to facilitate end-user deposits via bank transfer.
 weight: 3
 ---
+
 This use case involves end-users depositing funds to unique bank accounts associated to them on the backend, using a user’s unique Rehive account reference to identify the account to assign the deposit to. 
 
 This deposit method will have the same end-user experience as the existing “Deposit to omnibus bank account” flow. Feel free to[ test this flow](https://rehive.intercom.help/en/articles/6483505-how-to-create-a-manual-deposit-as-an-admin) on your test project in the Rehive Wallet apps.
 
 #### Requirements
+
 * To support this deposit method, you will need to consider two separate flows - one where a bank account is created for each new user-profile created on your Rehive project and another for the actual deposit flow. 
 * The accounts created for the users must support all currencies in which deposits are expected to be received.
 * You will need to configure a [webhook](https://dashboard.rehive.com/#/developers/webhooks/list) to notify your extension when a new user profile is created 
@@ -17,12 +19,12 @@ This deposit method will have the same end-user experience as the existing “De
 
 When the user selects “Deposit” from either their web or mobile wallet, they will be shown the information for the bank account listed above as well as a reference which the user must include in the reference field of their bank transfer. This reference indicates the account reference for allocation of the deposit.
 
-
 <img src="/images/web-app-deposit-screen.png" alt="Web app deposit image" width="80%">  
 
-
 #### Flows:
+
 ##### Create user-allocated bank account
+
 1. The end-user creates and their profile.
 2. Your extension receives a webhook from Rehive Platform triggered by the `user.create` event.  
 3. Your extension makes an API call to the payment processor/ banking-as-a-service provider to create a unique deposit account for the user
@@ -33,7 +35,6 @@ The deposit bank account details will be visible to the user on the relevant scr
 
 NOTE: Should you wish to add qualifying criteria, you can create a `user.update` webhook and use the data returned to qualify when to create the bank account.
 
-
 <img src="/images/Create user-allocated bank account.png" alt="Deposit via bank transfer diagram" width="80%">  
 
 ##### Deposit funds into segregated bank account
@@ -41,17 +42,48 @@ NOTE: Should you wish to add qualifying criteria, you can create a `user.update`
 1. The user selects “Deposit” and is shown details of the the unique bank account created in the previous flow with a unique reference for the Rehive account to which the funds will be allocated.
 2. The user makes a bank transfer to the bank account provided and includes the unique reference in the reference field
 3. Your custom extension polls the transaction history of the company bank account
-4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive Platform Admin API endpoint <code> [admin/transactions/credit/](https://api.rehive.com/?api=rehive-platform-admin-api#tag/transactions/POST/3/admin/transactions/credit/)</code> with
+4. When a new transaction is detected, your custom extension creates a credit transaction on the Rehive Platform Admin API endpoint <code>[/admin/transaction-collections/](https://api.rehive.com/?api=rehive-platform-admin-api#tag/transaction-collections/POST/3/admin/transaction-collections/)</code> with:
+
 ```json
 {
-    "status": "complete",
-    "subtype": "deposit_bank",
-    "account": "{unique_reference}"
+    "transactions": [
+        {
+            "tx_type": "credit",
+            "subtype": "deposit_bank",
+            "account": "{user_account_reference}"
+        }
+    ],
+    "status": "complete"
 }
 ```
 
-<img src="/images/Deposit via bank transfer to user-allocated account.png" alt="Deposit via bank transfer diagram" width="80%">  
+Alternatively, if you want to fund the account using an operational account, you can do so via a transfer transaction using the same endpoint:
 
+```json
+{
+    "transactions": [
+        {
+            "id": "{debit_id}",
+            "partner": "{credit_id}",
+            "tx_type": "debit",
+            "subtype": "{debit_subtype}",
+            "account": "{operational_account_reference}"
+        },
+        {
+            "id": "{credit_id}",
+            "partner": "{debit_id}",
+            "tx_type": "credit",
+            "subtype": "{credit_subtype}",
+            "account": "{user_account_reference}"
+        }
+    ],
+    "status": "complete"
+}
+```
+
+The `debit_id` and `credit_id` should be unique UUID v4 values that you generate to link the transfers together.
+
+<img src="/images/Deposit via bank transfer to user-allocated account.png" alt="Deposit via bank transfer diagram" width="80%">
 
 #### Recommended additional configurations:
 
