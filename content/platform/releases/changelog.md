@@ -9,6 +9,18 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2025-10-21" >}}
+
+- Fixed a bug in fee handling that could result in 0 value fees on percentage fees if the transaction amount was below a certain amount. 
+    - Going forward, the minimum value for a percentage fee will always be the smallest unit of a given currency.
+- Fixed a bug in inclusive fee rounding that, in rare cases, resulted in a total transaction amount larger than the requested inclusive amount.
+- Fixed incorrect documentation on transfer endpoints and other deprecated endpoints.
+- Added support for a `wallet_currency` on wallet resources.
+- Added `clabe` to company bank accounts.
+- Added `check_digit` to the company and user bank accounts.
+
+---
+
 {{< link-heading "h5" "2025-09-16" >}}
 
 - Major performance improvements to all transaction flows:
