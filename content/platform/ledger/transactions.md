@@ -7,16 +7,17 @@ weight: 2
 
 Transactions are the individual operations that affect account balances. As such, transactions are a representation (or log) of changes to account balances. Every transaction can be either a debit or a credit. In simple terms debit transactions reduce an account’s balance and credit transactions increases an account’s balance.
 
-A transfer is a 2-step transaction where one user is debited and another is credited the same amount simultaneously. Transfers store the movement of funds between explictly defined accounts and are the predoeminate way transactions are handled in the Platform
+A transfer is a 2-step transaction where one user is debited and another is credited the same amount simultaneously. Transfers store the movement of funds between explictly defined accounts and are the predominant way transactions are handled in the Platform
 
 Every transaction has a status that can be used to gauge the state of the transaction. The statuses are:
 
 status | description
 ---|---
 Initiating | the transaction is processing immediately after insert.
-Pending | the transaction has passed all validation amd applied to the account's available balance if a debit transaction.
-Complete | the transaction has been executed applied to the account's balance.
-Failed | the transaction has been executed but did not succeed and had no impact on the account's balance.
+Quoted | the transaction has been "locked" and can only be processed within a limited quote duration.
+Pending | the transaction has passed all validation and applied to the account's available balance (if it is a debit transaction).
+Complete | the transaction has been executed and applied fully to the account's balances (whether a debit or credit transaction).
+Failed | the transaction has been executed but did not succeed and no changes were made on the account's balances.
 
 Transactions are **immutable once executed** in Rehive. This means that once a transaction has reached an executed status of `Complete` or `Failed` they cannot be further modified in the system. To reverse a transaction's balance changes once it has executed you should create another transaction instead.
 
@@ -34,7 +35,7 @@ Transactions can be made by both admin users and end-users. However, end-users a
 
 There are many cases where multiple related transactions in the Platform need to be part of a single collection. For instance, a transfer transaction is made up of two transactions but these transactions are part of the same collection and both must be executed simultaneously. Another example of where transaction collections are relevent is the handling of fees: all transaction fees are created within the same collection as their parent transaction.
 
-The Platform supports transaction-collections are a way to group multiple related transactions together. Every transaction is a child of a transaction-collection (even when only one transaction is in that collection). A transaction-collection can contain multiple different transactions, with different types, subtypes and accounts. In simple terms transaction-collections are used to "organize" transactions.
+The Platform supports transaction-collections are a way to group multiple related transactions together. **Every transaction is a child of a transaction-collection** (even when only one transaction is in that collection). A transaction-collection can contain multiple different transactions, with different types, subtypes and accounts. In simple terms transaction-collections are used to "organize" transactions.
 
 As an organization structure, transaction-collections support the creation of multiple transactions within an atomic batch (all transactions within the collection fail or succeed together). These transactions can have complex relationships with each other:
 
