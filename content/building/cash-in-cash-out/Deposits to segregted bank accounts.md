@@ -9,7 +9,7 @@ This use case involves end-users depositing funds to unique bank accounts associ
 
 This deposit method will have the same end-user experience as the existing “Deposit to omnibus bank account” flow. Feel free to[ test this flow](https://rehive.intercom.help/en/articles/6483505-how-to-create-a-manual-deposit-as-an-admin) on your test project in the Rehive Wallet apps.
 
-#### Requirements
+{{< link-heading "h4" "Requirements" >}}
 
 * To support this deposit method, you will need to consider two separate flows - one where a bank account is created for each new user-profile created on your Rehive project and another for the actual deposit flow. 
 * The accounts created for the users must support all currencies in which deposits are expected to be received.
@@ -21,9 +21,9 @@ When the user selects “Deposit” from either their web or mobile wallet, they
 
 <img src="/images/web-app-deposit-screen.png" alt="Web app deposit image" width="80%">  
 
-#### Flows:
+{{< link-heading "h4" "Flows:" >}}
 
-##### Create user-allocated bank account
+{{< link-heading "h5" "Create user-allocated bank account" >}}
 
 1. The end-user creates and their profile.
 2. Your extension receives a webhook from Rehive Platform triggered by the `user.create` event.  
@@ -37,7 +37,7 @@ NOTE: Should you wish to add qualifying criteria, you can create a `user.update`
 
 <img src="/images/Create user-allocated bank account.png" alt="Deposit via bank transfer diagram" width="80%">  
 
-##### Deposit funds into segregated bank account
+{{< link-heading "h5" "Deposit funds into segregated bank account" >}}
 
 1. The user selects “Deposit” and is shown details of the the unique bank account created in the previous flow with a unique reference for the Rehive account to which the funds will be allocated.
 2. The user makes a bank transfer to the bank account provided and includes the unique reference in the reference field
@@ -85,6 +85,6 @@ The `debit_id` and `credit_id` should be unique UUID v4 values that you generate
 
 <img src="/images/Deposit via bank transfer to user-allocated account.png" alt="Deposit via bank transfer diagram" width="80%">
 
-#### Recommended additional configurations:
+{{< link-heading "h4" "Recommended additional configurations:" >}}
 
 * Create and customize notifications using the [Notifications Extension](https://dashboard.rehive.com/#/extensions/notifications/list) to ping users when a new deposit transaction is created. This is included in the flow above as the final step. The [Rehive Expressions Guide](https://docs.google.com/document/d/1v44nM51-VaevcMYVkGEL2scI-PpZsUIESxAxLdawxbs/edit?usp=sharing) is useful for creating notifications with specific trigger variables.
