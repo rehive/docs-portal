@@ -9,6 +9,34 @@ Summary of additions and changes to the web application.
 
 ---
 
+{{< link-heading "h4" "2025-11-06 - 3.5.1" >}}
+
+**Improvements**
+- Updated to use dynamic subtype labels from platform configuration for better customization and flexibility.
+
+---
+
+{{< link-heading "h4" "2025-11-06 - 3.5.0" >}}
+
+**Features**
+- Added custom terms handling with support for whitelabel Bridge terms and conditions.
+
+---
+
+{{< link-heading "h4" "2025-10-28 - 3.4.12" >}}
+
+**Improvements**
+- Enhanced on-demand virtual account currency selection to always display currency options, even when only one currency is available.
+
+---
+
+{{< link-heading "h4" "2025-10-23 - 3.4.11" >}}
+
+**Bug fixes**
+- Fixed an issue with SWIFT fee display not showing correctly.
+
+---
+
 {{< link-heading "h4" "2025-10-07 - 3.3.11" >}}
 
 **Bug fixes**
