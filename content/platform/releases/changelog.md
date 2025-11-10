@@ -9,28 +9,39 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2025-11-10" >}}
+
+1. Fixed a bug that resulted in a 500 error when editing legal term versions.
+2. Added an `accepted_id` to all accepted legal term versions.
+3. Added a `urls` field on legal term versions in order to support linking to multiple terms.
+4. Updated the following endpoints to support writable `metadata`.
+    - POST : `/3/accounts/`
+    - POST : `/3/accounts/{reference}/currencies/`
+
+---
+
 {{< link-heading "h5" "2025-10-21" >}}
 
-- Fixed a bug in fee handling that could result in 0 value fees on percentage fees if the transaction amount was below a certain amount. 
+1. Fixed a bug in fee handling that could result in 0 value fees on percentage fees if the transaction amount was below a certain amount. 
     - Going forward, the minimum value for a percentage fee will always be the smallest unit of a given currency.
-- Fixed a bug in inclusive fee rounding that, in rare cases, resulted in a total transaction amount larger than the requested inclusive amount.
-- Fixed incorrect documentation on transfer endpoints and other deprecated endpoints.
-- Added support for a `wallet_currency` on wallet resources.
-- Added `clabe` to company bank accounts.
-- Added `check_digit` to the company and user bank accounts.
+2. Fixed a bug in inclusive fee rounding that, in rare cases, resulted in a total transaction amount larger than the requested inclusive amount.
+3. Fixed incorrect documentation on transfer endpoints and other deprecated endpoints.
+4. Added support for a `wallet_currency` on wallet resources.
+5. Added `clabe` to company bank accounts.
+6. Added `check_digit` to the company and user bank accounts.
 
 ---
 
 {{< link-heading "h5" "2025-09-16" >}}
 
-- Major performance improvements to all transaction flows:
+1. Major performance improvements to all transaction flows:
     - Faster validation and sanitation of input on transaction creation.
     - Faster transaction creation and update response times.
     - Faster transaction transition approval on managed currencies.
     - Better performance on webhook serialization via deferred webhook batches.
-- Marked the `fees` field on transaction creation endpoints as deprecated.
+2. Marked the `fees` field on transaction creation endpoints as deprecated.
     - Please construct fees using children transactions or use inferred fees (via the dashboard) instead.
-- Marked the following endpoints as deprecated:
+3. Marked the following endpoints as deprecated:
     - `POST` on: `/transactions/credit/` or `/admin/transactions/credit/`
     - `POST` on: `/transactions/debit/` or `/admin/transactions/debit/`
     - `POST` on: `/transactions/transfer/` or `/admin/transactions/transfer/`
@@ -41,11 +52,11 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 {{< link-heading "h5" "2025-06-25" >}}
 
 
-- Switched to Scalar for the platform API reference.
+1. Switched to Scalar for the platform API reference.
     - Fixed a bug in the anchor tag linking.
-- Added a `nonce` field to the `/3/auth/jwt/` POST endpoint.
-- Fixed a bug in default throttle rates in the JWT endpoints.
-- Updated access control handling to better support receiving X-Forward-For headers from extensions and match access control rules accordingly.
+2. Added a `nonce` field to the `/3/auth/jwt/` POST endpoint.
+3. Fixed a bug in default throttle rates in the JWT endpoints.
+4. Updated access control handling to better support receiving X-Forward-For headers from extensions and match access control rules accordingly.
 
 ---
 
