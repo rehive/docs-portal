@@ -11,7 +11,7 @@ This section will provide guidelines for fetching and providing quotation inform
 
 To integrate custom quoting in the Conversion Extension, you will need to:
 
-* Create custom integration services that can receive a `conversion.quote` webhook event. The details for this webhook event are laid out in the [Quote event](#quote-event) section of this guide.
+* Create custom integration service that can receive a `conversion.quote` webhook event. The details for this webhook event are laid out in the [Quote event](#quote-event) section of this guide.
 * Add the service as an integration in the [Rehive Admin Dashboard](https://dashboard.rehive.com/#/extensions/conversion/settings).
 * Configure a `conversion.quote` webhook on the integration in the dashboard.
     - Ensure that you use a unique, random value as the `secret`.
@@ -25,7 +25,7 @@ To integrate custom quoting in the Conversion Extension, you will need to:
     - Fetches applicable quote information (via the source of your choice).
     - If needed, perform any actions needed to ensure the funds/liquidity is available.
     - Return the quote to the Rehive conversion extension in the response.
-4. The Conversion extension uses the webhook respponse data to construct a conversion that gets returned to the user for approval.
+4. The Conversion extension uses the webhook response data to construct a conversion that gets returned to the user for approval.
 5. The user approves the quote and processing proceeds to [conversion execution](/building/conversions/execute-a-conversion/).
 
 <img src="/images/conversion-extension-generate-quote.png" alt="Deposit via bank transfer diagram" width="80%">
@@ -43,30 +43,30 @@ The request data sent by the Conversion Extension in the `conversion.quote` even
 
 ```json
 {
+    "id": "<conversion_id>",
+    "user": "<user_id>",
     "from_currency": "<currency_code>",
     "to_currency": "<currency_code>",
     "from_amount": 1000,
     "to_amount": null,
-    "transaction_collection_id": "<collection_id>",
     "debit_account": "<account_reference>",
     "credit_account": "<account_reference>",
-    "user": "<user_id>",
-    "id": "<conversion_id>",
+    "transaction_collection_id": "<collection_id>",
     "metadata": null
 }
 ```
 
-Name | type | description
+Name | Type | Description
 ---|---|---
+id | string uuid | The conversion ID.
+user | string uuid | The user requesting the conversion.
 from_currency | string | The currency that will be sold by the conversion.
 to_currency | string | The currency that wll be bought by the conversion.
 from_amount | integer | Optional integer representation of the credited amount.
 to_amount | integer | Optional integer representation of the credited amount.
-transaction_collection_id | string uuid | The pre-generated collection ID that will be used if the quote is approved.
 debit_account | string | A reference for the account where the from_currency will be debited.
 credit_account | string | A reference for the account where the to_currency will be credited.
-user | string uuid | The user requesting the conversion.
-id | string uuid | The conversion ID.
+transaction_collection_id | string uuid | The pre-generated collection ID that will be used if the quote is approved.
 metadata | object | An optional object containing JSON metadata about the conversion.
 
 Either a `from_amount` or `to_amount` will be included. You will have to be prepared to generate quotes from either direction.
@@ -79,7 +79,7 @@ Either a `from_amount` or `to_amount` will be included. You will have to be prep
 
 Once you have verified the incoming webhook's secret and performed any validation you can do anything else necessary to construct a quote that matches your business requirements.
 
-Your response data should be formatted like:
+Your response should be a `200` HTTP status with a JSON body formatted like:
 
 ```json
 {
@@ -92,13 +92,13 @@ Your response data should be formatted like:
 }
 ```
 
-Name | type | description
+Name | Type | Description
 ---|---|---
 from_amount | integer | Final integer representation of the `from_currency` debited amount.
 to_amount | integer | Final integer representation of the `to_currency` credited amount.
 from_fee | integer | An optional integer representation of a `from_currency` fee.
 to_fee | integer | An optional integer representation of a `to_currency` fee.
-expires | integer | An optional unix timestamp (UTC) when the quote should expire.
+expires | integer | An optional UNIX timestamp (UTC) when the quote should expire.
 rate | float | A float percentage rate used to generate the `from_amount` and `to_amount`.
 
 <aside class="notice">
