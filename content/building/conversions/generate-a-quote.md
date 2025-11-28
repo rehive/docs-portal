@@ -72,7 +72,7 @@ metadata | object | An optional object containing JSON metadata about the conver
 Either a `from_amount` or `to_amount` will be included. Your integration must be prepared to generate quotes from either direction.
 
 <aside class="notice">
-    Always verify the <code>Authorization</code> header's secret on each webhook event in order to ensure the webhook is origination from the Conversion extension. The secret will be formatted as <code>Secret {secret}</code>.
+    Always verify the <code>Authorization</code> header's secret on each webhook event in order to ensure the webhook is originating from the Conversion extension. The secret will be formatted as <code>Secret {secret}</code>.
 </aside>
 
 **Response data**

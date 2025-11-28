@@ -56,7 +56,7 @@ id | string uuid | The conversion ID.
 transaction_collection_id | string uuid | The collection ID that contains the transactions.
 
 <aside class="notice">
-    Always verify the <code>Authorization</code> header's secret on each webhook event in order to ensure the webhook is origination from the Conversion extension. The secret will be formatted as <code>Secret {secret}</code>.
+    Always verify the <code>Authorization</code> header's secret on each webhook event in order to ensure the webhook is originating from the Conversion extension. The secret will be formatted as <code>Secret {secret}</code>.
 </aside>
 
 **Response data**
