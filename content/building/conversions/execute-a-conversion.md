@@ -35,7 +35,7 @@ To integrate custom conversion execution in the Conversion Extension, you will n
 
 #### Execute event
 
-To integrate with our Conversion Extension, the custom integration requires an endpoint that can receive `conversion.execute` events. This endpoint `url`, along with a `secret`, is configured when setting up webhooks on a conversion extension integration.
+To integrate with the Conversion Extension, the custom integration requires an endpoint that can receive `conversion.execute` events. This endpoint `url`, along with a `secret`, is configured when setting up webhooks on a conversion extension integration.
 
 The `conversion.execute` event is sent after a user approves a quote and it provides an opportunity for your integration interrupt the normal handling and fail/complete the transactions based on your own rules.
 

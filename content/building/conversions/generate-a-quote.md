@@ -23,8 +23,8 @@ To integrate custom quoting in the Conversion Extension, you will need to:
 2. The Rehive Conversion extension sends a `conversion.quote` webhook to the custom integration.
 3. The custom integration verifies the secret sent in the headers and then:
     - Fetches applicable quote information (via the source of your choice).
-    - If needed, perform any actions needed to ensure the funds/liquidity is available.
-    - Return the quote to the Rehive conversion extension in the response.
+    - If needed, performs any actions needed to ensure the funds/liquidity is available.
+    - Returns a quote to the Rehive conversion extension in the response.
 4. The Conversion extension uses the webhook response data to construct a conversion that gets returned to the user for approval.
 5. The user approves the quote and processing proceeds to [conversion execution](/building/conversions/execute-a-conversion/).
 
@@ -32,7 +32,7 @@ To integrate custom quoting in the Conversion Extension, you will need to:
 
 #### Quote event
 
-To integrate with our Conversion Extension, the custom integration requires an endpoint that can receive `conversion.quote` events. This endpoint `url`, along with a `secret`, is configured when setting up webhooks on a conversion extension integration.
+To integrate with the Conversion Extension, the custom integration requires an endpoint that can receive `conversion.quote` events. This endpoint `url`, along with a `secret`, is configured when setting up webhooks on a conversion extension integration.
 
 The `conversion.quote` event is sent when a user requests a quote and it provides an opportunity for your integration to modify the quote to something suitable to your needs.
 
@@ -69,7 +69,7 @@ credit_account | string | A reference for the account where the to_currency will
 transaction_collection_id | string uuid | The pre-generated collection ID that will be used if the quote is approved.
 metadata | object | An optional object containing JSON metadata about the conversion.
 
-Either a `from_amount` or `to_amount` will be included. You will have to be prepared to generate quotes from either direction.
+Either a `from_amount` or `to_amount` will be included. Your integration must be prepared to generate quotes from either direction.
 
 <aside class="notice">
     Always verify the <code>Authorization</code> header's secret on each webhook event in order to ensure the webhook is origination from the Conversion extension. The secret will be formatted as <code>Secret {secret}</code>.
@@ -77,7 +77,7 @@ Either a `from_amount` or `to_amount` will be included. You will have to be prep
 
 **Response data**
 
-Once you have verified the incoming webhook's secret and performed any validation you can do anything else necessary to construct a quote that matches your business requirements.
+Once you have verified the incoming webhook's secret and performed any validation you can do anything else necessary to construct a quote that matches your business's requirements.
 
 Your response should be a `200` HTTP status with a JSON body formatted like:
 
