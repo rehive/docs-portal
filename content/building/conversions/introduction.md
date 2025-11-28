@@ -4,16 +4,14 @@ title: Introduction
 description: Introduction to building third-party integrations for common fintech flows.
 weight: 1
 ---
-Rehive consists of three parts: Platform, Extensions, and Applications. This overview assumes that you are familiar with these. 
 
-Rehive’s [Conversion Extension](https://dashboard.rehive.com/#/extensions/conversion/rates) has been updated to support custom quotes from third parties. This is done by associating a currency pair with a third-party (or custom) extension. When a quote is created for the currency pair, the custom extension provides information to generate the quote rather than using the internal rates of Rehive’s Conversion Extension.
+<aside class="notice">
+	Rehive consists of three parts: Platform, Extensions, and Applications. This overview assumes that you are familiar with these.
+</aside>
 
-This guide will cover the recommended way to build a custom estension which will provide quotes and execute conversion transactions on a relevant third party before updatin the associated Rehive transactions.
+Rehive’s [Conversion Extension](https://dashboard.rehive.com/#/extensions/conversion/rates) supports custom quoting and conversion approval via an integration flow. This is done by associating a currency pair to an integration service. An integration can be configured to:
 
-The first place to start is by familiarizing yourself with the [Get Started section](/building/get-started/introduction/). This gives a basic overview of how to start building an extension as well as the ground-level endpoints you’ll need to use. You should also familiarize yourself with [Rehive’s Standard Configurations](https://docs.google.com/document/d/1LdWBY2Oim2EPWv2-ZNKIPXDbnULbSf-DiUfuCw7_zQg/edit#) to ensure that the correct subtypes are used for specific transactions.
+- Request quote details (including exchange rates) from the integration service rather than simply using the Conversion Extension's internal rates.
+- Offload approval of conversions to the integration service.
 
-
-
-
-
-
+This guide will cover the recommended way to build an integration service that will provide quotes and execute conversion transactions on a relevant third party.

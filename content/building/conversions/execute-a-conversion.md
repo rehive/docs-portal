@@ -4,6 +4,7 @@ title: Execute a conversion
 description: Basic overview of an example flow to facilitate end-user deposits via bank transfer.
 weight: 3
 ---
+
 This section will provide guidelines for triggering and executing transactions on the third party when quotes are accepted.
 
 
