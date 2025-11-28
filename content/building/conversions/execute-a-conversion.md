@@ -19,7 +19,7 @@ To integrate custom conversion execution in the Conversion Extension, you will n
 
 #### Steps
 
-1. The user accepts a conversion quote (see [here][/building/conversions/generate-a-quote/] for steps prior to this).
+1. The user accepts a conversion quote. See [Generate a quote][/building/conversions/generate-a-quote/] for the steps prior to this.
 2. The Conversion Extension creates a `pending` transaction collection on the Rehive Platform.
 3. The conversion is transitioned to `pending` and the Conversion extension sends a `conversion.execute` webhook to the custom integration.
 4. The custom integration verifies the secret sent in the headers and indicates the webhooks has been received.
@@ -69,7 +69,7 @@ If you previously handled a `conversion.quote` webhook you should have already h
 
 If you are not handling `conversion.quote` events in your integration, then this will be the first time you receive conversion data. In this situation, you can make one or both of the below API calls to retrieve information:
 
-- Transaction details : [admin/transaction-collections/{identifier}/](https://api.rehive.com/?api=rehive-platform-admin-api#tag/transaction-collections/GET/3/admin/transaction-collections/{identifier}/)
+- Transaction details : [/admin/transaction-collections/{identifier}/](https://api.rehive.com/?api=rehive-platform-admin-api#tag/transaction-collections/GET/3/admin/transaction-collections/{identifier}/)
 - Conversion details : [/api/admin/conversions/{identifier}/](https://conversion.services.rehive.com/#tag/admin/operation/admin_conversions_retrieve)
 
 It is up to you to decide when/how to trigger the conversion execution. However, when you are ready, you simply have to `PATCH` the transaction collection with a `status` of `complete` or `failed` in order to trigger completion or failure of the associated conversion:
