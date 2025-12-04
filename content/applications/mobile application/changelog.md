@@ -9,6 +9,106 @@ Summary of additions and changes to the mobile application.
 
 ---
 
+{{< link-heading "h4" "2025-12-04 - 7.11.13" >}}
+
+**Improvements**
+- Enhanced lock screen functionality and user experience.
+
+---
+
+{{< link-heading "h4" "2025-12-04 - 7.11.12" >}}
+
+**Improvements**
+- Enhanced error handling for Bridge terms and conditions acceptance flow.
+
+---
+
+{{< link-heading "h4" "2025-12-03 - 7.11.11" >}}
+
+**Features**
+- Added deposit limits display to on-demand deposit screen for better transparency.
+
+---
+
+{{< link-heading "h4" "2025-11-28 - 7.11.10" >}}
+
+**Bug fixes**
+- Fixed bank account management issues in settings.
+
+---
+
+{{< link-heading "h4" "2025-11-27 - 7.11.9" >}}
+
+**Bug fixes**
+- Fixed fee pagination issue affecting transaction flows.
+- Cleaned up withdrawal form for improved usability.
+
+---
+
+{{< link-heading "h4" "2025-11-27 - 7.11.8" >}}
+
+**Improvements**
+- Enhanced PIX transaction details display for Brazilian payments.
+- Added translation keys for transaction subtypes and updated locale files.
+
+---
+
+{{< link-heading "h4" "2025-11-26 - 7.11.7" >}}
+
+**Bug fixes**
+- Fixed various PIX integration issues for improved Brazilian payment support.
+
+---
+
+{{< link-heading "h4" "2025-11-10 - 7.11.6" >}}
+
+**Improvements**
+- Updated on-demand deposit forms to only display verified bank accounts for improved security.
+
+---
+
+{{< link-heading "h4" "2025-11-06 - 7.11.5" >}}
+
+**Features**
+- Added custom terms handling with support for whitelabel Bridge terms and conditions.
+
+---
+
+{{< link-heading "h4" "2025-11-02 - 7.11.4" >}}
+
+**Maintenance**
+- Updated app service URL to latest version.
+
+---
+
+{{< link-heading "h4" "2025-10-31 - 7.11.3" >}}
+
+**Improvements**
+- Added paused handling and improved rejected status handling for Bridge KYC verification.
+
+---
+
+{{< link-heading "h4" "2025-10-30 - 7.11.2" >}}
+
+**Improvements**
+- Enhanced push notification device registration and settings page.
+
+---
+
+{{< link-heading "h4" "2025-10-29 - 7.11.1" >}}
+
+**Bug fixes**
+- Fixed notification settings screen functionality.
+
+---
+
+{{< link-heading "h4" "2025-10-28 - 7.11.0" >}}
+
+**Bug fixes**
+- Fixed intermittent issues with initial app load on first install.
+
+---
+
 {{< link-heading "h4" "2025-10-08 - 7.10.10" >}}
 
 **Features**

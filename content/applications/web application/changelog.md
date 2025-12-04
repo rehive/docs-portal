@@ -9,6 +9,97 @@ Summary of additions and changes to the web application.
 
 ---
 
+{{< link-heading "h4" "2025-12-04 - 3.5.13" >}}
+
+**Improvements**
+- Enhanced error handling for Bridge terms and conditions acceptance flow.
+
+---
+
+{{< link-heading "h4" "2025-12-03 - 3.5.12" >}}
+
+**Features**
+- Added deposit limits display to on-demand deposit forms for better transparency.
+
+---
+
+{{< link-heading "h4" "2025-11-28 - 3.5.11" >}}
+
+**Improvements**
+- Enhanced bank settings page for improved usability.
+
+---
+
+{{< link-heading "h4" "2025-11-28 - 3.5.10" >}}
+
+**Features**
+- Added announcement card improvements for better user communication.
+
+---
+
+{{< link-heading "h4" "2025-11-27 - 3.5.9" >}}
+
+**Maintenance**
+- General maintenance and stability improvements.
+
+---
+
+{{< link-heading "h4" "2025-11-27 - 3.5.8" >}}
+
+**Bug fixes**
+- Fixed a regression issue affecting the withdrawal form.
+
+---
+
+{{< link-heading "h4" "2025-11-27 - 3.5.7" >}}
+
+**Bug fixes**
+- Fixed language selection issue in locale settings.
+
+**Improvements**
+- Added missing translation keys for better localization coverage.
+- Updated PIX transaction details display for Brazilian payments.
+
+---
+
+{{< link-heading "h4" "2025-11-26 - 3.5.6" >}}
+
+**Improvements**
+- Updated translations template for improved localization support.
+
+---
+
+{{< link-heading "h4" "2025-11-26 - 3.5.5" >}}
+
+**Features**
+- Added PIX support for Brazilian instant payments, enabling fast and secure transactions for Brazilian users.
+
+---
+
+{{< link-heading "h4" "2025-11-20 - 3.5.4" >}}
+
+**Improvements**
+- Updated cryptocurrency deposit warnings to display native token codes for improved clarity.
+
+---
+
+{{< link-heading "h4" "2025-11-19 - 3.5.3" >}}
+
+**Improvements**
+- Improved subtype handling for Bridge and bank configurations.
+
+**Maintenance**
+- Code cleanup and optimization.
+
+---
+
+{{< link-heading "h4" "2025-11-18 - 3.5.2" >}}
+
+**Improvements**
+- Updated on-demand deposit forms to only display verified bank accounts for improved security.
+
+---
+
 {{< link-heading "h4" "2025-11-06 - 3.5.1" >}}
 
 **Improvements**
