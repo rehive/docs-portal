@@ -9,6 +9,25 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2026-01-23" >}}
+
+1. Added flags on user details to show clearly that a user is older than 60 (handled similar to under 18 flagging).
+2. Added group limits.
+    - Previously limits were only supported on the GroupTier and AccountAsset level, now they can be configured on the group instead of on every tier.
+3. Updated the way limits are handled: 
+    - Limits now function as a hierarchy cascading up : account currency limits, group tier limit, group limit (trying to match on subtype up the chain).
+4. Added an `age` condition on tier requirements. 
+    - You can now specify that a user must have a specific age in order to match on a tier.
+5. Added `age` filters on the user listing.
+6. Added `week_max` limit type to support limits on a "per week" basis.
+7. Added bank account document downloads.
+    - GET : `/3/user/bank-accounts/{id}/documents/`
+    - GET : `/3/user/bank-accounts/{id}/documents/{document_type}/`
+    - Currently supported document type: `proof_of_account`
+8. Added `pix_key` and `br_code` on bank account resources.
+    
+---
+
 {{< link-heading "h5" "2025-11-10" >}}
 
 1. Fixed a bug that resulted in a 500 error when editing legal term versions.
