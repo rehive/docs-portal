@@ -16,15 +16,17 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
     - Previously limits were only supported on the GroupTier and AccountAsset level, now they can be configured on the group instead of on every tier.
 3. Updated the way limits are handled: 
     - Limits now function as a hierarchy cascading up : account currency limits, group tier limit, group limit (trying to match on subtype up the chain).
-4. Added an `age` condition on tier requirements. 
+4. Added `begin` and `end` fields to all limits.
+    - You can use these fields to limit the timeframe that a limit is active for.
+5. Added an `age` condition on tier requirements. 
     - You can now specify that a user must have a specific age in order to match on a tier.
-5. Added `age` filters on the user listing.
-6. Added `week_max` limit type to support limits on a "per week" basis.
-7. Added bank account document downloads.
+6. Added `age` filters on the user listing.
+7. Added `week_max` limit type to support limits on a "per week" basis.
+8. Added bank account document downloads.
     - GET : `/3/user/bank-accounts/{id}/documents/`
     - GET : `/3/user/bank-accounts/{id}/documents/{document_type}/`
     - Currently supported document type: `proof_of_account`
-8. Added `pix_key` and `br_code` on bank account resources.
+9. Added `pix_key` and `br_code` on bank account resources.
     
 ---
 
