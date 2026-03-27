@@ -9,6 +9,29 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2026-01-27" >}}
+
+1. Improved error messages when deleting/updating/creating tokens via the admin token endpoints.
+2. Added `group`, `group__in`, and `group__section` filters on the admin token listing endpoints.
+3. Updated service deactivation to deactivate service users rather than archive them.
+4. Added support for labeling tokens when creating/updating them as a user or via the admin endpoints.
+5. Fixed a bug when parsing datetieme fields on limit begin/end dates.
+6. Updated the webhook `secret` to be a masked field in request logs.
+7. Added the token_key` to request log resources.
+    - This can be used to track which user session made an API request.
+8. Added `token_key` and `created` date filtering on the admin token listing endpoints.
+9. Improved residency and nationality handling to restrict authorization access on users who have a disallowed residency/nationality.
+    - In addition to the existing restriction on registering with a disallowed residency/nationality.
+    - This restruction does not apply to admin users.
+10. Added hidden account support in the platform.
+    - Hidden accounts are attached to users but are only visible to users with admin access. 
+    - These accounts can be used to handle oeprational flows that require the movement of funds to occur on users rather than admin accounts.
+11. Added a new `paused` verification status on bank accounts, wallet accounts, crypto accounts, addresses, and documents.
+12. Updated the `require_transaction_subtypes` company setting to be `true` by default.
+13. Added a `legal_name` field to the company resource.
+
+---
+
 {{< link-heading "h5" "2026-01-23" >}}
 
 1. Added flags on user details to show clearly that a user is older than 60 (handled similar to under 18 flagging).
