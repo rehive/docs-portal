@@ -17,7 +17,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 4. Added support for labeling tokens when creating/updating them as a user or via the admin endpoints.
 5. Fixed a bug when parsing datetieme fields on limit begin/end dates.
 6. Updated the webhook `secret` to be a masked field in request logs.
-7. Added the token_key` to request log resources.
+7. Added the `token_key` to request log resources.
     - This can be used to track which user session made an API request.
 8. Added `token_key` and `created` date filtering on the admin token listing endpoints.
 9. Improved residency and nationality handling to restrict authorization access on users who have a disallowed residency/nationality.
