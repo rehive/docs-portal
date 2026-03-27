@@ -9,7 +9,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
-{{< link-heading "h5" "2026-01-27" >}}
+{{< link-heading "h5" "2026-03-27" >}}
 
 1. Improved error messages when deleting/updating/creating tokens via the admin token endpoints.
 2. Added `group`, `group__in`, and `group__section` filters on the admin token listing endpoints.
