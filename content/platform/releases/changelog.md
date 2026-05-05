@@ -9,6 +9,23 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2026-05-05" >}}
+
+1. Added policies and related endpoints.
+    - Used to trigger conditional effects on users, accounts, transactions etc.
+2. Added policy logs and related endpoints.
+    - Store a log of hits on specific policies.
+3. Added alerts and related endpoints
+    - Used to log internal/external alerts and their associated actions for admin review.
+4. Improved performance on background task processing.
+5. Updated the `groups` field to be required if there is no default group specified on the company.
+6. Added `metadata` to limits and user/transaction messages.
+7. Fixed a bug that prevented setting the `primary` field on new mobile numbers.
+8. Added `icontains` filters to `first_name`, `middle_name`, and `last_name` fields.
+8. Tightened throttling limits on mobile/email create endpoints.
+
+---
+
 {{< link-heading "h5" "2026-03-27" >}}
 
 1. Improved error messages when deleting/updating/creating tokens via the admin token endpoints.
