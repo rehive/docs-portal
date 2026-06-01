@@ -121,7 +121,7 @@ curl https://api.rehive.com/3/auth/mfa/verify/ \
 The `token` must originate from one of the `authenticator_types` listed in the challenge response. And the `challenge` should be the ID returned on the challenge.
 
 <aside class="notice">
-When dealing with <code>ephemeral</code> challenges you will need to store the challenge ID after it is verified and then on the next request (to the resource that triggered the challenge) include it in an HTTP header <code>Verified-Challenge: {challenge_id}</code>. This will allow the user to access the resource once. All subsequent requests to the same resource will need to be multi-factored separately.
+When dealing with <code>ephemeral</code> challenges you will need to first verify the challenge and then retry the request with an additional HTTP header <code>Verified-Challenge: {challenge_id}</code>. Ensure that the retry's path, method, and body match the values used in the original request, otherwise a new challenge will be issued. After a the challenge is consumed (it can only be used once) subsequent requests may trigger additional challenges (depending on the durability of the associated authenticator-rule).
 </aside>
 
 Some authenticator types (for instance, the **sms** type) support token delivery. On login, when possible, the token will be delivered automatically. However, if a user needs to request re-delivery of a token, they can do so via the the **MFA deliver** endpoint:
