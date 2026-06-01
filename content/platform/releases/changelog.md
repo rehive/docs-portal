@@ -12,7 +12,7 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 {{< link-heading "h5" "2026-06-01" >}}
 
 1. Updated ephemeral MFA challenges to ensure that the consumption of a verified challenge must have indentical request details.
-2. Added wallet account wevhook events.
+2. Added wallet account webhook events.
 3. Added wallet account permissions.
 4. Updated the alert `actions` to be available on the alerts listing endpoint.
 5. Added a `creator` filter on the transaction listing endpoint.
@@ -20,10 +20,10 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 7. Added support for multi file documents with indiviudal labels and descriptions.
 8. Added new `device.create` and `mobile.create` policy event triggers.
 9. Improved the performance of policy and webhook event handling.
-10. Added support for integer paths in policy conditions (for instance `groups.0.name`)
+10. Added support for integer paths in policy conditions (for instance `groups.0.name`).
 11. Fixed a bug in timestamp conversion on alert creation.
 12. Added `enabled` field to webhooks and updated webhooks to get disabled if they record too many `50X` errors.
-13. Updated services webhook validation to prevent them from getting deleted by mistake.
+13. Updated service-created webhook validation to prevent accidental deletion.
 14. Added a `user_has_reused_ip_address` function to policy conditions.
 
 ---
