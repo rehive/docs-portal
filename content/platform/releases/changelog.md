@@ -9,6 +9,23 @@ Summary of additions and changes to the Rehive platform. Breaking changes or rem
 
 ---
 
+{{< link-heading "h5" "2026-06-18" >}}
+
+1. Added new fields to the user resource:
+    - `alias_name`
+    - `birth_country`
+    - `birth_place`
+    - `legal_name`
+    - `tax_number`
+    - `tax_residency`
+2. Improved performance on transaction creation endpoints. 
+    - Optimized fee/limits cache, improved database access, and increased server resources.
+3. Fixed a bug on user registration/create that resulted in the incorrect state getting sent on webhook events.
+4. Added new column selection (and labeling) on CSV export creation.
+5. Added new export templates resource available at `/3/admin/export-templates/`
+
+---
+
 {{< link-heading "h5" "2026-06-01" >}}
 
 1. Updated ephemeral MFA challenges to ensure that the consumption of a verified challenge must have indentical request details.
