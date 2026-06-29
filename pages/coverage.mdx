@@ -1,0 +1,30 @@
+# Coverage
+
+Coverage isn't a product — it's a view of the rail layer, with one source of
+truth: the **rails catalogue** (`GET /rails`). The marketing site and these docs
+render from the same catalogue, so coverage is never stale.
+
+## Move money
+
+| Method | Regions | Currencies | Direction |
+|---|---|---|---|
+| ACH | US | USD | In · Out |
+| Wire / Fedwire | US | USD | In · Out |
+| SEPA | EU | EUR | In · Out |
+| SWIFT | Global | USD · EUR | Out |
+| Stablecoin (on-chain) | Global | USDC · USDT | In · Out |
+| Cards | Select | USD | Out |
+
+```sh
+curl "https://api.rehive.com/v1/rails?currency=USD&direction=out" \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+## Verify customers
+
+KYC / KYB available via [Identity](/identity) in: United States, United Kingdom,
+European Union, South Africa, Nigeria, Kenya, Brazil, Mexico, Philippines — and
+more on request.
+
+> Bringing your own provider extends coverage. The live, account-scoped set is
+> always available from `/rails`.

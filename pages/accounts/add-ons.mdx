@@ -1,0 +1,27 @@
+# Add-ons
+
+Add-ons ride on an account — switch on what you need, priced per add-on. They're
+not separate products; they're capabilities of Accounts.
+
+## Monetize
+
+| Add-on | What it does |
+|---|---|
+| **Fees** | Charge per transaction, by attribute |
+| **Subscriptions** | Recurring plans & billing |
+| **Payment requests & invoicing** | Request-to-pay into an account |
+| **Commerce** | Sell products, run a marketplace or points store |
+
+## Engage
+
+| Add-on | What it does |
+|---|---|
+| **Rewards** | Loyalty & referral campaigns |
+| **Notifications** | Email, SMS & push |
+| **In-app support** | Messaging & notices |
+
+```sh
+curl https://api.rehive.com/v1/accounts/acc_3RtZ0/add-ons \
+  -H "Authorization: Bearer sk_test_..." \
+  -d enable="fees,notifications"
+```

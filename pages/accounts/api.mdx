@@ -1,0 +1,42 @@
+# Accounts — API reference
+
+> First-stab shapes — illustrative, not a frozen contract.
+
+## Accounts
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/accounts` | Open an account — requires `customer` and `mode` |
+| `GET` | `/accounts/{id}` | Retrieve an account (balances, limits, rails) |
+| `GET` | `/accounts` | List accounts (filter by `customer`, `mode`) |
+| `PATCH` | `/accounts/{id}` | Apply `overrides` |
+| `POST` | `/accounts/{id}/close` | Close an account |
+
+## Funding instruments
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/accounts/{id}/funding-instruments` | Provision a virtual account, address or card |
+| `GET` | `/accounts/{id}/funding-instruments` | List funding instruments |
+
+## Transfers & payouts
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/transfers` | Create a transfer (deposit · withdraw · send · receive · convert) |
+| `GET` | `/transfers/{id}` | Retrieve a transfer |
+| `POST` | `/payouts` | Create a batch payout |
+| `GET` | `/payouts/{id}` | Retrieve a payout (per-item status) |
+
+## Add-ons & events
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/accounts/{id}/add-ons` | Enable add-ons |
+| `POST` | `/webhooks` | Register a webhook endpoint |
+
+```
+account.created      account.closed
+transfer.created     transfer.completed     transfer.failed
+payout.completed
+```

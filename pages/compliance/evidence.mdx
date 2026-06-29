@@ -1,0 +1,20 @@
+# Evidence & reporting
+
+Because the program holds the record, every decision — a limit breach, a
+screening hit, a review outcome — is captured against its control and exportable.
+
+```json
+{
+  "control": "ongoing_sanctions_screening",
+  "status": "operating",
+  "evidence": [
+    { "kind": "system", "summary": "OFAC + PEP screened at onboarding and monthly" },
+    { "kind": "document", "ref": "doc_9x2", "label": "Vendor coverage report" }
+  ],
+  "as_of": "2026-06-26"
+}
+```
+
+- **Per-control evidence** — by kind: `system`, `attestation`, `document`, `third_party`.
+- **Point-in-time reports** — what a program looked like on a given date, for partners, auditors and regulators.
+- **Connectors** — when running on another stack, evidence is pulled from your own KYC, monitoring and transaction feed.

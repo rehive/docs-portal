@@ -1,0 +1,42 @@
+# Transfers & payouts
+
+A **transfer** is the single primitive for moving value. It has a `source` and a
+`destination`, each an account, a rail (on/off-ramp) or an external address —
+so deposit, withdraw, send, receive and convert are all transfers.
+
+```json
+{
+  "id": "txf_Vn2Kc",
+  "account": "acc_3RtZ0",
+  "direction": "debit",
+  "amount": "120.00",
+  "currency": "USD",
+  "destination": { "type": "address", "network": "stellar", "address": "GA5..." },
+  "rail": "stablecoin",
+  "status": "completed",
+  "compliance": { "limits": "passed", "screening": "passed" }
+}
+```
+
+## Send to anyone
+
+Send to a recipient by **email or phone**, even if they don't have an account
+yet — an unregistered recipient gets an [Identity](/identity) onboarding link.
+
+```sh
+  -d type=send -d amount=50.00 -d currency=USD \
+  -d "destination[type]=email" -d "destination[email]=sam@example.com"
+```
+
+## Payouts (mass send)
+
+A **payout** is a batch of outbound transfers from one funding account — one
+object, many recipients, one reconciliation.
+
+```sh
+curl https://api.rehive.com/v1/payouts \
+  -H "Authorization: Bearer sk_test_..." \
+  -d account=acc_Funding -d currency=USD \
+  -d "items[0][destination][account]=acc_a" -d "items[0][amount]=1000.00" \
+  -d "items[1][destination][email]=sam@example.com" -d "items[1][amount]=750.00"
+```

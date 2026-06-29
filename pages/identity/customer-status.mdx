@@ -1,0 +1,30 @@
+# Customer status
+
+One status to reason about per customer — derived and kept current across every
+provider, so you never stitch provider-specific states together yourself.
+
+```json
+{
+  "id": "cus_8Wq1x",
+  "status": "ready",
+  "verification": { "status": "verified", "level": "tier_2" },
+  "providers": {
+    "bridge": { "status": "approved" },
+    "hifi": { "status": "pending" }
+  },
+  "outstanding": []
+}
+```
+
+| Status | Meaning |
+|---|---|
+| `onboarding` | Collecting information |
+| `in_review` | Submitted, under review |
+| `ready` | Cleared to transact on the rails |
+| `action_required` | Something is missing or expired |
+
+**Routine collection** keeps status fresh — schedule re-verification, refreshed
+details and expiring-document checks, and customers move to `action_required`
+automatically when something lapses.
+
+Subscribe to `customer.status.updated` rather than polling.

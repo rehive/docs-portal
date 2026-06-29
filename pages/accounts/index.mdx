@@ -1,0 +1,21 @@
+# Accounts
+
+Programmable accounts: **hold balances and move money across rails** — without
+building a ledger. Fund by bank, card or chain; send, convert and pay out.
+
+## What's inside
+
+- **[Account modes](/accounts/modes)** — pick what the account is for; it's purpose-built, nothing to configure.
+- **[Funding instruments](/accounts/funding)** — virtual bank accounts, on-chain addresses and cards on an account.
+- **[Transfers & payouts](/accounts/transfers)** — one primitive for every direction, plus bulk payouts and send-to-anyone.
+- **[Assets & custody](/accounts/assets-custody)** — any asset (stablecoins or your own currency), any custody (custodial, self-custody, or held by you), ledger on or off.
+- **[Add-ons](/accounts/add-ons)** — monetize and engage: fees, subscriptions, commerce, rewards, notifications.
+
+## Where it sits
+
+Accounts is the **stateful layer above the rails**. Providers like Bridge, Hifi
+and Privy move and custody the money; Accounts holds the balance, runs the
+record, and gives you one integration regardless of provider. You can also run
+your own currency on the ledger with **no provider at all**.
+
+→ Start with the **[API reference](/accounts/api)** or the [Quickstart](/get-started/quickstart).

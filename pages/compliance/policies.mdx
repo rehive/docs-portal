@@ -1,0 +1,20 @@
+# Policy Center
+
+Adopt, sign, evidence and report on a Rehive-managed control baseline. Provenance
+stays clean between the baseline and anything you add on top.
+
+```json
+{
+  "id": "pol_BSA",
+  "name": "BSA / AML Program",
+  "version": "1.2.0",
+  "status": "adopted",
+  "signed_by": "cco@acme.com",
+  "controls": 42,
+  "evidence": { "required": 42, "provided": 38 }
+}
+```
+
+- **Baseline** — Rehive-owned, versioned. You can't edit it, only add on top.
+- **Controls** — each is `automated`, `configurable`, `hybrid`, `manual` or `third_party`, which drives how evidence is captured.
+- **Re-acknowledge on drift** — a new baseline version prompts re-adoption.

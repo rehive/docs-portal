@@ -1,0 +1,23 @@
+# Limits & controls
+
+Risk-side rules — distinct from [fees](/accounts/add-ons), which are commercial.
+Limits cap exposure; controls gate movements. Both evaluate by user attribute on
+the same engine.
+
+## Limits
+
+```json
+"limits": {
+  "send":    { "day": "10000.00", "month": "50000.00" },
+  "deposit": { "day": "25000.00" }
+}
+```
+
+A transfer that would breach a limit is rejected **before** it touches a rail,
+with a clear reason. Higher verification tiers raise limits automatically.
+
+## Controls
+
+Controls allow or disallow specific movements — block withdrawals for an
+unverified customer, disallow a destination network, require step-up for
+high-value sends. Controls are additive: they never silently loosen the baseline.

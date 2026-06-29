@@ -1,0 +1,30 @@
+# Identity — API reference
+
+> First-stab shapes — the point is the surface, not a frozen contract.
+
+## Customers
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/customers` | Create a customer |
+| `GET` | `/customers/{id}` | Retrieve a customer (incl. status) |
+| `GET` | `/customers` | List customers |
+| `PATCH` | `/customers/{id}` | Update details / metadata |
+
+## Onboarding & collection
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/customers/{id}/onboarding` | Start or resume hosted onboarding |
+| `GET` | `/customers/{id}/onboarding` | Onboarding status, collected vs outstanding |
+| `POST` | `/customers/{id}/requests` | Request a missing item over notifications / chat |
+| `POST` | `/customers/{id}/verification` | Submit or refresh KYC / KYB |
+
+## Events
+
+```
+customer.created
+customer.status.updated
+customer.verification.updated
+customer.onboarding.completed
+```

@@ -1,0 +1,54 @@
+# Quickstart
+
+A verified, funded customer in four calls — Identity and Accounts composed.
+
+```
+Base URL:  https://api.rehive.com/v1
+Auth:      Authorization: Bearer sk_test_...
+```
+
+## 1. Create a customer (Identity)
+
+```sh
+curl https://api.rehive.com/v1/customers \
+  -H "Authorization: Bearer sk_test_..." \
+  -d type=individual -d email="ada@example.com" -d name="Ada Lovelace"
+```
+
+## 2. Collect what the rails need (Identity)
+
+Start hosted onboarding to collect KYC and provider-required data (source of
+funds, purpose of account, …):
+
+```sh
+curl https://api.rehive.com/v1/customers/cus_8Wq1x/onboarding \
+  -H "Authorization: Bearer sk_test_..."
+# → { "url": "https://onboard.rehive.com/s/...", "status": "in_progress" }
+```
+
+## 3. Open an account (Accounts)
+
+Pick a [mode](/accounts/modes); the account is purpose-built — nothing to configure.
+
+```sh
+curl https://api.rehive.com/v1/accounts \
+  -H "Authorization: Bearer sk_test_..." \
+  -d customer=cus_8Wq1x -d mode=usd_account
+```
+
+## 4. Fund and send (Accounts)
+
+```sh
+# Money in — a transfer whose source is a rail
+curl https://api.rehive.com/v1/transfers \
+  -H "Authorization: Bearer sk_test_..." \
+  -d account=acc_3RtZ0 -d type=deposit -d amount=500.00 -d currency=USD -d rail=ach
+
+# Money out — compliance runs automatically before it settles
+curl https://api.rehive.com/v1/transfers \
+  -H "Authorization: Bearer sk_test_..." \
+  -d account=acc_3RtZ0 -d type=send -d amount=120.00 -d currency=USD \
+  -d "destination[type]=address" -d "destination[network]=stellar" -d "destination[address]=GA5..."
+```
+
+Add **[Compliance](/compliance)** for controls and audit-ready evidence on top.

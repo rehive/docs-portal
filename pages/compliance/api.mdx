@@ -1,0 +1,38 @@
+# Compliance — API reference
+
+> First-stab shapes — illustrative, not a frozen contract.
+
+## Policies
+
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/policies` | List baseline + adopted policies |
+| `POST` | `/policies/{id}/adopt` | Adopt & sign a policy version |
+| `GET` | `/policies/{id}/controls` | Controls and their evidence state |
+
+## Limits & controls
+
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/accounts/{id}/limits` | Effective limits for an account |
+| `POST` | `/controls` | Create a control (condition + effect) |
+
+## Monitoring
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/rules` | Create a monitoring rule |
+| `GET` | `/alerts` | List alerts |
+| `GET` | `/reviews` | List reviews / cases |
+
+## Reporting
+
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/reports/program?as_of=YYYY-MM-DD` | Point-in-time program evidence |
+
+```
+compliance.alert.created
+compliance.review.updated
+policy.drift.detected
+```

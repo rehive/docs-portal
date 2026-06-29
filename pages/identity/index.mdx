@@ -1,0 +1,26 @@
+# Identity
+
+Onboard customers and manage their status **before they hit a provider**.
+Identity is the layer you'd otherwise build by hand — it collects exactly what
+the rails require and hands it off in the shape they expect.
+
+## Why it exists
+
+Money-movement providers like Bridge expect rich data — **source of funds,
+purpose of account, occupation, expected activity** — but give you no API or UI
+to collect it. Identity is that collection-and-status layer, pre-built.
+
+## What's inside
+
+- **[Hosted onboarding & data collection](/identity/onboarding)** — branded flows that capture KYC and provider-required data, with the right fields and validation.
+- **[Customer status](/identity/customer-status)** — one status per customer, tracked across Bridge, Hifi and your other providers.
+- Notifications & chat to fill the gaps — request missing info without leaving the platform.
+- Routine collection — re-verification, refreshed details and expiring documents.
+
+## Use it alone, or compose it
+
+- **Standalone** — onboard and manage customer status for your own flow.
+- **+ [Accounts](/accounts)** — customers arrive ready to transact on the rails.
+- **+ [Compliance](/compliance)** — collected data and status feed your controls and evidence.
+
+→ Start with the **[API reference](/identity/api)**.

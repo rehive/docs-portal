@@ -1,0 +1,45 @@
+# Onboarding & data collection
+
+Hosted, branded flows that collect everything a customer needs to go live — KYC
+documents *and* the provider-required data the rails expect.
+
+## Provider-required data
+
+Beyond identity verification, providers require contextual data. Identity
+collects it with the right fields, validation and hand-off:
+
+- Source of funds
+- Purpose of account
+- Occupation / nature of business
+- Expected activity (volume, corridors)
+
+## Start onboarding
+
+```sh
+curl https://api.rehive.com/v1/customers/cus_8Wq1x/onboarding \
+  -H "Authorization: Bearer sk_test_..." \
+  -d requirements="kyc,source_of_funds,purpose"
+```
+
+```json
+{
+  "url": "https://onboard.rehive.com/s/abc123",
+  "status": "in_progress",
+  "collected": [],
+  "outstanding": ["kyc", "source_of_funds", "purpose"]
+}
+```
+
+Send the customer to `url`, or embed it. As items are completed the customer's
+[status](/identity/customer-status) advances.
+
+## Fill the gaps
+
+When something is missing, request it over built-in notifications or in-app
+chat — no external tooling:
+
+```sh
+curl https://api.rehive.com/v1/customers/cus_8Wq1x/requests \
+  -H "Authorization: Bearer sk_test_..." \
+  -d item="proof_of_address" -d channel="email"
+```

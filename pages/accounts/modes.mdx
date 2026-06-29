@@ -1,0 +1,42 @@
+# Account modes
+
+The one decision you make when you open an account is its **mode**. The mode
+makes the account purpose-built — the currencies it holds, the movements it
+allows, its default limits and the rails it uses are all decided for you. There
+is nothing to configure.
+
+| Mode | Holds | For |
+|---|---|---|
+| `wallet` | Multi-asset | Neobank & consumer wallet apps |
+| `usd_account` | USD | Global dollar accounts |
+| `payouts` | One funding currency | Payroll & disbursement |
+| `treasury` | Multi-currency | PSP & merchant settlement |
+
+```sh
+curl https://api.rehive.com/v1/accounts \
+  -H "Authorization: Bearer sk_test_..." \
+  -d customer=cus_8Wq1x -d mode=usd_account
+```
+
+```json
+{
+  "id": "acc_3RtZ0",
+  "customer": "cus_8Wq1x",
+  "mode": "usd_account",
+  "currencies": ["USD"],
+  "balances": [{ "currency": "USD", "available": "0.00", "total": "0.00" }],
+  "rails": ["ach", "wire", "sepa", "swift", "stablecoin"],
+  "status": "active"
+}
+```
+
+## Overrides
+
+Modes cover the common case. When you genuinely need to deviate — raise a limit,
+enable an extra rail — pass scoped, audited `overrides`. You change one decision,
+not a whole configuration.
+
+```sh
+  -d "overrides[limits][send][day]=25000.00" \
+  -d "overrides[rails][]=card"
+```

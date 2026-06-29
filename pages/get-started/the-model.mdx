@@ -1,0 +1,45 @@
+# The model
+
+The whole API is built from a small set of objects, all in plain product terms.
+
+```
+Customer
+└─ Account            opened in a mode — what the customer holds
+   ├─ Balance         the held value, per asset (available / total)
+   ├─ Transfer        one money movement, over a Rail
+   └─ Payout          a batch of outbound Transfers
+
+Funding instrument    a way to move money in or out of an Account
+Rail                  the route a Transfer takes (method × region × currency)
+Event                 emitted for every state change
+```
+
+A **Customer** has one or more **Accounts**. An **Account** is opened in a mode
+and holds one or more **Balances** (one per asset), along with its **Transfers**
+and **Payouts**. Each Transfer moves over a **Rail**; a **Payout** batches
+outbound Transfers. **Events** fire on every change.
+
+| Object | What it is | Product |
+|---|---|---|
+| **Customer** | A person or business, with onboarding state and verification. | Identity |
+| **Account** | What the customer holds — a container opened in a **mode**, with one or more Balances and funding instruments. | Accounts |
+| **Balance** | The held value in a single asset within an account (`available` / `total`). ≈ a "wallet" elsewhere. | Accounts |
+| **Funding instrument** | A way to move money in or out of an account: a virtual bank account, an on-chain address, or a card. | Accounts |
+| **Transfer** | The single primitive for moving value — deposit, withdraw, send, receive, convert. | Accounts |
+| **Payout** | A batch of outbound transfers from one account. | Accounts |
+| **Rail** | A money-movement route (method × region × currency). Read-only catalogue. | Accounts / Coverage |
+| **Policy / Control** | A rule that governs what an account or customer may do. | Compliance |
+| **Event** | A state change, delivered to your webhooks. | All |
+
+## A note on terminology
+
+If you've integrated other providers, the word **"account"** can mean different
+things. In Rehive:
+
+- **Account** = the *container* you open in a mode.
+- **Balance** = the *held value* inside it, per asset (what some providers call a "wallet").
+- A **virtual bank account** is a **funding instrument** *on* an account — not a
+  top-level object.
+
+See [Terminology](/accounts/funding#terminology) on the Funding page for the
+full mapping.
