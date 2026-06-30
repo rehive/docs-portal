@@ -1,20 +1,27 @@
 # Advanced
 
-> The product APIs (Identity · Accounts · Compliance) are the front door, and
+> The product APIs (Identity · Money · Compliance) are the front door, and
 > cover the vast majority of programs. This section is the **escape hatch**, not
 > the default path.
 
 ## Platform API
 
 Underneath, Rehive runs a configurable multi-asset platform. The product APIs
-are an opinionated façade over it — they pre-decide the ledger configuration so
+are an opinionated façade over it: they pre-decide the ledger configuration so
 you never touch account definitions, subtypes or currency setup.
 
 A small number of advanced and existing integrations need the raw primitives
 directly. That access is **gated** and available by arrangement.
 
-- If a mode plus [`overrides`](/accounts/modes#overrides) covers your case, stay on the product API.
+## Modes (internal)
+
+Wallets used to be opened in a "mode": a purpose-built preset deciding
+currencies, movements, limits and rails. Modes still exist here as an internal
+platform mechanism, but they are **not a customer concept** anymore. Customers
+never pick a mode, and the product APIs decide the preset for you.
+
+- If a mode plus scoped `overrides` covers your case, stay on the product API.
 - If you genuinely need the low-level platform, talk to us about Platform API access.
 
-This keeps the opinionation enforceable for everyone else — and the
+This keeps the opinionation enforceable for everyone else, and the
 configuration surface out of the default developer experience.

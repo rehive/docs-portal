@@ -1,0 +1,25 @@
+# Money
+
+Hold value and move it across rails, without building a ledger. Money is three
+things working together: **Wallets** hold, **Payments** move, and
+**Orchestration** routes across providers.
+
+A **Wallet** is a balance the customer owns, multi-asset, that **Rehive mirrors
+on its ledger**. We record the balance, we never hold the funds. Rehive is not a
+bank, custodian or MSB. Underneath the Wallet sits **custody** held by Bridge
+(custodial USDC under their license), Privy (end-user self-custody) or your own.
+
+## The default solution flow
+
+Virtual bank account → **Wallet** (Rehive mirrors the balance) → **Custody**
+(Bridge or Privy), with Bridge converting USD↔USDC. Money lands in a virtual
+bank account, the Wallet reflects it, and custody holds the underlying value.
+
+## What's inside
+
+- **[Wallets](/money/wallets)**: the Wallet object. A mirrored balance, any asset, any custody, ledger optional. Works standalone.
+- **[Payments](/money/payments)**: money in, out and between. Virtual bank accounts, on-chain addresses, cards, off-ramps, transfers, payouts and conversions.
+- **[Orchestration](/money/orchestration)**: route across custody and payment providers for access, cost and failover.
+- **[Add-ons](/money/add-ons)**: Commercial and Engage. Fees, subscriptions, commerce, rewards, notifications, support.
+
+→ Start with the **[API reference](/money/api)** or the [Quickstart](/get-started/quickstart).

@@ -1,0 +1,45 @@
+# Wallets
+
+A **Wallet** is a balance the customer owns. It is multi-asset, and **Rehive
+mirrors it on its ledger**: we record the balance, the underlying value is held
+in custody. Rehive is the record, never the custodian.
+
+A Wallet flexes on three axes, which is why it works for everything from a
+consumer wallet to an enterprise running its own currency.
+
+## Any asset
+
+Use **stablecoins** through our providers, or run your **own currency** (local
+fiat, points or tokens) on the multi-asset ledger.
+
+## Any custody
+
+Underneath every Wallet sits custody. The Wallet is the mirrored balance. The
+custody layer is where the value is actually held.
+
+| Custody | Who holds value | Powered by |
+|---|---|---|
+| **Custodial** | Held for your users, USDC under their license | Bridge |
+| **Self-custody** | The end user holds their keys | Privy |
+| **Your own** | You hold the value; Rehive is the record | your own treasury |
+
+> "Self-custody" (the user's keys) is distinct from "self-operated"
+> infrastructure. We avoid the term "self-hosted custody" because, in regulatory
+> language, a *self-hosted wallet* already means a user-controlled one.
+
+## Ledger optional
+
+- **Held**: track balances and transactions on the ledger.
+- **Endpoints-only (passthrough)**: provision [payment](/money/payments) endpoints
+  (virtual accounts, addresses) with **no balance held**. Money lands and you
+  sweep or forward it.
+
+```sh
+  -d asset=USDC -d ledger=off   # endpoints-only passthrough
+```
+
+## Standalone
+
+A Wallet is a standalone-capable product. A self-custody wallet with no
+[Payments](/money/payments) and no [Identity](/identity) is a valid bare
+product: just a balance the customer owns, held in their own custody.

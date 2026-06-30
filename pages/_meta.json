@@ -2,7 +2,7 @@
   "index": { "title": "Introduction", "type": "page", "display": "hidden" },
   "get-started": { "title": "Get started", "type": "page" },
   "identity": { "title": "Identity", "type": "page" },
-  "accounts": { "title": "Accounts", "type": "page" },
+  "money": { "title": "Money", "type": "page" },
   "compliance": { "title": "Compliance", "type": "page" },
   "coverage": { "title": "Coverage", "type": "page" },
   "advanced": { "title": "Advanced", "type": "page" }

@@ -1,11 +1,11 @@
 # Rehive Docs
 
 > **First-stab prototype.** This documentation maps the new product structure
-> (Identity · Accounts · Compliance). The APIs shown are a product-design
+> (Identity · Money · Compliance). The APIs shown are a product-design
 > proposal, not a shipped contract.
 
-Rehive is the **operating layer for stablecoin finance** — the compliance,
-accounts and onboarding a regulated program runs on, above any money-movement
+Rehive is the **operating layer for stablecoin finance**: the compliance,
+money and onboarding a regulated program runs on, above any money-movement
 provider.
 
 You can run the whole platform, or adopt one product on its own.
@@ -14,27 +14,27 @@ You can run the whole platform, or adopt one product on its own.
 
 | Product | What it does | Start here |
 |---|---|---|
-| **[Identity](/identity)** | Onboard customers and manage their status before they hit the rails — hosted onboarding, provider-required data, status across providers. | [Identity overview](/identity) |
-| **[Accounts](/accounts)** | Programmable accounts: hold balances, fund, transfer and pay out across rails — any asset, any custody. | [Accounts overview](/accounts) |
-| **[Compliance](/compliance)** | Policies, limits, controls, monitoring and audit-ready evidence — on any ledger. | [Compliance overview](/compliance) |
+| **[Identity](/identity)** | Onboard customers and manage their status before they hit the rails: hosted onboarding, provider-required data, status across providers. | [Identity overview](/identity) |
+| **[Money](/money)** | Wallets, Payments and Orchestration. Hold a mirrored balance, move money in/out/between across rails, route across providers. Any asset, any custody. | [Money overview](/money) |
+| **[Compliance](/compliance)** | Policies, limits, controls, monitoring and audit-ready evidence, on any ledger. | [Compliance overview](/compliance) |
 
 Each product is the same shape: **our opinionated layer over a commodity
-provider layer.** They compose — Identity → Accounts → Compliance — but each is
+provider layer.** They compose, Identity then Money then Compliance, but each is
 adoptable on its own.
 
 ## How the docs are organised
 
-- **[Get started](/get-started)** — the model, authentication and a five-minute quickstart.
-- **Identity · Accounts · Compliance** — one section per product: overview, capabilities, API reference.
-- **[Coverage](/coverage)** — the rails, regions and methods we support.
-- **[Advanced](/advanced)** — the low-level platform API, for teams that need it.
+- **[Get started](/get-started)**: the model, authentication and a five-minute quickstart.
+- **Identity · Money · Compliance**: one section per product, with overview, capabilities and API reference.
+- **[Coverage](/coverage)**: the rails, regions and methods we support.
+- **[Advanced](/advanced)**: the low-level platform API, for teams that need it.
 
 ## Principles
 
-- **Opinionated, in your terms.** You work with *customers*, *accounts*,
-  *modes*, *transfers* — never ledger internals. There are no account
-  definitions, subtypes or currency setup to configure.
+- **Opinionated, in your terms.** You work with *customers*, *wallets* and
+  *payments*, never ledger internals. There's no currency setup or ledger
+  configuration to manage.
 - **Composable.** Adopt one product, or all three. Bring your own identity,
   ledger or rails on the seams.
-- **One API surface.** The product APIs are the front door; the raw platform
+- **One API surface.** The product APIs are the front door. The raw platform
   primitives are gated behind [Advanced](/advanced).

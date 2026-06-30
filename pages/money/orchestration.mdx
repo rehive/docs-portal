@@ -1,0 +1,31 @@
+# Orchestration
+
+Orchestration routes across providers so you integrate once and Rehive picks the
+right one. It spans **custody providers** (Bridge, Privy, your own) and **payment
+providers** (the rails behind deposits, off-ramps and on-chain sends). KYC
+providers (SumSub, Sardine) are orchestrated the same way under
+[Identity](/identity).
+
+It optimises three things:
+
+- **Access**: reach a provider, rail or region you aren't directly integrated with.
+- **Cost**: route a given movement to the cheapest viable provider.
+- **Failover**: when one provider is down or declines, fall back to another automatically.
+
+## The default solution flow
+
+Virtual bank account → **Wallet** (Rehive mirrors the balance) → **Custody**
+(Bridge or Privy), with Bridge converting USD↔USDC. Orchestration is what wires
+that flow together: it provisions the funding method, mirrors the balance on the
+Wallet, and hands the underlying value to custody.
+
+## Pairs with Coverage
+
+Orchestration is the routing engine. **[Coverage](/coverage)** is the view of
+what's available: the rails, regions and methods in scope right now. Together
+they answer "what can I do, and who runs it" without you tracking providers
+yourself.
+
+> Orchestration is a cross-cutting capability under both Money and Identity. It
+> is not sold standalone. It only makes sense paired with the products it routes
+> for.

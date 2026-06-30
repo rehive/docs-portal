@@ -1,15 +1,15 @@
 # Add-ons
 
-Add-ons ride on an account — switch on what you need, priced per add-on. They're
-not separate products; they're capabilities of Accounts.
+Add-ons ride on a Wallet. Switch on what you need, priced per add-on. They're
+not separate products; they're capabilities of Money.
 
-## Monetize
+## Commercial
 
 | Add-on | What it does |
 |---|---|
 | **Fees** | Charge per transaction, by attribute |
 | **Subscriptions** | Recurring plans & billing |
-| **Payment requests & invoicing** | Request-to-pay into an account |
+| **Payment requests & invoicing** | Request-to-pay into a Wallet |
 | **Commerce** | Sell products, run a marketplace or points store |
 
 ## Engage
@@ -21,7 +21,7 @@ not separate products; they're capabilities of Accounts.
 | **In-app support** | Messaging & notices |
 
 ```sh
-curl https://api.rehive.com/v1/accounts/acc_3RtZ0/add-ons \
+curl https://api.rehive.com/v1/wallets/wlt_3RtZ0/add-ons \
   -H "Authorization: Bearer sk_test_..." \
   -d enable="fees,notifications"
 ```

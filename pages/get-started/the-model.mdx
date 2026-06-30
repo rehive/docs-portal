@@ -4,31 +4,33 @@ The whole API is built from a small set of objects, all in plain product terms.
 
 ```
 Customer
-└─ Account            opened in a mode — what the customer holds
+└─ Wallet             a balance the customer owns, mirrored on Rehive's ledger
    ├─ Balance         the held value, per asset (available / total)
-   ├─ Transfer        one money movement, over a Rail
-   └─ Payout          a batch of outbound Transfers
-
-Funding instrument    a way to move money in or out of an Account
-Rail                  the route a Transfer takes (method × region × currency)
+   └─ custody         underneath: Bridge, Privy or your own holds the value
+Payment               one money movement, over a Rail (subsumes Transfer / Payout)
+Rail                  the route a Payment takes (method × region × currency)
 Event                 emitted for every state change
+
+Orchestration         cross-cutting: routes Payments and custody across providers
+Policy / Control      Compliance: rules that govern what a Wallet or Customer may do
 ```
 
-A **Customer** has one or more **Accounts**. An **Account** is opened in a mode
-and holds one or more **Balances** (one per asset), along with its **Transfers**
-and **Payouts**. Each Transfer moves over a **Rail**; a **Payout** batches
-outbound Transfers. **Events** fire on every change.
+A **Customer** has one or more **Wallets**. A **Wallet** is a balance the
+customer owns, multi-asset, that Rehive mirrors on its ledger. The value itself
+sits in **custody** underneath. A **Payment** is the single primitive for moving
+value, over a **Rail**. **Orchestration** routes payments and custody across
+providers. **Events** fire on every change.
 
 | Object | What it is | Product |
 |---|---|---|
 | **Customer** | A person or business, with onboarding state and verification. | Identity |
-| **Account** | What the customer holds — a container opened in a **mode**, with one or more Balances and funding instruments. | Accounts |
-| **Balance** | The held value in a single asset within an account (`available` / `total`). ≈ a "wallet" elsewhere. | Accounts |
-| **Funding instrument** | A way to move money in or out of an account: a virtual bank account, an on-chain address, or a card. | Accounts |
-| **Transfer** | The single primitive for moving value — deposit, withdraw, send, receive, convert. | Accounts |
-| **Payout** | A batch of outbound transfers from one account. | Accounts |
-| **Rail** | A money-movement route (method × region × currency). Read-only catalogue. | Accounts / Coverage |
-| **Policy / Control** | A rule that governs what an account or customer may do. | Compliance |
+| **Wallet** | A balance the customer owns. Multi-asset, mirrored on Rehive's ledger, with custody underneath. | Money |
+| **Balance** | The held value in a single asset within a Wallet (`available` / `total`). | Money |
+| **Payment** | The single primitive for moving value: deposit, withdraw, send, receive, convert. Transfer and Payout are sub-types. | Money |
+| **Payout** | A batch of outbound payments from one Wallet (a Payment sub-type). | Money |
+| **Rail** | A money-movement route (method × region × currency). Read-only catalogue. | Money / Coverage |
+| **Orchestration** | Routes payments, custody and KYC across providers for access, cost and failover. | Identity / Money |
+| **Policy / Control** | A rule that governs what a Wallet or customer may do. | Compliance |
 | **Event** | A state change, delivered to your webhooks. | All |
 
 ## A note on terminology
@@ -36,10 +38,11 @@ outbound Transfers. **Events** fire on every change.
 If you've integrated other providers, the word **"account"** can mean different
 things. In Rehive:
 
-- **Account** = the *container* you open in a mode.
-- **Balance** = the *held value* inside it, per asset (what some providers call a "wallet").
-- A **virtual bank account** is a **funding instrument** *on* an account — not a
-  top-level object.
-
-See [Terminology](/accounts/funding#terminology) on the Funding page for the
-full mapping.
+- **Wallet** = a balance the customer owns. Rehive *mirrors* it on its ledger:
+  Rehive records the balance, it never holds the funds. (What we previously
+  called an "Account".)
+- **Custody** sits *underneath* a Wallet: Bridge (custodial USDC), Privy
+  (end-user self-custody) or your own. The custody layer is where value is
+  actually held. Don't call it a "wallet" at our level.
+- A **virtual bank account** is a **funding method** for deposits on a Wallet,
+  not a top-level object. See [Payments](/money/payments).

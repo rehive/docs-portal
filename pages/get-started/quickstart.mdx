@@ -1,6 +1,6 @@
 # Quickstart
 
-A verified, funded customer in four calls — Identity and Accounts composed.
+A verified, funded customer in four calls, Identity and Money composed.
 
 ```
 Base URL:  https://api.rehive.com/v1
@@ -26,28 +26,29 @@ curl https://api.rehive.com/v1/customers/cus_8Wq1x/onboarding \
 # → { "url": "https://onboard.rehive.com/s/...", "status": "in_progress" }
 ```
 
-## 3. Open an account (Accounts)
+## 3. Open a Wallet (Money)
 
-Pick a [mode](/accounts/modes); the account is purpose-built — nothing to configure.
+Open a Wallet for the customer. Rehive mirrors the balance; custody (Bridge or
+Privy) sits underneath.
 
 ```sh
-curl https://api.rehive.com/v1/accounts \
+curl https://api.rehive.com/v1/wallets \
   -H "Authorization: Bearer sk_test_..." \
-  -d customer=cus_8Wq1x -d mode=usd_account
+  -d customer=cus_8Wq1x -d currency=USD
 ```
 
-## 4. Fund and send (Accounts)
+## 4. Fund and send (Money)
 
 ```sh
-# Money in — a transfer whose source is a rail
-curl https://api.rehive.com/v1/transfers \
+# Money in: a payment whose source is a rail
+curl https://api.rehive.com/v1/payments \
   -H "Authorization: Bearer sk_test_..." \
-  -d account=acc_3RtZ0 -d type=deposit -d amount=500.00 -d currency=USD -d rail=ach
+  -d wallet=wlt_3RtZ0 -d type=deposit -d amount=500.00 -d currency=USD -d rail=ach
 
-# Money out — compliance runs automatically before it settles
-curl https://api.rehive.com/v1/transfers \
+# Money out: compliance runs automatically before it settles
+curl https://api.rehive.com/v1/payments \
   -H "Authorization: Bearer sk_test_..." \
-  -d account=acc_3RtZ0 -d type=send -d amount=120.00 -d currency=USD \
+  -d wallet=wlt_3RtZ0 -d type=send -d amount=120.00 -d currency=USD \
   -d "destination[type]=address" -d "destination[network]=stellar" -d "destination[address]=GA5..."
 ```
 

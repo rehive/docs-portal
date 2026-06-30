@@ -1,0 +1,42 @@
+# Money — API reference
+
+> First-stab shapes, illustrative, not a frozen contract.
+
+## Wallets
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/wallets` | Open a Wallet, requires `customer` |
+| `GET` | `/wallets/{id}` | Retrieve a Wallet (balances, limits, custody) |
+| `GET` | `/wallets` | List Wallets (filter by `customer`) |
+| `PATCH` | `/wallets/{id}` | Update a Wallet (limits, rails) |
+| `POST` | `/wallets/{id}/close` | Close a Wallet |
+
+## Payment methods
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/wallets/{id}/methods` | Provision a virtual account, address or card |
+| `GET` | `/wallets/{id}/methods` | List payment methods |
+
+## Payments & payouts
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/payments` | Create a payment (deposit · withdraw · send · receive · convert) |
+| `GET` | `/payments/{id}` | Retrieve a payment |
+| `POST` | `/payouts` | Create a batch payout |
+| `GET` | `/payouts/{id}` | Retrieve a payout (per-item status) |
+
+## Add-ons & events
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/wallets/{id}/add-ons` | Enable add-ons |
+| `POST` | `/webhooks` | Register a webhook endpoint |
+
+```
+wallet.created       wallet.closed
+payment.created      payment.completed      payment.failed
+payout.completed
+```

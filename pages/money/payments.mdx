@@ -1,0 +1,85 @@
+# Payments
+
+Payments move money in, out and between Wallets. One primitive covers every
+direction: a payment has a `source` and a `destination`, each a Wallet, a rail
+(on/off-ramp) or an external address. So deposit, withdraw, send, receive and
+convert are all payments.
+
+```json
+{
+  "id": "pay_Vn2Kc",
+  "wallet": "wlt_3RtZ0",
+  "direction": "debit",
+  "amount": "120.00",
+  "currency": "USD",
+  "destination": { "type": "address", "network": "stellar", "address": "GA5..." },
+  "rail": "stablecoin",
+  "status": "completed",
+  "compliance": { "limits": "passed", "screening": "passed" }
+}
+```
+
+## Money in
+
+Fund a Wallet through a **virtual bank account** (a funding method for deposits,
+provided by Bridge), an on-chain **address**, or a **card**. These attach to a
+Wallet. You don't manage them as separate objects.
+
+```sh
+curl https://api.rehive.com/v1/wallets/wlt_3RtZ0/methods \
+  -H "Authorization: Bearer sk_test_..." \
+  -d type=virtual_account -d currency=USD
+```
+
+```json
+{
+  "id": "mtd_2Kc9",
+  "type": "virtual_account",
+  "currency": "USD",
+  "details": { "account_number": "•••• 8841", "routing_number": "•••• 0021", "rail": "ach" },
+  "status": "active"
+}
+```
+
+You can also provision endpoints **without a balance**. See ledger-optional
+passthrough in [Wallets](/money/wallets#ledger-optional).
+
+## Money out
+
+Withdraw through an **off-ramp**: a virtual bank account payout, an on-chain
+send, or a card. The same payment primitive, with the rail on the destination
+side.
+
+## Money between
+
+- **Transfers**: move value between Wallets, or to an external address.
+- **Payouts (mass send)**: a batch of outbound payments from one funding Wallet. One object, many recipients, one reconciliation.
+- **Conversions**: swap one asset for another within a Wallet.
+- **Send to anyone**: send by email or phone, even if the recipient has no Wallet yet.
+
+### Send to anyone
+
+Send to a recipient by **email or phone**, even if they don't have a Wallet
+yet. An unregistered recipient gets an [Identity](/identity) onboarding link.
+
+```sh
+  -d type=send -d amount=50.00 -d currency=USD \
+  -d "destination[type]=email" -d "destination[email]=sam@example.com"
+```
+
+### Payouts (mass send)
+
+```sh
+curl https://api.rehive.com/v1/payouts \
+  -H "Authorization: Bearer sk_test_..." \
+  -d wallet=wlt_Funding -d currency=USD \
+  -d "items[0][destination][wallet]=wlt_a" -d "items[0][amount]=1000.00" \
+  -d "items[1][destination][email]=sam@example.com" -d "items[1][amount]=750.00"
+```
+
+## Rails
+
+Every payment runs over a **rail**: a method × region × currency route (ACH,
+wire, SEPA, SWIFT, stablecoin, cards). [Orchestration](/money/orchestration)
+picks the rail across providers for access, cost and failover. The live set is
+in the [Coverage](/coverage) catalogue.
