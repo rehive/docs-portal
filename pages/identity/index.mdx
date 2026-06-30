@@ -1,14 +1,17 @@
 # Identity
 
 Onboard customers and manage their status **before they hit a provider**.
-Identity is the layer you'd otherwise build by hand — it collects exactly what
+Identity is the layer you'd otherwise build by hand. It collects exactly what
 the rails require and hands it off in the shape they expect.
 
 ## Why it exists
 
-Money-movement providers like Bridge expect rich data — **source of funds,
-purpose of account, occupation, expected activity** — but give you no API or UI
-to collect it. Identity is that collection-and-status layer, pre-built.
+Money-movement providers like Bridge expect rich data: **source of funds,
+purpose of account, occupation, expected activity**. A single provider gives you
+an API and a UI for it. But the moment you add a second provider, which most
+programs need, it gets messy: different fields, different states, different
+dashboards. Identity is the unified collection-and-status layer across providers,
+pre-built.
 
 ## What's inside
 

@@ -52,8 +52,8 @@ side.
 
 ## Money between
 
-- **Transfers**: move value between Wallets, or to an external address.
-- **Payouts (mass send)**: a batch of outbound payments from one funding Wallet. One object, many recipients, one reconciliation.
+- **Transfer**: a payment between Wallets, or to an external address.
+- **Bulk payout (mass send)**: one payment to many recipients, with one reconciliation. Not a separate object, just a payment with many destinations.
 - **Conversions**: swap one asset for another within a Wallet.
 - **Send to anyone**: send by email or phone, even if the recipient has no Wallet yet.
 
@@ -67,14 +67,17 @@ yet. An unregistered recipient gets an [Identity](/identity) onboarding link.
   -d "destination[type]=email" -d "destination[email]=sam@example.com"
 ```
 
-### Payouts (mass send)
+### Bulk payout (mass send)
+
+A bulk payout is one payment with many destinations (`type: payout`), not a
+separate object.
 
 ```sh
-curl https://api.rehive.com/v1/payouts \
+curl https://api.rehive.com/v1/payments \
   -H "Authorization: Bearer sk_test_..." \
-  -d wallet=wlt_Funding -d currency=USD \
-  -d "items[0][destination][wallet]=wlt_a" -d "items[0][amount]=1000.00" \
-  -d "items[1][destination][email]=sam@example.com" -d "items[1][amount]=750.00"
+  -d type=payout -d wallet=wlt_Funding -d currency=USD \
+  -d "destinations[0][wallet]=wlt_a" -d "destinations[0][amount]=1000.00" \
+  -d "destinations[1][email]=sam@example.com" -d "destinations[1][amount]=750.00"
 ```
 
 ## Rails

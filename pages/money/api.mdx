@@ -19,14 +19,15 @@
 | `POST` | `/wallets/{id}/methods` | Provision a virtual account, address or card |
 | `GET` | `/wallets/{id}/methods` | List payment methods |
 
-## Payments & payouts
+## Payments
 
 | Method | Path | Description |
 |---|---|---|
-| `POST` | `/payments` | Create a payment (deposit · withdraw · send · receive · convert) |
+| `POST` | `/payments` | Create a payment (deposit · withdraw · send · transfer · pay out · convert) |
 | `GET` | `/payments/{id}` | Retrieve a payment |
-| `POST` | `/payouts` | Create a batch payout |
-| `GET` | `/payouts/{id}` | Retrieve a payout (per-item status) |
+
+A bulk payout is a payment with many `destinations` (`type: payout`), not a
+separate object or endpoint.
 
 ## Add-ons & events
 
@@ -38,5 +39,4 @@
 ```
 wallet.created       wallet.closed
 payment.created      payment.completed      payment.failed
-payout.completed
 ```

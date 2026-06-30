@@ -7,7 +7,7 @@ Customer
 └─ Wallet             a balance the customer owns, mirrored on Rehive's ledger
    ├─ Balance         the held value, per asset (available / total)
    └─ custody         underneath: Bridge, Privy or your own holds the value
-Payment               one money movement, over a Rail (subsumes Transfer / Payout)
+Payment               one money movement, over a Rail (in, out or between)
 Rail                  the route a Payment takes (method × region × currency)
 Event                 emitted for every state change
 
@@ -26,8 +26,7 @@ providers. **Events** fire on every change.
 | **Customer** | A person or business, with onboarding state and verification. | Identity |
 | **Wallet** | A balance the customer owns. Multi-asset, mirrored on Rehive's ledger, with custody underneath. | Money |
 | **Balance** | The held value in a single asset within a Wallet (`available` / `total`). | Money |
-| **Payment** | The single primitive for moving value: deposit, withdraw, send, receive, convert. Transfer and Payout are sub-types. | Money |
-| **Payout** | A batch of outbound payments from one Wallet (a Payment sub-type). | Money |
+| **Payment** | The single primitive for moving value. Deposit, withdraw, send, transfer, pay out and convert are all Payments, distinguished by source and destination. A bulk payout is one Payment to many destinations. | Money |
 | **Rail** | A money-movement route (method × region × currency). Read-only catalogue. | Money / Coverage |
 | **Orchestration** | Routes payments, custody and KYC across providers for access, cost and failover. | Identity / Money |
 | **Policy / Control** | A rule that governs what a Wallet or customer may do. | Compliance |

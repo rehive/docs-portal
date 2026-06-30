@@ -1,0 +1,60 @@
+# Platform
+
+The full solution. Identity, Money and Compliance, pre-integrated and surfaced in
+your branded apps, with orchestration across providers underneath. Run the whole
+program on Rehive, or adopt one product and grow into the rest.
+
+## The stack
+
+```
+Your branded apps        web · mobile · admin · merchant   (or your own, via API)
+─────────────────────────────────────────────────────────
+Rehive operating layer   Identity · Money · Compliance
+  Orchestration          one integration, every provider
+─────────────────────────────────────────────────────────
+Providers (the rails)    Bridge · Privy · Hifi · SumSub · Sardine
+```
+
+You build on the operating layer. Rehive runs the program; providers move and
+custody the money underneath.
+
+## How it all works together
+
+One customer journey, end to end:
+
+1. **Onboard with Identity.** The customer registers (built-in Auth). Identity
+   collects exactly what the rails require and tracks status across providers, so
+   they are cleared before they transact.
+2. **Hold and move with Money.** A Wallet holds the balance (Rehive mirrors it;
+   custody sits underneath). Payments move value in, out and between, over the
+   right rail.
+3. **Controlled by Compliance.** Every payment passes limits, screening and
+   monitoring. Evidence is recorded per control for audits and provider reviews.
+4. **Orchestrated underneath.** Orchestration routes across custody, payment and
+   KYC providers for access, cost and failover. [Coverage](/coverage) shows what
+   is live where.
+5. **Surfaced in your apps.** It all shows up in your branded web, mobile, admin
+   and merchant apps, or your own front end via the API.
+
+### A payment, end to end
+
+```
+Customer deposits USD
+   → Identity        cleared for this rail
+   → Money           a virtual account funds the Wallet; Rehive mirrors the balance
+   → Compliance      limits and screening pass; evidence recorded
+   → Orchestration   Bridge converts USD to USDC; best rail chosen
+   → Apps            balance and receipt shown; customer notified
+```
+
+A blocked payment stops at Compliance: the Wallet shows it held for review and the
+case lands in your admin app. Nothing settles until a control clears it.
+
+## Adopt one, or all
+
+Each product stands on its own, so you can start with the one you need and compose
+the rest when you are ready. A self-custody Wallet with no Payments or Identity is
+a valid starting point; so is Compliance on a ledger you already run. The value
+compounds as you add the rest.
+
+→ [Identity](/identity) · [Money](/money) · [Compliance](/compliance) · [Coverage](/coverage)

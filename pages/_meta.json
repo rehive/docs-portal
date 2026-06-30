@@ -1,6 +1,7 @@
 {
   "index": { "title": "Introduction", "type": "page", "display": "hidden" },
   "get-started": { "title": "Get started", "type": "page" },
+  "platform": { "title": "Platform", "type": "page" },
   "identity": { "title": "Identity", "type": "page" },
   "money": { "title": "Money", "type": "page" },
   "compliance": { "title": "Compliance", "type": "page" },
