@@ -1,0 +1,261 @@
+# Global dollar account
+
+> First-stab shapes, illustrative, not a frozen contract.
+
+The flagship flow. You are a fintech launching global dollar accounts: customers
+abroad hold USD, fund it locally, and pay out across borders. This guide goes end
+to end with real requests and responses, composing
+[Identity](/identity), [Money](/money) and [Compliance](/compliance).
+
+```
+Base URL:  https://api.rehive.com/v1
+Auth:      Authorization: Bearer sk_test_...
+```
+
+The ids below tell one story: customer `cus_8Wq2Lp`, wallet `wlt_3RtZ0`, method
+`mtd_2Kc9`, deposit `pay_Vn2Kc8`.
+
+## 1. Create the customer (Identity)
+
+```sh
+curl https://api.rehive.com/v1/customers \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: cus-create-ada-001" \
+  -d type=individual -d email="ada@example.com"
+```
+
+```json
+{
+  "id": "cus_8Wq2Lp",
+  "object": "customer",
+  "type": "individual",
+  "email": "ada@example.com",
+  "status": "unverified",
+  "verification": { "level": "none", "providers": {} },
+  "data": {},
+  "created": "2026-06-30T09:55:00Z"
+}
+```
+
+A `customer.created` event fires. The customer starts `unverified`: they cannot
+move money until they clear.
+
+## 2. Onboard and collect provider-required data (Identity)
+
+Start hosted onboarding. Identity collects KYC plus the data the rails require
+(source of funds, purpose, occupation, country):
+
+```sh
+curl https://api.rehive.com/v1/customers/cus_8Wq2Lp/onboarding \
+  -H "Authorization: Bearer sk_test_..." \
+  -d "collect[]=source_of_funds" -d "collect[]=purpose" \
+  -d "collect[]=occupation" -d "collect[]=country"
+```
+
+```json
+{
+  "object": "onboarding",
+  "customer": "cus_8Wq2Lp",
+  "url": "https://onboard.rehive.com/s/9fA2",
+  "status": "in_progress",
+  "collected": [],
+  "outstanding": ["source_of_funds", "purpose", "occupation", "country", "identity_document"]
+}
+```
+
+When the customer finishes, `customer.onboarding.completed` and
+`customer.status.updated` fire. Retrieve the customer to confirm:
+
+```sh
+curl https://api.rehive.com/v1/customers/cus_8Wq2Lp \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "id": "cus_8Wq2Lp",
+  "object": "customer",
+  "type": "individual",
+  "email": "ada@example.com",
+  "status": "verified",
+  "verification": { "level": "full", "providers": { "sumsub": "approved" } },
+  "data": { "source_of_funds": "salary", "purpose": "remittance", "occupation": "engineer", "country": "NG" },
+  "created": "2026-06-30T09:55:00Z"
+}
+```
+
+## 3. Open a wallet (Money)
+
+The customer is `verified`, so open their USD wallet. Rehive mirrors the
+balance; custody (Bridge here) sits underneath.
+
+```sh
+curl https://api.rehive.com/v1/wallets \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: wlt-open-ada-001" \
+  -d customer=cus_8Wq2Lp -d currency=USD
+```
+
+```json
+{
+  "id": "wlt_3RtZ0",
+  "object": "wallet",
+  "customer": "cus_8Wq2Lp",
+  "currency": "USD",
+  "balances": [{ "asset": "USD", "available": "0.00", "total": "0.00" }],
+  "custody": { "type": "custodial", "provider": "bridge" },
+  "limits": { "send": { "day": "10000.00", "month": "50000.00" } },
+  "status": "active",
+  "created": "2026-06-30T10:00:00Z"
+}
+```
+
+A `wallet.created` event fires.
+
+## 4. Provision a virtual account (Method)
+
+Give the wallet a way to receive money locally. A `virtual_account` method
+returns account details the customer funds over a rail (ACH here):
+
+```sh
+curl https://api.rehive.com/v1/wallets/wlt_3RtZ0/methods \
+  -H "Authorization: Bearer sk_test_..." \
+  -d type=virtual_account -d currency=USD -d rail=ach
+```
+
+```json
+{
+  "id": "mtd_2Kc9",
+  "object": "method",
+  "wallet": "wlt_3RtZ0",
+  "type": "virtual_account",
+  "currency": "USD",
+  "details": { "account_number": "•••• 8841", "routing_number": "•••• 0021", "rail": "ach" },
+  "provider": "bridge",
+  "status": "active"
+}
+```
+
+## 5. A deposit arrives (Money + Compliance)
+
+The customer wires USD to those account details. Rehive records a Payment that
+credits the wallet. Compliance runs inline before it settles:
+
+```sh
+curl https://api.rehive.com/v1/payments/pay_Vn2Kc8 \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "id": "pay_Vn2Kc8",
+  "object": "payment",
+  "wallet": "wlt_3RtZ0",
+  "type": "deposit",
+  "direction": "credit",
+  "amount": "2000.00",
+  "currency": "USD",
+  "source": { "type": "rail", "rail": "ach" },
+  "destination": { "type": "wallet", "wallet": "wlt_3RtZ0" },
+  "fees": [{ "type": "platform", "amount": "2.40", "currency": "USD" }],
+  "compliance": { "limits": "passed", "screening": "passed" },
+  "status": "completed",
+  "created": "2026-06-30T10:04:12Z"
+}
+```
+
+The matching [webhook](/get-started/webhooks):
+
+```json
+{
+  "id": "evt_7Hb3",
+  "object": "event",
+  "type": "payment.completed",
+  "created": "2026-06-30T10:04:13Z",
+  "data": { "object": { "id": "pay_Vn2Kc8", "object": "payment", "wallet": "wlt_3RtZ0", "type": "deposit", "direction": "credit", "amount": "2000.00", "currency": "USD", "status": "completed" } }
+}
+```
+
+The wallet balance is now `2000.00` available.
+
+## 6. Pay out across borders (Money + Compliance)
+
+Send to a recipient in another country. One Payment, `type: send`. Compliance
+checks limits and screens the destination; fees are itemized:
+
+```sh
+curl https://api.rehive.com/v1/payments \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: pay-send-ada-001" \
+  -d wallet=wlt_3RtZ0 -d type=send -d amount=120.00 -d currency=USD \
+  -d "destination[type]=email" -d "destination[email]=lee@example.com"
+```
+
+```json
+{
+  "id": "pay_Wb9Lr1",
+  "object": "payment",
+  "wallet": "wlt_3RtZ0",
+  "type": "send",
+  "direction": "debit",
+  "amount": "120.00",
+  "currency": "USD",
+  "source": { "type": "wallet", "wallet": "wlt_3RtZ0" },
+  "destination": { "type": "email", "email": "lee@example.com" },
+  "fees": [{ "type": "platform", "amount": "0.60", "currency": "USD" }],
+  "compliance": { "limits": "passed", "screening": "passed" },
+  "status": "completed",
+  "created": "2026-06-30T10:09:40Z"
+}
+```
+
+A `payment.completed` event follows, this time for the debit.
+
+## 7. The blocked path (Compliance)
+
+Not every payment clears. A send that breaches the wallet's daily limit, or one
+whose destination fails screening, is refused with `422` and held. Here a
+sanctioned address trips screening:
+
+```sh
+curl https://api.rehive.com/v1/payments \
+  -H "Authorization: Bearer sk_test_..." \
+  -d wallet=wlt_3RtZ0 -d type=send -d amount=500.00 -d currency=USD \
+  -d "destination[type]=address" -d "destination[network]=stellar" \
+  -d "destination[address]=GA5...SANCTIONED"
+```
+
+```json
+{
+  "error": {
+    "type": "screening_blocked",
+    "code": "sanctions_hit",
+    "message": "This payment was blocked by sanctions screening and is held for review.",
+    "param": "destination",
+    "doc_url": "https://docs.rehive.com/get-started/errors"
+  }
+}
+```
+
+The held payment is retrievable with `status: "blocked"`, and a
+`payment.blocked` event is delivered:
+
+```json
+{
+  "id": "evt_9Cd4",
+  "object": "event",
+  "type": "payment.blocked",
+  "created": "2026-06-30T10:12:01Z",
+  "data": { "object": { "id": "pay_Xy3Mn7", "object": "payment", "wallet": "wlt_3RtZ0", "type": "send", "direction": "debit", "amount": "500.00", "currency": "USD", "compliance": { "limits": "passed", "screening": "blocked" }, "status": "blocked" } }
+}
+```
+
+A reviewer clears or rejects it from [Monitoring](/compliance/monitoring), and
+the decision is recorded as [evidence](/compliance/evidence).
+
+## What you built
+
+A verified customer, a funded USD wallet, money in over a local rail, money out
+across borders, and compliance enforced on every movement with an audit trail
+behind it. Next: turn one payout into thousands with [mass
+payout](/guides/mass-payout).

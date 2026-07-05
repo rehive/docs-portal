@@ -1,0 +1,127 @@
+# Webhooks
+
+> First-stab shapes, illustrative, not a frozen contract.
+
+Webhooks push events to your endpoint as they happen, so you do not have to
+poll. Money movement, status changes and compliance outcomes all arrive as
+events.
+
+## Register an endpoint
+
+```sh
+curl https://api.rehive.com/v1/webhooks \
+  -H "Authorization: Bearer sk_test_..." \
+  -d url="https://app.example.com/hooks/rehive" \
+  -d "events[]=payment.completed" -d "events[]=payment.blocked"
+```
+
+```json
+{
+  "id": "whk_4Tn8",
+  "object": "webhook",
+  "url": "https://app.example.com/hooks/rehive",
+  "events": ["payment.completed", "payment.blocked"],
+  "secret": "whsec_3f9a...c21",
+  "status": "active",
+  "created": "2026-06-30T10:00:00Z"
+}
+```
+
+Subscribe to specific event types, or omit `events` to receive all of them. The
+`secret` is returned once; store it to verify signatures.
+
+## Event envelope
+
+Every delivery is an Event wrapping the full object that changed.
+
+```json
+{
+  "id": "evt_7Hb3",
+  "object": "event",
+  "type": "payment.completed",
+  "created": "2026-06-30T10:04:13Z",
+  "data": { "object": { "...": "the full payment, customer, wallet or control" } }
+}
+```
+
+## Signature verification
+
+Each request carries a `Rehive-Signature` header: an HMAC-SHA256 of the raw
+request body, keyed with your webhook secret. Compute the same HMAC over the
+exact bytes you received and compare.
+
+```js
+const crypto = require("crypto");
+
+function verify(rawBody, header, secret) {
+  const expected = crypto
+    .createHmac("sha256", secret)
+    .update(rawBody, "utf8")
+    .digest("hex");
+  return crypto.timingSafeEqual(
+    Buffer.from(header),
+    Buffer.from(expected)
+  );
+}
+```
+
+Verify before parsing, against the raw body (not a re-serialized object), and
+use a constant-time compare. Reject anything that does not match.
+
+## Delivery and retries
+
+- A `2xx` from your endpoint marks the event delivered.
+- Anything else is retried with exponential backoff over roughly 24 hours.
+- Retries reuse the same `evt_` id, so make your handler idempotent: record the
+  id and skip events you have already processed.
+- Order is not guaranteed; reconcile on the object's own fields rather than
+  arrival order.
+
+## Event catalog
+
+| Event | Fires when |
+|---|---|
+| `customer.created` | A customer is created |
+| `customer.status.updated` | A customer's `status` changes (for example pending to verified) |
+| `customer.onboarding.completed` | Hosted onboarding finishes and required data is collected |
+| `wallet.created` | A wallet is opened |
+| `wallet.closed` | A wallet is closed |
+| `payment.created` | A payment is created and accepted for processing |
+| `payment.completed` | A payment settles |
+| `payment.failed` | A payment fails (rail or provider error) |
+| `payment.blocked` | A payment is held by a limit or screening control |
+| `control.triggered` | A control fires on an evaluated event |
+| `case.opened` | A monitoring review/case is opened |
+
+## Example payload
+
+A `payment.completed` event, wrapping the full Payment object:
+
+```json
+{
+  "id": "evt_7Hb3",
+  "object": "event",
+  "type": "payment.completed",
+  "created": "2026-06-30T10:04:13Z",
+  "data": {
+    "object": {
+      "id": "pay_Vn2Kc8",
+      "object": "payment",
+      "wallet": "wlt_3RtZ0",
+      "type": "deposit",
+      "direction": "credit",
+      "amount": "2000.00",
+      "currency": "USD",
+      "source": { "type": "rail", "rail": "ach" },
+      "destination": { "type": "wallet", "wallet": "wlt_3RtZ0" },
+      "fees": [{ "type": "platform", "amount": "2.40", "currency": "USD" }],
+      "compliance": { "limits": "passed", "screening": "passed" },
+      "status": "completed",
+      "created": "2026-06-30T10:04:12Z"
+    }
+  }
+}
+```
+
+See [errors](/get-started/errors) for the failure and blocked paths these events
+report.

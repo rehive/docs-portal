@@ -1,6 +1,10 @@
-# Identity — API reference
+# Identity: API reference
 
-> First-stab shapes — the point is the surface, not a frozen contract.
+> First-stab shapes, illustrative, not a frozen contract. The point is the
+> surface.
+
+Customers carry status, verification and the collected data the rails require.
+See [conventions](/get-started/conventions) for IDs, pagination and idempotency.
 
 ## Customers
 
@@ -8,10 +12,50 @@
 |---|---|---|
 | `POST` | `/customers` | Create a customer |
 | `GET` | `/customers/{id}` | Retrieve a customer (incl. status) |
-| `GET` | `/customers` | List customers |
+| `GET` | `/customers` | List customers (filter by `status`, `type`) |
 | `PATCH` | `/customers/{id}` | Update details / metadata |
 
-## Onboarding & collection
+```sh
+curl https://api.rehive.com/v1/customers \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: cus-create-ada-001" \
+  -d type=individual -d email="ada@example.com"
+```
+
+```json
+{
+  "id": "cus_8Wq2Lp",
+  "object": "customer",
+  "type": "individual",
+  "email": "ada@example.com",
+  "status": "unverified",
+  "verification": { "level": "none", "providers": {} },
+  "data": {},
+  "created": "2026-06-30T09:55:00Z"
+}
+```
+
+`type` is `individual` or `business`; `status` is `unverified`, `pending`,
+`verified` or `rejected`.
+
+List with a filter, returning the standard pagination envelope:
+
+```sh
+curl "https://api.rehive.com/v1/customers?status=verified&limit=2" \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "data": [
+    { "id": "cus_8Wq2Lp", "object": "customer", "type": "individual", "email": "ada@example.com", "status": "verified" }
+  ],
+  "has_more": false,
+  "next_cursor": null
+}
+```
+
+## Onboarding and collection
 
 | Method | Path | Description |
 |---|---|---|
@@ -20,11 +64,56 @@
 | `POST` | `/customers/{id}/requests` | Request a missing item over notifications / chat |
 | `POST` | `/customers/{id}/verification` | Submit or refresh KYC / KYB |
 
-## Events
+```sh
+curl https://api.rehive.com/v1/customers/cus_8Wq2Lp/onboarding \
+  -H "Authorization: Bearer sk_test_..." \
+  -d "collect[]=source_of_funds" -d "collect[]=purpose" \
+  -d "collect[]=occupation" -d "collect[]=country"
+```
+
+```json
+{
+  "object": "onboarding",
+  "customer": "cus_8Wq2Lp",
+  "url": "https://onboard.rehive.com/s/9fA2",
+  "status": "in_progress",
+  "collected": [],
+  "outstanding": ["source_of_funds", "purpose", "occupation", "country", "identity_document"]
+}
+```
+
+## Verification
+
+Retrieve a customer once onboarding completes to see status, verification across
+providers, and the collected data:
+
+```sh
+curl https://api.rehive.com/v1/customers/cus_8Wq2Lp \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "id": "cus_8Wq2Lp",
+  "object": "customer",
+  "type": "individual",
+  "email": "ada@example.com",
+  "status": "verified",
+  "verification": { "level": "full", "providers": { "sumsub": "approved" } },
+  "data": { "source_of_funds": "salary", "purpose": "remittance", "occupation": "engineer", "country": "NG" },
+  "created": "2026-06-30T09:55:00Z"
+}
+```
+
+## Errors and webhooks
+
+- Validation and lookup failures use the shared [error
+  envelope](/get-started/errors).
+- Subscribe to [webhooks](/get-started/webhooks) for `customer.created`,
+  `customer.status.updated` and `customer.onboarding.completed`.
 
 ```
 customer.created
 customer.status.updated
-customer.verification.updated
 customer.onboarding.completed
 ```

@@ -3,6 +3,7 @@
   "policies": "Policy Center",
   "controls": "Limits & controls",
   "monitoring": "Monitoring",
+  "connectors": "Connectors",
   "evidence": "Evidence & reporting",
   "api": "API reference"
 }

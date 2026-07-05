@@ -1,38 +1,164 @@
-# Compliance — API reference
+# Compliance: API reference
 
-> First-stab shapes — illustrative, not a frozen contract.
+> First-stab shapes, illustrative, not a frozen contract.
+
+Policies are a signed control baseline; Controls evaluate live activity;
+Evidence is the audit trail; Monitoring routes the exceptions. See
+[connectors](/compliance/connectors) for running these on your own ledger.
 
 ## Policies
 
 | Method | Path | Description |
 |---|---|---|
 | `GET` | `/policies` | List baseline + adopted policies |
+| `GET` | `/policies/{id}` | Retrieve a policy |
 | `POST` | `/policies/{id}/adopt` | Adopt & sign a policy version |
 | `GET` | `/policies/{id}/controls` | Controls and their evidence state |
 
-## Limits & controls
+```sh
+curl https://api.rehive.com/v1/policies/pol_BSA/adopt \
+  -H "Authorization: Bearer sk_test_..." \
+  -d signed_by="cco@acme.com"
+```
+
+```json
+{
+  "id": "pol_BSA",
+  "object": "policy",
+  "name": "BSA / AML Program",
+  "version": "1.2.0",
+  "status": "adopted",
+  "signed_by": "cco@acme.com",
+  "controls": 42,
+  "evidence": { "required": 42, "provided": 38 }
+}
+```
+
+## Limits and controls
 
 | Method | Path | Description |
 |---|---|---|
-| `GET` | `/wallets/{id}/limits` | Effective limits for a Wallet |
+| `GET` | `/controls` | List controls (filter by `status`, `source`) |
+| `GET` | `/controls/{id}` | Retrieve a control |
 | `POST` | `/controls` | Create a control (condition + effect) |
+| `GET` | `/wallets/{id}/limits` | Effective limits for a Wallet |
 
-## Monitoring
+```sh
+curl "https://api.rehive.com/v1/controls?status=operating&limit=2" \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "data": [
+    {
+      "id": "con_send_limit",
+      "object": "control",
+      "name": "Daily send limit",
+      "type": "configurable",
+      "condition": { "field": "transaction.amount", "op": "lte", "value": "10000.00", "window": "day" },
+      "effect": "block",
+      "source": "transaction_feed",
+      "status": "operating"
+    }
+  ],
+  "has_more": true,
+  "next_cursor": "cur_eyJpZCI6ImNvbl9zZW5kX2xpbWl0In0"
+}
+```
+
+Retrieve a single control by `con_` id:
+
+```sh
+curl https://api.rehive.com/v1/controls/con_send_limit \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "id": "con_send_limit",
+  "object": "control",
+  "name": "Daily send limit",
+  "type": "configurable",
+  "condition": { "field": "transaction.amount", "op": "lte", "value": "10000.00", "window": "day" },
+  "effect": "block",
+  "source": "transaction_feed",
+  "status": "operating"
+}
+```
+
+`type` is `automated`, `configurable`, `hybrid`, `manual` or `third_party`.
+
+## Evidence and reporting
+
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/controls/{id}/evidence` | Evidence captured against a control |
+| `GET` | `/reports/program?as_of=YYYY-MM-DD` | Point-in-time program evidence |
+
+```sh
+curl https://api.rehive.com/v1/controls/con_send_limit/evidence \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "control": "con_send_limit",
+  "status": "operating",
+  "evidence": [
+    { "kind": "system", "summary": "Blocked debit of 15000.00 USD for cus_8Wq2Lp; daily limit 10000.00 exceeded.", "event": "evt_in_5kQ2", "as_of": "2026-06-30T10:03:59Z" },
+    { "kind": "document", "ref": "doc_9x2", "label": "Vendor coverage report" }
+  ],
+  "as_of": "2026-06-30"
+}
+```
+
+Evidence `kind` is `system`, `attestation`, `document` or `third_party`.
+
+## Monitoring and cases
 
 | Method | Path | Description |
 |---|---|---|
 | `POST` | `/rules` | Create a monitoring rule |
 | `GET` | `/alerts` | List alerts |
-| `GET` | `/reviews` | List reviews / cases |
+| `GET` | `/cases` | List reviews / cases |
+| `GET` | `/cases/{id}` | Retrieve a case (trigger + linked evidence) |
 
-## Reporting
+```sh
+curl "https://api.rehive.com/v1/cases?status=open&limit=2" \
+  -H "Authorization: Bearer sk_test_..."
+```
 
-| Method | Path | Description |
-|---|---|---|
-| `GET` | `/reports/program?as_of=YYYY-MM-DD` | Point-in-time program evidence |
+```json
+{
+  "data": [
+    {
+      "id": "case_7Lq2",
+      "object": "case",
+      "status": "open",
+      "reason": "screening_hit",
+      "customer": "cus_8Wq2Lp",
+      "payment": "pay_Xy3Mn7",
+      "control": "con_sanctions_screen",
+      "opened": "2026-06-30T10:12:01Z"
+    }
+  ],
+  "has_more": false,
+  "next_cursor": null
+}
+```
+
+A case resolves to `cleared`, `escalated` or `blocked`, and the outcome is
+recorded as evidence on the linked control.
+
+## Errors and webhooks
+
+- Compliance refusals surface as `422` on the payment that triggered them. See
+  [errors](/get-started/errors) for `limit_exceeded` and `screening_blocked`.
+- Subscribe to [webhooks](/get-started/webhooks) for `control.triggered` and
+  `case.opened`.
 
 ```
-compliance.alert.created
-compliance.review.updated
-policy.drift.detected
+control.triggered
+case.opened
 ```

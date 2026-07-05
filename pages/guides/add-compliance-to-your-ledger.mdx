@@ -1,0 +1,169 @@
+# Add compliance to your ledger
+
+> First-stab shapes, illustrative, not a frozen contract.
+
+You already run the ledger and move the money. You want a real compliance
+program on top: controls that evaluate live activity, and audit-ready evidence,
+without re-platforming. This is the bring-your-own-ledger path. It uses
+[connectors](/compliance/connectors) to pull your KYC and transaction feed in,
+then runs the same [control baseline](/compliance/policies) Rehive-native
+programs use.
+
+```
+Base URL:  https://api.rehive.com/v1
+Auth:      Authorization: Bearer sk_test_...
+```
+
+## 1. Connect your KYC
+
+Map your KYC/KYB provider's verdicts onto customers so identity-dependent
+controls have something to read:
+
+```sh
+curl https://api.rehive.com/v1/compliance/connectors \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Content-Type: application/json" \
+  -d '{ "type": "kyc", "name": "Acme KYC", "mode": "standalone", "delivery": "push" }'
+```
+
+```json
+{
+  "id": "cnx_kyc_acme",
+  "object": "connector",
+  "type": "kyc",
+  "name": "Acme KYC",
+  "mode": "standalone",
+  "status": "active",
+  "created": "2026-06-30T09:45:00Z"
+}
+```
+
+## 2. Connect your transaction feed
+
+Stream the transactions on your ledger in, normalized:
+
+```sh
+curl https://api.rehive.com/v1/compliance/connectors \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Content-Type: application/json" \
+  -d '{ "type": "transaction_feed", "name": "Core ledger feed", "mode": "standalone", "delivery": "push" }'
+```
+
+```json
+{
+  "id": "cnx_feed_core",
+  "object": "connector",
+  "type": "transaction_feed",
+  "name": "Core ledger feed",
+  "mode": "standalone",
+  "status": "active",
+  "created": "2026-06-30T09:50:00Z"
+}
+```
+
+Post transactions as they happen. The feed is idempotent by `external_id`:
+
+```sh
+curl https://api.rehive.com/v1/compliance/events \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: txn-2026-06-30-000412" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type": "transaction",
+    "connector": "cnx_feed_core",
+    "customer": "cus_8Wq2Lp",
+    "transaction": {
+      "external_id": "ledger-txn-90211",
+      "direction": "debit",
+      "amount": "15000.00",
+      "currency": "USD",
+      "counterparty": { "type": "address", "network": "stellar", "address": "GA5..." },
+      "occurred": "2026-06-30T10:03:58Z"
+    }
+  }'
+```
+
+```json
+{
+  "id": "evt_in_5kQ2",
+  "object": "compliance.event",
+  "type": "transaction",
+  "status": "evaluated",
+  "customer": "cus_8Wq2Lp",
+  "controls_evaluated": ["con_send_limit", "con_sanctions_screen"],
+  "created": "2026-06-30T10:03:59Z"
+}
+```
+
+## 3. Adopt a control baseline
+
+Adopt and sign a [policy](/compliance/policies). Its controls now evaluate
+against the feeds you just connected:
+
+```sh
+curl https://api.rehive.com/v1/policies/pol_BSA/adopt \
+  -H "Authorization: Bearer sk_test_..." \
+  -d signed_by="cco@acme.com"
+```
+
+```json
+{
+  "id": "pol_BSA",
+  "object": "policy",
+  "name": "BSA / AML Program",
+  "version": "1.2.0",
+  "status": "adopted",
+  "signed_by": "cco@acme.com",
+  "controls": 42,
+  "evidence": { "required": 42, "provided": 38 }
+}
+```
+
+When a control fires on an inbound event, a `control.triggered`
+[event](/get-started/webhooks) is delivered and evidence is appended to that
+control automatically.
+
+## 4. Pull an evidence report
+
+At any point, pull point-in-time program evidence for an auditor, partner or
+regulator:
+
+```sh
+curl "https://api.rehive.com/v1/compliance/reports/program?as_of=2026-06-30" \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "object": "report",
+  "as_of": "2026-06-30",
+  "policy": "pol_BSA",
+  "controls": [
+    {
+      "control": "con_send_limit",
+      "status": "operating",
+      "source": "transaction_feed",
+      "evidence": [
+        { "kind": "system", "summary": "Blocked debit of 15000.00 USD for cus_8Wq2Lp; daily limit 10000.00 exceeded.", "event": "evt_in_5kQ2", "as_of": "2026-06-30T10:03:59Z" }
+      ]
+    },
+    {
+      "control": "con_sanctions_screen",
+      "status": "operating",
+      "source": "monitoring",
+      "evidence": [
+        { "kind": "system", "summary": "OFAC + PEP screening run on every feed transaction." }
+      ]
+    }
+  ],
+  "summary": { "operating": 40, "gaps": 2 }
+}
+```
+
+## What you built
+
+Your ledger, your money movement, unchanged. On top: live controls reading your
+KYC and transaction feed, and a signed program with evidence you can export on
+demand. Add [Money](/money) later and those same controls populate themselves,
+no feed to push. See [connectors](/compliance/connectors) for the full data
+model.

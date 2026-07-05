@@ -2,5 +2,8 @@
   "index": "Overview",
   "the-model": "The model",
   "quickstart": "Quickstart",
-  "authentication": "Authentication"
+  "authentication": "Authentication",
+  "conventions": "Conventions",
+  "errors": "Errors",
+  "webhooks": "Webhooks"
 }

@@ -1,0 +1,134 @@
+# Mass payout
+
+> First-stab shapes, illustrative, not a frozen contract.
+
+Payroll, supplier runs, marketplace disbursements: pay many recipients at once. A
+bulk payout is not a special object. It is one [Payment](/money/payments) with
+many `destinations`, each carrying its own `amount`. You get one id to track and
+per-destination status to reconcile.
+
+```
+Base URL:  https://api.rehive.com/v1
+Auth:      Authorization: Bearer sk_test_...
+```
+
+## 1. Create the payout
+
+One request, `type: payout`, funded from the source wallet. Send an
+[`Idempotency-Key`](/get-started/conventions) so a retry never double-pays the
+batch:
+
+```sh
+curl https://api.rehive.com/v1/payments \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: payroll-2026-06-30" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "wallet": "wlt_3RtZ0",
+    "type": "payout",
+    "currency": "USD",
+    "destinations": [
+      { "type": "email", "email": "lee@example.com", "amount": "1200.00" },
+      { "type": "address", "network": "stellar", "address": "GA5...PAYEE2", "amount": "800.00" },
+      { "type": "phone", "phone": "+2348012345678", "amount": "450.00" }
+    ]
+  }'
+```
+
+```json
+{
+  "id": "pay_Bulk7Qm",
+  "object": "payment",
+  "wallet": "wlt_3RtZ0",
+  "type": "payout",
+  "direction": "debit",
+  "amount": "2450.00",
+  "currency": "USD",
+  "source": { "type": "wallet", "wallet": "wlt_3RtZ0" },
+  "destinations": [
+    { "type": "email", "email": "lee@example.com", "amount": "1200.00", "status": "pending" },
+    { "type": "address", "network": "stellar", "address": "GA5...PAYEE2", "amount": "800.00", "status": "pending" },
+    { "type": "phone", "phone": "+2348012345678", "amount": "450.00", "status": "pending" }
+  ],
+  "fees": [{ "type": "platform", "amount": "4.90", "currency": "USD" }],
+  "compliance": { "limits": "passed", "screening": "passed" },
+  "status": "pending",
+  "created": "2026-06-30T11:00:00Z"
+}
+```
+
+`amount` is the batch total. Compliance evaluates the batch and each
+destination; a destination that fails screening is held without stopping the
+rest.
+
+## 2. Track per-destination status
+
+The payout settles asynchronously. Retrieve it to see where each leg stands:
+
+```sh
+curl https://api.rehive.com/v1/payments/pay_Bulk7Qm \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "id": "pay_Bulk7Qm",
+  "object": "payment",
+  "type": "payout",
+  "amount": "2450.00",
+  "currency": "USD",
+  "destinations": [
+    { "type": "email", "email": "lee@example.com", "amount": "1200.00", "status": "completed" },
+    { "type": "address", "network": "stellar", "address": "GA5...PAYEE2", "amount": "800.00", "status": "completed" },
+    { "type": "phone", "phone": "+2348012345678", "amount": "450.00", "status": "blocked" }
+  ],
+  "status": "pending",
+  "created": "2026-06-30T11:00:00Z"
+}
+```
+
+The parent stays `pending` until every leg resolves. Here two legs paid and one
+is held by screening. A partially completed batch surfaces as `completed` once
+the held leg is cleared or rejected.
+
+## 3. Reconcile
+
+Reconcile against the per-destination `status`, not the parent alone.
+
+- `completed` legs are paid; match them to your payroll register by amount and
+  destination.
+- `blocked` legs are held by a control; resolve them in
+  [Monitoring](/compliance/monitoring). The decision is recorded as
+  [evidence](/compliance/evidence).
+- `failed` legs (rail or provider error) can be reissued as a small follow-up
+  payout with a new `Idempotency-Key`.
+
+List the batch's legs filtered by status when you only want the exceptions:
+
+```sh
+curl "https://api.rehive.com/v1/payments?type=payout&status=pending&limit=50" \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "data": [
+    { "id": "pay_Bulk7Qm", "object": "payment", "type": "payout", "amount": "2450.00", "currency": "USD", "status": "pending" }
+  ],
+  "has_more": false,
+  "next_cursor": null
+}
+```
+
+## Events
+
+| Event | When |
+|---|---|
+| `payment.created` | The payout is accepted for processing |
+| `payment.completed` | Every destination has resolved |
+| `payment.blocked` | A destination is held by a limit or screening control |
+| `payment.failed` | The payout could not be processed |
+
+Each [webhook](/get-started/webhooks) wraps the full payout object, including the
+`destinations` array, so your reconciliation job can update leg by leg from a
+single event.

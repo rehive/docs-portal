@@ -1,0 +1,147 @@
+# Connectors
+
+> First-stab shapes, illustrative, not a frozen contract.
+
+Connectors are what make Compliance run on any ledger. Instead of a checklist
+that drifts from reality, you bring your own KYC, monitoring and transaction
+feed, and controls evaluate against live systems. The same control baseline
+produces real evidence whether the money moves on Rehive or on a stack you
+already run.
+
+## The three connector types
+
+| Type | Brings in | Feeds |
+|---|---|---|
+| `kyc` | Verification outcomes and customer risk data from your KYC/KYB provider | Identity-dependent controls (verification tier, PEP, sanctions at onboarding) |
+| `monitoring` | Screening and behavioral signals from your monitoring vendor | Screening and ongoing-monitoring controls |
+| `transaction_feed` | A normalized stream of the transactions on your ledger | Limit, velocity and pattern controls |
+
+## How data flows in
+
+Each connector normalizes your source into Rehive's shapes. A KYC connector maps
+provider verdicts onto customer `status` and `verification`; a transaction feed
+maps your ledger entries onto a normalized transaction event.
+
+Inbound transactions are posted to a single endpoint:
+
+```sh
+curl https://api.rehive.com/v1/compliance/events \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: txn-2026-06-30-000412" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type": "transaction",
+    "connector": "cnx_feed_core",
+    "customer": "cus_8Wq2Lp",
+    "transaction": {
+      "external_id": "ledger-txn-90211",
+      "direction": "debit",
+      "amount": "15000.00",
+      "currency": "USD",
+      "counterparty": { "type": "address", "network": "stellar", "address": "GA5..." },
+      "occurred": "2026-06-30T10:03:58Z"
+    }
+  }'
+```
+
+```json
+{
+  "id": "evt_in_5kQ2",
+  "object": "compliance.event",
+  "type": "transaction",
+  "status": "evaluated",
+  "customer": "cus_8Wq2Lp",
+  "controls_evaluated": ["con_send_limit", "con_sanctions_screen"],
+  "created": "2026-06-30T10:03:59Z"
+}
+```
+
+The feed is idempotent by `external_id` (and by `Idempotency-Key`), so replays
+do not double-count.
+
+## How a control evaluates
+
+A control is a condition plus an effect. When an inbound event arrives, every
+control whose scope matches is evaluated, and the outcome is recorded as
+evidence on that control.
+
+```json
+{
+  "id": "con_send_limit",
+  "object": "control",
+  "name": "Daily send limit",
+  "type": "configurable",
+  "condition": { "field": "transaction.amount", "op": "lte", "value": "10000.00", "window": "day" },
+  "effect": "block",
+  "source": "transaction_feed",
+  "status": "operating"
+}
+```
+
+For the 15,000.00 debit above, `con_send_limit` evaluates false and its effect
+fires. The control is recorded as triggered, a `control.triggered`
+[event](/get-started/webhooks) is delivered, and evidence is appended:
+
+```json
+{
+  "control": "con_send_limit",
+  "status": "operating",
+  "evidence": [
+    {
+      "kind": "system",
+      "summary": "Blocked debit of 15000.00 USD for cus_8Wq2Lp; daily limit 10000.00 exceeded.",
+      "event": "evt_in_5kQ2",
+      "as_of": "2026-06-30T10:03:59Z"
+    }
+  ]
+}
+```
+
+The same evidence is what surfaces in [Evidence and
+reporting](/compliance/evidence) and in point-in-time program reports.
+
+## Standalone vs platform-native
+
+Connectors run in two modes, and a control does not care which one it is reading
+from.
+
+- **Standalone (bring your own ledger).** Money moves on your stack. You push
+  KYC outcomes and a transaction feed in through connectors; Rehive evaluates
+  controls and holds the evidence. Nothing about custody or settlement changes.
+- **Platform-native (auto-populated).** Money moves on [Money](/money). The KYC,
+  monitoring and transaction-feed connectors are wired automatically from
+  [Identity](/identity) and Payments, so controls evaluate inline and there is
+  nothing to push.
+
+Most programs are mixed: native for wallets on Rehive, standalone connectors for
+the accounts that still live elsewhere. One control baseline covers both.
+
+## Configure a connector
+
+```sh
+curl https://api.rehive.com/v1/compliance/connectors \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Content-Type: application/json" \
+  -d '{
+    "type": "transaction_feed",
+    "name": "Core ledger feed",
+    "mode": "standalone",
+    "delivery": "push"
+  }'
+```
+
+```json
+{
+  "id": "cnx_feed_core",
+  "object": "connector",
+  "type": "transaction_feed",
+  "name": "Core ledger feed",
+  "mode": "standalone",
+  "delivery": "push",
+  "status": "active",
+  "created": "2026-06-30T09:50:00Z"
+}
+```
+
+To put this end to end, see [Add compliance to your
+ledger](/guides/add-compliance-to-your-ledger).

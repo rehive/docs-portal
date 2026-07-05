@@ -1,0 +1,140 @@
+# Errors
+
+> First-stab shapes, illustrative, not a frozen contract.
+
+Errors use a single envelope so you can branch on `type` and surface `message`.
+
+```json
+{
+  "error": {
+    "type": "limit_exceeded",
+    "code": "send_limit_day",
+    "message": "This payment would exceed the daily send limit.",
+    "param": "amount",
+    "doc_url": "https://docs.rehive.com/get-started/errors"
+  }
+}
+```
+
+- `type` is the broad category (drives your handling).
+- `code` is the specific reason within the category.
+- `message` is human-readable and safe to log; do not parse it.
+- `param` names the offending field when applicable.
+- `doc_url` links to the relevant docs.
+
+## HTTP status codes
+
+| Status | Meaning | Error type |
+|---|---|---|
+| `400` | Malformed or invalid request | `validation_error` |
+| `401` | Missing or invalid API key | `authentication_error` |
+| `403` | Key lacks permission for this action | `permission_error` |
+| `404` | No such object | `not_found` |
+| `409` | Conflict, including idempotency replay mismatch | `conflict` |
+| `422` | Understood but refused by a rule | `limit_exceeded`, `screening_blocked` |
+| `429` | Rate limited | `rate_limited` |
+| `502` | Upstream provider failed | `provider_error` |
+
+## Error catalog
+
+### validation_error (400)
+
+```json
+{ "error": { "type": "validation_error", "code": "missing_parameter", "message": "The 'currency' parameter is required.", "param": "currency", "doc_url": "https://docs.rehive.com/get-started/errors" } }
+```
+
+### authentication_error (401)
+
+```json
+{ "error": { "type": "authentication_error", "code": "invalid_api_key", "message": "No API key was provided, or the key is invalid.", "doc_url": "https://docs.rehive.com/get-started/errors" } }
+```
+
+### permission_error (403)
+
+```json
+{ "error": { "type": "permission_error", "code": "insufficient_scope", "message": "This API key cannot create payments.", "doc_url": "https://docs.rehive.com/get-started/errors" } }
+```
+
+### not_found (404)
+
+```json
+{ "error": { "type": "not_found", "code": "resource_missing", "message": "No wallet exists with id 'wlt_does_not_exist'.", "param": "wallet", "doc_url": "https://docs.rehive.com/get-started/errors" } }
+```
+
+### conflict (409)
+
+Returned when an `Idempotency-Key` is reused with a different body, or when an
+operation collides with the object's current state.
+
+```json
+{ "error": { "type": "conflict", "code": "idempotency_key_reuse", "message": "This Idempotency-Key was already used with a different request body.", "doc_url": "https://docs.rehive.com/get-started/errors" } }
+```
+
+### rate_limited (429)
+
+```json
+{ "error": { "type": "rate_limited", "code": "too_many_requests", "message": "You have exceeded the request rate limit. Retry after the indicated interval.", "doc_url": "https://docs.rehive.com/get-started/errors" } }
+```
+
+### provider_error (502)
+
+```json
+{ "error": { "type": "provider_error", "code": "custody_provider_unavailable", "message": "The custody provider could not be reached. The payment was not submitted.", "doc_url": "https://docs.rehive.com/get-started/errors" } }
+```
+
+## Compliance refusals (422)
+
+These two tie directly to [Compliance](/compliance). The request was valid, but a
+control or screening step refused it. The matching payment lands in `blocked`
+status and a [webhook](/get-started/webhooks) fires.
+
+### limit_exceeded
+
+A send that would breach the wallet's daily limit:
+
+```sh
+curl https://api.rehive.com/v1/payments \
+  -H "Authorization: Bearer sk_test_..." \
+  -d wallet=wlt_3RtZ0 -d type=send -d amount=15000.00 -d currency=USD \
+  -d "destination[type]=email" -d "destination[email]=lee@example.com"
+```
+
+```json
+{
+  "error": {
+    "type": "limit_exceeded",
+    "code": "send_limit_day",
+    "message": "This payment would exceed the daily send limit.",
+    "param": "amount",
+    "doc_url": "https://docs.rehive.com/get-started/errors"
+  }
+}
+```
+
+### screening_blocked
+
+A payout to a destination that fails sanctions or address screening:
+
+```sh
+curl https://api.rehive.com/v1/payments \
+  -H "Authorization: Bearer sk_test_..." \
+  -d wallet=wlt_3RtZ0 -d type=send -d amount=500.00 -d currency=USD \
+  -d "destination[type]=address" -d "destination[network]=stellar" \
+  -d "destination[address]=GA5...SANCTIONED"
+```
+
+```json
+{
+  "error": {
+    "type": "screening_blocked",
+    "code": "sanctions_hit",
+    "message": "This payment was blocked by sanctions screening and is held for review.",
+    "param": "destination",
+    "doc_url": "https://docs.rehive.com/get-started/errors"
+  }
+}
+```
+
+The held payment is retrievable (`status: "blocked"`) and a `payment.blocked`
+event is delivered. A reviewer clears or rejects it from
+[Monitoring](/compliance/monitoring).

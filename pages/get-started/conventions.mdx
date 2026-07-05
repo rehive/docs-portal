@@ -1,0 +1,144 @@
+# Conventions
+
+> First-stab shapes, illustrative, not a frozen contract.
+
+The same conventions hold across Identity, Money and Compliance. Learn them once.
+
+```
+Base URL:  https://api.rehive.com/v1
+Auth:      Authorization: Bearer sk_test_...
+```
+
+## Requests and responses
+
+Requests and responses are JSON. Write endpoints accept a JSON body; the curl
+examples in these docs use `-d` form fields for brevity, but a JSON body with
+`Content-Type: application/json` is equivalent.
+
+Money amounts are decimal strings in the resource currency, never floats. This
+keeps `"2000.00"` exact and avoids rounding surprises. Timestamps are RFC3339,
+for example `2026-06-30T10:04:12Z`.
+
+## Object IDs
+
+Every object has a stable, prefixed ID. The prefix tells you the type at a
+glance.
+
+| Prefix | Object |
+|---|---|
+| `cus_` | Customer |
+| `wlt_` | Wallet |
+| `mtd_` | Method |
+| `pay_` | Payment |
+| `evt_` | Event |
+| `con_` | Control |
+| `pol_` | Policy |
+
+## Pagination
+
+List endpoints return a cursor-paginated envelope. They accept `?limit=` (page
+size) and `?cursor=` (opaque, from the previous page's `next_cursor`).
+
+```sh
+curl "https://api.rehive.com/v1/payments?wallet=wlt_3RtZ0&limit=2" \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+```json
+{
+  "data": [
+    { "id": "pay_Vn2Kc8", "object": "payment", "type": "deposit", "amount": "2000.00", "currency": "USD", "status": "completed" },
+    { "id": "pay_Wb9Lr1", "object": "payment", "type": "send", "amount": "120.00", "currency": "USD", "status": "completed" }
+  ],
+  "has_more": true,
+  "next_cursor": "cur_eyJpZCI6InBheV9XYjlMcjEifQ"
+}
+```
+
+When `has_more` is `true`, pass `next_cursor` as `?cursor=` to fetch the next
+page. When it is `false`, you have reached the end.
+
+## Filtering
+
+List endpoints accept query filters scoped to the resource, combinable with
+pagination.
+
+```sh
+# Payments for one wallet, only the failed ones
+curl "https://api.rehive.com/v1/payments?wallet=wlt_3RtZ0&status=failed" \
+  -H "Authorization: Bearer sk_test_..."
+
+# Customers by verification status
+curl "https://api.rehive.com/v1/customers?status=verified&limit=50" \
+  -H "Authorization: Bearer sk_test_..."
+```
+
+## Idempotency
+
+Send an `Idempotency-Key` header on any write to make it safe to retry. Rehive
+stores the first response against the key and replays it for subsequent requests
+with the same key, so a dropped connection or a retry never creates two
+payments.
+
+```sh
+curl https://api.rehive.com/v1/payments \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: 9f1c2b3a-7d6e-4a21-b8c0-1e2f3a4b5c6d" \
+  -d wallet=wlt_3RtZ0 -d type=send -d amount=120.00 -d currency=USD \
+  -d "destination[type]=email" -d "destination[email]=lee@example.com"
+```
+
+Reuse the key with a different body and the request is rejected as a conflict:
+
+```json
+{
+  "error": {
+    "type": "conflict",
+    "code": "idempotency_key_reuse",
+    "message": "This Idempotency-Key was already used with a different request body.",
+    "doc_url": "https://docs.rehive.com/get-started/errors"
+  }
+}
+```
+
+Keys are scoped per endpoint and retained for 24 hours. Use a fresh UUID per
+logical operation.
+
+## Rate limits
+
+Requests are rate limited per API key. Every response carries the current
+budget:
+
+```
+RateLimit-Limit: 100
+RateLimit-Remaining: 98
+RateLimit-Reset: 1
+```
+
+Over the limit returns `429` with a `Retry-After` header. Back off and retry.
+
+```json
+{
+  "error": {
+    "type": "rate_limited",
+    "code": "too_many_requests",
+    "message": "You have exceeded the request rate limit. Retry after the indicated interval.",
+    "doc_url": "https://docs.rehive.com/get-started/errors"
+  }
+}
+```
+
+## Versioning
+
+The major version is in the path: `/v1`. Backward-compatible changes (new
+fields, new endpoints, new enum values) ship without a version bump, so write
+clients that tolerate unknown fields. Breaking changes ship under a new dated
+version, which you pin per request:
+
+```
+Rehive-Version: 2026-06-30
+```
+
+Omit the header and your account default applies.
+
+Next: [errors](/get-started/errors) and [webhooks](/get-started/webhooks).

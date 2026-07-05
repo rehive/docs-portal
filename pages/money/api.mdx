@@ -1,6 +1,9 @@
-# Money — API reference
+# Money: API reference
 
 > First-stab shapes, illustrative, not a frozen contract.
+
+Wallets hold a mirrored balance, Methods fund them, Payments move value. See
+[conventions](/get-started/conventions) for IDs, pagination and idempotency.
 
 ## Wallets
 
@@ -12,6 +15,30 @@
 | `PATCH` | `/wallets/{id}` | Update a Wallet (limits, rails) |
 | `POST` | `/wallets/{id}/close` | Close a Wallet |
 
+```sh
+curl https://api.rehive.com/v1/wallets \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: wlt-open-ada-001" \
+  -d customer=cus_8Wq2Lp -d currency=USD
+```
+
+```json
+{
+  "id": "wlt_3RtZ0",
+  "object": "wallet",
+  "customer": "cus_8Wq2Lp",
+  "currency": "USD",
+  "balances": [{ "asset": "USD", "available": "2000.00", "total": "2000.00" }],
+  "custody": { "type": "custodial", "provider": "bridge" },
+  "limits": { "send": { "day": "10000.00", "month": "50000.00" } },
+  "status": "active",
+  "created": "2026-06-30T10:00:00Z"
+}
+```
+
+`custody.type` is `custodial`, `self` or `own`; `custody.provider` is `bridge`,
+`privy` or `none`.
+
 ## Payment methods
 
 | Method | Path | Description |
@@ -19,17 +46,75 @@
 | `POST` | `/wallets/{id}/methods` | Provision a virtual account, address or card |
 | `GET` | `/wallets/{id}/methods` | List payment methods |
 
+```sh
+curl https://api.rehive.com/v1/wallets/wlt_3RtZ0/methods \
+  -H "Authorization: Bearer sk_test_..." \
+  -d type=virtual_account -d currency=USD -d rail=ach
+```
+
+```json
+{
+  "id": "mtd_2Kc9",
+  "object": "method",
+  "wallet": "wlt_3RtZ0",
+  "type": "virtual_account",
+  "currency": "USD",
+  "details": { "account_number": "•••• 8841", "routing_number": "•••• 0021", "rail": "ach" },
+  "provider": "bridge",
+  "status": "active"
+}
+```
+
+`type` is `virtual_account`, `address` or `card`.
+
 ## Payments
 
 | Method | Path | Description |
 |---|---|---|
-| `POST` | `/payments` | Create a payment (deposit · withdraw · send · transfer · pay out · convert) |
+| `POST` | `/payments` | Create a payment (deposit, withdraw, send, transfer, payout, convert) |
 | `GET` | `/payments/{id}` | Retrieve a payment |
+| `GET` | `/payments` | List payments (filter by `wallet`, `type`, `status`) |
 
-A bulk payout is a payment with many `destinations` (`type: payout`), not a
-separate object or endpoint.
+A Payment is the single movement primitive. `source` and `destination` each take
+one of `{type:"wallet",wallet}`, `{type:"rail",rail}`,
+`{type:"address",network,address}`, `{type:"email",email}` or
+`{type:"phone",phone}`.
 
-## Add-ons & events
+```sh
+curl https://api.rehive.com/v1/payments \
+  -H "Authorization: Bearer sk_test_..." \
+  -H "Idempotency-Key: pay-send-ada-001" \
+  -d wallet=wlt_3RtZ0 -d type=send -d amount=120.00 -d currency=USD \
+  -d "destination[type]=email" -d "destination[email]=lee@example.com"
+```
+
+```json
+{
+  "id": "pay_Vn2Kc8",
+  "object": "payment",
+  "wallet": "wlt_3RtZ0",
+  "type": "deposit",
+  "direction": "credit",
+  "amount": "2000.00",
+  "currency": "USD",
+  "source": { "type": "rail", "rail": "ach" },
+  "destination": { "type": "wallet", "wallet": "wlt_3RtZ0" },
+  "fees": [{ "type": "platform", "amount": "2.40", "currency": "USD" }],
+  "compliance": { "limits": "passed", "screening": "passed" },
+  "status": "completed",
+  "created": "2026-06-30T10:04:12Z"
+}
+```
+
+`type` is `deposit`, `withdraw`, `send`, `transfer`, `payout` or `convert`;
+`direction` is `credit` or `debit`; `status` is `created`, `pending`,
+`completed`, `failed` or `blocked`.
+
+A bulk payout is a payment with many `destinations` (`type: payout`), each with
+its own `amount`, not a separate object or endpoint. See [mass
+payout](/guides/mass-payout).
+
+## Add-ons and events
 
 | Method | Path | Description |
 |---|---|---|
@@ -38,5 +123,13 @@ separate object or endpoint.
 
 ```
 wallet.created       wallet.closed
-payment.created      payment.completed      payment.failed
+payment.created      payment.completed      payment.failed      payment.blocked
 ```
+
+## Errors and webhooks
+
+- A payment refused by a limit or screening returns `422` and lands in
+  `blocked`. See [errors](/get-started/errors) for the `limit_exceeded` and
+  `screening_blocked` envelopes.
+- Subscribe to [webhooks](/get-started/webhooks) for `payment.*` and `wallet.*`
+  events rather than polling.
