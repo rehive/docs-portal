@@ -7,11 +7,10 @@ deployment:
   args:
   resources:
     requests:
-      memory: 25Mi
-      cpu: 10m
+      memory: 128Mi
+      cpu: 50m
     limits:
-      cpu: 250m
-      memory: 250Mi
+      memory: 256Mi
 image:
   repository: gcr.io/rehive-services/docs-portal
   tag: latest
