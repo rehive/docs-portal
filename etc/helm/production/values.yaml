@@ -20,17 +20,11 @@ service:
   type: NodePort
   externalPort: 80
   internalPort: 80
+# Production traffic reaches docs.rehive.com through the production Gateway, on the
+# hand-applied route in helm-values/gateway-production/docs-portal-external-route.yaml.
+# nginx-ingress no longer serves this app.
 ingress:
-  enabled: true
-  hosts:
-  - docs.rehive.com
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt
-  tls:
-  - hosts:
-    - docs.rehive.com
-    secretName: docs-portal-tls
+  enabled: false
 envFromSecret:
   enabled: false
 postgres:
