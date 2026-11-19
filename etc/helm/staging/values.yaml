@@ -14,17 +14,13 @@ service:
   type: NodePort
   externalPort: 80
   internalPort: 80
+# Staging traffic reaches this app through the staging Gateway, on the hand-applied
+# route in helm-values/gateway-staging/docs-portal-staging-external-route.yaml.
+# ingress-nginx2 was removed from staging3 (November 2026). Staging docs moved from
+# docs.s.rehive.com to docs.staging.rehive.com (there is no Gateway certificate for
+# *.s.rehive.com).
 ingress:
-  enabled: true
-  hosts:
-    - docs.s.rehive.com
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    cert-manager.io/cluster-issuer: letsencrypt
-  tls:
-    - hosts:
-      - docs.s.rehive.com
-      secretName: docs-staging-tls
+  enabled: false
 envFromSecret:
   enabled: false
 postgres:
